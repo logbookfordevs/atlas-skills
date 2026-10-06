@@ -78,7 +78,7 @@ test('preparation validates the complete staged package before updating maintain
   write(source.snapshot, 'before\n'); write(source.license, 'license\n');
   write('authored/fixture-skill/entry.md', '---\nname: fixture-skill\ndescription: Fixture\n---\n');
   write('authored/fixture-skill/openai.yaml', 'policy: {}\n');
-  write('afk/catalog/skills.json', '{"items":[]}');
+  write('stacks/atlas.json', '{"version":1,"sources":[]}');
   const manifest = { version: 1, sources: [source], workflows: [{ id: 'fixture-skill', entry: 'authored/fixture-skill/entry.md', agent: 'authored/fixture-skill/openai.yaml', methods: ['fixture'], dependencies: [] }], rulings: [] };
   write('sources/composition.json', JSON.stringify(manifest));
   buildSkills(root);

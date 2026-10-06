@@ -77,9 +77,9 @@ export function composeSkills(root = repositoryRoot) {
     });
     const generatedReferences = (workflow.generatedReferences ?? []).map(reference => {
       if (reference.generator !== 'setup-dependencies') throw new Error(`Unknown reference generator: ${reference.generator}`);
-      const bytes = Buffer.from(json(setupDependencies(composition, JSON.parse(read('afk/catalog/skills.json')))));
+      const bytes = Buffer.from(json(setupDependencies(composition, JSON.parse(read('stacks/atlas.json')))));
       put(reference.target, bytes);
-      return { ...reference, inputs: ['sources/composition.json', 'afk/catalog/skills.json'], carriedSha256: sha256(bytes) };
+      return { ...reference, inputs: ['sources/composition.json', 'stacks/atlas.json'], carriedSha256: sha256(bytes) };
     });
     const receipts = workflow.methods.map(id => {
       const source = sources.get(id);

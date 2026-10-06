@@ -194,8 +194,8 @@ test('workflow packages build identically without the legacy archive', t => {
   for (const directory of ['sources', 'authored']) {
     cpSync(join(repositoryRoot, directory), join(root, directory), { recursive: true });
   }
-  mkdirSync(join(root, 'afk/catalog'), { recursive: true });
-  cpSync(join(repositoryRoot, 'afk/catalog/skills.json'), join(root, 'afk/catalog/skills.json'));
+  mkdirSync(join(root, 'stacks'), { recursive: true });
+  cpSync(join(repositoryRoot, 'stacks/atlas.json'), join(root, 'stacks/atlas.json'));
   const expected = composeSkills();
   const actual = composeSkills(root);
   assert.deepEqual(actual, expected);

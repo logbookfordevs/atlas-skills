@@ -1,6 +1,6 @@
 # Upstream updates
 
-Atlas carries its authored skills, intentional patches and selected sources inside compositions. Unchanged independent skills are recommended from their original installation sources in `afk/catalog/skills.json`. Carrying a source and offering an independent upstream installation are separate decisions.
+Atlas carries its authored skills, intentional patches and selected sources inside compositions. Unchanged independent skills are recommended from their original installation sources in `stacks/atlas.json`. Carrying a source and offering an independent upstream installation are separate decisions.
 
 `sources/composition.json` owns the update contract. Each carried source records its upstream repository, immutable revision, entry path, license path, selected file scope, local snapshots, hashes, maintained method, optional replayable patch and consuming packages. Adding an active consumer puts the source in the same watcher pipeline whether it is verbatim or verbatim patched. Sources with no active consumers remain historical evidence and are skipped.
 

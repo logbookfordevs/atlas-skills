@@ -13,7 +13,7 @@
       "target": "references/dependencies.json",
       "inputs": [
         "sources/composition.json",
-        "afk/catalog/skills.json"
+        "stacks/atlas.json"
       ],
       "carriedSha256": "6833eebbe26471ed2cd66e75fbf3897640713fee5de9047d08f6668ab5cdb6fa"
     }

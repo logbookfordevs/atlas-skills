@@ -112,7 +112,7 @@ export function prepareUpdate(root, source, candidate, manifest) {
   buildSkills(root, { check: true });
   const stage = mkdtempSync(join(tmpdir(), 'atlas-candidate-'));
   try {
-    for (const directory of ['sources', 'authored', 'afk/catalog']) cpSync(join(root, directory), join(stage, directory), { recursive: true });
+    for (const directory of ['sources', 'authored', 'stacks']) cpSync(join(root, directory), join(stage, directory), { recursive: true });
     const next = structuredClone(manifest);
     const record = next.sources.find(record => record.id === source.id);
     const writes = new Map();
