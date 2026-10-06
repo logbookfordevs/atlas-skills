@@ -7,14 +7,7 @@
     "authored/atlas-motion/openai.yaml"
   ],
   "authoredReferences": [],
-  "dependencies": [
-    {
-      "id": "pick-ui-library",
-      "relationship": "behavioral",
-      "required": true,
-      "condition": "Animate work that needs an interactive component rather than an animation."
-    }
-  ],
+  "dependencies": [],
   "sources": [
     {
       "id": "animate",
@@ -45,7 +38,9 @@
       "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-05",
-      "rulings": []
+      "rulings": [
+        "motion-component-selection"
+      ]
     },
     {
       "id": "apple-design",
@@ -71,9 +66,20 @@
       "rulings": []
     }
   ],
-  "rulings": [],
+  "rulings": [
+    {
+      "id": "motion-component-selection",
+      "owner": "atlas-motion",
+      "document": "authored/atlas-motion/entry.md",
+      "section": "Atlas Motion",
+      "sources": [
+        "animate"
+      ],
+      "decision": "Replace the upstream pick-ui-library call with direct selection of existing project primitives or an established component library; no independent skill dependency."
+    }
+  ],
   "files": {
-    "SKILL.md": "98855104c19aaf17fc8ec6764bcfb818b04abd2df4ca1cebff5df9447042dcfe",
+    "SKILL.md": "3ccff34ae3dca51712d57d78e24b6582d745a8240e0f763e0be1c66ff6fdbede",
     "agents/openai.yaml": "b547c19f4621638f7f5ee66bd21764618b6372791e1861122d7376f4e879f095",
     "references/animate/animate.md": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",

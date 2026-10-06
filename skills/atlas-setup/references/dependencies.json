@@ -25,19 +25,6 @@
           "condition": "When the selected HTML method needs visual composition guidance."
         }
       ]
-    },
-    {
-      "id": "pick-ui-library",
-      "source": "https://github.com/emilkowalski/skills",
-      "skill": "pick-ui-library",
-      "command": "npx skills add https://github.com/emilkowalski/skills --skill pick-ui-library",
-      "consumers": [
-        {
-          "skill": "atlas-motion",
-          "required": true,
-          "condition": "Animate work that needs an interactive component rather than an animation."
-        }
-      ]
     }
   ]
 }

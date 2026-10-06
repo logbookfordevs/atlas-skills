@@ -86,7 +86,9 @@
           "relativePath": "RECIPES.md"
         }
       ],
-      "rulings": []
+      "rulings": [
+        "motion-component-selection"
+      ]
     },
     {
       "id": "apple-design",
@@ -542,14 +544,7 @@
         "apple-design"
       ],
       "authoredReferences": [],
-      "dependencies": [
-        {
-          "id": "pick-ui-library",
-          "relationship": "behavioral",
-          "required": true,
-          "condition": "Animate work that needs an interactive component rather than an animation."
-        }
-      ]
+      "dependencies": []
     },
     {
       "id": "writing-for-humans",
@@ -722,6 +717,16 @@
         "show-me"
       ],
       "decision": "Load Show Me before creating or updating the tracking artifact; select presentation for each relevant content requirement, preserving complete evidence, structured state and the existing acceptance contract."
+    },
+    {
+      "id": "motion-component-selection",
+      "owner": "atlas-motion",
+      "document": "authored/atlas-motion/entry.md",
+      "section": "Atlas Motion",
+      "sources": [
+        "animate"
+      ],
+      "decision": "Replace the upstream pick-ui-library call with direct selection of existing project primitives or an established component library; no independent skill dependency."
     }
   ]
 }
