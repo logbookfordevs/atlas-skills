@@ -1,0 +1,131 @@
+{
+  "$schema": "https://raw.githubusercontent.com/logbookfordevs/ai-field-kit/feat/afk-fieldwork-pivot/docs/schemas/skill-stack.v1.schema.json",
+  "version": 1,
+  "id": "logbook-atlas",
+  "name": "Logbook Atlas",
+  "description": "The Logbook for Devs skill stack: Atlas utilities, adaptations and compositions alongside selected independent skills from their original authors. Skills V2 preview.",
+  "sources": [
+    {
+      "name": "Logbook Atlas · Skills V2 preview",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "skills": [
+        "atlas-setup",
+        "tracking-implementation",
+        "atlas-motion",
+        "atlas-craft",
+        "atlas-review",
+        "animated-driven-frontend",
+        "writing-for-humans",
+        "team-up",
+        "html-ui",
+        "atlas-to-spec",
+        "atlas-to-tickets"
+      ]
+    },
+    {
+      "name": "Matt Pocock",
+      "source": "https://github.com/mattpocock/skills",
+      "skills": [
+        "implement-spec",
+        "diagnosing-bugs",
+        "tdd",
+        "research",
+        "writing-for-agents",
+        "wizard",
+        "to-questionnaire",
+        "teach",
+        "grill-with-docs",
+        "grill-me",
+        "prototype",
+        "handoff",
+        "wayfinder",
+        "grilling",
+        "domain-modeling",
+        "codebase-design"
+      ]
+    },
+    {
+      "name": "Impeccable",
+      "source": "https://github.com/pbakaus/impeccable",
+      "skills": [
+        "impeccable"
+      ]
+    },
+    {
+      "name": "Truss",
+      "source": "https://github.com/leoreisdias/truss-framework",
+      "skills": [
+        "truss-evaluation"
+      ]
+    },
+    {
+      "name": "shadcn/ui",
+      "source": "https://github.com/shadcn-ui/ui",
+      "skills": [
+        "shadcn"
+      ]
+    },
+    {
+      "name": "Plannotator",
+      "source": "plannotator/guides",
+      "skills": [
+        "plannotator-guide"
+      ]
+    },
+    {
+      "name": "Orchestrator",
+      "source": "backnotprop/orchestrator",
+      "skills": [
+        "orchestrator"
+      ]
+    },
+    {
+      "name": "Bro",
+      "source": "backnotprop/bro",
+      "skills": [
+        "bro",
+        "facts",
+        "readback",
+        "recap",
+        "clean-room"
+      ]
+    },
+    {
+      "name": "Effective HTML",
+      "source": "https://github.com/plannotator/effective-html",
+      "skills": [
+        "design-artifact"
+      ]
+    },
+    {
+      "name": "HumanLayer",
+      "source": "https://github.com/humanlayer/skills",
+      "skills": [
+        "show-me"
+      ]
+    },
+    {
+      "name": "Addy Osmani",
+      "source": "https://github.com/addyosmani/agent-skills.git",
+      "skills": [
+        "source-driven-development",
+        "doubt-driven-development",
+        "code-simplification"
+      ]
+    },
+    {
+      "name": "Alesha Pro",
+      "source": "https://github.com/alesha-pro/tools",
+      "skills": [
+        "hand-drawn-canvas-animation"
+      ]
+    },
+    {
+      "name": "Emil Kowalski",
+      "source": "https://github.com/emilkowalski/skills",
+      "skills": [
+        "pick-ui-library"
+      ]
+    }
+  ]
+}

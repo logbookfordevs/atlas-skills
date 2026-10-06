@@ -4,144 +4,101 @@
   "scopes": [],
   "items": [
     {
-      "id": "atlas-decide",
-      "label": "Atlas Decide (Skills V2 preview)",
+      "id": "atlas-setup",
+      "label": "Atlas Setup (Skills V2 preview)",
       "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "atlas-decide",
+        "atlas-setup",
         "--global"
       ],
       "default": false,
       "invocation": "manual",
-      "role": "workflow",
-      "composes": [
-        "grilling",
-        "domain-modeling",
-        "research",
-        "prototype",
-        "impeccable",
-        "truss-evaluation"
-      ]
+      "role": "utility",
+      "composes": []
     },
     {
-      "id": "atlas-design",
-      "label": "Atlas Design (Skills V2 preview)",
+      "id": "tracking-implementation",
+      "label": "Tracking Implementation (Skills V2 preview)",
       "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "atlas-design",
+        "tracking-implementation",
         "--global"
       ],
       "default": false,
       "invocation": "auto",
-      "role": "workflow",
+      "role": "utility",
       "composes": [
-        "impeccable",
-        "design-artifact",
-        "afk-animated-driven-frontend"
+        "atlas-review"
       ]
     },
     {
-      "id": "atlas-implement",
-      "label": "Atlas Implement (Skills V2 preview)",
-      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "id": "implement-spec",
+      "label": "Implement Spec",
+      "source": "https://github.com/mattpocock/skills",
       "args": [
         "--skill",
-        "atlas-implement",
+        "implement-spec",
         "--global"
       ],
       "default": false,
       "invocation": "manual",
       "role": "workflow",
-      "composes": [
-        "tdd",
-        "afk-code-review",
-        "source-driven-development",
-        "doubt-driven-development",
-        "code-simplification",
-        "animate-text"
-      ]
-    },
-    {
-      "id": "afk-cli",
-      "label": "AFK - CLI",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-cli",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "utility",
       "composes": []
     },
     {
-      "id": "afk-animated-driven-frontend",
-      "label": "AFK - Animated Driven Frontend",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
+      "id": "atlas-motion",
+      "label": "Atlas Motion (Skills V2 preview)",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "afk-animated-driven-frontend",
+        "atlas-motion",
         "--global"
       ],
-      "default": true,
-      "invocation": "manual",
+      "default": false,
       "role": "workflow",
-      "composes": [
-        "grilling"
-      ]
+      "invocation": "auto"
     },
     {
-      "id": "afk-ask",
-      "label": "AFK - Ask",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
+      "id": "atlas-craft",
+      "label": "Atlas Craft (Skills V2 preview)",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "afk-ask",
+        "atlas-craft",
+        "--global"
+      ],
+      "default": false,
+      "role": "workflow",
+      "invocation": "auto"
+    },
+    {
+      "id": "atlas-review",
+      "label": "Atlas Review (Skills V2 preview)",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "atlas-review",
+        "--global"
+      ],
+      "default": false,
+      "role": "workflow",
+      "invocation": "auto"
+    },
+    {
+      "id": "animated-driven-frontend",
+      "label": "Animated-Driven Frontend",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "animated-driven-frontend",
         "--global"
       ],
       "default": true,
       "invocation": "manual",
       "role": "utility",
       "composes": []
-    },
-    {
-      "id": "afk-code-grill",
-      "label": "AFK - Code Grill",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-code-grill",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": [
-        "grilling",
-        "truss-evaluation",
-        "codebase-design"
-      ]
-    },
-    {
-      "id": "afk-design-grill",
-      "label": "AFK - Design Grill",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-design-grill",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": [
-        "grilling",
-        "truss-evaluation",
-        "impeccable"
-      ]
     },
     {
       "id": "impeccable",
@@ -168,65 +125,9 @@
       ]
     },
     {
-      "id": "afk-create-agent",
-      "label": "AFK - Create Agent",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-create-agent",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "workflow",
-      "composes": []
-    },
-    {
-      "id": "afk-to-spec",
-      "label": "AFK - To Spec",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-to-spec",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": []
-    },
-    {
-      "id": "afk-to-tickets",
-      "label": "AFK - To Tickets",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-to-tickets",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": []
-    },
-    {
-      "id": "stop-slop",
-      "label": "Stop Slop",
-      "source": "https://github.com/hardikpandya/stop-slop",
-      "args": [
-        "--skill",
-        "stop-slop",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": []
-    },
-    {
       "id": "writing-for-humans",
       "label": "Writing for Humans",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
         "writing-for-humans",
@@ -238,62 +139,17 @@
       "composes": []
     },
     {
-      "id": "afk-implement",
-      "label": "AFK - Implement",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
+      "id": "team-up",
+      "label": "Team Up",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "afk-implement",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "workflow",
-      "composes": [
-        "tdd",
-        "afk-code-review"
-      ]
-    },
-    {
-      "id": "afk-compass",
-      "label": "AFK - Compass",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-compass",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "router",
-      "composes": []
-    },
-    {
-      "id": "afk-architect",
-      "label": "AFK - Architect",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-architect",
+        "team-up",
         "--global"
       ],
       "default": false,
       "invocation": "auto",
-      "role": "workflow",
-      "composes": []
-    },
-    {
-      "id": "afk-profile-use",
-      "label": "AFK - Profile Use",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-profile-use",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "router",
+      "role": "utility",
       "composes": []
     },
     {
@@ -465,38 +321,6 @@
       "composes": []
     },
     {
-      "id": "html-wireframe",
-      "label": "HTML Wireframe",
-      "source": "https://github.com/plannotator/effective-html",
-      "args": [
-        "--skill",
-        "html-wireframe",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": [
-        "design-artifact"
-      ]
-    },
-    {
-      "id": "html-prototype",
-      "label": "HTML Prototype",
-      "source": "https://github.com/plannotator/effective-html",
-      "args": [
-        "--skill",
-        "html-prototype",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": [
-        "design-artifact"
-      ]
-    },
-    {
       "id": "tdd",
       "label": "TDD",
       "source": "https://github.com/mattpocock/skills",
@@ -566,62 +390,6 @@
       "default": false,
       "invocation": "auto",
       "role": "primitive",
-      "composes": []
-    },
-    {
-      "id": "review-animations",
-      "label": "Review Animations",
-      "source": "https://github.com/emilkowalski/skills",
-      "args": [
-        "--skill",
-        "review-animations",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": []
-    },
-    {
-      "id": "animate",
-      "label": "Animate",
-      "source": "https://github.com/emilkowalski/skills",
-      "args": [
-        "--skill",
-        "animate",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "auto",
-      "role": "utility",
-      "composes": []
-    },
-    {
-      "id": "apple-design",
-      "label": "Apple Design",
-      "source": "https://github.com/emilkowalski/skills",
-      "args": [
-        "--skill",
-        "apple-design",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": []
-    },
-    {
-      "id": "animate-text",
-      "label": "Animate Text",
-      "source": "pixel-point/animate-text",
-      "args": [
-        "--skill",
-        "animate-text",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
       "composes": []
     },
     {
@@ -775,50 +543,6 @@
       ]
     },
     {
-      "id": "afk-code-review",
-      "label": "AFK - Code Review",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-code-review",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "auto",
-      "role": "wrapper",
-      "composes": []
-    },
-    {
-      "id": "afk-code-review-verdicts",
-      "label": "AFK - Code Review Verdicts",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-code-review-verdicts",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": [
-        "afk-code-review"
-      ]
-    },
-    {
-      "id": "afk-static-review",
-      "label": "AFK - Static Review",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-static-review",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": []
-    },
-    {
       "id": "grilling",
       "label": "Grilling",
       "source": "https://github.com/mattpocock/skills",
@@ -858,6 +582,64 @@
       "default": true,
       "invocation": "auto",
       "role": "primitive",
+      "composes": []
+    },
+    {
+      "id": "pick-ui-library",
+      "label": "Pick Ui Library",
+      "source": "https://github.com/emilkowalski/skills",
+      "args": [
+        "--skill",
+        "pick-ui-library",
+        "--global"
+      ],
+      "default": false,
+      "invocation": "auto",
+      "role": "utility",
+      "composes": []
+    },
+    {
+      "id": "html-ui",
+      "label": "HTML UI",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "html-ui",
+        "--global"
+      ],
+      "default": true,
+      "invocation": "auto",
+      "role": "workflow",
+      "composes": [
+        "design-artifact"
+      ]
+    },
+    {
+      "id": "atlas-to-spec",
+      "label": "Atlas To Spec",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "atlas-to-spec",
+        "--global"
+      ],
+      "default": true,
+      "invocation": "manual",
+      "role": "workflow",
+      "composes": []
+    },
+    {
+      "id": "atlas-to-tickets",
+      "label": "Atlas To Tickets",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "atlas-to-tickets",
+        "--global"
+      ],
+      "default": true,
+      "invocation": "manual",
+      "role": "workflow",
       "composes": []
     }
   ]

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas To Spec"
+  short_description: "Atlas To Spec"
+  default_prompt: "Use $atlas-to-spec for the requested task."
+policy:
+  allow_implicit_invocation: false

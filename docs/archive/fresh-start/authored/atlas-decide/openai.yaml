@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas Decide"
+  short_description: "Choose an interview, recorded decision, discovery map or questionnaire."
+  default_prompt: "Use $atlas-decide for the requested decide work."
+policy:
+  allow_implicit_invocation: false

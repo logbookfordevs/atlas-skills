@@ -3,14 +3,14 @@
   "defaultsSource": "logbookfordevs/logbook-atlas",
   "presets": [
     {
-      "id": "afk-architect",
-      "label": "AFK Architect",
+      "id": "team-up",
+      "label": "Team Up",
       "areas": [
         "skills"
       ],
       "selections": {
         "skills": [
-          "afk-architect"
+          "team-up"
         ]
       }
     },

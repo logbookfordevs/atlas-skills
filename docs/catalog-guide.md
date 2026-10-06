@@ -24,18 +24,17 @@ Each name links to its instructions. “What you get” describes the intended o
 | [afk-design-grill](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-design-grill) | Frontend work lacks an approved design. | Visible alternatives and a recorded visual commitment: selected references, what must survive, and what may adapt. |
 | [afk-to-spec](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-to-spec) | The conversation has enough decisions to capture. | A local spec with behavior, decisions, testing, and scope; tracker publication when requested or expected by the project. |
 | [afk-to-tickets](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-to-tickets) | Agreed work needs independently verifiable slices. | An approved breakdown with blockers, acceptance, and test seams, then local tickets or agreed tracker issues. |
-| [afk-implement](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-implement) | Implementation needs durable progress and recovery across sessions. | An Implementation Record with status, validation evidence, review findings, and a user acceptance gate. |
+| [tracking-implementation](../skills/tracking-implementation/SKILL.md) | The user requests tracking or resumes tracked implementation. | Progress, evidence, review acceptance and recovery alongside the chosen executor. |
 | [afk-code-review](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-code-review) | A branch, commit, PR, or working tree needs review. | Separate Standards and Spec findings from independent review contexts. |
 | [afk-code-review-verdicts](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-code-review-verdicts) | You want review findings checked before fixes. | The full review plus evidence-backed verdicts; code changes wait for discussion. |
 | [afk-static-review](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-static-review) | You need lint and typecheck findings assessed for a change. | Scoped findings, including warnings, with new and pre-existing issues distinguished; no automatic fixes. |
-| [afk-animated-driven-frontend](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-animated-driven-frontend) | Motion and cinematic direction define the experience. | Co-directed production with visible cuts, explicit greenlights, and a durable production binder. |
-| [afk-architect](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-architect) | Substantive work benefits from separate contexts or parallel ownership. | Focused teammate assignments and integrated results while the lead agent stays available. |
+| [animated-driven-frontend](../skills/animated-driven-frontend/SKILL.md) | Motion-driven interaction or WebGL engineering needs specialist guidance. | ZERO-derived progress, gesture, loading and rendering knowledge. |
+| [team-up](../skills/team-up/SKILL.md) | Substantive work benefits from separate contexts or parallel ownership. | Focused teammate assignments and integrated results while the lead agent stays available. |
 | [afk-ask](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-ask) | You want a second opinion from another local AI CLI. | A saved prompt, provider response, and assessment for reuse. |
 | [afk-create-agent](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-create-agent) | You need a reusable Custom Agent role. | A portable definition, catalog registration, and adapter dry-runs; provisioning only when requested. |
 | [afk-profile-use](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-profile-use) | A named skill working set fits the task. | The profile's relevant instructions loaded through AFK commands. |
 | [writing-for-humans](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/writing-for-humans) | Documentation, explanations, or other substantial prose needs writing or revision. | Prose organized around the reader's job, with supported claims and the author's voice preserved. |
 
-The source tree also contains [afk-structured-debugging](https://github.com/logbookfordevs/logbook-atlas/tree/main/skills/afk-structured-debugging), a root-cause investigation process. It is not currently an entry in the bundled skills catalog; that catalog selects `diagnosing-bugs`. A skill being present in the repository does not mean setup selects it.
 
 <h2 id="kit-community-skills">Community skills in the catalog</h2>
 
@@ -79,7 +78,6 @@ Source: [Matt Pocock's skills](https://github.com/mattpocock/skills).
 | `animate` | You need to build an animation or transition. | [Emil Kowalski](https://github.com/emilkowalski/skills) |
 | `review-animations` | Existing motion needs a craft review. | [Emil Kowalski](https://github.com/emilkowalski/skills) |
 | `apple-design` | Fluid, physical, gesture-driven UI needs design guidance. | [Emil Kowalski](https://github.com/emilkowalski/skills) |
-| `animate-text` | You need to choose and translate a named text effect. | [Animate Text](https://github.com/pixel-point/animate-text) |
 
 ### Explain, coordinate, and hand off
 

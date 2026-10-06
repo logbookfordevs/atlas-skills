@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas Review"
+  short_description: "Review code against standards and intent, judge lint/typecheck findings, or assess interface motion."
+  default_prompt: "Use $atlas-review for the requested review work."
+policy:
+  allow_implicit_invocation: true

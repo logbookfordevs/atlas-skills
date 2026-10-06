@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "workflow": "atlas-review",
+  "generated": true,
+  "authoredInputs": [
+    "authored/atlas-review/entry.md",
+    "authored/atlas-review/openai.yaml",
+    "authored/atlas-review/references/static/static-review.md",
+    "authored/atlas-review/references/static/scripts/changed-files.sh"
+  ],
+  "authoredReferences": [
+    {
+      "input": "authored/atlas-review/references/static/static-review.md",
+      "target": "references/static/static-review.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "a105165ead3aa7af298ec25dcd881c60463d97805830b62b8f9dcc0e00b85b0d"
+    },
+    {
+      "input": "authored/atlas-review/references/static/scripts/changed-files.sh",
+      "target": "references/static/scripts/changed-files.sh",
+      "classification": "atlas-authored",
+      "carriedSha256": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7"
+    }
+  ],
+  "dependencies": [],
+  "sources": [
+    {
+      "id": "code-review",
+      "owner": "code-review",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "path": "skills/engineering/code-review/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
+      "carriedPath": "references/code/code-review.md",
+      "carriedSha256": "df9d0f11fb77e18822353137c661ad99f0e0734c4552ea999a6ff2f05f417704",
+      "licensePath": "licenses/code-review.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "rulings": [],
+      "patch": "sources/patches/code-review.patch",
+      "patchSha256": "cda2eb378fd4b51ebfa895e092ad1e6fbf06215c4dd512429c842b47091193fa"
+    },
+    {
+      "id": "review-animations",
+      "owner": "review-animations",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/review-animations/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/review-animations/STANDARDS.md",
+          "classification": "verbatim",
+          "sourceSha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07",
+          "carriedPath": "references/motion/STANDARDS.md",
+          "carriedSha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+      "carriedPath": "references/motion/review-animations.md",
+      "carriedSha256": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+      "licensePath": "licenses/review-animations.txt",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "adaptation": "Complete selected runtime tree and frontmatter preserved byte-for-byte.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "rulings": []
+    }
+  ],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "60d2a41d267765f9852a48d237c011878642ff73acf37028600c9f9c21fe75ee",
+    "agents/openai.yaml": "54552a5d342f4cd12a456e200008fc1a1a1695a087dc04da4e3e2d32371a0b28",
+    "references/static/static-review.md": "a105165ead3aa7af298ec25dcd881c60463d97805830b62b8f9dcc0e00b85b0d",
+    "references/static/scripts/changed-files.sh": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7",
+    "references/code/code-review.md": "df9d0f11fb77e18822353137c661ad99f0e0734c4552ea999a6ff2f05f417704",
+    "licenses/code-review.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/motion/review-animations.md": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+    "licenses/review-animations.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/motion/STANDARDS.md": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07"
+  }
+}

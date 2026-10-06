@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "workflow": "animated-driven-frontend",
+  "generated": true,
+  "authoredInputs": [
+    "authored/animated-driven-frontend/entry.md",
+    "authored/animated-driven-frontend/openai.yaml",
+    "authored/animated-driven-frontend/references/frontend-constraints.md",
+    "authored/animated-driven-frontend/references/interaction-systems.md",
+    "authored/animated-driven-frontend/references/rendering-pipeline.md"
+  ],
+  "authoredReferences": [
+    {
+      "input": "authored/animated-driven-frontend/references/frontend-constraints.md",
+      "target": "references/frontend-constraints.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "3d45334a9af5b4bb002e170da8d5fed29cd6a39a2afcc75bb0408be3a065a95e"
+    },
+    {
+      "input": "authored/animated-driven-frontend/references/interaction-systems.md",
+      "target": "references/interaction-systems.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "b195341b6de033912b877c197f4fa735337efd95eee4607ff370f373fe6a0a35"
+    },
+    {
+      "input": "authored/animated-driven-frontend/references/rendering-pipeline.md",
+      "target": "references/rendering-pipeline.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "ae2b25fc87be7f0b3e518c022a6035921e1d481475fc65166fc35df88ab67aa5"
+    }
+  ],
+  "dependencies": [],
+  "sources": [],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "c247420dad45c49980773e9a35a1b2171ef6d39b3ce981b62a6969de5396d241",
+    "agents/openai.yaml": "911125907842dab6e71d6f1d29e9574b6761e5e9cd8f040b0f76139bf2b5b51b",
+    "references/frontend-constraints.md": "3d45334a9af5b4bb002e170da8d5fed29cd6a39a2afcc75bb0408be3a065a95e",
+    "references/interaction-systems.md": "b195341b6de033912b877c197f4fa735337efd95eee4607ff370f373fe6a0a35",
+    "references/rendering-pipeline.md": "ae2b25fc87be7f0b3e518c022a6035921e1d481475fc65166fc35df88ab67aa5"
+  }
+}

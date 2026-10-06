@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas To Tickets"
+  short_description: "Atlas To Tickets"
+  default_prompt: "Use $atlas-to-tickets for the requested task."
+policy:
+  allow_implicit_invocation: false

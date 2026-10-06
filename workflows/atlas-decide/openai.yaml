@@ -1,6 +1,0 @@
-interface:
-  display_name: "Atlas Decide"
-  short_description: "Choose a decision flow and work through it"
-  default_prompt: "Use $atlas-decide to choose and work through the right decision flow."
-policy:
-  allow_implicit_invocation: false

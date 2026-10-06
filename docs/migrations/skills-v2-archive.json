@@ -82,21 +82,6 @@
       "sha256": "cc30721653ce104c5c665d145b9f6d3055972a2d7c0578e0b5c8519e41bfb499"
     },
     {
-      "from": "skills/afk-ask/SKILL.md",
-      "to": "legacy/afk-ask/SKILL.md",
-      "sha256": "98f68c1786aae72d48e749f2f4fe229be6117daf07c8558cc27655f7a8896b12"
-    },
-    {
-      "from": "skills/afk-ask/agents/openai.yaml",
-      "to": "legacy/afk-ask/agents/openai.yaml",
-      "sha256": "f3c7c53e2a7dcd33cbf8a040d327c8dc201c797a8d883e2fa33919dbcaede484"
-    },
-    {
-      "from": "skills/afk-ask/references/providers.md",
-      "to": "legacy/afk-ask/references/providers.md",
-      "sha256": "ad469a0d214713371e0c37bee8e5709f79216b8096152559591e07d2cee38770"
-    },
-    {
       "from": "skills/afk-cli/SKILL.md",
       "to": "legacy/afk-cli/SKILL.md",
       "sha256": "8ab60b96c890ccf4e516f1ca6561625a648a38adcd2e46be9bb5f6b7627c774a"
@@ -132,16 +117,6 @@
       "sha256": "5a32b77135e6d20200fa839387923933d08e891011d35ded09dbf7871094c105"
     },
     {
-      "from": "skills/afk-code-grill/SKILL.md",
-      "to": "legacy/afk-code-grill/SKILL.md",
-      "sha256": "56181016d593d2e20c4b3d56879326b219a8aca312e53183559931cf2e5823ac"
-    },
-    {
-      "from": "skills/afk-code-grill/agents/openai.yaml",
-      "to": "legacy/afk-code-grill/agents/openai.yaml",
-      "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
-    },
-    {
       "from": "skills/afk-code-review/SKILL.md",
       "to": "legacy/afk-code-review/SKILL.md",
       "sha256": "9dd3a3d9fb56efaf1aa280e7ba2150c081045d698f94f9950bdb1195ca6a9500"
@@ -150,16 +125,6 @@
       "from": "skills/afk-code-review/agents/openai.yaml",
       "to": "legacy/afk-code-review/agents/openai.yaml",
       "sha256": "960be013901e0d513b6b06e05409a91fcd081a02f8364e8aeda250123a789b2e"
-    },
-    {
-      "from": "skills/afk-code-review-verdicts/SKILL.md",
-      "to": "legacy/afk-code-review-verdicts/SKILL.md",
-      "sha256": "193c87d4d34cdd659419591d376699d991552b7e01572c79fa89e1576247ac9c"
-    },
-    {
-      "from": "skills/afk-code-review-verdicts/agents/openai.yaml",
-      "to": "legacy/afk-code-review-verdicts/agents/openai.yaml",
-      "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
     },
     {
       "from": "skills/afk-compass/SKILL.md",
@@ -180,31 +145,6 @@
       "from": "skills/afk-compass/references/workflow-crossroads.md",
       "to": "legacy/afk-compass/references/workflow-crossroads.md",
       "sha256": "e5f0020fab2adb61a236dff63d0a999e986141c8d2126ce998b032c6939211f2"
-    },
-    {
-      "from": "skills/afk-create-agent/SKILL.md",
-      "to": "legacy/afk-create-agent/SKILL.md",
-      "sha256": "4a39510080273c068ab9ba9f4d239dd11f46bb53ef2339f6b3b07abdd9dcb862"
-    },
-    {
-      "from": "skills/afk-create-agent/agents/openai.yaml",
-      "to": "legacy/afk-create-agent/agents/openai.yaml",
-      "sha256": "8542b453c5a451c9e42fdc8c9226a09f68bce8393e739ee092f9f39f9480ecdd"
-    },
-    {
-      "from": "skills/afk-create-agent/references/portable-agent-schema.md",
-      "to": "legacy/afk-create-agent/references/portable-agent-schema.md",
-      "sha256": "884d8a423f569e37c612b83f6f72b5f4533e1ccf49c4e85cbf356bf02fee4052"
-    },
-    {
-      "from": "skills/afk-design-grill/SKILL.md",
-      "to": "legacy/afk-design-grill/SKILL.md",
-      "sha256": "7097c360293c10f3373b6c1d78a386b5710e272422943c9d751e962e241646e1"
-    },
-    {
-      "from": "skills/afk-design-grill/agents/openai.yaml",
-      "to": "legacy/afk-design-grill/agents/openai.yaml",
-      "sha256": "799db88d0ed23b44f3edc769a0eddd8a3dd66eddb92364857033b250d28a3e9a"
     },
     {
       "from": "skills/afk-implement/SKILL.md",
@@ -255,21 +195,6 @@
       "from": "skills/afk-static-review/scripts/changed-files.sh",
       "to": "legacy/afk-static-review/scripts/changed-files.sh",
       "sha256": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7"
-    },
-    {
-      "from": "skills/afk-structured-debugging/SKILL.md",
-      "to": "legacy/afk-structured-debugging/SKILL.md",
-      "sha256": "0716dcb32220a2c3bca5486a0b3504b45ff2691789d7478b250274ac5bdff376"
-    },
-    {
-      "from": "skills/afk-structured-debugging/references/debugging-guardrails.md",
-      "to": "legacy/afk-structured-debugging/references/debugging-guardrails.md",
-      "sha256": "8f859f89f711f88898d4aa0781b48a5290a87f42309c4898ddd38f550882a651"
-    },
-    {
-      "from": "skills/afk-structured-debugging/references/error-patterns.md",
-      "to": "legacy/afk-structured-debugging/references/error-patterns.md",
-      "sha256": "bb6755585f1406a96c589f2f2aecae541cf450587623b75054627311c2e23033"
     },
     {
       "from": "skills/afk-to-spec/SKILL.md",
@@ -331,5 +256,83 @@
       "to": "legacy/writing-for-humans/references/visual-explanations.md",
       "sha256": "a5bdd3136e8467aea33b1f4890c3d535abebd4fb44b3141a43ab7e64eed6e8aa"
     }
-  ]
+  ],
+  "retiredFiles": [
+    {
+      "from": "skills/afk-ask/SKILL.md",
+      "to": "legacy/afk-ask/SKILL.md",
+      "sha256": "98f68c1786aae72d48e749f2f4fe229be6117daf07c8558cc27655f7a8896b12"
+    },
+    {
+      "from": "skills/afk-ask/agents/openai.yaml",
+      "to": "legacy/afk-ask/agents/openai.yaml",
+      "sha256": "f3c7c53e2a7dcd33cbf8a040d327c8dc201c797a8d883e2fa33919dbcaede484"
+    },
+    {
+      "from": "skills/afk-ask/references/providers.md",
+      "to": "legacy/afk-ask/references/providers.md",
+      "sha256": "ad469a0d214713371e0c37bee8e5709f79216b8096152559591e07d2cee38770"
+    },
+    {
+      "from": "skills/afk-code-grill/SKILL.md",
+      "to": "legacy/afk-code-grill/SKILL.md",
+      "sha256": "56181016d593d2e20c4b3d56879326b219a8aca312e53183559931cf2e5823ac"
+    },
+    {
+      "from": "skills/afk-code-grill/agents/openai.yaml",
+      "to": "legacy/afk-code-grill/agents/openai.yaml",
+      "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
+    },
+    {
+      "from": "skills/afk-code-review-verdicts/SKILL.md",
+      "to": "legacy/afk-code-review-verdicts/SKILL.md",
+      "sha256": "193c87d4d34cdd659419591d376699d991552b7e01572c79fa89e1576247ac9c"
+    },
+    {
+      "from": "skills/afk-code-review-verdicts/agents/openai.yaml",
+      "to": "legacy/afk-code-review-verdicts/agents/openai.yaml",
+      "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
+    },
+    {
+      "from": "skills/afk-create-agent/SKILL.md",
+      "to": "legacy/afk-create-agent/SKILL.md",
+      "sha256": "4a39510080273c068ab9ba9f4d239dd11f46bb53ef2339f6b3b07abdd9dcb862"
+    },
+    {
+      "from": "skills/afk-create-agent/agents/openai.yaml",
+      "to": "legacy/afk-create-agent/agents/openai.yaml",
+      "sha256": "8542b453c5a451c9e42fdc8c9226a09f68bce8393e739ee092f9f39f9480ecdd"
+    },
+    {
+      "from": "skills/afk-create-agent/references/portable-agent-schema.md",
+      "to": "legacy/afk-create-agent/references/portable-agent-schema.md",
+      "sha256": "884d8a423f569e37c612b83f6f72b5f4533e1ccf49c4e85cbf356bf02fee4052"
+    },
+    {
+      "from": "skills/afk-design-grill/SKILL.md",
+      "to": "legacy/afk-design-grill/SKILL.md",
+      "sha256": "7097c360293c10f3373b6c1d78a386b5710e272422943c9d751e962e241646e1"
+    },
+    {
+      "from": "skills/afk-design-grill/agents/openai.yaml",
+      "to": "legacy/afk-design-grill/agents/openai.yaml",
+      "sha256": "799db88d0ed23b44f3edc769a0eddd8a3dd66eddb92364857033b250d28a3e9a"
+    },
+    {
+      "from": "skills/afk-structured-debugging/SKILL.md",
+      "to": "legacy/afk-structured-debugging/SKILL.md",
+      "sha256": "0716dcb32220a2c3bca5486a0b3504b45ff2691789d7478b250274ac5bdff376"
+    },
+    {
+      "from": "skills/afk-structured-debugging/references/debugging-guardrails.md",
+      "to": "legacy/afk-structured-debugging/references/debugging-guardrails.md",
+      "sha256": "8f859f89f711f88898d4aa0781b48a5290a87f42309c4898ddd38f550882a651"
+    },
+    {
+      "from": "skills/afk-structured-debugging/references/error-patterns.md",
+      "to": "legacy/afk-structured-debugging/references/error-patterns.md",
+      "sha256": "bb6755585f1406a96c589f2f2aecae541cf450587623b75054627311c2e23033"
+    }
+  ],
+  "retirementReason": "Explicit user retirements: Ask, Code Grill, Design Grill, Create Agent, Code Review Verdicts, Brainstorming Facilitator, PR Story Flow Mermaid and Structured Debugging. Retired originals remain in Git history."
 }

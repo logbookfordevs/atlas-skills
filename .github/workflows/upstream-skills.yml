@@ -1,0 +1,35 @@
+name: Review upstream skill updates
+
+on:
+  schedule:
+    - cron: '23 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: atlas-upstream-review
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Detect changes and maintain review issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/upstream-sync.mjs --issues --output upstream-report.json
+      - name: Save detection report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: upstream-review-report
+          path: upstream-report.json
+          if-no-files-found: warn

@@ -5,6 +5,8 @@ import { tmpdir } from 'node:os';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { setupDependencies } from './setup-dependencies.mjs';
+
 export const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const json = value => `${JSON.stringify(value, null, 2)}\n`;
@@ -62,7 +64,7 @@ export function composeSkills(root = repositoryRoot) {
     return path;
   };
   for (const workflow of composition.workflows) {
-    if (!/^(?:logbook|atlas)-[a-z0-9-]+$/.test(workflow.id) || packages.has(workflow.id)) throw new Error(`Invalid workflow: ${workflow.id}`);
+    if (!/^[a-z][a-z0-9-]+$/.test(workflow.id) || packages.has(workflow.id)) throw new Error(`Invalid workflow: ${workflow.id}`);
     const output = new Map([['SKILL.md', read(workflow.entry)], ['agents/openai.yaml', read(workflow.agent)]]);
     const put = (path, bytes) => {
       portablePath(path);
@@ -73,12 +75,20 @@ export function composeSkills(root = repositoryRoot) {
       put(reference.target, read(reference.input));
       return { ...reference, classification: 'atlas-authored', carriedSha256: sha256(read(reference.input)) };
     });
+    const generatedReferences = (workflow.generatedReferences ?? []).map(reference => {
+      if (reference.generator !== 'setup-dependencies') throw new Error(`Unknown reference generator: ${reference.generator}`);
+      const bytes = Buffer.from(json(setupDependencies(composition, JSON.parse(read('afk/catalog/skills.json')))));
+      put(reference.target, bytes);
+      return { ...reference, inputs: ['sources/composition.json', 'afk/catalog/skills.json'], carriedSha256: sha256(bytes) };
+    });
     const receipts = workflow.methods.map(id => {
       const source = sources.get(id);
       if (!source || !source.consumers.includes(workflow.id)) throw new Error(`Undeclared consumer: ${workflow.id}/${id}`);
       const target = source.carriedPath ?? `references/${id}.md`;
       const licenseTarget = `licenses/${id}.txt`;
-      put(target, read(source.method));
+      if (target === 'SKILL.md') {
+        if (!output.get(target).equals(read(source.method))) throw new Error(`Entry source mismatch: ${id}`);
+      } else put(target, read(source.method));
       put(licenseTarget, read(source.license));
       const supportingFiles = (source.supportingFiles ?? []).map(file => {
         portablePath(file.relativePath);
@@ -106,7 +116,7 @@ export function composeSkills(root = repositoryRoot) {
         ...(source.patch ? { patch: source.patch, patchSha256: sha256(read(source.patch)) } : {}) };
     });
     output.set('SOURCE-MANIFEST.json', Buffer.from(json({ version: 1, workflow: workflow.id, generated: true,
-      authoredInputs: [workflow.entry, workflow.agent, ...(workflow.authoredReferences ?? []).map(reference => reference.input)], authoredReferences, dependencies: workflow.dependencies, sources: receipts,
+      authoredInputs: [workflow.entry, workflow.agent, ...(workflow.authoredReferences ?? []).map(reference => reference.input)], authoredReferences, ...(generatedReferences.length ? { generatedReferences } : {}), dependencies: workflow.dependencies, sources: receipts,
       rulings: (composition.rulings ?? []).filter(ruling => ruling.owner === workflow.id),
       files: Object.fromEntries([...output].map(([path, bytes]) => [path, sha256(bytes)])) })));
     packages.set(workflow.id, output);

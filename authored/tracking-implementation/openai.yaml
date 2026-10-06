@@ -1,0 +1,6 @@
+interface:
+  display_name: "Tracking Implementation"
+  short_description: "Keep implementation progress, evidence, acceptance and recovery records."
+  default_prompt: "Use $tracking-implementation to track this implementation."
+policy:
+  allow_implicit_invocation: true

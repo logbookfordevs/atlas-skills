@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "workflow": "atlas-decide",
+  "generated": true,
+  "authoredInputs": [
+    "authored/atlas-decide/entry.md",
+    "authored/atlas-decide/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "grilling",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "Probe, Record, or Map interviews."
+    },
+    {
+      "id": "domain-modeling",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "Record or Map vocabulary and domain decisions."
+    },
+    {
+      "id": "research",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "Map research tickets."
+    },
+    {
+      "id": "prototype",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "Map prototype tickets."
+    }
+  ],
+  "sources": [
+    {
+      "id": "grill-me",
+      "owner": "Atlas Decide",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/productivity/grill-me/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+      "carriedPath": "references/probe/grill-me.md",
+      "carriedSha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+      "licensePath": "licenses/grill-me.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": []
+    },
+    {
+      "id": "grill-with-docs",
+      "owner": "Atlas Decide",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "carriedPath": "references/record/grill-with-docs.md",
+      "carriedSha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "licensePath": "licenses/grill-with-docs.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": []
+    },
+    {
+      "id": "wayfinder",
+      "owner": "Atlas Decide",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/engineering/wayfinder/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
+      "carriedPath": "references/map/wayfinder.md",
+      "carriedSha256": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
+      "licensePath": "licenses/wayfinder.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": []
+    },
+    {
+      "id": "to-questionnaire",
+      "owner": "to-questionnaire",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "path": "skills/productivity/to-questionnaire/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+      "carriedPath": "references/query/to-questionnaire.md",
+      "carriedSha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+      "licensePath": "licenses/to-questionnaire.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Complete selected runtime tree and frontmatter preserved byte-for-byte.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "rulings": []
+    }
+  ],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "a01c87ff40b08d3c2dd1102375af511135b9315aec2610cff956ac151925f3c2",
+    "agents/openai.yaml": "c0beb54e8061306897a881a565993ecc2e26f23ab56679392f7d446dcb7b532d",
+    "references/probe/grill-me.md": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+    "licenses/grill-me.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/record/grill-with-docs.md": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+    "licenses/grill-with-docs.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/map/wayfinder.md": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
+    "licenses/wayfinder.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/query/to-questionnaire.md": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+    "licenses/to-questionnaire.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

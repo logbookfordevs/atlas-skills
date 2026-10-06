@@ -1,6 +1,0 @@
-interface:
-  display_name: "Atlas Design"
-  short_description: "Choose design methods and preserve visual intent"
-  default_prompt: "Use $atlas-design to choose and carry out the appropriate design method."
-policy:
-  allow_implicit_invocation: true

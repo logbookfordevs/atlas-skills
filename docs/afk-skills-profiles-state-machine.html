@@ -677,144 +677,101 @@ const CATALOG_SNAPSHOT = {
   "reviewedAt": "2026-09-15",
   "skills": [
     {
-      "id": "atlas-decide",
-      "label": "Atlas Decide (Skills V2 preview)",
+      "id": "atlas-setup",
+      "label": "Atlas Setup (Skills V2 preview)",
       "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "atlas-decide",
+        "atlas-setup",
         "--global"
       ],
       "default": false,
       "invocation": "manual",
-      "role": "workflow",
-      "composes": [
-        "grilling",
-        "domain-modeling",
-        "research",
-        "prototype",
-        "impeccable",
-        "truss-evaluation"
-      ]
+      "role": "utility",
+      "composes": []
     },
     {
-      "id": "atlas-design",
-      "label": "Atlas Design (Skills V2 preview)",
+      "id": "tracking-implementation",
+      "label": "Tracking Implementation (Skills V2 preview)",
       "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "atlas-design",
+        "tracking-implementation",
         "--global"
       ],
       "default": false,
       "invocation": "auto",
-      "role": "workflow",
+      "role": "utility",
       "composes": [
-        "impeccable",
-        "design-artifact",
-        "afk-animated-driven-frontend"
+        "atlas-review"
       ]
     },
     {
-      "id": "atlas-implement",
-      "label": "Atlas Implement (Skills V2 preview)",
-      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "id": "implement-spec",
+      "label": "Implement Spec",
+      "source": "https://github.com/mattpocock/skills",
       "args": [
         "--skill",
-        "atlas-implement",
+        "implement-spec",
         "--global"
       ],
       "default": false,
       "invocation": "manual",
       "role": "workflow",
-      "composes": [
-        "tdd",
-        "afk-code-review",
-        "source-driven-development",
-        "doubt-driven-development",
-        "code-simplification",
-        "animate-text"
-      ]
-    },
-    {
-      "id": "afk-cli",
-      "label": "AFK - CLI",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-cli",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "utility",
       "composes": []
     },
     {
-      "id": "afk-animated-driven-frontend",
-      "label": "AFK - Animated Driven Frontend",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
+      "id": "atlas-motion",
+      "label": "Atlas Motion (Skills V2 preview)",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "afk-animated-driven-frontend",
+        "atlas-motion",
         "--global"
       ],
-      "default": true,
-      "invocation": "manual",
+      "default": false,
       "role": "workflow",
-      "composes": [
-        "grilling"
-      ]
+      "invocation": "auto"
     },
     {
-      "id": "afk-ask",
-      "label": "AFK - Ask",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
+      "id": "atlas-craft",
+      "label": "Atlas Craft (Skills V2 preview)",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "afk-ask",
+        "atlas-craft",
+        "--global"
+      ],
+      "default": false,
+      "role": "workflow",
+      "invocation": "auto"
+    },
+    {
+      "id": "atlas-review",
+      "label": "Atlas Review (Skills V2 preview)",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "atlas-review",
+        "--global"
+      ],
+      "default": false,
+      "role": "workflow",
+      "invocation": "auto"
+    },
+    {
+      "id": "animated-driven-frontend",
+      "label": "Animated-Driven Frontend",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "animated-driven-frontend",
         "--global"
       ],
       "default": true,
       "invocation": "manual",
       "role": "utility",
       "composes": []
-    },
-    {
-      "id": "afk-code-grill",
-      "label": "AFK - Code Grill",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-code-grill",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": [
-        "grilling",
-        "truss-evaluation",
-        "codebase-design"
-      ]
-    },
-    {
-      "id": "afk-design-grill",
-      "label": "AFK - Design Grill",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-design-grill",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": [
-        "grilling",
-        "truss-evaluation",
-        "impeccable"
-      ]
     },
     {
       "id": "impeccable",
@@ -841,65 +798,9 @@ const CATALOG_SNAPSHOT = {
       ]
     },
     {
-      "id": "afk-create-agent",
-      "label": "AFK - Create Agent",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-create-agent",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "workflow",
-      "composes": []
-    },
-    {
-      "id": "afk-to-spec",
-      "label": "AFK - To Spec",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-to-spec",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": []
-    },
-    {
-      "id": "afk-to-tickets",
-      "label": "AFK - To Tickets",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-to-tickets",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": []
-    },
-    {
-      "id": "stop-slop",
-      "label": "Stop Slop",
-      "source": "https://github.com/hardikpandya/stop-slop",
-      "args": [
-        "--skill",
-        "stop-slop",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": []
-    },
-    {
       "id": "writing-for-humans",
       "label": "Writing for Humans",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
         "writing-for-humans",
@@ -911,62 +812,17 @@ const CATALOG_SNAPSHOT = {
       "composes": []
     },
     {
-      "id": "afk-implement",
-      "label": "AFK - Implement",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
+      "id": "team-up",
+      "label": "Team Up",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "afk-implement",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "workflow",
-      "composes": [
-        "tdd",
-        "afk-code-review"
-      ]
-    },
-    {
-      "id": "afk-compass",
-      "label": "AFK - Compass",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-compass",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "router",
-      "composes": []
-    },
-    {
-      "id": "afk-architect",
-      "label": "AFK - Architect",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-architect",
+        "team-up",
         "--global"
       ],
       "default": false,
       "invocation": "auto",
-      "role": "workflow",
-      "composes": []
-    },
-    {
-      "id": "afk-profile-use",
-      "label": "AFK - Profile Use",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-profile-use",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "manual",
-      "role": "router",
+      "role": "utility",
       "composes": []
     },
     {
@@ -1138,38 +994,6 @@ const CATALOG_SNAPSHOT = {
       "composes": []
     },
     {
-      "id": "html-wireframe",
-      "label": "HTML Wireframe",
-      "source": "https://github.com/plannotator/effective-html",
-      "args": [
-        "--skill",
-        "html-wireframe",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": [
-        "design-artifact"
-      ]
-    },
-    {
-      "id": "html-prototype",
-      "label": "HTML Prototype",
-      "source": "https://github.com/plannotator/effective-html",
-      "args": [
-        "--skill",
-        "html-prototype",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": [
-        "design-artifact"
-      ]
-    },
-    {
       "id": "tdd",
       "label": "TDD",
       "source": "https://github.com/mattpocock/skills",
@@ -1239,62 +1063,6 @@ const CATALOG_SNAPSHOT = {
       "default": false,
       "invocation": "auto",
       "role": "primitive",
-      "composes": []
-    },
-    {
-      "id": "review-animations",
-      "label": "Review Animations",
-      "source": "https://github.com/emilkowalski/skills",
-      "args": [
-        "--skill",
-        "review-animations",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": []
-    },
-    {
-      "id": "animate",
-      "label": "Animate",
-      "source": "https://github.com/emilkowalski/skills",
-      "args": [
-        "--skill",
-        "animate",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "auto",
-      "role": "utility",
-      "composes": []
-    },
-    {
-      "id": "apple-design",
-      "label": "Apple Design",
-      "source": "https://github.com/emilkowalski/skills",
-      "args": [
-        "--skill",
-        "apple-design",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": []
-    },
-    {
-      "id": "animate-text",
-      "label": "Animate Text",
-      "source": "pixel-point/animate-text",
-      "args": [
-        "--skill",
-        "animate-text",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
       "composes": []
     },
     {
@@ -1448,50 +1216,6 @@ const CATALOG_SNAPSHOT = {
       ]
     },
     {
-      "id": "afk-code-review",
-      "label": "AFK - Code Review",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-code-review",
-        "--global"
-      ],
-      "default": true,
-      "invocation": "auto",
-      "role": "wrapper",
-      "composes": []
-    },
-    {
-      "id": "afk-code-review-verdicts",
-      "label": "AFK - Code Review Verdicts",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-code-review-verdicts",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "wrapper",
-      "composes": [
-        "afk-code-review"
-      ]
-    },
-    {
-      "id": "afk-static-review",
-      "label": "AFK - Static Review",
-      "source": "https://github.com/logbookfordevs/logbook-atlas",
-      "args": [
-        "--skill",
-        "afk-static-review",
-        "--global"
-      ],
-      "default": false,
-      "invocation": "manual",
-      "role": "utility",
-      "composes": []
-    },
-    {
       "id": "grilling",
       "label": "Grilling",
       "source": "https://github.com/mattpocock/skills",
@@ -1531,6 +1255,64 @@ const CATALOG_SNAPSHOT = {
       "default": true,
       "invocation": "auto",
       "role": "primitive",
+      "composes": []
+    },
+    {
+      "id": "pick-ui-library",
+      "label": "Pick Ui Library",
+      "source": "https://github.com/emilkowalski/skills",
+      "args": [
+        "--skill",
+        "pick-ui-library",
+        "--global"
+      ],
+      "default": false,
+      "invocation": "auto",
+      "role": "utility",
+      "composes": []
+    },
+    {
+      "id": "html-ui",
+      "label": "HTML UI",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "html-ui",
+        "--global"
+      ],
+      "default": true,
+      "invocation": "auto",
+      "role": "workflow",
+      "composes": [
+        "design-artifact"
+      ]
+    },
+    {
+      "id": "atlas-to-spec",
+      "label": "Atlas To Spec",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "atlas-to-spec",
+        "--global"
+      ],
+      "default": true,
+      "invocation": "manual",
+      "role": "workflow",
+      "composes": []
+    },
+    {
+      "id": "atlas-to-tickets",
+      "label": "Atlas To Tickets",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "atlas-to-tickets",
+        "--global"
+      ],
+      "default": true,
+      "invocation": "manual",
+      "role": "workflow",
       "composes": []
     }
   ],
@@ -1825,6 +1607,10 @@ const WORKFLOW_MOMENTS = [
     "action": "find the right problem",
     "skills": [
       {
+        "id": "atlas-setup",
+        "use": "prepare missing independent dependencies for installed Atlas skills"
+      },
+      {
         "id": "readback",
         "use": "confirm the request before starting"
       },
@@ -1845,16 +1631,12 @@ const WORKFLOW_MOMENTS = [
         "use": "name the domain"
       },
       {
-        "id": "atlas-decide",
-        "use": "choose a scoped decision flow (Skills V2 preview)"
+        "id": "html-ui",
+        "use": "HTML UI"
       },
       {
-        "id": "atlas-design",
-        "use": "choose design methods and reconcile fidelity or motion (Skills V2 preview)"
-      },
-      {
-        "id": "atlas-implement",
-        "use": "execute bounded work or ticket graphs with optional tracking (Skills V2 preview)"
+        "id": "tracking-implementation",
+        "use": "track progress and acceptance alongside the selected executor"
       },
       {
         "id": "research",
@@ -1863,10 +1645,6 @@ const WORKFLOW_MOMENTS = [
       {
         "id": "to-questionnaire",
         "use": "collect decisions from someone else"
-      },
-      {
-        "id": "afk-ask",
-        "use": "ask another local CLI"
       },
       {
         "id": "facts",
@@ -1888,14 +1666,6 @@ const WORKFLOW_MOMENTS = [
         "use": "resolve a multi-session decision map"
       },
       {
-        "id": "afk-code-grill",
-        "use": "settle technical choices"
-      },
-      {
-        "id": "afk-design-grill",
-        "use": "select a visible design commitment"
-      },
-      {
         "id": "impeccable",
         "use": "shape the frontend direction"
       },
@@ -1904,12 +1674,8 @@ const WORKFLOW_MOMENTS = [
         "use": "test one design or state question"
       },
       {
-        "id": "html-wireframe",
-        "use": "judge hierarchy and flow"
-      },
-      {
-        "id": "html-prototype",
-        "use": "approve a polished standalone flow"
+        "id": "html-ui",
+        "use": "HTML UI"
       },
       {
         "id": "codebase-design",
@@ -1924,12 +1690,12 @@ const WORKFLOW_MOMENTS = [
         "use": "seek an independent verdict"
       },
       {
-        "id": "afk-to-spec",
-        "use": "capture agreed behavior and decisions"
+        "id": "atlas-to-spec",
+        "use": "Atlas To Spec"
       },
       {
-        "id": "afk-to-tickets",
-        "use": "approve slices and blocking edges"
+        "id": "atlas-to-tickets",
+        "use": "Atlas To Tickets"
       }
     ]
   },
@@ -1938,10 +1704,6 @@ const WORKFLOW_MOMENTS = [
     "title": "BUILD",
     "action": "turn agreed intent into behavior",
     "skills": [
-      {
-        "id": "afk-implement",
-        "use": "track execution, evidence, and acceptance"
-      },
       {
         "id": "tdd",
         "use": "grow behavior test-first"
@@ -1955,20 +1717,16 @@ const WORKFLOW_MOMENTS = [
         "use": "challenge consequential decisions"
       },
       {
-        "id": "afk-architect",
-        "use": "coordinate focused teammates"
+        "id": "team-up",
+        "use": "coordinate teammates with deliberate role, model and effort"
       },
       {
         "id": "orchestrator",
         "use": "coordinate agent processes"
       },
       {
-        "id": "afk-create-agent",
-        "use": "define a portable agent role"
-      },
-      {
-        "id": "afk-animated-driven-frontend",
-        "use": "co-direct cinematic production"
+        "id": "animated-driven-frontend",
+        "use": "ZERO-derived frontend engineering"
       },
       {
         "id": "design-artifact",
@@ -1979,24 +1737,28 @@ const WORKFLOW_MOMENTS = [
         "use": "use components and registries"
       },
       {
-        "id": "animate",
-        "use": "build purposeful motion"
-      },
-      {
-        "id": "apple-design",
-        "use": "shape fluid gesture interactions"
+        "id": "atlas-motion",
+        "use": "Atlas Motion (Skills V2 preview)"
       },
       {
         "id": "hand-drawn-canvas-animation",
         "use": "create hand-drawn animation independently"
       },
       {
-        "id": "animate-text",
-        "use": "choose and implement text effects"
-      },
-      {
         "id": "wizard",
         "use": "guide human-only setup steps"
+      },
+      {
+        "id": "atlas-craft",
+        "use": "Atlas Craft (Skills V2 preview)"
+      },
+      {
+        "id": "pick-ui-library",
+        "use": "select an existing component foundation for motion work"
+      },
+      {
+        "id": "implement-spec",
+        "use": "execute a spec ticket graph using the upstream method"
       }
     ]
   },
@@ -2014,8 +1776,8 @@ const WORKFLOW_MOMENTS = [
         "use": "prove observable behavior"
       },
       {
-        "id": "afk-static-review",
-        "use": "assess lint and typecheck findings"
+        "id": "atlas-review",
+        "use": "Atlas Review (Skills V2 preview)"
       },
       {
         "id": "doubt-driven-development",
@@ -2026,16 +1788,12 @@ const WORKFLOW_MOMENTS = [
         "use": "verify API and framework contracts"
       },
       {
-        "id": "review-animations",
-        "use": "review motion craft"
-      },
-      {
         "id": "impeccable",
         "use": "audit and refine the frontend"
       },
       {
-        "id": "afk-animated-driven-frontend",
-        "use": "screen cuts against greenlights"
+        "id": "animated-driven-frontend",
+        "use": "ZERO-derived frontend engineering"
       },
       {
         "id": "clean-room",
@@ -2049,12 +1807,8 @@ const WORKFLOW_MOMENTS = [
     "action": "judge the change against intent",
     "skills": [
       {
-        "id": "afk-code-review",
-        "use": "review Standards and Spec separately"
-      },
-      {
-        "id": "afk-code-review-verdicts",
-        "use": "verify findings before fixing"
+        "id": "atlas-review",
+        "use": "Atlas Review (Skills V2 preview)"
       },
       {
         "id": "plannotator-guide",
@@ -2088,24 +1842,12 @@ const WORKFLOW_MOMENTS = [
     "action": "accept and leave a useful handoff",
     "skills": [
       {
-        "id": "afk-implement",
-        "use": "record user acceptance before done"
-      },
-      {
-        "id": "stop-slop",
-        "use": "edit formulaic prose independently"
-      },
-      {
         "id": "writing-for-humans",
-        "use": "write for the reader\u2019s task"
+        "use": "Writing for Humans"
       },
       {
         "id": "writing-for-agents",
         "use": "write reusable agent instructions"
-      },
-      {
-        "id": "afk-cli",
-        "use": "configure and maintain the AFK environment"
       },
       {
         "id": "handoff",
@@ -2120,17 +1862,14 @@ const WORKFLOW_MOMENTS = [
         "use": "summarize the latest work"
       },
       {
-        "id": "afk-animated-driven-frontend",
-        "use": "validate delivery and creative continuity"
+        "id": "animated-driven-frontend",
+        "use": "ZERO-derived frontend engineering"
       }
     ]
   }
 ];
 
-const WORKFLOW_ROUTERS = [
-  {id:"afk-compass",use:"recommends the smallest useful manual skill on request"},
-  {id:"afk-profile-use",use:"loads the right skill profile for the current request"}
-];
+const WORKFLOW_ROUTERS = [];
 
 const COMPASS_ROUTES = [
   {

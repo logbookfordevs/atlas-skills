@@ -1,0 +1,6 @@
+interface:
+  display_name: "Team Up"
+  short_description: "Choose fitting subagent roles, models, and reasoning effort."
+  default_prompt: "Use $team-up to choose what to delegate and select fitting roles, models, and reasoning effort for the teammates."
+policy:
+  allow_implicit_invocation: true

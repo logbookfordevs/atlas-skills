@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "workflow": "writing-for-humans",
+  "generated": true,
+  "authoredInputs": [
+    "authored/writing-for-humans/entry.md",
+    "authored/writing-for-humans/openai.yaml",
+    "authored/writing-for-humans/references/articles-and-newsletters.md",
+    "authored/writing-for-humans/references/fresh-reader-pass.md",
+    "authored/writing-for-humans/references/pr-descriptions.md",
+    "authored/writing-for-humans/references/reader-progression.md",
+    "authored/writing-for-humans/references/visual-explanations.md"
+  ],
+  "authoredReferences": [
+    {
+      "input": "authored/writing-for-humans/references/articles-and-newsletters.md",
+      "target": "references/articles-and-newsletters.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "bdcc64970d5ad53a67e69706d4690296da953bb6831472a830472249732abd89"
+    },
+    {
+      "input": "authored/writing-for-humans/references/fresh-reader-pass.md",
+      "target": "references/fresh-reader-pass.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "1a47ba17c94310d25fe676108b583cd6d3e4c47fc5ebc6370897e90ccf852239"
+    },
+    {
+      "input": "authored/writing-for-humans/references/pr-descriptions.md",
+      "target": "references/pr-descriptions.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "51e88709e4b217cfee1f404362c71e5c55c3b79147b7b5fe987012dc88a0561f"
+    },
+    {
+      "input": "authored/writing-for-humans/references/reader-progression.md",
+      "target": "references/reader-progression.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "dd00107f404658e0048c2a7553ba02d21717faa2d50fff335dde010201e08df6"
+    },
+    {
+      "input": "authored/writing-for-humans/references/visual-explanations.md",
+      "target": "references/visual-explanations.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "a5bdd3136e8467aea33b1f4890c3d535abebd4fb44b3141a43ab7e64eed6e8aa"
+    }
+  ],
+  "dependencies": [],
+  "sources": [
+    {
+      "id": "stop-slop",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/hardikpandya/stop-slop",
+        "commit": "8da1f030185bdfe8471220585162991eaeb970e9",
+        "path": "SKILL.md",
+        "trackingRef": "main",
+        "licensePath": "LICENSE",
+        "includePaths": [
+          "SKILL.md",
+          "references"
+        ]
+      },
+      "supportingFiles": [
+        {
+          "classification": "verbatim",
+          "sourceSha256": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d",
+          "carriedPath": "references/stop-slop/references/examples.md",
+          "carriedSha256": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d"
+        },
+        {
+          "classification": "verbatim",
+          "sourceSha256": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93",
+          "carriedPath": "references/stop-slop/references/phrases.md",
+          "carriedSha256": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93"
+        },
+        {
+          "classification": "verbatim",
+          "sourceSha256": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58",
+          "carriedPath": "references/stop-slop/references/structures.md",
+          "carriedSha256": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
+      "carriedPath": "references/stop-slop/stop-slop.md",
+      "carriedSha256": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
+      "licensePath": "licenses/stop-slop.txt",
+      "licenseSha256": "2e2b2beaf41cc0ce28485455a62aed81777cdcdf68702e142427aef1cd720f2c",
+      "adaptation": "None. Preserve the complete upstream skill, frontmatter and three supporting references byte-for-byte.",
+      "licenseSpdx": "MIT",
+      "rulings": []
+    }
+  ],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "e281d240618f2d0148af3a3f4b2be463ab80d213f834925295242ee0cbaebe1a",
+    "agents/openai.yaml": "0525ad3256714209332dbce79f4389e7ae87d17f3cb2307ba1c9f15d98fdd698",
+    "references/articles-and-newsletters.md": "bdcc64970d5ad53a67e69706d4690296da953bb6831472a830472249732abd89",
+    "references/fresh-reader-pass.md": "1a47ba17c94310d25fe676108b583cd6d3e4c47fc5ebc6370897e90ccf852239",
+    "references/pr-descriptions.md": "51e88709e4b217cfee1f404362c71e5c55c3b79147b7b5fe987012dc88a0561f",
+    "references/reader-progression.md": "dd00107f404658e0048c2a7553ba02d21717faa2d50fff335dde010201e08df6",
+    "references/visual-explanations.md": "a5bdd3136e8467aea33b1f4890c3d535abebd4fb44b3141a43ab7e64eed6e8aa",
+    "references/stop-slop/stop-slop.md": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
+    "licenses/stop-slop.txt": "2e2b2beaf41cc0ce28485455a62aed81777cdcdf68702e142427aef1cd720f2c",
+    "references/stop-slop/references/examples.md": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d",
+    "references/stop-slop/references/phrases.md": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93",
+    "references/stop-slop/references/structures.md": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
+  }
+}

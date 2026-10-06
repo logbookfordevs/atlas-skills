@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "workflow": "atlas-setup",
+  "generated": true,
+  "authoredInputs": [
+    "authored/atlas-setup/entry.md",
+    "authored/atlas-setup/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "generatedReferences": [
+    {
+      "generator": "setup-dependencies",
+      "target": "references/dependencies.json",
+      "inputs": [
+        "sources/composition.json",
+        "afk/catalog/skills.json"
+      ],
+      "carriedSha256": "6833eebbe26471ed2cd66e75fbf3897640713fee5de9047d08f6668ab5cdb6fa"
+    }
+  ],
+  "dependencies": [],
+  "sources": [],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "e610568e05b844be6f29927bc54c21aa7c0c60c267984ac9a8b6746075cedcba",
+    "agents/openai.yaml": "0f837eabef8e760e3e7e79a1b4cc756ace6e0958d3567eaaa9e8d2c576cdc50c",
+    "references/dependencies.json": "6833eebbe26471ed2cd66e75fbf3897640713fee5de9047d08f6668ab5cdb6fa"
+  }
+}
