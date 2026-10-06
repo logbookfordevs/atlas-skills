@@ -71,7 +71,7 @@
       "license": "sources/upstream/animate/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "sources/methods/animate.md",
-      "adaptation": "Replace only the component-selection tooling call with positive guidance to use project primitives or an established accessible library. Supporting files remain verbatim.",
+      "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to search for suitable component recommendations using available Notion or discovery tools, or consult the user. Supporting files remain verbatim.",
       "consumers": [
         "atlas-motion"
       ],
