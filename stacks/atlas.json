@@ -7,7 +7,7 @@
   "sources": [
     {
       "name": "Logbook Atlas \u00b7 Skills V2 preview",
-      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
       "skills": [
         "atlas-setup",
         "tracking-implementation",
