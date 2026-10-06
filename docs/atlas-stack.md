@@ -6,13 +6,13 @@
 
 In AFK’s Sources & Stacks, add a stack by pasting the manifest JSON or providing its direct HTTPS JSON URL. Inspect the sources and skill selections before saving. Copy the stack’s install script, select the installation destination and agent, and run the copied script when ready. Import and copy do not install or activate skills. Profiles remain optional activation groups.
 
-This requires the AFK Sources & Stacks feature currently being implemented on its review branch. Both this manifest and that feature must be published before remote import is available. The direct preview URL, after publication, is:
+AFK 2.0 includes Sources & Stacks on its main branch. Atlas’s manifest currently uses this preview URL:
 
 ```text
 https://raw.githubusercontent.com/logbookfordevs/logbook-atlas/feat/skills-v2/stacks/atlas.json
 ```
 
-The Atlas source and schema URL intentionally target their preview branches. Move those references to stable releases when the reviewed work is published there. Explicit skill selections prevent retained legacy entries or newly added upstream skills from joining the stack automatically.
+The stack schema points to AFK’s main branch. The Atlas source still targets its preview branch; move that reference when Atlas is published on its default branch. Explicit skill selections prevent retained legacy entries or newly added upstream skills from joining the stack automatically.
 
 ## Maintenance
 

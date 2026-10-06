@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/logbookfordevs/ai-field-kit/feat/afk-fieldwork-pivot/docs/schemas/skill-stack.v1.schema.json",
+  "$schema": "https://raw.githubusercontent.com/logbookfordevs/ai-field-kit/main/docs/schemas/skill-stack.v1.schema.json",
   "version": 1,
   "id": "logbook-atlas",
   "name": "Logbook Atlas",
