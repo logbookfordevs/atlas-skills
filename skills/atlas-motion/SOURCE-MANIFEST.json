@@ -32,15 +32,15 @@
       "notices": [],
       "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
       "carriedPath": "references/animate/animate.md",
-      "carriedSha256": "7285d0ffac8246fdb3bde85dfc473a950a593d7c12705537ad9fcebe19d592ed",
+      "carriedSha256": "cab02af17d548ba7a3264ca514fc264903f484869e8e3e0d28d22232d65869c0",
       "licensePath": "licenses/animate.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to search for suitable component recommendations using available Notion or discovery tools, or consult the user. Supporting files remain verbatim.",
+      "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to pause and find a suitable library via available Notion search, internet search, existing project libraries, or user consultation. Supporting files remain verbatim.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-05",
       "rulings": [],
       "patch": "sources/patches/animate.patch",
-      "patchSha256": "0cd666af840b02a5d2994bcfc7d17121147f71e604b3bf6885776d759033c53b"
+      "patchSha256": "04bb7d31c869e862806a43c7863d6ca58b99c4d9fe7742eca529dc10c505deb2"
     },
     {
       "id": "apple-design",
@@ -70,7 +70,7 @@
   "files": {
     "SKILL.md": "a45b3ebace2df47cd3197370bd791a14199612e719a9af0a75832cf37462cac8",
     "agents/openai.yaml": "b547c19f4621638f7f5ee66bd21764618b6372791e1861122d7376f4e879f095",
-    "references/animate/animate.md": "7285d0ffac8246fdb3bde85dfc473a950a593d7c12705537ad9fcebe19d592ed",
+    "references/animate/animate.md": "cab02af17d548ba7a3264ca514fc264903f484869e8e3e0d28d22232d65869c0",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
     "references/fluid/apple-design.md": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",

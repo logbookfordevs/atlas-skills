@@ -78,7 +78,7 @@ Walk down; stop at the first that fits.
 
 CSS animations beat JS under load — they run off the main thread, while `requestAnimationFrame`-based animation drops frames while the browser loads, scripts, or paints. Use CSS for predetermined motion, JS for dynamic and interruptible motion.
 
-If the task needs a *component* rather than an animation — a toast, a drawer, a command menu, a dropdown — search for suitable component recommendations using available Notion or discovery tools, or consult the user. Choose based on the task and project requirements.
+If the task needs a *component* rather than an animation — a toast, a drawer, a command menu, a dropdown — pause animation work and find a suitable component library through available Notion search, internet search, existing project libraries, or consultation with the user. Choose based on the task and project requirements.
 
 ### 4. Pick the properties
 
