@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "workflow": "atlas-to-spec",
+  "generated": true,
+  "managedFiles": [
+    "SKILL.md",
+    "licenses/to-spec.txt"
+  ],
+  "authoredInputs": [
+    "skills/atlas-to-spec/SKILL.md",
+    "skills/atlas-to-spec/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [],
+  "sources": [
+    {
+      "id": "to-spec",
+      "owner": "to-spec",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "path": "skills/engineering/to-spec/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+      "carriedPath": "SKILL.md",
+      "carriedSha256": "d2dc2326f3e124468aa4375b5fce3246d2c334911ee6c239c49e7ba234593d39",
+      "licensePath": "licenses/to-spec.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Existing Leonardo fork bytes preserved. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Public entry renamed to atlas-to-spec; remaining behavior preserved.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "rulings": [],
+      "patch": "sources/patches/to-spec.patch",
+      "patchSha256": "622adc3207ac23d047d52392cdf648c341fbeb2756bd931b4eba36534aedeaf9"
+    }
+  ],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "d2dc2326f3e124468aa4375b5fce3246d2c334911ee6c239c49e7ba234593d39",
+    "agents/openai.yaml": "f9004a8bb5a8a3bfe4137c9aaae53735a9fe00c7b242771048be969d2f6ae990",
+    "licenses/to-spec.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

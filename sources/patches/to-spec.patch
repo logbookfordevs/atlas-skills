@@ -1,0 +1,70 @@
+diff --git a/source.md b/source.md
+index 3f52599..2b8875e 100644
+--- a/source.md
++++ b/source.md
+@@ -1,12 +1,16 @@
+ ---
+-name: to-spec
+-description: "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed."
++name: atlas-to-spec
++description: Turn the current conversation into a spec and save it as an AFK artifact, or publish it to the project issue tracker when requested — no interview, just synthesis of what you've already discussed.
+ disable-model-invocation: true
++metadata:
++  short-description: Create or normalize an agent-ready spec.
+ ---
+ 
+-This skill takes the current conversation context and codebase understanding and produces a spec. Do NOT interview the user; just synthesize what you already know.
++# To Spec
+ 
+-The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
++This skill takes the current conversation context and codebase understanding and produces a spec. Do NOT interview the user — just synthesize what you already know.
++
++Save the spec as a local artifact following the active repo or user convention.
+ 
+ ## Process
+ 
+@@ -16,7 +20,9 @@ The issue tracker and triage label vocabulary should have been provided to you.
+ 
+ Check with the user that these seams match their expectations.
+ 
+-3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
++3. Write the spec using the template below. Publish it to the project issue tracker only when the user requested tracker publication or existing project context clearly expects it. If publishing, apply the `ready-for-agent` triage label when the label vocabulary is known.
++
++4. After writing a local spec, report its path and recommend an optional Plannotator review with `plannotator annotate <path-to-spec>`. Run it only when the user requests the review; the spec is ready for handoff without it.
+ 
+ <spec-template>
+ 
+@@ -42,7 +48,7 @@ This list of user stories should be extremely extensive and cover all aspects of
+ 
+ ## Implementation Decisions
+ 
+-A list of implementation decisions that were made. This can include:
++A list of implementation decisions that were made, including the reasoning needed to implement and later review them faithfully. This can include:
+ 
+ - The modules that will be built/modified
+ - The interfaces of those modules that will be modified
+@@ -52,13 +58,22 @@ A list of implementation decisions that were made. This can include:
+ - API contracts
+ - Specific interactions
+ 
++For consequential decisions, preserve:
++
++- The constraint or priority that shaped the decision
++- The accepted trade-off
++- Rejected alternatives when their rejection matters to implementation
++- The condition that would cause the decision to be revisited
++
+ Do NOT include specific file paths or code snippets. They may end up being outdated very quickly.
+ 
+-Exception: if a prototype produced a snippet that encodes a decision more precisely than prose can (state machine, reducer, schema, type shape), inline it within the relevant decision and note briefly that it came from a prototype. Trim to the decision-rich parts, not a working demo, just the important bits.
++Exception: if a prototype produced a snippet that encodes a decision more precisely than prose can (state machine, reducer, schema, type shape), inline it within the relevant decision and note briefly that it came from a prototype. Trim to the decision-rich parts — not a working demo, just the important bits.
+ 
+ ## Testing Decisions
+ 
+-A list of testing decisions that were made. Include:
++A list of testing decisions that were made.
++
++Include:
+ 
+ - A description of what makes a good test (only test external behavior, not implementation details)
+ - Which modules will be tested

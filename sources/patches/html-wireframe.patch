@@ -1,0 +1,11 @@
+--- a/source.md
++++ b/source.md
+@@ -30,7 +30,7 @@
+ 
+ ## Explore structure before style
+ 
+-When [`design-artifact`](../design-artifact/SKILL.md) is available, read it for
++When the independently installed `design-artifact` skill is available, read it for
+ subject-specific composition and hierarchy guidance without importing editorial
+ polish. This skill's low-fidelity contract remains authoritative.
+ 

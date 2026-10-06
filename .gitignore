@@ -19,3 +19,6 @@ dist/
 .env
 .env.local
 .agents
+
+# Local AFK settings and rules-sync receipts
+/afk/settings.json

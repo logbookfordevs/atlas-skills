@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "workflow": "atlas-craft",
+  "generated": true,
+  "managedFiles": [
+    "references/color/index.md",
+    "licenses/better-colors.txt",
+    "references/color/color-formats.md",
+    "references/color/color-usage.md",
+    "references/color/contrast.md",
+    "references/color/palette-generation.md",
+    "references/color/palette-structure.md",
+    "references/color/token-naming.md",
+    "references/type/index.md",
+    "licenses/better-typography.txt",
+    "references/type/choosing-fonts.md",
+    "references/type/css-cheat-sheet.md",
+    "references/type/details-and-accessibility.md",
+    "references/type/spacing-and-sizing.md",
+    "references/type/variable-fonts-and-opentype.md",
+    "references/type/wrapping-and-punctuation.md",
+    "references/layout/index.md",
+    "licenses/better-layout.txt",
+    "references/layout/grouping-and-alignment.md",
+    "references/layout/spacing-and-adaptivity.md"
+  ],
+  "authoredInputs": [
+    "skills/atlas-craft/SKILL.md",
+    "skills/atlas-craft/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [],
+  "sources": [
+    {
+      "id": "better-colors",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-colors/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/better-colors/color-formats.md",
+          "classification": "verbatim",
+          "sourceSha256": "e68fffec8f7b8e1036c295fce8d65785764f33aead5d292389c47451e79d7129",
+          "carriedPath": "references/color/color-formats.md",
+          "carriedSha256": "e68fffec8f7b8e1036c295fce8d65785764f33aead5d292389c47451e79d7129"
+        },
+        {
+          "upstreamPath": "skills/better-colors/color-usage.md",
+          "classification": "verbatim",
+          "sourceSha256": "dbaa4a4cb10b8118165fca4531b3c35b409c79185f15a2812a34f118293dba9f",
+          "carriedPath": "references/color/color-usage.md",
+          "carriedSha256": "dbaa4a4cb10b8118165fca4531b3c35b409c79185f15a2812a34f118293dba9f"
+        },
+        {
+          "upstreamPath": "skills/better-colors/contrast.md",
+          "classification": "verbatim",
+          "sourceSha256": "f9a2f8ca2fd7966ea0002a9dd58b9d392fbb14fc6f4365534c488046337e5971",
+          "carriedPath": "references/color/contrast.md",
+          "carriedSha256": "f9a2f8ca2fd7966ea0002a9dd58b9d392fbb14fc6f4365534c488046337e5971"
+        },
+        {
+          "upstreamPath": "skills/better-colors/palette-generation.md",
+          "classification": "verbatim",
+          "sourceSha256": "f3e3f9fc84fd834cfffd9e0c951f28c3f24c3c4a4492d86b697d3258f500fb85",
+          "carriedPath": "references/color/palette-generation.md",
+          "carriedSha256": "f3e3f9fc84fd834cfffd9e0c951f28c3f24c3c4a4492d86b697d3258f500fb85"
+        },
+        {
+          "upstreamPath": "skills/better-colors/palette-structure.md",
+          "classification": "verbatim",
+          "sourceSha256": "82b22d74ead2a551a2a505347273025020d84dcde4a0170ea2fd14290dc10387",
+          "carriedPath": "references/color/palette-structure.md",
+          "carriedSha256": "82b22d74ead2a551a2a505347273025020d84dcde4a0170ea2fd14290dc10387"
+        },
+        {
+          "upstreamPath": "skills/better-colors/token-naming.md",
+          "classification": "verbatim",
+          "sourceSha256": "198ca90a643d52f446fe423464908e900d31923ee7d13d6454c8b791326d6b2a",
+          "carriedPath": "references/color/token-naming.md",
+          "carriedSha256": "198ca90a643d52f446fe423464908e900d31923ee7d13d6454c8b791326d6b2a"
+        }
+      ],
+      "notices": [],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/colors/index.md",
+        "classification": "verbatim",
+        "sha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+        "trackingRef": "main"
+      },
+      "sourceSha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+      "carriedPath": "references/color/index.md",
+      "carriedSha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+      "licensePath": "licenses/better-colors.txt",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "rulings": [
+        "craft-local-names"
+      ]
+    },
+    {
+      "id": "better-typography",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-typography/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/better-typography/choosing-fonts.md",
+          "classification": "verbatim",
+          "sourceSha256": "d139ec5d68cd123bc305d920295f7bc95a1e1123674de96d19103c1ebffc85c9",
+          "carriedPath": "references/type/choosing-fonts.md",
+          "carriedSha256": "d139ec5d68cd123bc305d920295f7bc95a1e1123674de96d19103c1ebffc85c9"
+        },
+        {
+          "upstreamPath": "skills/better-typography/css-cheat-sheet.md",
+          "classification": "verbatim",
+          "sourceSha256": "45c77f0d1954e12e76c3903361f52703cb4f4287d54c651710f60926247165fb",
+          "carriedPath": "references/type/css-cheat-sheet.md",
+          "carriedSha256": "45c77f0d1954e12e76c3903361f52703cb4f4287d54c651710f60926247165fb"
+        },
+        {
+          "upstreamPath": "skills/better-typography/details-and-accessibility.md",
+          "classification": "verbatim",
+          "sourceSha256": "d74e2719ee793fbf7408883e0e5eb396b67514ce07e02412f33d5408ecb4a02e",
+          "carriedPath": "references/type/details-and-accessibility.md",
+          "carriedSha256": "d74e2719ee793fbf7408883e0e5eb396b67514ce07e02412f33d5408ecb4a02e"
+        },
+        {
+          "upstreamPath": "skills/better-typography/spacing-and-sizing.md",
+          "classification": "verbatim",
+          "sourceSha256": "e28e7899a73a8b17f38418dfd8c1afda116db81a3b68d53dd51eab019b20ab82",
+          "carriedPath": "references/type/spacing-and-sizing.md",
+          "carriedSha256": "e28e7899a73a8b17f38418dfd8c1afda116db81a3b68d53dd51eab019b20ab82"
+        },
+        {
+          "upstreamPath": "skills/better-typography/variable-fonts-and-opentype.md",
+          "classification": "verbatim",
+          "sourceSha256": "2bf1317ea5c0af6e36c57d15aacea512e450acbe4b00a8664c4619a959dea0b0",
+          "carriedPath": "references/type/variable-fonts-and-opentype.md",
+          "carriedSha256": "2bf1317ea5c0af6e36c57d15aacea512e450acbe4b00a8664c4619a959dea0b0"
+        },
+        {
+          "upstreamPath": "skills/better-typography/wrapping-and-punctuation.md",
+          "classification": "verbatim",
+          "sourceSha256": "7cfa3463b68cf21f08ab01a184b12c8bf2fe9340c2c7691a8cc99e4569389efe",
+          "carriedPath": "references/type/wrapping-and-punctuation.md",
+          "carriedSha256": "7cfa3463b68cf21f08ab01a184b12c8bf2fe9340c2c7691a8cc99e4569389efe"
+        }
+      ],
+      "notices": [],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/typography/index.md",
+        "classification": "verbatim",
+        "sha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+        "trackingRef": "main"
+      },
+      "sourceSha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+      "carriedPath": "references/type/index.md",
+      "carriedSha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+      "licensePath": "licenses/better-typography.txt",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "rulings": [
+        "craft-local-names"
+      ]
+    },
+    {
+      "id": "better-layout",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-layout/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
+          "classification": "verbatim",
+          "sourceSha256": "027edd034ab641e8affc2ec02ca97ee0824d86756b14e11de908d62f5d086fb1",
+          "carriedPath": "references/layout/grouping-and-alignment.md",
+          "carriedSha256": "027edd034ab641e8affc2ec02ca97ee0824d86756b14e11de908d62f5d086fb1"
+        },
+        {
+          "upstreamPath": "skills/better-layout/spacing-and-adaptivity.md",
+          "classification": "verbatim",
+          "sourceSha256": "bf46b0857efa5022e6918eda026827e9de2747f3f349b5a6787a2322179abe77",
+          "carriedPath": "references/layout/spacing-and-adaptivity.md",
+          "carriedSha256": "bf46b0857efa5022e6918eda026827e9de2747f3f349b5a6787a2322179abe77"
+        }
+      ],
+      "notices": [],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/layout/index.md",
+        "classification": "verbatim",
+        "sha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+        "trackingRef": "main"
+      },
+      "sourceSha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+      "carriedPath": "references/layout/index.md",
+      "carriedSha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+      "licensePath": "licenses/better-layout.txt",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "rulings": [
+        "craft-local-names"
+      ]
+    }
+  ],
+  "rulings": [
+    {
+      "id": "craft-local-names",
+      "owner": "atlas-craft",
+      "document": "skills/atlas-craft/SKILL.md",
+      "section": "Modes",
+      "sources": [
+        "better-colors",
+        "better-typography",
+        "better-layout"
+      ],
+      "decision": "Resolve named better-* calls locally."
+    }
+  ],
+  "files": {
+    "SKILL.md": "e4aa56b2e29b3b4ab1093c0683403734f1a9cd8bc69a5f413d5e5334959f9d92",
+    "agents/openai.yaml": "749e3db250da459bfb2be66482b7db03dde2706bce505cec94cfebaa688516ab",
+    "references/color/index.md": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+    "licenses/better-colors.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+    "references/color/color-formats.md": "e68fffec8f7b8e1036c295fce8d65785764f33aead5d292389c47451e79d7129",
+    "references/color/color-usage.md": "dbaa4a4cb10b8118165fca4531b3c35b409c79185f15a2812a34f118293dba9f",
+    "references/color/contrast.md": "f9a2f8ca2fd7966ea0002a9dd58b9d392fbb14fc6f4365534c488046337e5971",
+    "references/color/palette-generation.md": "f3e3f9fc84fd834cfffd9e0c951f28c3f24c3c4a4492d86b697d3258f500fb85",
+    "references/color/palette-structure.md": "82b22d74ead2a551a2a505347273025020d84dcde4a0170ea2fd14290dc10387",
+    "references/color/token-naming.md": "198ca90a643d52f446fe423464908e900d31923ee7d13d6454c8b791326d6b2a",
+    "references/type/index.md": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+    "licenses/better-typography.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+    "references/type/choosing-fonts.md": "d139ec5d68cd123bc305d920295f7bc95a1e1123674de96d19103c1ebffc85c9",
+    "references/type/css-cheat-sheet.md": "45c77f0d1954e12e76c3903361f52703cb4f4287d54c651710f60926247165fb",
+    "references/type/details-and-accessibility.md": "d74e2719ee793fbf7408883e0e5eb396b67514ce07e02412f33d5408ecb4a02e",
+    "references/type/spacing-and-sizing.md": "e28e7899a73a8b17f38418dfd8c1afda116db81a3b68d53dd51eab019b20ab82",
+    "references/type/variable-fonts-and-opentype.md": "2bf1317ea5c0af6e36c57d15aacea512e450acbe4b00a8664c4619a959dea0b0",
+    "references/type/wrapping-and-punctuation.md": "7cfa3463b68cf21f08ab01a184b12c8bf2fe9340c2c7691a8cc99e4569389efe",
+    "references/layout/index.md": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+    "licenses/better-layout.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+    "references/layout/grouping-and-alignment.md": "027edd034ab641e8affc2ec02ca97ee0824d86756b14e11de908d62f5d086fb1",
+    "references/layout/spacing-and-adaptivity.md": "bf46b0857efa5022e6918eda026827e9de2747f3f349b5a6787a2322179abe77"
+  }
+}

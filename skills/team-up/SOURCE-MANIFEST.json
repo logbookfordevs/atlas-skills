@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "workflow": "team-up",
+  "generated": true,
+  "managedFiles": [],
+  "authoredInputs": [
+    "skills/team-up/SKILL.md",
+    "skills/team-up/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [],
+  "sources": [],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "dfaf1c9750fe5bd306d6e676dacbb3bd9380ff8b7e51981ab91cb1f56c85aa96",
+    "agents/openai.yaml": "270a07cc2b69eee532060965bd58612ced7eb39488eca676bc7975da3298de42"
+  }
+}

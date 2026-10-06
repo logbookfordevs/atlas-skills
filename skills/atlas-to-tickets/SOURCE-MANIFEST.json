@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "workflow": "atlas-to-tickets",
+  "generated": true,
+  "managedFiles": [
+    "SKILL.md",
+    "licenses/to-tickets.txt"
+  ],
+  "authoredInputs": [
+    "skills/atlas-to-tickets/SKILL.md",
+    "skills/atlas-to-tickets/agents/openai.yaml",
+    "skills/atlas-to-tickets/references/ticket-templates.md"
+  ],
+  "authoredReferences": [
+    {
+      "input": "skills/atlas-to-tickets/references/ticket-templates.md",
+      "target": "references/ticket-templates.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "0e85802c6d3509a5cf5e94416b5262700e68636a6083bbb1edb3a7585ec8c113"
+    }
+  ],
+  "dependencies": [],
+  "sources": [
+    {
+      "id": "to-tickets",
+      "owner": "to-tickets",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "path": "skills/engineering/to-tickets/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995",
+      "carriedPath": "SKILL.md",
+      "carriedSha256": "3dcf0b15ce1fea474ebf05bb0c716406d06411e5dd34aefeaa5252bad9638750",
+      "licensePath": "licenses/to-tickets.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Existing Leonardo fork bytes preserved. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Public entry renamed to atlas-to-tickets; remaining behavior preserved.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "rulings": [],
+      "patch": "sources/patches/to-tickets.patch",
+      "patchSha256": "d92eee3b524b76562c13c5bccb4875b69699845f1d33eb28dd55b2ac0d6eba1c"
+    }
+  ],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "3dcf0b15ce1fea474ebf05bb0c716406d06411e5dd34aefeaa5252bad9638750",
+    "agents/openai.yaml": "c870af372978ea66f9fba609bc00d27db275dbcfb10fe7156b6b4a81e4b79681",
+    "references/ticket-templates.md": "0e85802c6d3509a5cf5e94416b5262700e68636a6083bbb1edb3a7585ec8c113",
+    "licenses/to-tickets.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

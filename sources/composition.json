@@ -1,0 +1,721 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "html-wireframe",
+      "owner": "Atlas Design",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/plannotator/effective-html",
+        "commit": "2ac1dfecb0f2474e75260cb6d3c9b9d6d9b5062e",
+        "path": "skills/html-wireframe/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/html-wireframe/source.md",
+      "sourceSha256": "b1d649ef9052f2ed8baabaf483ed527208a2e481281ed3925ec8b84ba641d4c1",
+      "license": "sources/upstream/html-wireframe/LICENSE",
+      "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
+      "method": "skills/html-ui/references/wireframe/html-wireframe.md",
+      "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
+      "consumers": [
+        "html-ui"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "carriedPath": "references/wireframe/html-wireframe.md",
+      "supportingFiles": [],
+      "rulings": [],
+      "patch": "sources/patches/html-wireframe.patch"
+    },
+    {
+      "id": "html-prototype",
+      "owner": "Atlas Design",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/plannotator/effective-html",
+        "commit": "2ac1dfecb0f2474e75260cb6d3c9b9d6d9b5062e",
+        "path": "skills/html-prototype/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/html-prototype/source.md",
+      "sourceSha256": "8987dda45224350254af30cafa72e721c6d91e1972e794e8e839406f77814368",
+      "license": "sources/upstream/html-prototype/LICENSE",
+      "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
+      "method": "skills/html-ui/references/model/html-prototype.md",
+      "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
+      "consumers": [
+        "html-ui"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "carriedPath": "references/model/html-prototype.md",
+      "supportingFiles": [],
+      "rulings": [],
+      "patch": "sources/patches/html-prototype.patch"
+    },
+    {
+      "id": "animate",
+      "owner": "Atlas Implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/animate/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/animate/source.md",
+      "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "license": "sources/upstream/animate/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "skills/atlas-motion/references/animate/animate.md",
+      "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to pause and find a suitable library via available Notion search, internet search, existing project libraries, or user consultation. Supporting files remain verbatim.",
+      "consumers": [
+        "atlas-motion"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "carriedPath": "references/animate/animate.md",
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/animate/RECIPES.md",
+          "snapshot": "sources/upstream/animate/support/RECIPES.md",
+          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+          "relativePath": "RECIPES.md"
+        }
+      ],
+      "rulings": [],
+      "patch": "sources/patches/animate.patch"
+    },
+    {
+      "id": "apple-design",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/apple-design/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/apple-design/source.md",
+      "sourceSha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+      "license": "sources/upstream/apple-design/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "sources/upstream/apple-design/source.md",
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
+      "consumers": [
+        "atlas-motion"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "carriedPath": "references/fluid/apple-design.md",
+      "supportingFiles": [],
+      "rulings": []
+    },
+    {
+      "id": "better-layout",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-layout/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-layout/source.md",
+      "sourceSha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+      "license": "sources/upstream/better-layout/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "sources/upstream/better-layout/source.md",
+      "carriedPath": "references/layout/index.md",
+      "consumers": [
+        "atlas-craft"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "grouping-and-alignment.md",
+          "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
+          "snapshot": "sources/upstream/better-layout/support/grouping-and-alignment.md",
+          "sourceSha256": "027edd034ab641e8affc2ec02ca97ee0824d86756b14e11de908d62f5d086fb1"
+        },
+        {
+          "relativePath": "spacing-and-adaptivity.md",
+          "upstreamPath": "skills/better-layout/spacing-and-adaptivity.md",
+          "snapshot": "sources/upstream/better-layout/support/spacing-and-adaptivity.md",
+          "sourceSha256": "bf46b0857efa5022e6918eda026827e9de2747f3f349b5a6787a2322179abe77"
+        }
+      ],
+      "rulings": [
+        "craft-local-names"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/layout/index.md",
+        "classification": "verbatim",
+        "sha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+        "trackingRef": "main"
+      },
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer."
+    },
+    {
+      "id": "better-typography",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-typography/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-typography/source.md",
+      "sourceSha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+      "license": "sources/upstream/better-typography/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "sources/upstream/better-typography/source.md",
+      "carriedPath": "references/type/index.md",
+      "consumers": [
+        "atlas-craft"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "choosing-fonts.md",
+          "upstreamPath": "skills/better-typography/choosing-fonts.md",
+          "snapshot": "sources/upstream/better-typography/support/choosing-fonts.md",
+          "sourceSha256": "d139ec5d68cd123bc305d920295f7bc95a1e1123674de96d19103c1ebffc85c9"
+        },
+        {
+          "relativePath": "css-cheat-sheet.md",
+          "upstreamPath": "skills/better-typography/css-cheat-sheet.md",
+          "snapshot": "sources/upstream/better-typography/support/css-cheat-sheet.md",
+          "sourceSha256": "45c77f0d1954e12e76c3903361f52703cb4f4287d54c651710f60926247165fb"
+        },
+        {
+          "relativePath": "details-and-accessibility.md",
+          "upstreamPath": "skills/better-typography/details-and-accessibility.md",
+          "snapshot": "sources/upstream/better-typography/support/details-and-accessibility.md",
+          "sourceSha256": "d74e2719ee793fbf7408883e0e5eb396b67514ce07e02412f33d5408ecb4a02e"
+        },
+        {
+          "relativePath": "spacing-and-sizing.md",
+          "upstreamPath": "skills/better-typography/spacing-and-sizing.md",
+          "snapshot": "sources/upstream/better-typography/support/spacing-and-sizing.md",
+          "sourceSha256": "e28e7899a73a8b17f38418dfd8c1afda116db81a3b68d53dd51eab019b20ab82"
+        },
+        {
+          "relativePath": "variable-fonts-and-opentype.md",
+          "upstreamPath": "skills/better-typography/variable-fonts-and-opentype.md",
+          "snapshot": "sources/upstream/better-typography/support/variable-fonts-and-opentype.md",
+          "sourceSha256": "2bf1317ea5c0af6e36c57d15aacea512e450acbe4b00a8664c4619a959dea0b0"
+        },
+        {
+          "relativePath": "wrapping-and-punctuation.md",
+          "upstreamPath": "skills/better-typography/wrapping-and-punctuation.md",
+          "snapshot": "sources/upstream/better-typography/support/wrapping-and-punctuation.md",
+          "sourceSha256": "7cfa3463b68cf21f08ab01a184b12c8bf2fe9340c2c7691a8cc99e4569389efe"
+        }
+      ],
+      "rulings": [
+        "craft-local-names"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/typography/index.md",
+        "classification": "verbatim",
+        "sha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+        "trackingRef": "main"
+      },
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer."
+    },
+    {
+      "id": "better-colors",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-colors/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-colors/source.md",
+      "sourceSha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+      "license": "sources/upstream/better-colors/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "sources/upstream/better-colors/source.md",
+      "carriedPath": "references/color/index.md",
+      "consumers": [
+        "atlas-craft"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "color-formats.md",
+          "upstreamPath": "skills/better-colors/color-formats.md",
+          "snapshot": "sources/upstream/better-colors/support/color-formats.md",
+          "sourceSha256": "e68fffec8f7b8e1036c295fce8d65785764f33aead5d292389c47451e79d7129"
+        },
+        {
+          "relativePath": "color-usage.md",
+          "upstreamPath": "skills/better-colors/color-usage.md",
+          "snapshot": "sources/upstream/better-colors/support/color-usage.md",
+          "sourceSha256": "dbaa4a4cb10b8118165fca4531b3c35b409c79185f15a2812a34f118293dba9f"
+        },
+        {
+          "relativePath": "contrast.md",
+          "upstreamPath": "skills/better-colors/contrast.md",
+          "snapshot": "sources/upstream/better-colors/support/contrast.md",
+          "sourceSha256": "f9a2f8ca2fd7966ea0002a9dd58b9d392fbb14fc6f4365534c488046337e5971"
+        },
+        {
+          "relativePath": "palette-generation.md",
+          "upstreamPath": "skills/better-colors/palette-generation.md",
+          "snapshot": "sources/upstream/better-colors/support/palette-generation.md",
+          "sourceSha256": "f3e3f9fc84fd834cfffd9e0c951f28c3f24c3c4a4492d86b697d3258f500fb85"
+        },
+        {
+          "relativePath": "palette-structure.md",
+          "upstreamPath": "skills/better-colors/palette-structure.md",
+          "snapshot": "sources/upstream/better-colors/support/palette-structure.md",
+          "sourceSha256": "82b22d74ead2a551a2a505347273025020d84dcde4a0170ea2fd14290dc10387"
+        },
+        {
+          "relativePath": "token-naming.md",
+          "upstreamPath": "skills/better-colors/token-naming.md",
+          "snapshot": "sources/upstream/better-colors/support/token-naming.md",
+          "sourceSha256": "198ca90a643d52f446fe423464908e900d31923ee7d13d6454c8b791326d6b2a"
+        }
+      ],
+      "rulings": [
+        "craft-local-names"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/colors/index.md",
+        "classification": "verbatim",
+        "sha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+        "trackingRef": "main"
+      },
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer."
+    },
+    {
+      "id": "to-spec",
+      "owner": "to-spec",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "path": "skills/engineering/to-spec/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/to-spec/source.md",
+      "sourceSha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+      "license": "sources/upstream/to-spec/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "skills/atlas-to-spec/SKILL.md",
+      "adaptation": "Existing Leonardo fork bytes preserved. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Public entry renamed to atlas-to-spec; remaining behavior preserved.",
+      "consumers": [
+        "atlas-to-spec"
+      ],
+      "rulings": [],
+      "carriedPath": "SKILL.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "patch": "sources/patches/to-spec.patch"
+    },
+    {
+      "id": "to-tickets",
+      "owner": "to-tickets",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "path": "skills/engineering/to-tickets/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/to-tickets/source.md",
+      "sourceSha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995",
+      "license": "sources/upstream/to-tickets/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "skills/atlas-to-tickets/SKILL.md",
+      "adaptation": "Existing Leonardo fork bytes preserved. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Public entry renamed to atlas-to-tickets; remaining behavior preserved.",
+      "consumers": [
+        "atlas-to-tickets"
+      ],
+      "rulings": [],
+      "carriedPath": "SKILL.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "patch": "sources/patches/to-tickets.patch"
+    },
+    {
+      "id": "code-review",
+      "owner": "code-review",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "path": "skills/engineering/code-review/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/code-review/source.md",
+      "sourceSha256": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
+      "license": "sources/upstream/code-review/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "skills/atlas-review/references/code/code-review.md",
+      "adaptation": "Leonardo\u2019s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields.",
+      "consumers": [
+        "atlas-review"
+      ],
+      "rulings": [],
+      "carriedPath": "references/code/code-review.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "patch": "sources/patches/code-review.patch"
+    },
+    {
+      "id": "review-animations",
+      "owner": "review-animations",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/review-animations/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/review-animations/source.md",
+      "sourceSha256": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+      "license": "sources/upstream/review-animations/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "sources/upstream/review-animations/source.md",
+      "adaptation": "Complete selected runtime tree and frontmatter preserved byte-for-byte.",
+      "consumers": [
+        "atlas-review"
+      ],
+      "rulings": [],
+      "carriedPath": "references/motion/review-animations.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "STANDARDS.md",
+          "upstreamPath": "skills/review-animations/STANDARDS.md",
+          "snapshot": "sources/upstream/review-animations/supporting/STANDARDS.md",
+          "sourceSha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07"
+        }
+      ]
+    },
+    {
+      "id": "stop-slop",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/hardikpandya/stop-slop",
+        "commit": "8da1f030185bdfe8471220585162991eaeb970e9",
+        "path": "SKILL.md",
+        "trackingRef": "main",
+        "licensePath": "LICENSE",
+        "includePaths": [
+          "SKILL.md",
+          "references"
+        ]
+      },
+      "snapshot": "sources/upstream/stop-slop/source.md",
+      "method": "sources/upstream/stop-slop/source.md",
+      "sourceSha256": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
+      "license": "sources/upstream/stop-slop/LICENSE",
+      "licenseSha256": "2e2b2beaf41cc0ce28485455a62aed81777cdcdf68702e142427aef1cd720f2c",
+      "licenseSpdx": "MIT",
+      "adaptation": "None. Preserve the complete upstream skill, frontmatter and three supporting references byte-for-byte.",
+      "carriedPath": "references/stop-slop/stop-slop.md",
+      "supportingFiles": [
+        {
+          "relativePath": "references/examples.md",
+          "snapshot": "sources/upstream/stop-slop/references/examples.md",
+          "sourceSha256": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d"
+        },
+        {
+          "relativePath": "references/phrases.md",
+          "snapshot": "sources/upstream/stop-slop/references/phrases.md",
+          "sourceSha256": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93"
+        },
+        {
+          "relativePath": "references/structures.md",
+          "snapshot": "sources/upstream/stop-slop/references/structures.md",
+          "sourceSha256": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
+        }
+      ],
+      "consumers": [
+        "writing-for-humans"
+      ],
+      "rulings": []
+    },
+    {
+      "id": "show-me",
+      "owner": "tracking-implementation",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/humanlayer/skills",
+        "commit": "ca7c8088db69e315a8b2deea43820270457f8f3c",
+        "path": "plugins/show-me/skills/show-me/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/show-me/source.md",
+      "sourceSha256": "434a2346cc95e313b0d367d477dda2e23ba642dd2181757415a09500664af100",
+      "license": "sources/upstream/show-me/LICENSE",
+      "licenseSha256": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
+      "method": "sources/upstream/show-me/source.md",
+      "adaptation": "Complete Show Me source preserved verbatim, including manual invocation frontmatter and examples. Tracking loads its method when creating or updating the Implementation Record, to govern artifact presentation throughout the work. Required state, evidence and acceptance remain governed by Tracking. The independent Show Me skill remains unchanged; host-specific artifact opening uses the caller\u2019s supported mechanism.",
+      "consumers": [
+        "tracking-implementation"
+      ],
+      "rulings": [
+        "tracking-show-me-handoff"
+      ],
+      "carriedPath": "references/show-me.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "plugins/show-me/skills/show-me/agents/openai.yaml",
+          "snapshot": "sources/upstream/show-me/supporting/agents/openai.yaml",
+          "sourceSha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "id": "atlas-review",
+      "entry": "skills/atlas-review/SKILL.md",
+      "agent": "skills/atlas-review/agents/openai.yaml",
+      "methods": [
+        "code-review",
+        "review-animations"
+      ],
+      "authoredReferences": [
+        {
+          "input": "skills/atlas-review/references/static/static-review.md",
+          "target": "references/static/static-review.md"
+        },
+        {
+          "input": "skills/atlas-review/references/static/scripts/changed-files.sh",
+          "target": "references/static/scripts/changed-files.sh"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "atlas-craft",
+      "entry": "skills/atlas-craft/SKILL.md",
+      "agent": "skills/atlas-craft/agents/openai.yaml",
+      "methods": [
+        "better-colors",
+        "better-typography",
+        "better-layout"
+      ],
+      "authoredReferences": [],
+      "dependencies": []
+    },
+    {
+      "id": "atlas-motion",
+      "entry": "skills/atlas-motion/SKILL.md",
+      "agent": "skills/atlas-motion/agents/openai.yaml",
+      "methods": [
+        "animate",
+        "apple-design"
+      ],
+      "authoredReferences": [],
+      "dependencies": []
+    },
+    {
+      "id": "writing-for-humans",
+      "entry": "skills/writing-for-humans/SKILL.md",
+      "agent": "skills/writing-for-humans/agents/openai.yaml",
+      "methods": [
+        "stop-slop"
+      ],
+      "authoredReferences": [
+        {
+          "input": "skills/writing-for-humans/references/articles-and-newsletters.md",
+          "target": "references/articles-and-newsletters.md"
+        },
+        {
+          "input": "skills/writing-for-humans/references/fresh-reader-pass.md",
+          "target": "references/fresh-reader-pass.md"
+        },
+        {
+          "input": "skills/writing-for-humans/references/pr-descriptions.md",
+          "target": "references/pr-descriptions.md"
+        },
+        {
+          "input": "skills/writing-for-humans/references/reader-progression.md",
+          "target": "references/reader-progression.md"
+        },
+        {
+          "input": "skills/writing-for-humans/references/visual-explanations.md",
+          "target": "references/visual-explanations.md"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "tracking-implementation",
+      "entry": "skills/tracking-implementation/SKILL.md",
+      "agent": "skills/tracking-implementation/agents/openai.yaml",
+      "methods": [
+        "show-me"
+      ],
+      "authoredReferences": [
+        {
+          "input": "skills/tracking-implementation/references/resume.md",
+          "target": "references/resume.md"
+        },
+        {
+          "input": "skills/tracking-implementation/references/review-guides.md",
+          "target": "references/review-guides.md"
+        }
+      ],
+      "dependencies": [
+        {
+          "id": "atlas-review",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "When the executor has not already provided the checkpoint code review."
+        },
+        {
+          "id": "plannotator",
+          "relationship": "tool",
+          "required": false,
+          "condition": "When available for user acceptance or local-record feedback."
+        }
+      ]
+    },
+    {
+      "id": "animated-driven-frontend",
+      "entry": "skills/animated-driven-frontend/SKILL.md",
+      "agent": "skills/animated-driven-frontend/agents/openai.yaml",
+      "methods": [],
+      "authoredReferences": [
+        {
+          "input": "skills/animated-driven-frontend/references/frontend-constraints.md",
+          "target": "references/frontend-constraints.md"
+        },
+        {
+          "input": "skills/animated-driven-frontend/references/interaction-systems.md",
+          "target": "references/interaction-systems.md"
+        },
+        {
+          "input": "skills/animated-driven-frontend/references/rendering-pipeline.md",
+          "target": "references/rendering-pipeline.md"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "team-up",
+      "entry": "skills/team-up/SKILL.md",
+      "agent": "skills/team-up/agents/openai.yaml",
+      "methods": [],
+      "authoredReferences": [],
+      "dependencies": []
+    },
+    {
+      "id": "atlas-setup",
+      "entry": "skills/atlas-setup/SKILL.md",
+      "agent": "skills/atlas-setup/agents/openai.yaml",
+      "methods": [],
+      "dependencies": [],
+      "generatedReferences": [
+        {
+          "generator": "setup-dependencies",
+          "target": "references/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "atlas-to-spec",
+      "entry": "skills/atlas-to-spec/SKILL.md",
+      "agent": "skills/atlas-to-spec/agents/openai.yaml",
+      "methods": [
+        "to-spec"
+      ],
+      "authoredReferences": [],
+      "dependencies": []
+    },
+    {
+      "id": "atlas-to-tickets",
+      "entry": "skills/atlas-to-tickets/SKILL.md",
+      "agent": "skills/atlas-to-tickets/agents/openai.yaml",
+      "methods": [
+        "to-tickets"
+      ],
+      "authoredReferences": [
+        {
+          "input": "skills/atlas-to-tickets/references/ticket-templates.md",
+          "target": "references/ticket-templates.md"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "html-ui",
+      "entry": "skills/html-ui/SKILL.md",
+      "agent": "skills/html-ui/agents/openai.yaml",
+      "methods": [
+        "html-wireframe",
+        "html-prototype"
+      ],
+      "authoredReferences": [],
+      "dependencies": [
+        {
+          "id": "design-artifact",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When the selected HTML method needs visual composition guidance."
+        }
+      ]
+    }
+  ],
+  "rulings": [
+    {
+      "id": "craft-local-names",
+      "owner": "atlas-craft",
+      "document": "skills/atlas-craft/SKILL.md",
+      "section": "Modes",
+      "sources": [
+        "better-colors",
+        "better-typography",
+        "better-layout"
+      ],
+      "decision": "Resolve named better-* calls locally."
+    },
+    {
+      "id": "tracking-show-me-handoff",
+      "owner": "tracking-implementation",
+      "document": "skills/tracking-implementation/SKILL.md",
+      "section": "Artifact presentation",
+      "sources": [
+        "show-me"
+      ],
+      "decision": "Load Show Me before creating or updating the tracking artifact; select presentation for each relevant content requirement, preserving complete evidence, structured state and the existing acceptance contract."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "packages": [
+    "animated-driven-frontend",
+    "atlas-craft",
+    "atlas-motion",
+    "atlas-review",
+    "atlas-to-spec",
+    "atlas-to-tickets",
+    "html-ui",
+    "team-up",
+    "tracking-implementation",
+    "writing-for-humans"
+  ],
+  "dependencies": [
+    {
+      "id": "design-artifact",
+      "source": "https://github.com/plannotator/effective-html",
+      "skill": "design-artifact",
+      "command": "npx skills add https://github.com/plannotator/effective-html --skill design-artifact",
+      "consumers": [
+        {
+          "skill": "html-ui",
+          "required": false,
+          "condition": "When the selected HTML method needs visual composition guidance."
+        }
+      ]
+    }
+  ]
+}

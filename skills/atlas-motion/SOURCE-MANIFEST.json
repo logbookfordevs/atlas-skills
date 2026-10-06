@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "workflow": "atlas-motion",
+  "generated": true,
+  "managedFiles": [
+    "references/animate/animate.md",
+    "licenses/animate.txt",
+    "references/animate/RECIPES.md",
+    "references/fluid/apple-design.md",
+    "licenses/apple-design.txt"
+  ],
+  "authoredInputs": [
+    "skills/atlas-motion/SKILL.md",
+    "skills/atlas-motion/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [],
+  "sources": [
+    {
+      "id": "animate",
+      "owner": "Atlas Implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/animate/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/animate/RECIPES.md",
+          "classification": "verbatim",
+          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+          "carriedPath": "references/animate/RECIPES.md",
+          "carriedSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "carriedPath": "references/animate/animate.md",
+      "carriedSha256": "cab02af17d548ba7a3264ca514fc264903f484869e8e3e0d28d22232d65869c0",
+      "licensePath": "licenses/animate.txt",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to pause and find a suitable library via available Notion search, internet search, existing project libraries, or user consultation. Supporting files remain verbatim.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [],
+      "patch": "sources/patches/animate.patch",
+      "patchSha256": "04bb7d31c869e862806a43c7863d6ca58b99c4d9fe7742eca529dc10c505deb2"
+    },
+    {
+      "id": "apple-design",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/apple-design/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+      "carriedPath": "references/fluid/apple-design.md",
+      "carriedSha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+      "licensePath": "licenses/apple-design.txt",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": []
+    }
+  ],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "a45b3ebace2df47cd3197370bd791a14199612e719a9af0a75832cf37462cac8",
+    "agents/openai.yaml": "b547c19f4621638f7f5ee66bd21764618b6372791e1861122d7376f4e879f095",
+    "references/animate/animate.md": "cab02af17d548ba7a3264ca514fc264903f484869e8e3e0d28d22232d65869c0",
+    "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+    "references/fluid/apple-design.md": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+    "licenses/apple-design.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b"
+  }
+}
