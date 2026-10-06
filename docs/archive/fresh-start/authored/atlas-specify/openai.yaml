@@ -1,6 +1,0 @@
-interface:
-  display_name: "Atlas Specify"
-  short_description: "Turn agreed context into a specification or blocking tracer-bullet tickets."
-  default_prompt: "Use $atlas-specify for the requested specify work."
-policy:
-  allow_implicit_invocation: false

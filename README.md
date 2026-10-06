@@ -8,7 +8,7 @@ Atlas maintains what it authors, patches or bundles. Unchanged independent skill
 
 ## Local Skills V2 preview
 
-These packages are implemented on the review branch. Working-tree changes are not yet committed or published, so remote installations do not necessarily match them.
+These packages are committed and available on the review branch; default-branch cutover remains pending.
 
 | Package | Purpose |
 | --- | --- |
@@ -24,7 +24,7 @@ These packages are implemented on the review branch. Working-tree changes are no
 | [Writing for Humans](skills/writing-for-humans/SKILL.md) | Existing writing method with verbatim Stop Slop |
 | [Atlas Setup](skills/atlas-setup/SKILL.md) | Manual check of independent dependencies for installed packages |
 
-After the branch changes are published, select packages explicitly:
+Select packages explicitly from the review branch:
 
 ```sh
 npx skills add https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2 --skill atlas-review
@@ -34,7 +34,7 @@ Avoid installing every recursively discovered skill from this development branch
 
 ## Share the stack
 
-The [Atlas stack manifest](stacks/atlas.json) combines these packages and the retained independent skills in AFK’s version-one format. Import pasted JSON or a direct manifest URL in the upcoming Sources & Stacks feature, review the selection, and copy an install script. See [stack installation and maintenance](docs/atlas-stack.md). Local files are ready; remote import requires publishing both repositories’ review work.
+The [Atlas stack manifest](stacks/atlas.json) combines these packages and the retained independent skills in AFK’s version-one format. Import pasted JSON or a direct manifest URL in the upcoming Sources & Stacks feature, review the selection, and copy an install script. See [stack installation and maintenance](docs/atlas-stack.md). The Atlas manifest is available on the review branch; AFK must support the version-one stack format to import it.
 
 ## Recommended independent skills
 
@@ -58,7 +58,7 @@ pnpm check
 
 Edit `authored/` for Atlas-owned entries and references, or `sources/methods/` for maintained upstream adaptations. `skills/` is generated distribution output. Run `pnpm build:skills` after editing inputs and commit inputs and outputs together. See [authoring and provenance](docs/authoring/source-composition.md).
 
-`legacy/` and `docs/archive/` preserve previous versions; they do not define the current roster. The former umbrella proposal remains historical, with the [fresh-start record](docs/specs/atlas-fresh-start.md) authoritative for the current direction.
+`legacy/` preserves retained migration baselines. Git history preserves retired experiments and proposal iterations; the [fresh-start record](docs/specs/atlas-fresh-start.md) defines the current direction.
 
 ---
 

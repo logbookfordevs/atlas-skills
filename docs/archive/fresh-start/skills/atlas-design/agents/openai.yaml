@@ -1,6 +1,0 @@
-interface:
-  display_name: "Atlas Design"
-  short_description: "Create wireframes, polished HTML mockups, interactive flows or throwaway design experiments."
-  default_prompt: "Use $atlas-design for the requested design work."
-policy:
-  allow_implicit_invocation: true

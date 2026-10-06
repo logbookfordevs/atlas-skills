@@ -2,75 +2,6 @@
   "version": 1,
   "sources": [
     {
-      "id": "grill-me",
-      "owner": "Atlas Decide",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/mattpocock/skills",
-        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
-        "path": "skills/productivity/grill-me/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/grill-me/source.md",
-      "sourceSha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
-      "license": "sources/upstream/grill-me/LICENSE",
-      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/upstream/grill-me/source.md",
-      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
-      "consumers": [],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
-      "rulings": [],
-      "carriedPath": "references/probe/grill-me.md"
-    },
-    {
-      "id": "grill-with-docs",
-      "owner": "Atlas Decide",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/mattpocock/skills",
-        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
-        "path": "skills/engineering/grill-with-docs/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/grill-with-docs/source.md",
-      "sourceSha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
-      "license": "sources/upstream/grill-with-docs/LICENSE",
-      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/upstream/grill-with-docs/source.md",
-      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
-      "consumers": [],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
-      "rulings": [],
-      "carriedPath": "references/record/grill-with-docs.md"
-    },
-    {
-      "id": "wayfinder",
-      "owner": "Atlas Decide",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/mattpocock/skills",
-        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
-        "path": "skills/engineering/wayfinder/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/wayfinder/source.md",
-      "sourceSha256": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
-      "license": "sources/upstream/wayfinder/LICENSE",
-      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/upstream/wayfinder/source.md",
-      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
-      "consumers": [],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
-      "rulings": [],
-      "carriedPath": "references/map/wayfinder.md"
-    },
-    {
       "id": "html-wireframe",
       "owner": "Atlas Design",
       "classification": "patched",
@@ -181,43 +112,6 @@
       "adoptedAt": "2026-10-05",
       "carriedPath": "references/fluid/apple-design.md",
       "supportingFiles": [],
-      "rulings": []
-    },
-    {
-      "id": "prototype",
-      "owner": "Atlas Design",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/mattpocock/skills",
-        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
-        "path": "skills/engineering/prototype/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/prototype/source.md",
-      "sourceSha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
-      "license": "sources/upstream/prototype/LICENSE",
-      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/upstream/prototype/source.md",
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte; Atlas owns selection and documented rulings. Host-specific agent metadata is not runtime method content.",
-      "consumers": [],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
-      "carriedPath": "references/experiment/SKILL.md",
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/engineering/prototype/LOGIC.md",
-          "snapshot": "sources/upstream/prototype/support/LOGIC.md",
-          "sourceSha256": "f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9",
-          "relativePath": "LOGIC.md"
-        },
-        {
-          "upstreamPath": "skills/engineering/prototype/UI.md",
-          "snapshot": "sources/upstream/prototype/support/UI.md",
-          "sourceSha256": "723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3",
-          "relativePath": "UI.md"
-        }
-      ],
       "rulings": []
     },
     {
@@ -416,30 +310,6 @@
       "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer."
     },
     {
-      "id": "to-questionnaire",
-      "owner": "to-questionnaire",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/mattpocock/skills",
-        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
-        "path": "skills/productivity/to-questionnaire/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/to-questionnaire/source.md",
-      "sourceSha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
-      "license": "sources/upstream/to-questionnaire/LICENSE",
-      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/upstream/to-questionnaire/source.md",
-      "adaptation": "Complete selected runtime tree and frontmatter preserved byte-for-byte.",
-      "consumers": [],
-      "rulings": [],
-      "carriedPath": "references/query/to-questionnaire.md",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
-      "supportingFiles": []
-    },
-    {
       "id": "to-spec",
       "owner": "to-spec",
       "classification": "patched",
@@ -516,30 +386,6 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-06",
       "patch": "sources/patches/code-review.patch"
-    },
-    {
-      "id": "design-artifact",
-      "owner": "design-artifact",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/plannotator/effective-html",
-        "commit": "2ac1dfecb0f2474e75260cb6d3c9b9d6d9b5062e",
-        "path": "skills/design-artifact/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/design-artifact/source.md",
-      "sourceSha256": "c8314b66fb907a5acd3aa10efe4b5adb86d352808f5b84824cadfa6e6c9d38bb",
-      "license": "sources/upstream/design-artifact/LICENSE",
-      "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
-      "method": "sources/upstream/design-artifact/source.md",
-      "adaptation": "Complete selected runtime tree and frontmatter preserved byte-for-byte.",
-      "consumers": [],
-      "rulings": [],
-      "carriedPath": "references/style/design-artifact.md",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
-      "supportingFiles": []
     },
     {
       "id": "review-animations",

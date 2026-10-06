@@ -6,7 +6,7 @@ Canonical inputs are `authored/` and `sources/`; `skills/` is generated distribu
 
 The active stack preserves atomic operations. HTML UI composes HTML Wireframe and HTML Prototype as Wireframe and Model; Matt’s Prototype stays independent upstream. Atlas To Spec and Atlas To Tickets are separate patched packages, preserving the prior adaptations and ticket templates. Review carries patched Code Review, authored Static Review and verbatim Review Animations. Craft retains Better Colors, Better Typography and Better Layout. Motion carries Animate and Apple Design. Writing for Humans carries the complete verbatim Stop Slop tree with its frontmatter, supporting references and MIT license.
 
-Decide, Design and Specify are retired as active umbrella entries. Their prior authored and generated files remain under `docs/archive/fresh-start/`. Their former unchanged independent methods remain recommended upstream. Unused source snapshots are evidence, not active consumers. No new legacy or snapshot deletion was performed during the fresh-start migration.
+Decide, Design and Specify are retired as active umbrella entries. Their prior files are recoverable from Git history. Their former unchanged independent methods remain recommended upstream; source receipts are retained only for active consumers.
 
 Tracking Implementation stays automatic alongside any executor, with its checkpoint policy preserved. Its obsolete Code Review dependency name now resolves to Atlas Review. Team Up, the manual ZERO-based Animated-Driven Frontend and manual Atlas Setup remain independent. The explicitly retired Ask, Code Grill, Design Grill, Create Agent and Code Review Verdicts remain absent; prior cleanup retirements remain in the archive receipt.
 

@@ -1,12 +1,12 @@
 # Atlas fresh-start discussion
 
-This records the fresh-start review of the original 54-entry AFK catalog plus five new candidates. The decisions below now define the locally implemented stack; Git history and retained archives preserve the earlier proposal. Keep original list numbers for discussion continuity.
+This records the fresh-start review of the original 54-entry AFK catalog plus five new candidates. The decisions below now define the locally implemented stack; Git history preserves the earlier proposal. Keep original list numbers for discussion continuity.
 
 ## Recorded choices
 
 - AFK CLI (1) and AFK Profile Use (15) belong in the AFK CLI project, not the Atlas skill collection. AFK Compass (13) is temporarily excluded; its future purpose remains open. CLI and Profile Use are already maintained in AFK; mention them as companions. Revisit Compass’s future role later.
 - Remove AFK Ask (3), Code Grill (4), Design Grill (5), Create Agent (7), and Code Review Verdicts (50) from the target collection.
-- Replace AFK Implement (12) with the existing Tracking Implementation utility. It activates automatically on an explicit tracking request or an existing tracked effort, alongside any executor or free-form implementation. Further tracking refinement is deferred and must be revisited before concluding the review.
+- Replace AFK Implement (12) with the existing Tracking Implementation utility. It activates automatically on an explicit tracking request or an existing tracked effort, alongside any executor or free-form implementation. Tracking now uses Show Me for artifact presentation, with the agreed consolidated content contract and existing evidence and acceptance gates.
 - Keep one Review skill with Code, Static and Motion paths. Code carries Leonardo's maintained Code Review adaptation as verbatim patched source composition. Static absorbs the authored Static Review method. Motion carries Review Animations verbatim. Source files and supporting resources are bundled, not merely linked.
 - Use the newly built Animated-Driven Frontend (2 replacement): ZERO engineering knowledge, utility scope, manual invocation; not the old cinematic version.
 - Keep a Motion skill composing Animate (36) and Apple Design (37) as carried verbatim sources, unless implementation exposes a conflict requiring an explicit ruling or approved patch. Animate Text (38) is excluded for now.
@@ -24,7 +24,7 @@ The five new candidates are Implement Spec, PE Product Description, PE Verify, M
 ## Return before concluding
 
 1. Compass: any future successor role.
-2. Tracking Implementation: the requested later refinement.
+2. Tracking Implementation: practical invocation and artifact review.
 3. Stack website and installer: whether to implement these follow-up ideas.
 
 ## Implementation checkpoint
@@ -33,7 +33,7 @@ Craft is retained with Better Colors, Better Typography and Better Layout. HTML 
 
 The selected distribution direction is a personal, reusable stack: Atlas carries authored, patched and composed packages; unchanged independent skills remain recommended from their upstream sources. A thin installer and website are possible later work, not implemented by this checkpoint.
 
-Active Decide, Design and Specify are retired with their files archived. HTML UI and the separate Atlas To Spec / Atlas To Tickets packages are generated and validated. Craft, Review, Motion and the independent authored utilities are retained. The upstream detector, reviewed preparation command and scheduled issue workflow are implemented locally; see [upstream maintenance](../authoring/upstream-updates.md). The initial broader cleanup was rejected by automatic approval review; later explicit scope clarification allowed the narrower migration, preserving source snapshots and legacy history. Nothing has been committed or published.
+Active Decide, Design and Specify are retired; Git history preserves their former files. HTML UI and the separate Atlas To Spec / Atlas To Tickets packages are generated and validated. Craft, Review, Motion and the independent authored utilities are retained. The upstream detector, reviewed preparation command and scheduled issue workflow are implemented locally; see [upstream maintenance](../authoring/upstream-updates.md). The stack and upstream tooling are committed and pushed on the review branch. The scheduled workflow activates after default-branch merge. Superseded proposals, retired umbrella files and unused upstream receipts were subsequently approved for removal; retained legacy baselines remain.
 
 ## Sources & Stacks sharing contract
 
