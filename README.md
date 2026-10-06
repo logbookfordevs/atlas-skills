@@ -38,7 +38,7 @@ The [Atlas stack manifest](stacks/atlas.json) combines these packages and the re
 
 ## Recommended independent skills
 
-The stack manifest lists the unchanged skills used alongside Atlas, including Impeccable, Research, Wayfinder, Grill Me, Grill with Docs, Prototype, TDD, Diagnosing Bugs, Writing for Agents, and library-specific tools. Their original authors own their upstream updates. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the full disposition.
+The stack manifest lists the unchanged skills used alongside Atlas, including Research, Wayfinder, Grill Me, Grill with Docs, Prototype, TDD, Diagnosing Bugs, Writing for Agents, and library-specific tools. Their original authors own their upstream updates. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the full disposition.
 
 AFK CLI and Profile Use are companion skills owned by the AFK project, not Atlas packages. Compass is excluded for now. A public stack website and thin installer are possible follow-up work; neither is implemented here. Atlas Setup currently checks dependencies rather than installing the entire recommended stack.
 

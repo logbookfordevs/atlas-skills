@@ -22,4 +22,4 @@ The stack lists selected skills as an installable collection; it does not define
 
 The carried-source manifest in `sources/composition.json` is separate: it preserves pinned snapshots and adaptations inside Atlas’s own packages. Its scheduled update issues do not update external installations or this stack’s source selection.
 
-Impeccable’s custom-agent provisioning is not performed by this manifest. Follow its upstream setup guidance for capabilities beyond the selected skill package. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.
+Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.
