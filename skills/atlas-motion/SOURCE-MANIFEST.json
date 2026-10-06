@@ -2,9 +2,16 @@
   "version": 1,
   "workflow": "atlas-motion",
   "generated": true,
+  "managedFiles": [
+    "references/animate/animate.md",
+    "licenses/animate.txt",
+    "references/animate/RECIPES.md",
+    "references/fluid/apple-design.md",
+    "licenses/apple-design.txt"
+  ],
   "authoredInputs": [
-    "authored/atlas-motion/entry.md",
-    "authored/atlas-motion/openai.yaml"
+    "skills/atlas-motion/SKILL.md",
+    "skills/atlas-motion/agents/openai.yaml"
   ],
   "authoredReferences": [],
   "dependencies": [],

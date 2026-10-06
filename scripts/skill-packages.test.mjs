@@ -3,16 +3,17 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } f
 import { join, posix } from 'node:path';
 import { tmpdir } from 'node:os';
 import { test } from 'node:test';
+import { recordPatches } from './record-patches.mjs';
 import { buildSkills, composeSkills, repositoryRoot, sha256 } from './build-skills.mjs';
 
 function fixture(t) {
   const root = mkdtempSync(join(tmpdir(), 'atlas-build-test-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
-  for (const directory of ['sources/upstream/fixture-source/support/nested', 'sources/methods', 'authored/logbook-fixture']) {
+  for (const directory of ['sources/upstream/fixture-source/support/nested', 'sources/methods', 'skills/logbook-fixture/agents']) {
     mkdirSync(join(root, directory), { recursive: true });
   }
-  writeFileSync(join(root, 'authored/logbook-fixture/entry.md'), '---\nname: logbook-fixture\ndescription: Package fixture\n---\n');
-  writeFileSync(join(root, 'authored/logbook-fixture/openai.yaml'), 'policy:\n  allow_implicit_invocation: true\n');
+  writeFileSync(join(root, 'skills/logbook-fixture/SKILL.md'), '---\nname: logbook-fixture\ndescription: Package fixture\n---\n');
+  writeFileSync(join(root, 'skills/logbook-fixture/agents/openai.yaml'), 'policy:\n  allow_implicit_invocation: true\n');
   const snapshot = 'sources/upstream/fixture-source/source.md';
   const license = 'sources/upstream/fixture-source/LICENSE';
   const sourceBytes = Buffer.from('fixture source\n');
@@ -34,7 +35,7 @@ function fixture(t) {
       license, licenseSha256: sha256(licenseBytes), adaptation: 'Fixture source',
       supportingFiles, consumers: ['logbook-fixture'], rulings: [],
     }],
-    workflows: [{ id: 'logbook-fixture', entry: 'authored/logbook-fixture/entry.md', agent: 'authored/logbook-fixture/openai.yaml', methods: ['fixture-source'], dependencies: [] }],
+    workflows: [{ id: 'logbook-fixture', entry: 'skills/logbook-fixture/SKILL.md', agent: 'skills/logbook-fixture/agents/openai.yaml', methods: ['fixture-source'], dependencies: [] }],
     rulings: [],
   };
   writeFileSync(join(root, 'sources/composition.json'), JSON.stringify(manifest));
@@ -81,7 +82,7 @@ test('altered upstream bytes and license notices fail integrity checks', t => {
 test('verbatim references preserve source bytes and authored changes stale the package', t => {
   const root = fixture(t);
   buildSkills(root);
-  const entry = join(root, 'authored/logbook-fixture/entry.md');
+  const entry = join(root, 'skills/logbook-fixture/SKILL.md');
   writeFileSync(entry, `${readFileSync(entry, 'utf8')}\nAdditional task-specific guidance.\n`);
   assert.throws(() => buildSkills(root, { check: true }), /Generated packages differ/);
   buildSkills(root);
@@ -191,7 +192,7 @@ test('Tracking Implementation is automatically discoverable with portable author
 test('workflow packages build identically without the legacy archive', t => {
   const root = mkdtempSync(join(tmpdir(), 'atlas-without-legacy-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
-  for (const directory of ['sources', 'authored']) {
+  for (const directory of ['sources', 'skills']) {
     cpSync(join(repositoryRoot, directory), join(root, directory), { recursive: true });
   }
   mkdirSync(join(root, 'stacks'), { recursive: true });
@@ -201,7 +202,7 @@ test('workflow packages build identically without the legacy archive', t => {
   assert.deepEqual(actual, expected);
   for (const [, files] of actual) {
     const receipt = JSON.parse(files.get('SOURCE-MANIFEST.json'));
-    assert.ok(receipt.authoredInputs.every(input => input.startsWith('authored/') || input.startsWith('sources/methods/')));
+    assert.ok(receipt.authoredInputs.every(input => input.startsWith('skills/')));
     assert.ok(receipt.authoredReferences.every(reference => reference.classification === 'atlas-authored'));
   }
 });
@@ -239,4 +240,51 @@ test('source receipts preserve selection metadata and protect shared additional 
   writeFileSync(join(root, peer.notices[0].input), conflictingBytes);
   writeFileSync(path, JSON.stringify(manifest));
   assert.throws(() => composeSkills(root), /Conflicting notice/);
+});
+
+ test('direct authoring preserves new resources and removes only retired managed support', t => {
+  const root = fixture(t);
+  buildSkills(root);
+  const extra = join(root, 'skills/logbook-fixture/references/atlas-owned.md');
+  writeFileSync(extra, 'owned resource\n');
+  const path = join(root, 'sources/composition.json');
+  const manifest = JSON.parse(readFileSync(path));
+  const removed = manifest.sources[0].supportingFiles.pop();
+  writeFileSync(path, JSON.stringify(manifest));
+  buildSkills(root);
+  assert.equal(readFileSync(extra, 'utf8'), 'owned resource\n');
+  assert.equal(composeSkills(root).get('logbook-fixture').has(`references/${removed.relativePath}`), false);
+  buildSkills(root, { check: true });
+});
+
+test('recording a directly edited method produces a replayable patch without changing its original', t => {
+  const root = fixture(t);
+  buildSkills(root);
+  const path = join(root, 'sources/composition.json');
+  const manifest = JSON.parse(readFileSync(path));
+  const source = manifest.sources[0];
+  source.classification = 'patched';
+  source.method = 'skills/logbook-fixture/references/fixture-source.md';
+  source.patch = 'sources/fixture.patch';
+  writeFileSync(path, JSON.stringify(manifest));
+  const original = readFileSync(join(root, source.snapshot));
+  writeFileSync(join(root, source.method), 'adapted locally\n');
+  recordPatches(root, source.id);
+  buildSkills(root);
+  buildSkills(root, { check: true });
+  assert.deepEqual(readFileSync(join(root, source.snapshot)), original);
+  assert.equal(readFileSync(join(root, source.method), 'utf8'), 'adapted locally\n');
+});
+
+ test('an upstream addition cannot overwrite an Atlas-owned resource', t => {
+  const root = fixture(t);
+  buildSkills(root);
+  writeFileSync(join(root, 'skills/logbook-fixture/references/local.md'), 'owned\n');
+  buildSkills(root);
+  const path = join(root, 'sources/composition.json');
+  const manifest = JSON.parse(readFileSync(path));
+  manifest.sources[0].supportingFiles.push({ ...manifest.sources[0].supportingFiles[0], relativePath: 'local.md' });
+  writeFileSync(path, JSON.stringify(manifest));
+  assert.throws(() => buildSkills(root), /conflicts with Atlas-owned file/);
+  assert.equal(readFileSync(join(root, 'skills/logbook-fixture/references/local.md'), 'utf8'), 'owned\n');
 });

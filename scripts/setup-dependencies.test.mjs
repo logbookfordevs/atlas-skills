@@ -10,9 +10,9 @@ function fixture() {
   const dependency = { id: 'external', relationship: 'behavioral', required: true, condition: 'Selected path.' };
   return {
     composition: { version: 1, sources: [], workflows: [
-      { id: 'atlas-fixture', entry: 'authored/atlas-fixture/entry.md', agent: 'authored/atlas-fixture/openai.yaml', methods: [], dependencies: [dependency, { id: 'atlas-owned', relationship: 'behavioral', required: true, condition: 'Owned path.' }, { id: 'tool', relationship: 'tool' }] },
-      { id: 'atlas-owned', entry: 'authored/atlas-owned/entry.md', agent: 'authored/atlas-owned/openai.yaml', methods: [], dependencies: [{ ...dependency, required: false }] },
-      { id: 'atlas-setup', entry: 'authored/atlas-setup/entry.md', agent: 'authored/atlas-setup/openai.yaml', methods: [], generatedReferences: [{ generator: 'setup-dependencies', target: 'references/dependencies.json' }] },
+      { id: 'atlas-fixture', entry: 'skills/atlas-fixture/SKILL.md', agent: 'skills/atlas-fixture/agents/openai.yaml', methods: [], dependencies: [dependency, { id: 'atlas-owned', relationship: 'behavioral', required: true, condition: 'Owned path.' }, { id: 'tool', relationship: 'tool' }] },
+      { id: 'atlas-owned', entry: 'skills/atlas-owned/SKILL.md', agent: 'skills/atlas-owned/agents/openai.yaml', methods: [], dependencies: [{ ...dependency, required: false }] },
+      { id: 'atlas-setup', entry: 'skills/atlas-setup/SKILL.md', agent: 'skills/atlas-setup/agents/openai.yaml', methods: [], generatedReferences: [{ generator: 'setup-dependencies', target: 'references/dependencies.json' }] },
     ] },
     stack: { version: 1, sources: [{ name: 'Upstream', source: 'https://github.com/upstream/skills', skills: ['external'] }] },
   };
@@ -41,7 +41,7 @@ test('setup regenerates when its stack source or required dependencies change wi
   t.after(() => rmSync(root, { recursive: true, force: true }));
   const { composition, stack } = fixture();
   for (const workflow of composition.workflows) {
-    mkdirSync(join(root, 'authored', workflow.id), { recursive: true });
+    mkdirSync(join(root, 'skills', workflow.id, 'agents'), { recursive: true });
     writeFileSync(join(root, workflow.entry), `---\nname: ${workflow.id}\ndescription: Fixture\n---\n`);
     writeFileSync(join(root, workflow.agent), 'policy: {}\n');
   }

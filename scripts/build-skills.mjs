@@ -115,7 +115,26 @@ export function composeSkills(root = repositoryRoot) {
         rulings: source.rulings ?? [],
         ...(source.patch ? { patch: source.patch, patchSha256: sha256(read(source.patch)) } : {}) };
     });
-    output.set('SOURCE-MANIFEST.json', Buffer.from(json({ version: 1, workflow: workflow.id, generated: true,
+    const managedFiles = [...new Set([
+      ...receipts.flatMap(source => [source.carriedPath, source.licensePath, ...source.supportingFiles.map(file => file.carriedPath), ...source.notices.map(file => file.carriedPath)]),
+      ...generatedReferences.map(reference => reference.target),
+    ])];
+    const directory = join(root, 'skills', workflow.id);
+    const receiptPath = join(directory, 'SOURCE-MANIFEST.json');
+    const previous = existsSync(receiptPath) ? JSON.parse(readFileSync(receiptPath)) : {};
+    const previousManaged = new Set(previous.managedFiles ?? [
+      ...(previous.sources ?? []).flatMap(source => [source.carriedPath, source.licensePath, ...(source.supportingFiles ?? []).map(file => file.carriedPath), ...(source.notices ?? []).map(file => file.carriedPath)]),
+      ...(previous.generatedReferences ?? []).map(reference => reference.target),
+    ]);
+    if (existsSync(receiptPath)) {
+      for (const path of managedFiles) {
+        if (!previousManaged.has(path) && existsSync(join(directory, path)) && !readFileSync(join(directory, path)).equals(output.get(path))) throw new Error(`Upstream resource conflicts with Atlas-owned file: ${workflow.id}/${path}`);
+      }
+    }
+    for (const path of filesIn(directory)) {
+      if (path !== 'SOURCE-MANIFEST.json' && !output.has(path) && !previousManaged.has(path)) put(path, readFileSync(join(directory, path)));
+    }
+    output.set('SOURCE-MANIFEST.json', Buffer.from(json({ version: 1, workflow: workflow.id, generated: true, managedFiles,
       authoredInputs: [workflow.entry, workflow.agent, ...(workflow.authoredReferences ?? []).map(reference => reference.input)], authoredReferences, ...(generatedReferences.length ? { generatedReferences } : {}), dependencies: workflow.dependencies, sources: receipts,
       rulings: (composition.rulings ?? []).filter(ruling => ruling.owner === workflow.id),
       files: Object.fromEntries([...output].map(([path, bytes]) => [path, sha256(bytes)])) })));
@@ -137,16 +156,19 @@ export function buildSkills(root = repositoryRoot, { check = false } = {}) {
       const target = join(directory, path);
       if (check) {
         if (!existsSync(target) || !readFileSync(target).equals(bytes)) mismatches.push(relative(root, target));
-      } else {
+      } else if (!existsSync(target) || !readFileSync(target).equals(bytes)) {
         mkdirSync(dirname(target), { recursive: true });
         writeFileSync(target, bytes);
       }
     }
     for (const path of filesIn(directory)) {
-      if (!output.has(path)) mismatches.push(`Unexpected generated file: ${id}/${path}`);
+      if (!output.has(path)) {
+        if (check) mismatches.push(`Obsolete managed file: ${id}/${path}`);
+        else rmSync(join(directory, path));
+      }
     }
   }
-  if (mismatches.length) throw new Error(`Generated packages differ; edit canonical inputs and regenerate:\n${mismatches.join('\n')}`);
+  if (mismatches.length) throw new Error(`Generated packages differ; refresh package receipts with pnpm build:skills:\n${mismatches.join('\n')}`);
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

@@ -2,9 +2,12 @@
   "version": 1,
   "workflow": "atlas-setup",
   "generated": true,
+  "managedFiles": [
+    "references/dependencies.json"
+  ],
   "authoredInputs": [
-    "authored/atlas-setup/entry.md",
-    "authored/atlas-setup/openai.yaml"
+    "skills/atlas-setup/SKILL.md",
+    "skills/atlas-setup/agents/openai.yaml"
   ],
   "authoredReferences": [],
   "generatedReferences": [

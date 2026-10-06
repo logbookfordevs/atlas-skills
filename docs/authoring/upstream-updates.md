@@ -34,3 +34,5 @@ The detector is deterministic; behavior review remains a maintainer or agent tas
 This first implementation creates review issues, not automatic update PRs. The preparation command makes a reviewed update concrete locally; a maintainer can open a PR after inspecting it. Automated draft PR generation can later use that same preparation mechanism without changing source identity or patch handling.
 
 The recommended external stack is not mirrored or updated by this watcher. Its installation registry remains separate from the carried-source maintenance contract. The website and installer discussed during fresh-start review are not implemented here.
+
+Atlas-owned instructions and resources live directly in `skills/` and survive preparation. Edit patched method files there and run `pnpm record:patches -- <source-id>` before rebuilding. Preparation stages `skills/`, `sources/` and `stacks/`, and refuses new upstream resources that conflict with Atlas-owned files.

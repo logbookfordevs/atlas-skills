@@ -1,8 +1,8 @@
 # Atlas authoring
 
-`authored/` owns editable skill entries and their authored references; `sources/methods/` owns maintained reusable methods. Packages registered in `sources/composition.json`, including standalone authored skills, are generated: edit their canonical inputs, run `pnpm build:skills`, and commit inputs with outputs. `pnpm check` detects stale packages and verifies pinned-source integrity.
+Edit Atlas-owned instructions, references and templates directly in `skills/`. `sources/composition.json` identifies upstream-managed files; `sources/` retains pristine snapshots, licenses and replayable patches. After changing a patched upstream file, record its patch before refreshing package receipts. Builders and upstream preparation preserve Atlas-owned package files.
 
-Authored methods, including absorbed own skills, belong to the umbrella’s implementation under `authored/`; reference files do not turn them into upstream source composition. Keep legacy migration history in documentation, not current input or dependency records. Only independent skills require host discovery. Organize packaged `references/` by public mode. Let requested modes cooperate without a separate shared coordination layer. Keep authored resources as normal files within their mode; preserve upstream-relative trees where needed and record source identity separately in the manifest.
+Keep runtime instructions focused on their task; maintenance and migration history belong in documentation. Only independent dependencies need host discovery. Preserve upstream-relative supporting trees inside composed references.
 
 For composed methods, read `docs/authoring/source-composition.md` for provenance and adaptation ownership. Preserve upstream snapshots and license notices; adopt updates deliberately with new pins, reviewed adaptations, and regenerated consumers.
 

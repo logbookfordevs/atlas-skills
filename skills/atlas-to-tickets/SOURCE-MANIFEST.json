@@ -2,14 +2,18 @@
   "version": 1,
   "workflow": "atlas-to-tickets",
   "generated": true,
+  "managedFiles": [
+    "SKILL.md",
+    "licenses/to-tickets.txt"
+  ],
   "authoredInputs": [
-    "sources/methods/to-tickets.md",
-    "authored/atlas-to-tickets/openai.yaml",
-    "authored/atlas-to-tickets/references/ticket-templates.md"
+    "skills/atlas-to-tickets/SKILL.md",
+    "skills/atlas-to-tickets/agents/openai.yaml",
+    "skills/atlas-to-tickets/references/ticket-templates.md"
   ],
   "authoredReferences": [
     {
-      "input": "authored/atlas-to-tickets/references/ticket-templates.md",
+      "input": "skills/atlas-to-tickets/references/ticket-templates.md",
       "target": "references/ticket-templates.md",
       "classification": "atlas-authored",
       "carriedSha256": "0e85802c6d3509a5cf5e94416b5262700e68636a6083bbb1edb3a7585ec8c113"

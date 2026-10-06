@@ -1,6 +1,8 @@
 # Maintaining Atlas skills
 
-Canonical inputs are `authored/` and `sources/`; `skills/` is generated distribution output. Edit inputs, run `pnpm build:skills`, then `pnpm check`. Commit inputs and outputs together. Generated packages are portable without the legacy archive or AFK runtime.
+Edit Atlas-owned entries, references and templates directly in `skills/`. Upstream originals, licenses and patches live in `sources/`. The composition manifest identifies bundled files; the builder refreshes those files and package receipts while preserving Atlas-owned files. Packages remain portable without the legacy archive or AFK runtime.
+
+For patched upstream methods, edit the file in `skills/`, run `pnpm record:patches -- <source-id>`, then `pnpm build:skills` and `pnpm check`. Patch recording captures the complete difference from the pinned original without changing that original. Commit the edited package, patch and refreshed receipt together. Verbatim references are refreshed from their pinned originals; adapting one requires registering its classification and patch first.
 
 ## Current packages
 

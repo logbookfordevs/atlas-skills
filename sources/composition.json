@@ -16,7 +16,7 @@
       "sourceSha256": "b1d649ef9052f2ed8baabaf483ed527208a2e481281ed3925ec8b84ba641d4c1",
       "license": "sources/upstream/html-wireframe/LICENSE",
       "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
-      "method": "sources/methods/html-wireframe.md",
+      "method": "skills/html-ui/references/wireframe/html-wireframe.md",
       "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
       "consumers": [
         "html-ui"
@@ -43,7 +43,7 @@
       "sourceSha256": "8987dda45224350254af30cafa72e721c6d91e1972e794e8e839406f77814368",
       "license": "sources/upstream/html-prototype/LICENSE",
       "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
-      "method": "sources/methods/html-prototype.md",
+      "method": "skills/html-ui/references/model/html-prototype.md",
       "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
       "consumers": [
         "html-ui"
@@ -70,7 +70,7 @@
       "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
       "license": "sources/upstream/animate/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "method": "sources/methods/animate.md",
+      "method": "skills/atlas-motion/references/animate/animate.md",
       "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to pause and find a suitable library via available Notion search, internet search, existing project libraries, or user consultation. Supporting files remain verbatim.",
       "consumers": [
         "atlas-motion"
@@ -325,7 +325,7 @@
       "sourceSha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
       "license": "sources/upstream/to-spec/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/methods/to-spec.md",
+      "method": "skills/atlas-to-spec/SKILL.md",
       "adaptation": "Existing Leonardo fork bytes preserved. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Public entry renamed to atlas-to-spec; remaining behavior preserved.",
       "consumers": [
         "atlas-to-spec"
@@ -351,7 +351,7 @@
       "sourceSha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995",
       "license": "sources/upstream/to-tickets/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/methods/to-tickets.md",
+      "method": "skills/atlas-to-tickets/SKILL.md",
       "adaptation": "Existing Leonardo fork bytes preserved. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Public entry renamed to atlas-to-tickets; remaining behavior preserved.",
       "consumers": [
         "atlas-to-tickets"
@@ -377,7 +377,7 @@
       "sourceSha256": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
       "license": "sources/upstream/code-review/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/methods/code-review.md",
+      "method": "skills/atlas-review/references/code/code-review.md",
       "adaptation": "Leonardo\u2019s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields.",
       "consumers": [
         "atlas-review"
@@ -504,19 +504,19 @@
   "workflows": [
     {
       "id": "atlas-review",
-      "entry": "authored/atlas-review/entry.md",
-      "agent": "authored/atlas-review/openai.yaml",
+      "entry": "skills/atlas-review/SKILL.md",
+      "agent": "skills/atlas-review/agents/openai.yaml",
       "methods": [
         "code-review",
         "review-animations"
       ],
       "authoredReferences": [
         {
-          "input": "authored/atlas-review/references/static/static-review.md",
+          "input": "skills/atlas-review/references/static/static-review.md",
           "target": "references/static/static-review.md"
         },
         {
-          "input": "authored/atlas-review/references/static/scripts/changed-files.sh",
+          "input": "skills/atlas-review/references/static/scripts/changed-files.sh",
           "target": "references/static/scripts/changed-files.sh"
         }
       ],
@@ -524,8 +524,8 @@
     },
     {
       "id": "atlas-craft",
-      "entry": "authored/atlas-craft/entry.md",
-      "agent": "authored/atlas-craft/openai.yaml",
+      "entry": "skills/atlas-craft/SKILL.md",
+      "agent": "skills/atlas-craft/agents/openai.yaml",
       "methods": [
         "better-colors",
         "better-typography",
@@ -536,8 +536,8 @@
     },
     {
       "id": "atlas-motion",
-      "entry": "authored/atlas-motion/entry.md",
-      "agent": "authored/atlas-motion/openai.yaml",
+      "entry": "skills/atlas-motion/SKILL.md",
+      "agent": "skills/atlas-motion/agents/openai.yaml",
       "methods": [
         "animate",
         "apple-design"
@@ -547,30 +547,30 @@
     },
     {
       "id": "writing-for-humans",
-      "entry": "authored/writing-for-humans/entry.md",
-      "agent": "authored/writing-for-humans/openai.yaml",
+      "entry": "skills/writing-for-humans/SKILL.md",
+      "agent": "skills/writing-for-humans/agents/openai.yaml",
       "methods": [
         "stop-slop"
       ],
       "authoredReferences": [
         {
-          "input": "authored/writing-for-humans/references/articles-and-newsletters.md",
+          "input": "skills/writing-for-humans/references/articles-and-newsletters.md",
           "target": "references/articles-and-newsletters.md"
         },
         {
-          "input": "authored/writing-for-humans/references/fresh-reader-pass.md",
+          "input": "skills/writing-for-humans/references/fresh-reader-pass.md",
           "target": "references/fresh-reader-pass.md"
         },
         {
-          "input": "authored/writing-for-humans/references/pr-descriptions.md",
+          "input": "skills/writing-for-humans/references/pr-descriptions.md",
           "target": "references/pr-descriptions.md"
         },
         {
-          "input": "authored/writing-for-humans/references/reader-progression.md",
+          "input": "skills/writing-for-humans/references/reader-progression.md",
           "target": "references/reader-progression.md"
         },
         {
-          "input": "authored/writing-for-humans/references/visual-explanations.md",
+          "input": "skills/writing-for-humans/references/visual-explanations.md",
           "target": "references/visual-explanations.md"
         }
       ],
@@ -578,18 +578,18 @@
     },
     {
       "id": "tracking-implementation",
-      "entry": "authored/tracking-implementation/entry.md",
-      "agent": "authored/tracking-implementation/openai.yaml",
+      "entry": "skills/tracking-implementation/SKILL.md",
+      "agent": "skills/tracking-implementation/agents/openai.yaml",
       "methods": [
         "show-me"
       ],
       "authoredReferences": [
         {
-          "input": "authored/tracking-implementation/references/resume.md",
+          "input": "skills/tracking-implementation/references/resume.md",
           "target": "references/resume.md"
         },
         {
-          "input": "authored/tracking-implementation/references/review-guides.md",
+          "input": "skills/tracking-implementation/references/review-guides.md",
           "target": "references/review-guides.md"
         }
       ],
@@ -610,20 +610,20 @@
     },
     {
       "id": "animated-driven-frontend",
-      "entry": "authored/animated-driven-frontend/entry.md",
-      "agent": "authored/animated-driven-frontend/openai.yaml",
+      "entry": "skills/animated-driven-frontend/SKILL.md",
+      "agent": "skills/animated-driven-frontend/agents/openai.yaml",
       "methods": [],
       "authoredReferences": [
         {
-          "input": "authored/animated-driven-frontend/references/frontend-constraints.md",
+          "input": "skills/animated-driven-frontend/references/frontend-constraints.md",
           "target": "references/frontend-constraints.md"
         },
         {
-          "input": "authored/animated-driven-frontend/references/interaction-systems.md",
+          "input": "skills/animated-driven-frontend/references/interaction-systems.md",
           "target": "references/interaction-systems.md"
         },
         {
-          "input": "authored/animated-driven-frontend/references/rendering-pipeline.md",
+          "input": "skills/animated-driven-frontend/references/rendering-pipeline.md",
           "target": "references/rendering-pipeline.md"
         }
       ],
@@ -631,16 +631,16 @@
     },
     {
       "id": "team-up",
-      "entry": "authored/team-up/entry.md",
-      "agent": "authored/team-up/openai.yaml",
+      "entry": "skills/team-up/SKILL.md",
+      "agent": "skills/team-up/agents/openai.yaml",
       "methods": [],
       "authoredReferences": [],
       "dependencies": []
     },
     {
       "id": "atlas-setup",
-      "entry": "authored/atlas-setup/entry.md",
-      "agent": "authored/atlas-setup/openai.yaml",
+      "entry": "skills/atlas-setup/SKILL.md",
+      "agent": "skills/atlas-setup/agents/openai.yaml",
       "methods": [],
       "dependencies": [],
       "generatedReferences": [
@@ -652,8 +652,8 @@
     },
     {
       "id": "atlas-to-spec",
-      "entry": "sources/methods/to-spec.md",
-      "agent": "authored/atlas-to-spec/openai.yaml",
+      "entry": "skills/atlas-to-spec/SKILL.md",
+      "agent": "skills/atlas-to-spec/agents/openai.yaml",
       "methods": [
         "to-spec"
       ],
@@ -662,14 +662,14 @@
     },
     {
       "id": "atlas-to-tickets",
-      "entry": "sources/methods/to-tickets.md",
-      "agent": "authored/atlas-to-tickets/openai.yaml",
+      "entry": "skills/atlas-to-tickets/SKILL.md",
+      "agent": "skills/atlas-to-tickets/agents/openai.yaml",
       "methods": [
         "to-tickets"
       ],
       "authoredReferences": [
         {
-          "input": "authored/atlas-to-tickets/references/ticket-templates.md",
+          "input": "skills/atlas-to-tickets/references/ticket-templates.md",
           "target": "references/ticket-templates.md"
         }
       ],
@@ -677,8 +677,8 @@
     },
     {
       "id": "html-ui",
-      "entry": "authored/html-ui/entry.md",
-      "agent": "authored/html-ui/openai.yaml",
+      "entry": "skills/html-ui/SKILL.md",
+      "agent": "skills/html-ui/agents/openai.yaml",
       "methods": [
         "html-wireframe",
         "html-prototype"
@@ -698,7 +698,7 @@
     {
       "id": "craft-local-names",
       "owner": "atlas-craft",
-      "document": "authored/atlas-craft/entry.md",
+      "document": "skills/atlas-craft/SKILL.md",
       "section": "Modes",
       "sources": [
         "better-colors",
@@ -710,7 +710,7 @@
     {
       "id": "tracking-show-me-handoff",
       "owner": "tracking-implementation",
-      "document": "authored/tracking-implementation/entry.md",
+      "document": "skills/tracking-implementation/SKILL.md",
       "section": "Artifact presentation",
       "sources": [
         "show-me"

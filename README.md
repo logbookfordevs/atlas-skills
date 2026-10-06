@@ -56,7 +56,7 @@ pnpm check
 
 ## Authoring
 
-Edit `authored/` for Atlas-owned entries and references, or `sources/methods/` for maintained upstream adaptations. `skills/` is generated distribution output. Run `pnpm build:skills` after editing inputs and commit inputs and outputs together. See [authoring and provenance](docs/authoring/source-composition.md).
+Edit Atlas-owned entries, references and templates directly in `skills/`. `sources/` holds pinned upstream originals, licenses and patches. After editing a patched upstream file, run `pnpm record:patches -- <source-id>`; run `pnpm build:skills` to refresh bundled sources and receipts, then `pnpm check`. See [authoring and provenance](docs/authoring/source-composition.md).
 
 `legacy/` preserves retained migration baselines. Git history preserves retired experiments and proposal iterations; the [fresh-start record](docs/specs/atlas-fresh-start.md) defines the current direction.
 

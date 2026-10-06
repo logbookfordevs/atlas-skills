@@ -2,9 +2,15 @@
   "version": 1,
   "workflow": "html-ui",
   "generated": true,
+  "managedFiles": [
+    "references/wireframe/html-wireframe.md",
+    "licenses/html-wireframe.txt",
+    "references/model/html-prototype.md",
+    "licenses/html-prototype.txt"
+  ],
   "authoredInputs": [
-    "authored/html-ui/entry.md",
-    "authored/html-ui/openai.yaml"
+    "skills/html-ui/SKILL.md",
+    "skills/html-ui/agents/openai.yaml"
   ],
   "authoredReferences": [],
   "dependencies": [

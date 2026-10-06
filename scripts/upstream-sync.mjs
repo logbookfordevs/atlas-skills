@@ -112,7 +112,7 @@ export function prepareUpdate(root, source, candidate, manifest) {
   buildSkills(root, { check: true });
   const stage = mkdtempSync(join(tmpdir(), 'atlas-candidate-'));
   try {
-    for (const directory of ['sources', 'authored', 'stacks']) cpSync(join(root, directory), join(stage, directory), { recursive: true });
+    for (const directory of ['sources', 'skills', 'stacks']) cpSync(join(root, directory), join(stage, directory), { recursive: true });
     const next = structuredClone(manifest);
     const record = next.sources.find(record => record.id === source.id);
     const writes = new Map();
@@ -138,9 +138,13 @@ export function prepareUpdate(root, source, candidate, manifest) {
     for (const [name, bytes] of writes) {
       const target = join(root, name); mkdirSync(dirname(target), { recursive: true }); writeFileSync(target, bytes);
     }
-    // Remove obsolete generated support through the same validated staging output.
+    // Remove only resources retired by the validated candidate.
     for (const consumer of source.consumers) {
-      rmSync(join(root, 'skills', consumer), { recursive: true, force: true });
+      const previous = JSON.parse(readFileSync(join(root, 'skills', consumer, 'SOURCE-MANIFEST.json')));
+      const prepared = JSON.parse(readFileSync(join(stage, 'skills', consumer, 'SOURCE-MANIFEST.json')));
+      for (const path of Object.keys(previous.files)) {
+        if (!(path in prepared.files)) rmSync(join(root, 'skills', consumer, path), { force: true });
+      }
       cpSync(join(stage, 'skills', consumer), join(root, 'skills', consumer), { recursive: true });
     }
   } finally { rmSync(stage, { recursive: true, force: true }); }

@@ -2,21 +2,26 @@
   "version": 1,
   "workflow": "tracking-implementation",
   "generated": true,
+  "managedFiles": [
+    "references/show-me.md",
+    "licenses/show-me.txt",
+    "references/agents/openai.yaml"
+  ],
   "authoredInputs": [
-    "authored/tracking-implementation/entry.md",
-    "authored/tracking-implementation/openai.yaml",
-    "authored/tracking-implementation/references/resume.md",
-    "authored/tracking-implementation/references/review-guides.md"
+    "skills/tracking-implementation/SKILL.md",
+    "skills/tracking-implementation/agents/openai.yaml",
+    "skills/tracking-implementation/references/resume.md",
+    "skills/tracking-implementation/references/review-guides.md"
   ],
   "authoredReferences": [
     {
-      "input": "authored/tracking-implementation/references/resume.md",
+      "input": "skills/tracking-implementation/references/resume.md",
       "target": "references/resume.md",
       "classification": "atlas-authored",
       "carriedSha256": "c6d6b0b37a84484b59024d85a39d47b7214cc7eb7b67fdcd24ebdabe495afcaf"
     },
     {
-      "input": "authored/tracking-implementation/references/review-guides.md",
+      "input": "skills/tracking-implementation/references/review-guides.md",
       "target": "references/review-guides.md",
       "classification": "atlas-authored",
       "carriedSha256": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f"
@@ -75,7 +80,7 @@
     {
       "id": "tracking-show-me-handoff",
       "owner": "tracking-implementation",
-      "document": "authored/tracking-implementation/entry.md",
+      "document": "skills/tracking-implementation/SKILL.md",
       "section": "Artifact presentation",
       "sources": [
         "show-me"

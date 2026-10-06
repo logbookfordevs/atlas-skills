@@ -76,20 +76,22 @@ test('preparation validates the complete staged package before updating maintain
   const { root, source, revision } = fixture(t);
   const write = (name, value) => { mkdirSync(join(root, name, '..'), { recursive: true }); writeFileSync(join(root, name), value); };
   write(source.snapshot, 'before\n'); write(source.license, 'license\n');
-  write('authored/fixture-skill/entry.md', '---\nname: fixture-skill\ndescription: Fixture\n---\n');
-  write('authored/fixture-skill/openai.yaml', 'policy: {}\n');
+  write('skills/fixture-skill/SKILL.md', '---\nname: fixture-skill\ndescription: Fixture\n---\n');
+  write('skills/fixture-skill/agents/openai.yaml', 'policy: {}\n');
   write('stacks/atlas.json', '{"version":1,"sources":[]}');
-  const manifest = { version: 1, sources: [source], workflows: [{ id: 'fixture-skill', entry: 'authored/fixture-skill/entry.md', agent: 'authored/fixture-skill/openai.yaml', methods: ['fixture'], dependencies: [] }], rulings: [] };
+  const manifest = { version: 1, sources: [source], workflows: [{ id: 'fixture-skill', entry: 'skills/fixture-skill/SKILL.md', agent: 'skills/fixture-skill/agents/openai.yaml', methods: ['fixture'], dependencies: [] }], rulings: [] };
   write('sources/composition.json', JSON.stringify(manifest));
+  write('skills/fixture-skill/references/owned.md', 'owned context\n');
   buildSkills(root);
   const candidate = inspectSource(source, revision, root);
-  const bad = structuredClone(manifest); bad.workflows[0].entry = 'authored/missing.md';
+  const bad = structuredClone(manifest); bad.workflows[0].entry = 'skills/missing/SKILL.md';
   assert.throws(() => prepareUpdate(root, source, candidate, bad));
   assert.equal(readFileSync(join(root, source.snapshot), 'utf8'), 'before\n');
   prepareUpdate(root, source, candidate, manifest);
   assert.equal(readFileSync(join(root, source.snapshot), 'utf8'), 'after\n');
   assert.equal(JSON.parse(readFileSync(join(root, 'sources/composition.json'))).sources[0].upstream.commit, revision.commit);
   assert.equal(readFileSync(join(root, 'skills/fixture-skill/references/fixture.md'), 'utf8'), 'after\n');
+  assert.equal(readFileSync(join(root, 'skills/fixture-skill/references/owned.md'), 'utf8'), 'owned context\n');
 });
 
 test('a missing baseline resource is distinguished from an upstream revision update', t => {

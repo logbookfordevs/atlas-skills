@@ -2,42 +2,49 @@
   "version": 1,
   "workflow": "writing-for-humans",
   "generated": true,
+  "managedFiles": [
+    "references/stop-slop/stop-slop.md",
+    "licenses/stop-slop.txt",
+    "references/stop-slop/references/examples.md",
+    "references/stop-slop/references/phrases.md",
+    "references/stop-slop/references/structures.md"
+  ],
   "authoredInputs": [
-    "authored/writing-for-humans/entry.md",
-    "authored/writing-for-humans/openai.yaml",
-    "authored/writing-for-humans/references/articles-and-newsletters.md",
-    "authored/writing-for-humans/references/fresh-reader-pass.md",
-    "authored/writing-for-humans/references/pr-descriptions.md",
-    "authored/writing-for-humans/references/reader-progression.md",
-    "authored/writing-for-humans/references/visual-explanations.md"
+    "skills/writing-for-humans/SKILL.md",
+    "skills/writing-for-humans/agents/openai.yaml",
+    "skills/writing-for-humans/references/articles-and-newsletters.md",
+    "skills/writing-for-humans/references/fresh-reader-pass.md",
+    "skills/writing-for-humans/references/pr-descriptions.md",
+    "skills/writing-for-humans/references/reader-progression.md",
+    "skills/writing-for-humans/references/visual-explanations.md"
   ],
   "authoredReferences": [
     {
-      "input": "authored/writing-for-humans/references/articles-and-newsletters.md",
+      "input": "skills/writing-for-humans/references/articles-and-newsletters.md",
       "target": "references/articles-and-newsletters.md",
       "classification": "atlas-authored",
       "carriedSha256": "bdcc64970d5ad53a67e69706d4690296da953bb6831472a830472249732abd89"
     },
     {
-      "input": "authored/writing-for-humans/references/fresh-reader-pass.md",
+      "input": "skills/writing-for-humans/references/fresh-reader-pass.md",
       "target": "references/fresh-reader-pass.md",
       "classification": "atlas-authored",
       "carriedSha256": "1a47ba17c94310d25fe676108b583cd6d3e4c47fc5ebc6370897e90ccf852239"
     },
     {
-      "input": "authored/writing-for-humans/references/pr-descriptions.md",
+      "input": "skills/writing-for-humans/references/pr-descriptions.md",
       "target": "references/pr-descriptions.md",
       "classification": "atlas-authored",
       "carriedSha256": "51e88709e4b217cfee1f404362c71e5c55c3b79147b7b5fe987012dc88a0561f"
     },
     {
-      "input": "authored/writing-for-humans/references/reader-progression.md",
+      "input": "skills/writing-for-humans/references/reader-progression.md",
       "target": "references/reader-progression.md",
       "classification": "atlas-authored",
       "carriedSha256": "dd00107f404658e0048c2a7553ba02d21717faa2d50fff335dde010201e08df6"
     },
     {
-      "input": "authored/writing-for-humans/references/visual-explanations.md",
+      "input": "skills/writing-for-humans/references/visual-explanations.md",
       "target": "references/visual-explanations.md",
       "classification": "atlas-authored",
       "carriedSha256": "a5bdd3136e8467aea33b1f4890c3d535abebd4fb44b3141a43ab7e64eed6e8aa"

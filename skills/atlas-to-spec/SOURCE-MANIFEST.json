@@ -2,9 +2,13 @@
   "version": 1,
   "workflow": "atlas-to-spec",
   "generated": true,
+  "managedFiles": [
+    "SKILL.md",
+    "licenses/to-spec.txt"
+  ],
   "authoredInputs": [
-    "sources/methods/to-spec.md",
-    "authored/atlas-to-spec/openai.yaml"
+    "skills/atlas-to-spec/SKILL.md",
+    "skills/atlas-to-spec/agents/openai.yaml"
   ],
   "authoredReferences": [],
   "dependencies": [],

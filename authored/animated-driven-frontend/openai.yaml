@@ -1,6 +1,0 @@
-interface:
-  display_name: "Animated-Driven Frontend"
-  short_description: "Engineer synchronized motion, WebGL effects and rendering performance."
-  default_prompt: "Use $animated-driven-frontend to engineer this motion-driven frontend using the relevant interaction, rendering and accessibility references."
-policy:
-  allow_implicit_invocation: false

@@ -2,21 +2,28 @@
   "version": 1,
   "workflow": "atlas-review",
   "generated": true,
+  "managedFiles": [
+    "references/code/code-review.md",
+    "licenses/code-review.txt",
+    "references/motion/review-animations.md",
+    "licenses/review-animations.txt",
+    "references/motion/STANDARDS.md"
+  ],
   "authoredInputs": [
-    "authored/atlas-review/entry.md",
-    "authored/atlas-review/openai.yaml",
-    "authored/atlas-review/references/static/static-review.md",
-    "authored/atlas-review/references/static/scripts/changed-files.sh"
+    "skills/atlas-review/SKILL.md",
+    "skills/atlas-review/agents/openai.yaml",
+    "skills/atlas-review/references/static/static-review.md",
+    "skills/atlas-review/references/static/scripts/changed-files.sh"
   ],
   "authoredReferences": [
     {
-      "input": "authored/atlas-review/references/static/static-review.md",
+      "input": "skills/atlas-review/references/static/static-review.md",
       "target": "references/static/static-review.md",
       "classification": "atlas-authored",
       "carriedSha256": "a105165ead3aa7af298ec25dcd881c60463d97805830b62b8f9dcc0e00b85b0d"
     },
     {
-      "input": "authored/atlas-review/references/static/scripts/changed-files.sh",
+      "input": "skills/atlas-review/references/static/scripts/changed-files.sh",
       "target": "references/static/scripts/changed-files.sh",
       "classification": "atlas-authored",
       "carriedSha256": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7"

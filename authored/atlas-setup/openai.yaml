@@ -1,6 +1,0 @@
-interface:
-  display_name: "Atlas Setup"
-  short_description: "Prepare independent dependencies for installed Atlas skills."
-  default_prompt: "Use $atlas-setup to check dependencies for my installed Atlas skills and offer installation commands for the missing ones."
-policy:
-  allow_implicit_invocation: false

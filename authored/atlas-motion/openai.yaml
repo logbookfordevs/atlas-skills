@@ -1,6 +1,0 @@
-interface:
-  display_name: "Atlas Motion"
-  short_description: "Build interface animations and physical gesture interactions."
-  default_prompt: "Use $atlas-motion for the requested motion work."
-policy:
-  allow_implicit_invocation: true

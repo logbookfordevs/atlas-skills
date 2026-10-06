@@ -2,9 +2,10 @@
   "version": 1,
   "workflow": "team-up",
   "generated": true,
+  "managedFiles": [],
   "authoredInputs": [
-    "authored/team-up/entry.md",
-    "authored/team-up/openai.yaml"
+    "skills/team-up/SKILL.md",
+    "skills/team-up/agents/openai.yaml"
   ],
   "authoredReferences": [],
   "dependencies": [],

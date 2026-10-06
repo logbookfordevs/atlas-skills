@@ -2,9 +2,31 @@
   "version": 1,
   "workflow": "atlas-craft",
   "generated": true,
+  "managedFiles": [
+    "references/color/index.md",
+    "licenses/better-colors.txt",
+    "references/color/color-formats.md",
+    "references/color/color-usage.md",
+    "references/color/contrast.md",
+    "references/color/palette-generation.md",
+    "references/color/palette-structure.md",
+    "references/color/token-naming.md",
+    "references/type/index.md",
+    "licenses/better-typography.txt",
+    "references/type/choosing-fonts.md",
+    "references/type/css-cheat-sheet.md",
+    "references/type/details-and-accessibility.md",
+    "references/type/spacing-and-sizing.md",
+    "references/type/variable-fonts-and-opentype.md",
+    "references/type/wrapping-and-punctuation.md",
+    "references/layout/index.md",
+    "licenses/better-layout.txt",
+    "references/layout/grouping-and-alignment.md",
+    "references/layout/spacing-and-adaptivity.md"
+  ],
   "authoredInputs": [
-    "authored/atlas-craft/entry.md",
-    "authored/atlas-craft/openai.yaml"
+    "skills/atlas-craft/SKILL.md",
+    "skills/atlas-craft/agents/openai.yaml"
   ],
   "authoredReferences": [],
   "dependencies": [],
@@ -214,7 +236,7 @@
     {
       "id": "craft-local-names",
       "owner": "atlas-craft",
-      "document": "authored/atlas-craft/entry.md",
+      "document": "skills/atlas-craft/SKILL.md",
       "section": "Modes",
       "sources": [
         "better-colors",
