@@ -34,7 +34,7 @@ Avoid installing every recursively discovered skill from this development branch
 
 ## Share the stack
 
-The [Atlas stack manifest](stacks/atlas.json) combines these packages and the retained independent skills in AFK’s version-one format. Import pasted JSON or a direct manifest URL in the upcoming Sources & Stacks feature, review the selection, and copy an install script. See [stack installation and maintenance](docs/atlas-stack.md). The Atlas manifest is available on the review branch; AFK must support the version-one stack format to import it.
+The [Atlas stack manifest](stacks/atlas.json) combines these packages and the retained independent skills in AFK’s version-one format. Import pasted JSON or a direct manifest URL in AFK’s Sources & Stacks, review the selection, and copy an install script. See [stack installation and maintenance](docs/atlas-stack.md). The Atlas manifest is available on the review branch; AFK must support the version-one stack format to import it.
 
 ## Recommended independent skills
 
@@ -44,7 +44,7 @@ AFK CLI and Profile Use are companion skills owned by the AFK project, not Atlas
 
 ## Source maintenance
 
-A single [composition manifest](sources/composition.json) tracks carried sources, immutable revisions, licenses, supporting files, patches and consumers. Preserved upstream frontmatter stays with each source. Generated packages include source receipts and required notices.
+A single [composition manifest](sources/composition.json) tracks carried sources, immutable revisions, licenses, supporting files, patches and consumers. Preserved upstream frontmatter stays with each source. Installable packages include source receipts and required notices.
 
 The [upstream update workflow](docs/authoring/upstream-updates.md) detects changes, replays patches in isolation and opens or updates review issues. Reviewed adoption prepares complete packages locally; it never auto-merges an update. The daily schedule activates only after publication on the default branch.
 
@@ -56,7 +56,7 @@ pnpm check
 
 ## Authoring
 
-Edit Atlas-owned entries, references and templates directly in `skills/`. `sources/` holds pinned upstream originals, licenses and patches. After editing a patched upstream file, run `pnpm record:patches -- <source-id>`; run `pnpm build:skills` to refresh bundled sources and receipts, then `pnpm check`. See [authoring and provenance](docs/authoring/source-composition.md).
+Follow [Skill maintenance](docs/authoring/source-composition.md) to add, edit, patch, compose or remove skills. It defines editable files, source registration, dependency maintenance and validation. [Composition decision history](docs/migrations/composition-decisions.md) preserves the rationale separately.
 
 `legacy/` preserves retained migration baselines. Git history preserves retired experiments and proposal iterations; the [fresh-start record](docs/specs/atlas-fresh-start.md) defines the current direction.
 

@@ -25,7 +25,7 @@ Preparation requires an explicit immutable candidate revision and a clean packag
 
 License changes, patch conflicts and derived-method changes require manual reconciliation rather than automatic preparation. Adopt a new license only after checking its redistribution terms; update the pin, hashes and licensed bytes together. Derived methods must be reviewed against their derivation. For patched methods, reconcile the maintained method and regenerate its patch against the new pristine snapshot. Then build and check the affected consumers before opening an ordinary review PR.
 
-Verbatim sources must match their snapshots. Patched sources must reproduce their maintained bytes through patch replay. Switching from verbatim to patched means recording a maintained method and replayable patch in the same source record; the watcher needs no new code. Authored skills have no invented upstream pin.
+Verbatim sources must match their snapshots; patched sources must replay exactly. For local edits or converting a verbatim source into a patched source, follow [Skill maintenance](source-composition.md#patch-an-existing-source).
 
 The detector is deterministic; behavior review remains a maintainer or agent task. Clean patch replay and passing package checks do not prove that changed instructions fit Atlas's workflow. Adoption remains deliberate.
 
@@ -33,6 +33,6 @@ The detector is deterministic; behavior review remains a maintainer or agent tas
 
 This first implementation creates review issues, not automatic update PRs. The preparation command makes a reviewed update concrete locally; a maintainer can open a PR after inspecting it. Automated draft PR generation can later use that same preparation mechanism without changing source identity or patch handling.
 
-The recommended external stack is not mirrored or updated by this watcher. Its installation registry remains separate from the carried-source maintenance contract. The website and installer discussed during fresh-start review are not implemented here.
+The watcher maintains carried sources; independent skills in the recommended stack follow their original installation sources.
 
-Atlas-owned instructions and resources live directly in `skills/` and survive preparation. Edit patched method files there and run `pnpm record:patches -- <source-id>` before rebuilding. Preparation stages `skills/`, `sources/` and `stacks/`, and refuses new upstream resources that conflict with Atlas-owned files.
+Preparation stages `skills/`, `sources/` and `stacks/`, preserves Atlas-owned files and refuses upstream additions that conflict with them.

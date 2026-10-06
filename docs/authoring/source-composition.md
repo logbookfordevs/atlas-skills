@@ -1,63 +1,87 @@
-# Maintaining Atlas skills
+# Skill maintenance
 
-Edit Atlas-owned entries, references and templates directly in `skills/`. Upstream originals, licenses and patches live in `sources/`. The composition manifest identifies bundled files; the builder refreshes those files and package receipts while preserving Atlas-owned files. Packages remain portable without the legacy archive or AFK runtime.
+## Ownership
 
-For patched upstream methods, edit the file in `skills/`, run `pnpm record:patches -- <source-id>`, then `pnpm build:skills` and `pnpm check`. Patch recording captures the complete difference from the pinned original without changing that original. Commit the edited package, patch and refreshed receipt together. Verbatim references are refreshed from their pinned originals; adapting one requires registering its classification and patch first.
+| Location | Edit here for |
+| --- | --- |
+| `skills/<id>/` | Atlas instructions, templates and references; maintained upstream adaptations |
+| `sources/composition.json` | Package registration, carried sources, consumers, dependencies and rulings |
+| `sources/upstream/<source-id>/` | Pinned, untouched upstream files and license evidence |
+| `sources/patches/` | Replayable differences from pinned upstream entries |
+| `stacks/atlas.json` | Shared installation selection, including independent upstream skills |
 
-## Current packages
+The builder refreshes bundled upstream files, Setup’s dependency registry and package receipts. It preserves Atlas-owned files. Read a package’s `SOURCE-MANIFEST.json` to distinguish managed resources from local authoring; edit the composition manifest rather than generated receipts.
 
-The active stack preserves atomic operations. HTML UI composes HTML Wireframe and HTML Prototype as Wireframe and Model; Matt’s Prototype stays independent upstream. Atlas To Spec and Atlas To Tickets are separate patched packages, preserving the prior adaptations and ticket templates. Review carries patched Code Review, authored Static Review and verbatim Review Animations. Craft retains Better Colors, Better Typography and Better Layout. Motion carries a narrowly patched Animate and verbatim Apple Design; Animate’s component-selection call becomes guidance to search for suitable component recommendations for the task and project. Writing for Humans carries the complete verbatim Stop Slop tree with its frontmatter, supporting references and MIT license.
+## Add an Atlas-authored skill
 
-Decide, Design and Specify are retired as active umbrella entries. Their prior files are recoverable from Git history. Their former unchanged independent methods remain recommended upstream; source receipts are retained only for active consumers.
+1. Create `skills/<id>/SKILL.md` and `agents/openai.yaml`. Use Writing for Agents for instructions and invocation metadata. Make `name` match the package ID; align `disable-model-invocation` with `policy.allow_implicit_invocation`.
+2. Add a `workflows` record in `sources/composition.json`:
 
-Tracking Implementation stays automatic alongside any executor, with its checkpoint policy preserved. Its obsolete Code Review dependency name now resolves to Atlas Review. Team Up, the manual ZERO-based Animated-Driven Frontend and manual Atlas Setup remain independent. The explicitly retired Ask, Code Grill, Design Grill, Create Agent and Code Review Verdicts remain absent; prior cleanup retirements remain in the archive receipt.
+   ```json
+   {
+     "id": "example-skill",
+     "entry": "skills/example-skill/SKILL.md",
+     "agent": "skills/example-skill/agents/openai.yaml",
+     "methods": [],
+     "dependencies": []
+   }
+   ```
 
-## Setup dependency maintenance
+3. Keep local resources within the package and link them from their loading conditions. Ordinary local files are preserved automatically; `authoredReferences` can explicitly register an input and its package-relative target when needed.
+4. Add the skill to Atlas’s source group in `stacks/atlas.json` when it belongs in the shared stack. Finish with [validation](#validate-and-deliver).
 
-Atlas Setup is manual and prepares only the independent upstream behavioral dependencies of installed Atlas packages. `sources/composition.json` owns consumer relationships, required/optional status and loading conditions; `stacks/atlas.json` owns installation sources and skill selections. The build joins these records into Setup’s portable `references/dependencies.json`. Do not edit that generated registry or maintain a second dependency list in AGENTS.md.
+## Bundle an upstream source
 
-Whenever adding, changing or removing a skill or an independent upstream dependency, update the applicable manifest relationship and stack selection, then run `pnpm build:skills` and `pnpm check`. This regenerates Setup automatically; stale setup output fails the package check. Dependencies maintained by Atlas and tool capabilities are excluded from upstream installation recommendations. Keep conditions specific to the path that uses a dependency. Moving an upstream skill into Atlas ownership removes it from these recommendations after regeneration.
+1. Select an immutable upstream commit and the skill’s complete required file scope. Confirm redistribution permission; retain the license and applicable notices.
+2. Store the pristine entry as `sources/upstream/<source-id>/source.md`, with supporting files and license alongside it. Calculate SHA-256 hashes from the saved bytes.
+3. Register a `sources` record using an existing source with the same classification as the structural example. Supply:
 
-Setup offers commands and obtains user authorization before installations. It does not install the full catalog, change profiles, or treat optional dependencies as universal requirements. Other Atlas skills still handle missing capabilities when their relevant paths are selected. CLI command syntax follows the [Skills CLI documentation](https://github.com/vercel-labs/skills#install-a-skill); installation scope and target hosts are chosen at runtime.
+   | Fields | Meaning |
+   | --- | --- |
+   | `id`, `owner`, `classification`, `adaptation` | Stable source identity and any intentional adaptation |
+   | `upstream.repository`, `commit`, `path`, `licensePath`, `trackingRef` | Origin, immutable baseline and ref watched for updates |
+   | `snapshot`, `sourceSha256`, `license`, `licenseSha256` | Pristine local evidence |
+   | `method`, `carriedPath` | Maintained input and its destination within each consumer package |
+   | `supportingFiles` | Each file’s `upstreamPath`, `snapshot`, `sourceSha256` and relative path beside the carried entry |
+   | `consumers`, `rulings` | Packages using the source and intentional caller decisions |
 
-## Provenance and updates
+4. For `verbatim`, set `method` to the pristine snapshot. For `patched`, put the maintained entry in `skills/<consumer>/<carriedPath>`, set `method` to that file and `patch` to `sources/patches/<source-id>.patch`, then record the patch. For a standalone patched skill, `carriedPath` is `SKILL.md` and its workflow entry is that same file.
+5. Add the source ID to each consumer’s `methods` list and point the skill’s loading condition to the bundled reference. Preserve supporting paths so upstream relative links resolve. Declare `upstream.includePaths` for repository-root entries or a deliberately narrower tracked scope; other entries track their containing skill directory.
+6. Register any concrete conflict ruling in `rulings`, with its owning package, runtime document, source IDs and decision. Runtime guidance carries the actionable ruling; maintenance explanations stay here or in receipts.
+7. Finish with validation. Only independently installable packages belong in the stack selection; bundled references need no separate installation.
 
-`sources/composition.json` records each upstream repository, immutable commit, original path, classification, source/license hashes, supporting files, consumers and caller rulings. Preserve upstream frontmatter. Verbatim bytes remain identical; patched sources have replayable patches. Authored methods are owned by Atlas and carry no invented upstream lineage. Dependencies named by a bundled reference can still require separately installed skills.
+## Patch an existing source
 
-For To Spec, To Tickets and Code Review, the pinned current upstream snapshot is a maintenance baseline. It is not a claim about the historical fork base, which was not established. Replay the recorded patch to reproduce the exact preserved fork bytes. Ticket templates and Tracking Implementation references are authored inputs. The standalone patched spec/ticket entry is its maintained method itself, packaged as `SKILL.md`; its public metadata name is included in the replayable patch.
+For a source already classified `patched`, edit its `method` file under `skills/`, update `adaptation` to describe the intentional change, then run:
 
-Adopt updates deliberately: compare the candidate with the pin, inspect behavior changes and all consumers, reconcile intentional adaptations, refresh snapshots/hashes/patches together, regenerate and validate. Byte integrity proves reproducibility, not behavioral suitability. The build performs no network adoption. The deterministic upstream detector, isolated candidate preparation command and daily review-issue workflow are implemented; see [upstream updates](upstream-updates.md). The workflow is not active until published on the default branch. PE factory and CI reuse remain pending.
+```sh
+pnpm record:patches -- <source-id>
+pnpm build:skills
+pnpm check
+```
 
-Supporting source trees retain relative paths and per-file hashes. Required licenses ship with each consumer. Missing redistribution permission means the source is not bundled: Bro-family operations remain independent. Animate Text is excluded. No personal installation is changed by generation.
+The source ID comes from `sources/composition.json`, and may differ from the consumer’s skill name. Recording captures the complete difference from the pinned original and verifies replay; it leaves the original intact.
 
-## Runtime versus maintenance
+To change `verbatim` into `patched`, first copy the carried entry into its maintained package location, change `classification` to `patched`, set `method` to that package file, and add the patch path and adaptation record. Edit that file and run the sequence above. Supporting files remain verbatim; the current patch recorder covers the entry only. Changes to upstream supporting content require an explicit tooling extension or separate Atlas-owned reference.
 
-Runtime entries describe outcomes, mode selection, dependency gaps and concrete rulings. Repository abstractions, classifications, update procedures and credits belong here and in receipts, rather than consuming the always-loaded skill body. Patch only a justified conflict or intentional user-approved adaptation. Do not silently replace a selected upstream method with an authored approximation.
+Upstream updates follow [reviewed adoption](upstream-updates.md#reviewed-adoption), including conflict and license handling. Local patch recording is not upstream adoption.
 
-The five explicit retirements are recorded in `docs/migrations/skills-v2-archive.json` under `retiredFiles`; retained archive records still verify unchanged bytes. Git history preserves retired originals. Doubt Driven Development remains independent and unchanged; its proposed harness-first patch is deferred.
+## Change dependencies or the recommended stack
 
-Runtime relevance check: retain a sentence only when it changes reference selection, execution, a required dependency, a concrete conflict ruling or completion. Placement notes about unrelated skills and generic reporting reminders belong outside runtime entries.
+A behavioral dependency record names `id`, `relationship: "behavioral"`, `required` and the loading `condition`. External dependencies need a matching skill selection in `stacks/atlas.json`; Atlas-owned dependencies resolve to registered packages. Tool capabilities use `relationship: "tool"` and are excluded from Setup’s skill-install recommendations.
 
-Tracking is behavioral composition: activate on an explicit tracking request or resuming an existing tracked effort. It records the chosen executor’s decisions, status and evidence, reuses its checkpoint review, and preserves user acceptance. The archived AFK Implement is retained unchanged; the live preview catalog uses Tracking Implementation.
+Update the consumer relationship and stack selection together when a dependency changes. Rebuilding generates `skills/atlas-setup/references/dependencies.json`; edit its inputs, not that registry. An unchanged independent skill needs only its stack selection unless an Atlas package depends on it. See [stack sharing](../atlas-stack.md) for AFK import behavior.
 
-Dependency receipts distinguish behavioral skill calls from tool capabilities. Plannotator is an optional tool dependency of Tracking Implementation, not a required catalog skill install.
+## Remove a skill or bundled source
 
-## Independent authored utilities
+1. Remove its workflow or consumer-method relationship, incoming dependency calls and affected rulings. Keep `sources[].consumers` and `workflows[].methods` consistent.
+2. Remove the shared stack selection if it is no longer recommended. A bundled source may remain independently recommended.
+3. Delete the retired package when removing a skill. When removing a method from a retained package, keep its previous receipt until rebuilding: the builder uses that receipt to remove obsolete managed resources while preserving Atlas-owned files.
+4. Delete source snapshots and patches only when no retained source record or consumer uses them and that removal is within the authorized scope. Retained `legacy/` baselines are separate from active packages.
+5. Finish with validation.
 
-`animated-driven-frontend` replaces AFK Animated-Driven Frontend as a manually invoked engineering utility. Its three authored references preserve knowledge from the prior Narrative Systems and Immersive Pipeline material: progress synchronization, segment lifecycle, hold gates, gestures, render-anchored feedback, asset conversion/loading, upload queues, adaptive quality, shaders and real-device performance. Cinematic direction, production binders, creative greenlights and Workprint are excluded from the active package.
+## Validate and deliver
 
-The engineering source is Sindhur Dutta’s [ZERO: The Engineering Behind a Defiant Interactive Narrative](https://tympanus.net/codrops/2026/07/17/zero-the-engineering-behind-a-defiant-interactive-narrative/) (Codrops, July 17, 2026). References are Atlas-authored generalizations; no article text, code or assets are bundled, and no upstream license or immutable repository pin is invented. Future specialized knowledge should earn a conditionally loaded reference rather than broaden the current package speculatively. The previous cinematic skill remains historical content under legacy, not an active catalog entry.
+Run `pnpm build:skills`, then `pnpm check`. Inspect the diff for intended behavior changes, complete license/support trees, updated receipts and preserved Atlas-owned files. Commit maintained files, source records, patches and refreshed receipts together when delivery is authorized.
 
-`team-up` replaces AFK Architect. It is model-invoked and focuses on delegation value and deliberate custom-role/model/effort selection. Configurable assignments use explicit supported controls; fixed custom-agent configurations remain authoritative. General assignment and integration checklists, fresh-context mandates, recursive-delegation restrictions, and mandatory spoken selection rationales were removed: those were not the observed failure this utility addresses. This pruning follows Writing for Agents and the supplied Claude anti-patterns, alongside the [Astra prompting guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra). The old archive is historical, not a live distribution. Model behavior still needs evaluation; passing package checks does not establish prompting efficacy.
-
-## Cleanup checkpoint
-
-The 17 inactive source records and 62 exclusively referenced files were removed. Active sources, methods, patches, supporting trees and required licenses remain. Tests use independent fixtures for source and notice integrity rather than requiring abandoned production sources. Brainstorming Facilitator, PR Story Flow Mermaid and Structured Debugging are explicitly retired, including their legacy directories. Tracking Implementation was excluded from this work.
-
-## Tracking artifact presentation
-
-Tracking bundles the complete [Show Me source by Dex Horthy / HumanLayer](https://github.com/humanlayer/skills/blob/main/plugins/show-me/skills/show-me/SKILL.md) verbatim, with its frontmatter, examples and MIT notice. The pin and active consumer are registered for upstream review. Independent Show Me remains manual and independently installable.
-
-Tracking loads Show Me when creating or updating the Implementation Record. Show Me governs artifact presentation throughout the work; Tracking defines the required information, structured state, evidence, commit policy and acceptance gate. Each relevant part can use a presentation suited to its content, without a fixed body layout. Complete findings, judgments, resolutions and evidence remain inspectable. Markdown stays the local record format; focused HTML views follow the existing secondary-representation agreement. The authored integration uses the host’s file-opening mechanism.
-
-The original Review Guides reference retains the product and design acceptance journeys, separately from Show Me’s artifact presentation. Resume consolidates repeated policies, and the notes/ADR examples are removed while the main boundary remains. The legacy core remains the baseline; this integration changes presentation rather than its evidence or acceptance contracts.
+Tests cover metadata, discovery, packaging, hashes, patch replay and observable tooling behavior. Authored wording, headings and examples are not test contracts. Package validation establishes integrity; invocation and behavioral quality require a separate model trial when those claims matter.
