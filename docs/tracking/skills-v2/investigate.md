@@ -1,3 +1,7 @@
+# Investigate — retired experiment
+
+Status: removed on 2026-10-05 at the user’s request. The generated package, authored workflow and preview catalog listing were deleted. Source snapshots and generic generation/integrity tooling remain. Research stays independent. The material below is a historical implementation record; its installation and generated-entry links are no longer active.
+
 # Investigate — first Skills V2 review checkpoint
 
 Date: 2026-09-25. Branch: `feat/skills-v2`. Status: implemented and packaged; awaiting user review. No other workflow is implemented by this slice. Production `main` remains unchanged.
@@ -8,11 +12,11 @@ The Markdown proposal and HTML artifact were already present on `main` at `5bea2
 
 All 17 existing authored skill directories (66 files) moved from `skills/` into the existing `legacy/` folder. Their bytes are verified against the archive receipt. The two previously archived packages remain. External sources and old catalog entries remain available, and unchanged catalog sources still resolve against production main. This is a development-branch archive, not a production retirement or permission to merge the partial catalog.
 
-`logbook-investigate` is automatically selectable and explicitly invocable. The root owns evidence framing, method selection, optional behavioral composition and completion. It includes a patched Research reference and derived source-verification and adversarial-challenge references. The planned owners of the latter methods remain Implement and Decide; their public workflows are not implemented or invoked here.
+`logbook-investigate` is automatically selectable and explicitly invocable. The root owns evidence framing, method selection, optional behavioral composition and completion. It includes a verbatim Research reference selected for authorized background research with a durable findings file; Atlas owns direct investigation separately. It also includes and derived source-verification and adversarial-challenge references. The planned owners of the latter methods remain Implement and Decide; their public workflows are not implemented or invoked here.
 
 Domain Modeling and Truss remain independent optional capabilities. Ordinary vocabulary lookup stays within research; Domain Modeling is for a requested sharpening of the project model. Neither optional skill is required to install or run the core package. AFK's `composes` field advertises selection relationships; it does not prove runtime use or enforce installation.
 
-The generated package includes references, licenses, agent discovery metadata and a source manifest. Canonical inputs, pristine upstream snapshots, Research patch replay, consumer declarations and SHA-256 receipts make it reproducible. No watcher or automatic upstream adoption is shipped.
+The generated package includes references, licenses, agent discovery metadata and a source manifest. Canonical inputs, pristine upstream snapshots, verbatim Research byte identity, consumer declarations and SHA-256 receipts make it reproducible. No watcher or automatic upstream adoption is shipped.
 
 ## Source decisions
 
@@ -22,9 +26,13 @@ Source Driven Development and Doubt Driven Development are pinned to Addy Osmani
 
 The Astra article and Writing for Agents shaped authoring, not a runtime dependency. No model selection, mandatory background agent, per-decision web search, or recurring approval ritual is introduced.
 
+## Research composition revision
+
+Research now ships directly from its pinned snapshot, including frontmatter. Removed the previous adaptation file and patch. Atlas owns direct evidence gathering, conflict handling, and selecting the delegated upstream method only when its full contract fits. The evaluation suite distinguishes these routes; live model evaluation remains pending.
+
 ## Verification
 
-- `pnpm check`: lint, generated-package parity and 12 tests pass.
+- `pnpm check`: lint, generated-package parity and 13 tests pass after the Research revision.
 - Tests exercise snapshot/license tampering, patch replay mismatch, stale authored/generated output, self-contained reference resolution, optional dependency metadata and all archived bytes. Existing catalog and hook tests pass.
 - The published branch uses the explicit ref fragment `https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2`; the CLI misparses a slash-containing branch in a `/tree/` URL.
 - Standard `npx skills add <package> --list`: discovers exactly `logbook-investigate` with its intended description.

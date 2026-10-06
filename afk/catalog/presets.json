@@ -5,16 +5,24 @@
     {
       "id": "afk-architect",
       "label": "AFK Architect",
-      "areas": ["skills", "agents"],
+      "areas": [
+        "skills"
+      ],
       "selections": {
-        "skills": ["afk-architect"],
-        "customAgents": ["afk-cartographer", "afk-builder", "afk-pathfinder"]
+        "skills": [
+          "afk-architect"
+        ]
       }
     },
     {
       "id": "daily-routine",
       "label": "Daily Routine",
-      "areas": ["rules", "skills", "tools", "agents"],
+      "areas": [
+        "rules",
+        "skills",
+        "tools",
+        "agents"
+      ],
       "all": true
     }
   ]

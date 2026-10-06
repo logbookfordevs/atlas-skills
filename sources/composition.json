@@ -3,24 +3,22 @@
   "sources": [
     {
       "id": "research",
-      "owner": "Investigate",
-      "classification": "patched",
+      "owner": "Research",
+      "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
         "commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
         "path": "skills/engineering/research/SKILL.md",
-        "licensePath": "LICENSE"
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
       },
       "snapshot": "sources/upstream/research/source.md",
       "sourceSha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
       "license": "sources/upstream/research/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/methods/research.md",
-      "adaptation": "Preserves primary-source research. Removes the upstream skill entry metadata, replaces unconditional delegation with authorized useful delegation and no nested researchers, makes durable output conditional, adds a concrete fallback location and evidence/conflict handling.",
-      "consumers": [
-        "logbook-investigate"
-      ],
-      "patch": "sources/patches/research.patch"
+      "method": "sources/upstream/research/source.md",
+      "adaptation": "Preserved unchanged, including upstream frontmatter, for the independent Research skill. No composed consumer is currently shipped.",
+      "consumers": []
     },
     {
       "id": "source-verification",
@@ -30,17 +28,16 @@
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "bcab6a1b8503100e8618c3b4e32cc78de43de769",
         "path": "skills/source-driven-development/SKILL.md",
-        "licensePath": "LICENSE"
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
       },
       "snapshot": "sources/upstream/source-verification/source.md",
       "sourceSha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
       "license": "sources/upstream/source-verification/LICENSE",
       "licenseSha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
       "method": "sources/methods/source-verification.md",
-      "adaptation": "Extracts version-aware primary-source verification into a bounded non-entry method. Omits implementation, blanket per-decision browsing, mandatory version questions and code-comment citations, persona/security dependencies and checklists. Shared source exists now; Implement itself is not implemented.",
-      "consumers": [
-        "logbook-investigate"
-      ]
+      "adaptation": "Extracts version-aware primary-source verification into a bounded non-entry method. Omits implementation, blanket per-decision browsing, mandatory version questions and code-comment citations, persona/security dependencies and checklists. Shared derived experiment is not consumed by Atlas Implement; the independent original can be selected in a tracking execution bundle.",
+      "consumers": []
     },
     {
       "id": "adversarial-challenge",
@@ -50,7 +47,8 @@
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "bcab6a1b8503100e8618c3b4e32cc78de43de769",
         "path": "skills/doubt-driven-development/SKILL.md",
-        "licensePath": "LICENSE"
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
       },
       "snapshot": "sources/upstream/adversarial-challenge/source.md",
       "sourceSha256": "6fa1fcd8420c28daf7e53c5b08b0f20b907911efd2a6d9bce0b9740da20a4008",
@@ -58,35 +56,1320 @@
       "licenseSha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
       "method": "sources/methods/adversarial-challenge.md",
       "adaptation": "Extracts artifact-and-contract challenge, evidence-based reconciliation, honest fresh-context labeling and a three-cycle bound. Removes universal activation, mandatory cross-model offers, host-specific personas and repeated approval rituals. This is not the full continuous posture. Shared source exists now; Decide itself is not implemented.",
+      "consumers": []
+    },
+    {
+      "id": "grill-me",
+      "owner": "Atlas Decide",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/productivity/grill-me/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/grill-me/source.md",
+      "sourceSha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+      "license": "sources/upstream/grill-me/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "sources/upstream/grill-me/source.md",
+      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
       "consumers": [
-        "logbook-investigate"
+        "atlas-decide"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [
+        "decide-flow-selection",
+        "decide-interview-to-map"
+      ],
+      "carriedPath": "references/probe/grill-me.md"
+    },
+    {
+      "id": "grill-with-docs",
+      "owner": "Atlas Decide",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/grill-with-docs/source.md",
+      "sourceSha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "license": "sources/upstream/grill-with-docs/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "sources/upstream/grill-with-docs/source.md",
+      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
+      "consumers": [
+        "atlas-decide"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [
+        "decide-flow-selection",
+        "decide-interview-to-map"
+      ],
+      "carriedPath": "references/record/grill-with-docs.md"
+    },
+    {
+      "id": "wayfinder",
+      "owner": "Atlas Decide",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/engineering/wayfinder/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/wayfinder/source.md",
+      "sourceSha256": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
+      "license": "sources/upstream/wayfinder/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "sources/upstream/wayfinder/source.md",
+      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
+      "consumers": [
+        "atlas-decide"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [
+        "decide-flow-selection",
+        "decide-interview-to-map"
+      ],
+      "carriedPath": "references/map/wayfinder.md"
+    },
+    {
+      "id": "html-wireframe",
+      "owner": "Atlas Design",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/plannotator/effective-html",
+        "commit": "2ac1dfecb0f2474e75260cb6d3c9b9d6d9b5062e",
+        "path": "skills/html-wireframe/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/html-wireframe/source.md",
+      "sourceSha256": "b1d649ef9052f2ed8baabaf483ed527208a2e481281ed3925ec8b84ba641d4c1",
+      "license": "sources/upstream/html-wireframe/LICENSE",
+      "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
+      "method": "sources/methods/html-wireframe.md",
+      "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
+      "consumers": [
+        "atlas-design"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "carriedPath": "references/wireframe/html-wireframe.md",
+      "supportingFiles": [],
+      "rulings": [
+        "design-fidelity"
+      ],
+      "patch": "sources/patches/html-wireframe.patch"
+    },
+    {
+      "id": "html-prototype",
+      "owner": "Atlas Design",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/plannotator/effective-html",
+        "commit": "2ac1dfecb0f2474e75260cb6d3c9b9d6d9b5062e",
+        "path": "skills/html-prototype/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/html-prototype/source.md",
+      "sourceSha256": "8987dda45224350254af30cafa72e721c6d91e1972e794e8e839406f77814368",
+      "license": "sources/upstream/html-prototype/LICENSE",
+      "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
+      "method": "sources/methods/html-prototype.md",
+      "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
+      "consumers": [
+        "atlas-design"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "carriedPath": "references/model/html-prototype.md",
+      "supportingFiles": [],
+      "rulings": [
+        "design-fidelity"
+      ],
+      "patch": "sources/patches/html-prototype.patch"
+    },
+    {
+      "id": "animate",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/animate/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/animate/source.md",
+      "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "license": "sources/upstream/animate/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "sources/upstream/animate/source.md",
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte; Atlas owns selection and documented rulings. Host-specific agent metadata is not runtime method content.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "carriedPath": "references/motion/animate.md",
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/animate/RECIPES.md",
+          "snapshot": "sources/upstream/animate/support/RECIPES.md",
+          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+          "relativePath": "RECIPES.md"
+        }
+      ],
+      "rulings": [
+        "implement-ui-scope",
+        "implement-motion"
+      ]
+    },
+    {
+      "id": "apple-design",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/apple-design/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/apple-design/source.md",
+      "sourceSha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+      "license": "sources/upstream/apple-design/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "sources/upstream/apple-design/source.md",
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte; Atlas owns selection and documented rulings. Host-specific agent metadata is not runtime method content.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "carriedPath": "references/motion/apple-design.md",
+      "supportingFiles": [],
+      "rulings": [
+        "implement-ui-scope",
+        "implement-motion"
+      ]
+    },
+    {
+      "id": "prototype",
+      "owner": "Atlas Design",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/engineering/prototype/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/prototype/source.md",
+      "sourceSha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+      "license": "sources/upstream/prototype/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "sources/upstream/prototype/source.md",
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte; Atlas owns selection and documented rulings. Host-specific agent metadata is not runtime method content.",
+      "consumers": [
+        "atlas-design"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "carriedPath": "references/experiment/SKILL.md",
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/prototype/LOGIC.md",
+          "snapshot": "sources/upstream/prototype/support/LOGIC.md",
+          "sourceSha256": "f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9",
+          "relativePath": "LOGIC.md"
+        },
+        {
+          "upstreamPath": "skills/engineering/prototype/UI.md",
+          "snapshot": "sources/upstream/prototype/support/UI.md",
+          "sourceSha256": "723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3",
+          "relativePath": "UI.md"
+        }
+      ],
+      "rulings": [
+        "design-fidelity",
+        "design-promotion"
+      ]
+    },
+    {
+      "id": "implement-spec",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/engineering/implement-spec/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/implement-spec/source.md",
+      "sourceSha256": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d",
+      "license": "sources/upstream/implement-spec/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "sources/upstream/implement-spec/source.md",
+      "carriedPath": "references/graph/implement-spec.md",
+      "supportingFiles": [],
+      "adaptation": "Entry and frontmatter preserved byte-for-byte. Graph guidance resolves the Code Review name, host delegation/worktree conventions and publication authority. No combined-execution framework or upstream patch is imposed.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [
+        "implement-host-operations"
+      ]
+    },
+    {
+      "id": "better-ui",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-ui/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-ui/source.md",
+      "sourceSha256": "21cf641dc53e926eccaf523f2f834e970058bd59af4617d8bdd3393f10641553",
+      "license": "sources/upstream/better-ui/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "sources/upstream/better-ui/source.md",
+      "carriedPath": "references/craft/ui/index.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "animations.md",
+          "upstreamPath": "skills/better-ui/animations.md",
+          "snapshot": "sources/upstream/better-ui/support/animations.md",
+          "sourceSha256": "5d2d9e4cefab494b6dd0683e7d2d9bc90788df9c536449c0828c241de965e846"
+        },
+        {
+          "relativePath": "enter-exit.md",
+          "upstreamPath": "skills/better-ui/enter-exit.md",
+          "snapshot": "sources/upstream/better-ui/support/enter-exit.md",
+          "sourceSha256": "8db1b33d6c80a097218a530cb9749dff4b0a2b992236047a2e88661af5e930ea"
+        },
+        {
+          "relativePath": "icon-transitions.md",
+          "upstreamPath": "skills/better-ui/icon-transitions.md",
+          "snapshot": "sources/upstream/better-ui/support/icon-transitions.md",
+          "sourceSha256": "60098242d33133a35a675719c447129b8931aecfbf05d58a6e2aa01e7894694e"
+        },
+        {
+          "relativePath": "icons.md",
+          "upstreamPath": "skills/better-ui/icons.md",
+          "snapshot": "sources/upstream/better-ui/support/icons.md",
+          "sourceSha256": "74cc78322874df4e2286bb0f5835d68114f74be1c94f993c94f6af692f44733b"
+        },
+        {
+          "relativePath": "performance.md",
+          "upstreamPath": "skills/better-ui/performance.md",
+          "snapshot": "sources/upstream/better-ui/support/performance.md",
+          "sourceSha256": "e4bc3c90d6e0281d295e2e7e39d545fb9abd8a67667b0c10e589eda8115e5b1e"
+        },
+        {
+          "relativePath": "surfaces.md",
+          "upstreamPath": "skills/better-ui/surfaces.md",
+          "snapshot": "sources/upstream/better-ui/support/surfaces.md",
+          "sourceSha256": "5508a7caf07ae8de616e7d83e282d4a08c026dd7a2d3cf54979609e4e0301048"
+        }
+      ],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/ui/index.md",
+        "classification": "verbatim",
+        "sha256": "21cf641dc53e926eccaf523f2f834e970058bd59af4617d8bdd3393f10641553",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies."
+    },
+    {
+      "id": "better-layout",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-layout/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-layout/source.md",
+      "sourceSha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+      "license": "sources/upstream/better-layout/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "sources/upstream/better-layout/source.md",
+      "carriedPath": "references/craft/layout/index.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "grouping-and-alignment.md",
+          "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
+          "snapshot": "sources/upstream/better-layout/support/grouping-and-alignment.md",
+          "sourceSha256": "027edd034ab641e8affc2ec02ca97ee0824d86756b14e11de908d62f5d086fb1"
+        },
+        {
+          "relativePath": "spacing-and-adaptivity.md",
+          "upstreamPath": "skills/better-layout/spacing-and-adaptivity.md",
+          "snapshot": "sources/upstream/better-layout/support/spacing-and-adaptivity.md",
+          "sourceSha256": "bf46b0857efa5022e6918eda026827e9de2747f3f349b5a6787a2322179abe77"
+        }
+      ],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/layout/index.md",
+        "classification": "verbatim",
+        "sha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies."
+    },
+    {
+      "id": "better-typography",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-typography/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-typography/source.md",
+      "sourceSha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+      "license": "sources/upstream/better-typography/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "sources/upstream/better-typography/source.md",
+      "carriedPath": "references/craft/typography/index.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "choosing-fonts.md",
+          "upstreamPath": "skills/better-typography/choosing-fonts.md",
+          "snapshot": "sources/upstream/better-typography/support/choosing-fonts.md",
+          "sourceSha256": "d139ec5d68cd123bc305d920295f7bc95a1e1123674de96d19103c1ebffc85c9"
+        },
+        {
+          "relativePath": "css-cheat-sheet.md",
+          "upstreamPath": "skills/better-typography/css-cheat-sheet.md",
+          "snapshot": "sources/upstream/better-typography/support/css-cheat-sheet.md",
+          "sourceSha256": "45c77f0d1954e12e76c3903361f52703cb4f4287d54c651710f60926247165fb"
+        },
+        {
+          "relativePath": "details-and-accessibility.md",
+          "upstreamPath": "skills/better-typography/details-and-accessibility.md",
+          "snapshot": "sources/upstream/better-typography/support/details-and-accessibility.md",
+          "sourceSha256": "d74e2719ee793fbf7408883e0e5eb396b67514ce07e02412f33d5408ecb4a02e"
+        },
+        {
+          "relativePath": "spacing-and-sizing.md",
+          "upstreamPath": "skills/better-typography/spacing-and-sizing.md",
+          "snapshot": "sources/upstream/better-typography/support/spacing-and-sizing.md",
+          "sourceSha256": "e28e7899a73a8b17f38418dfd8c1afda116db81a3b68d53dd51eab019b20ab82"
+        },
+        {
+          "relativePath": "variable-fonts-and-opentype.md",
+          "upstreamPath": "skills/better-typography/variable-fonts-and-opentype.md",
+          "snapshot": "sources/upstream/better-typography/support/variable-fonts-and-opentype.md",
+          "sourceSha256": "2bf1317ea5c0af6e36c57d15aacea512e450acbe4b00a8664c4619a959dea0b0"
+        },
+        {
+          "relativePath": "wrapping-and-punctuation.md",
+          "upstreamPath": "skills/better-typography/wrapping-and-punctuation.md",
+          "snapshot": "sources/upstream/better-typography/support/wrapping-and-punctuation.md",
+          "sourceSha256": "7cfa3463b68cf21f08ab01a184b12c8bf2fe9340c2c7691a8cc99e4569389efe"
+        }
+      ],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/typography/index.md",
+        "classification": "verbatim",
+        "sha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies."
+    },
+    {
+      "id": "better-colors",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-colors/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-colors/source.md",
+      "sourceSha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+      "license": "sources/upstream/better-colors/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "sources/upstream/better-colors/source.md",
+      "carriedPath": "references/craft/colors/index.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "color-formats.md",
+          "upstreamPath": "skills/better-colors/color-formats.md",
+          "snapshot": "sources/upstream/better-colors/support/color-formats.md",
+          "sourceSha256": "e68fffec8f7b8e1036c295fce8d65785764f33aead5d292389c47451e79d7129"
+        },
+        {
+          "relativePath": "color-usage.md",
+          "upstreamPath": "skills/better-colors/color-usage.md",
+          "snapshot": "sources/upstream/better-colors/support/color-usage.md",
+          "sourceSha256": "dbaa4a4cb10b8118165fca4531b3c35b409c79185f15a2812a34f118293dba9f"
+        },
+        {
+          "relativePath": "contrast.md",
+          "upstreamPath": "skills/better-colors/contrast.md",
+          "snapshot": "sources/upstream/better-colors/support/contrast.md",
+          "sourceSha256": "f9a2f8ca2fd7966ea0002a9dd58b9d392fbb14fc6f4365534c488046337e5971"
+        },
+        {
+          "relativePath": "palette-generation.md",
+          "upstreamPath": "skills/better-colors/palette-generation.md",
+          "snapshot": "sources/upstream/better-colors/support/palette-generation.md",
+          "sourceSha256": "f3e3f9fc84fd834cfffd9e0c951f28c3f24c3c4a4492d86b697d3258f500fb85"
+        },
+        {
+          "relativePath": "palette-structure.md",
+          "upstreamPath": "skills/better-colors/palette-structure.md",
+          "snapshot": "sources/upstream/better-colors/support/palette-structure.md",
+          "sourceSha256": "82b22d74ead2a551a2a505347273025020d84dcde4a0170ea2fd14290dc10387"
+        },
+        {
+          "relativePath": "token-naming.md",
+          "upstreamPath": "skills/better-colors/token-naming.md",
+          "snapshot": "sources/upstream/better-colors/support/token-naming.md",
+          "sourceSha256": "198ca90a643d52f446fe423464908e900d31923ee7d13d6454c8b791326d6b2a"
+        }
+      ],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/colors/index.md",
+        "classification": "verbatim",
+        "sha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies."
+    },
+    {
+      "id": "better-writing",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-writing/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-writing/source.md",
+      "sourceSha256": "344a18f178634b5004277f45b7e817f89fb42025cd646d44d71d3ba7a929fd28",
+      "license": "sources/upstream/better-writing/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "sources/upstream/better-writing/source.md",
+      "carriedPath": "references/craft/writing/index.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/writing/index.md",
+        "classification": "verbatim",
+        "sha256": "344a18f178634b5004277f45b7e817f89fb42025cd646d44d71d3ba7a929fd28",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies."
+    },
+    {
+      "id": "better-accessibility",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "path": "skills/better-accessibility/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-accessibility/source.md",
+      "sourceSha256": "d59f56116485ea09f6c94f86ad2dc0adfa98aefbace52df56c9ee4ac0c3ddf17",
+      "license": "sources/upstream/better-accessibility/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "sources/upstream/better-accessibility/source.md",
+      "carriedPath": "references/a11y/index.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [
+        {
+          "relativePath": "focus-and-keyboard.md",
+          "upstreamPath": "skills/better-accessibility/focus-and-keyboard.md",
+          "snapshot": "sources/upstream/better-accessibility/support/focus-and-keyboard.md",
+          "sourceSha256": "9ba63027fa8f1b53e4947ee3341e0580347121f3ccb7698f2936d33563ffa4ba"
+        },
+        {
+          "relativePath": "forms.md",
+          "upstreamPath": "skills/better-accessibility/forms.md",
+          "snapshot": "sources/upstream/better-accessibility/support/forms.md",
+          "sourceSha256": "b08451ee17861cae49553ba71a122be80c21197087efcc43137862a1db2c5c34"
+        },
+        {
+          "relativePath": "hit-areas.md",
+          "upstreamPath": "skills/better-accessibility/hit-areas.md",
+          "snapshot": "sources/upstream/better-accessibility/support/hit-areas.md",
+          "sourceSha256": "8c0982229cc01aee419e9c80a4085d5c59a0e7b2b16a4f616a12e9fa0fa094f5"
+        },
+        {
+          "relativePath": "motion-and-zoom.md",
+          "upstreamPath": "skills/better-accessibility/motion-and-zoom.md",
+          "snapshot": "sources/upstream/better-accessibility/support/motion-and-zoom.md",
+          "sourceSha256": "3efc88394bc958a6e88ecbc8c8e37999df7de0e19730e5784d0e9e5efda696ee"
+        },
+        {
+          "relativePath": "screen-readers.md",
+          "upstreamPath": "skills/better-accessibility/screen-readers.md",
+          "snapshot": "sources/upstream/better-accessibility/support/screen-readers.md",
+          "sourceSha256": "a35b69db4568e74351a28606328505773f9a1e9ec370e92fbfb2117543c3637a"
+        },
+        {
+          "relativePath": "semantics-and-aria.md",
+          "upstreamPath": "skills/better-accessibility/semantics-and-aria.md",
+          "snapshot": "sources/upstream/better-accessibility/support/semantics-and-aria.md",
+          "sourceSha256": "e663b6708ac7f4d4d88e884c604cc3e99c1b424ae78209cf4e2430f4966d39b6"
+        }
+      ],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/a11y/index.md",
+        "classification": "verbatim",
+        "sha256": "d59f56116485ea09f6c94f86ad2dc0adfa98aefbace52df56c9ee4ac0c3ddf17",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies."
+    },
+    {
+      "id": "emil-craft",
+      "owner": "Atlas Implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+        "path": "skills/emil-design-eng/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/emil-craft/source.md",
+      "sourceSha256": "e71de849347050c2c573c1cf24d742d5a13459557ecffa6e562f08006f46b5b7",
+      "license": "sources/upstream/emil-craft/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "sources/methods/emil-craft.md",
+      "carriedPath": "references/craft/emil-craft.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/emil-craft.md",
+        "classification": "verbatim-minus",
+        "sha256": "c1218fab384f3798952e7f7846e9681573b2bb36d9fbca48496b66ccb57d3f5d",
+        "trackingRef": "main"
+      },
+      "adaptation": "Adopts PE\u2019s explicit cuts: remove the greeting-only initial response and mandatory Before/After review report; both conflict with an implementation engagement.",
+      "patch": "sources/patches/emil-craft.patch",
+      "notices": [
+        {
+          "input": "sources/selection/product-engineering/LICENSE",
+          "target": "licenses/product-engineering.txt",
+          "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+        },
+        {
+          "input": "sources/selection/product-engineering/NOTICE",
+          "target": "licenses/product-engineering-NOTICE.txt",
+          "sha256": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488"
+        }
+      ]
+    },
+    {
+      "id": "pick-ui-library",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+        "path": "skills/pick-ui-library/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pick-ui-library/source.md",
+      "sourceSha256": "4b889bd6c08358499ac4a7202b8af71ffbd3485d2468f7b09d0613bbe7b24bf4",
+      "license": "sources/upstream/pick-ui-library/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "sources/upstream/pick-ui-library/source.md",
+      "carriedPath": "references/craft/library-choices.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/library-choices.md",
+        "classification": "verbatim",
+        "sha256": "4b889bd6c08358499ac4a7202b8af71ffbd3485d2468f7b09d0613bbe7b24bf4",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies."
+    },
+    {
+      "id": "baseline-ui",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/ibelick/ui-skills",
+        "commit": "ff7ca0a475e0dbb26a2db458beb03081b3dfd892",
+        "path": "skills/baseline-ui/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/baseline-ui/source.md",
+      "sourceSha256": "fea3322f36d58fdafafce2aef56e4556dd2ac7b20876b7dff7d8be7f25fa597f",
+      "license": "sources/upstream/baseline-ui/LICENSE",
+      "licenseSha256": "c615621c4cc1676ccde194e7a01b6469ba477780251bd71e007fc473a49c2c2b",
+      "method": "sources/upstream/baseline-ui/source.md",
+      "carriedPath": "references/craft/generation-guardrails.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/generation-guardrails.md",
+        "classification": "verbatim",
+        "sha256": "fea3322f36d58fdafafce2aef56e4556dd2ac7b20876b7dff7d8be7f25fa597f",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies."
+    },
+    {
+      "id": "redesign-audit",
+      "owner": "Atlas Implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/Leonxlnx/taste-skill",
+        "commit": "ccbc15639c97057cbfcf32ecebc38ef716e4bb37",
+        "path": "skills/redesign-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/redesign-audit/source.md",
+      "sourceSha256": "98ad3e5b051bfb71b2795f7e8a6aa0d32b51ee095606c098a4b2822ac07926c9",
+      "license": "sources/upstream/redesign-audit/LICENSE",
+      "licenseSha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+      "method": "sources/methods/redesign-audit.md",
+      "carriedPath": "references/craft/deslop-audit.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/deslop-audit.md",
+        "classification": "verbatim-minus",
+        "sha256": "82c6cd959e0869fb1de92e806b7e8eea622fea988d8cdfaf048fb72a489846e8",
+        "trackingRef": "main"
+      },
+      "adaptation": "Adopts PE\u2019s explicit cuts: remove Upgrade Techniques prescribing scroll hijacking and an independent redesign process; use only when redesign is explicitly requested.",
+      "patch": "sources/patches/redesign-audit.patch",
+      "notices": [
+        {
+          "input": "sources/selection/product-engineering/LICENSE",
+          "target": "licenses/product-engineering.txt",
+          "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+        },
+        {
+          "input": "sources/selection/product-engineering/NOTICE",
+          "target": "licenses/product-engineering-NOTICE.txt",
+          "sha256": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488"
+        }
+      ]
+    },
+    {
+      "id": "pe-polish-lenses",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/polish-lenses.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pe-polish-lenses/source.md",
+      "sourceSha256": "ad29989841444f72b725e748982bb6458d02773606f07b2dc39e67ee4e5e907b",
+      "license": "sources/upstream/pe-polish-lenses/LICENSE",
+      "licenseSha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+      "method": "sources/upstream/pe-polish-lenses/source.md",
+      "carriedPath": "references/craft/polish-lenses.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "Apache-2.0",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/craft/polish-lenses.md",
+        "classification": "authored",
+        "sha256": "ad29989841444f72b725e748982bb6458d02773606f07b2dc39e67ee4e5e907b",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies.",
+      "notices": [
+        {
+          "input": "sources/selection/product-engineering/LICENSE",
+          "target": "licenses/product-engineering.txt",
+          "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+        },
+        {
+          "input": "sources/selection/product-engineering/NOTICE",
+          "target": "licenses/product-engineering-NOTICE.txt",
+          "sha256": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488"
+        }
+      ]
+    },
+    {
+      "id": "animation-vocabulary",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+        "path": "skills/animation-vocabulary/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/animation-vocabulary/source.md",
+      "sourceSha256": "d718b48fe3c7898804d588f050a2e266d82c9f5ef51da256c8cb8b5951527757",
+      "license": "sources/upstream/animation-vocabulary/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "sources/upstream/animation-vocabulary/source.md",
+      "carriedPath": "references/motion/vocabulary.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/motion/vocabulary.md",
+        "classification": "verbatim",
+        "sha256": "d718b48fe3c7898804d588f050a2e266d82c9f5ef51da256c8cb8b5951527757",
+        "trackingRef": "main"
+      },
+      "adaptation": "Preserved byte-for-byte, including frontmatter; selected from the public PE Build references. The authored UI routing preserves project direction and maps bundled named dependencies."
+    },
+    {
+      "id": "motion-performance",
+      "owner": "Atlas Implement",
+      "classification": "derived",
+      "upstream": {
+        "repository": "https://github.com/ibelick/ui-skills",
+        "commit": "ff7ca0a475e0dbb26a2db458beb03081b3dfd892",
+        "path": "skills/fixing-motion-performance/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/motion-performance/source.md",
+      "sourceSha256": "0a2d654902bc04263ce68c8c02967ef03f17b482e855360a5463211d99d7baa9",
+      "license": "sources/upstream/motion-performance/LICENSE",
+      "licenseSha256": "c615621c4cc1676ccde194e7a01b6469ba477780251bd71e007fc473a49c2c2b",
+      "method": "sources/methods/motion-performance.md",
+      "carriedPath": "references/motion/perf-additions.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-06",
+      "supportingFiles": [],
+      "rulings": [
+        "implement-ui-scope"
+      ],
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/motion/perf-additions.md",
+        "classification": "distilled",
+        "sha256": "13737c2651b2b7af366878f0cebc9208e8bb585c61b6f736389e9d66b9de7d3e",
+        "trackingRef": "main"
+      },
+      "adaptation": "PE\u2019s bounded motion-performance synthesis is retained unchanged. The original ibelick source remains pinned separately; this is an editorial derivation, not a verbatim fork.",
+      "notices": [
+        {
+          "input": "sources/selection/product-engineering/LICENSE",
+          "target": "licenses/product-engineering.txt",
+          "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+        },
+        {
+          "input": "sources/selection/product-engineering/NOTICE",
+          "target": "licenses/product-engineering-NOTICE.txt",
+          "sha256": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488"
+        }
+      ]
+    },
+    {
+      "id": "react-view-transitions",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/vercel-labs/agent-skills",
+        "commit": "dd089a8c752c966dee8bf0f27cb625ba193ffd9e",
+        "path": "skills/react-view-transitions/SKILL.md",
+        "licensePath": "skills/react-view-transitions/SKILL.md",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/react-view-transitions/source.md",
+      "sourceSha256": "d596c05e53b96a3475a9ab303a7a23f13f1153cb169c1d1b3b882094f58570bc",
+      "license": "sources/upstream/react-view-transitions/LICENSE-DECLARATION.md",
+      "licenseSha256": "d596c05e53b96a3475a9ab303a7a23f13f1153cb169c1d1b3b882094f58570bc",
+      "licenseSpdx": "MIT",
+      "method": "sources/upstream/react-view-transitions/source.md",
+      "carriedPath": "references/motion/view-transitions/SKILL.md",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "adoptedAt": "2026-10-06",
+      "adaptation": "Entry and complete runtime reference tree are preserved verbatim in their original relative layout. The upstream entry declares MIT in frontmatter; no standalone license file exists, so that original declaration is preserved as the license evidence. Caller limits this route to supported navigation transitions and applies explicit exit/reduced-motion/performance rulings.",
+      "selection": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-build/references/motion/view-transitions/index.md",
+        "classification": "verbatim",
+        "sha256": "d596c05e53b96a3475a9ab303a7a23f13f1153cb169c1d1b3b882094f58570bc",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/react-view-transitions/AGENTS.md",
+          "snapshot": "sources/upstream/react-view-transitions/support/AGENTS.md",
+          "sourceSha256": "847e68771417af6cffd9d3ecd4c9412dae1b2bda559912681e17d5d9aa8da435",
+          "relativePath": "AGENTS.md"
+        },
+        {
+          "upstreamPath": "skills/react-view-transitions/references/implementation.md",
+          "snapshot": "sources/upstream/react-view-transitions/support/references/implementation.md",
+          "sourceSha256": "f36958ff58ed3b8b7da008df5a59e99a67f46b3a6f590274fdc44b89f017f05d",
+          "relativePath": "references/implementation.md"
+        },
+        {
+          "upstreamPath": "skills/react-view-transitions/references/patterns.md",
+          "snapshot": "sources/upstream/react-view-transitions/support/references/patterns.md",
+          "sourceSha256": "970f94c2afb086b8b3ffafd05d223ba71595f20ecd6db671b458db88b247e627",
+          "relativePath": "references/patterns.md"
+        },
+        {
+          "upstreamPath": "skills/react-view-transitions/references/css-recipes.md",
+          "snapshot": "sources/upstream/react-view-transitions/support/references/css-recipes.md",
+          "sourceSha256": "41f880f3a62b53b46f1ccc540401e4bc19522dfbd1ecd65d18d0b72fec44e829",
+          "relativePath": "references/css-recipes.md"
+        },
+        {
+          "upstreamPath": "skills/react-view-transitions/references/nextjs.md",
+          "snapshot": "sources/upstream/react-view-transitions/support/references/nextjs.md",
+          "sourceSha256": "1d595c3a9d5270d958db9f2924013ac0602d024d0473582b68c61363b06f7856",
+          "relativePath": "references/nextjs.md"
+        }
+      ],
+      "rulings": [
+        "implement-ui-scope",
+        "implement-motion"
       ]
     }
   ],
   "workflows": [
     {
-      "id": "logbook-investigate",
-      "entry": "workflows/logbook-investigate/entry.md",
-      "agent": "workflows/logbook-investigate/openai.yaml",
+      "id": "atlas-decide",
+      "entry": "workflows/atlas-decide/entry.md",
+      "agent": "workflows/atlas-decide/openai.yaml",
       "methods": [
-        "research",
-        "source-verification",
-        "adversarial-challenge"
+        "grill-me",
+        "grill-with-docs",
+        "wayfinder"
       ],
       "dependencies": [
         {
+          "id": "grilling",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "Probe, Record, Shape and Map interviews."
+        },
+        {
           "id": "domain-modeling",
           "relationship": "behavioral",
+          "required": true,
+          "condition": "Grill with Docs and Wayfinder; not Grill Me."
+        },
+        {
+          "id": "research",
+          "relationship": "behavioral",
           "required": false,
-          "condition": "The requested investigation includes sharpening the project domain model."
+          "condition": "Wayfinder research tickets require independent Research and authorized subagents."
+        },
+        {
+          "id": "prototype",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "Wayfinder prototype tickets require independent Prototype."
+        },
+        {
+          "id": "impeccable",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "Shape when establishing or extending the visual world."
         },
         {
           "id": "truss-evaluation",
           "relationship": "behavioral",
           "required": false,
-          "condition": "A consequential software-quality trade-off needs evaluation."
+          "condition": "Shape consequential design comparisons."
+        }
+      ],
+      "authoredReferences": [
+        {
+          "input": "workflows/atlas-decide/references/shape/design-choices.md",
+          "target": "references/shape/design-choices.md"
         }
       ]
+    },
+    {
+      "id": "atlas-design",
+      "entry": "workflows/atlas-design/entry.md",
+      "agent": "workflows/atlas-design/openai.yaml",
+      "methods": [
+        "html-wireframe",
+        "html-prototype",
+        "prototype"
+      ],
+      "authoredReferences": [],
+      "dependencies": [
+        {
+          "id": "impeccable",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "Independent design, review or polish engagement when its expertise fits."
+        },
+        {
+          "id": "design-artifact",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "HTML composition when visual direction remains open."
+        },
+        {
+          "id": "afk-animated-driven-frontend",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "Deliberately selected cinematic engagement; preserve its independent manual contract."
+        }
+      ]
+    },
+    {
+      "id": "atlas-implement",
+      "entry": "workflows/atlas-implement/entry.md",
+      "agent": "workflows/atlas-implement/openai.yaml",
+      "methods": [
+        "implement-spec",
+        "better-ui",
+        "better-layout",
+        "better-typography",
+        "better-colors",
+        "better-writing",
+        "better-accessibility",
+        "emil-craft",
+        "pick-ui-library",
+        "baseline-ui",
+        "redesign-audit",
+        "pe-polish-lenses",
+        "animation-vocabulary",
+        "motion-performance",
+        "animate",
+        "apple-design",
+        "react-view-transitions"
+      ],
+      "authoredReferences": [
+        {
+          "input": "workflows/atlas-implement/references/track/tracking.md",
+          "target": "references/track/tracking.md"
+        },
+        {
+          "input": "workflows/atlas-implement/references/track/notes-and-decisions.md",
+          "target": "references/track/notes-and-decisions.md"
+        },
+        {
+          "input": "workflows/atlas-implement/references/track/resume.md",
+          "target": "references/track/resume.md"
+        },
+        {
+          "input": "workflows/atlas-implement/references/track/review-guides.md",
+          "target": "references/track/review-guides.md"
+        },
+        {
+          "input": "workflows/atlas-implement/references/graph/execution.md",
+          "target": "references/graph/execution.md"
+        },
+        {
+          "input": "workflows/atlas-implement/references/craft/guide.md",
+          "target": "references/craft/guide.md"
+        },
+        {
+          "input": "workflows/atlas-implement/references/motion/guide.md",
+          "target": "references/motion/guide.md"
+        }
+      ],
+      "dependencies": [
+        {
+          "id": "tdd",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "Graph requires TDD; Track selects it where a meaningful test seam exists."
+        },
+        {
+          "id": "afk-code-review",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "Graph integration review and Track review gate.",
+          "aliases": [
+            "code-review"
+          ]
+        },
+        {
+          "id": "source-driven-development",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "Tracking execution bundle when selected."
+        },
+        {
+          "id": "doubt-driven-development",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "Tracking execution bundle when selected."
+        },
+        {
+          "id": "code-simplification",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "Material simplification opportunities at a checkpoint."
+        },
+        {
+          "id": "animate-text",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "Text-specific motion when independently installed and appropriate."
+        }
+      ]
+    }
+  ],
+  "rulings": [
+    {
+      "id": "decide-flow-selection",
+      "owner": "atlas-decide",
+      "document": "workflows/atlas-decide/entry.md",
+      "section": "Select the flow",
+      "sources": [
+        "grill-me",
+        "grill-with-docs",
+        "wayfinder"
+      ],
+      "decision": "Use conversational challenge, documented interview or multi-session discovery according to the requested operation. Explicit choice takes precedence."
+    },
+    {
+      "id": "decide-interview-to-map",
+      "owner": "atlas-decide",
+      "document": "workflows/atlas-decide/entry.md",
+      "section": "Preconditions and transitions",
+      "sources": [
+        "grill-me",
+        "grill-with-docs",
+        "wayfinder"
+      ],
+      "decision": "Transition from interview to a tracker-backed map when multi-session discovery is needed; carry established decisions and respect authority boundaries."
+    },
+    {
+      "id": "design-fidelity",
+      "owner": "atlas-design",
+      "document": "workflows/atlas-design/entry.md",
+      "section": "Rulings and transitions",
+      "sources": [
+        "html-wireframe",
+        "html-prototype",
+        "prototype"
+      ],
+      "decision": "Wireframe owns low fidelity; HTML Prototype owns a credible modeled experience; Prototype owns throwaway experimentation. Preserve selected structure and visual commitments across transitions."
+    },
+    {
+      "id": "design-promotion",
+      "owner": "atlas-design",
+      "document": "workflows/atlas-design/entry.md",
+      "section": "Rulings and transitions",
+      "sources": [
+        "prototype"
+      ],
+      "decision": "Prototype promotion into production requires implementation authorization. Preserve upstream capture requirements; requesting an experiment alone does not authorize production promotion. This scoped caller adaptation is explicit."
+    },
+    {
+      "id": "decide-shape-handoff",
+      "owner": "atlas-decide",
+      "document": "workflows/atlas-decide/entry.md",
+      "section": "Preconditions and transitions",
+      "sources": [],
+      "decision": "Shape is absorbed Atlas-authored Design Grill. It settles frontend choices through visible alternatives and a visual commitment; hand that commitment to Atlas Design for design artifacts and implementation. It has no upstream synchronization claim."
+    },
+    {
+      "id": "implement-host-operations",
+      "owner": "atlas-implement",
+      "document": "workflows/atlas-implement/references/graph/execution.md",
+      "section": "Graph Execution",
+      "sources": [
+        "implement-spec"
+      ],
+      "decision": "Resolve code-review to independent afk-code-review; use host delegation and worktree policy, preserve dirty work, and honor separately established remote-action authority. These caller adaptations leave source bytes unchanged."
+    },
+    {
+      "id": "implement-ui-scope",
+      "owner": "atlas-implement",
+      "document": "workflows/atlas-implement/references/craft/guide.md",
+      "section": "Craft",
+      "sources": [
+        "better-ui",
+        "better-layout",
+        "better-typography",
+        "better-colors",
+        "better-writing",
+        "better-accessibility",
+        "emil-craft",
+        "pick-ui-library",
+        "baseline-ui",
+        "redesign-audit",
+        "pe-polish-lenses",
+        "animation-vocabulary",
+        "motion-performance",
+        "animate",
+        "apple-design",
+        "react-view-transitions"
+      ],
+      "decision": "Production UI changes preserve accepted direction and project foundations; design artifacts return to Design, redesign needs explicit scope, named bundled better-* calls resolve locally. Adopt PE public craft and accessibility, with its two recorded craft cuts; private course material is excluded."
+    },
+    {
+      "id": "implement-motion",
+      "owner": "atlas-implement",
+      "document": "workflows/atlas-implement/references/motion/guide.md",
+      "section": "Motion",
+      "sources": [
+        "animate",
+        "apple-design",
+        "animation-vocabulary",
+        "motion-performance",
+        "better-ui",
+        "emil-craft",
+        "react-view-transitions"
+      ],
+      "decision": "Purpose/frequency govern animation; existing project tokens govern identity. Jakub interaction recipes take precedence over conflicting sample values in Emil craft; performance caps animated blur at 8px. Preserve accessible interaction and honor reduced-motion requests. Use React View Transitions only with supported project APIs for navigation-level changes; apply ease-out to conflicting generic exit recipes unless an accelerating exit is deliberately selected."
     }
   ]
 }

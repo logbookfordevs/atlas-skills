@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "workflow": "atlas-decide",
+  "generated": true,
+  "authoredInputs": [
+    "workflows/atlas-decide/entry.md",
+    "workflows/atlas-decide/openai.yaml",
+    "workflows/atlas-decide/references/shape/design-choices.md"
+  ],
+  "authoredReferences": [
+    {
+      "input": "workflows/atlas-decide/references/shape/design-choices.md",
+      "target": "references/shape/design-choices.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "4a5c75fabddf648d32a15028f4c200f969b3aa7b1a8db0551cb9ee06ed0a40e1"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "grilling",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "Probe, Record, Shape and Map interviews."
+    },
+    {
+      "id": "domain-modeling",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "Grill with Docs and Wayfinder; not Grill Me."
+    },
+    {
+      "id": "research",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "Wayfinder research tickets require independent Research and authorized subagents."
+    },
+    {
+      "id": "prototype",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "Wayfinder prototype tickets require independent Prototype."
+    },
+    {
+      "id": "impeccable",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "Shape when establishing or extending the visual world."
+    },
+    {
+      "id": "truss-evaluation",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "Shape consequential design comparisons."
+    }
+  ],
+  "sources": [
+    {
+      "id": "grill-me",
+      "owner": "Atlas Decide",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/productivity/grill-me/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+      "carriedPath": "references/probe/grill-me.md",
+      "carriedSha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+      "licensePath": "licenses/grill-me.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [
+        "decide-flow-selection",
+        "decide-interview-to-map"
+      ]
+    },
+    {
+      "id": "grill-with-docs",
+      "owner": "Atlas Decide",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "carriedPath": "references/record/grill-with-docs.md",
+      "carriedSha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "licensePath": "licenses/grill-with-docs.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [
+        "decide-flow-selection",
+        "decide-interview-to-map"
+      ]
+    },
+    {
+      "id": "wayfinder",
+      "owner": "Atlas Decide",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+        "path": "skills/engineering/wayfinder/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
+      "carriedPath": "references/map/wayfinder.md",
+      "carriedSha256": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
+      "licensePath": "licenses/wayfinder.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "None. Complete upstream entry preserved byte-for-byte, including manual frontmatter. Atlas Decide selects this method only on explicit user invocation and checks its independent prerequisites before entry.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [
+        "decide-flow-selection",
+        "decide-interview-to-map"
+      ]
+    }
+  ],
+  "rulings": [
+    {
+      "id": "decide-flow-selection",
+      "owner": "atlas-decide",
+      "document": "workflows/atlas-decide/entry.md",
+      "section": "Select the flow",
+      "sources": [
+        "grill-me",
+        "grill-with-docs",
+        "wayfinder"
+      ],
+      "decision": "Use conversational challenge, documented interview or multi-session discovery according to the requested operation. Explicit choice takes precedence."
+    },
+    {
+      "id": "decide-interview-to-map",
+      "owner": "atlas-decide",
+      "document": "workflows/atlas-decide/entry.md",
+      "section": "Preconditions and transitions",
+      "sources": [
+        "grill-me",
+        "grill-with-docs",
+        "wayfinder"
+      ],
+      "decision": "Transition from interview to a tracker-backed map when multi-session discovery is needed; carry established decisions and respect authority boundaries."
+    },
+    {
+      "id": "decide-shape-handoff",
+      "owner": "atlas-decide",
+      "document": "workflows/atlas-decide/entry.md",
+      "section": "Preconditions and transitions",
+      "sources": [],
+      "decision": "Shape is absorbed Atlas-authored Design Grill. It settles frontend choices through visible alternatives and a visual commitment; hand that commitment to Atlas Design for design artifacts and implementation. It has no upstream synchronization claim."
+    }
+  ],
+  "files": {
+    "SKILL.md": "77fc904f0a3db9d983199ffb44aae20c619f7d6ed322bd6ae39beeb6e216d6ff",
+    "agents/openai.yaml": "852b9ddab8d168a85f9186c79b7694de8d462ff203f31ae5d81e9dc8e9c96151",
+    "references/shape/design-choices.md": "4a5c75fabddf648d32a15028f4c200f969b3aa7b1a8db0551cb9ee06ed0a40e1",
+    "references/probe/grill-me.md": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+    "licenses/grill-me.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/record/grill-with-docs.md": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+    "licenses/grill-with-docs.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/map/wayfinder.md": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
+    "licenses/wayfinder.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

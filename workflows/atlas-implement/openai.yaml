@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas Implement"
+  short_description: "Build UI, motion and accessibility; track or execute graphs"
+  default_prompt: "Use $atlas-implement to carry out the requested UI, accessibility, motion, ticket-graph or tracked implementation."
+policy:
+  allow_implicit_invocation: false

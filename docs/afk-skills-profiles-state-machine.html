@@ -677,20 +677,63 @@ const CATALOG_SNAPSHOT = {
   "reviewedAt": "2026-09-15",
   "skills": [
     {
-      "id": "logbook-investigate",
-      "label": "Investigate (Skills V2 preview)",
+      "id": "atlas-decide",
+      "label": "Atlas Decide (Skills V2 preview)",
       "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
       "args": [
         "--skill",
-        "logbook-investigate",
+        "atlas-decide",
+        "--global"
+      ],
+      "default": false,
+      "invocation": "manual",
+      "role": "workflow",
+      "composes": [
+        "grilling",
+        "domain-modeling",
+        "research",
+        "prototype",
+        "impeccable",
+        "truss-evaluation"
+      ]
+    },
+    {
+      "id": "atlas-design",
+      "label": "Atlas Design (Skills V2 preview)",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "atlas-design",
         "--global"
       ],
       "default": false,
       "invocation": "auto",
       "role": "workflow",
       "composes": [
-        "domain-modeling",
-        "truss-evaluation"
+        "impeccable",
+        "design-artifact",
+        "afk-animated-driven-frontend"
+      ]
+    },
+    {
+      "id": "atlas-implement",
+      "label": "Atlas Implement (Skills V2 preview)",
+      "source": "https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2",
+      "args": [
+        "--skill",
+        "atlas-implement",
+        "--global"
+      ],
+      "default": false,
+      "invocation": "manual",
+      "role": "workflow",
+      "composes": [
+        "tdd",
+        "afk-code-review",
+        "source-driven-development",
+        "doubt-driven-development",
+        "code-simplification",
+        "animate-text"
       ]
     },
     {
@@ -1802,8 +1845,16 @@ const WORKFLOW_MOMENTS = [
         "use": "name the domain"
       },
       {
-        "id": "logbook-investigate",
-        "use": "resolve an evidence question (Skills V2 preview)"
+        "id": "atlas-decide",
+        "use": "choose a scoped decision flow (Skills V2 preview)"
+      },
+      {
+        "id": "atlas-design",
+        "use": "choose design methods and reconcile fidelity or motion (Skills V2 preview)"
+      },
+      {
+        "id": "atlas-implement",
+        "use": "execute bounded work or ticket graphs with optional tracking (Skills V2 preview)"
       },
       {
         "id": "research",

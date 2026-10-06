@@ -46,24 +46,68 @@ export function composeSkills(root = repositoryRoot) {
     }
     sources.set(source.id, source);
   }
+  const rulingIds = new Set();
+  for (const ruling of composition.rulings ?? []) {
+    if (rulingIds.has(ruling.id) || !composition.workflows.some(workflow => workflow.id === ruling.owner)) throw new Error(`Invalid ruling: ${ruling.id}`);
+    rulingIds.add(ruling.id);
+    read(ruling.document);
+    if (!ruling.sources.every(id => sources.has(id))) throw new Error(`Unknown ruling source: ${ruling.id}`);
+  }
+  for (const source of sources.values()) {
+    if (!(source.rulings ?? []).every(id => rulingIds.has(id))) throw new Error(`Unknown source ruling: ${source.id}`);
+  }
   const packages = new Map();
+  const portablePath = path => {
+    if (typeof path !== 'string' || path.startsWith('/') || path.includes('\\') || path.split('/').some(part => !part || part === '.' || part === '..')) throw new Error(`Invalid package path: ${path}`);
+    return path;
+  };
   for (const workflow of composition.workflows) {
-    if (!/^logbook-[a-z0-9-]+$/.test(workflow.id) || packages.has(workflow.id)) throw new Error(`Invalid workflow: ${workflow.id}`);
+    if (!/^(?:logbook|atlas)-[a-z0-9-]+$/.test(workflow.id) || packages.has(workflow.id)) throw new Error(`Invalid workflow: ${workflow.id}`);
     const output = new Map([['SKILL.md', read(workflow.entry)], ['agents/openai.yaml', read(workflow.agent)]]);
+    const put = (path, bytes) => {
+      portablePath(path);
+      if (output.has(path)) throw new Error(`Duplicate package path: ${path}`);
+      output.set(path, bytes);
+    };
+    const authoredReferences = (workflow.authoredReferences ?? []).map(reference => {
+      put(reference.target, read(reference.input));
+      return { ...reference, classification: 'atlas-authored', carriedSha256: sha256(read(reference.input)) };
+    });
     const receipts = workflow.methods.map(id => {
       const source = sources.get(id);
       if (!source || !source.consumers.includes(workflow.id)) throw new Error(`Undeclared consumer: ${workflow.id}/${id}`);
-      const target = `references/${id}.md`;
+      const target = source.carriedPath ?? `references/${id}.md`;
       const licenseTarget = `licenses/${id}.txt`;
-      output.set(target, read(source.method));
-      output.set(licenseTarget, read(source.license));
+      put(target, read(source.method));
+      put(licenseTarget, read(source.license));
+      const supportingFiles = (source.supportingFiles ?? []).map(file => {
+        portablePath(file.relativePath);
+        const bytes = read(file.snapshot);
+        if (sha256(bytes) !== file.sourceSha256) throw new Error(`Supporting file integrity failure: ${id}/${file.relativePath}`);
+        const carriedPath = join(dirname(target), file.relativePath);
+        put(carriedPath, bytes);
+        return { upstreamPath: file.upstreamPath, classification: 'verbatim', sourceSha256: file.sourceSha256, carriedPath, carriedSha256: sha256(bytes) };
+      });
+      const notices = (source.notices ?? []).map(notice => {
+        const bytes = read(notice.input);
+        if (sha256(bytes) !== notice.sha256) throw new Error(`Notice integrity failure: ${id}/${notice.input}`);
+        portablePath(notice.target);
+        if (output.has(notice.target)) {
+          if (!output.get(notice.target).equals(bytes)) throw new Error(`Conflicting notice: ${notice.target}`);
+        } else put(notice.target, bytes);
+        return { carriedPath: notice.target, carriedSha256: sha256(bytes) };
+      });
       return { id, owner: source.owner, classification: source.classification, upstream: source.upstream,
-        sourceSha256: source.sourceSha256, carriedPath: target, carriedSha256: sha256(read(source.method)),
+        supportingFiles, notices, ...(source.selection ? { selection: source.selection } : {}), sourceSha256: source.sourceSha256, carriedPath: target, carriedSha256: sha256(read(source.method)),
         licensePath: licenseTarget, licenseSha256: source.licenseSha256, adaptation: source.adaptation,
+        ...(source.licenseSpdx ? { licenseSpdx: source.licenseSpdx } : {}),
+        ...(source.adoptedAt ? { adoptedAt: source.adoptedAt } : {}),
+        rulings: source.rulings ?? [],
         ...(source.patch ? { patch: source.patch, patchSha256: sha256(read(source.patch)) } : {}) };
     });
     output.set('SOURCE-MANIFEST.json', Buffer.from(json({ version: 1, workflow: workflow.id, generated: true,
-      authoredInputs: [workflow.entry, workflow.agent], dependencies: workflow.dependencies, sources: receipts,
+      authoredInputs: [workflow.entry, workflow.agent, ...(workflow.authoredReferences ?? []).map(reference => reference.input)], authoredReferences, dependencies: workflow.dependencies, sources: receipts,
+      rulings: (composition.rulings ?? []).filter(ruling => ruling.owner === workflow.id),
       files: Object.fromEntries([...output].map(([path, bytes]) => [path, sha256(bytes)])) })));
     packages.set(workflow.id, output);
   }

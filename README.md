@@ -8,16 +8,19 @@ Atlas owns the default catalog and its content. AFK owns the CLI, installation, 
 
 ## Skills V2 preview
 
-`feat/skills-v2` is the review branch. The existing authored skills are archived under `legacy/`; production `main` is unchanged. The first new workflow is **Investigate**. Other workflows remain proposals.
+`feat/skills-v2` is the review branch. Investigate was removed after review; Research remains an independent upstream skill. Existing archived skills are not migrated by that deletion. The current direction preserves independently useful skills and creates scoped umbrellas selectively. **Atlas Decide**, **Atlas Design** and **Atlas Implement** are active local previews; these working-tree changes need publication before remote installation.
 
-```bash
-npx skills add https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2 --skill logbook-investigate
+```sh
+npx skills add https://github.com/logbookfordevs/logbook-atlas#feat/skills-v2 --skill atlas-decide
 ```
 
-- [Investigate entry](skills/logbook-investigate/SKILL.md)
+The preview carries its decision flows locally; Grilling and Domain Modeling remain independent prerequisites for applicable flows. No global installation is performed by this repository change.
+
+- [Atlas Decide](skills/atlas-decide/SKILL.md)
+- [Atlas Design](skills/atlas-design/SKILL.md) — pre-production artifacts and experiments
+- [Atlas Implement](skills/atlas-implement/SKILL.md) — Craft, A11y, Motion, Track and Graph
 - [Proposal](docs/specs/afk-next-capabilities.md) · [HTML review artifact](docs/specs/show-me-afk-next-31.html)
 - [Source composition and maintenance](docs/authoring/source-composition.md)
-- [Evaluation cases](docs/evals/investigate.md)
 
 ## Contents
 

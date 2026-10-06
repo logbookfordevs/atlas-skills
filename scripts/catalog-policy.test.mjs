@@ -10,8 +10,10 @@ test("manual skill metadata and catalog invocation agree", () => {
     assert.match(readFileSync(new URL(`../legacy/${id}/agents/openai.yaml`, import.meta.url), "utf8"), /allow_implicit_invocation: false/);
   }
 });
-test("architect preset selects its skill and three roles", () => {
+test("architect preset selects only its skill", () => {
   const preset = read("presets").presets.find(item => item.id === "afk-architect");
   assert.deepEqual(preset.selections.skills, ["afk-architect"]);
-  assert.deepEqual(preset.selections.customAgents, ["afk-cartographer", "afk-builder", "afk-pathfinder"]);
+  assert.deepEqual(preset.areas, ["skills"]);
+  assert.equal(preset.selections.customAgents, undefined);
+  assert.equal(read("agents").items.length, 0);
 });
