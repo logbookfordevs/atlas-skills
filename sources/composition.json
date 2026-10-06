@@ -58,7 +58,7 @@
     {
       "id": "animate",
       "owner": "Atlas Implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
         "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
@@ -70,8 +70,8 @@
       "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
       "license": "sources/upstream/animate/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "method": "sources/upstream/animate/source.md",
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
+      "method": "sources/methods/animate.md",
+      "adaptation": "Replace only the component-selection tooling call with positive guidance to use project primitives or an established accessible library. Supporting files remain verbatim.",
       "consumers": [
         "atlas-motion"
       ],
@@ -86,9 +86,8 @@
           "relativePath": "RECIPES.md"
         }
       ],
-      "rulings": [
-        "motion-component-selection"
-      ]
+      "rulings": [],
+      "patch": "sources/patches/animate.patch"
     },
     {
       "id": "apple-design",
@@ -717,16 +716,6 @@
         "show-me"
       ],
       "decision": "Load Show Me before creating or updating the tracking artifact; select presentation for each relevant content requirement, preserving complete evidence, structured state and the existing acceptance contract."
-    },
-    {
-      "id": "motion-component-selection",
-      "owner": "atlas-motion",
-      "document": "authored/atlas-motion/entry.md",
-      "section": "Atlas Motion",
-      "sources": [
-        "animate"
-      ],
-      "decision": "Replace the upstream pick-ui-library call with direct selection of existing project primitives or an established component library; no independent skill dependency."
     }
   ]
 }

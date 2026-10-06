@@ -12,7 +12,7 @@
     {
       "id": "animate",
       "owner": "Atlas Implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
         "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
@@ -32,15 +32,15 @@
       "notices": [],
       "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
       "carriedPath": "references/animate/animate.md",
-      "carriedSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "carriedSha256": "6811c571717c27382e13b0bc79b4277c4c8dd3d8a5ae404fc137f051bc05692d",
       "licensePath": "licenses/animate.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
+      "adaptation": "Replace only the component-selection tooling call with positive guidance to use project primitives or an established accessible library. Supporting files remain verbatim.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-05",
-      "rulings": [
-        "motion-component-selection"
-      ]
+      "rulings": [],
+      "patch": "sources/patches/animate.patch",
+      "patchSha256": "55347a07ba8e6ac960f71dd3ed6cf8e8f3edb150867ab92a48a5a122d8239d86"
     },
     {
       "id": "apple-design",
@@ -66,22 +66,11 @@
       "rulings": []
     }
   ],
-  "rulings": [
-    {
-      "id": "motion-component-selection",
-      "owner": "atlas-motion",
-      "document": "authored/atlas-motion/entry.md",
-      "section": "Atlas Motion",
-      "sources": [
-        "animate"
-      ],
-      "decision": "Replace the upstream pick-ui-library call with direct selection of existing project primitives or an established component library; no independent skill dependency."
-    }
-  ],
+  "rulings": [],
   "files": {
-    "SKILL.md": "3ccff34ae3dca51712d57d78e24b6582d745a8240e0f763e0be1c66ff6fdbede",
+    "SKILL.md": "a45b3ebace2df47cd3197370bd791a14199612e719a9af0a75832cf37462cac8",
     "agents/openai.yaml": "b547c19f4621638f7f5ee66bd21764618b6372791e1861122d7376f4e879f095",
-    "references/animate/animate.md": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+    "references/animate/animate.md": "6811c571717c27382e13b0bc79b4277c4c8dd3d8a5ae404fc137f051bc05692d",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
     "references/fluid/apple-design.md": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",

@@ -4,7 +4,7 @@ Canonical inputs are `authored/` and `sources/`; `skills/` is generated distribu
 
 ## Current packages
 
-The active stack preserves atomic operations. HTML UI composes HTML Wireframe and HTML Prototype as Wireframe and Model; Matt’s Prototype stays independent upstream. Atlas To Spec and Atlas To Tickets are separate patched packages, preserving the prior adaptations and ticket templates. Review carries patched Code Review, authored Static Review and verbatim Review Animations. Craft retains Better Colors, Better Typography and Better Layout. Motion carries Animate and Apple Design. Writing for Humans carries the complete verbatim Stop Slop tree with its frontmatter, supporting references and MIT license.
+The active stack preserves atomic operations. HTML UI composes HTML Wireframe and HTML Prototype as Wireframe and Model; Matt’s Prototype stays independent upstream. Atlas To Spec and Atlas To Tickets are separate patched packages, preserving the prior adaptations and ticket templates. Review carries patched Code Review, authored Static Review and verbatim Review Animations. Craft retains Better Colors, Better Typography and Better Layout. Motion carries a narrowly patched Animate and verbatim Apple Design; Animate’s component-selection call becomes direct guidance to use project primitives or an established accessible library. Writing for Humans carries the complete verbatim Stop Slop tree with its frontmatter, supporting references and MIT license.
 
 Decide, Design and Specify are retired as active umbrella entries. Their prior files are recoverable from Git history. Their former unchanged independent methods remain recommended upstream; source receipts are retained only for active consumers.
 
