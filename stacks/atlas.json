@@ -3,10 +3,10 @@
   "version": 1,
   "id": "logbook-atlas",
   "name": "Logbook Atlas",
-  "description": "The Logbook for Devs skill stack: Atlas utilities, adaptations and compositions alongside selected independent skills from their original authors. Skills V2 preview.",
+  "description": "The Logbook for Devs skill stack: Atlas utilities, adaptations and compositions alongside selected independent skills from their original authors.",
   "sources": [
     {
-      "name": "Logbook Atlas \u00b7 Skills V2 preview",
+      "name": "Logbook Atlas",
       "source": "https://github.com/logbookfordevs/atlas-skills",
       "skills": [
         "atlas-setup",
@@ -41,7 +41,17 @@
         "wayfinder",
         "grilling",
         "domain-modeling",
-        "codebase-design"
+        "codebase-design",
+        "pr",
+        "retro"
+      ]
+    },
+    {
+      "name": "Product Engineering",
+      "source": "https://github.com/backnotprop/product-engineering",
+      "skills": [
+        "pe-product-description",
+        "pe-verify"
       ]
     },
     {
