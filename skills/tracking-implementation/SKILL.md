@@ -26,7 +26,7 @@ Split only when the work has independently owned, validated, or reviewed impleme
 
 Before implementation, ask whether the Tracking Home should be local or use an available remote mechanism:
 
-- **Local:** create a Markdown Implementation Record following the repository or user artifact convention.
+- **Local:** create one Markdown or HTML Implementation Record following the repository or user artifact convention. Let Show Me guide the format choice for the work and review needs; retain the chosen record across updates.
 - **Remote:** inspect the available mechanism and agree where status, execution evidence, review state, findings, and handoff notes will live.
 
 An existing remote ticket may host the record when remote tracking is chosen. Otherwise keep the source artifact unchanged and reference it from the Implementation Record. Treat secondary representations as references unless the user agrees to a synchronization contract.
@@ -48,7 +48,7 @@ Choose the active record in this order:
 Before starting, read blockers and previous `Continuation Context` when they affect the active implementation.
 
 ## Implementation State
-Keep this state in the selected Tracking Home. For a local Markdown record, use frontmatter as the current-state dashboard:
+Keep this state in the selected Tracking Home. Use frontmatter for Markdown; for HTML, embed the same fields in a labeled JSON block and expose their current values in the visible record. Remote trackers use equivalent fields. The state schema is:
 
 ```yaml
 ---
@@ -115,7 +115,7 @@ After resolving that session's outcome, run `plannotator annotate <implementatio
 Keep task-local state in the Tracking Home using these content groups, or equivalent tracker fields:
 
 - **Source links:** reference the authoritative scope, acceptance criteria, parent and story coverage instead of copying them. When no accessible source supplies this information, write the agreed scope and acceptance criteria in the record, plus any missing source context. Record local deviations and coverage gaps.
-- **Structured state:** use the frontmatter or equivalent tracker fields for identity, status, blockers, review baseline and gate; add explanations where needed rather than duplicating current values.
+- **Structured state:** preserve the Implementation State schema for identity, status, blockers, review baseline and gate; add explanations where needed.
 - **Changes and Decisions:** material changes, reasons, implementation-specific invariants, deviations and important constraints.
 - **Execution Evidence:** selected execution disciplines with their required proof, actual validation runs and results, and explicit gaps or skip reasons. Apply the Execution Evidence requirements above.
 - **Complete Review Record:** the full actionable review output, judgment and resolution for every finding, dismissal evidence, unresolved items, or the clean-review receipt defined above.
