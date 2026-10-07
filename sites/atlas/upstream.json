@@ -1,0 +1,150 @@
+{
+  "atlas-to-spec": {
+    "references": [
+      {
+        "id": "to-spec",
+        "title": "To Spec",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/2237a047bd95abfd1427df94f65165c39e24d3c1/skills/engineering/to-spec/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-to-tickets": {
+    "references": [
+      {
+        "id": "to-tickets",
+        "title": "To Tickets",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/2237a047bd95abfd1427df94f65165c39e24d3c1/skills/engineering/to-tickets/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "html-ui": {
+    "references": [
+      {
+        "id": "html-wireframe",
+        "title": "HTML Wireframe",
+        "author": "Plannotator",
+        "url": "https://github.com/plannotator/effective-html/blob/2ac1dfecb0f2474e75260cb6d3c9b9d6d9b5062e/skills/html-wireframe/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "html-prototype",
+        "title": "HTML Prototype",
+        "author": "Plannotator",
+        "url": "https://github.com/plannotator/effective-html/blob/2ac1dfecb0f2474e75260cb6d3c9b9d6d9b5062e/skills/html-prototype/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-craft": {
+    "references": [
+      {
+        "id": "better-colors",
+        "title": "Better Colors",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/ca483852de23d48ab4f4ea71da37dad12bd70a95/skills/better-colors/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "better-typography",
+        "title": "Better Typography",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/ca483852de23d48ab4f4ea71da37dad12bd70a95/skills/better-typography/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "better-layout",
+        "title": "Better Layout",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/ca483852de23d48ab4f4ea71da37dad12bd70a95/skills/better-layout/SKILL.md",
+        "classification": "verbatim"
+      }
+    ],
+    "collections": [
+      {
+        "title": "Product Engineering",
+        "url": "https://github.com/backnotprop/product-engineering"
+      }
+    ]
+  },
+  "atlas-motion": {
+    "references": [
+      {
+        "id": "animate",
+        "title": "Animate",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/animate/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "apple-design",
+        "title": "Apple Design",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/apple-design/SKILL.md",
+        "classification": "verbatim"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-review": {
+    "references": [
+      {
+        "id": "code-review",
+        "title": "Code Review",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/2237a047bd95abfd1427df94f65165c39e24d3c1/skills/engineering/code-review/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "review-animations",
+        "title": "Review Animations",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/review-animations/SKILL.md",
+        "classification": "verbatim"
+      }
+    ],
+    "collections": []
+  },
+  "animated-driven-frontend": {
+    "references": [],
+    "collections": []
+  },
+  "writing-for-humans": {
+    "references": [
+      {
+        "id": "stop-slop",
+        "title": "Stop Slop",
+        "author": "Hardik Pandya",
+        "url": "https://github.com/hardikpandya/stop-slop/blob/8da1f030185bdfe8471220585162991eaeb970e9/SKILL.md",
+        "classification": "verbatim"
+      }
+    ],
+    "collections": []
+  },
+  "team-up": {
+    "references": [],
+    "collections": []
+  },
+  "tracking-implementation": {
+    "references": [
+      {
+        "id": "show-me",
+        "title": "Show Me",
+        "author": "HumanLayer",
+        "url": "https://github.com/humanlayer/skills/blob/ca7c8088db69e315a8b2deea43820270457f8f3c/plugins/show-me/skills/show-me/SKILL.md",
+        "classification": "verbatim"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-setup": {
+    "references": [],
+    "collections": []
+  }
+}

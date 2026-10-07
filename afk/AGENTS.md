@@ -35,7 +35,10 @@ When creating or resuming durable workflow artifacts, read {{artifacts.md}}; fol
 - **Evidence:** test uncertain capabilities before scaling. Reconsider approaches that miss the target, and assess outcome quality separately from technical checks.
 - **Decisions:** for new projects, recommend the foundation and tools needed for the intended capabilities. Involve the user in materially different options; proceed with settled choices and authorized experiments.
 - **Continuity:** preserve working project conventions unless the requested outcome warrants a change.
-- **Web:** prefer TypeScript for application logic and Tailwind when suitable. Plain JavaScript and CSS remain available for creative work and standalone artifacts.
+
+## Web
+- **Applications:** React and TypeScript are required for all web applications and websites, including content sites. Prefer Tailwind when suitable.
+- **Artifacts:** standalone reports, visualizations, and prototypes may use any suitable stack, including plain HTML, CSS, and JavaScript.
 
 ## Frontend UX Defaults
 - Prefer mature primitives or registry components when they materially improve UX, accessibility, responsiveness, or interaction quality.
