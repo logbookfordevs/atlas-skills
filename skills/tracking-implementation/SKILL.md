@@ -17,7 +17,7 @@ If the user asks to resume tracked implementation, use [resume.md](references/re
 Skip tiny one-shot edits unless the user asks for tracked implementation.
 
 ## Artifact presentation
-Before creating or updating the Implementation Record, read and follow [Show Me](references/show-me.md) to build and present the artifact throughout the work. The record fields below are content requirements, not a fixed body layout. Preserve structured state and complete, inspectable evidence within the selected Tracking Home; secondary views follow its synchronization agreement. Use the host’s available file-opening mechanism for HTML artifacts. Distinguish explanatory sketches from verified runtime results.
+Before creating or updating the Implementation Record, read and follow [Show Me](references/show-me.md). Let it organize the artifact around the work being tracked, choosing representations that make changes, evidence, review findings and continuation context easy to inspect. The record fields below define required content; use them within the chosen presentation rather than as a repeated prose template. Preserve structured state and complete, inspectable evidence within the selected Tracking Home; secondary views follow its synchronization agreement. Use the host’s available file-opening mechanism for HTML artifacts. Distinguish explanatory sketches from verified runtime results.
 
 ## Implementation Records
 Start with one Implementation Record. It persists across sessions, compactions, and handoffs; do not create one record per session.
