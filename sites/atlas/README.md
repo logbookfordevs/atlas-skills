@@ -15,6 +15,8 @@ The application uses React, TypeScript, Vite, and React Router. Edit skill summa
 
 Run `npm run typecheck`, `npm test`, and `npm run build` before publishing. `npm run preview` serves the production build on port 4173. The build emits a React entry at all 13 known URLs, so direct reference links and refreshes work without depending on a host rewrite. Assets and fonts are bundled locally.
 
+Sharing metadata uses the trusted production origin in `site.json`. The build writes canonical, Open Graph, and X card tags into every route’s initial HTML; client navigation updates the same fields. Overview and stack pages use `public/og.png`. Skill references use their own title and summary without inheriting the generic overview image. Run `npm run test:metadata` after building to check all 13 HTML entries and the image dimensions. The fields follow the [Open Graph protocol](https://ogp.me/).
+
 Internal links use client routing. Native view transitions hold the shell steady, reveal the next reading pane, and carry a selected skill name into its heading. Keyboard navigation and reduced-motion preferences use immediate navigation; browsers without native transitions retain client routing. Theme restoration runs in the document head before the first paint.
 
 Tests run with Node's experimental global web storage disabled so jsdom owns the browser storage. This avoids Node 26's file-backed storage shadowing jsdom's localStorage.

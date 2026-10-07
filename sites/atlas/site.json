@@ -1,0 +1,20 @@
+{
+  "name": "Atlas",
+  "siteName": "Atlas · Logbook for Devs",
+  "origin": "https://atlas.logbookfordevs.com",
+  "locale": "en_US",
+  "overview": {
+    "title": "Overview",
+    "description": "Understand Atlas and explore its reference: reusable coding-agent skills for planning, interface work, review, and writing."
+  },
+  "stack": {
+    "title": "The shared stack",
+    "description": "Explore the Atlas stack and independent skills from their original authors. Download the shared manifest."
+  },
+  "socialImage": {
+    "path": "/og.png",
+    "width": 1730,
+    "height": 909,
+    "alt": "Atlas — Reusable skills for coding agents. Warm paper, walnut typography, and an ocean route line. Logbook for Devs."
+  }
+}

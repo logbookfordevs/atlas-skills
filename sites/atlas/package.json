@@ -8,6 +8,7 @@
     "typecheck": "tsc -b",
     "build": "vite build && node scripts/build-entries.mjs",
     "test": "node --no-experimental-webstorage node_modules/vitest/vitest.mjs run",
+    "test:metadata": "node --no-experimental-webstorage --test scripts/metadata.test.mjs",
     "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort"
   },
   "dependencies": {

@@ -2,7 +2,8 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Outlet, ScrollRestoration, useLocation } from 'react-router';
 import { AtlasLink } from '@/components/AtlasLink';
 import { Arrow, Moon } from '@/components/Icons';
-import { pageMetadata, repository, skills, skillPath } from '@/data';
+import { repository, skills, skillPath } from '@/data';
+import { updatePageMetadata } from '@/metadata';
 
 function Contents() {
   const location = useLocation();
@@ -51,9 +52,7 @@ export function SiteShell() {
   const isDark = theme === 'dark';
 
   useLayoutEffect(() => {
-    const page = pageMetadata(location.pathname);
-    document.title = `${page.title} · Atlas`;
-    document.querySelector('meta[name="description"]')?.setAttribute('content', page.description);
+    updatePageMetadata(location.pathname);
     if (previousPath.current !== location.pathname) {
       main.current?.focus({ preventScroll: true });
       previousPath.current = location.pathname;

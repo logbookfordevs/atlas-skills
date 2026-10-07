@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { createMemoryRouter } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
 import { routes } from '@/routes';
+import { site } from '@/data';
 
 function open(path = '/') {
   const router = createMemoryRouter(routes, { initialEntries: [path] });
@@ -12,6 +13,47 @@ function open(path = '/') {
 }
 
 describe('Atlas navigation', () => {
+  it('updates sharing metadata on navigation and history without retaining another page’s image', async () => {
+    const user = userEvent.setup();
+    const router = open();
+    const property = (key: string) => document.head.querySelector(`meta[property="${key}"]`)?.getAttribute('content');
+    const name = (key: string) => document.head.querySelector(`meta[name="${key}"]`)?.getAttribute('content');
+    const canonical = () => document.head.querySelector('link[rel="canonical"]')?.getAttribute('href');
+
+    expect(property('og:title')).toBe(site.siteName);
+    expect(property('og:image')).toBe(`${site.origin}/og.png`);
+    expect(name('twitter:card')).toBe('summary_large_image');
+    expect(canonical()).toBe(`${site.origin}/`);
+
+    await user.click(screen.getByRole('link', { name: /^HTML UI\s*Make/ }));
+    await screen.findByRole('heading', { level: 1, name: 'HTML UI' });
+    expect(property('og:title')).toBe('HTML UI · Atlas');
+    expect(property('og:description')).toBe('Make an interface idea concrete before committing to it.');
+    expect(property('og:url')).toBe(`${site.origin}/skills/html-ui/`);
+    expect(canonical()).toBe(`${site.origin}/skills/html-ui/`);
+    expect(property('og:image')).toBeUndefined();
+    expect(property('og:image:width')).toBeUndefined();
+    expect(name('twitter:image')).toBeUndefined();
+    expect(name('twitter:card')).toBe('summary');
+
+    await router.navigate(-1);
+    await waitFor(() => expect(property('og:image')).toBe(`${site.origin}/og.png`));
+    expect(document.head.querySelectorAll('meta[property="og:title"]')).toHaveLength(1);
+
+    await router.navigate('/skills/missing/');
+    await screen.findByRole('heading', { level: 1, name: 'Page not found.' });
+    expect(canonical()).toBeUndefined();
+    expect(property('og:url')).toBeUndefined();
+    expect(property('og:image')).toBeUndefined();
+    expect(name('robots')).toBe('noindex');
+
+    await router.navigate('/stack/');
+    await screen.findByRole('heading', { level: 1, name: 'The shared stack' });
+    expect(canonical()).toBe(`${site.origin}/stack/`);
+    expect(property('og:image')).toBe(`${site.origin}/og.png`);
+    expect(name('robots')).toBeUndefined();
+  });
+
   it('keeps the shell and chosen appearance through links and browser history', async () => {
     const user = userEvent.setup();
     const router = open();
