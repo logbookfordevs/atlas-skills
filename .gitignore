@@ -20,6 +20,3 @@ dist/
 .env.local
 .agents
 .impeccable/
-
-# Local AFK settings and rules-sync receipts
-/afk/settings.json

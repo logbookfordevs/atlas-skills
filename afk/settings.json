@@ -1,0 +1,418 @@
+{
+  "version": 1,
+  "profiles": [
+    {
+      "id": "profile-db54a4ff-2102-4183-8695-ac1e20c38d11",
+      "name": "PStack",
+      "source": "https://github.com/backnotprop/pstack",
+      "skills": [
+        "architect",
+        "arena",
+        "automate-me",
+        "benchmark-checklist",
+        "blast-radius",
+        "bro",
+        "correct",
+        "create-verification-skill",
+        "figure-it-out",
+        "how",
+        "interrogate",
+        "maintain-verification-skill",
+        "no-comments",
+        "poteto-mode",
+        "principle-attack-the-premise",
+        "principle-boundary-discipline",
+        "principle-build-the-lever",
+        "principle-encode-lessons-in-structure",
+        "principle-exhaust-the-design-space",
+        "principle-experience-first",
+        "principle-explain-the-number",
+        "principle-fix-root-causes",
+        "principle-foundational-thinking",
+        "principle-guard-the-context-window",
+        "principle-laziness-protocol",
+        "principle-make-operations-idempotent",
+        "principle-migrate-callers-then-delete-legacy-apis",
+        "principle-minimize-reader-load",
+        "principle-model-the-domain",
+        "principle-never-block-on-the-human",
+        "principle-outcome-oriented-execution",
+        "principle-prove-it-works",
+        "principle-redesign-from-first-principles",
+        "principle-separate-before-serializing-shared-state",
+        "principle-sequence-verifiable-units",
+        "principle-subtract-before-you-add",
+        "principle-test-behavior-not-implementation",
+        "principle-type-system-discipline",
+        "recall",
+        "reflect",
+        "setup-pstack",
+        "show-me-your-work",
+        "swarm",
+        "tdd",
+        "teach",
+        "technical-writing",
+        "typescript-best-practices",
+        "unslop",
+        "why"
+      ],
+      "enabled": [],
+      "ready": false
+    }
+  ],
+  "projects": [
+    {
+      "name": "Creative Room",
+      "path": "/Users/leonardo/Creative Room"
+    }
+  ],
+  "tools": [
+    {
+      "id": 1791234134658,
+      "name": "Plannotator Tot",
+      "install": "npm install -g @plannotator/tot",
+      "update": ""
+    },
+    {
+      "id": 1791234154030,
+      "name": "Yggtree",
+      "install": "curl -fsSL https://yggtree.logbookfordevs.com/install.sh | bash",
+      "update": "yggtree update"
+    },
+    {
+      "id": 1791234183254,
+      "name": "Orchestrator",
+      "install": "npm install -g @backnotprop/orchestrator-cli@latest",
+      "update": ""
+    },
+    {
+      "id": 1791234369564,
+      "name": "Impeccable",
+      "install": "npx impeccable install --no-hooks",
+      "update": "npx impeccable update"
+    },
+    {
+      "id": 1791234043958,
+      "name": "Waypoint",
+      "install": "curl -fsSL https://waypoint.logbookfordevs.com/install.sh | bash",
+      "update": "waypoint update"
+    },
+    {
+      "id": 1791234094823,
+      "name": "Plannotator",
+      "install": "curl -fsSL https://plannotator.ai/install.sh | bash &&\nclaude plugin marketplace add backnotprop/plannotator &&\nclaude plugin install plannotator@plannotator &&\nclaude-work plugin marketplace add backnotprop/plannotator &&\nclaude-work plugin install plannotator@plannotator",
+      "update": "curl -fsSL https://plannotator.ai/install.sh | bash &&\nclaude plugin update plannotator@plannotator &&\nclaude-work plugin update plannotator@plannotator"
+    }
+  ],
+  "favoriteSources": [
+    {
+      "name": "Matt Pocock",
+      "source": "https://github.com/mattpocock/skills",
+      "skills": [
+        "diagnosing-bugs",
+        "domain-modeling",
+        "codebase-design",
+        "grill-me",
+        "grill-with-docs",
+        "grilling",
+        "handoff",
+        "implement-spec",
+        "pr",
+        "prototype",
+        "research",
+        "retro",
+        "tdd",
+        "teach",
+        "to-questionnaire",
+        "wayfinder",
+        "wizard",
+        "writing-for-agents"
+      ]
+    },
+    {
+      "name": "Atlas Skills",
+      "source": "https://github.com/logbookfordevs/atlas-skills"
+    },
+    {
+      "name": "Creative Motion",
+      "source": "https://github.com/alesha-pro/tools/tree/main/skills"
+    },
+    {
+      "name": "Design DNA",
+      "source": "https://github.com/zanwei/design-dna"
+    },
+    {
+      "name": "Genjutsu",
+      "source": "https://github.com/AThevon/genjutsu"
+    },
+    {
+      "name": "Motion Design Skill (by Lottie)",
+      "source": "https://github.com/lottiefiles/motion-design-skill"
+    },
+    {
+      "name": "MengTo - Design - 3D",
+      "source": "https://github.com/MengTo/Skills/tree/main/agent-skills"
+    },
+    {
+      "name": "PStack",
+      "source": "https://github.com/backnotprop/pstack"
+    },
+    {
+      "name": "Product Engineering",
+      "source": "https://github.com/backnotprop/product-engineering"
+    },
+    {
+      "name": "Better-Skills",
+      "source": "https://github.com/jakubkrehel/skills"
+    },
+    {
+      "name": "In Progress",
+      "source": "https://github.com/leoreisdias/productivity-skills"
+    },
+    {
+      "name": "Hairline",
+      "source": "https://github.com/lucasmarkes/hairline/tree/main/skills/hairline-create"
+    },
+    {
+      "name": "Video Watch",
+      "source": "https://github.com/bradautomates/claude-video"
+    }
+  ],
+  "preferences": {
+    "Global|plannotator-guide": "Manual only",
+    "Global|hand-drawn-canvas-animation": "Manual only",
+    "Global|orchestrator": "Manual only",
+    "Global|pr": "Manual only",
+    "Global|wizard": "Manual only",
+    "Global|truss-evaluation": "Automatic allowed",
+    "Global|interrogate": "Manual only",
+    "Global|watch": "Manual only",
+    "Creative Room|video": "Manual only",
+    "Creative Room|social": "Manual only"
+  },
+  "managedLinks": {},
+  "independentSkills": {
+    "Global": [],
+    "Creative Room": []
+  },
+  "welcomeDismissed": true,
+  "agentRules": {
+    "destinations": [
+      {
+        "id": "codex",
+        "name": "Codex",
+        "kind": "codex",
+        "path": "/Users/leonardo/.codex/AGENTS.md"
+      },
+      {
+        "id": "claude",
+        "name": "Claude",
+        "kind": "claude",
+        "path": "/Users/leonardo/.claude/AGENTS.md"
+      }
+    ],
+    "receipts": {
+      "codex": {
+        "region": "<!-- AFK:RULES:START -->\n## Skills\nState \"I will use the X skill\" whenever using a skill.\nIf a user-required skill is unavailable, search the configured skill roots and verify explicit aliases. Explain what is missing and request an approved fallback for dependent work. Continue independent authorized work.\n\n## Artifacts\nWhen creating or resuming durable workflow artifacts, read /Users/leonardo/.codex/afk-rules/codex/references/artifacts.md; follow repository storage conventions first.\n\n## Imports\n- Prefer configured absolute imports such as `@/components/...`.\n\n## TypeScript\n- Avoid `any` unless necessary or specifically requested.\n- Run the repository typecheck for TypeScript changes. Fix failures introduced by the change. If an unrelated baseline or environment failure prevents a clean result, report the evidence and verification gap; do not claim a pass.\n\n## Testing\n- Add regression tests when they protect meaningful behavior. Test observable behavior; tautological tests that merely restate the implementation are harmful. Trivial copy and other low-risk changes do not require coverage.\n\n## React\n- Name compound JSX conditions before the return with domain-specific booleans. JSX conditions should contain one named boolean, optionally negated.\n- For two mutually exclusive branches, name the deciding condition and use paired `&&` expressions, such as `{showsDetails && <Details />}` followed by `{!showsDetails && <Summary />}`.\n- For three or more mutually exclusive branches, both named `&&` branches and a local render function with early returns are acceptable. Invoke a local render function as a function from JSX. Extract a component when the rendered section has a meaningful interface or obscures the surrounding structure.\n- Keep short, flat ternaries for selecting non-JSX values such as strings, classes, or numbers. Hoist nested or hard-to-scan value expressions. Move repeated condition logic into a shared helper.\n\n## Browser Testing\n- Prefer `agent-browser` over Playwright CLI when available.\n\n## Commands\n- Reuse a suitable running development server. If none exists, start the documented local server when the task requires it and permissions allow.\n\n## Worktrees\n- Prefer `yggtree` for worktree operations when available; consult `yggtree --help` before using native Git worktree commands.\n\n## Tools and approach\n- **Outcome first:** choose proven tools for the requested result. Explore suitable alternatives before building custom substitutes; implementation convenience alone does not justify lowering quality.\n- **Evidence:** test uncertain capabilities before scaling. Reconsider approaches that miss the target, and assess outcome quality separately from technical checks.\n- **Decisions:** for new projects, recommend the foundation and tools needed for the intended capabilities. Involve the user in materially different options; proceed with settled choices and authorized experiments.\n- **Continuity:** preserve working project conventions unless the requested outcome warrants a change.\n\n## Web\n- **Applications:** React and TypeScript are required for all web applications and websites, including content sites. Prefer Tailwind when suitable.\n- **Artifacts:** standalone reports, visualizations, and prototypes may use any suitable stack, including plain HTML, CSS, and JavaScript.\n\n## Frontend UX Defaults\n- Prefer mature primitives or registry components when they materially improve UX, accessibility, responsiveness, or interaction quality.\n- Mobile is not degraded desktop; replace cramped, wrapped, clipped, or awkward controls with responsive patterns.\n- Push back when implementation convenience would materially degrade the user experience.\n\n## Code Style\n- Separate logical code sections with blank lines for readability.\n- Keep code comment-sparse. Use comments only to preserve enduring, non-obvious invariants, dangerous edge cases, external contracts, or trade-offs; describe lasting behavior rather than task history.\n\n## Sub-agents\nWhen spawning sub-agents, use the `team-up` skill as the coordination policy.\n\n## Dictionary\n- **Quick win**: a small, obvious, low-risk change. Use proportionate local validation; reserve browser automation and agent review for changes whose UX or correctness risk warrants them.\n<!-- AFK:RULES:END -->",
+        "references": {
+          "references/artifacts.md": "# Artifact Conventions\n\nUse these conventions when AFK work creates or resumes durable workflow artifacts.\n\n## Boundaries\n\n- **PRD** captures product intent: problem, goals, scope, non-goals, success criteria, and stakeholder context.\n- **Spec** captures behavior and design decisions: flows, acceptance criteria, edge cases, constraints, and relevant references.\n- If the PRD or combined artifact lacks behavior needed for implementation, recommend the user to create/update a spec before writing the implementation plan.\n- **RFC** captures a proposed direction for review before executable slicing.\n- **Tickets** are executable planning artifacts: tracer-bullet slices, dependencies, acceptance criteria, execution bundle, Test Seam, and expected verification.\n- **Implementation records** are execution artifacts: status, validation evidence, changes, review state, implementation notes, and handoff state for one implementation unit.\n\nCreate or update the smallest artifact that removes the current ambiguity. If a PRD already covers behavior well enough, do not split out a separate spec just for ceremony.\n\n## Storage\n\n- Follow the repo or user artifact convention first.\n- Otherwise use:\n\n```text\ndocs/\n├── adr/          # <NNNN>-<slug>.md; centralized, numbered, durable\n├── specs/        # <scope>.md, or <scope>/ for multiple files\n├── tickets/      # <scope>/<NN>-<slug>.md\n├── research/     # usually <scope>/\n├── references/   # <scope>/; replaceable external inputs\n└── tracking/     # <scope>/<slug>.md\n```\n\n- Use a concise kebab-case scope slug and reuse it across artifact types for one effort.\n- Keep locally maintained sources in their artifact-type folder and replaceable external material under `references/`.\n\nTreat generated workflow artifacts as local working artifacts unless the repo convention or user says otherwise.\n\n## Notes\n\n- Record implementation notes in the relevant Implementation Record.\n- Create standalone notes only when the user asks or the repo already has that convention.\n- Use ADRs for decisions that change architecture, ownership, integration contracts, data model, migration strategy, or long-term maintenance expectations.\n- Preserve execution-bundle evidence where it affects review or resume safety."
+        },
+        "lastSync": "2026-10-07T14:39:45.726Z"
+      },
+      "claude": {
+        "region": "<!-- AFK:RULES:START -->\n## Skills\nState \"I will use the X skill\" whenever using a skill.\nIf a user-required skill is unavailable, search the configured skill roots and verify explicit aliases. Explain what is missing and request an approved fallback for dependent work. Continue independent authorized work.\n\n## Artifacts\nWhen creating or resuming durable workflow artifacts, read /Users/leonardo/.claude/afk-rules/claude/references/artifacts.md; follow repository storage conventions first.\n\n## Imports\n- Prefer configured absolute imports such as `@/components/...`.\n\n## TypeScript\n- Avoid `any` unless necessary or specifically requested.\n- Run the repository typecheck for TypeScript changes. Fix failures introduced by the change. If an unrelated baseline or environment failure prevents a clean result, report the evidence and verification gap; do not claim a pass.\n\n## Testing\n- Add regression tests when they protect meaningful behavior. Test observable behavior; tautological tests that merely restate the implementation are harmful. Trivial copy and other low-risk changes do not require coverage.\n\n## React\n- Name compound JSX conditions before the return with domain-specific booleans. JSX conditions should contain one named boolean, optionally negated.\n- For two mutually exclusive branches, name the deciding condition and use paired `&&` expressions, such as `{showsDetails && <Details />}` followed by `{!showsDetails && <Summary />}`.\n- For three or more mutually exclusive branches, both named `&&` branches and a local render function with early returns are acceptable. Invoke a local render function as a function from JSX. Extract a component when the rendered section has a meaningful interface or obscures the surrounding structure.\n- Keep short, flat ternaries for selecting non-JSX values such as strings, classes, or numbers. Hoist nested or hard-to-scan value expressions. Move repeated condition logic into a shared helper.\n\n## Browser Testing\n- Prefer `agent-browser` over Playwright CLI when available.\n\n## Commands\n- Reuse a suitable running development server. If none exists, start the documented local server when the task requires it and permissions allow.\n\n## Worktrees\n- Prefer `yggtree` for worktree operations when available; consult `yggtree --help` before using native Git worktree commands.\n\n## Tools and approach\n- **Outcome first:** choose proven tools for the requested result. Explore suitable alternatives before building custom substitutes; implementation convenience alone does not justify lowering quality.\n- **Evidence:** test uncertain capabilities before scaling. Reconsider approaches that miss the target, and assess outcome quality separately from technical checks.\n- **Decisions:** for new projects, recommend the foundation and tools needed for the intended capabilities. Involve the user in materially different options; proceed with settled choices and authorized experiments.\n- **Continuity:** preserve working project conventions unless the requested outcome warrants a change.\n\n## Web\n- **Applications:** React and TypeScript are required for all web applications and websites, including content sites. Prefer Tailwind when suitable.\n- **Artifacts:** standalone reports, visualizations, and prototypes may use any suitable stack, including plain HTML, CSS, and JavaScript.\n\n## Frontend UX Defaults\n- Prefer mature primitives or registry components when they materially improve UX, accessibility, responsiveness, or interaction quality.\n- Mobile is not degraded desktop; replace cramped, wrapped, clipped, or awkward controls with responsive patterns.\n- Push back when implementation convenience would materially degrade the user experience.\n\n## Code Style\n- Separate logical code sections with blank lines for readability.\n- Keep code comment-sparse. Use comments only to preserve enduring, non-obvious invariants, dangerous edge cases, external contracts, or trade-offs; describe lasting behavior rather than task history.\n\n## Sub-agents\nWhen spawning sub-agents, use the `team-up` skill as the coordination policy.\n\n## Dictionary\n- **Quick win**: a small, obvious, low-risk change. Use proportionate local validation; reserve browser automation and agent review for changes whose UX or correctness risk warrants them.\n<!-- AFK:RULES:END -->",
+        "references": {
+          "references/artifacts.md": "# Artifact Conventions\n\nUse these conventions when AFK work creates or resumes durable workflow artifacts.\n\n## Boundaries\n\n- **PRD** captures product intent: problem, goals, scope, non-goals, success criteria, and stakeholder context.\n- **Spec** captures behavior and design decisions: flows, acceptance criteria, edge cases, constraints, and relevant references.\n- If the PRD or combined artifact lacks behavior needed for implementation, recommend the user to create/update a spec before writing the implementation plan.\n- **RFC** captures a proposed direction for review before executable slicing.\n- **Tickets** are executable planning artifacts: tracer-bullet slices, dependencies, acceptance criteria, execution bundle, Test Seam, and expected verification.\n- **Implementation records** are execution artifacts: status, validation evidence, changes, review state, implementation notes, and handoff state for one implementation unit.\n\nCreate or update the smallest artifact that removes the current ambiguity. If a PRD already covers behavior well enough, do not split out a separate spec just for ceremony.\n\n## Storage\n\n- Follow the repo or user artifact convention first.\n- Otherwise use:\n\n```text\ndocs/\n├── adr/          # <NNNN>-<slug>.md; centralized, numbered, durable\n├── specs/        # <scope>.md, or <scope>/ for multiple files\n├── tickets/      # <scope>/<NN>-<slug>.md\n├── research/     # usually <scope>/\n├── references/   # <scope>/; replaceable external inputs\n└── tracking/     # <scope>/<slug>.md\n```\n\n- Use a concise kebab-case scope slug and reuse it across artifact types for one effort.\n- Keep locally maintained sources in their artifact-type folder and replaceable external material under `references/`.\n\nTreat generated workflow artifacts as local working artifacts unless the repo convention or user says otherwise.\n\n## Notes\n\n- Record implementation notes in the relevant Implementation Record.\n- Create standalone notes only when the user asks or the repo already has that convention.\n- Use ADRs for decisions that change architecture, ownership, integration contracts, data model, migration strategy, or long-term maintenance expectations.\n- Preserve execution-bundle evidence where it affects review or resume safety."
+        },
+        "lastSync": "2026-10-07T14:39:45.726Z"
+      }
+    }
+  },
+  "stacks": [
+    {
+      "manifest": {
+        "$schema": "https://raw.githubusercontent.com/logbookfordevs/ai-field-kit/main/docs/schemas/skill-stack.v1.schema.json",
+        "version": 1,
+        "id": "logbook-atlas",
+        "name": "Logbook Atlas",
+        "description": "The Logbook for Devs skill stack: Atlas utilities, adaptations and compositions alongside selected independent skills from their original authors.",
+        "sources": [
+          {
+            "name": "Logbook Atlas",
+            "source": "https://github.com/logbookfordevs/atlas-skills",
+            "skills": [
+              "atlas-setup",
+              "tracking-implementation",
+              "atlas-motion",
+              "atlas-craft",
+              "atlas-review",
+              "animated-driven-frontend",
+              "writing-for-humans",
+              "team-up",
+              "html-ui",
+              "atlas-to-spec",
+              "atlas-to-tickets"
+            ]
+          },
+          {
+            "name": "Matt Pocock",
+            "source": "https://github.com/mattpocock/skills",
+            "skills": [
+              "implement-spec",
+              "diagnosing-bugs",
+              "tdd",
+              "research",
+              "writing-for-agents",
+              "wizard",
+              "to-questionnaire",
+              "teach",
+              "grill-with-docs",
+              "grill-me",
+              "prototype",
+              "handoff",
+              "wayfinder",
+              "grilling",
+              "domain-modeling",
+              "codebase-design",
+              "pr",
+              "retro"
+            ]
+          },
+          {
+            "name": "Product Engineering",
+            "source": "https://github.com/backnotprop/product-engineering",
+            "skills": [
+              "pe-product-description",
+              "pe-verify"
+            ]
+          },
+          {
+            "name": "Impeccable",
+            "source": "https://github.com/pbakaus/impeccable",
+            "skills": [
+              "impeccable"
+            ]
+          },
+          {
+            "name": "Truss",
+            "source": "https://github.com/leoreisdias/truss-framework",
+            "skills": [
+              "truss-evaluation"
+            ]
+          },
+          {
+            "name": "shadcn/ui",
+            "source": "https://github.com/shadcn-ui/ui",
+            "skills": [
+              "shadcn"
+            ]
+          },
+          {
+            "name": "Plannotator",
+            "source": "plannotator/guides",
+            "skills": [
+              "plannotator-guide"
+            ]
+          },
+          {
+            "name": "Orchestrator",
+            "source": "backnotprop/orchestrator",
+            "skills": [
+              "orchestrator"
+            ]
+          },
+          {
+            "name": "Bro",
+            "source": "backnotprop/bro",
+            "skills": [
+              "bro",
+              "facts",
+              "readback",
+              "recap",
+              "clean-room"
+            ]
+          },
+          {
+            "name": "Effective HTML",
+            "source": "https://github.com/plannotator/effective-html",
+            "skills": [
+              "design-artifact"
+            ]
+          },
+          {
+            "name": "HumanLayer",
+            "source": "https://github.com/humanlayer/skills",
+            "skills": [
+              "show-me"
+            ]
+          },
+          {
+            "name": "Addy Osmani",
+            "source": "https://github.com/addyosmani/agent-skills.git",
+            "skills": [
+              "source-driven-development",
+              "doubt-driven-development",
+              "code-simplification"
+            ]
+          },
+          {
+            "name": "Alesha Pro",
+            "source": "https://github.com/alesha-pro/tools",
+            "skills": [
+              "hand-drawn-canvas-animation"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "version": 1,
+        "id": "creative-stuff",
+        "name": "Creative Stuff",
+        "sources": [
+          {
+            "name": "Creative Motion",
+            "source": "https://github.com/alesha-pro/tools/tree/main/skills",
+            "skills": [
+              "hand-drawn-canvas-animation",
+              "lyric-music-video",
+              "motion-reel"
+            ]
+          },
+          {
+            "name": "Genjutsu",
+            "source": "https://github.com/AThevon/genjutsu",
+            "skills": [
+              "bunshin",
+              "cast",
+              "paint"
+            ]
+          },
+          {
+            "name": "Motion Design Skill (by Lottie)",
+            "source": "https://github.com/lottiefiles/motion-design-skill",
+            "skills": [
+              "motion-design"
+            ]
+          },
+          {
+            "name": "Hairline",
+            "source": "https://github.com/lucasmarkes/hairline/tree/main/skills/hairline-create",
+            "skills": [
+              "hairline-create"
+            ]
+          },
+          {
+            "name": "Video Watch",
+            "source": "https://github.com/bradautomates/claude-video",
+            "skills": [
+              "watch"
+            ]
+          }
+        ],
+        "description": "Creative Skills for creative ideas"
+      }
+    }
+  ]
+}
