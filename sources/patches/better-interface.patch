@@ -1,0 +1,23 @@
+diff --git a/source.md b/source.md
+index 4d423eb..0ac7195 100644
+--- a/source.md
++++ b/source.md
+@@ -5,6 +5,9 @@ description: Combines all of the `better-*` skills into a single review across a
+ 
+ # Cross-discipline review
+ 
++## Atlas integration
++Read [Atlas routing](../../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
++
+ This skill runs a cross-discipline review. It routes the interface to each `better-*` skill, collects their evidence and consolidates one ranked verdict.
+ 
+ Orchestration is all it owns. Accessibility rules belong to `better-accessibility`, structure to `better-layout`, copy to `better-writing`, type to `better-typography`, color to `better-colors`, visual polish and motion to `better-ui`. Never duplicate or override their rules here.
+@@ -29,7 +32,7 @@ When the scope is too large to inspect credibly, narrow it to one complete flow.
+ 
+ ### 2. Send a change to `interface-review`
+ 
+-A request naming a branch, pull request, commit range or uncommitted changes is a change review. Say so and ask the user to run `interface-review`, which is user-invoked and cannot be started from here. Never resolve a change scope yourself, because a guessed diff gives the report a scope nobody can check.
++A request naming a branch, pull request, commit range or uncommitted changes is a change review. Read the bundled Interface Changes method through Atlas routing and use its scope resolution. Preserve the target already supplied; ask only when materially different interpretations remain.
+ 
+ When `interface-review` hands a review back, apply everything below to it. The cap and the verdict cover `Introduced` and `Regression` findings only, so a change whose only findings are `Pre-existing` is an `Approve`.
+ 

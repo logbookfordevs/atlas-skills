@@ -1,0 +1,14 @@
+diff --git a/source.md b/source.md
+index 55ad48e..fa76873 100644
+--- a/source.md
++++ b/source.md
+@@ -5,6 +5,9 @@ description: Writes and reviews your interface copy, from labels and errors to e
+ 
+ # Writing
+ 
++## Atlas integration
++Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
++
+ This skill writes and reviews interface copy such as labels, errors, empty states and confirmations, along with the terms that run through them. It matches the product's existing voice and flags copy that misleads people or leaves them without a way forward.
+ 
+ A deliberate brand voice is not a defect. Raise a departure from plain language only when it creates inconsistency, ambiguity, translation risk or a tone the stakes don't support. Rewording that merely suits your taste is not a finding.

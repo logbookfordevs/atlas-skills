@@ -1,0 +1,14 @@
+diff --git a/source.md b/source.md
+index 24a5662..90a9969 100644
+--- a/source.md
++++ b/source.md
+@@ -5,6 +5,9 @@ description: Helps you build and check a color system for your project. It gener
+ 
+ # Colors
+ 
++## Atlas integration
++Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
++
+ This skill builds and audits color systems. It generates ramps, maps their steps to roles and token names, converts notation and measures rendered contrast pairs.
+ 
+ Never report a contrast value you did not measure, and never estimate a color you could compute. Notation, a tinted neutral and a gradient's interpolation space are project choices, not findings. A broken role mapping, a failing pair and an out-of-gamut step are findings. Perceived lightness throughout means OKLCH `L`, from `0` to `1`.

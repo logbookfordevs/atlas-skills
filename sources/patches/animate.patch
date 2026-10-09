@@ -1,6 +1,32 @@
+diff --git a/source.md b/source.md
+index 7c3b20c..3a1e278 100644
 --- a/source.md
 +++ b/source.md
-@@ -78,7 +78,7 @@
+@@ -5,19 +5,14 @@ description: Build an animation from scratch, making the decisions in the order
+ 
+ # Building Animations
+ 
+-## Initial Response
++## Atlas integration
++Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
+ 
+-When this skill is first invoked without a specific question, respond only with:
+-
+-> I'm ready to build animations that feel right, my knowledge comes from Emil Kowalski's animation philosophy.
+-
+-Do not provide any other information until the user asks a question.
+-
+-A construction skill. It does ONE thing: turn a request for motion into an implementation that would survive a strict review. It does not audit a codebase (that's `improve-animations`), critique a diff (that's `review-animations`), hunt for places that could animate (that's `find-animation-opportunities`), or build for React Native (that's `animate-expo`).
++A construction skill. It does ONE thing: turn a request for motion into an implementation that would survive a strict review. It does not audit a codebase (that's Atlas Review’s Motion Audit method), critique a diff (that's Atlas Review’s Motion method), hunt for places that could animate (that's Atlas Motion’s Opportunities method), or build for React Native (that's the external animate-expo method, which Atlas does not bundle).
+ 
+ ## Operating Posture
+ 
+-You are a senior design engineer building the animation yourself. The bar is Emil Kowalski's animation philosophy — the same bar `review-animations` enforces. Write it so it passes that review the first time.
++You are a senior design engineer building the animation yourself. The bar is Emil Kowalski's animation philosophy — the same bar Atlas Review’s Motion method enforces. Write it so it passes that review the first time.
+ 
+ Two failure modes, and the first is worse:
+ 
+@@ -78,7 +73,7 @@ Walk down; stop at the first that fits.
  
  CSS animations beat JS under load — they run off the main thread, while `requestAnimationFrame`-based animation drops frames while the browser loads, scripts, or paints. Use CSS for predetermined motion, JS for dynamic and interruptible motion.
  
@@ -9,3 +35,12 @@
  
  ### 4. Pick the properties
  
+@@ -174,7 +169,7 @@ For ready-to-build implementations of the common cases — button press, dropdow
+ 
+ ## Never Ship
+ 
+-Self-check before you finish. Each of these is an automatic block in `review-animations`:
++Self-check before you finish. Each of these is an automatic block in Atlas Review’s Motion method:
+ 
+ | Never | Instead |
+ | --- | --- |

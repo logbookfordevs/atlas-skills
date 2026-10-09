@@ -15,9 +15,9 @@ Install the Atlas-owned packages below, or import the shared stack to include th
 | [HTML UI](skills/html-ui/SKILL.md) | Wireframe and polished Model modes |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
-| [Atlas Review](skills/atlas-review/SKILL.md) | Code, Static and Motion review |
-| [Atlas Craft](skills/atlas-craft/SKILL.md) | Better Colors, Typography and Layout |
-| [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate and Fluid interaction methods |
+| [Atlas Review](skills/atlas-review/SKILL.md) | Code, Static, Interface, Motion and Motion Audit review |
+| [Atlas Craft](skills/atlas-craft/SKILL.md) | Color, Type, Layout, Accessibility, UI Polish and Copy |
+| [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid and read-only Opportunities |
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Automatic tracking alongside any selected executor |
 | [Animated-Driven Frontend](skills/animated-driven-frontend/SKILL.md) | Manually invoked ZERO engineering knowledge |
 | [Team Up](skills/team-up/SKILL.md) | Deliberate model, effort and custom-agent selection |

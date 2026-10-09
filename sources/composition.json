@@ -85,9 +85,11 @@
       "license": "sources/upstream/animate/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/animate/animate.md",
-      "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to pause and find a suitable library via available Notion search, internet search, existing project libraries, or user consultation. Supporting files remain verbatim.",
+      "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to pause and find a suitable library via available Notion search, internet search, existing project libraries, or user consultation. Supporting files remain verbatim. Resolve audit, review and discovery handoffs through Atlas routing; remove the canned initial response and explicitly leave Native motion outside the bundle.",
       "consumers": [
-        "atlas-motion"
+        "atlas-motion",
+        "atlas-craft",
+        "atlas-review"
       ],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-05",
@@ -100,7 +102,11 @@
           "relativePath": "RECIPES.md"
         }
       ],
-      "rulings": [],
+      "rulings": [
+        "craft-motion-owner",
+        "review-motion-owner",
+        "motion-local-routing"
+      ],
       "patch": "sources/patches/animate.patch"
     },
     {
@@ -121,18 +127,23 @@
       "method": "sources/upstream/apple-design/source.md",
       "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
       "consumers": [
-        "atlas-motion"
+        "atlas-motion",
+        "atlas-craft",
+        "atlas-review"
       ],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-05",
       "carriedPath": "references/fluid/apple-design.md",
       "supportingFiles": [],
-      "rulings": []
+      "rulings": [
+        "craft-motion-owner",
+        "review-motion-owner"
+      ]
     },
     {
       "id": "better-layout",
       "owner": "Atlas Implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
         "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -144,10 +155,11 @@
       "sourceSha256": "8c5883ccb23c27c39b7c58d101154ff35e032410e0dc4794be9ab7fe070c2297",
       "license": "sources/upstream/better-layout/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "sources/upstream/better-layout/source.md",
+      "method": "skills/atlas-craft/references/layout/index.md",
       "carriedPath": "references/layout/index.md",
       "consumers": [
-        "atlas-craft"
+        "atlas-craft",
+        "atlas-review"
       ],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
@@ -172,7 +184,9 @@
         }
       ],
       "rulings": [
-        "craft-local-names"
+        "craft-local-names",
+        "interface-local-routing",
+        "review-interface-routing"
       ],
       "selection": {
         "repository": "https://github.com/backnotprop/product-engineering",
@@ -182,12 +196,13 @@
         "sha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
         "trackingRef": "main"
       },
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer."
+      "adaptation": "Resolve sibling method names through the bundled Atlas routing guide in the entry and supporting references. Domain rules and complete supporting resources otherwise remain unchanged.",
+      "patch": "sources/patches/better-layout.patch"
     },
     {
       "id": "better-typography",
       "owner": "Atlas Implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
         "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -199,10 +214,11 @@
       "sourceSha256": "e60ca6467ba60e68f95ed2d2cfa35f2a850d96ef2a0c0d3fcfcfd9510e51f184",
       "license": "sources/upstream/better-typography/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "sources/upstream/better-typography/source.md",
+      "method": "skills/atlas-craft/references/type/index.md",
       "carriedPath": "references/type/index.md",
       "consumers": [
-        "atlas-craft"
+        "atlas-craft",
+        "atlas-review"
       ],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
@@ -251,7 +267,9 @@
         }
       ],
       "rulings": [
-        "craft-local-names"
+        "craft-local-names",
+        "interface-local-routing",
+        "review-interface-routing"
       ],
       "selection": {
         "repository": "https://github.com/backnotprop/product-engineering",
@@ -261,12 +279,13 @@
         "sha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
         "trackingRef": "main"
       },
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer."
+      "adaptation": "Resolve sibling method names through the bundled Atlas routing guide in the entry and supporting references. Domain rules and complete supporting resources otherwise remain unchanged.",
+      "patch": "sources/patches/better-typography.patch"
     },
     {
       "id": "better-colors",
       "owner": "Atlas Implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
         "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -278,10 +297,11 @@
       "sourceSha256": "e74f1c413a4094dc2a73fb0baa0da2241465e01d593b0257ba995500df9b0068",
       "license": "sources/upstream/better-colors/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "sources/upstream/better-colors/source.md",
+      "method": "skills/atlas-craft/references/color/index.md",
       "carriedPath": "references/color/index.md",
       "consumers": [
-        "atlas-craft"
+        "atlas-craft",
+        "atlas-review"
       ],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
@@ -330,7 +350,9 @@
         }
       ],
       "rulings": [
-        "craft-local-names"
+        "craft-local-names",
+        "interface-local-routing",
+        "review-interface-routing"
       ],
       "selection": {
         "repository": "https://github.com/backnotprop/product-engineering",
@@ -340,7 +362,8 @@
         "sha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
         "trackingRef": "main"
       },
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer."
+      "adaptation": "Resolve sibling method names through the bundled Atlas routing guide in the entry and supporting references. Domain rules and complete supporting resources otherwise remain unchanged.",
+      "patch": "sources/patches/better-colors.patch"
     },
     {
       "id": "to-spec",
@@ -561,6 +584,361 @@
           "sourceSha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
         }
       ]
+    },
+    {
+      "id": "better-accessibility",
+      "owner": "Jakub Krehel",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "path": "skills/better-accessibility/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-accessibility/source.md",
+      "sourceSha256": "df0cafe0e75a08548cf46a2a430f46c198e7e0ee9d46bdf7884c2afefb44b70e",
+      "license": "sources/upstream/better-accessibility/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "skills/atlas-craft/references/accessibility/index.md",
+      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Local references replace independent upstream skill resolution; domain behavior remains upstream-owned.",
+      "consumers": [
+        "atlas-craft",
+        "atlas-review"
+      ],
+      "rulings": [
+        "interface-local-routing",
+        "review-interface-routing"
+      ],
+      "carriedPath": "references/accessibility/index.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/better-accessibility.patch",
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/better-accessibility/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/better-accessibility/agents/openai.yaml",
+          "sourceSha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563"
+        },
+        {
+          "snapshot": "sources/upstream/better-accessibility/supporting/focus-and-keyboard.md",
+          "relativePath": "focus-and-keyboard.md",
+          "upstreamPath": "skills/better-accessibility/focus-and-keyboard.md",
+          "sourceSha256": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b"
+        },
+        {
+          "snapshot": "sources/upstream/better-accessibility/supporting/forms.md",
+          "relativePath": "forms.md",
+          "upstreamPath": "skills/better-accessibility/forms.md",
+          "sourceSha256": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4"
+        },
+        {
+          "snapshot": "sources/upstream/better-accessibility/supporting/hit-areas.md",
+          "relativePath": "hit-areas.md",
+          "upstreamPath": "skills/better-accessibility/hit-areas.md",
+          "sourceSha256": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53"
+        },
+        {
+          "snapshot": "sources/upstream/better-accessibility/supporting/motion-and-zoom.md",
+          "relativePath": "motion-and-zoom.md",
+          "upstreamPath": "skills/better-accessibility/motion-and-zoom.md",
+          "sourceSha256": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714"
+        },
+        {
+          "snapshot": "sources/upstream/better-accessibility/supporting/screen-readers.md",
+          "relativePath": "screen-readers.md",
+          "upstreamPath": "skills/better-accessibility/screen-readers.md",
+          "sourceSha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a"
+        },
+        {
+          "snapshot": "sources/upstream/better-accessibility/supporting/semantics-and-aria.md",
+          "relativePath": "semantics-and-aria.md",
+          "upstreamPath": "skills/better-accessibility/semantics-and-aria.md",
+          "sourceSha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e"
+        }
+      ]
+    },
+    {
+      "id": "better-ui",
+      "owner": "Jakub Krehel",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "path": "skills/better-ui/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-ui/source.md",
+      "sourceSha256": "fb9807bb5c59a3ca9d4a27b25f56b36e5596251d280fb30c4b7f2ff8b6f4fe2d",
+      "license": "sources/upstream/better-ui/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "skills/atlas-craft/references/ui/index.md",
+      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Atlas motion ownership replaces conflicting numeric motion presets; surfaces and icons remain UI Polish responsibilities.",
+      "consumers": [
+        "atlas-craft",
+        "atlas-review"
+      ],
+      "rulings": [
+        "interface-local-routing",
+        "review-interface-routing",
+        "craft-motion-owner",
+        "review-motion-owner"
+      ],
+      "carriedPath": "references/ui/index.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/better-ui.patch",
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/better-ui/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/better-ui/agents/openai.yaml",
+          "sourceSha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871"
+        },
+        {
+          "snapshot": "sources/upstream/better-ui/supporting/animations.md",
+          "relativePath": "animations.md",
+          "upstreamPath": "skills/better-ui/animations.md",
+          "sourceSha256": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3"
+        },
+        {
+          "snapshot": "sources/upstream/better-ui/supporting/enter-exit.md",
+          "relativePath": "enter-exit.md",
+          "upstreamPath": "skills/better-ui/enter-exit.md",
+          "sourceSha256": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a"
+        },
+        {
+          "snapshot": "sources/upstream/better-ui/supporting/icon-transitions.md",
+          "relativePath": "icon-transitions.md",
+          "upstreamPath": "skills/better-ui/icon-transitions.md",
+          "sourceSha256": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06"
+        },
+        {
+          "snapshot": "sources/upstream/better-ui/supporting/icons.md",
+          "relativePath": "icons.md",
+          "upstreamPath": "skills/better-ui/icons.md",
+          "sourceSha256": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd"
+        },
+        {
+          "snapshot": "sources/upstream/better-ui/supporting/performance.md",
+          "relativePath": "performance.md",
+          "upstreamPath": "skills/better-ui/performance.md",
+          "sourceSha256": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6"
+        },
+        {
+          "snapshot": "sources/upstream/better-ui/supporting/surfaces.md",
+          "relativePath": "surfaces.md",
+          "upstreamPath": "skills/better-ui/surfaces.md",
+          "sourceSha256": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721"
+        }
+      ]
+    },
+    {
+      "id": "better-writing",
+      "owner": "Jakub Krehel",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "path": "skills/better-writing/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-writing/source.md",
+      "sourceSha256": "ef6843cbfcbafa62614b1a6e012c0b1ab6fd33eee0bdd84123cf49fe275c3a31",
+      "license": "sources/upstream/better-writing/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "skills/atlas-craft/references/copy/index.md",
+      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Local references replace independent upstream skill resolution; domain behavior remains upstream-owned.",
+      "consumers": [
+        "atlas-craft",
+        "atlas-review"
+      ],
+      "rulings": [
+        "interface-local-routing",
+        "review-interface-routing"
+      ],
+      "carriedPath": "references/copy/index.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/better-writing.patch",
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/better-writing/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/better-writing/agents/openai.yaml",
+          "sourceSha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67"
+        },
+        {
+          "snapshot": "sources/upstream/better-writing/supporting/patterns.md",
+          "relativePath": "patterns.md",
+          "upstreamPath": "skills/better-writing/patterns.md",
+          "sourceSha256": "93ed5285d2009213b600e6f5af53ae3f7e3ff0114014146779aeda1c1ab42077"
+        }
+      ]
+    },
+    {
+      "id": "better-interface",
+      "owner": "Jakub Krehel",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "path": "skills/better-interface/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/better-interface/source.md",
+      "sourceSha256": "23416fef4d08e0417927b6eb6763b7b08ed832451abfb9e26ea699262a28abcb",
+      "license": "sources/upstream/better-interface/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "skills/atlas-review/references/interface/audit/index.md",
+      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Route change scopes to the bundled Interface Changes method without requiring another invocation.",
+      "consumers": [
+        "atlas-review"
+      ],
+      "rulings": [
+        "review-interface-routing"
+      ],
+      "carriedPath": "references/interface/audit/index.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/better-interface.patch",
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/better-interface/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/better-interface/agents/openai.yaml",
+          "sourceSha256": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc"
+        },
+        {
+          "snapshot": "sources/upstream/better-interface/supporting/review-format.md",
+          "relativePath": "review-format.md",
+          "upstreamPath": "skills/better-interface/review-format.md",
+          "sourceSha256": "4bb2715d6cd7c8afbd984cbe71148a214c9d43ffd535ba00789f7709ee743c01"
+        }
+      ]
+    },
+    {
+      "id": "interface-review",
+      "owner": "Jakub Krehel",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "path": "skills/interface-review/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/interface-review/source.md",
+      "sourceSha256": "8977988d63d7c17b8b0cd334ebd722d4e2dff00af0f152de2bc6f100d13d59ce",
+      "license": "sources/upstream/interface-review/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "skills/atlas-review/references/interface/changes/index.md",
+      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Use the supplied Atlas Review target and locally loaded audit method; retain introduced/regression/pre-existing classification.",
+      "consumers": [
+        "atlas-review"
+      ],
+      "rulings": [
+        "review-interface-routing"
+      ],
+      "carriedPath": "references/interface/changes/index.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/interface-review.patch",
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/interface-review/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/interface-review/agents/openai.yaml",
+          "sourceSha256": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f"
+        },
+        {
+          "snapshot": "sources/upstream/interface-review/supporting/removed-signals.md",
+          "relativePath": "removed-signals.md",
+          "upstreamPath": "skills/interface-review/removed-signals.md",
+          "sourceSha256": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac"
+        },
+        {
+          "snapshot": "sources/upstream/interface-review/supporting/scope-resolution.md",
+          "relativePath": "scope-resolution.md",
+          "upstreamPath": "skills/interface-review/scope-resolution.md",
+          "sourceSha256": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e"
+        }
+      ]
+    },
+    {
+      "id": "improve-animations",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/improve-animations/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/improve-animations/source.md",
+      "sourceSha256": "73962447464433476343e2c12cd08ab39cc99a9e5f3c118c5fb54ed897574ef6",
+      "license": "sources/upstream/improve-animations/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "skills/atlas-review/references/motion-audit/index.md",
+      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Remove the canned initial response, route review and execution handoffs to Atlas operations, and respect repository artifact conventions.",
+      "consumers": [
+        "atlas-review"
+      ],
+      "rulings": [
+        "review-motion-owner"
+      ],
+      "carriedPath": "references/motion-audit/index.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/improve-animations.patch",
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/improve-animations/supporting/AUDIT.md",
+          "relativePath": "AUDIT.md",
+          "upstreamPath": "skills/improve-animations/AUDIT.md",
+          "sourceSha256": "551c8473e20e5f4774680bc24d45e1c68e50992582720905c6b077756b7b5a55"
+        },
+        {
+          "snapshot": "sources/upstream/improve-animations/supporting/PLAN-TEMPLATE.md",
+          "relativePath": "PLAN-TEMPLATE.md",
+          "upstreamPath": "skills/improve-animations/PLAN-TEMPLATE.md",
+          "sourceSha256": "0a08ac8e23fd2082d7ffb86aeed7b789de77328c3cf874b16f1a755f2ef0a6ad"
+        }
+      ]
+    },
+    {
+      "id": "find-animation-opportunities",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/find-animation-opportunities/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/find-animation-opportunities/source.md",
+      "sourceSha256": "d52a377819b84a71930f0c822cfe2849f40301605a2d5c7eccbfa3b257700df2",
+      "license": "sources/upstream/find-animation-opportunities/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "skills/atlas-motion/references/opportunities/index.md",
+      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Remove the canned initial response and route audit/planning handoffs to Atlas Review. No Native method is imported.",
+      "consumers": [
+        "atlas-motion"
+      ],
+      "rulings": [
+        "motion-local-routing"
+      ],
+      "carriedPath": "references/opportunities/index.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/find-animation-opportunities.patch",
+      "supportingFiles": []
     }
   ],
   "workflows": [
@@ -570,7 +948,18 @@
       "agent": "skills/atlas-review/agents/openai.yaml",
       "methods": [
         "code-review",
-        "review-animations"
+        "review-animations",
+        "better-interface",
+        "interface-review",
+        "better-colors",
+        "better-typography",
+        "better-layout",
+        "better-accessibility",
+        "better-ui",
+        "better-writing",
+        "animate",
+        "apple-design",
+        "improve-animations"
       ],
       "authoredReferences": [
         {
@@ -580,6 +969,10 @@
         {
           "input": "skills/atlas-review/references/static/scripts/changed-files.sh",
           "target": "references/static/scripts/changed-files.sh"
+        },
+        {
+          "input": "skills/atlas-motion/references/motion-ownership.md",
+          "target": "references/motion-ownership.md"
         }
       ],
       "dependencies": []
@@ -591,9 +984,19 @@
       "methods": [
         "better-colors",
         "better-typography",
-        "better-layout"
+        "better-layout",
+        "better-accessibility",
+        "better-ui",
+        "better-writing",
+        "animate",
+        "apple-design"
       ],
-      "authoredReferences": [],
+      "authoredReferences": [
+        {
+          "input": "skills/atlas-motion/references/motion-ownership.md",
+          "target": "references/motion-ownership.md"
+        }
+      ],
       "dependencies": []
     },
     {
@@ -602,7 +1005,8 @@
       "agent": "skills/atlas-motion/agents/openai.yaml",
       "methods": [
         "animate",
-        "apple-design"
+        "apple-design",
+        "find-animation-opportunities"
       ],
       "authoredReferences": [],
       "dependencies": []
@@ -778,6 +1182,74 @@
         "show-me"
       ],
       "decision": "Load Show Me before creating or updating the tracking artifact; select presentation for each relevant content requirement, preserving complete evidence, structured state and the existing acceptance contract."
+    },
+    {
+      "id": "interface-local-routing",
+      "owner": "atlas-craft",
+      "document": "skills/atlas-craft/references/routing.md",
+      "section": "Routing and ownership",
+      "sources": [
+        "better-colors",
+        "better-typography",
+        "better-layout",
+        "better-accessibility",
+        "better-ui",
+        "better-writing"
+      ],
+      "decision": "References resolve locally; whole-interface review is an optional Atlas Review handoff."
+    },
+    {
+      "id": "review-interface-routing",
+      "owner": "atlas-review",
+      "document": "skills/atlas-review/references/routing.md",
+      "section": "Routing and ownership",
+      "sources": [
+        "better-interface",
+        "interface-review",
+        "better-colors",
+        "better-typography",
+        "better-layout",
+        "better-accessibility",
+        "better-ui",
+        "better-writing"
+      ],
+      "decision": "Review bundles its six domains; choose audit or change scope and preserve read-only authorization."
+    },
+    {
+      "id": "craft-motion-owner",
+      "owner": "atlas-craft",
+      "document": "skills/atlas-craft/references/routing.md",
+      "section": "Routing and ownership",
+      "sources": [
+        "better-ui",
+        "animate",
+        "apple-design"
+      ],
+      "decision": "Shared motion ownership overrides UI polish presets, including supporting examples."
+    },
+    {
+      "id": "review-motion-owner",
+      "owner": "atlas-review",
+      "document": "skills/atlas-review/references/routing.md",
+      "section": "Routing and ownership",
+      "sources": [
+        "better-ui",
+        "animate",
+        "apple-design",
+        "improve-animations"
+      ],
+      "decision": "Shared motion ownership governs judgments; review and audit do not authorize implementation."
+    },
+    {
+      "id": "motion-local-routing",
+      "owner": "atlas-motion",
+      "document": "skills/atlas-motion/references/routing.md",
+      "section": "Routing and ownership",
+      "sources": [
+        "animate",
+        "find-animation-opportunities"
+      ],
+      "decision": "Discovery is read-only; implementation follows authorization; review handoffs use Atlas Review and Native remains external."
     }
   ]
 }

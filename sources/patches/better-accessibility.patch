@@ -1,0 +1,14 @@
+diff --git a/source.md b/source.md
+index 799e521..85d9549 100644
+--- a/source.md
++++ b/source.md
+@@ -5,6 +5,9 @@ description: Reviews and fixes keyboard and focus behavior, ARIA, accessible nam
+ 
+ # Accessibility
+ 
++## Atlas integration
++Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
++
+ This skill reviews and fixes semantics, keyboard and focus behavior, accessible names, forms, announcements, motion and zoom. It reports each failure against the WCAG criterion it breaks and writes the fix in the project's styling system.
+ 
+ Reviewing means two walks. Keyboard-only, where every flow completes without a mouse. Then screen-reader, where every control announces a name, a role and its state. When unsure, take the platform default over a custom rebuild, and remove ARIA rather than add it.

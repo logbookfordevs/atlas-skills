@@ -133,3 +133,30 @@ test('preparation preserves Atlas invocation metadata while carrying relocated u
   write('sources/composition.json', JSON.stringify(unsafe));
   assert.throws(() => buildSkills(root), /Invalid package path/);
 });
+
+test('adoption refreshes each shared-source consumer and preserves its authored routing', t => {
+  const { root, source, revision } = fixture(t);
+  const write = (name, value) => { mkdirSync(join(root, name, '..'), { recursive: true }); writeFileSync(join(root, name), value); };
+  source.consumers = ['fixture-craft', 'fixture-review'];
+  source.carriedPath = 'references/domain/index.md';
+  write(source.snapshot, 'before\n'); write(source.license, 'license\n');
+  write('stacks/atlas.json', '{"version":1,"sources":[]}');
+  const workflows = source.consumers.map(id => {
+    const entry = `skills/${id}/SKILL.md`, agent = `skills/${id}/agents/openai.yaml`;
+    write(entry, `---\nname: ${id}\ndescription: Fixture\n---\n`);
+    write(agent, 'policy: {}\n');
+    write(`skills/${id}/references/routing.md`, `${id} owns its routing\n`);
+    return { id, entry, agent, methods: ['fixture'], dependencies: [] };
+  });
+  const manifest = { version: 1, sources: [source], workflows, rulings: [] };
+  write('sources/composition.json', JSON.stringify(manifest));
+  buildSkills(root);
+  revision.files.set('skills/fixture/details.md', bytes('shared detail\n'));
+  prepareUpdate(root, source, inspectSource(source, revision, root), manifest);
+  for (const id of source.consumers) {
+    assert.equal(readFileSync(join(root, `skills/${id}/references/domain/index.md`), 'utf8'), 'after\n');
+    assert.equal(readFileSync(join(root, `skills/${id}/references/domain/details.md`), 'utf8'), 'shared detail\n');
+    assert.equal(readFileSync(join(root, `skills/${id}/references/routing.md`), 'utf8'), `${id} owns its routing\n`);
+  }
+  buildSkills(root, { check: true });
+});

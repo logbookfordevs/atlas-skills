@@ -1,0 +1,14 @@
+diff --git a/source.md b/source.md
+index e23e310..65f5b5b 100644
+--- a/source.md
++++ b/source.md
+@@ -5,6 +5,9 @@ description: Sets and reviews how text renders in your product, from the type sc
+ 
+ # Typography
+ 
++## Atlas integration
++Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
++
+ This skill sets and reviews how text renders, from the type scale and spacing to font loading, wrapping and punctuation. It writes every fix in the project's styling system, and the [cheat sheet](css-cheat-sheet.md) maps each declaration to its Tailwind utility.
+ 
+ The words belong to `better-writing`, semantic heading structure to `better-accessibility` and spatial RTL layout to `better-layout`. Measure contrast with `better-colors`; whether it passes is `better-accessibility`'s.
