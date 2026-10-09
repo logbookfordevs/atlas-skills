@@ -125,7 +125,11 @@ describe('Atlas navigation', () => {
   it('shows both original authors and the collection that selected Craft references', () => {
     open('/skills/atlas-craft/');
     const origins = screen.getByRole('region', { name: 'Built on' });
-    expect(within(origins).getAllByText('Jakub Krehel')).toHaveLength(3);
+    expect(within(origins).getAllByText('Jakub Krehel')).toHaveLength(6);
+    expect(within(origins).getAllByText('Emil Kowalski')).toHaveLength(2);
+    for (const title of ['Better Accessibility', 'Better UI', 'Better Writing', 'Animate', 'Apple Design']) {
+      expect(within(origins).getByRole('link', { name: title }).getAttribute('href')).toMatch(/\/blob\/[a-f0-9]{40}\//);
+    }
     expect(within(origins).getByRole('link', { name: 'Product Engineering' }).getAttribute('href')).toBe('https://github.com/backnotprop/product-engineering');
   });
 });

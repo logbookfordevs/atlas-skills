@@ -1,0 +1,38 @@
+diff --git a/source.md b/source.md
+index 24a5662..332c6c5 100644
+--- a/source.md
++++ b/source.md
+@@ -5,11 +5,14 @@ description: Helps you build and check a color system for your project. It gener
+ 
+ # Colors
+ 
++## Atlas integration
++Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
++
+ This skill builds and audits color systems. It generates ramps, maps their steps to roles and token names, converts notation and measures rendered contrast pairs.
+ 
+ Never report a contrast value you did not measure, and never estimate a color you could compute. Notation, a tinted neutral and a gradient's interpolation space are project choices, not findings. A broken role mapping, a failing pair and an out-of-gamut step are findings. Perceived lightness throughout means OKLCH `L`, from `0` to `1`.
+ 
+-Whether a pair is required to pass belongs to `better-accessibility`. Surfaces, shadows and icon color belong to `better-ui`.
++Whether a pair is required to pass belongs to [Accessibility](../accessibility/index.md). Surfaces, shadows and icon color belong to [UI Polish](../ui/index.md).
+ 
+ ## Match the project's color system
+ 
+@@ -39,7 +42,7 @@ A ramp holds one hue end to end, peaks in vividness mid-ramp and steps more fine
+ 
+ ## One color, one meaning
+ 
+-Use a color for one purpose across the whole interface, treating anything within `15°` of OKLCH hue as the same color ([color-usage.md](color-usage.md)). Never let color be the only carrier of meaning. Pair it with an icon or a label, a requirement `better-accessibility` owns.
++Use a color for one purpose across the whole interface, treating anything within `15°` of OKLCH hue as the same color ([color-usage.md](color-usage.md)). Never let color be the only carrier of meaning. Pair it with an icon or a label, a requirement [Accessibility](../accessibility/index.md) owns.
+ 
+ ## Fill exactly one action per view
+ 
+@@ -81,7 +84,7 @@ The space is a look, not a correctness setting. Default to `in oklab`, and reach
+ 
+ **Severity.** `HIGH` makes content unreadable or assigns a misleading semantic color. `MEDIUM` is a noticeable theme, token or gamut failure. `LOW` is isolated polish.
+ 
+-Three symptoms are `HIGH` on sight whatever the surface, matching `better-interface`'s escalation triggers. They are body or control text whose rendered pair fails its required ratio, state or meaning carried by color alone and a semantic color used against its meaning.
++Three symptoms are `HIGH` on sight whatever the surface, matching the whole-interface review's escalation triggers. They are body or control text whose rendered pair fails its required ratio, state or meaning carried by color alone and a semantic color used against its meaning.
+ 
+ **Verification.** Without a browser: token values, the gamut of every declared color, both theme blocks present and contrast computed from the declared token pair. With one: the background actually rendered behind the text, including opacity and any image beneath it, measured in both light and dark. Report every check you could not run as `Not verified`.
+ 

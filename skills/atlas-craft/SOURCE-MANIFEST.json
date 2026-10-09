@@ -5,6 +5,7 @@
   "managedFiles": [
     "references/color/index.md",
     "licenses/better-colors.txt",
+    "references/color/agents/openai.yaml",
     "references/color/color-formats.md",
     "references/color/color-usage.md",
     "references/color/contrast.md",
@@ -13,6 +14,7 @@
     "references/color/token-naming.md",
     "references/type/index.md",
     "licenses/better-typography.txt",
+    "references/type/agents/openai.yaml",
     "references/type/choosing-fonts.md",
     "references/type/css-cheat-sheet.md",
     "references/type/details-and-accessibility.md",
@@ -21,69 +23,114 @@
     "references/type/wrapping-and-punctuation.md",
     "references/layout/index.md",
     "licenses/better-layout.txt",
+    "references/layout/agents/openai.yaml",
     "references/layout/grouping-and-alignment.md",
-    "references/layout/spacing-and-adaptivity.md"
+    "references/layout/spacing-and-adaptivity.md",
+    "references/accessibility/index.md",
+    "licenses/better-accessibility.txt",
+    "references/accessibility/agents/openai.yaml",
+    "references/accessibility/focus-and-keyboard.md",
+    "references/accessibility/forms.md",
+    "references/accessibility/hit-areas.md",
+    "references/accessibility/motion-and-zoom.md",
+    "references/accessibility/screen-readers.md",
+    "references/accessibility/semantics-and-aria.md",
+    "references/ui/index.md",
+    "licenses/better-ui.txt",
+    "references/ui/agents/openai.yaml",
+    "references/ui/animations.md",
+    "references/ui/enter-exit.md",
+    "references/ui/icon-transitions.md",
+    "references/ui/icons.md",
+    "references/ui/performance.md",
+    "references/ui/surfaces.md",
+    "references/copy/index.md",
+    "licenses/better-writing.txt",
+    "references/copy/agents/openai.yaml",
+    "references/copy/patterns.md",
+    "references/animate/animate.md",
+    "licenses/animate.txt",
+    "references/animate/RECIPES.md",
+    "references/fluid/apple-design.md",
+    "licenses/apple-design.txt"
   ],
   "authoredInputs": [
     "skills/atlas-craft/SKILL.md",
-    "skills/atlas-craft/agents/openai.yaml"
+    "skills/atlas-craft/agents/openai.yaml",
+    "skills/atlas-motion/references/motion-ownership.md"
   ],
-  "authoredReferences": [],
+  "authoredReferences": [
+    {
+      "input": "skills/atlas-motion/references/motion-ownership.md",
+      "target": "references/motion-ownership.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e"
+    }
+  ],
   "dependencies": [],
   "sources": [
     {
       "id": "better-colors",
       "owner": "Atlas Implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
         "path": "skills/better-colors/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [
         {
+          "upstreamPath": "skills/better-colors/agents/openai.yaml",
+          "classification": "verbatim",
+          "sourceSha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+          "carriedPath": "references/color/agents/openai.yaml",
+          "carriedSha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a"
+        },
+        {
           "upstreamPath": "skills/better-colors/color-formats.md",
           "classification": "verbatim",
-          "sourceSha256": "e68fffec8f7b8e1036c295fce8d65785764f33aead5d292389c47451e79d7129",
+          "sourceSha256": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
           "carriedPath": "references/color/color-formats.md",
-          "carriedSha256": "e68fffec8f7b8e1036c295fce8d65785764f33aead5d292389c47451e79d7129"
+          "carriedSha256": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba"
         },
         {
           "upstreamPath": "skills/better-colors/color-usage.md",
           "classification": "verbatim",
-          "sourceSha256": "dbaa4a4cb10b8118165fca4531b3c35b409c79185f15a2812a34f118293dba9f",
+          "sourceSha256": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
           "carriedPath": "references/color/color-usage.md",
-          "carriedSha256": "dbaa4a4cb10b8118165fca4531b3c35b409c79185f15a2812a34f118293dba9f"
+          "carriedSha256": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773"
         },
         {
           "upstreamPath": "skills/better-colors/contrast.md",
-          "classification": "verbatim",
-          "sourceSha256": "f9a2f8ca2fd7966ea0002a9dd58b9d392fbb14fc6f4365534c488046337e5971",
+          "classification": "patched",
+          "sourceSha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
           "carriedPath": "references/color/contrast.md",
-          "carriedSha256": "f9a2f8ca2fd7966ea0002a9dd58b9d392fbb14fc6f4365534c488046337e5971"
+          "carriedSha256": "5bd96efee5f5a0603bda06929809b3c8684a5507ff12806007a4b712ba2dd041",
+          "patch": "sources/patches/better-colors/contrast.md.patch",
+          "patchSha256": "fd4d487aef6f4666df609c96b752aeafdd9af5ad61f8409f1068b195df236ef8"
         },
         {
           "upstreamPath": "skills/better-colors/palette-generation.md",
           "classification": "verbatim",
-          "sourceSha256": "f3e3f9fc84fd834cfffd9e0c951f28c3f24c3c4a4492d86b697d3258f500fb85",
+          "sourceSha256": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
           "carriedPath": "references/color/palette-generation.md",
-          "carriedSha256": "f3e3f9fc84fd834cfffd9e0c951f28c3f24c3c4a4492d86b697d3258f500fb85"
+          "carriedSha256": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5"
         },
         {
           "upstreamPath": "skills/better-colors/palette-structure.md",
           "classification": "verbatim",
-          "sourceSha256": "82b22d74ead2a551a2a505347273025020d84dcde4a0170ea2fd14290dc10387",
+          "sourceSha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
           "carriedPath": "references/color/palette-structure.md",
-          "carriedSha256": "82b22d74ead2a551a2a505347273025020d84dcde4a0170ea2fd14290dc10387"
+          "carriedSha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62"
         },
         {
           "upstreamPath": "skills/better-colors/token-naming.md",
           "classification": "verbatim",
-          "sourceSha256": "198ca90a643d52f446fe423464908e900d31923ee7d13d6454c8b791326d6b2a",
+          "sourceSha256": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
           "carriedPath": "references/color/token-naming.md",
-          "carriedSha256": "198ca90a643d52f446fe423464908e900d31923ee7d13d6454c8b791326d6b2a"
+          "carriedSha256": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a"
         }
       ],
       "notices": [],
@@ -95,71 +142,82 @@
         "sha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
         "trackingRef": "main"
       },
-      "sourceSha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+      "sourceSha256": "e74f1c413a4094dc2a73fb0baa0da2241465e01d593b0257ba995500df9b0068",
       "carriedPath": "references/color/index.md",
-      "carriedSha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+      "carriedSha256": "c49f15e8e320fb2ba9b96de6c0acd41b279bbdea44165b362eac3f4ca7f906e5",
       "licensePath": "licenses/better-colors.txt",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
+      "adoptedAt": "2026-10-09",
       "rulings": [
-        "craft-local-names"
-      ]
+        "craft-local-names",
+        "interface-local-routing",
+        "review-interface-routing"
+      ],
+      "patch": "sources/patches/better-colors.patch",
+      "patchSha256": "3fc1eef9bf8e999a8178dd7366401b81b0d7fb8179c0a9ab94e2135e0aca3544"
     },
     {
       "id": "better-typography",
       "owner": "Atlas Implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
         "path": "skills/better-typography/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [
         {
+          "upstreamPath": "skills/better-typography/agents/openai.yaml",
+          "classification": "verbatim",
+          "sourceSha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+          "carriedPath": "references/type/agents/openai.yaml",
+          "carriedSha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8"
+        },
+        {
           "upstreamPath": "skills/better-typography/choosing-fonts.md",
           "classification": "verbatim",
-          "sourceSha256": "d139ec5d68cd123bc305d920295f7bc95a1e1123674de96d19103c1ebffc85c9",
+          "sourceSha256": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
           "carriedPath": "references/type/choosing-fonts.md",
-          "carriedSha256": "d139ec5d68cd123bc305d920295f7bc95a1e1123674de96d19103c1ebffc85c9"
+          "carriedSha256": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d"
         },
         {
           "upstreamPath": "skills/better-typography/css-cheat-sheet.md",
           "classification": "verbatim",
-          "sourceSha256": "45c77f0d1954e12e76c3903361f52703cb4f4287d54c651710f60926247165fb",
+          "sourceSha256": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
           "carriedPath": "references/type/css-cheat-sheet.md",
-          "carriedSha256": "45c77f0d1954e12e76c3903361f52703cb4f4287d54c651710f60926247165fb"
+          "carriedSha256": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9"
         },
         {
           "upstreamPath": "skills/better-typography/details-and-accessibility.md",
           "classification": "verbatim",
-          "sourceSha256": "d74e2719ee793fbf7408883e0e5eb396b67514ce07e02412f33d5408ecb4a02e",
+          "sourceSha256": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
           "carriedPath": "references/type/details-and-accessibility.md",
-          "carriedSha256": "d74e2719ee793fbf7408883e0e5eb396b67514ce07e02412f33d5408ecb4a02e"
+          "carriedSha256": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23"
         },
         {
           "upstreamPath": "skills/better-typography/spacing-and-sizing.md",
           "classification": "verbatim",
-          "sourceSha256": "e28e7899a73a8b17f38418dfd8c1afda116db81a3b68d53dd51eab019b20ab82",
+          "sourceSha256": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
           "carriedPath": "references/type/spacing-and-sizing.md",
-          "carriedSha256": "e28e7899a73a8b17f38418dfd8c1afda116db81a3b68d53dd51eab019b20ab82"
+          "carriedSha256": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f"
         },
         {
           "upstreamPath": "skills/better-typography/variable-fonts-and-opentype.md",
           "classification": "verbatim",
-          "sourceSha256": "2bf1317ea5c0af6e36c57d15aacea512e450acbe4b00a8664c4619a959dea0b0",
+          "sourceSha256": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
           "carriedPath": "references/type/variable-fonts-and-opentype.md",
-          "carriedSha256": "2bf1317ea5c0af6e36c57d15aacea512e450acbe4b00a8664c4619a959dea0b0"
+          "carriedSha256": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556"
         },
         {
           "upstreamPath": "skills/better-typography/wrapping-and-punctuation.md",
           "classification": "verbatim",
-          "sourceSha256": "7cfa3463b68cf21f08ab01a184b12c8bf2fe9340c2c7691a8cc99e4569389efe",
+          "sourceSha256": "44ef7be30b3342c0a81f7b07c2f7138c9743b8df8c8edab518907e8ec0abd68a",
           "carriedPath": "references/type/wrapping-and-punctuation.md",
-          "carriedSha256": "7cfa3463b68cf21f08ab01a184b12c8bf2fe9340c2c7691a8cc99e4569389efe"
+          "carriedSha256": "44ef7be30b3342c0a81f7b07c2f7138c9743b8df8c8edab518907e8ec0abd68a"
         }
       ],
       "notices": [],
@@ -171,43 +229,58 @@
         "sha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
         "trackingRef": "main"
       },
-      "sourceSha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+      "sourceSha256": "e60ca6467ba60e68f95ed2d2cfa35f2a850d96ef2a0c0d3fcfcfd9510e51f184",
       "carriedPath": "references/type/index.md",
-      "carriedSha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+      "carriedSha256": "877a0763bae9413c1b91e102c7b97d05abc19e4a7279f18061178345e845552c",
       "licensePath": "licenses/better-typography.txt",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
+      "adoptedAt": "2026-10-09",
       "rulings": [
-        "craft-local-names"
-      ]
+        "craft-local-names",
+        "interface-local-routing",
+        "review-interface-routing"
+      ],
+      "patch": "sources/patches/better-typography.patch",
+      "patchSha256": "bd2a1db4301fb8bd0f38d674844ecfcf1233199d69ae36419eb2d7ce3dbf0a7a"
     },
     {
       "id": "better-layout",
       "owner": "Atlas Implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
         "path": "skills/better-layout/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [
         {
-          "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
+          "upstreamPath": "skills/better-layout/agents/openai.yaml",
           "classification": "verbatim",
-          "sourceSha256": "027edd034ab641e8affc2ec02ca97ee0824d86756b14e11de908d62f5d086fb1",
+          "sourceSha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+          "carriedPath": "references/layout/agents/openai.yaml",
+          "carriedSha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15"
+        },
+        {
+          "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
+          "classification": "patched",
+          "sourceSha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
           "carriedPath": "references/layout/grouping-and-alignment.md",
-          "carriedSha256": "027edd034ab641e8affc2ec02ca97ee0824d86756b14e11de908d62f5d086fb1"
+          "carriedSha256": "57fb668fc41bbfb3c57b4a39b547f54f47edd0d7965531e31b6d8b3fa6762036",
+          "patch": "sources/patches/better-layout/grouping-and-alignment.md.patch",
+          "patchSha256": "5e2ec69536cd5c3f8a50f15b21261770de304d0647a5b0e9414a4a62d0e45ca4"
         },
         {
           "upstreamPath": "skills/better-layout/spacing-and-adaptivity.md",
-          "classification": "verbatim",
-          "sourceSha256": "bf46b0857efa5022e6918eda026827e9de2747f3f349b5a6787a2322179abe77",
+          "classification": "patched",
+          "sourceSha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
           "carriedPath": "references/layout/spacing-and-adaptivity.md",
-          "carriedSha256": "bf46b0857efa5022e6918eda026827e9de2747f3f349b5a6787a2322179abe77"
+          "carriedSha256": "bfd2eb6f0ff442a11db7459d2a838070da7dd54ed637a02de9c0da09d541f599",
+          "patch": "sources/patches/better-layout/spacing-and-adaptivity.md.patch",
+          "patchSha256": "d982ccb959c35614e4b8ad1607b03504a86a451af3ec28000f7018bcf5704277"
         }
       ],
       "notices": [],
@@ -219,16 +292,292 @@
         "sha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
         "trackingRef": "main"
       },
-      "sourceSha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+      "sourceSha256": "8c5883ccb23c27c39b7c58d101154ff35e032410e0dc4794be9ab7fe070c2297",
       "carriedPath": "references/layout/index.md",
-      "carriedSha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+      "carriedSha256": "27ecc29f5b3ad1101ccd7322804f064601bb63112e42549e68dbc7c43c5c01ba",
       "licensePath": "licenses/better-layout.txt",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Retained as source evidence; no active workflow consumer.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
+      "adoptedAt": "2026-10-09",
       "rulings": [
-        "craft-local-names"
+        "craft-local-names",
+        "interface-local-routing",
+        "review-interface-routing"
+      ],
+      "patch": "sources/patches/better-layout.patch",
+      "patchSha256": "9b076ca40d7eae0e0123d032b161187be2295d0b3e46d6b53fcda336b58fcd70"
+    },
+    {
+      "id": "better-accessibility",
+      "owner": "Jakub Krehel",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "path": "skills/better-accessibility/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/better-accessibility/agents/openai.yaml",
+          "classification": "verbatim",
+          "sourceSha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+          "carriedPath": "references/accessibility/agents/openai.yaml",
+          "carriedSha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563"
+        },
+        {
+          "upstreamPath": "skills/better-accessibility/focus-and-keyboard.md",
+          "classification": "verbatim",
+          "sourceSha256": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+          "carriedPath": "references/accessibility/focus-and-keyboard.md",
+          "carriedSha256": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b"
+        },
+        {
+          "upstreamPath": "skills/better-accessibility/forms.md",
+          "classification": "verbatim",
+          "sourceSha256": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4",
+          "carriedPath": "references/accessibility/forms.md",
+          "carriedSha256": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4"
+        },
+        {
+          "upstreamPath": "skills/better-accessibility/hit-areas.md",
+          "classification": "verbatim",
+          "sourceSha256": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+          "carriedPath": "references/accessibility/hit-areas.md",
+          "carriedSha256": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53"
+        },
+        {
+          "upstreamPath": "skills/better-accessibility/motion-and-zoom.md",
+          "classification": "patched",
+          "sourceSha256": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+          "carriedPath": "references/accessibility/motion-and-zoom.md",
+          "carriedSha256": "e51c1ab757c16bd5d6fb2d51d576805c8081c745f8791103d014cb377f7a957d",
+          "patch": "sources/patches/better-accessibility/motion-and-zoom.md.patch",
+          "patchSha256": "ad8f3970e54ef22d685fcc4683391998193eb805a332ea9e7f1f84d41b0c79cd"
+        },
+        {
+          "upstreamPath": "skills/better-accessibility/screen-readers.md",
+          "classification": "verbatim",
+          "sourceSha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+          "carriedPath": "references/accessibility/screen-readers.md",
+          "carriedSha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a"
+        },
+        {
+          "upstreamPath": "skills/better-accessibility/semantics-and-aria.md",
+          "classification": "patched",
+          "sourceSha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+          "carriedPath": "references/accessibility/semantics-and-aria.md",
+          "carriedSha256": "574a3bf880b5331f865e4e0642818c0977df53cb33207fd03fd92165f574b476",
+          "patch": "sources/patches/better-accessibility/semantics-and-aria.md.patch",
+          "patchSha256": "8bcbbd3a8868155e8d3ce6f2ab2ea5ca6f49d8cb7ece4cfc27e000c00abe1d0b"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "df0cafe0e75a08548cf46a2a430f46c198e7e0ee9d46bdf7884c2afefb44b70e",
+      "carriedPath": "references/accessibility/index.md",
+      "carriedSha256": "00b7e0af49793cdade0ef23338f5517f9a21d753272aab899a020b43804158c4",
+      "licensePath": "licenses/better-accessibility.txt",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "rulings": [
+        "interface-local-routing",
+        "review-interface-routing"
+      ],
+      "patch": "sources/patches/better-accessibility.patch",
+      "patchSha256": "2049769a52cbf0579ccc0fada01b0bad917d61abfdcf6c03e8c24f527785ad33"
+    },
+    {
+      "id": "better-ui",
+      "owner": "Jakub Krehel",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "path": "skills/better-ui/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/better-ui/agents/openai.yaml",
+          "classification": "verbatim",
+          "sourceSha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+          "carriedPath": "references/ui/agents/openai.yaml",
+          "carriedSha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871"
+        },
+        {
+          "upstreamPath": "skills/better-ui/animations.md",
+          "classification": "verbatim",
+          "sourceSha256": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+          "carriedPath": "references/ui/animations.md",
+          "carriedSha256": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3"
+        },
+        {
+          "upstreamPath": "skills/better-ui/enter-exit.md",
+          "classification": "verbatim",
+          "sourceSha256": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
+          "carriedPath": "references/ui/enter-exit.md",
+          "carriedSha256": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a"
+        },
+        {
+          "upstreamPath": "skills/better-ui/icon-transitions.md",
+          "classification": "verbatim",
+          "sourceSha256": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
+          "carriedPath": "references/ui/icon-transitions.md",
+          "carriedSha256": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06"
+        },
+        {
+          "upstreamPath": "skills/better-ui/icons.md",
+          "classification": "patched",
+          "sourceSha256": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
+          "carriedPath": "references/ui/icons.md",
+          "carriedSha256": "d0ce0465d92589cccc3372df27da868cdd9b526cdabaeffb4c2aa0d1a1978a1d",
+          "patch": "sources/patches/better-ui/icons.md.patch",
+          "patchSha256": "7f2b189ed5cdfccd087f7c000904f05e249d9669d5df2a6899963c000c1b4576"
+        },
+        {
+          "upstreamPath": "skills/better-ui/performance.md",
+          "classification": "verbatim",
+          "sourceSha256": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6",
+          "carriedPath": "references/ui/performance.md",
+          "carriedSha256": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6"
+        },
+        {
+          "upstreamPath": "skills/better-ui/surfaces.md",
+          "classification": "verbatim",
+          "sourceSha256": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
+          "carriedPath": "references/ui/surfaces.md",
+          "carriedSha256": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "fb9807bb5c59a3ca9d4a27b25f56b36e5596251d280fb30c4b7f2ff8b6f4fe2d",
+      "carriedPath": "references/ui/index.md",
+      "carriedSha256": "38eebc1536201375f9ca5a17faf2019a3fdaa1f345034c1d259bd3dd842140e3",
+      "licensePath": "licenses/better-ui.txt",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "adaptation": "Replace sibling calls with direct bundled-method links. Atlas motion ownership overrides conflicting numeric presets; surfaces and icons remain UI Polish responsibilities. Pristine snapshots and unadapted supporting files remain verbatim.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "rulings": [
+        "interface-local-routing",
+        "review-interface-routing",
+        "craft-motion-owner",
+        "review-motion-owner"
+      ],
+      "patch": "sources/patches/better-ui.patch",
+      "patchSha256": "305e5090636beb4138aa2ce03b4cea9e8ec34ad714aed8590b8261284a48c0e0"
+    },
+    {
+      "id": "better-writing",
+      "owner": "Jakub Krehel",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "path": "skills/better-writing/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/better-writing/agents/openai.yaml",
+          "classification": "verbatim",
+          "sourceSha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+          "carriedPath": "references/copy/agents/openai.yaml",
+          "carriedSha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67"
+        },
+        {
+          "upstreamPath": "skills/better-writing/patterns.md",
+          "classification": "patched",
+          "sourceSha256": "93ed5285d2009213b600e6f5af53ae3f7e3ff0114014146779aeda1c1ab42077",
+          "carriedPath": "references/copy/patterns.md",
+          "carriedSha256": "bb7b6bb17fbdf9e249eeb5d2ada2bcc9863f67dd6659489b4f25a59587a0c324",
+          "patch": "sources/patches/better-writing/patterns.md.patch",
+          "patchSha256": "207ddf744c7107eb1307db735d50a1a5be16bdd9198f47ae522ca0a5cd054bf3"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "ef6843cbfcbafa62614b1a6e012c0b1ab6fd33eee0bdd84123cf49fe275c3a31",
+      "carriedPath": "references/copy/index.md",
+      "carriedSha256": "ae78d7772c0257f18ff19852dc69fdeaed46270c0077b9382d3f9acf1bc00cbb",
+      "licensePath": "licenses/better-writing.txt",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "rulings": [
+        "interface-local-routing",
+        "review-interface-routing"
+      ],
+      "patch": "sources/patches/better-writing.patch",
+      "patchSha256": "2e35b7d9b0798de5a8ee29297b06b690aa95a4f7d60a42ba72adae73fa6aaa4c"
+    },
+    {
+      "id": "animate",
+      "owner": "Atlas Implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/animate/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/animate/RECIPES.md",
+          "classification": "verbatim",
+          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+          "carriedPath": "references/animate/RECIPES.md",
+          "carriedSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "carriedPath": "references/animate/animate.md",
+      "carriedSha256": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
+      "licensePath": "licenses/animate.txt",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. Supporting files remain verbatim.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [
+        "craft-motion-owner",
+        "review-motion-owner",
+        "motion-local-routing"
+      ],
+      "patch": "sources/patches/animate.patch",
+      "patchSha256": "fcd519cae6f96cafdd36d2b9aecbe8e43c08de2f351f80bf44619dd7b44d92cd"
+    },
+    {
+      "id": "apple-design",
+      "owner": "Atlas Implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/apple-design/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+      "carriedPath": "references/fluid/apple-design.md",
+      "carriedSha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+      "licensePath": "licenses/apple-design.txt",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-05",
+      "rulings": [
+        "craft-motion-owner",
+        "review-motion-owner"
       ]
     }
   ],
@@ -244,30 +593,89 @@
         "better-layout"
       ],
       "decision": "Resolve named better-* calls locally."
+    },
+    {
+      "id": "interface-local-routing",
+      "owner": "atlas-craft",
+      "document": "skills/atlas-craft/references/ownership.md",
+      "section": "Scope and ownership",
+      "sources": [
+        "better-colors",
+        "better-typography",
+        "better-layout",
+        "better-accessibility",
+        "better-ui",
+        "better-writing"
+      ],
+      "decision": "References resolve locally; whole-interface review is an optional Atlas Review handoff."
+    },
+    {
+      "id": "craft-motion-owner",
+      "owner": "atlas-craft",
+      "document": "skills/atlas-craft/references/ownership.md",
+      "section": "Scope and ownership",
+      "sources": [
+        "better-ui",
+        "animate",
+        "apple-design"
+      ],
+      "decision": "Shared motion ownership overrides UI polish presets, including supporting examples."
     }
   ],
   "files": {
-    "SKILL.md": "e4aa56b2e29b3b4ab1093c0683403734f1a9cd8bc69a5f413d5e5334959f9d92",
-    "agents/openai.yaml": "749e3db250da459bfb2be66482b7db03dde2706bce505cec94cfebaa688516ab",
-    "references/color/index.md": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+    "SKILL.md": "d2c34a33fe5aaf5815b0eb009a326cca26b1092f07bf213caa6a09ae403f9fb6",
+    "agents/openai.yaml": "3ca2dcbde4b2ff99bab9a6daa5c29e236baa3d9c401a9fa1bf586bac0216165f",
+    "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
+    "references/color/index.md": "c49f15e8e320fb2ba9b96de6c0acd41b279bbdea44165b362eac3f4ca7f906e5",
     "licenses/better-colors.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/color/color-formats.md": "e68fffec8f7b8e1036c295fce8d65785764f33aead5d292389c47451e79d7129",
-    "references/color/color-usage.md": "dbaa4a4cb10b8118165fca4531b3c35b409c79185f15a2812a34f118293dba9f",
-    "references/color/contrast.md": "f9a2f8ca2fd7966ea0002a9dd58b9d392fbb14fc6f4365534c488046337e5971",
-    "references/color/palette-generation.md": "f3e3f9fc84fd834cfffd9e0c951f28c3f24c3c4a4492d86b697d3258f500fb85",
-    "references/color/palette-structure.md": "82b22d74ead2a551a2a505347273025020d84dcde4a0170ea2fd14290dc10387",
-    "references/color/token-naming.md": "198ca90a643d52f446fe423464908e900d31923ee7d13d6454c8b791326d6b2a",
-    "references/type/index.md": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+    "references/color/agents/openai.yaml": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+    "references/color/color-formats.md": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
+    "references/color/color-usage.md": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
+    "references/color/contrast.md": "5bd96efee5f5a0603bda06929809b3c8684a5507ff12806007a4b712ba2dd041",
+    "references/color/palette-generation.md": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
+    "references/color/palette-structure.md": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+    "references/color/token-naming.md": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
+    "references/type/index.md": "877a0763bae9413c1b91e102c7b97d05abc19e4a7279f18061178345e845552c",
     "licenses/better-typography.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/type/choosing-fonts.md": "d139ec5d68cd123bc305d920295f7bc95a1e1123674de96d19103c1ebffc85c9",
-    "references/type/css-cheat-sheet.md": "45c77f0d1954e12e76c3903361f52703cb4f4287d54c651710f60926247165fb",
-    "references/type/details-and-accessibility.md": "d74e2719ee793fbf7408883e0e5eb396b67514ce07e02412f33d5408ecb4a02e",
-    "references/type/spacing-and-sizing.md": "e28e7899a73a8b17f38418dfd8c1afda116db81a3b68d53dd51eab019b20ab82",
-    "references/type/variable-fonts-and-opentype.md": "2bf1317ea5c0af6e36c57d15aacea512e450acbe4b00a8664c4619a959dea0b0",
-    "references/type/wrapping-and-punctuation.md": "7cfa3463b68cf21f08ab01a184b12c8bf2fe9340c2c7691a8cc99e4569389efe",
-    "references/layout/index.md": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+    "references/type/agents/openai.yaml": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+    "references/type/choosing-fonts.md": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
+    "references/type/css-cheat-sheet.md": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
+    "references/type/details-and-accessibility.md": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
+    "references/type/spacing-and-sizing.md": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
+    "references/type/variable-fonts-and-opentype.md": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
+    "references/type/wrapping-and-punctuation.md": "44ef7be30b3342c0a81f7b07c2f7138c9743b8df8c8edab518907e8ec0abd68a",
+    "references/layout/index.md": "27ecc29f5b3ad1101ccd7322804f064601bb63112e42549e68dbc7c43c5c01ba",
     "licenses/better-layout.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/layout/grouping-and-alignment.md": "027edd034ab641e8affc2ec02ca97ee0824d86756b14e11de908d62f5d086fb1",
-    "references/layout/spacing-and-adaptivity.md": "bf46b0857efa5022e6918eda026827e9de2747f3f349b5a6787a2322179abe77"
+    "references/layout/agents/openai.yaml": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+    "references/layout/grouping-and-alignment.md": "57fb668fc41bbfb3c57b4a39b547f54f47edd0d7965531e31b6d8b3fa6762036",
+    "references/layout/spacing-and-adaptivity.md": "bfd2eb6f0ff442a11db7459d2a838070da7dd54ed637a02de9c0da09d541f599",
+    "references/accessibility/index.md": "00b7e0af49793cdade0ef23338f5517f9a21d753272aab899a020b43804158c4",
+    "licenses/better-accessibility.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+    "references/accessibility/agents/openai.yaml": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+    "references/accessibility/focus-and-keyboard.md": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+    "references/accessibility/forms.md": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4",
+    "references/accessibility/hit-areas.md": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+    "references/accessibility/motion-and-zoom.md": "e51c1ab757c16bd5d6fb2d51d576805c8081c745f8791103d014cb377f7a957d",
+    "references/accessibility/screen-readers.md": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+    "references/accessibility/semantics-and-aria.md": "574a3bf880b5331f865e4e0642818c0977df53cb33207fd03fd92165f574b476",
+    "references/ui/index.md": "38eebc1536201375f9ca5a17faf2019a3fdaa1f345034c1d259bd3dd842140e3",
+    "licenses/better-ui.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+    "references/ui/agents/openai.yaml": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+    "references/ui/animations.md": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+    "references/ui/enter-exit.md": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
+    "references/ui/icon-transitions.md": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
+    "references/ui/icons.md": "d0ce0465d92589cccc3372df27da868cdd9b526cdabaeffb4c2aa0d1a1978a1d",
+    "references/ui/performance.md": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6",
+    "references/ui/surfaces.md": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
+    "references/copy/index.md": "ae78d7772c0257f18ff19852dc69fdeaed46270c0077b9382d3f9acf1bc00cbb",
+    "licenses/better-writing.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+    "references/copy/agents/openai.yaml": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+    "references/copy/patterns.md": "bb7b6bb17fbdf9e249eeb5d2ada2bcc9863f67dd6659489b4f25a59587a0c324",
+    "references/animate/animate.md": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
+    "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+    "references/fluid/apple-design.md": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+    "licenses/apple-design.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/ownership.md": "ec025ecc463b5304bcfb628ce028789720cc3d828c73d5c436742a668e2b1e32"
   }
 }

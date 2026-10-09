@@ -1,9 +1,9 @@
 import { createHash } from 'node:crypto';
-import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import { replayPatch } from './source-patches.mjs';
 
 import { setupDependencies } from './setup-dependencies.mjs';
 
@@ -39,12 +39,9 @@ export function composeSkills(root = repositoryRoot) {
     const method = read(source.method);
     if (source.classification === 'verbatim' && !method.equals(read(source.snapshot))) throw new Error(`Verbatim mismatch: ${source.id}`);
     if (source.classification === 'patched') {
-      const temporary = mkdtempSync(join(tmpdir(), 'atlas-patch-'));
-      try {
-        writeFileSync(join(temporary, 'source.md'), read(source.snapshot));
-        execFileSync('git', ['apply', '--no-index', '-'], { cwd: temporary, input: read(source.patch), stdio: ['pipe', 'pipe', 'pipe'] });
-        if (!method.equals(readFileSync(join(temporary, 'source.md')))) throw new Error(`Patch replay mismatch: ${source.id}`);
-      } finally { rmSync(temporary, { recursive: true, force: true }); }
+      if (!source.patch && !(source.supportingFiles ?? []).some(file => file.patch)) throw new Error(`Missing patch registration: ${source.id}`);
+      const replayed = source.patch ? replayPatch(read(source.snapshot), read(source.patch)) : read(source.snapshot);
+      if (!method.equals(replayed)) throw new Error(`Patch replay mismatch: ${source.id}`);
     }
     sources.set(source.id, source);
   }
@@ -90,13 +87,21 @@ export function composeSkills(root = repositoryRoot) {
         if (!output.get(target).equals(read(source.method))) throw new Error(`Entry source mismatch: ${id}`);
       } else put(target, read(source.method));
       put(licenseTarget, read(source.license));
+      for (const [relativePath, carriedPath] of Object.entries(source.supportingFileTargets ?? {})) {
+        portablePath(relativePath);
+        portablePath(carriedPath);
+      }
       const supportingFiles = (source.supportingFiles ?? []).map(file => {
         portablePath(file.relativePath);
-        const bytes = read(file.snapshot);
-        if (sha256(bytes) !== file.sourceSha256) throw new Error(`Supporting file integrity failure: ${id}/${file.relativePath}`);
-        const carriedPath = join(dirname(target), file.relativePath);
+        const original = read(file.snapshot);
+        if (sha256(original) !== file.sourceSha256) throw new Error(`Supporting file integrity failure: ${id}/${file.relativePath}`);
+        const patched = Boolean(file.method || file.patch);
+        if (patched && (source.classification !== 'patched' || !file.method || !file.patch)) throw new Error(`Incomplete supporting patch: ${id}/${file.relativePath}`);
+        const bytes = patched ? read(file.method) : original;
+        if (patched && !bytes.equals(replayPatch(original, read(file.patch)))) throw new Error(`Supporting patch replay mismatch: ${id}/${file.relativePath}`);
+        const carriedPath = source.supportingFileTargets?.[file.relativePath] ?? join(dirname(target), file.relativePath);
         put(carriedPath, bytes);
-        return { upstreamPath: file.upstreamPath, classification: 'verbatim', sourceSha256: file.sourceSha256, carriedPath, carriedSha256: sha256(bytes) };
+        return { upstreamPath: file.upstreamPath, classification: patched ? 'patched' : 'verbatim', sourceSha256: file.sourceSha256, carriedPath, carriedSha256: sha256(bytes), ...(patched ? { patch: file.patch, patchSha256: sha256(read(file.patch)) } : {}) };
       });
       const notices = (source.notices ?? []).map(notice => {
         const bytes = read(notice.input);

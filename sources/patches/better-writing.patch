@@ -1,0 +1,47 @@
+diff --git a/source.md b/source.md
+index 55ad48e..1030a05 100644
+--- a/source.md
++++ b/source.md
+@@ -5,11 +5,14 @@ description: Writes and reviews your interface copy, from labels and errors to e
+ 
+ # Writing
+ 
++## Atlas integration
++Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
++
+ This skill writes and reviews interface copy such as labels, errors, empty states and confirmations, along with the terms that run through them. It matches the product's existing voice and flags copy that misleads people or leaves them without a way forward.
+ 
+ A deliberate brand voice is not a defect. Raise a departure from plain language only when it creates inconsistency, ambiguity, translation risk or a tone the stakes don't support. Rewording that merely suits your taste is not a finding.
+ 
+-How copy renders, including `text-transform`, truncation and smart punctuation, belongs to `better-typography`. Error markup, announcements and the attributes that carry accessible names belong to `better-accessibility`. Room for translated strings belongs to `better-layout`.
++How copy renders, including `text-transform`, truncation and smart punctuation, belongs to [Type](../type/index.md). Error markup, announcements and the attributes that carry accessible names belong to [Accessibility](../accessibility/index.md). Room for translated strings belongs to [Layout](../layout/index.md).
+ 
+ ## Inventory the existing strings first
+ 
+@@ -54,7 +57,7 @@ Never assemble a sentence from fragments around a variable (`"You have " + n + "
+ 
+ A button label starts with a verb naming the action: "Send", "Save draft", "Delete project". Never "OK!" or "Let's go!".
+ 
+-An icon-only button's accessible name follows the same rule. It names the action, "Delete project", never the glyph, "Trash icon". The attribute that carries it is `better-accessibility`'s.
++An icon-only button's accessible name follows the same rule. It names the action, "Delete project", never the glyph, "Trash icon". The attribute that carries it is [Accessibility](../accessibility/index.md)'s.
+ 
+ ## Links describe their destination
+ 
+@@ -95,7 +98,7 @@ Confirm before acting when the action cannot be reversed, affects other people o
+ - The buttons are verb plus object, `Delete project` and `Cancel`, never `Yes` and `No`.
+ - For an account, a workspace or a repository, ask the person to type the object's name.
+ 
+-Templates are in [patterns.md](patterns.md#destructive-flows). The destructive button's distinct color is `better-colors`'.
++Templates are in [patterns.md](patterns.md#destructive-flows). The destructive button's distinct color is [Color](../color/index.md)'.
+ 
+ ## Empty states point forward
+ 
+@@ -117,7 +120,7 @@ Loading, saving and success copy is in [patterns.md](patterns.md#status-copy).
+ 
+ ## Placeholders show an example
+ 
+-A placeholder shows a realistic example in the format the field accepts, `name@example.com` or `DD/MM/YYYY`, never an instruction. Whether the field also needs a visible label is `better-accessibility`'s.
++A placeholder shows a realistic example in the format the field accepts, `name@example.com` or `DD/MM/YYYY`, never an instruction. Whether the field also needs a visible label is [Accessibility](../accessibility/index.md)'s.
+ 
+ ## Before you finish
+ 

@@ -103,3 +103,102 @@ test('a missing baseline resource is distinguished from an upstream revision upd
   assert.equal(result.status, 'baseline-review');
   assert.equal(result.changed.length, 1);
 });
+
+test('preparation preserves Atlas invocation metadata while carrying relocated upstream metadata', t => {
+  const { root, source, revision } = fixture(t);
+  const write = (name, value) => { mkdirSync(join(root, name, '..'), { recursive: true }); writeFileSync(join(root, name), value); };
+  source.carriedPath = 'SKILL.md';
+  source.supportingFileTargets = { 'agents/openai.yaml': 'references/upstream/agents/openai.yaml' };
+  write(source.snapshot, 'before\n'); write(source.license, 'license\n');
+  const agent = 'skills/fixture-skill/agents/openai.yaml';
+  write(agent, 'interface:\n  display_name: Atlas Fixture\n');
+  write('stacks/atlas.json', '{"version":1,"sources":[]}');
+  const manifest = { version: 1, sources: [source], workflows: [{ id: 'fixture-skill', entry: source.snapshot, agent, methods: ['fixture'], dependencies: [] }], rulings: [] };
+  write('sources/composition.json', JSON.stringify(manifest));
+  buildSkills(root);
+  revision.files.set('skills/fixture/agents/openai.yaml', bytes('interface:\n  display_name: Upstream Fixture\n'));
+  prepareUpdate(root, source, inspectSource(source, revision, root), manifest);
+  assert.equal(readFileSync(join(root, agent), 'utf8'), 'interface:\n  display_name: Atlas Fixture\n');
+  const carried = 'skills/fixture-skill/references/upstream/agents/openai.yaml';
+  assert.equal(readFileSync(join(root, carried), 'utf8'), 'interface:\n  display_name: Upstream Fixture\n');
+  const next = JSON.parse(readFileSync(join(root, 'sources/composition.json')));
+  revision.commit = 'c'.repeat(40);
+  revision.files.set('skills/fixture/agents/openai.yaml', bytes('interface:\n  display_name: Updated Upstream\n'));
+  prepareUpdate(root, next.sources[0], inspectSource(next.sources[0], revision, root), next);
+  assert.equal(readFileSync(join(root, carried), 'utf8'), 'interface:\n  display_name: Updated Upstream\n');
+  assert.equal(readFileSync(join(root, agent), 'utf8'), 'interface:\n  display_name: Atlas Fixture\n');
+  buildSkills(root, { check: true });
+  const unsafe = JSON.parse(readFileSync(join(root, 'sources/composition.json')));
+  unsafe.sources[0].supportingFileTargets['agents/openai.yaml'] = '../escape';
+  write('sources/composition.json', JSON.stringify(unsafe));
+  assert.throws(() => buildSkills(root), /Invalid package path/);
+});
+
+test('adoption refreshes each shared-source consumer and preserves its authored routing', t => {
+  const { root, source, revision } = fixture(t);
+  const write = (name, value) => { mkdirSync(join(root, name, '..'), { recursive: true }); writeFileSync(join(root, name), value); };
+  source.consumers = ['fixture-craft', 'fixture-review'];
+  source.carriedPath = 'references/domain/index.md';
+  write(source.snapshot, 'before\n'); write(source.license, 'license\n');
+  write('stacks/atlas.json', '{"version":1,"sources":[]}');
+  const workflows = source.consumers.map(id => {
+    const entry = `skills/${id}/SKILL.md`, agent = `skills/${id}/agents/openai.yaml`;
+    write(entry, `---\nname: ${id}\ndescription: Fixture\n---\n`);
+    write(agent, 'policy: {}\n');
+    write(`skills/${id}/references/routing.md`, `${id} owns its routing\n`);
+    return { id, entry, agent, methods: ['fixture'], dependencies: [] };
+  });
+  const manifest = { version: 1, sources: [source], workflows, rulings: [] };
+  write('sources/composition.json', JSON.stringify(manifest));
+  buildSkills(root);
+  revision.files.set('skills/fixture/details.md', bytes('shared detail\n'));
+  prepareUpdate(root, source, inspectSource(source, revision, root), manifest);
+  for (const id of source.consumers) {
+    assert.equal(readFileSync(join(root, `skills/${id}/references/domain/index.md`), 'utf8'), 'after\n');
+    assert.equal(readFileSync(join(root, `skills/${id}/references/domain/details.md`), 'utf8'), 'shared detail\n');
+    assert.equal(readFileSync(join(root, `skills/${id}/references/routing.md`), 'utf8'), `${id} owns its routing\n`);
+  }
+  buildSkills(root, { check: true });
+});
+
+test('supporting patches survive adoption into all consumers and detect changed or removed targets', t => {
+  const { root, source, revision } = fixture(t);
+  const write = (name, value) => { mkdirSync(join(root, name, '..'), { recursive: true }); writeFileSync(join(root, name), value); };
+  source.classification = 'patched';
+  source.carriedPath = 'references/domain/index.md';
+  source.consumers = ['fixture-craft', 'fixture-review'];
+  const original = 'Header\n\nUse sibling.\n\nFooter\n';
+  const maintained = original.replace('sibling', '[Accessibility](../accessibility/index.md)');
+  const file = { relativePath: 'details.md', upstreamPath: 'skills/fixture/details.md', snapshot: 'sources/upstream/fixture/supporting/details.md', sourceSha256: sha256(bytes(original)), method: 'skills/fixture-craft/references/domain/details.md', patch: 'sources/patches/details.patch' };
+  source.supportingFiles = [file];
+  write(source.snapshot, 'before\n'); write(source.license, 'license\n');
+  write(file.snapshot, original); write(file.method, maintained);
+  write(file.patch, '--- a/source.md\n+++ b/source.md\n@@ -1,5 +1,5 @@\n Header\n \n-Use sibling.\n+Use [Accessibility](../accessibility/index.md).\n \n Footer\n');
+  write('stacks/atlas.json', '{"version":1,"sources":[]}');
+  const workflows = source.consumers.map(id => {
+    const entry = `skills/${id}/SKILL.md`, agent = `skills/${id}/agents/openai.yaml`;
+    write(entry, 'Fixture\n'); write(agent, 'policy: {}\n');
+    return { id, entry, agent, methods: ['fixture'], dependencies: [] };
+  });
+  const manifest = { version: 1, sources: [source], workflows, rulings: [] };
+  write('sources/composition.json', JSON.stringify(manifest));
+  buildSkills(root);
+  revision.files.set(source.upstream.path, bytes('before\n'));
+  revision.files.set(file.upstreamPath, bytes(`${original}\nNew upstream detail\n`));
+  const candidate = inspectSource(source, revision, root);
+  assert.equal(candidate.status, 'ready-for-review');
+  prepareUpdate(root, source, candidate, manifest);
+  for (const id of source.consumers) {
+    assert.equal(readFileSync(join(root, `skills/${id}/references/domain/details.md`), 'utf8'), `${maintained}\nNew upstream detail\n`);
+  }
+  const next = JSON.parse(readFileSync(join(root, 'sources/composition.json')));
+  assert.equal(next.sources[0].supportingFiles[0].patch, file.patch);
+  assert.equal(readFileSync(join(root, file.snapshot), 'utf8'), `${original}\nNew upstream detail\n`);
+  buildSkills(root, { check: true });
+  const before = readFileSync(join(root, file.method));
+  revision.files.set(file.upstreamPath, bytes('different instructions\n'));
+  assert.equal(inspectSource(next.sources[0], revision, root).status, 'conflict');
+  revision.files.delete(file.upstreamPath);
+  assert.equal(inspectSource(next.sources[0], revision, root).status, 'conflict');
+  assert.deepEqual(readFileSync(join(root, file.method)), before);
+});

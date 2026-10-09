@@ -1,0 +1,22 @@
+diff --git a/source.md b/source.md
+index 848d886..e9d23f5 100644
+--- a/source.md
++++ b/source.md
+@@ -46,7 +46,7 @@ The inverse holds too. A non-clickable badge shaped exactly like the buttons bes
+ 
+ - Typical stray edges are an icon 2px off the text edge and a card padded unlike its neighbor.
+ - Deeper nesting repeats the same spacing step rather than inventing a new one.
+-- Numbers in tables take `text-align: end`, text takes `text-align: start`. Tabular figures are `better-typography`'s.
++- Numbers in tables take `text-align: end`, text takes `text-align: start`. Tabular figures are [Type](../type/index.md)'s.
+ 
+ ```css
+ /* Good: one shared leading edge, one indent step */
+@@ -81,7 +81,7 @@ The inverse holds too. A non-clickable badge shaped exactly like the buttons bes
+ 
+ Flex rows and grid columns follow the inline direction, so they mirror under `dir="rtl"` on their own. Physical values inside them do not mirror, and neither do `translateX`, `background-position` or anything hand-positioned with `left` and `right`.
+ 
+-Where arrangement encodes progression, as in star ratings, step indicators and progress bars, the sequence mirrors in RTL. Stars fill from the leading edge, which is the right in RTL. Digit order inside numbers never reverses; that and other bidi rules belong to `better-typography`.
++Where arrangement encodes progression, as in star ratings, step indicators and progress bars, the sequence mirrors in RTL. Stars fill from the leading edge, which is the right in RTL. Digit order inside numbers never reverses; that and other bidi rules belong to [Type](../type/index.md).
+ 
+ ## Order by importance
+ 

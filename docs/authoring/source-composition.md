@@ -47,6 +47,8 @@ The builder refreshes bundled upstream files, Setup’s dependency registry and 
 
 4. For `verbatim`, set `method` to the pristine snapshot. For `patched`, put the maintained entry in `skills/<consumer>/<carriedPath>`, set `method` to that file and `patch` to `sources/patches/<source-id>.patch`, then record the patch. For a standalone patched skill, `carriedPath` is `SKILL.md` and its workflow entry is that same file.
 5. Add the source ID to each consumer’s `methods` list and point the skill’s loading condition to the bundled reference. Preserve supporting paths so upstream relative links resolve. Declare `upstream.includePaths` for repository-root entries or a deliberately narrower tracked scope; other entries track their containing skill directory.
+
+   When a standalone adaptation owns its invocation metadata, retain upstream metadata verbatim at a separate package path using `supportingFileTargets`, for example `{ "agents/openai.yaml": "references/upstream/agents/openai.yaml" }`. Keys are upstream-relative supporting paths; values are package-relative destinations. The watcher still tracks the complete selected tree. Use relocation only for files whose upstream-relative location is not required by runtime links.
 6. Register any concrete conflict ruling in `rulings`, with its owning package, runtime document, source IDs and decision. Runtime guidance carries the actionable ruling; maintenance explanations stay here or in receipts.
 7. Finish with validation. Only independently installable packages belong in the stack selection; bundled references need no separate installation.
 
@@ -62,7 +64,9 @@ pnpm check
 
 The source ID comes from `sources/composition.json`, and may differ from the consumer’s skill name. Recording captures the complete difference from the pinned original and verifies replay; it leaves the original intact.
 
-To change `verbatim` into `patched`, first copy the carried entry into its maintained package location, change `classification` to `patched`, set `method` to that package file, and add the patch path and adaptation record. Edit that file and run the sequence above. Supporting files remain verbatim; the current patch recorder covers the entry only. Changes to upstream supporting content require an explicit tooling extension or separate Atlas-owned reference.
+To change `verbatim` into `patched`, first copy the carried entry into its maintained package location, change `classification` to `patched`, set `method` to that package file, and add the patch path and adaptation record. Edit that file and run the sequence above. Supporting files remain verbatim unless their `supportingFiles` record declares both a maintained `method` path and a replayable `patch` path. Keep their snapshots and `sourceSha256` pristine. Record intentional edits in `adaptation`, then run the same patch-recording and build sequence; each supporting patch replays against its own snapshot using `source.md` as the patch-local filename. Receipts classify each supporting file and hash its patch and carried bytes. A source with only supporting-file adaptations is `patched`, but may omit the entry `patch` and retain the pristine entry as its `method`.
+
+Use direct relative links when absorbing sibling skill calls into a composition. Keep actual behavior conflicts in explicit rulings. Shared sources must use link destinations available at the same relative path in every consumer.
 
 Upstream updates follow [reviewed adoption](upstream-updates.md#reviewed-adoption), including conflict and license handling. Local patch recording is not upstream adoption.
 

@@ -38,7 +38,7 @@ Treat the originating material as authoritative for intent, the implementation t
 
 ### 3. Identify the standards sources
 
-Anything in the repo that documents how code should be written, such as `AGENTS.md`, `CLAUDE.md`, `CODING_STANDARDS.md`, or `CONTRIBUTING.md`.
+Search the repo for every file that documents how code should be written. Include `AGENTS.md`, `CLAUDE.md`, `CODING_STANDARDS.md` and `CONTRIBUTING.md` whenever they exist.
 
 On top of whatever the repo documents, the Standards axis always carries the **smell baseline** below - a fixed set of Fowler code smells (_Refactoring_, ch.3) that applies even when a repo documents nothing. Two rules bind it:
 
@@ -61,6 +61,8 @@ Each smell reads *what it is* -> *how to fix*; match it against the diff:
 - **Refused Bequest** - a subclass or implementer that ignores or overrides most of what it inherits. -> drop the inheritance, use composition.
 
 ### 4. Spawn both sub-agents in parallel
+
+Issue both reviewer calls together, then aggregate their returned reports.
 
 Prefer `pathfinder` or a comparably capable native teammate with high reasoning effort for both axes. Choose by model capability and the judgment required; read-only access or a high effort setting alone does not establish review suitability. Reserve `cartographer` for evidence gathering or a narrow, straightforward Standards review. Spec review that requires tracing behavior, reconciling requirements, or judging implementation correctness should use the stronger reviewer.
 
