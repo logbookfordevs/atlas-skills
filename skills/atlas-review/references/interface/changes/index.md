@@ -6,11 +6,11 @@ description: Reviews a branch, pull request or uncommitted change for the interf
 # Interface review
 
 ## Atlas integration
-Read [Atlas routing](../../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../../motion-ownership.md).
 
 This skill reviews a change rather than a screen. It resolves the scope, expands the changed files to the surfaces they affect, reads both sides of the diff and classifies every finding.
 
-It owns the scope, the classification and the change-scoped report. Domain rules belong to the `better-*` skills. Severity, consolidation, coverage, the cap and the verdict belong to `better-interface`, which this skill hands the review to.
+It owns the scope, the classification and the change-scoped report. Domain rules belong to the bundled interface domain methods. Severity, consolidation, coverage, the cap and the verdict belong to [Interface Audit](../audit/index.md), which this skill hands the review to.
 
 Correctness, tests, security and performance belong to the project's general code review. Name such a concern once, point at that review and drop it.
 
@@ -45,7 +45,7 @@ Gather the facts in [Nothing to review](scope-resolution.md#nothing-to-review), 
 - **The open pull request** on the current branch, first when there is one. A branch whose commits already landed resolves to no change, while its pull request is still exactly what the user meant.
 - **The last commit**, `HEAD~1..HEAD`, named by short SHA and subject so the user sees what they would get.
 - **A target they name**, such as `pr <n>`, a branch, a ref or a range.
-- **A whole-repository interface audit**, which is not a change review. Hand it to `better-interface` as a repository-scope review, without this skill's scope block, statuses or pre-existing section.
+- **A whole-repository interface audit**, which is not a change review. Hand it to [Interface Audit](../audit/index.md) as a repository-scope review, without this skill's scope block, statuses or pre-existing section.
 
 Where exclusions emptied the scope, name the excluded files in the offer. Never report a review of nothing as `Approve`.
 
@@ -94,17 +94,17 @@ This is how you find the **incomplete** change, which a surface review misses be
 
 Do not report scope creep. Whether a change does too much is a process question, not an interface one.
 
-### 7. Hand the review to `better-interface`
+### 7. Hand the review to [Interface Audit](../audit/index.md)
 
-Hand `better-interface` the scope block, the affected surfaces and a status on every finding, and report in the format below.
+Hand [Interface Audit](../audit/index.md) the scope block, the affected surfaces and a status on every finding, and report in the format below.
 
-If `better-interface` is unavailable, report the resolved scope and the file inventory, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
+If [Interface Audit](../audit/index.md) is unavailable, report the resolved scope and the file inventory, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
 
 ### 8. Never mutate the working tree
 
 A change review is read-only, including the checkout. `git fetch` writes only to `.git` and is permitted. `gh pr checkout`, `git checkout`, `git switch` and `git stash` rewrite the files the author has open, so they are never permitted. Fetch pull request refs and read them in place.
 
-Rendered verification is opt-in here, in place of `better-interface`'s **Verify what can be verified**. Mark visual and runtime claims **Not verified** unless the project exposes a cheap preview or the user asks for a rendered review. For `working` and `branch`, the checkout already is the head, so render it in place. For any other target, render an isolated worktree such as `git worktree add /tmp/review-<n> refs/remotes/pr/<n>` and remove it when done.
+Rendered verification is opt-in here, in place of [Interface Audit](../audit/index.md)'s **Verify what can be verified**. Mark visual and runtime claims **Not verified** unless the project exposes a cheap preview or the user asks for a rendered review. For `working` and `branch`, the checkout already is the head, so render it in place. For any other target, render an isolated worktree such as `git worktree add /tmp/review-<n> refs/remotes/pr/<n>` and remove it when done.
 
 ## Before you finish
 
@@ -134,7 +134,7 @@ Open with the scope block:
 | Excluded | `pnpm-lock.yaml`, `src/__snapshots__/`, lockfile and snapshots |
 | Surfaces expanded | `CheckoutPage`, `SettingsPanel`; 3 further `Button` consumers not expanded |
 
-The coverage table from `better-interface` follows it. A domain with no evidence in the change scope is `Not reviewed: no evidence in the change scope`, which is a coverage statement rather than a gap.
+The coverage table from [Interface Audit](../audit/index.md) follows it. A domain with no evidence in the change scope is `Not reviewed: no evidence in the change scope`, which is a coverage statement rather than a gap.
 
 Then the findings, with a `Status` column per **Classify every finding**:
 
@@ -150,4 +150,4 @@ Then `Pre-existing` findings, at most three, highest severity first, stated plai
 | --- | --- | --- | --- |
 | MEDIUM | Typography | `src/Toolbar.tsx:7` | Numeric badges use proportional figures; predates this change |
 
-Verification and the verdict follow in `better-interface`'s format.
+Verification and the verdict follow in [Interface Audit](../audit/index.md)'s format.

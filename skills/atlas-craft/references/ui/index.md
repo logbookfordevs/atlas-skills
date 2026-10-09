@@ -6,7 +6,7 @@ description: Polishes the surfaces, icons and motion in your project with exact 
 # UI polish
 
 ## Atlas integration
-Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
 
 For animation values, springs, interruption and gesture physics, read [Motion ownership](../motion-ownership.md). That ruling governs conflicting motion examples and checklists in this source tree.
 
@@ -18,7 +18,7 @@ The values below are exact, not ranges to approximate. `cubic-bezier(0.2, 0, 0, 
 
 Keep the project's component library, tokens and density, and match its motion language wherever no rule here gives a value. A deliberate and consistent project convention, such as a style with no shadows, is a preference and not a finding. The same detail done two ways within the project is a finding.
 
-Text wrapping, font rendering, tabular numbers and text spacing belong to `better-typography`. Hit areas, keyboard support, ARIA and the reduced-motion requirement belong to `better-accessibility`. Grouping, section spacing, breakpoints and spatial RTL belong to `better-layout`, except directional icon mirroring. Color tokens and contrast measurement belong to `better-colors`.
+Text wrapping, font rendering, tabular numbers and text spacing belong to [Type](../type/index.md). Hit areas, keyboard support, ARIA and the reduced-motion requirement belong to [Accessibility](../accessibility/index.md). Grouping, section spacing, breakpoints and spatial RTL belong to [Layout](../layout/index.md), except directional icon mirroring. Color tokens and contrast measurement belong to [Color](../color/index.md).
 
 ## Outer radius equals inner radius plus padding
 
@@ -30,7 +30,7 @@ Where geometric centering looks off, nudge by eye. Give a button `2px` less padd
 
 ## Shadows for elevation, borders for structure
 
-Where a border exists only to create depth, replace it with layered transparent `box-shadow` values. Keep borders on dividers, separators, table cells and selected states. Keep them on form inputs too, whose boundary needs 3:1 non-text contrast under `better-accessibility`. Focus rings belong to `better-accessibility` as well.
+Where a border exists only to create depth, replace it with layered transparent `box-shadow` values. Keep borders on dividers, separators, table cells and selected states. Keep them on form inputs too, whose boundary needs 3:1 non-text contrast under [Accessibility](../accessibility/index.md). Focus rings belong to [Accessibility](../accessibility/index.md) as well.
 
 Forced-colors mode removes every `box-shadow`. Keep `border: 1px solid transparent` under a shadow ring so that mode still draws an edge. Recipes are in [surfaces.md](surfaces.md#shadow-recipes).
 
@@ -69,7 +69,7 @@ Icons use `currentColor` and take hover, selected and disabled states from CSS c
 
 ## Reporting
 
-**Severity.** `HIGH` breaks an interaction, as a keyframe toggle that cannot reverse or a hover state stuck on touch does. Two of `better-interface`'s escalation triggers land here and are `HIGH` on sight. One is motion that ignores `prefers-reduced-motion`, and the other is a state change carried by motion alone. `MEDIUM` is a visible inconsistency in surfaces, icons or motion. `LOW` is isolated polish.
+**Severity.** `HIGH` breaks an interaction, as a keyframe toggle that cannot reverse or a hover state stuck on touch does. Two of the whole-interface review's escalation triggers land here and are `HIGH` on sight. One is motion that ignores `prefers-reduced-motion`, and the other is a state change carried by motion alone. `MEDIUM` is a visible inconsistency in surfaces, icons or motion. `LOW` is isolated polish.
 
 **Verification.** Without a browser, read every state the component defines from the code, such as hover, pressed, selected, loading and empty, with its durations and easings. With one, walk each state and replay motion at 10% speed in the browser's Animations panel. Report every check you could not run as `Not verified`.
 

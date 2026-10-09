@@ -6,7 +6,7 @@ disable-model-invocation: false
 
 # Atlas Craft
 
-Choose from the requested outcome and context, honoring an explicit choice. Ask only when ambiguity changes the method. Read [Atlas routing](references/routing.md) and the selected methods; combine domains when they serve complementary parts of the task.
+Choose from the requested outcome and context, honoring an explicit choice. Ask only when ambiguity changes the method. Read [Scope and ownership](references/ownership.md) and the selected methods; combine domains when they serve complementary parts of the task.
 
 | Mode | Need | Read and follow |
 | --- | --- | --- |

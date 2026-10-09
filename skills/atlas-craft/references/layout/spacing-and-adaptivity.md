@@ -27,7 +27,7 @@ Nothing marks where one borderless target ends and the next begins, so the space
 </div>
 ```
 
-Target sizes and hit-area expansion belong to `better-accessibility`. Space controls so their expanded hit areas never overlap.
+Target sizes and hit-area expansion belong to [Accessibility](../accessibility/index.md). Space controls so their expanded hit areas never overlap.
 
 ## Inset buttons from the edges
 

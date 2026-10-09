@@ -3,6 +3,7 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } f
 import { tmpdir } from 'node:os';
 import { dirname, join, posix, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { replayPatch } from './source-patches.mjs';
 import { buildSkills, repositoryRoot, sha256 } from './build-skills.mjs';
 
 const json = value => `${JSON.stringify(value, null, 2)}\n`;
@@ -70,13 +71,15 @@ export function inspectSource(source, revision, root = repositoryRoot) {
   let method = snapshot;
   let conflict;
   if (changed.length && source.classification === 'patched') {
-    const temporary = mkdtempSync(join(tmpdir(), 'atlas-replay-'));
     try {
-      writeFileSync(join(temporary, 'source.md'), snapshot);
-      execFileSync('git', ['apply', '--no-index', '-'], { cwd: temporary, input: readFileSync(join(root, portable(source.patch))), stdio: ['pipe', 'pipe', 'pipe'] });
-      method = readFileSync(join(temporary, 'source.md'));
+      method = source.patch ? replayPatch(snapshot, readFileSync(join(root, portable(source.patch)))) : snapshot;
+      for (const previous of source.supportingFiles ?? []) {
+        if (!previous.patch) continue;
+        const file = files.find(file => file.relativePath === previous.relativePath);
+        if (!file) throw new Error(`Patched supporting file removed: ${previous.relativePath}`);
+        file.method = replayPatch(file.bytes, readFileSync(join(root, portable(previous.patch))));
+      }
     } catch { conflict = 'The maintained patch does not apply to the candidate. Reconcile it before adoption.'; }
-    finally { rmSync(temporary, { recursive: true, force: true }); }
   }
   const licenseChanged = sha256(license) !== source.licenseSha256;
   const status = !changed.length ? 'unchanged' : conflict ? 'conflict' : licenseChanged ? 'license-review' : source.classification === 'derived' ? 'derivation-review' : revision.commit === source.upstream.commit ? 'baseline-review' : 'ready-for-review';
@@ -130,7 +133,13 @@ export function prepareUpdate(root, source, candidate, manifest) {
     record.supportingFiles = candidate.files.map(file => {
       const snapshot = `sources/upstream/${record.id}/supporting/${file.relativePath}`;
       put(snapshot, file.bytes);
-      return { snapshot, relativePath: file.relativePath, upstreamPath: file.upstreamPath, sourceSha256: sha256(file.bytes) };
+      const previous = (source.supportingFiles ?? []).find(previous => previous.relativePath === file.relativePath);
+      const adaptation = previous?.patch ? { method: previous.method, patch: previous.patch } : {};
+      if (previous?.patch) {
+        if (!file.method) throw new Error(`Missing replayed supporting method: ${file.relativePath}`);
+        put(previous.method, file.method);
+      }
+      return { snapshot, relativePath: file.relativePath, upstreamPath: file.upstreamPath, sourceSha256: sha256(file.bytes), ...adaptation };
     });
     put('sources/composition.json', Buffer.from(json(next)));
     buildSkills(stage); buildSkills(stage, { check: true });

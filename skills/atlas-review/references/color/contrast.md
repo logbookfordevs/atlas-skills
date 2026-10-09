@@ -2,7 +2,7 @@
 
 Contrast is measured between a **foreground color**, meaning text, an icon or a UI element, and the **background color** it actually renders against, usually the nearest ancestor that paints one. Identify that background first. Measuring against the page background when the element sits on a card gives the wrong answer.
 
-`better-accessibility` decides which requirement applies to a pair. The thresholds below are what a measured pair is reported against. Where neither that skill nor the project names a standard, report the WCAG 2 result and add the APCA value.
+[Accessibility](../accessibility/index.md) decides which requirement applies to a pair. The thresholds below are what a measured pair is reported against. Where neither that skill nor the project names a standard, report the WCAG 2 result and add the APCA value.
 
 ## WCAG 2 thresholds
 

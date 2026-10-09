@@ -1,14 +1,14 @@
 ---
 name: animate
-description: Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it animate at all, what purpose, which tool, which properties, which curve and duration, how it interrupts, how it exits. Writes the implementation. Use when asked to animate something, add motion, make a component feel alive, or build a transition. For critiquing existing motion use review-animations; for auditing a whole codebase use improve-animations.
+description: Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it animate at all, what purpose, which tool, which properties, which curve and duration, how it interrupts, how it exits. Writes the implementation. Use when asked to animate something, add motion, make a component feel alive, or build a transition. For critiquing existing motion use Atlas Review Motion; for auditing a whole codebase use Atlas Review Motion Audit.
 ---
 
 # Building Animations
 
 ## Atlas integration
-Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
 
-A construction skill. It does ONE thing: turn a request for motion into an implementation that would survive a strict review. It does not audit a codebase (that's Atlas Review’s Motion Audit method), critique a diff (that's Atlas Review’s Motion method), hunt for places that could animate (that's Atlas Motion’s Opportunities method), or build for React Native (that's the external animate-expo method, which Atlas does not bundle).
+A construction skill. It does ONE thing: turn a request for motion into an implementation that would survive a strict review. It does not audit a codebase (that's Atlas Review’s Motion Audit method), critique a diff (that's Atlas Review’s Motion method), hunt for places that could animate (that's Atlas Motion’s Opportunities method), or build for React Native (that's native motion, which Atlas does not bundle).
 
 ## Operating Posture
 

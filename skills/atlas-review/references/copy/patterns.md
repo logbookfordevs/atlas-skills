@@ -12,7 +12,7 @@ Templates for destructive flows and status copy, and recipes for plurals and loc
 | Affects other people | Body names who: "The 8 members of Design lose access." |
 | Account, workspace or repository | Field label: "Type 'acme-web' to confirm". The button stays disabled until it matches |
 
-An undo toast carries an action, so how long it stays on screen is `better-accessibility`'s.
+An undo toast carries an action, so how long it stays on screen is [Accessibility](../accessibility/index.md)'s.
 
 ## Status copy
 

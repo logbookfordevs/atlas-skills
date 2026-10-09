@@ -65,7 +65,7 @@ Exclude these and name what you excluded in the scope block. They are machine-au
 | Vendored code | `vendor/`, `third_party/`, `node_modules/` |
 | Binaries and media | `*.png`, `*.jpg`, `*.webp`, `*.avif`, `*.woff2`, `*.mp4`, `*.pdf` |
 
-Two exceptions stay in scope. A **font file** added or swapped is a `better-typography` change. An **image** added to a component is a `better-ui` and `better-accessibility` change, through its outline and its `alt` text. Review the code that references them, not the bytes.
+Two exceptions stay in scope. A **font file** added or swapped is a [Type](../../type/index.md) change. An **image** added to a component is a [UI Polish](../../ui/index.md) and [Accessibility](../../accessibility/index.md) change, through its outline and its `alt` text. Review the code that references them, not the bytes.
 
 Apply the exclusions as pathspecs so the file count in the scope block is the reviewed count:
 

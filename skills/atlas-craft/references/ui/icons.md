@@ -102,4 +102,4 @@ Use one mechanism per element. Two flips on one icon can compound back to unflip
 <ChevronRightIcon className="rtl:-scale-x-100" />
 ```
 
-Analyze composite icons part by part. A badge or slash overlay may keep its position while the base glyph flips. Accessible names for icon-only buttons belong to `better-accessibility`.
+Analyze composite icons part by part. A badge or slash overlay may keep its position while the base glyph flips. Accessible names for icon-only buttons belong to [Accessibility](../accessibility/index.md).

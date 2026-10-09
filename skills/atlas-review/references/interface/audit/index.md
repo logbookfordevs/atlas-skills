@@ -1,18 +1,18 @@
 ---
 name: better-interface
-description: Combines all of the `better-*` skills into a single review across accessibility, layout, writing, typography, color and UI polish.
+description: Combines all of the bundled interface disciplines into a single review across accessibility, layout, writing, typography, color and UI polish.
 ---
 
 # Cross-discipline review
 
 ## Atlas integration
-Read [Atlas routing](../../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../../motion-ownership.md).
 
-This skill runs a cross-discipline review. It routes the interface to each `better-*` skill, collects their evidence and consolidates one ranked verdict.
+This skill runs a cross-discipline review. It routes the interface to each bundled interface domain method, collects their evidence and consolidates one ranked verdict.
 
-Orchestration is all it owns. Accessibility rules belong to `better-accessibility`, structure to `better-layout`, copy to `better-writing`, type to `better-typography`, color to `better-colors`, visual polish and motion to `better-ui`. Never duplicate or override their rules here.
+Orchestration is all it owns. Accessibility rules belong to [Accessibility](../../accessibility/index.md), structure to [Layout](../../layout/index.md), copy to [Copy](../../copy/index.md), type to [Type](../../type/index.md), color to [Color](../../color/index.md), visual polish and motion to [UI Polish](../../ui/index.md). Never duplicate or override their rules here.
 
-Change-scoped review of uncommitted work, branches and pull requests belongs to `interface-review`.
+Change-scoped review of uncommitted work, branches and pull requests belongs to [Interface Changes](../changes/index.md).
 
 ## Evidence, not taste
 
@@ -30,11 +30,11 @@ Cover all of it in every domain, including the empty, loading, error and narrow-
 
 When the scope is too large to inspect credibly, narrow it to one complete flow. Take the one the request centers on, or failing that the entry path every user must pass through. State the boundary and what it excluded. Never imply uninspected surfaces were reviewed.
 
-### 2. Send a change to `interface-review`
+### 2. Send a change to [Interface Changes](../changes/index.md)
 
 A request naming a branch, pull request, commit range or uncommitted changes is a change review. Read the bundled Interface Changes method through Atlas routing and use its scope resolution. Preserve the target already supplied; ask only when materially different interpretations remain.
 
-When `interface-review` hands a review back, apply everything below to it. The cap and the verdict cover `Introduced` and `Regression` findings only, so a change whose only findings are `Pre-existing` is an `Approve`.
+When [Interface Changes](../changes/index.md) hands a review back, apply everything below to it. The cap and the verdict cover `Introduced` and `Regression` findings only, so a change whose only findings are `Pre-existing` is an `Approve`.
 
 ### 3. Recon before judgment
 
@@ -48,12 +48,12 @@ A documented convention settles matters of taste but never excuses a trigger or 
 
 Load every owning skill below and complete each domain review before consolidation. Review in this order so foundational failures are not hidden by polish:
 
-1. `better-accessibility`
-2. `better-layout`
-3. `better-writing`
-4. `better-typography`
-5. `better-colors`
-6. `better-ui`
+1. [Accessibility](../../accessibility/index.md)
+2. [Layout](../../layout/index.md)
+3. [Copy](../../copy/index.md)
+4. [Type](../../type/index.md)
+5. [Color](../../color/index.md)
+6. [UI Polish](../../ui/index.md)
 
 From each, take its principles, its references and its verification checks. Its severity ladder and its format are for standalone use; the ones in this file replace them.
 

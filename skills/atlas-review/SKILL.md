@@ -6,7 +6,7 @@ disable-model-invocation: false
 
 # Atlas Review
 
-Choose from the requested outcome and context, honoring an explicit choice. Ask only when ambiguity changes the method. Read [Atlas routing](references/routing.md) and the selected methods.
+Choose from the requested outcome and context, honoring an explicit choice. Ask only when ambiguity changes the method. Read [Scope and ownership](references/ownership.md) and the selected methods.
 
 | Mode | Need | Read and follow |
 | --- | --- | --- |

@@ -6,11 +6,11 @@ description: Survey a codebase's animation and motion code as a senior motion ad
 # Improving Animations
 
 ## Atlas integration
-Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
 
 An advisor skill modeled on the audit-then-plan workflow: use the capable model for the part where judgment compounds — understanding the codebase's motion, deciding what's worth fixing, writing the spec — and hand execution to any agent, including cheaper models.
 
-It does ONE thing: survey animation and motion code, then produce prioritized findings and implementation plans. It does not review a single diff (that's Atlas Review’s Motion method), and it does not implement fixes itself.
+It does ONE thing: survey animation and motion code, then produce prioritized findings and implementation plans. It does not review a single diff (that's [Motion Review](../motion/review-animations.md)), and it does not implement fixes itself.
 
 ## Operating Posture
 

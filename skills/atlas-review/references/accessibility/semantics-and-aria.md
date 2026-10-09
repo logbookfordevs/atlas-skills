@@ -58,7 +58,7 @@ Name precedence: `aria-labelledby` > `aria-label` > native label (`<label>`, tex
 </button>
 ```
 
-Keeping brand names and code tokens out of auto-translation with `translate="no"` belongs to `better-typography`.
+Keeping brand names and code tokens out of auto-translation with `translate="no"` belongs to [Type](../type/index.md).
 
 ## Common ARIA mistakes
 

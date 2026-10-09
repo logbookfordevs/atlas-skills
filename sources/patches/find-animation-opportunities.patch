@@ -1,14 +1,19 @@
 diff --git a/source.md b/source.md
-index d3b030f..1df2924 100644
+index d3b030f..bcf417e 100644
 --- a/source.md
 +++ b/source.md
-@@ -5,15 +5,10 @@ description: Search a codebase or UI for places that don't animate but should, a
+@@ -1,19 +1,14 @@
+ ---
+ name: find-animation-opportunities
+-description: Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it does not implement it. Use when the user asks "what could be animated here?" or wants to "make this feel more alive". For fixing existing animations, use improve-animations or review-animations instead.
++description: Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it does not implement it. Use when the user asks "what could be animated here?" or wants to "make this feel more alive". For fixing existing animations, use Atlas Review Motion Audit or Motion instead.
+ ---
  
  # Finding Animation Opportunities
  
 -## Initial Response
 +## Atlas integration
-+Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
++Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
  
 -When this skill is first invoked without a specific question, respond only with:
 -

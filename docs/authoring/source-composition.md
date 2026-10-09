@@ -64,7 +64,9 @@ pnpm check
 
 The source ID comes from `sources/composition.json`, and may differ from the consumer’s skill name. Recording captures the complete difference from the pinned original and verifies replay; it leaves the original intact.
 
-To change `verbatim` into `patched`, first copy the carried entry into its maintained package location, change `classification` to `patched`, set `method` to that package file, and add the patch path and adaptation record. Edit that file and run the sequence above. Supporting files remain verbatim; the current patch recorder covers the entry only. Changes to upstream supporting content require an explicit tooling extension or separate Atlas-owned reference.
+To change `verbatim` into `patched`, first copy the carried entry into its maintained package location, change `classification` to `patched`, set `method` to that package file, and add the patch path and adaptation record. Edit that file and run the sequence above. Supporting files remain verbatim unless their `supportingFiles` record declares both a maintained `method` path and a replayable `patch` path. Keep their snapshots and `sourceSha256` pristine. Record intentional edits in `adaptation`, then run the same patch-recording and build sequence; each supporting patch replays against its own snapshot using `source.md` as the patch-local filename. Receipts classify each supporting file and hash its patch and carried bytes. A source with only supporting-file adaptations is `patched`, but may omit the entry `patch` and retain the pristine entry as its `method`.
+
+Use direct relative links when absorbing sibling skill calls into a composition. Keep actual behavior conflicts in explicit rulings. Shared sources must use link destinations available at the same relative path in every consumer.
 
 Upstream updates follow [reviewed adoption](upstream-updates.md#reviewed-adoption), including conflict and license handling. Local patch recording is not upstream adoption.
 

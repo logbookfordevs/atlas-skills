@@ -85,7 +85,7 @@
       "license": "sources/upstream/animate/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/animate/animate.md",
-      "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to pause and find a suitable library via available Notion search, internet search, existing project libraries, or user consultation. Supporting files remain verbatim. Resolve audit, review and discovery handoffs through Atlas routing; remove the canned initial response and explicitly leave Native motion outside the bundle.",
+      "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. Supporting files remain verbatim.",
       "consumers": [
         "atlas-motion",
         "atlas-craft",
@@ -174,13 +174,17 @@
           "snapshot": "sources/upstream/better-layout/supporting/grouping-and-alignment.md",
           "relativePath": "grouping-and-alignment.md",
           "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
-          "sourceSha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a"
+          "sourceSha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
+          "method": "skills/atlas-craft/references/layout/grouping-and-alignment.md",
+          "patch": "sources/patches/better-layout/grouping-and-alignment.md.patch"
         },
         {
           "snapshot": "sources/upstream/better-layout/supporting/spacing-and-adaptivity.md",
           "relativePath": "spacing-and-adaptivity.md",
           "upstreamPath": "skills/better-layout/spacing-and-adaptivity.md",
-          "sourceSha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958"
+          "sourceSha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+          "method": "skills/atlas-craft/references/layout/spacing-and-adaptivity.md",
+          "patch": "sources/patches/better-layout/spacing-and-adaptivity.md.patch"
         }
       ],
       "rulings": [
@@ -196,7 +200,7 @@
         "sha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
         "trackingRef": "main"
       },
-      "adaptation": "Resolve sibling method names through the bundled Atlas routing guide in the entry and supporting references. Domain rules and complete supporting resources otherwise remain unchanged.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "patch": "sources/patches/better-layout.patch"
     },
     {
@@ -279,7 +283,7 @@
         "sha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
         "trackingRef": "main"
       },
-      "adaptation": "Resolve sibling method names through the bundled Atlas routing guide in the entry and supporting references. Domain rules and complete supporting resources otherwise remain unchanged.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "patch": "sources/patches/better-typography.patch"
     },
     {
@@ -328,7 +332,9 @@
           "snapshot": "sources/upstream/better-colors/supporting/contrast.md",
           "relativePath": "contrast.md",
           "upstreamPath": "skills/better-colors/contrast.md",
-          "sourceSha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc"
+          "sourceSha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+          "method": "skills/atlas-craft/references/color/contrast.md",
+          "patch": "sources/patches/better-colors/contrast.md.patch"
         },
         {
           "snapshot": "sources/upstream/better-colors/supporting/palette-generation.md",
@@ -362,7 +368,7 @@
         "sha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
         "trackingRef": "main"
       },
-      "adaptation": "Resolve sibling method names through the bundled Atlas routing guide in the entry and supporting references. Domain rules and complete supporting resources otherwise remain unchanged.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "patch": "sources/patches/better-colors.patch"
     },
     {
@@ -455,7 +461,7 @@
       "license": "sources/upstream/code-review/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "skills/atlas-review/references/code/code-review.md",
-      "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources.",
+      "adaptation": "Leonardo\u2019s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources.",
       "consumers": [
         "atlas-review"
       ],
@@ -566,7 +572,7 @@
       "license": "sources/upstream/show-me/LICENSE",
       "licenseSha256": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
       "method": "sources/upstream/show-me/source.md",
-      "adaptation": "Complete Show Me source preserved verbatim, including manual invocation frontmatter and examples. Tracking loads its method when creating or updating the Implementation Record, to govern artifact presentation throughout the work. Required state, evidence and acceptance remain governed by Tracking. The independent Show Me skill remains unchanged; host-specific artifact opening uses the caller’s supported mechanism.",
+      "adaptation": "Complete Show Me source preserved verbatim, including manual invocation frontmatter and examples. Tracking loads its method when creating or updating the Implementation Record, to govern artifact presentation throughout the work. Required state, evidence and acceptance remain governed by Tracking. The independent Show Me skill remains unchanged; host-specific artifact opening uses the caller\u2019s supported mechanism.",
       "consumers": [
         "tracking-implementation"
       ],
@@ -601,7 +607,7 @@
       "license": "sources/upstream/better-accessibility/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-craft/references/accessibility/index.md",
-      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Local references replace independent upstream skill resolution; domain behavior remains upstream-owned.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "consumers": [
         "atlas-craft",
         "atlas-review"
@@ -643,7 +649,9 @@
           "snapshot": "sources/upstream/better-accessibility/supporting/motion-and-zoom.md",
           "relativePath": "motion-and-zoom.md",
           "upstreamPath": "skills/better-accessibility/motion-and-zoom.md",
-          "sourceSha256": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714"
+          "sourceSha256": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+          "method": "skills/atlas-craft/references/accessibility/motion-and-zoom.md",
+          "patch": "sources/patches/better-accessibility/motion-and-zoom.md.patch"
         },
         {
           "snapshot": "sources/upstream/better-accessibility/supporting/screen-readers.md",
@@ -655,7 +663,9 @@
           "snapshot": "sources/upstream/better-accessibility/supporting/semantics-and-aria.md",
           "relativePath": "semantics-and-aria.md",
           "upstreamPath": "skills/better-accessibility/semantics-and-aria.md",
-          "sourceSha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e"
+          "sourceSha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+          "method": "skills/atlas-craft/references/accessibility/semantics-and-aria.md",
+          "patch": "sources/patches/better-accessibility/semantics-and-aria.md.patch"
         }
       ]
     },
@@ -675,7 +685,7 @@
       "license": "sources/upstream/better-ui/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-craft/references/ui/index.md",
-      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Atlas motion ownership replaces conflicting numeric motion presets; surfaces and icons remain UI Polish responsibilities.",
+      "adaptation": "Replace sibling calls with direct bundled-method links. Atlas motion ownership overrides conflicting numeric presets; surfaces and icons remain UI Polish responsibilities. Pristine snapshots and unadapted supporting files remain verbatim.",
       "consumers": [
         "atlas-craft",
         "atlas-review"
@@ -719,7 +729,9 @@
           "snapshot": "sources/upstream/better-ui/supporting/icons.md",
           "relativePath": "icons.md",
           "upstreamPath": "skills/better-ui/icons.md",
-          "sourceSha256": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd"
+          "sourceSha256": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
+          "method": "skills/atlas-craft/references/ui/icons.md",
+          "patch": "sources/patches/better-ui/icons.md.patch"
         },
         {
           "snapshot": "sources/upstream/better-ui/supporting/performance.md",
@@ -751,7 +763,7 @@
       "license": "sources/upstream/better-writing/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-craft/references/copy/index.md",
-      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Local references replace independent upstream skill resolution; domain behavior remains upstream-owned.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "consumers": [
         "atlas-craft",
         "atlas-review"
@@ -775,7 +787,9 @@
           "snapshot": "sources/upstream/better-writing/supporting/patterns.md",
           "relativePath": "patterns.md",
           "upstreamPath": "skills/better-writing/patterns.md",
-          "sourceSha256": "93ed5285d2009213b600e6f5af53ae3f7e3ff0114014146779aeda1c1ab42077"
+          "sourceSha256": "93ed5285d2009213b600e6f5af53ae3f7e3ff0114014146779aeda1c1ab42077",
+          "method": "skills/atlas-craft/references/copy/patterns.md",
+          "patch": "sources/patches/better-writing/patterns.md.patch"
         }
       ]
     },
@@ -795,7 +809,7 @@
       "license": "sources/upstream/better-interface/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/interface/audit/index.md",
-      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Route change scopes to the bundled Interface Changes method without requiring another invocation.",
+      "adaptation": "Link directly to the six bundled domains and Interface Changes for change scope. Patch supporting report instructions to use Atlas method names; preserve pristine snapshots.",
       "consumers": [
         "atlas-review"
       ],
@@ -817,7 +831,9 @@
           "snapshot": "sources/upstream/better-interface/supporting/review-format.md",
           "relativePath": "review-format.md",
           "upstreamPath": "skills/better-interface/review-format.md",
-          "sourceSha256": "4bb2715d6cd7c8afbd984cbe71148a214c9d43ffd535ba00789f7709ee743c01"
+          "sourceSha256": "4bb2715d6cd7c8afbd984cbe71148a214c9d43ffd535ba00789f7709ee743c01",
+          "method": "skills/atlas-review/references/interface/audit/review-format.md",
+          "patch": "sources/patches/better-interface/review-format.md.patch"
         }
       ]
     },
@@ -837,7 +853,7 @@
       "license": "sources/upstream/interface-review/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/interface/changes/index.md",
-      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Use the supplied Atlas Review target and locally loaded audit method; retain introduced/regression/pre-existing classification.",
+      "adaptation": "Use the supplied Atlas Review target and direct links to Interface Audit and owning domains, including in supporting references. Preserve introduced/regression/pre-existing classification and pristine snapshots.",
       "consumers": [
         "atlas-review"
       ],
@@ -859,13 +875,17 @@
           "snapshot": "sources/upstream/interface-review/supporting/removed-signals.md",
           "relativePath": "removed-signals.md",
           "upstreamPath": "skills/interface-review/removed-signals.md",
-          "sourceSha256": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac"
+          "sourceSha256": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+          "method": "skills/atlas-review/references/interface/changes/removed-signals.md",
+          "patch": "sources/patches/interface-review/removed-signals.md.patch"
         },
         {
           "snapshot": "sources/upstream/interface-review/supporting/scope-resolution.md",
           "relativePath": "scope-resolution.md",
           "upstreamPath": "skills/interface-review/scope-resolution.md",
-          "sourceSha256": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e"
+          "sourceSha256": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+          "method": "skills/atlas-review/references/interface/changes/scope-resolution.md",
+          "patch": "sources/patches/interface-review/scope-resolution.md.patch"
         }
       ]
     },
@@ -885,7 +905,7 @@
       "license": "sources/upstream/improve-animations/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-review/references/motion-audit/index.md",
-      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Remove the canned initial response, route review and execution handoffs to Atlas operations, and respect repository artifact conventions.",
+      "adaptation": "Remove the canned initial response, link directly to bundled Motion Review, and name Atlas execution handoffs. Respect repository artifact conventions; supporting plan-template references link to Motion Audit.",
       "consumers": [
         "atlas-review"
       ],
@@ -907,7 +927,9 @@
           "snapshot": "sources/upstream/improve-animations/supporting/PLAN-TEMPLATE.md",
           "relativePath": "PLAN-TEMPLATE.md",
           "upstreamPath": "skills/improve-animations/PLAN-TEMPLATE.md",
-          "sourceSha256": "0a08ac8e23fd2082d7ffb86aeed7b789de77328c3cf874b16f1a755f2ef0a6ad"
+          "sourceSha256": "0a08ac8e23fd2082d7ffb86aeed7b789de77328c3cf874b16f1a755f2ef0a6ad",
+          "method": "skills/atlas-review/references/motion-audit/PLAN-TEMPLATE.md",
+          "patch": "sources/patches/improve-animations/PLAN-TEMPLATE.md.patch"
         }
       ]
     },
@@ -927,7 +949,7 @@
       "license": "sources/upstream/find-animation-opportunities/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/opportunities/index.md",
-      "adaptation": "Resolve sibling methods through bundled Atlas routing; preserve the complete upstream support tree. Remove the canned initial response and route audit/planning handoffs to Atlas Review. No Native method is imported.",
+      "adaptation": "Remove the canned initial response and name Atlas Review audit/planning handoffs directly. Preserve upstream discovery rules; Native remains outside the composition.",
       "consumers": [
         "atlas-motion"
       ],
@@ -1186,8 +1208,8 @@
     {
       "id": "interface-local-routing",
       "owner": "atlas-craft",
-      "document": "skills/atlas-craft/references/routing.md",
-      "section": "Routing and ownership",
+      "document": "skills/atlas-craft/references/ownership.md",
+      "section": "Scope and ownership",
       "sources": [
         "better-colors",
         "better-typography",
@@ -1201,8 +1223,8 @@
     {
       "id": "review-interface-routing",
       "owner": "atlas-review",
-      "document": "skills/atlas-review/references/routing.md",
-      "section": "Routing and ownership",
+      "document": "skills/atlas-review/references/ownership.md",
+      "section": "Scope and ownership",
       "sources": [
         "better-interface",
         "interface-review",
@@ -1218,8 +1240,8 @@
     {
       "id": "craft-motion-owner",
       "owner": "atlas-craft",
-      "document": "skills/atlas-craft/references/routing.md",
-      "section": "Routing and ownership",
+      "document": "skills/atlas-craft/references/ownership.md",
+      "section": "Scope and ownership",
       "sources": [
         "better-ui",
         "animate",
@@ -1230,8 +1252,8 @@
     {
       "id": "review-motion-owner",
       "owner": "atlas-review",
-      "document": "skills/atlas-review/references/routing.md",
-      "section": "Routing and ownership",
+      "document": "skills/atlas-review/references/ownership.md",
+      "section": "Scope and ownership",
       "sources": [
         "better-ui",
         "animate",
@@ -1243,8 +1265,8 @@
     {
       "id": "motion-local-routing",
       "owner": "atlas-motion",
-      "document": "skills/atlas-motion/references/routing.md",
-      "section": "Routing and ownership",
+      "document": "skills/atlas-motion/references/ownership.md",
+      "section": "Scope and ownership",
       "sources": [
         "animate",
         "find-animation-opportunities"

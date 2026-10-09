@@ -6,11 +6,11 @@ description: Sets and reviews how text renders in your product, from the type sc
 # Typography
 
 ## Atlas integration
-Read [Atlas routing](../routing.md) before following this method. Resolve upstream skill names through that guide throughout this entry and its supporting references; load bundled files rather than invoke separate upstream skills. Caller authorization and review scope remain authoritative.
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
 
 This skill sets and reviews how text renders, from the type scale and spacing to font loading, wrapping and punctuation. It writes every fix in the project's styling system, and the [cheat sheet](css-cheat-sheet.md) maps each declaration to its Tailwind utility.
 
-The words belong to `better-writing`, semantic heading structure to `better-accessibility` and spatial RTL layout to `better-layout`. Measure contrast with `better-colors`; whether it passes is `better-accessibility`'s.
+The words belong to [Copy](../copy/index.md), semantic heading structure to [Accessibility](../accessibility/index.md) and spatial RTL layout to [Layout](../layout/index.md). Measure contrast with [Color](../color/index.md); whether it passes is [Accessibility](../accessibility/index.md)'s.
 
 ## Measured, not preferred
 
@@ -77,7 +77,7 @@ Apply `font-variant-numeric: tabular-nums` to timers, counters, prices and numer
 
 For one line, `overflow: hidden`, `text-overflow: ellipsis` and `white-space: nowrap`, which Tailwind's `truncate` sets together. For several, `display: -webkit-box`, `-webkit-box-orient: vertical`, `-webkit-line-clamp: 3` and `overflow: hidden`, which Tailwind's `line-clamp-3` emits.
 
-A truncated value needs a way back to the full text, which `better-layout` owns.
+A truncated value needs a way back to the full text, which [Layout](../layout/index.md) owns.
 
 ## Natural case, typographic punctuation
 
@@ -89,7 +89,7 @@ Rendered text uses typographic characters, never their keyboard stand-ins. Curly
 
 Set `text-underline-position: from-font` and `text-decoration-thickness: from-font`, or tune `text-underline-offset` and thickness by hand. A dotted `text-decoration-style` hints that a word carries extra information, such as an abbreviation or a defined term. See the [underline recipes](details-and-accessibility.md#underlines).
 
-Color is the only part of a real underline that animates reliably. Any other underline animation needs a separate element, and its motion is `better-ui`'s.
+Color is the only part of a real underline that animates reliably. Any other underline animation needs a separate element, and its motion is [UI Polish](../ui/index.md)'s.
 
 ## Inputs at 16px on mobile
 
@@ -154,7 +154,7 @@ Keep text selectable by default. `::selection` can carry brand into the reading 
 
 ## Reporting
 
-**Severity.** `HIGH` makes text unreadable, truncates content with no way back to it or clips text at 320px width or 200% zoom. The last two are `better-interface` escalation triggers, so they stay `HIGH` however minor the surface. `MEDIUM` breaks the type system or the visual heading hierarchy. `LOW` is isolated polish.
+**Severity.** `HIGH` makes text unreadable, truncates content with no way back to it or clips text at 320px width or 200% zoom. The last two are the whole-interface review escalation triggers, so they stay `HIGH` however minor the surface. `MEDIUM` breaks the type system or the visual heading hierarchy. `LOW` is isolated polish.
 
 **Verification.** Without a browser, check declared size and weight per heading level, descending within each semantic section. Check declared line-height, units and measure. Check truncation rules against realistic string lengths. With one, compare computed values, then resize the viewport with real content to catch wrapping, lone last-line words and truncation. Report every check you could not run as `Not verified`.
 

@@ -1,21 +1,6 @@
-# Routing and ownership
+# Scope and ownership
 
-Resolve upstream names in entries and supporting references to these bundled methods. Read domain rules when needed; consolidate through Interface Audit only for an Interface review.
-
-| Upstream name | Local method |
-| --- | --- |
-| better-interface | [Interface Audit](interface/audit/index.md) |
-| interface-review | [Interface Changes](interface/changes/index.md) |
-| better-accessibility | [Accessibility](accessibility/index.md) |
-| better-layout | [Layout](layout/index.md) |
-| better-writing | [Copy](copy/index.md) |
-| better-typography | [Type](type/index.md) |
-| better-colors | [Color](color/index.md) |
-| better-ui | [UI Polish](ui/index.md) |
-| review-animations | [Motion Review](motion/review-animations.md) |
-| improve-animations | [Motion Audit](motion-audit/index.md) |
-| animate | [Animate criteria](animate/animate.md) |
-| apple-design | [Fluid criteria](fluid/apple-design.md) |
+Read linked domain rules when needed; consolidate through Interface Audit only for an Interface review.
 
 A screen or flow uses Interface Audit. A branch, PR, commit range or working-tree change uses Interface Changes for scope, affected surfaces and finding classification, then Interface Audit for domain review and consolidation. Follow the bundled reference instead of asking the user to invoke an upstream skill. General code review still owns correctness, security and intent; Interface review owns frontend findings.
 
