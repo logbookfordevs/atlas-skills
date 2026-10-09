@@ -55,9 +55,7 @@
         "typescript-best-practices",
         "unslop",
         "why"
-      ],
-      "enabled": [],
-      "ready": false
+      ]
     }
   ],
   "projects": [
@@ -101,7 +99,7 @@
       "id": 1791234094823,
       "name": "Plannotator",
       "install": "curl -fsSL https://plannotator.ai/install.sh | bash &&\nclaude plugin marketplace add backnotprop/plannotator &&\nclaude plugin install plannotator@plannotator &&\nclaude-work plugin marketplace add backnotprop/plannotator &&\nclaude-work plugin install plannotator@plannotator",
-      "update": "curl -fsSL https://plannotator.ai/install.sh | bash &&\nclaude plugin update plannotator@plannotator &&\nclaude-work plugin update plannotator@plannotator"
+      "update": "curl -fsSL https://plannotator.ai/install.sh | bash && claude plugin marketplace update plannotator && claude plugin update plannotator@plannotator && CLAUDE_CONFIG_DIR=\"$HOME/.claude-work\" claude plugin marketplace update plannotator && CLAUDE_CONFIG_DIR=\"$HOME/.claude-work\" claude plugin update plannotator@plannotator"
     }
   ],
   "favoriteSources": [
@@ -176,25 +174,20 @@
     {
       "name": "Video Watch",
       "source": "https://github.com/bradautomates/claude-video"
+    },
+    {
+      "name": "Video By Reference",
+      "source": "https://github.com/ishuagrawal/skills"
+    },
+    {
+      "name": "Atlas",
+      "source": "https://github.com/logbookfordevs/atlas-skills"
+    },
+    {
+      "name": "Video Editing - Bart",
+      "source": "https://github.com/Barty-Bart/motion-graphics"
     }
   ],
-  "preferences": {
-    "Global|plannotator-guide": "Manual only",
-    "Global|hand-drawn-canvas-animation": "Manual only",
-    "Global|orchestrator": "Manual only",
-    "Global|pr": "Manual only",
-    "Global|wizard": "Manual only",
-    "Global|truss-evaluation": "Automatic allowed",
-    "Global|interrogate": "Manual only",
-    "Global|watch": "Manual only",
-    "Creative Room|video": "Manual only",
-    "Creative Room|social": "Manual only"
-  },
-  "managedLinks": {},
-  "independentSkills": {
-    "Global": [],
-    "Creative Room": []
-  },
   "welcomeDismissed": true,
   "agentRules": {
     "destinations": [
@@ -210,23 +203,7 @@
         "kind": "claude",
         "path": "/Users/leonardo/.claude/AGENTS.md"
       }
-    ],
-    "receipts": {
-      "codex": {
-        "region": "<!-- AFK:RULES:START -->\n## Skills\nState \"I will use the X skill\" whenever using a skill.\nIf a user-required skill is unavailable, search the configured skill roots and verify explicit aliases. Explain what is missing and request an approved fallback for dependent work. Continue independent authorized work.\n\n## Artifacts\nWhen creating or resuming durable workflow artifacts, read /Users/leonardo/.codex/afk-rules/codex/references/artifacts.md; follow repository storage conventions first.\n\n## Imports\n- Prefer configured absolute imports such as `@/components/...`.\n\n## TypeScript\n- Avoid `any` unless necessary or specifically requested.\n- Run the repository typecheck for TypeScript changes. Fix failures introduced by the change. If an unrelated baseline or environment failure prevents a clean result, report the evidence and verification gap; do not claim a pass.\n\n## Testing\n- Add regression tests when they protect meaningful behavior. Test observable behavior; tautological tests that merely restate the implementation are harmful. Trivial copy and other low-risk changes do not require coverage.\n\n## React\n- Name compound JSX conditions before the return with domain-specific booleans. JSX conditions should contain one named boolean, optionally negated.\n- For two mutually exclusive branches, name the deciding condition and use paired `&&` expressions, such as `{showsDetails && <Details />}` followed by `{!showsDetails && <Summary />}`.\n- For three or more mutually exclusive branches, both named `&&` branches and a local render function with early returns are acceptable. Invoke a local render function as a function from JSX. Extract a component when the rendered section has a meaningful interface or obscures the surrounding structure.\n- Keep short, flat ternaries for selecting non-JSX values such as strings, classes, or numbers. Hoist nested or hard-to-scan value expressions. Move repeated condition logic into a shared helper.\n\n## Browser Testing\n- Prefer `agent-browser` over Playwright CLI when available.\n\n## Commands\n- Reuse a suitable running development server. If none exists, start the documented local server when the task requires it and permissions allow.\n\n## Worktrees\n- Prefer `yggtree` for worktree operations when available; consult `yggtree --help` before using native Git worktree commands.\n\n## Tools and approach\n- **Outcome first:** choose proven tools for the requested result. Explore suitable alternatives before building custom substitutes; implementation convenience alone does not justify lowering quality.\n- **Evidence:** test uncertain capabilities before scaling. Reconsider approaches that miss the target, and assess outcome quality separately from technical checks.\n- **Decisions:** for new projects, recommend the foundation and tools needed for the intended capabilities. Involve the user in materially different options; proceed with settled choices and authorized experiments.\n- **Continuity:** preserve working project conventions unless the requested outcome warrants a change.\n\n## Web\n- **Applications:** React and TypeScript are required for all web applications and websites, including content sites. Prefer Tailwind when suitable.\n- **Artifacts:** standalone reports, visualizations, and prototypes may use any suitable stack, including plain HTML, CSS, and JavaScript.\n\n## Frontend UX Defaults\n- Prefer mature primitives or registry components when they materially improve UX, accessibility, responsiveness, or interaction quality.\n- Mobile is not degraded desktop; replace cramped, wrapped, clipped, or awkward controls with responsive patterns.\n- Push back when implementation convenience would materially degrade the user experience.\n\n## Code Style\n- Separate logical code sections with blank lines for readability.\n- Keep code comment-sparse. Use comments only to preserve enduring, non-obvious invariants, dangerous edge cases, external contracts, or trade-offs; describe lasting behavior rather than task history.\n\n## Sub-agents\nWhen spawning sub-agents, use the `team-up` skill as the coordination policy.\n\n## Dictionary\n- **Quick win**: a small, obvious, low-risk change. Use proportionate local validation; reserve browser automation and agent review for changes whose UX or correctness risk warrants them.\n<!-- AFK:RULES:END -->",
-        "references": {
-          "references/artifacts.md": "# Artifact Conventions\n\nUse these conventions when AFK work creates or resumes durable workflow artifacts.\n\n## Boundaries\n\n- **PRD** captures product intent: problem, goals, scope, non-goals, success criteria, and stakeholder context.\n- **Spec** captures behavior and design decisions: flows, acceptance criteria, edge cases, constraints, and relevant references.\n- If the PRD or combined artifact lacks behavior needed for implementation, recommend the user to create/update a spec before writing the implementation plan.\n- **RFC** captures a proposed direction for review before executable slicing.\n- **Tickets** are executable planning artifacts: tracer-bullet slices, dependencies, acceptance criteria, execution bundle, Test Seam, and expected verification.\n- **Implementation records** are execution artifacts: status, validation evidence, changes, review state, implementation notes, and handoff state for one implementation unit.\n\nCreate or update the smallest artifact that removes the current ambiguity. If a PRD already covers behavior well enough, do not split out a separate spec just for ceremony.\n\n## Storage\n\n- Follow the repo or user artifact convention first.\n- Otherwise use:\n\n```text\ndocs/\n├── adr/          # <NNNN>-<slug>.md; centralized, numbered, durable\n├── specs/        # <scope>.md, or <scope>/ for multiple files\n├── tickets/      # <scope>/<NN>-<slug>.md\n├── research/     # usually <scope>/\n├── references/   # <scope>/; replaceable external inputs\n└── tracking/     # <scope>/<slug>.md\n```\n\n- Use a concise kebab-case scope slug and reuse it across artifact types for one effort.\n- Keep locally maintained sources in their artifact-type folder and replaceable external material under `references/`.\n\nTreat generated workflow artifacts as local working artifacts unless the repo convention or user says otherwise.\n\n## Notes\n\n- Record implementation notes in the relevant Implementation Record.\n- Create standalone notes only when the user asks or the repo already has that convention.\n- Use ADRs for decisions that change architecture, ownership, integration contracts, data model, migration strategy, or long-term maintenance expectations.\n- Preserve execution-bundle evidence where it affects review or resume safety."
-        },
-        "lastSync": "2026-10-07T14:39:45.726Z"
-      },
-      "claude": {
-        "region": "<!-- AFK:RULES:START -->\n## Skills\nState \"I will use the X skill\" whenever using a skill.\nIf a user-required skill is unavailable, search the configured skill roots and verify explicit aliases. Explain what is missing and request an approved fallback for dependent work. Continue independent authorized work.\n\n## Artifacts\nWhen creating or resuming durable workflow artifacts, read /Users/leonardo/.claude/afk-rules/claude/references/artifacts.md; follow repository storage conventions first.\n\n## Imports\n- Prefer configured absolute imports such as `@/components/...`.\n\n## TypeScript\n- Avoid `any` unless necessary or specifically requested.\n- Run the repository typecheck for TypeScript changes. Fix failures introduced by the change. If an unrelated baseline or environment failure prevents a clean result, report the evidence and verification gap; do not claim a pass.\n\n## Testing\n- Add regression tests when they protect meaningful behavior. Test observable behavior; tautological tests that merely restate the implementation are harmful. Trivial copy and other low-risk changes do not require coverage.\n\n## React\n- Name compound JSX conditions before the return with domain-specific booleans. JSX conditions should contain one named boolean, optionally negated.\n- For two mutually exclusive branches, name the deciding condition and use paired `&&` expressions, such as `{showsDetails && <Details />}` followed by `{!showsDetails && <Summary />}`.\n- For three or more mutually exclusive branches, both named `&&` branches and a local render function with early returns are acceptable. Invoke a local render function as a function from JSX. Extract a component when the rendered section has a meaningful interface or obscures the surrounding structure.\n- Keep short, flat ternaries for selecting non-JSX values such as strings, classes, or numbers. Hoist nested or hard-to-scan value expressions. Move repeated condition logic into a shared helper.\n\n## Browser Testing\n- Prefer `agent-browser` over Playwright CLI when available.\n\n## Commands\n- Reuse a suitable running development server. If none exists, start the documented local server when the task requires it and permissions allow.\n\n## Worktrees\n- Prefer `yggtree` for worktree operations when available; consult `yggtree --help` before using native Git worktree commands.\n\n## Tools and approach\n- **Outcome first:** choose proven tools for the requested result. Explore suitable alternatives before building custom substitutes; implementation convenience alone does not justify lowering quality.\n- **Evidence:** test uncertain capabilities before scaling. Reconsider approaches that miss the target, and assess outcome quality separately from technical checks.\n- **Decisions:** for new projects, recommend the foundation and tools needed for the intended capabilities. Involve the user in materially different options; proceed with settled choices and authorized experiments.\n- **Continuity:** preserve working project conventions unless the requested outcome warrants a change.\n\n## Web\n- **Applications:** React and TypeScript are required for all web applications and websites, including content sites. Prefer Tailwind when suitable.\n- **Artifacts:** standalone reports, visualizations, and prototypes may use any suitable stack, including plain HTML, CSS, and JavaScript.\n\n## Frontend UX Defaults\n- Prefer mature primitives or registry components when they materially improve UX, accessibility, responsiveness, or interaction quality.\n- Mobile is not degraded desktop; replace cramped, wrapped, clipped, or awkward controls with responsive patterns.\n- Push back when implementation convenience would materially degrade the user experience.\n\n## Code Style\n- Separate logical code sections with blank lines for readability.\n- Keep code comment-sparse. Use comments only to preserve enduring, non-obvious invariants, dangerous edge cases, external contracts, or trade-offs; describe lasting behavior rather than task history.\n\n## Sub-agents\nWhen spawning sub-agents, use the `team-up` skill as the coordination policy.\n\n## Dictionary\n- **Quick win**: a small, obvious, low-risk change. Use proportionate local validation; reserve browser automation and agent review for changes whose UX or correctness risk warrants them.\n<!-- AFK:RULES:END -->",
-        "references": {
-          "references/artifacts.md": "# Artifact Conventions\n\nUse these conventions when AFK work creates or resumes durable workflow artifacts.\n\n## Boundaries\n\n- **PRD** captures product intent: problem, goals, scope, non-goals, success criteria, and stakeholder context.\n- **Spec** captures behavior and design decisions: flows, acceptance criteria, edge cases, constraints, and relevant references.\n- If the PRD or combined artifact lacks behavior needed for implementation, recommend the user to create/update a spec before writing the implementation plan.\n- **RFC** captures a proposed direction for review before executable slicing.\n- **Tickets** are executable planning artifacts: tracer-bullet slices, dependencies, acceptance criteria, execution bundle, Test Seam, and expected verification.\n- **Implementation records** are execution artifacts: status, validation evidence, changes, review state, implementation notes, and handoff state for one implementation unit.\n\nCreate or update the smallest artifact that removes the current ambiguity. If a PRD already covers behavior well enough, do not split out a separate spec just for ceremony.\n\n## Storage\n\n- Follow the repo or user artifact convention first.\n- Otherwise use:\n\n```text\ndocs/\n├── adr/          # <NNNN>-<slug>.md; centralized, numbered, durable\n├── specs/        # <scope>.md, or <scope>/ for multiple files\n├── tickets/      # <scope>/<NN>-<slug>.md\n├── research/     # usually <scope>/\n├── references/   # <scope>/; replaceable external inputs\n└── tracking/     # <scope>/<slug>.md\n```\n\n- Use a concise kebab-case scope slug and reuse it across artifact types for one effort.\n- Keep locally maintained sources in their artifact-type folder and replaceable external material under `references/`.\n\nTreat generated workflow artifacts as local working artifacts unless the repo convention or user says otherwise.\n\n## Notes\n\n- Record implementation notes in the relevant Implementation Record.\n- Create standalone notes only when the user asks or the repo already has that convention.\n- Use ADRs for decisions that change architecture, ownership, integration contracts, data model, migration strategy, or long-term maintenance expectations.\n- Preserve execution-bundle evidence where it affects review or resume safety."
-        },
-        "lastSync": "2026-10-07T14:39:45.726Z"
-      }
-    }
+    ]
   },
   "stacks": [
     {
@@ -409,10 +386,406 @@
             "skills": [
               "watch"
             ]
+          },
+          {
+            "name": "Video By Reference",
+            "source": "https://github.com/ishuagrawal/skills",
+            "skills": [
+              "video-by-reference"
+            ]
+          },
+          {
+            "name": "Video Editing - Bart",
+            "source": "https://github.com/Barty-Bart/motion-graphics",
+            "skills": [
+              "motion-broll",
+              "object-separation"
+            ]
           }
         ],
         "description": "Creative Skills for creative ideas"
       }
+    }
+  ],
+  "configurationId": "f347c213-f891-485f-bde4-1bc297039d9d",
+  "savedSkills": [
+    {
+      "scope": "Global",
+      "savedAt": "2026-10-09T13:45:23.407Z",
+      "skills": [
+        {
+          "name": "animated-driven-frontend",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "atlas-craft",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "atlas-motion",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "atlas-review",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "atlas-setup",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "atlas-to-spec",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "atlas-to-tickets",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "bro",
+          "source": "backnotprop/bro",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "capture-newsletter-idea",
+          "source": "leoreisdias/productivity-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "clean-room",
+          "source": "backnotprop/bro",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "code-simplification",
+          "source": "addyosmani/agent-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "codebase-design",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "cua-driver",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "design-artifact",
+          "source": "plannotator/effective-html",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "diagnosing-bugs",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "dispatch-project-discovery",
+          "source": "leoreisdias/productivity-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "domain-modeling",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "doubt-driven-development",
+          "source": "addyosmani/agent-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "facts",
+          "source": "backnotprop/bro",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "grill-me",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "grill-with-docs",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "grilling",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "hand-drawn-canvas-animation",
+          "source": "alesha-pro/tools",
+          "available": true,
+          "invocation": "Manual only"
+        },
+        {
+          "name": "handoff",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "html-ui",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "impeccable",
+          "source": "pbakaus/impeccable",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "implement-spec",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "interrogate",
+          "source": "backnotprop/pstack",
+          "available": true,
+          "invocation": "Manual only"
+        },
+        {
+          "name": "logbook-branding",
+          "source": "leoreisdias/productivity-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "notion-issues",
+          "source": "leoreisdias/productivity-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "orchestrator",
+          "source": "backnotprop/orchestrator",
+          "available": true,
+          "invocation": "Manual only"
+        },
+        {
+          "name": "pe-verify",
+          "source": "backnotprop/product-engineering",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "plannotator",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "plannotator-annotate",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "plannotator-guide",
+          "source": "plannotator/guides",
+          "available": true,
+          "invocation": "Manual only"
+        },
+        {
+          "name": "plannotator-last",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "plannotator-review",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "pr",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": "Manual only"
+        },
+        {
+          "name": "prototype",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "readback",
+          "source": "backnotprop/bro",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "recap",
+          "source": "backnotprop/bro",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "research",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "retro",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "shadcn",
+          "source": "shadcn-ui/ui",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "show-me",
+          "source": "humanlayer/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "source-driven-development",
+          "source": "addyosmani/agent-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "tdd",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "teach",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "team-up",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "to-questionnaire",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "tracking-implementation",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "truss-evaluation",
+          "source": "leoreisdias/truss-framework",
+          "available": true,
+          "invocation": "Automatic allowed"
+        },
+        {
+          "name": "use-daily-desk",
+          "source": "leoreisdias/productivity-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "use-local-cli",
+          "source": "leoreisdias/productivity-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "use-logbook-notion",
+          "source": "leoreisdias/productivity-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "use-logbook-projects",
+          "source": "leoreisdias/productivity-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "use-registry",
+          "source": "leoreisdias/productivity-skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "watch",
+          "source": "bradautomates/claude-video",
+          "available": true,
+          "invocation": "Manual only"
+        },
+        {
+          "name": "wayfinder",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "waypoint",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "wizard",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": "Manual only"
+        },
+        {
+          "name": "writing-for-agents",
+          "source": "mattpocock/skills",
+          "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "writing-for-humans",
+          "source": "logbookfordevs/atlas-skills",
+          "available": true,
+          "invocation": ""
+        }
+      ]
     }
   ]
 }
