@@ -22,9 +22,16 @@
         "html-ui"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-10-09",
       "carriedPath": "references/wireframe/html-wireframe.md",
-      "supportingFiles": [],
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/html-wireframe/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/html-wireframe/agents/openai.yaml",
+          "sourceSha256": "37e5a68fe60467559528ea8096b698f8be562c7e497813df02883dcc71dd3629"
+        }
+      ],
       "rulings": [],
       "patch": "sources/patches/html-wireframe.patch"
     },
@@ -49,9 +56,16 @@
         "html-ui"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-10-09",
       "carriedPath": "references/model/html-prototype.md",
-      "supportingFiles": [],
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/html-prototype/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/html-prototype/agents/openai.yaml",
+          "sourceSha256": "d102a3bddbde9ec6456f543453f9fcdd3db2ca73997457c8de81af18a3328318"
+        }
+      ],
       "rulings": [],
       "patch": "sources/patches/html-prototype.patch"
     },
@@ -121,13 +135,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
         "path": "skills/better-layout/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-layout/source.md",
-      "sourceSha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
+      "sourceSha256": "8c5883ccb23c27c39b7c58d101154ff35e032410e0dc4794be9ab7fe070c2297",
       "license": "sources/upstream/better-layout/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "sources/upstream/better-layout/source.md",
@@ -136,19 +150,25 @@
         "atlas-craft"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
+      "adoptedAt": "2026-10-09",
       "supportingFiles": [
         {
-          "relativePath": "grouping-and-alignment.md",
-          "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
-          "snapshot": "sources/upstream/better-layout/support/grouping-and-alignment.md",
-          "sourceSha256": "027edd034ab641e8affc2ec02ca97ee0824d86756b14e11de908d62f5d086fb1"
+          "snapshot": "sources/upstream/better-layout/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/better-layout/agents/openai.yaml",
+          "sourceSha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15"
         },
         {
+          "snapshot": "sources/upstream/better-layout/supporting/grouping-and-alignment.md",
+          "relativePath": "grouping-and-alignment.md",
+          "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
+          "sourceSha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a"
+        },
+        {
+          "snapshot": "sources/upstream/better-layout/supporting/spacing-and-adaptivity.md",
           "relativePath": "spacing-and-adaptivity.md",
           "upstreamPath": "skills/better-layout/spacing-and-adaptivity.md",
-          "snapshot": "sources/upstream/better-layout/support/spacing-and-adaptivity.md",
-          "sourceSha256": "bf46b0857efa5022e6918eda026827e9de2747f3f349b5a6787a2322179abe77"
+          "sourceSha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958"
         }
       ],
       "rulings": [
@@ -170,13 +190,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
         "path": "skills/better-typography/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-typography/source.md",
-      "sourceSha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
+      "sourceSha256": "e60ca6467ba60e68f95ed2d2cfa35f2a850d96ef2a0c0d3fcfcfd9510e51f184",
       "license": "sources/upstream/better-typography/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "sources/upstream/better-typography/source.md",
@@ -185,43 +205,49 @@
         "atlas-craft"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
+      "adoptedAt": "2026-10-09",
       "supportingFiles": [
         {
+          "snapshot": "sources/upstream/better-typography/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/better-typography/agents/openai.yaml",
+          "sourceSha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8"
+        },
+        {
+          "snapshot": "sources/upstream/better-typography/supporting/choosing-fonts.md",
           "relativePath": "choosing-fonts.md",
           "upstreamPath": "skills/better-typography/choosing-fonts.md",
-          "snapshot": "sources/upstream/better-typography/support/choosing-fonts.md",
-          "sourceSha256": "d139ec5d68cd123bc305d920295f7bc95a1e1123674de96d19103c1ebffc85c9"
+          "sourceSha256": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d"
         },
         {
+          "snapshot": "sources/upstream/better-typography/supporting/css-cheat-sheet.md",
           "relativePath": "css-cheat-sheet.md",
           "upstreamPath": "skills/better-typography/css-cheat-sheet.md",
-          "snapshot": "sources/upstream/better-typography/support/css-cheat-sheet.md",
-          "sourceSha256": "45c77f0d1954e12e76c3903361f52703cb4f4287d54c651710f60926247165fb"
+          "sourceSha256": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9"
         },
         {
+          "snapshot": "sources/upstream/better-typography/supporting/details-and-accessibility.md",
           "relativePath": "details-and-accessibility.md",
           "upstreamPath": "skills/better-typography/details-and-accessibility.md",
-          "snapshot": "sources/upstream/better-typography/support/details-and-accessibility.md",
-          "sourceSha256": "d74e2719ee793fbf7408883e0e5eb396b67514ce07e02412f33d5408ecb4a02e"
+          "sourceSha256": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23"
         },
         {
+          "snapshot": "sources/upstream/better-typography/supporting/spacing-and-sizing.md",
           "relativePath": "spacing-and-sizing.md",
           "upstreamPath": "skills/better-typography/spacing-and-sizing.md",
-          "snapshot": "sources/upstream/better-typography/support/spacing-and-sizing.md",
-          "sourceSha256": "e28e7899a73a8b17f38418dfd8c1afda116db81a3b68d53dd51eab019b20ab82"
+          "sourceSha256": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f"
         },
         {
+          "snapshot": "sources/upstream/better-typography/supporting/variable-fonts-and-opentype.md",
           "relativePath": "variable-fonts-and-opentype.md",
           "upstreamPath": "skills/better-typography/variable-fonts-and-opentype.md",
-          "snapshot": "sources/upstream/better-typography/support/variable-fonts-and-opentype.md",
-          "sourceSha256": "2bf1317ea5c0af6e36c57d15aacea512e450acbe4b00a8664c4619a959dea0b0"
+          "sourceSha256": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556"
         },
         {
+          "snapshot": "sources/upstream/better-typography/supporting/wrapping-and-punctuation.md",
           "relativePath": "wrapping-and-punctuation.md",
           "upstreamPath": "skills/better-typography/wrapping-and-punctuation.md",
-          "snapshot": "sources/upstream/better-typography/support/wrapping-and-punctuation.md",
-          "sourceSha256": "7cfa3463b68cf21f08ab01a184b12c8bf2fe9340c2c7691a8cc99e4569389efe"
+          "sourceSha256": "44ef7be30b3342c0a81f7b07c2f7138c9743b8df8c8edab518907e8ec0abd68a"
         }
       ],
       "rulings": [
@@ -243,13 +269,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
         "path": "skills/better-colors/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-colors/source.md",
-      "sourceSha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
+      "sourceSha256": "e74f1c413a4094dc2a73fb0baa0da2241465e01d593b0257ba995500df9b0068",
       "license": "sources/upstream/better-colors/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "sources/upstream/better-colors/source.md",
@@ -258,43 +284,49 @@
         "atlas-craft"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
+      "adoptedAt": "2026-10-09",
       "supportingFiles": [
         {
+          "snapshot": "sources/upstream/better-colors/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/better-colors/agents/openai.yaml",
+          "sourceSha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a"
+        },
+        {
+          "snapshot": "sources/upstream/better-colors/supporting/color-formats.md",
           "relativePath": "color-formats.md",
           "upstreamPath": "skills/better-colors/color-formats.md",
-          "snapshot": "sources/upstream/better-colors/support/color-formats.md",
-          "sourceSha256": "e68fffec8f7b8e1036c295fce8d65785764f33aead5d292389c47451e79d7129"
+          "sourceSha256": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba"
         },
         {
+          "snapshot": "sources/upstream/better-colors/supporting/color-usage.md",
           "relativePath": "color-usage.md",
           "upstreamPath": "skills/better-colors/color-usage.md",
-          "snapshot": "sources/upstream/better-colors/support/color-usage.md",
-          "sourceSha256": "dbaa4a4cb10b8118165fca4531b3c35b409c79185f15a2812a34f118293dba9f"
+          "sourceSha256": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773"
         },
         {
+          "snapshot": "sources/upstream/better-colors/supporting/contrast.md",
           "relativePath": "contrast.md",
           "upstreamPath": "skills/better-colors/contrast.md",
-          "snapshot": "sources/upstream/better-colors/support/contrast.md",
-          "sourceSha256": "f9a2f8ca2fd7966ea0002a9dd58b9d392fbb14fc6f4365534c488046337e5971"
+          "sourceSha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc"
         },
         {
+          "snapshot": "sources/upstream/better-colors/supporting/palette-generation.md",
           "relativePath": "palette-generation.md",
           "upstreamPath": "skills/better-colors/palette-generation.md",
-          "snapshot": "sources/upstream/better-colors/support/palette-generation.md",
-          "sourceSha256": "f3e3f9fc84fd834cfffd9e0c951f28c3f24c3c4a4492d86b697d3258f500fb85"
+          "sourceSha256": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5"
         },
         {
+          "snapshot": "sources/upstream/better-colors/supporting/palette-structure.md",
           "relativePath": "palette-structure.md",
           "upstreamPath": "skills/better-colors/palette-structure.md",
-          "snapshot": "sources/upstream/better-colors/support/palette-structure.md",
-          "sourceSha256": "82b22d74ead2a551a2a505347273025020d84dcde4a0170ea2fd14290dc10387"
+          "sourceSha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62"
         },
         {
+          "snapshot": "sources/upstream/better-colors/supporting/token-naming.md",
           "relativePath": "token-naming.md",
           "upstreamPath": "skills/better-colors/token-naming.md",
-          "snapshot": "sources/upstream/better-colors/support/token-naming.md",
-          "sourceSha256": "198ca90a643d52f446fe423464908e900d31923ee7d13d6454c8b791326d6b2a"
+          "sourceSha256": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a"
         }
       ],
       "rulings": [
@@ -316,7 +348,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "commit": "b0618bc436ad893b3c5e84e55fba86586d34a404",
         "path": "skills/engineering/to-spec/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -333,8 +365,19 @@
       "rulings": [],
       "carriedPath": "SKILL.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
-      "patch": "sources/patches/to-spec.patch"
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/to-spec.patch",
+      "supportingFileTargets": {
+        "agents/openai.yaml": "references/upstream/agents/openai.yaml"
+      },
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/to-spec/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/engineering/to-spec/agents/openai.yaml",
+          "sourceSha256": "1c5b4d1e3d8e52287ef19cc2742fdbbfae1914ac75d33af3e4c8174f08cc55bb"
+        }
+      ]
     },
     {
       "id": "to-tickets",
@@ -342,7 +385,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "commit": "b0618bc436ad893b3c5e84e55fba86586d34a404",
         "path": "skills/engineering/to-tickets/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -359,8 +402,19 @@
       "rulings": [],
       "carriedPath": "SKILL.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
-      "patch": "sources/patches/to-tickets.patch"
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/to-tickets.patch",
+      "supportingFileTargets": {
+        "agents/openai.yaml": "references/upstream/agents/openai.yaml"
+      },
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/to-tickets/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/engineering/to-tickets/agents/openai.yaml",
+          "sourceSha256": "21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090"
+        }
+      ]
     },
     {
       "id": "code-review",
@@ -368,25 +422,33 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "2237a047bd95abfd1427df94f65165c39e24d3c1",
+        "commit": "b0618bc436ad893b3c5e84e55fba86586d34a404",
         "path": "skills/engineering/code-review/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/code-review/source.md",
-      "sourceSha256": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
+      "sourceSha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357",
       "license": "sources/upstream/code-review/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "skills/atlas-review/references/code/code-review.md",
-      "adaptation": "Leonardo\u2019s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields.",
+      "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources.",
       "consumers": [
         "atlas-review"
       ],
       "rulings": [],
       "carriedPath": "references/code/code-review.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
-      "patch": "sources/patches/code-review.patch"
+      "adoptedAt": "2026-10-09",
+      "patch": "sources/patches/code-review.patch",
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/code-review/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/engineering/code-review/agents/openai.yaml",
+          "sourceSha256": "8229ca854e11dc8e6aef2131ee03f31fb1561cf905fab9ccc325180cf3331352"
+        }
+      ]
     },
     {
       "id": "review-animations",
@@ -481,7 +543,7 @@
       "license": "sources/upstream/show-me/LICENSE",
       "licenseSha256": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
       "method": "sources/upstream/show-me/source.md",
-      "adaptation": "Complete Show Me source preserved verbatim, including manual invocation frontmatter and examples. Tracking loads its method when creating or updating the Implementation Record, to govern artifact presentation throughout the work. Required state, evidence and acceptance remain governed by Tracking. The independent Show Me skill remains unchanged; host-specific artifact opening uses the caller\u2019s supported mechanism.",
+      "adaptation": "Complete Show Me source preserved verbatim, including manual invocation frontmatter and examples. Tracking loads its method when creating or updating the Implementation Record, to govern artifact presentation throughout the work. Required state, evidence and acceptance remain governed by Tracking. The independent Show Me skill remains unchanged; host-specific artifact opening uses the caller’s supported mechanism.",
       "consumers": [
         "tracking-implementation"
       ],

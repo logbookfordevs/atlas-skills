@@ -90,11 +90,15 @@ export function composeSkills(root = repositoryRoot) {
         if (!output.get(target).equals(read(source.method))) throw new Error(`Entry source mismatch: ${id}`);
       } else put(target, read(source.method));
       put(licenseTarget, read(source.license));
+      for (const [relativePath, carriedPath] of Object.entries(source.supportingFileTargets ?? {})) {
+        portablePath(relativePath);
+        portablePath(carriedPath);
+      }
       const supportingFiles = (source.supportingFiles ?? []).map(file => {
         portablePath(file.relativePath);
         const bytes = read(file.snapshot);
         if (sha256(bytes) !== file.sourceSha256) throw new Error(`Supporting file integrity failure: ${id}/${file.relativePath}`);
-        const carriedPath = join(dirname(target), file.relativePath);
+        const carriedPath = source.supportingFileTargets?.[file.relativePath] ?? join(dirname(target), file.relativePath);
         put(carriedPath, bytes);
         return { upstreamPath: file.upstreamPath, classification: 'verbatim', sourceSha256: file.sourceSha256, carriedPath, carriedSha256: sha256(bytes) };
       });

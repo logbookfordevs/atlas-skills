@@ -5,8 +5,10 @@
   "managedFiles": [
     "references/wireframe/html-wireframe.md",
     "licenses/html-wireframe.txt",
+    "references/wireframe/agents/openai.yaml",
     "references/model/html-prototype.md",
-    "licenses/html-prototype.txt"
+    "licenses/html-prototype.txt",
+    "references/model/agents/openai.yaml"
   ],
   "authoredInputs": [
     "skills/html-ui/SKILL.md",
@@ -33,7 +35,15 @@
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
-      "supportingFiles": [],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/html-wireframe/agents/openai.yaml",
+          "classification": "verbatim",
+          "sourceSha256": "37e5a68fe60467559528ea8096b698f8be562c7e497813df02883dcc71dd3629",
+          "carriedPath": "references/wireframe/agents/openai.yaml",
+          "carriedSha256": "37e5a68fe60467559528ea8096b698f8be562c7e497813df02883dcc71dd3629"
+        }
+      ],
       "notices": [],
       "sourceSha256": "b1d649ef9052f2ed8baabaf483ed527208a2e481281ed3925ec8b84ba641d4c1",
       "carriedPath": "references/wireframe/html-wireframe.md",
@@ -42,7 +52,7 @@
       "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
       "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-10-09",
       "rulings": [],
       "patch": "sources/patches/html-wireframe.patch",
       "patchSha256": "e4b959942d54f1b3b2f8ce62e9ee648ae8d8712cac762109f2f63e1f3446a86d"
@@ -58,7 +68,15 @@
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
-      "supportingFiles": [],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/html-prototype/agents/openai.yaml",
+          "classification": "verbatim",
+          "sourceSha256": "d102a3bddbde9ec6456f543453f9fcdd3db2ca73997457c8de81af18a3328318",
+          "carriedPath": "references/model/agents/openai.yaml",
+          "carriedSha256": "d102a3bddbde9ec6456f543453f9fcdd3db2ca73997457c8de81af18a3328318"
+        }
+      ],
       "notices": [],
       "sourceSha256": "8987dda45224350254af30cafa72e721c6d91e1972e794e8e839406f77814368",
       "carriedPath": "references/model/html-prototype.md",
@@ -67,7 +85,7 @@
       "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
       "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-10-09",
       "rulings": [],
       "patch": "sources/patches/html-prototype.patch",
       "patchSha256": "3bf3b3436112f5c823b3e5fc5063eff7ca1ff31f62fc67460bd0ad69b57f1234"
@@ -79,7 +97,9 @@
     "agents/openai.yaml": "c3cd62ee9f7f1fe55a0e0b88d0bc96026d668143794cfef8a4c126a16ed32448",
     "references/wireframe/html-wireframe.md": "b79837859145a4c3d198b5e25a56e09d68200d5fc831d7f6ea07a434fbf277df",
     "licenses/html-wireframe.txt": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
+    "references/wireframe/agents/openai.yaml": "37e5a68fe60467559528ea8096b698f8be562c7e497813df02883dcc71dd3629",
     "references/model/html-prototype.md": "7cc753fd3981666e3142e7159e594f6a7c33a1ed143d5335b483c9668b234206",
-    "licenses/html-prototype.txt": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d"
+    "licenses/html-prototype.txt": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
+    "references/model/agents/openai.yaml": "d102a3bddbde9ec6456f543453f9fcdd3db2ca73997457c8de81af18a3328318"
   }
 }
