@@ -7,7 +7,9 @@
     "licenses/animate.txt",
     "references/animate/RECIPES.md",
     "references/fluid/apple-design.md",
-    "licenses/apple-design.txt"
+    "licenses/apple-design.txt",
+    "references/opportunities/index.md",
+    "licenses/find-animation-opportunities.txt"
   ],
   "authoredInputs": [
     "skills/atlas-motion/SKILL.md",
@@ -39,15 +41,19 @@
       "notices": [],
       "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
       "carriedPath": "references/animate/animate.md",
-      "carriedSha256": "cab02af17d548ba7a3264ca514fc264903f484869e8e3e0d28d22232d65869c0",
+      "carriedSha256": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
       "licensePath": "licenses/animate.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "adaptation": "Replace only the component-selection tooling call with the user-selected instruction to pause and find a suitable library via available Notion search, internet search, existing project libraries, or user consultation. Supporting files remain verbatim.",
+      "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. Supporting files remain verbatim.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-05",
-      "rulings": [],
+      "rulings": [
+        "craft-motion-owner",
+        "review-motion-owner",
+        "motion-local-routing"
+      ],
       "patch": "sources/patches/animate.patch",
-      "patchSha256": "04bb7d31c869e862806a43c7863d6ca58b99c4d9fe7742eca529dc10c505deb2"
+      "patchSha256": "fcd519cae6f96cafdd36d2b9aecbe8e43c08de2f351f80bf44619dd7b44d92cd"
     },
     {
       "id": "apple-design",
@@ -70,17 +76,63 @@
       "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-05",
-      "rulings": []
+      "rulings": [
+        "craft-motion-owner",
+        "review-motion-owner"
+      ]
+    },
+    {
+      "id": "find-animation-opportunities",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "path": "skills/find-animation-opportunities/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "d52a377819b84a71930f0c822cfe2849f40301605a2d5c7eccbfa3b257700df2",
+      "carriedPath": "references/opportunities/index.md",
+      "carriedSha256": "aebe5a1d1949b11d05be67d94d82a1d888a4a9d22342974fa66f543c772b0b18",
+      "licensePath": "licenses/find-animation-opportunities.txt",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "adaptation": "Remove the canned initial response and name Atlas Review audit/planning handoffs directly. Preserve upstream discovery rules; Native remains outside the composition.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-09",
+      "rulings": [
+        "motion-local-routing"
+      ],
+      "patch": "sources/patches/find-animation-opportunities.patch",
+      "patchSha256": "da2ccb6e3e0d6da5216cbb7ab0075ddde555e806dadd972d2e5bf68813716b51"
     }
   ],
-  "rulings": [],
+  "rulings": [
+    {
+      "id": "motion-local-routing",
+      "owner": "atlas-motion",
+      "document": "skills/atlas-motion/references/ownership.md",
+      "section": "Scope and ownership",
+      "sources": [
+        "animate",
+        "find-animation-opportunities"
+      ],
+      "decision": "Discovery is read-only; implementation follows authorization; review handoffs use Atlas Review and Native remains external."
+    }
+  ],
   "files": {
-    "SKILL.md": "a45b3ebace2df47cd3197370bd791a14199612e719a9af0a75832cf37462cac8",
-    "agents/openai.yaml": "b547c19f4621638f7f5ee66bd21764618b6372791e1861122d7376f4e879f095",
-    "references/animate/animate.md": "cab02af17d548ba7a3264ca514fc264903f484869e8e3e0d28d22232d65869c0",
+    "SKILL.md": "df90ba8a7d4c2b604c49ec0e40833f6dd0786f79427aeb21d66755a59489e8a0",
+    "agents/openai.yaml": "4a898c95714535fb6ecaa1027c7fc19e6ef8ce0107cc4a843049568b5b8f0fd3",
+    "references/animate/animate.md": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
     "references/fluid/apple-design.md": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
-    "licenses/apple-design.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b"
+    "licenses/apple-design.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/opportunities/index.md": "aebe5a1d1949b11d05be67d94d82a1d888a4a9d22342974fa66f543c772b0b18",
+    "licenses/find-animation-opportunities.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
+    "references/ownership.md": "166cf8437712cb30e2cc2306a029dd47c824089bee86677a8d12bc944307d91a"
   }
 }

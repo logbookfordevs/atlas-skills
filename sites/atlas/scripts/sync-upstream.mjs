@@ -15,6 +15,9 @@ const authors = {
 const titles = {
   'html-wireframe': 'HTML Wireframe', 'html-prototype': 'HTML Prototype',
   'better-colors': 'Better Colors', 'better-typography': 'Better Typography', 'better-layout': 'Better Layout',
+  'better-accessibility': 'Better Accessibility', 'better-ui': 'Better UI', 'better-writing': 'Better Writing',
+  'better-interface': 'Better Interface', 'interface-review': 'Interface Review',
+  'improve-animations': 'Improve Animations', 'find-animation-opportunities': 'Find Animation Opportunities',
   animate: 'Animate', 'apple-design': 'Apple Design', 'code-review': 'Code Review',
   'review-animations': 'Review Animations', 'to-spec': 'To Spec', 'to-tickets': 'To Tickets',
   'show-me': 'Show Me', 'stop-slop': 'Stop Slop',

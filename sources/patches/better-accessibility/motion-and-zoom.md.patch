@@ -1,0 +1,10 @@
+diff --git a/source.md b/source.md
+index 919a6a9..d527e10 100644
+--- a/source.md
++++ b/source.md
+@@ -45,4 +45,4 @@ Reduced motion targets vestibular triggers, not feedback.
+ - **200% text resize** (1.4.4). All content and functionality survives text scaled to 200%.
+ - **Reflow at 320px** (1.4.10). At 400% zoom on a 1280px viewport, equivalent to a 320px one, the page must work with vertical scrolling alone. Genuinely 2D content is the exception: tables, maps and code blocks scroll inside their own container.
+ 
+-Write media queries in `rem` or `em` where the codebase allows. At a larger browser font size such a query switches to the narrow layout when the text needs it, and a `px` query does not. Breakpoint placement belongs to `better-layout`.
++Write media queries in `rem` or `em` where the codebase allows. At a larger browser font size such a query switches to the narrow layout when the text needs it, and a `px` query does not. Breakpoint placement belongs to [Layout](../layout/index.md).

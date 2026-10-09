@@ -1,0 +1,36 @@
+diff --git a/source.md b/source.md
+index 5bff16d..897d6d3 100644
+--- a/source.md
++++ b/source.md
+@@ -5,11 +5,14 @@ description: Helps with grouping, alignment, reading order, responsive structure
+ 
+ # Layout
+ 
++## Atlas integration
++Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
++
+ This skill sets grouping, alignment, spacing and responsive structure. It then stress-tests that structure by resizing it, translating it and mirroring it for RTL.
+ 
+ Write every fix in the project's styling system. The numbers below apply only where the project has no spacing scale or density system; otherwise use its tokens. A finding needs a failure you can show, such as a clip, an overlap, a broken mirror or a misread group. A value that differs from these starting points is not one.
+ 
+-Hit areas and focus behavior belong to `better-accessibility`. Radius, shadows and animation belong to `better-ui`. Line length, text spacing and truncation mechanics belong to `better-typography`. The words themselves belong to `better-writing`.
++Hit areas and focus behavior belong to [Accessibility](../accessibility/index.md). Radius, shadows and animation belong to [UI Polish](../ui/index.md). Line length, text spacing and truncation mechanics belong to [Type](../type/index.md). The words themselves belong to [Copy](../copy/index.md).
+ 
+ ## Group with space, not lines
+ 
+@@ -33,13 +36,13 @@ The most important content sits near the top and the leading edge. Within a row,
+ 
+ ## One primary action per view
+ 
+-Give each view one primary action. Put secondary actions behind a menu once there are more than 3. Prefer a short view that links deeper over one long view that shows everything at the top level. `better-colors` owns how color marks the primary action.
++Give each view one primary action. Put secondary actions behind a menu once there are more than 3. Prefer a short view that links deeper over one long view that shows everything at the top level. [Color](../color/index.md) owns how color marks the primary action.
+ 
+ ## Hint at hidden content
+ 
+ Every piece of off-screen or collapsed content needs a visible cue. Use the project's established cue, let the next item peek `16–32px` past the scroll edge or show a disclosure control.
+ 
+-A truncated value the user needs has a way to the full text: an expand control, a detail view or a tooltip that is also keyboard-reachable. Truncation mechanics are `better-typography`'s. Recipes are in [spacing-and-adaptivity.md](spacing-and-adaptivity.md#hint-at-hidden-content).
++A truncated value the user needs has a way to the full text: an expand control, a detail view or a tooltip that is also keyboard-reachable. Truncation mechanics are [Type](../type/index.md)'s. Recipes are in [spacing-and-adaptivity.md](spacing-and-adaptivity.md#hint-at-hidden-content).
+ 
+ ## Borderless controls need more clearance
+ 

@@ -1,6 +1,6 @@
 interface:
   display_name: "Atlas Craft"
-  short_description: "Refine production interface colors, typography or spatial layout while preserving project identity."
+  short_description: "Refine production interfaces: color, typography, layout, accessibility, UI polish and interface copy while preserving project identity."
   default_prompt: "Use $atlas-craft for the requested craft work."
 policy:
   allow_implicit_invocation: true

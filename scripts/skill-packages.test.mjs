@@ -288,3 +288,28 @@ test('recording a directly edited method produces a replayable patch without cha
   assert.throws(() => buildSkills(root), /conflicts with Atlas-owned file/);
   assert.equal(readFileSync(join(root, 'skills/logbook-fixture/references/local.md'), 'utf8'), 'owned\n');
 });
+
+test('supporting-only patches replay, carry receipts and reject unrecorded edits', t => {
+  const root = fixture(t);
+  const manifestPath = join(root, 'sources/composition.json');
+  const manifest = JSON.parse(readFileSync(manifestPath));
+  const source = manifest.sources[0];
+  source.classification = 'patched';
+  const file = source.supportingFiles[0];
+  file.method = 'sources/methods/details.md';
+  file.patch = 'sources/patches/details.patch';
+  writeFileSync(join(root, file.method), 'See [Accessibility](accessibility.md).\n');
+  writeFileSync(manifestPath, JSON.stringify(manifest));
+  recordPatches(root);
+  const output = composeSkills(root).get('logbook-fixture');
+  assert.equal(output.get('references/details.md').toString(), 'See [Accessibility](accessibility.md).\n');
+  assert.equal(readFileSync(join(root, file.snapshot), 'utf8'), 'fixture support details.md\n');
+  const receipt = JSON.parse(output.get('SOURCE-MANIFEST.json')).sources[0].supportingFiles[0];
+  assert.equal(receipt.classification, 'patched');
+  assert.equal(receipt.patchSha256, sha256(readFileSync(join(root, file.patch))));
+  writeFileSync(join(root, file.method), 'unrecorded edit\n');
+  assert.throws(() => composeSkills(root), /Supporting patch replay mismatch/);
+  delete file.patch;
+  writeFileSync(manifestPath, JSON.stringify(manifest));
+  assert.throws(() => recordPatches(root), /Incomplete patch registration/);
+});

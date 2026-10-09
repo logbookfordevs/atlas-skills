@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index 410c022..cca6802 100644
+--- a/source.md
++++ b/source.md
+@@ -58,7 +58,7 @@ Name precedence: `aria-labelledby` > `aria-label` > native label (`<label>`, tex
+ </button>
+ ```
+ 
+-Keeping brand names and code tokens out of auto-translation with `translate="no"` belongs to `better-typography`.
++Keeping brand names and code tokens out of auto-translation with `translate="no"` belongs to [Type](../type/index.md).
+ 
+ ## Common ARIA mistakes
+ 
