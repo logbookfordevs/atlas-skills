@@ -12,7 +12,8 @@
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "dfaf1c9750fe5bd306d6e676dacbb3bd9380ff8b7e51981ab91cb1f56c85aa96",
-    "agents/openai.yaml": "270a07cc2b69eee532060965bd58612ced7eb39488eca676bc7975da3298de42"
+    "SKILL.md": "977d2099d1574b89c4d15bb798d312a5bf86c67e97f1ea9ca8e9d103ff5ed104",
+    "agents/openai.yaml": "270a07cc2b69eee532060965bd58612ced7eb39488eca676bc7975da3298de42",
+    "references/model-preferences.md": "c62982b7e098e91a7aa8428ae6c7ab2aaa8024f2b811c7a822b96eb0bc4cf4d0"
   }
 }
