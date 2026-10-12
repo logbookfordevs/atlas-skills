@@ -200,14 +200,16 @@
       {
         "id": "claude",
         "name": "Claude",
+        "path": "/Users/leonardo/.claude/AGENTS.md",
         "kind": "claude",
-        "path": "/Users/leonardo/.claude/AGENTS.md"
+        "claudeMdImport": true
       },
       {
+        "id": "custom-37b59132-aec2-43d9-b68b-b4c4acb9e843",
         "name": "Claude Work",
         "path": "/Users/leonardo/.claude-work/AGENTS.md",
         "kind": "custom",
-        "id": "custom-37b59132-aec2-43d9-b68b-b4c4acb9e843"
+        "claudeMdImport": true
       }
     ]
   },
