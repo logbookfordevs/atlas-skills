@@ -1089,6 +1089,12 @@
           "condition": "When the executor has not already provided the checkpoint code review."
         },
         {
+          "id": "pe-verify",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When a verification report or QA run is requested, or changed behavior needs reproducible acceptance evidence beyond routine project checks."
+        },
+        {
           "id": "plannotator",
           "relationship": "tool",
           "required": false,

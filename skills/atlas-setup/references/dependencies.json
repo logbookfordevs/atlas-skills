@@ -25,6 +25,19 @@
           "condition": "When the selected HTML method needs visual composition guidance."
         }
       ]
+    },
+    {
+      "id": "pe-verify",
+      "source": "https://github.com/backnotprop/product-engineering",
+      "skill": "pe-verify",
+      "command": "npx skills add https://github.com/backnotprop/product-engineering --skill pe-verify",
+      "consumers": [
+        {
+          "skill": "tracking-implementation",
+          "required": false,
+          "condition": "When a verification report or QA run is requested, or changed behavior needs reproducible acceptance evidence beyond routine project checks."
+        }
+      ]
     }
   ]
 }

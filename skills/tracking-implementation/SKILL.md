@@ -82,7 +82,9 @@ Keep the implementation status `review` until the review gate is accepted. Prese
 Use `blocked_by` for record dependencies, human decisions, missing context, or external blockers.
 
 ## Execution Evidence
-Record the selected execution bundle before implementation begins: `tdd`, `source-driven-development`, `doubt-driven-development`, normal project validation, or a combination.
+Record the selected execution bundle before implementation begins: `tdd`, `source-driven-development`, `doubt-driven-development`, `pe-verify`, normal project validation, or a combination.
+
+Use `pe-verify` when a verification report or QA run is requested, or changed behavior needs reproducible acceptance evidence beyond routine project checks. Reuse adequate existing evidence; keep ordinary validation for low-risk changes such as prose edits. Follow the installed skill's verification and report contracts. Within tracked implementation, return failures to the selected executor for fixes; verification itself stays read-only.
 
 Use `tdd` when the implementation has a meaningful public Test Seam. Treat a seam approved in the source as pre-agreed. If the seam is missing, ambiguous, or invalidated by codebase evidence, agree on it with the user before writing tests. Use normal validation with an explicit skip reason when no meaningful executable seam exists.
 
@@ -91,6 +93,7 @@ Before moving an implementation to `review`, record evidence for each selected d
 - `tdd`: failing-test evidence before implementation when practical, then the passing run after implementation. If literal test-first was skipped, record why and the nearest proof used.
 - `source-driven-development`: official docs or primary sources consulted, version signals checked, and source-backed implementation decisions or unresolved gaps.
 - `doubt-driven-development`: fresh-context adversarial review result, findings reconciled, and unresolved concerns escalated.
+- `pe-verify`: link its report from Execution Evidence and the checkpoint handoff, identify the checked scope and revision, and record unresolved failures or coverage gaps. Keep its report in the skill's prescribed location; consume it as evidence alongside the existing code-review and acceptance gates.
 - Normal validation: tests, typechecks, lint, builds, runtime checks, browser checks, or a clear reason a check could not run.
 
 Do not mark the implementation `review` while selected discipline evidence is missing without an explicit skip reason.
