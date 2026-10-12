@@ -1079,10 +1079,6 @@
         {
           "input": "skills/tracking-implementation/references/review-guides.md",
           "target": "references/review-guides.md"
-        },
-        {
-          "input": "skills/tracking-implementation/references/checkpoint-handoff.md",
-          "target": "references/checkpoint-handoff.md"
         }
       ],
       "dependencies": [
