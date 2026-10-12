@@ -1079,6 +1079,10 @@
         {
           "input": "skills/tracking-implementation/references/review-guides.md",
           "target": "references/review-guides.md"
+        },
+        {
+          "input": "skills/tracking-implementation/references/checkpoint-handoff.md",
+          "target": "references/checkpoint-handoff.md"
         }
       ],
       "dependencies": [
@@ -1092,7 +1096,13 @@
           "id": "plannotator",
           "relationship": "tool",
           "required": false,
-          "condition": "When available for user acceptance or local-record feedback."
+          "condition": "When available to export or share the checkpoint Guided Review, or for user-requested interactive review."
+        },
+        {
+          "id": "plannotator-inbox",
+          "relationship": "tool",
+          "required": false,
+          "condition": "When available for scoped implementation questions, checkpoint guide delivery and acceptance replies."
         }
       ]
     },

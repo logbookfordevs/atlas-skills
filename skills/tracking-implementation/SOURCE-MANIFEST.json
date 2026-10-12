@@ -11,20 +11,27 @@
     "skills/tracking-implementation/SKILL.md",
     "skills/tracking-implementation/agents/openai.yaml",
     "skills/tracking-implementation/references/resume.md",
-    "skills/tracking-implementation/references/review-guides.md"
+    "skills/tracking-implementation/references/review-guides.md",
+    "skills/tracking-implementation/references/checkpoint-handoff.md"
   ],
   "authoredReferences": [
     {
       "input": "skills/tracking-implementation/references/resume.md",
       "target": "references/resume.md",
       "classification": "atlas-authored",
-      "carriedSha256": "c6d6b0b37a84484b59024d85a39d47b7214cc7eb7b67fdcd24ebdabe495afcaf"
+      "carriedSha256": "e0d7e7ab6152827677c8f22a40aec9933179c11066bdc5b80fd5a448d27af46d"
     },
     {
       "input": "skills/tracking-implementation/references/review-guides.md",
       "target": "references/review-guides.md",
       "classification": "atlas-authored",
       "carriedSha256": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f"
+    },
+    {
+      "input": "skills/tracking-implementation/references/checkpoint-handoff.md",
+      "target": "references/checkpoint-handoff.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "9d7232fcc6abd6ddd5a49039fa2ef873032761a6824b9c3762923327a883c3e5"
     }
   ],
   "dependencies": [
@@ -38,7 +45,13 @@
       "id": "plannotator",
       "relationship": "tool",
       "required": false,
-      "condition": "When available for user acceptance or local-record feedback."
+      "condition": "When available to export or share the checkpoint Guided Review, or for user-requested interactive review."
+    },
+    {
+      "id": "plannotator-inbox",
+      "relationship": "tool",
+      "required": false,
+      "condition": "When available for scoped implementation questions, checkpoint guide delivery and acceptance replies."
     }
   ],
   "sources": [
@@ -89,10 +102,11 @@
     }
   ],
   "files": {
-    "SKILL.md": "8ab0f7a1fa7e370a0afdd5227aa66db979304e9ab18e416e8aab0c69cfc7a0b2",
+    "SKILL.md": "e3de4a534dd380eea30ba7ba33aff0c872d9a7549dcb66729bc0424715e88b50",
     "agents/openai.yaml": "e6d5f07bd54729be9ae4dc0c2bb8b251a679530a048623e8f815a154437a5abb",
-    "references/resume.md": "c6d6b0b37a84484b59024d85a39d47b7214cc7eb7b67fdcd24ebdabe495afcaf",
+    "references/resume.md": "e0d7e7ab6152827677c8f22a40aec9933179c11066bdc5b80fd5a448d27af46d",
     "references/review-guides.md": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f",
+    "references/checkpoint-handoff.md": "9d7232fcc6abd6ddd5a49039fa2ef873032761a6824b9c3762923327a883c3e5",
     "references/show-me.md": "434a2346cc95e313b0d367d477dda2e23ba642dd2181757415a09500664af100",
     "licenses/show-me.txt": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
     "references/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"

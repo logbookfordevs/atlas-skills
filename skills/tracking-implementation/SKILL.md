@@ -109,9 +109,12 @@ History rewrites and remote or public actions still require approval. If local c
 ## Review Gate
 After final validation, run `atlas-review` in Code mode once automatically from `review_base`. If it reports findings, set `changes_requested`; judge each finding against the code and its cited source, fix warranted findings, record evidence for dismissals, revalidate, and commit. Do not rerun it automatically. Once the review is clean or warranted fixes are committed, set `awaiting_acceptance` and hand the gate to the user. The user decides whether fixes or later changes require another review; only the user's explicit acceptance, directly or through approval of an external review result such as Plannotator Review, sets `accepted`.
 
-When the gate first reaches `awaiting_acceptance`, run `plannotator review --base <review_base>` if Plannotator is available. Its UI lets the user annotate, approve, or dismiss the final implementation range. Approval sets `accepted`. Annotations set `changes_requested` and return to implementation. Closing or dismissing it leaves the gate at `awaiting_acceptance`.
+When the gate reaches `awaiting_acceptance`, follow [Checkpoint Handoff](references/checkpoint-handoff.md) to generate a Guided Review of the final implementation diff, link it from the Tracking Home and final handoff, and deliver it through Plannotator Inbox when available. Keep interactive diff review and record annotation available on user request rather than launching them automatically.
 
-After resolving that session's outcome, run `plannotator annotate <implementation-record>` when the Tracking Home is a local file, and reconcile its feedback before final handoff. If Plannotator is unavailable, recommend installing it and continue the normal handoff.
+Explicit acceptance of the identified checkpoint, including an Inbox reply, sets `accepted`. Change requests set `changes_requested` and return to implementation. Opening the guide, resolving an Inbox thread, dismissing a review, or receiving no reply leaves acceptance pending.
+
+## Inbox Coordination
+Use [Checkpoint Handoff](references/checkpoint-handoff.md) when implementation needs a human decision or the checkpoint is ready for acceptance. It defines scoped Inbox questions, reply reconciliation and guide delivery. Keep decisions, blockers and acceptance in the Tracking Home; Inbox carries the conversation.
 
 ## Implementation Record
 Keep task-local state in the Tracking Home using these content groups, or equivalent tracker fields:
@@ -119,6 +122,7 @@ Keep task-local state in the Tracking Home using these content groups, or equiva
 - **Source links:** reference the authoritative scope, acceptance criteria, parent and story coverage instead of copying them. When no accessible source supplies this information, write the agreed scope and acceptance criteria in the record, plus any missing source context. Record local deviations and coverage gaps.
 - **Structured state:** preserve the Implementation State schema for identity, status, blockers, review baseline and gate; add explanations where needed.
 - **Changes and Decisions:** material changes, reasons, implementation-specific invariants, deviations and important constraints.
+- **Guided Review:** an Open Guided Review link for the current checkpoint, its reviewed revision or diff identity, and delivery references or explicit availability gaps. Follow [Checkpoint Handoff](references/checkpoint-handoff.md); retain Changes and Decisions as durable context.
 - **Execution Evidence:** selected execution disciplines with their required proof, actual validation runs and results, and explicit gaps or skip reasons. Apply the Execution Evidence requirements above.
 - **Complete Review Record:** the full actionable review output, judgment and resolution for every finding, dismissal evidence, unresolved items, or the clean-review receipt defined above.
 - **Acceptance Journey:** hands-on inspection guidance when product or design acceptance needs it; follow [Review Guides](references/review-guides.md).
