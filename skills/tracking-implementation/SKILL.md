@@ -17,6 +17,8 @@ If the user asks to resume tracked implementation, use [resume.md](references/re
 Skip tiny one-shot edits unless the user asks for tracked implementation.
 
 ## Artifact presentation
+Create new local Implementation Records as HTML unless the user explicitly requests Markdown or another format. When resuming an existing record, retain its format unless the user requests a conversion.
+
 Before creating or updating the Implementation Record, read and follow [Show Me](references/show-me.md). Let it organize the artifact around the work being tracked, choosing representations that make changes, evidence, review findings and continuation context easy to inspect. The record fields below define required content; use them within the chosen presentation rather than as a repeated prose template. Preserve structured state and complete, inspectable evidence within the selected Tracking Home; secondary views follow its synchronization agreement. Use the host’s available file-opening mechanism for HTML artifacts. Distinguish explanatory sketches from verified runtime results.
 
 ## Implementation Records
@@ -26,7 +28,7 @@ Split only when the work has independently owned, validated, or reviewed impleme
 
 Before implementation, ask whether the Tracking Home should be local or use an available remote mechanism:
 
-- **Local:** create one Markdown or HTML Implementation Record following the repository or user artifact convention. Let Show Me guide the format choice for the work and review needs; retain the chosen record across updates.
+- **Local:** create one Implementation Record in the format defined by Artifact presentation, following the repository or user storage convention. Let Show Me guide its layout and representations for the work and review needs; retain the chosen record across updates.
 - **Remote:** inspect the available mechanism and agree where status, execution evidence, review state, findings, and handoff notes will live.
 
 An existing remote ticket may host the record when remote tracking is chosen. Otherwise keep the source artifact unchanged and reference it from the Implementation Record. Treat secondary representations as references unless the user agrees to a synchronization contract.
@@ -48,19 +50,19 @@ Choose the active record in this order:
 Before starting, read blockers and previous `Continuation Context` when they affect the active implementation.
 
 ## Implementation State
-Keep this state in the selected Tracking Home. Use frontmatter for Markdown; for HTML, embed the same fields in a labeled JSON block and expose their current values in the visible record. Remote trackers use equivalent fields. The state schema is:
+Keep this state in the selected Tracking Home. For HTML, embed the fields in a labeled JSON block and expose their current values in the visible record. Markdown records use equivalent frontmatter; remote trackers use equivalent fields. The state schema is:
 
-```yaml
----
-id: <scope-or-slice-id>
-title: <Implementation title>
-status: in_progress
-blocked_by: []
-source: <artifact-or-issue-reference>
-review_base: <commit recorded before implementation>
-updated_at: 2026-06-15T16:40:00-03:00
-review_gate: pending
----
+```json
+{
+  "id": "<scope-or-slice-id>",
+  "title": "<Implementation title>",
+  "status": "in_progress",
+  "blocked_by": [],
+  "source": "<artifact-or-issue-reference>",
+  "review_base": "<commit recorded before implementation>",
+  "updated_at": "2026-06-15T16:40:00-03:00",
+  "review_gate": "pending"
+}
 ```
 
 Statuses: `pending`, `in_progress`, `validating`, `review`, `blocked`, `done`.

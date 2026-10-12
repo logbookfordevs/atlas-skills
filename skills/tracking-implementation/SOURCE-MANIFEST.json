@@ -85,11 +85,11 @@
       "sources": [
         "show-me"
       ],
-      "decision": "Load Show Me before creating or updating the tracking artifact; select presentation for each relevant content requirement, preserving complete evidence, structured state and the existing acceptance contract."
+      "decision": "Tracking sets HTML as the default for new local records, allows an explicitly requested alternative, and preserves existing formats unless conversion is requested. Load Show Me before creating or updating the tracking artifact to guide layout and representations within that format, preserving complete evidence, structured state and the existing acceptance contract."
     }
   ],
   "files": {
-    "SKILL.md": "77f81b6ad7bd6a316ec72779cdd75c4ff2ad608170336044ed2632c27734853b",
+    "SKILL.md": "8ab0f7a1fa7e370a0afdd5227aa66db979304e9ab18e416e8aab0c69cfc7a0b2",
     "agents/openai.yaml": "e6d5f07bd54729be9ae4dc0c2bb8b251a679530a048623e8f815a154437a5abb",
     "references/resume.md": "c6d6b0b37a84484b59024d85a39d47b7214cc7eb7b67fdcd24ebdabe495afcaf",
     "references/review-guides.md": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f",

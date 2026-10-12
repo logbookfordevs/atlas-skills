@@ -1203,7 +1203,7 @@
       "sources": [
         "show-me"
       ],
-      "decision": "Load Show Me before creating or updating the tracking artifact; select presentation for each relevant content requirement, preserving complete evidence, structured state and the existing acceptance contract."
+      "decision": "Tracking sets HTML as the default for new local records, allows an explicitly requested alternative, and preserves existing formats unless conversion is requested. Load Show Me before creating or updating the tracking artifact to guide layout and representations within that format, preserving complete evidence, structured state and the existing acceptance contract."
     },
     {
       "id": "interface-local-routing",
