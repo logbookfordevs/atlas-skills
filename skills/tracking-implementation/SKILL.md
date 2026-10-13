@@ -82,7 +82,9 @@ Keep the implementation status `review` until the review gate is accepted. Prese
 Use `blocked_by` for record dependencies, human decisions, missing context, or external blockers.
 
 ## Execution Evidence
-Record the selected execution bundle before implementation begins: `tdd`, `source-driven-development`, `doubt-driven-development`, normal project validation, or a combination.
+Record the selected execution bundle before implementation begins: `tdd`, `source-driven-development`, `doubt-driven-development`, `pe-verify`, normal project validation, or a combination.
+
+Use `pe-verify` when a verification report or QA run is requested, or changed behavior needs reproducible acceptance evidence beyond routine project checks. Reuse adequate existing evidence; keep ordinary validation for low-risk changes such as prose edits. Follow the installed skill's verification and report contracts. Within tracked implementation, return failures to the selected executor for fixes; verification itself stays read-only.
 
 Use `tdd` when the implementation has a meaningful public Test Seam. Treat a seam approved in the source as pre-agreed. If the seam is missing, ambiguous, or invalidated by codebase evidence, agree on it with the user before writing tests. Use normal validation with an explicit skip reason when no meaningful executable seam exists.
 
@@ -91,6 +93,7 @@ Before moving an implementation to `review`, record evidence for each selected d
 - `tdd`: failing-test evidence before implementation when practical, then the passing run after implementation. If literal test-first was skipped, record why and the nearest proof used.
 - `source-driven-development`: official docs or primary sources consulted, version signals checked, and source-backed implementation decisions or unresolved gaps.
 - `doubt-driven-development`: fresh-context adversarial review result, findings reconciled, and unresolved concerns escalated.
+- `pe-verify`: link its report from Execution Evidence and the checkpoint handoff, identify the checked scope and revision, and record unresolved failures or coverage gaps. Keep its report in the skill's prescribed location; consume it as evidence alongside the existing code-review and acceptance gates.
 - Normal validation: tests, typechecks, lint, builds, runtime checks, browser checks, or a clear reason a check could not run.
 
 Do not mark the implementation `review` while selected discipline evidence is missing without an explicit skip reason.
@@ -107,11 +110,16 @@ Commit all implementation-owned changes before opening the automated Review Gate
 History rewrites and remote or public actions still require approval. If local commits are unavailable, ask.
 
 ## Review Gate
-After final validation, run `atlas-review` in Code mode once automatically from `review_base`. If it reports findings, set `changes_requested`; judge each finding against the code and its cited source, fix warranted findings, record evidence for dismissals, revalidate, and commit. Do not rerun it automatically. Once the review is clean or warranted fixes are committed, set `awaiting_acceptance` and hand the gate to the user. The user decides whether fixes or later changes require another review; only the user's explicit acceptance, directly or through approval of an external review result such as Plannotator Review, sets `accepted`.
+After final validation, run `atlas-review` in Code mode once automatically from `review_base`. If it reports findings, set `changes_requested`; judge each finding against the code and its cited source, fix warranted findings, record evidence for dismissals, revalidate, and commit. Do not rerun it automatically. Once the review is clean or warranted fixes are committed, set `awaiting_acceptance`. The user decides whether fixes or later changes require another review.
 
-When the gate first reaches `awaiting_acceptance`, run `plannotator review --base <review_base>` if Plannotator is available. Its UI lets the user annotate, approve, or dismiss the final implementation range. Approval sets `accepted`. Annotations set `changes_requested` and return to implementation. Closing or dismissing it leaves the gate at `awaiting_acceptance`.
+At `awaiting_acceptance`, use Plannotator's available skills and tool guidance to generate a Guided Review of the final implementation-owned diff from `review_base` and deliver it through Inbox when available. Link the current guide from the Tracking Home and final handoff. Use local delivery unless hosted sharing is authorized. Interactive diff review and record annotation run on user request.
 
-After resolving that session's outcome, run `plannotator annotate <implementation-record>` when the Tracking Home is a local file, and reconcile its feedback before final handoff. If Plannotator is unavailable, recommend installing it and continue the normal handoff.
+When guide delivery is unavailable, record the gap and provide an inline checkpoint walkthrough. Refresh the guide after implementation changes so it matches the checkpoint awaiting acceptance.
+
+Explicit acceptance of the identified checkpoint, including an Inbox reply, sets `accepted`. Change requests set `changes_requested` and return to implementation. Opening the guide, resolving an Inbox thread, dismissing a review, or receiving no reply leaves acceptance pending.
+
+## Inbox Coordination
+Use Plannotator Inbox for unresolved implementation decisions and checkpoint handoff, following its available skills and tool guidance. Continue independent work while decisions are pending. Reconcile replies into the Tracking Home's decisions, blockers and acceptance state before resuming affected work; keep Inbox references there for continuation.
 
 ## Implementation Record
 Keep task-local state in the Tracking Home using these content groups, or equivalent tracker fields:
@@ -119,6 +127,7 @@ Keep task-local state in the Tracking Home using these content groups, or equiva
 - **Source links:** reference the authoritative scope, acceptance criteria, parent and story coverage instead of copying them. When no accessible source supplies this information, write the agreed scope and acceptance criteria in the record, plus any missing source context. Record local deviations and coverage gaps.
 - **Structured state:** preserve the Implementation State schema for identity, status, blockers, review baseline and gate; add explanations where needed.
 - **Changes and Decisions:** material changes, reasons, implementation-specific invariants, deviations and important constraints.
+- **Guided Review:** an Open Guided Review link for the current checkpoint, its reviewed revision or diff identity, and delivery references or explicit availability gaps.
 - **Execution Evidence:** selected execution disciplines with their required proof, actual validation runs and results, and explicit gaps or skip reasons. Apply the Execution Evidence requirements above.
 - **Complete Review Record:** the full actionable review output, judgment and resolution for every finding, dismissal evidence, unresolved items, or the clean-review receipt defined above.
 - **Acceptance Journey:** hands-on inspection guidance when product or design acceptance needs it; follow [Review Guides](references/review-guides.md).

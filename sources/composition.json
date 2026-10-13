@@ -1089,10 +1089,22 @@
           "condition": "When the executor has not already provided the checkpoint code review."
         },
         {
+          "id": "pe-verify",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When a verification report or QA run is requested, or changed behavior needs reproducible acceptance evidence beyond routine project checks."
+        },
+        {
           "id": "plannotator",
           "relationship": "tool",
           "required": false,
-          "condition": "When available for user acceptance or local-record feedback."
+          "condition": "When available to export or share the checkpoint Guided Review, or for user-requested interactive review."
+        },
+        {
+          "id": "plannotator-inbox",
+          "relationship": "tool",
+          "required": false,
+          "condition": "When available for scoped implementation questions, checkpoint guide delivery and acceptance replies."
         }
       ]
     },

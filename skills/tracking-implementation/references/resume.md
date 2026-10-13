@@ -8,6 +8,8 @@ Read the smallest useful set: active records, blockers, continuation context, th
 
 Recover the active record's `review_base`, last green atomic commit, implementation-owned dirty paths, validation state, automatic code-review evidence, and review-gate states.
 
+Recover its Guided Review link and checkpoint revision, Inbox references and unresolved questions. Reconcile unread replies and check the guide still matches the active checkpoint under the main skill's handoff policy.
+
 If implementation-owned paths are dirty, distinguish unfinished behavior work from tracking updates and follow the main skill’s commit policy.
 
 Report done, active, blocked, and the executor’s next recorded action.

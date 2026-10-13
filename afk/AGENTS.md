@@ -54,6 +54,7 @@ When spawning sub-agents, use the `team-up` skill as the coordination policy.
 
 ## Dictionary
 - **Quick win**: a small, obvious, low-risk change. Use proportionate local validation; reserve browser automation and agent review for changes whose UX or correctness risk warrants them.
+- **Visualize**: use any built-in tool if available to render inline HTML to explain/show me something for deeper/better understanding
 
 ## Extras
-- Lets use Plannotator Inbox as an active available hub between me and you.
+- Use Plannotator Inbox as an active bridge for any open question, blockers or final implementation handoffs.
