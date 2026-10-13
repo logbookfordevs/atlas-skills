@@ -186,6 +186,10 @@
     {
       "name": "Video Editing - Bart",
       "source": "https://github.com/Barty-Bart/motion-graphics"
+    },
+    {
+      "name": "Anatomy",
+      "source": "https://github.com/wheresryan22/anatomy"
     }
   ],
   "welcomeDismissed": true,
@@ -408,6 +412,13 @@
             "skills": [
               "motion-broll",
               "object-separation"
+            ]
+          },
+          {
+            "name": "Anatomy",
+            "source": "https://github.com/wheresryan22/anatomy",
+            "skills": [
+              "anatomy"
             ]
           }
         ],
