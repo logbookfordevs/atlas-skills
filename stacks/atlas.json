@@ -14,6 +14,7 @@
         "atlas-motion",
         "atlas-craft",
         "atlas-review",
+        "atlas-verify",
         "animated-driven-frontend",
         "writing-for-humans",
         "team-up",
@@ -44,13 +45,6 @@
         "codebase-design",
         "pr",
         "retro"
-      ]
-    },
-    {
-      "name": "Product Engineering",
-      "source": "https://github.com/backnotprop/product-engineering",
-      "skills": [
-        "pe-verify"
       ]
     },
     {

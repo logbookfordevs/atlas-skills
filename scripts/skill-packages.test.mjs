@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join, posix } from 'node:path';
 import { tmpdir } from 'node:os';
+import { spawnSync } from 'node:child_process';
+import { runInNewContext } from 'node:vm';
 import { test } from 'node:test';
 import { recordPatches } from './record-patches.mjs';
 import { buildSkills, composeSkills, repositoryRoot, sha256 } from './build-skills.mjs';
@@ -186,6 +188,43 @@ test('Tracking Implementation is automatically discoverable with portable author
   }
   for (const reference of receipt.authoredReferences) assert.equal(sha256(files.get(reference.target)), reference.carriedSha256);
   for (const ruling of receipt.rulings) assert.ok(receipt.authoredInputs.includes(ruling.document));
+});
+
+test('Atlas Verify validates and renders from a portable package without the source repo', t => {
+  const python = spawnSync('python3', ['--version'], { encoding: 'utf8' });
+  if (python.error?.code === 'ENOENT') {
+    t.skip('Python 3 is unavailable; the verification report tools require it.');
+    return;
+  }
+
+  assert.equal(python.status, 0, python.stderr);
+  const root = mkdtempSync(join(tmpdir(), 'atlas-verify-package-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  for (const [name, bytes] of composeSkills().get('atlas-verify')) {
+    const path = join(root, name);
+    mkdirSync(join(path, '..'), { recursive: true });
+    writeFileSync(path, bytes);
+  }
+
+  const report = join(root, 'assets/sample/report.json');
+  const options = { cwd: root, encoding: 'utf8', env: { ...process.env, PYTHONDONTWRITEBYTECODE: '1' } };
+  const validation = spawnSync('python3', [join(root, 'scripts/validate-report.py'), report], options);
+  assert.equal(validation.status, 0, validation.stdout + validation.stderr);
+
+  const rendering = spawnSync('python3', [join(root, 'scripts/render-report.py'), report, '--no-convert'], options);
+  assert.equal(rendering.status, 0, rendering.stdout + rendering.stderr);
+  const rendered = readFileSync(join(root, 'assets/sample/report.html'), 'utf8');
+  const payload = rendered.match(/<script id="report-data">([\s\S]*?)<\/script>/)[1];
+  const browser = { window: {} };
+  runInNewContext(payload, browser);
+  assert.deepEqual(JSON.parse(JSON.stringify(browser.window.__REPORT__)), JSON.parse(readFileSync(report, 'utf8')));
+
+  const malformed = join(root, 'invalid.json');
+  writeFileSync(malformed, JSON.stringify({ schema_version: 1, title: 'Incomplete report' }));
+  const rejection = spawnSync('python3', [join(root, 'scripts/validate-report.py'), malformed], options);
+  assert.equal(rejection.status, 1);
+  assert.ok(rejection.stdout.includes('mode'));
 });
 
 

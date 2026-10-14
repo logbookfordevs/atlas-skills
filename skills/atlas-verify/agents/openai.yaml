@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas Verify"
+  short_description: "Verify behavior and project QA with inspectable reports and evidence."
+  default_prompt: "Use $atlas-verify to verify the requested behavior or QA scope."
+policy:
+  allow_implicit_invocation: true

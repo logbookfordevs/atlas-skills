@@ -35,7 +35,7 @@
       "condition": "When the executor has not already provided the checkpoint code review."
     },
     {
-      "id": "pe-verify",
+      "id": "atlas-verify",
       "relationship": "behavioral",
       "required": false,
       "condition": "When a verification report or QA run is requested, or changed behavior needs reproducible acceptance evidence beyond routine project checks."
@@ -101,7 +101,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "2799a42fa2809cf0f2460c539ebd50c6430fd54b6704662a48e4e1f4a6e3bfda",
+    "SKILL.md": "81b43dd96d5eac5a5ca299e9537d5b2fc4bfdfba2f4cc06e5bf26744b6334a7b",
     "agents/openai.yaml": "e6d5f07bd54729be9ae4dc0c2bb8b251a679530a048623e8f815a154437a5abb",
     "references/resume.md": "6130bbe5c9110014ecc6652397c8e921dc677a87b35c7f92628daa13dfc5aae8",
     "references/review-guides.md": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f",
