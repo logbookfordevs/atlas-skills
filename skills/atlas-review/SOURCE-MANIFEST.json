@@ -859,7 +859,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "6b1254d572faa088b8231b9153358a1815b7751450d435c42af96b8661b30333",
+    "SKILL.md": "3cf54a4944db3bddd9d3f8e827af79b147829c93b5a35b48f22b5c9d5f47ca76",
     "agents/openai.yaml": "c33039fa49b6a4c44bd2d9a0ee660341533e47ff1c6ef28ad69b975f7076882d",
     "references/static/static-review.md": "a105165ead3aa7af298ec25dcd881c60463d97805830b62b8f9dcc0e00b85b0d",
     "references/static/scripts/changed-files.sh": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7",
