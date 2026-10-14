@@ -15,6 +15,7 @@
         "atlas-craft",
         "atlas-implement",
         "atlas-debug",
+        "atlas-simplify",
         "atlas-review",
         "atlas-verify",
         "animated-driven-frontend",
@@ -101,8 +102,7 @@
       "name": "Addy Osmani",
       "source": "https://github.com/addyosmani/agent-skills.git",
       "skills": [
-        "doubt-driven-development",
-        "code-simplification"
+        "doubt-driven-development"
       ]
     },
     {

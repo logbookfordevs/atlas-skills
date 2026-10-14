@@ -26,4 +26,6 @@ Atlas Implement carries TDD and Source-Driven Development as directly loaded met
 
 Atlas Grill replaces Grilling, Grill Me and Grill with Docs. It defaults to Grilling and selects With Docs only on an explicit user request. Atlas Wayfinder replaces Wayfinder and remains manually invoked. Both packages carry Grilling and Domain Modeling from the same registered sources, so Domain Modeling needs no separate stack installation. Wayfinder uses the configured tracker adapter or its bundled local fallback; Research and Prototype remain independent dependencies for their ticket types.
 
+Atlas Simplify carries Code Simplification verbatim and replaces its independent stack selection. Tracking offers Atlas Simplify for material simplification opportunities while preserving the checkpoint's agreed scope.
+
 Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas Simplify"
+  short_description: "Simplify code for clarity while preserving behavior."
+  default_prompt: "Use $atlas-simplify to simplify the selected code while preserving its behavior."
+policy:
+  allow_implicit_invocation: true

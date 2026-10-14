@@ -141,7 +141,7 @@ Before final handoff after implementation or review fixes:
 
 - Record a note for non-obvious behavior invariants.
 - Create or update an ADR for reusable policy, ownership, shared component, integration contract, data/model, migration, or long-term product decisions.
-- Record material simplification opportunities and offer `code-simplification`; do not silently refactor outside the checkpoint scope.
+- Record material simplification opportunities and offer `atlas-simplify`; do not silently refactor outside the checkpoint scope.
 
 When implementation changes user-facing behavior, copy, or workflow, or acceptance needs visual judgment, follow [Review Guides](references/review-guides.md).
 
