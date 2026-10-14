@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "workflow": "atlas-verify",
+  "generated": true,
+  "managedFiles": [
+    "SKILL.md",
+    "licenses/pe-verify.txt",
+    "assets/report-template.html",
+    "assets/report.schema.json",
+    "assets/sample/cp-1.png",
+    "assets/sample/cp-10.png",
+    "assets/sample/cp-16.png",
+    "assets/sample/cp-21.png",
+    "assets/sample/cp-4.png",
+    "assets/sample/recording.mp4",
+    "assets/sample/report.json",
+    "references/evidence.md",
+    "references/qa-list.md",
+    "references/report-schema.md",
+    "scripts/render-report.py",
+    "scripts/test-render.py",
+    "scripts/validate-report.py",
+    "scripts/validate_report_lib.py",
+    "licenses/pe-verify-NOTICE.txt"
+  ],
+  "authoredInputs": [
+    "skills/atlas-verify/SKILL.md",
+    "skills/atlas-verify/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "atlas-review",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When verification needs product, interface or fidelity judgment rather than behavior proof."
+    }
+  ],
+  "sources": [
+    {
+      "id": "pe-verify",
+      "owner": "atlas-verify",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-verify/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/pe-verify/assets/report-template.html",
+          "classification": "patched",
+          "sourceSha256": "9ff0fe0a83750892b67bf7cce541d05260c7efb1166e8e8802745fae854d2f7a",
+          "carriedPath": "assets/report-template.html",
+          "carriedSha256": "1930221f277f20c83f263539ed9d429e92396e76633805214d9fb7b4c48f7721",
+          "patch": "sources/patches/pe-verify-report-template.patch",
+          "patchSha256": "070512dacce58895e36cf6dd85abc2a913486baa3718414464d2d2189d53d350"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/report.schema.json",
+          "classification": "verbatim",
+          "sourceSha256": "684b3c117fb07b436222793549c64431dbd81730e02ef1635753ab492d5324de",
+          "carriedPath": "assets/report.schema.json",
+          "carriedSha256": "684b3c117fb07b436222793549c64431dbd81730e02ef1635753ab492d5324de"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-1.png",
+          "classification": "verbatim",
+          "sourceSha256": "f05a570caef5108b80be64d488f38f97bcd78c1bf08b1b9cd6a892a70bcb0c4c",
+          "carriedPath": "assets/sample/cp-1.png",
+          "carriedSha256": "f05a570caef5108b80be64d488f38f97bcd78c1bf08b1b9cd6a892a70bcb0c4c"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-10.png",
+          "classification": "verbatim",
+          "sourceSha256": "cdf310c459fec20812f3e4fcb602ec456a16bd818d5690743bb80bcad1de8902",
+          "carriedPath": "assets/sample/cp-10.png",
+          "carriedSha256": "cdf310c459fec20812f3e4fcb602ec456a16bd818d5690743bb80bcad1de8902"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-16.png",
+          "classification": "verbatim",
+          "sourceSha256": "c7ac9d48e8f444fab7eaa226780fdb1fa2e677cd44e0089625efe0be31d5a8fe",
+          "carriedPath": "assets/sample/cp-16.png",
+          "carriedSha256": "c7ac9d48e8f444fab7eaa226780fdb1fa2e677cd44e0089625efe0be31d5a8fe"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-21.png",
+          "classification": "verbatim",
+          "sourceSha256": "da323972bd9c1f4b773ab3b2cf397c964f8a8422c26cdbb0d28347b698ff2f65",
+          "carriedPath": "assets/sample/cp-21.png",
+          "carriedSha256": "da323972bd9c1f4b773ab3b2cf397c964f8a8422c26cdbb0d28347b698ff2f65"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-4.png",
+          "classification": "verbatim",
+          "sourceSha256": "a817e4114a7f39513cde50ee2d2c72ca01e7d448671ae9da1c768d8cca48906a",
+          "carriedPath": "assets/sample/cp-4.png",
+          "carriedSha256": "a817e4114a7f39513cde50ee2d2c72ca01e7d448671ae9da1c768d8cca48906a"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/recording.mp4",
+          "classification": "verbatim",
+          "sourceSha256": "30805d726e6c03e236ed0c1866313f464565f799965de99aaecc3e28f6d877ab",
+          "carriedPath": "assets/sample/recording.mp4",
+          "carriedSha256": "30805d726e6c03e236ed0c1866313f464565f799965de99aaecc3e28f6d877ab"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/report.json",
+          "classification": "verbatim",
+          "sourceSha256": "c5b38b1f42bfc6c10102acd873b72a79834d8a7d38bb39573ee9934afbdeec91",
+          "carriedPath": "assets/sample/report.json",
+          "carriedSha256": "c5b38b1f42bfc6c10102acd873b72a79834d8a7d38bb39573ee9934afbdeec91"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/references/evidence.md",
+          "classification": "patched",
+          "sourceSha256": "7253cd0f1915749811e52dc479f51d0b6f04709fab37b57b17660319223f40a1",
+          "carriedPath": "references/evidence.md",
+          "carriedSha256": "aa007ef9c88bfc81f0f1a02539173f342ce0eb9e63e2538eb4aa259b35097b68",
+          "patch": "sources/patches/pe-verify-evidence.patch",
+          "patchSha256": "883741de11ca6bb24ac59bb3f7e68786b2de24cbb3adb9ecf778cfbc2a5fee31"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/references/qa-list.md",
+          "classification": "patched",
+          "sourceSha256": "1c55c69a126f6000bf7c4a34fd01324f52c2272213c6067cfe7743890f6468f2",
+          "carriedPath": "references/qa-list.md",
+          "carriedSha256": "d358a8b40aa766f1addbc732b1e10aa60e6616e022afabbfc98c6bb4ba27a3fa",
+          "patch": "sources/patches/pe-verify-qa-list.patch",
+          "patchSha256": "a2f8e9024262b4a27ba6f56ed70abb91342f167c4c60e4e62216abbda8465bd8"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/references/report-schema.md",
+          "classification": "patched",
+          "sourceSha256": "bd64169697137f37900538c7388ff0cad587cdbbd6c2acd3215d550b68b25ad7",
+          "carriedPath": "references/report-schema.md",
+          "carriedSha256": "1cfcd53c53380aabebff52cfd775c83577325662e32ece548fb3ae846cebb218",
+          "patch": "sources/patches/pe-verify-report-schema.patch",
+          "patchSha256": "1296efbbc9faa6d1ebe61cbea34ba4d38b5ccbb86c83240a174e48a58c90332e"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/scripts/render-report.py",
+          "classification": "verbatim",
+          "sourceSha256": "77594a4f70ca8beab8d5850912600ab0cab896bdbee7845a502166afdc48731c",
+          "carriedPath": "scripts/render-report.py",
+          "carriedSha256": "77594a4f70ca8beab8d5850912600ab0cab896bdbee7845a502166afdc48731c"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/scripts/test-render.py",
+          "classification": "verbatim",
+          "sourceSha256": "669ffac073dac9cc807fdccdd309d71bb0508cb8fa2d2e0c60ad8d74a038051b",
+          "carriedPath": "scripts/test-render.py",
+          "carriedSha256": "669ffac073dac9cc807fdccdd309d71bb0508cb8fa2d2e0c60ad8d74a038051b"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/scripts/validate-report.py",
+          "classification": "verbatim",
+          "sourceSha256": "6d7ed4cc7f760d962d866a1cd7a73f4e0d77ec3502dab7d856065e11b83059ee",
+          "carriedPath": "scripts/validate-report.py",
+          "carriedSha256": "6d7ed4cc7f760d962d866a1cd7a73f4e0d77ec3502dab7d856065e11b83059ee"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/scripts/validate_report_lib.py",
+          "classification": "verbatim",
+          "sourceSha256": "cd9af844b9ed3ebb05bb29167627757a7ca69fec7f858da43db61459eb427126",
+          "carriedPath": "scripts/validate_report_lib.py",
+          "carriedSha256": "cd9af844b9ed3ebb05bb29167627757a7ca69fec7f858da43db61459eb427126"
+        }
+      ],
+      "notices": [
+        {
+          "carriedPath": "licenses/pe-verify-NOTICE.txt",
+          "carriedSha256": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488"
+        }
+      ],
+      "sourceSha256": "18a7611a2dfa5a977000eb4223cb3e917b98c8ead0b8b9dce9fe2baba26379aa",
+      "carriedPath": "SKILL.md",
+      "carriedSha256": "1042eef8cc00c3d4c5271ea7eef2cc95eced3909590bb170a2d47e2a7fde2bd3",
+      "licensePath": "licenses/pe-verify.txt",
+      "licenseSha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+      "adaptation": "Atlas-owned verification invocation for the core workflow. Preserve the report schema, validator, renderer, fixtures and evidence requirements. Adapt executor and review handoffs, project-local QA-list discovery, browser-driver selection, run directory naming and report page title. Product-code verification remains read-only; Tracking owns implementation and acceptance. The complete upstream skill tree and root license and notice are retained at the pinned revision.",
+      "licenseSpdx": "Apache-2.0",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "verify-executor-handoff",
+        "verify-qa-list-home",
+        "verify-browser-driver"
+      ],
+      "patch": "sources/patches/pe-verify.patch",
+      "patchSha256": "af4039c1609e8bc22140848d04048e47d76fd3122eee1ab7700bc45a66ad51b3"
+    }
+  ],
+  "rulings": [
+    {
+      "id": "verify-executor-handoff",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/SKILL.md",
+      "section": "Handoffs",
+      "sources": [
+        "pe-verify"
+      ],
+      "decision": "Verification stays read-only toward product code. Return failures to the selected executor and quality or fidelity judgment to Atlas Review. A standalone report does not authorize implementation or acceptance."
+    },
+    {
+      "id": "verify-qa-list-home",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/qa-list.md",
+      "section": "Finding it",
+      "sources": [
+        "pe-verify"
+      ],
+      "decision": "Honor the user-selected QA list and repository convention; retain discovery context in an active Implementation Record. Replace Product Engineering global-memory reads and writes with project-local discovery."
+    },
+    {
+      "id": "verify-browser-driver",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/evidence.md",
+      "section": "Before driving anything",
+      "sources": [
+        "pe-verify"
+      ],
+      "decision": "Prefer agent-browser when available and able to produce the required video, timestamped checkpoints and stills. Use Playwright when that proof requires it. Missing browser coverage remains skipped with reasons."
+    }
+  ],
+  "files": {
+    "SKILL.md": "1042eef8cc00c3d4c5271ea7eef2cc95eced3909590bb170a2d47e2a7fde2bd3",
+    "agents/openai.yaml": "adc5fa8fce8753312dd45dbf6b920bfd898ef94237f1bbd30e4a9fcc9e0f86b6",
+    "licenses/pe-verify.txt": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+    "assets/report-template.html": "1930221f277f20c83f263539ed9d429e92396e76633805214d9fb7b4c48f7721",
+    "assets/report.schema.json": "684b3c117fb07b436222793549c64431dbd81730e02ef1635753ab492d5324de",
+    "assets/sample/cp-1.png": "f05a570caef5108b80be64d488f38f97bcd78c1bf08b1b9cd6a892a70bcb0c4c",
+    "assets/sample/cp-10.png": "cdf310c459fec20812f3e4fcb602ec456a16bd818d5690743bb80bcad1de8902",
+    "assets/sample/cp-16.png": "c7ac9d48e8f444fab7eaa226780fdb1fa2e677cd44e0089625efe0be31d5a8fe",
+    "assets/sample/cp-21.png": "da323972bd9c1f4b773ab3b2cf397c964f8a8422c26cdbb0d28347b698ff2f65",
+    "assets/sample/cp-4.png": "a817e4114a7f39513cde50ee2d2c72ca01e7d448671ae9da1c768d8cca48906a",
+    "assets/sample/recording.mp4": "30805d726e6c03e236ed0c1866313f464565f799965de99aaecc3e28f6d877ab",
+    "assets/sample/report.json": "c5b38b1f42bfc6c10102acd873b72a79834d8a7d38bb39573ee9934afbdeec91",
+    "references/evidence.md": "aa007ef9c88bfc81f0f1a02539173f342ce0eb9e63e2538eb4aa259b35097b68",
+    "references/qa-list.md": "d358a8b40aa766f1addbc732b1e10aa60e6616e022afabbfc98c6bb4ba27a3fa",
+    "references/report-schema.md": "1cfcd53c53380aabebff52cfd775c83577325662e32ece548fb3ae846cebb218",
+    "scripts/render-report.py": "77594a4f70ca8beab8d5850912600ab0cab896bdbee7845a502166afdc48731c",
+    "scripts/test-render.py": "669ffac073dac9cc807fdccdd309d71bb0508cb8fa2d2e0c60ad8d74a038051b",
+    "scripts/validate-report.py": "6d7ed4cc7f760d962d866a1cd7a73f4e0d77ec3502dab7d856065e11b83059ee",
+    "scripts/validate_report_lib.py": "cd9af844b9ed3ebb05bb29167627757a7ca69fec7f858da43db61459eb427126",
+    "licenses/pe-verify-NOTICE.txt": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488"
+  }
+}

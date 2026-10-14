@@ -1,0 +1,11 @@
+diff --git a/source.md b/source.md
+index 56ec7d5..dca1d5a 100644
+--- a/source.md
++++ b/source.md
+@@ -429,5 +429,5 @@ document.addEventListener("keydown", e => {
+ const _render = render;
+ render = function() { _render(); document.getElementById("jumpbtn").hidden = !!REPORT.__errors || state.mode !== "list"; document.getElementById("keys").hidden = !!REPORT.__errors; };
+ render();
+-document.title = (REPORT.title ? REPORT.title + " · " : "") + "pe-verify";
++document.title = (REPORT.title ? REPORT.title + " · " : "") + "Atlas Verify";
+ </script>

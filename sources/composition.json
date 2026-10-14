@@ -961,6 +961,149 @@
       "adoptedAt": "2026-10-09",
       "patch": "sources/patches/find-animation-opportunities.patch",
       "supportingFiles": []
+    },
+    {
+      "id": "pe-verify",
+      "owner": "atlas-verify",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/product-engineering",
+        "commit": "0642a58496d4dfa1de9688a82c29dfa34d24370a",
+        "path": "skills/pe-verify/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pe-verify/source.md",
+      "sourceSha256": "18a7611a2dfa5a977000eb4223cb3e917b98c8ead0b8b9dce9fe2baba26379aa",
+      "license": "sources/upstream/pe-verify/LICENSE",
+      "licenseSha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+      "method": "skills/atlas-verify/SKILL.md",
+      "carriedPath": "SKILL.md",
+      "patch": "sources/patches/pe-verify.patch",
+      "adaptation": "Atlas-owned verification invocation for the core workflow. Preserve the report schema, validator, renderer, fixtures and evidence requirements. Adapt executor and review handoffs, project-local QA-list discovery, browser-driver selection, run directory naming and report page title. Product-code verification remains read-only; Tracking owns implementation and acceptance. The complete upstream skill tree and root license and notice are retained at the pinned revision.",
+      "consumers": [
+        "atlas-verify"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/pe-verify/assets/report-template.html",
+          "snapshot": "sources/upstream/pe-verify/support/assets/report-template.html",
+          "sourceSha256": "9ff0fe0a83750892b67bf7cce541d05260c7efb1166e8e8802745fae854d2f7a",
+          "relativePath": "assets/report-template.html",
+          "method": "skills/atlas-verify/assets/report-template.html",
+          "patch": "sources/patches/pe-verify-report-template.patch"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/report.schema.json",
+          "snapshot": "sources/upstream/pe-verify/support/assets/report.schema.json",
+          "sourceSha256": "684b3c117fb07b436222793549c64431dbd81730e02ef1635753ab492d5324de",
+          "relativePath": "assets/report.schema.json"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-1.png",
+          "snapshot": "sources/upstream/pe-verify/support/assets/sample/cp-1.png",
+          "sourceSha256": "f05a570caef5108b80be64d488f38f97bcd78c1bf08b1b9cd6a892a70bcb0c4c",
+          "relativePath": "assets/sample/cp-1.png"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-10.png",
+          "snapshot": "sources/upstream/pe-verify/support/assets/sample/cp-10.png",
+          "sourceSha256": "cdf310c459fec20812f3e4fcb602ec456a16bd818d5690743bb80bcad1de8902",
+          "relativePath": "assets/sample/cp-10.png"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-16.png",
+          "snapshot": "sources/upstream/pe-verify/support/assets/sample/cp-16.png",
+          "sourceSha256": "c7ac9d48e8f444fab7eaa226780fdb1fa2e677cd44e0089625efe0be31d5a8fe",
+          "relativePath": "assets/sample/cp-16.png"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-21.png",
+          "snapshot": "sources/upstream/pe-verify/support/assets/sample/cp-21.png",
+          "sourceSha256": "da323972bd9c1f4b773ab3b2cf397c964f8a8422c26cdbb0d28347b698ff2f65",
+          "relativePath": "assets/sample/cp-21.png"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/cp-4.png",
+          "snapshot": "sources/upstream/pe-verify/support/assets/sample/cp-4.png",
+          "sourceSha256": "a817e4114a7f39513cde50ee2d2c72ca01e7d448671ae9da1c768d8cca48906a",
+          "relativePath": "assets/sample/cp-4.png"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/recording.mp4",
+          "snapshot": "sources/upstream/pe-verify/support/assets/sample/recording.mp4",
+          "sourceSha256": "30805d726e6c03e236ed0c1866313f464565f799965de99aaecc3e28f6d877ab",
+          "relativePath": "assets/sample/recording.mp4"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/assets/sample/report.json",
+          "snapshot": "sources/upstream/pe-verify/support/assets/sample/report.json",
+          "sourceSha256": "c5b38b1f42bfc6c10102acd873b72a79834d8a7d38bb39573ee9934afbdeec91",
+          "relativePath": "assets/sample/report.json"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/references/evidence.md",
+          "snapshot": "sources/upstream/pe-verify/support/references/evidence.md",
+          "sourceSha256": "7253cd0f1915749811e52dc479f51d0b6f04709fab37b57b17660319223f40a1",
+          "relativePath": "references/evidence.md",
+          "method": "skills/atlas-verify/references/evidence.md",
+          "patch": "sources/patches/pe-verify-evidence.patch"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/references/qa-list.md",
+          "snapshot": "sources/upstream/pe-verify/support/references/qa-list.md",
+          "sourceSha256": "1c55c69a126f6000bf7c4a34fd01324f52c2272213c6067cfe7743890f6468f2",
+          "relativePath": "references/qa-list.md",
+          "method": "skills/atlas-verify/references/qa-list.md",
+          "patch": "sources/patches/pe-verify-qa-list.patch"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/references/report-schema.md",
+          "snapshot": "sources/upstream/pe-verify/support/references/report-schema.md",
+          "sourceSha256": "bd64169697137f37900538c7388ff0cad587cdbbd6c2acd3215d550b68b25ad7",
+          "relativePath": "references/report-schema.md",
+          "method": "skills/atlas-verify/references/report-schema.md",
+          "patch": "sources/patches/pe-verify-report-schema.patch"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/scripts/render-report.py",
+          "snapshot": "sources/upstream/pe-verify/support/scripts/render-report.py",
+          "sourceSha256": "77594a4f70ca8beab8d5850912600ab0cab896bdbee7845a502166afdc48731c",
+          "relativePath": "scripts/render-report.py"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/scripts/test-render.py",
+          "snapshot": "sources/upstream/pe-verify/support/scripts/test-render.py",
+          "sourceSha256": "669ffac073dac9cc807fdccdd309d71bb0508cb8fa2d2e0c60ad8d74a038051b",
+          "relativePath": "scripts/test-render.py"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/scripts/validate-report.py",
+          "snapshot": "sources/upstream/pe-verify/support/scripts/validate-report.py",
+          "sourceSha256": "6d7ed4cc7f760d962d866a1cd7a73f4e0d77ec3502dab7d856065e11b83059ee",
+          "relativePath": "scripts/validate-report.py"
+        },
+        {
+          "upstreamPath": "skills/pe-verify/scripts/validate_report_lib.py",
+          "snapshot": "sources/upstream/pe-verify/support/scripts/validate_report_lib.py",
+          "sourceSha256": "cd9af844b9ed3ebb05bb29167627757a7ca69fec7f858da43db61459eb427126",
+          "relativePath": "scripts/validate_report_lib.py"
+        }
+      ],
+      "notices": [
+        {
+          "input": "sources/upstream/pe-verify/NOTICE",
+          "sha256": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488",
+          "target": "licenses/pe-verify-NOTICE.txt"
+        }
+      ],
+      "licenseSpdx": "Apache-2.0",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "verify-executor-handoff",
+        "verify-qa-list-home",
+        "verify-browser-driver"
+      ]
     }
   ],
   "workflows": [
@@ -997,7 +1140,14 @@
           "target": "references/motion-ownership.md"
         }
       ],
-      "dependencies": []
+      "dependencies": [
+        {
+          "id": "atlas-verify",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When review needs behavior checks or recorded QA evidence."
+        }
+      ]
     },
     {
       "id": "atlas-craft",
@@ -1089,7 +1239,7 @@
           "condition": "When the executor has not already provided the checkpoint code review."
         },
         {
-          "id": "pe-verify",
+          "id": "atlas-verify",
           "relationship": "behavioral",
           "required": false,
           "condition": "When a verification report or QA run is requested, or changed behavior needs reproducible acceptance evidence beyond routine project checks."
@@ -1192,6 +1342,22 @@
           "condition": "When the selected HTML method needs visual composition guidance."
         }
       ]
+    },
+    {
+      "id": "atlas-verify",
+      "entry": "skills/atlas-verify/SKILL.md",
+      "agent": "skills/atlas-verify/agents/openai.yaml",
+      "methods": [
+        "pe-verify"
+      ],
+      "dependencies": [
+        {
+          "id": "atlas-review",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When verification needs product, interface or fidelity judgment rather than behavior proof."
+        }
+      ]
     }
   ],
   "rulings": [
@@ -1284,6 +1450,36 @@
         "find-animation-opportunities"
       ],
       "decision": "Discovery is read-only; implementation follows authorization; review handoffs use Atlas Review and Native remains external."
+    },
+    {
+      "id": "verify-executor-handoff",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/SKILL.md",
+      "section": "Handoffs",
+      "sources": [
+        "pe-verify"
+      ],
+      "decision": "Verification stays read-only toward product code. Return failures to the selected executor and quality or fidelity judgment to Atlas Review. A standalone report does not authorize implementation or acceptance."
+    },
+    {
+      "id": "verify-qa-list-home",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/qa-list.md",
+      "section": "Finding it",
+      "sources": [
+        "pe-verify"
+      ],
+      "decision": "Honor the user-selected QA list and repository convention; retain discovery context in an active Implementation Record. Replace Product Engineering global-memory reads and writes with project-local discovery."
+    },
+    {
+      "id": "verify-browser-driver",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/evidence.md",
+      "section": "Before driving anything",
+      "sources": [
+        "pe-verify"
+      ],
+      "decision": "Prefer agent-browser when available and able to produce the required video, timestamped checkpoints and stills. Use Playwright when that proof requires it. Missing browser coverage remains skipped with reasons."
     }
   ]
 }

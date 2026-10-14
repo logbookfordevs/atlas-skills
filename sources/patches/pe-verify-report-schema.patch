@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index 91ff831..71b3fb3 100644
+--- a/source.md
++++ b/source.md
+@@ -9,7 +9,7 @@ Create a run folder in the system temp directory (`$TMPDIR`, else `/tmp`), never
+ the repo:
+ 
+ ```
+-<tmp>/pe-verify/<repo-name>/<YYYY-MM-DD-HHMM>/
++<tmp>/atlas-verify/<repo-name>/<YYYY-MM-DD-HHMM>/
+   report.json               the one file you author
+   report.html               written by render-report.py
+   recording-<item>.webm     Playwright recordings (converted to .mp4 when ffmpeg exists)

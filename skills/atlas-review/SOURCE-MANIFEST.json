@@ -100,7 +100,14 @@
       "carriedSha256": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e"
     }
   ],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "atlas-verify",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When review needs behavior checks or recorded QA evidence."
+    }
+  ],
   "sources": [
     {
       "id": "code-review",
@@ -852,7 +859,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "0d3267ee391ce259b74b7b6e57ec304dded129b6de9e25cc6cd82e4a29d79fdf",
+    "SKILL.md": "6b1254d572faa088b8231b9153358a1815b7751450d435c42af96b8661b30333",
     "agents/openai.yaml": "c33039fa49b6a4c44bd2d9a0ee660341533e47ff1c6ef28ad69b975f7076882d",
     "references/static/static-review.md": "a105165ead3aa7af298ec25dcd881c60463d97805830b62b8f9dcc0e00b85b0d",
     "references/static/scripts/changed-files.sh": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7",

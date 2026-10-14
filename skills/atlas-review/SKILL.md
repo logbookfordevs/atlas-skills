@@ -20,4 +20,4 @@ For Interface, use [Interface Changes](references/interface/changes/index.md) wh
 
 Reviewing does not authorize fixes. Motion Audit may write requested plans under the repository's artifact convention, while product code stays read-only. Construction references bundled for motion judgments do not change that authorization. Follow [Motion ownership](references/motion-ownership.md) when UI polish and motion methods disagree.
 
-Follow each method's evidence limits and independent-context requirements. After an authorized fix, use focused re-check when material uncertainty remains; stop with adequate evidence. Report checks and domains that could not be inspected without implying complete coverage. PE Verify remains the independent route for behavior checks and recorded QA evidence.
+Follow each method's evidence limits and independent-context requirements. After an authorized fix, use focused re-check when material uncertainty remains; stop with adequate evidence. Report checks and domains that could not be inspected without implying complete coverage. Use Atlas Verify for behavior checks and recorded QA evidence.

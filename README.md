@@ -2,7 +2,7 @@
 
 ![Thelu charts a route through developer tools: You are here. Probably.](docs/assets/logbook-atlas-banner.png)
 
-The skill stack I use for Logbook for Devs: authored utilities, intentional upstream adaptations and a few focused compositions. Independent skills stay independent unless combining them removes real friction.
+The skill stack I use for Logbook for Devs: core workflows with Atlas invocations, authored utilities, intentional upstream adaptations and a few focused compositions. Complementary skills remain independently available from their original sources.
 
 Atlas maintains what it authors, patches or bundles. Unchanged independent skills are recommended from their original sources in [the stack manifest](stacks/atlas.json). [AFK](https://github.com/logbookfordevs/ai-field-kit) manages installed skills and activation; Skills CLI handles installation.
 
@@ -16,6 +16,7 @@ Install the Atlas-owned packages below, or import the shared stack to include th
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
 | [Atlas Review](skills/atlas-review/SKILL.md) | Code, Static, Interface, Motion and Motion Audit review |
+| [Atlas Verify](skills/atlas-verify/SKILL.md) | Behavior verification and project QA with recorded evidence and rendered reports |
 | [Atlas Craft](skills/atlas-craft/SKILL.md) | Color, Type, Layout, Accessibility, UI Polish and Copy |
 | [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid and read-only Opportunities |
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Automatic tracking alongside any selected executor |
