@@ -4,12 +4,14 @@
     "animated-driven-frontend",
     "atlas-craft",
     "atlas-debug",
+    "atlas-grill",
     "atlas-implement",
     "atlas-motion",
     "atlas-review",
     "atlas-to-spec",
     "atlas-to-tickets",
     "atlas-verify",
+    "atlas-wayfinder",
     "html-ui",
     "team-up",
     "tracking-implementation",
@@ -39,6 +41,32 @@
           "skill": "html-ui",
           "required": false,
           "condition": "When the selected HTML method needs visual composition guidance."
+        }
+      ]
+    },
+    {
+      "id": "prototype",
+      "source": "https://github.com/mattpocock/skills",
+      "skill": "prototype",
+      "command": "npx skills add https://github.com/mattpocock/skills --skill prototype",
+      "consumers": [
+        {
+          "skill": "atlas-wayfinder",
+          "required": true,
+          "condition": "When resolving a human-led Prototype ticket."
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "source": "https://github.com/mattpocock/skills",
+      "skill": "research",
+      "command": "npx skills add https://github.com/mattpocock/skills --skill research",
+      "consumers": [
+        {
+          "skill": "atlas-wayfinder",
+          "required": true,
+          "condition": "When resolving an AFK Research ticket or charting research work."
         }
       ]
     }

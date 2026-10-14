@@ -1214,6 +1214,190 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-14",
       "rulings": []
+    },
+    {
+      "id": "grilling",
+      "owner": "atlas-grill",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/productivity/grilling/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/grilling/source.md",
+      "sourceSha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+      "license": "sources/upstream/grilling/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "sources/upstream/grilling/source.md",
+      "carriedPath": "references/grilling/grilling.md",
+      "adaptation": "Carry Grilling verbatim in both packages. Each Atlas package owns its invocation metadata; upstream metadata remains in source snapshots.",
+      "consumers": [
+        "atlas-grill",
+        "atlas-wayfinder"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/productivity/grilling/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "snapshot": "sources/upstream/grilling/support/agents/openai.yaml",
+          "sourceSha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": []
+    },
+    {
+      "id": "domain-modeling",
+      "owner": "atlas-grill",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/domain-modeling/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/domain-modeling/source.md",
+      "sourceSha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "license": "sources/upstream/domain-modeling/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "sources/upstream/domain-modeling/source.md",
+      "carriedPath": "references/domain-modeling/domain-modeling.md",
+      "adaptation": "Carry Domain Modeling and both format references verbatim from one registered source into both packages. Upstream invocation metadata remains in source snapshots.",
+      "consumers": [
+        "atlas-grill",
+        "atlas-wayfinder"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/domain-modeling/ADR-FORMAT.md",
+          "relativePath": "ADR-FORMAT.md",
+          "snapshot": "sources/upstream/domain-modeling/support/ADR-FORMAT.md",
+          "sourceSha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0"
+        },
+        {
+          "upstreamPath": "skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+          "relativePath": "GLOSSARY-FORMAT.md",
+          "snapshot": "sources/upstream/domain-modeling/support/GLOSSARY-FORMAT.md",
+          "sourceSha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801"
+        },
+        {
+          "upstreamPath": "skills/engineering/domain-modeling/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "snapshot": "sources/upstream/domain-modeling/support/agents/openai.yaml",
+          "sourceSha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": []
+    },
+    {
+      "id": "grill-with-docs",
+      "owner": "atlas-grill",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/grill-with-docs/source.md",
+      "sourceSha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "license": "sources/upstream/grill-with-docs/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "skills/atlas-grill/references/with-docs/grill-with-docs.md",
+      "carriedPath": "references/with-docs/grill-with-docs.md",
+      "adaptation": "Replace sibling skill calls with direct links to the bundled Grilling and Domain Modeling methods. The Atlas Grill router selects this mode only on an explicit user request.",
+      "consumers": [
+        "atlas-grill"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/grill-with-docs/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "snapshot": "sources/upstream/grill-with-docs/support/agents/openai.yaml",
+          "sourceSha256": "94cd0ab161fb468a836349f5ed482ba58ce8e709a05c57ce533d739dbd35cca9"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "grill-docs-mode"
+      ],
+      "patch": "sources/patches/grill-with-docs.patch"
+    },
+    {
+      "id": "wayfinder-local-tracker",
+      "owner": "atlas-wayfinder",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main",
+        "includePaths": [
+          "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md"
+        ]
+      },
+      "snapshot": "sources/upstream/wayfinder-local-tracker/source.md",
+      "sourceSha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e",
+      "license": "sources/upstream/wayfinder-local-tracker/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "skills/atlas-wayfinder/references/tracker/local.md",
+      "carriedPath": "references/tracker/local.md",
+      "adaptation": "Carry the upstream local Wayfinding operations as a focused fallback. Omit unrelated spec and implementation triage guidance. Honor repository or user storage conventions and otherwise use docs/tickets/<effort> instead of .scratch.",
+      "consumers": [
+        "atlas-wayfinder"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "wayfinder-local-routing"
+      ],
+      "patch": "sources/patches/wayfinder-local-tracker.patch"
+    },
+    {
+      "id": "wayfinder",
+      "owner": "atlas-wayfinder",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/wayfinder/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/wayfinder/source.md",
+      "sourceSha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7",
+      "license": "sources/upstream/wayfinder/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "skills/atlas-wayfinder/references/wayfinder/wayfinder.md",
+      "carriedPath": "references/wayfinder/wayfinder.md",
+      "adaptation": "Replace Grilling and Domain Modeling skill calls with direct bundled-reference links. Load independent Research, Prototype and Notes skills through the active host mechanism. Use the configured tracker adapter or bundled local fallback instead of requiring upstream setup. Recognize the local Type field as the ticket type. Preserve map semantics, labels, research branches, human decisions and one-ticket session boundaries.",
+      "consumers": [
+        "atlas-wayfinder"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/wayfinder/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "snapshot": "sources/upstream/wayfinder/support/agents/openai.yaml",
+          "sourceSha256": "88bc81a11a6d52ac67aeaa76b8b619e387020d47c5133a4dd4927fd15c4ad073"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "wayfinder-local-routing"
+      ],
+      "patch": "sources/patches/wayfinder.patch"
     }
   ],
   "workflows": [
@@ -1506,6 +1690,42 @@
         "diagnosing-bugs"
       ],
       "dependencies": []
+    },
+    {
+      "id": "atlas-grill",
+      "entry": "skills/atlas-grill/SKILL.md",
+      "agent": "skills/atlas-grill/agents/openai.yaml",
+      "methods": [
+        "grilling",
+        "domain-modeling",
+        "grill-with-docs"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "atlas-wayfinder",
+      "entry": "skills/atlas-wayfinder/SKILL.md",
+      "agent": "skills/atlas-wayfinder/agents/openai.yaml",
+      "methods": [
+        "wayfinder",
+        "grilling",
+        "domain-modeling",
+        "wayfinder-local-tracker"
+      ],
+      "dependencies": [
+        {
+          "id": "research",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "When resolving an AFK Research ticket or charting research work."
+        },
+        {
+          "id": "prototype",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "When resolving a human-led Prototype ticket."
+        }
+      ]
     }
   ],
   "rulings": [
@@ -1648,6 +1868,31 @@
         "source-driven-development"
       ],
       "decision": "Preserve official-doc evidence and retrieval hygiene within the bundled method. Source receipts belong in execution evidence and handoff; comments preserve enduring non-obvious code contracts rather than routine citations. Ordinary documentation retrieval does not require the external security-and-hardening skill."
+    },
+    {
+      "id": "grill-docs-mode",
+      "owner": "atlas-grill",
+      "document": "skills/atlas-grill/SKILL.md",
+      "section": "Atlas Grill",
+      "sources": [
+        "grilling",
+        "domain-modeling",
+        "grill-with-docs"
+      ],
+      "decision": "Grilling is the default mode and retains upstream automatic discovery. With Docs adds Domain Modeling only when the user explicitly requests the documentation mode."
+    },
+    {
+      "id": "wayfinder-local-routing",
+      "owner": "atlas-wayfinder",
+      "document": "skills/atlas-wayfinder/references/wayfinder/wayfinder.md",
+      "section": "Ticket Types",
+      "sources": [
+        "wayfinder",
+        "grilling",
+        "domain-modeling",
+        "wayfinder-local-tracker"
+      ],
+      "decision": "Load the shared Grilling and Domain Modeling references directly as required by Wayfinder. Use host-supported loading for independent methods. Honor the configured tracker adapter; without one, use the bundled local fallback under the active artifact convention."
     }
   ]
 }

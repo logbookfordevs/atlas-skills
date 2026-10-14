@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas Wayfinder"
+  short_description: "Chart and resolve shared decision maps."
+  default_prompt: "Use $atlas-wayfinder to chart this effort or continue its decision map."
+policy:
+  allow_implicit_invocation: false

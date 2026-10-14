@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "workflow": "atlas-wayfinder",
+  "generated": true,
+  "managedFiles": [
+    "references/wayfinder/wayfinder.md",
+    "licenses/wayfinder.txt",
+    "references/grilling/grilling.md",
+    "licenses/grilling.txt",
+    "references/domain-modeling/domain-modeling.md",
+    "licenses/domain-modeling.txt",
+    "references/domain-modeling/ADR-FORMAT.md",
+    "references/domain-modeling/GLOSSARY-FORMAT.md",
+    "references/tracker/local.md",
+    "licenses/wayfinder-local-tracker.txt"
+  ],
+  "authoredInputs": [
+    "skills/atlas-wayfinder/SKILL.md",
+    "skills/atlas-wayfinder/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "research",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "When resolving an AFK Research ticket or charting research work."
+    },
+    {
+      "id": "prototype",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "When resolving a human-led Prototype ticket."
+    }
+  ],
+  "sources": [
+    {
+      "id": "wayfinder",
+      "owner": "atlas-wayfinder",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/wayfinder/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7",
+      "carriedPath": "references/wayfinder/wayfinder.md",
+      "carriedSha256": "f0ee3cd8da02684f4e2e96d783b23f1d070fe751012d3a560727b6683f89397e",
+      "licensePath": "licenses/wayfinder.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Replace Grilling and Domain Modeling skill calls with direct bundled-reference links. Load independent Research, Prototype and Notes skills through the active host mechanism. Use the configured tracker adapter or bundled local fallback instead of requiring upstream setup. Recognize the local Type field as the ticket type. Preserve map semantics, labels, research branches, human decisions and one-ticket session boundaries.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "wayfinder-local-routing"
+      ],
+      "patch": "sources/patches/wayfinder.patch",
+      "patchSha256": "7ea87994fd5b0e26fb9d7cc68322783fdc7ce534092683eb150e9065468318d5"
+    },
+    {
+      "id": "grilling",
+      "owner": "atlas-grill",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/productivity/grilling/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+      "carriedPath": "references/grilling/grilling.md",
+      "carriedSha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+      "licensePath": "licenses/grilling.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Carry Grilling verbatim in both packages. Each Atlas package owns its invocation metadata; upstream metadata remains in source snapshots.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": []
+    },
+    {
+      "id": "domain-modeling",
+      "owner": "atlas-grill",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/domain-modeling/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/domain-modeling/ADR-FORMAT.md",
+          "classification": "verbatim",
+          "sourceSha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+          "carriedPath": "references/domain-modeling/ADR-FORMAT.md",
+          "carriedSha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0"
+        },
+        {
+          "upstreamPath": "skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+          "classification": "verbatim",
+          "sourceSha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+          "carriedPath": "references/domain-modeling/GLOSSARY-FORMAT.md",
+          "carriedSha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "carriedPath": "references/domain-modeling/domain-modeling.md",
+      "carriedSha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "licensePath": "licenses/domain-modeling.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Carry Domain Modeling and both format references verbatim from one registered source into both packages. Upstream invocation metadata remains in source snapshots.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": []
+    },
+    {
+      "id": "wayfinder-local-tracker",
+      "owner": "atlas-wayfinder",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main",
+        "includePaths": [
+          "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md"
+        ]
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e",
+      "carriedPath": "references/tracker/local.md",
+      "carriedSha256": "a7947f998424fb7679ca215e9cb4ab0fd63ea09fe5f952b868ce876b776385a6",
+      "licensePath": "licenses/wayfinder-local-tracker.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Carry the upstream local Wayfinding operations as a focused fallback. Omit unrelated spec and implementation triage guidance. Honor repository or user storage conventions and otherwise use docs/tickets/<effort> instead of .scratch.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "wayfinder-local-routing"
+      ],
+      "patch": "sources/patches/wayfinder-local-tracker.patch",
+      "patchSha256": "2348b5c30f8a4ed51c9070a30f47e196f1587db3b0116eb1edc7449f1051ed76"
+    }
+  ],
+  "rulings": [
+    {
+      "id": "wayfinder-local-routing",
+      "owner": "atlas-wayfinder",
+      "document": "skills/atlas-wayfinder/references/wayfinder/wayfinder.md",
+      "section": "Ticket Types",
+      "sources": [
+        "wayfinder",
+        "grilling",
+        "domain-modeling",
+        "wayfinder-local-tracker"
+      ],
+      "decision": "Load the shared Grilling and Domain Modeling references directly as required by Wayfinder. Use host-supported loading for independent methods. Honor the configured tracker adapter; without one, use the bundled local fallback under the active artifact convention."
+    }
+  ],
+  "files": {
+    "SKILL.md": "99e0738c91750669e5b8b4ff64f5ffa430d23ce9626d1f1f83b97299d35d9b6d",
+    "agents/openai.yaml": "3625f4453bfc36cc8741e352fa4422925fbcafdbc5708efd4c0490401ef48e5d",
+    "references/wayfinder/wayfinder.md": "f0ee3cd8da02684f4e2e96d783b23f1d070fe751012d3a560727b6683f89397e",
+    "licenses/wayfinder.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/grilling/grilling.md": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+    "licenses/grilling.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/domain-modeling/domain-modeling.md": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+    "licenses/domain-modeling.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/domain-modeling/ADR-FORMAT.md": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+    "references/domain-modeling/GLOSSARY-FORMAT.md": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+    "references/tracker/local.md": "a7947f998424fb7679ca215e9cb4ab0fd63ea09fe5f952b868ce876b776385a6",
+    "licenses/wayfinder-local-tracker.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

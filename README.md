@@ -13,6 +13,8 @@ Install the Atlas-owned packages below, or import the shared stack to include th
 | Package | Purpose |
 | --- | --- |
 | [HTML UI](skills/html-ui/SKILL.md) | Wireframe and polished Model modes |
+| [Atlas Grill](skills/atlas-grill/SKILL.md) | Grilling by default; Domain Modeling and documentation on explicit request |
+| [Atlas Wayfinder](skills/atlas-wayfinder/SKILL.md) | Manually invoked decision maps with shared Grilling and Domain Modeling methods |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
 | [Atlas Implement](skills/atlas-implement/SKILL.md) | Bundled TDD and Source-Driven methods, selected independently or together |
@@ -41,7 +43,7 @@ The [Atlas stack manifest](stacks/atlas.json) combines these packages and the re
 
 ## Recommended independent skills
 
-The stack manifest lists the unchanged skills used alongside Atlas, including Research, Wayfinder, Grill Me, Grill with Docs, Prototype, Doubt-Driven Development, Writing for Agents, and library-specific tools. TDD and Source-Driven Development ship inside Atlas Implement; Diagnosing Bugs ships as Atlas Debug. These packages retain pinned source receipts. Independent authors own upstream updates; Atlas maintains its carried adaptations. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the original disposition.
+The stack manifest lists the unchanged skills used alongside Atlas, including Research, Prototype, Doubt-Driven Development, Writing for Agents, and library-specific tools. TDD and Source-Driven Development ship inside Atlas Implement; Diagnosing Bugs ships as Atlas Debug. Atlas Grill and Atlas Wayfinder share bundled Grilling and Domain Modeling references. These packages retain pinned source receipts. Independent authors own upstream updates; Atlas maintains its carried adaptations. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the original disposition.
 
 AFK CLI and Profile Use are companion skills owned by the AFK project, not Atlas packages. Compass is excluded for now. A public stack website and thin installer are possible follow-up work; neither is implemented here. Atlas Setup currently checks dependencies rather than installing the entire recommended stack.
 

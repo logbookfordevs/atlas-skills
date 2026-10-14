@@ -21,6 +21,8 @@
         "writing-for-humans",
         "team-up",
         "html-ui",
+        "atlas-grill",
+        "atlas-wayfinder",
         "atlas-to-spec",
         "atlas-to-tickets"
       ]
@@ -35,13 +37,8 @@
         "wizard",
         "to-questionnaire",
         "teach",
-        "grill-with-docs",
-        "grill-me",
         "prototype",
         "handoff",
-        "wayfinder",
-        "grilling",
-        "domain-modeling",
         "codebase-design",
         "pr",
         "retro"
