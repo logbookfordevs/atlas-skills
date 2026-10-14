@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "workflow": "atlas-debug",
+  "generated": true,
+  "managedFiles": [
+    "SKILL.md",
+    "licenses/diagnosing-bugs.txt",
+    "references/upstream/agents/openai.yaml",
+    "scripts/hitl-loop.template.sh"
+  ],
+  "authoredInputs": [
+    "skills/atlas-debug/SKILL.md",
+    "skills/atlas-debug/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [],
+  "sources": [
+    {
+      "id": "diagnosing-bugs",
+      "owner": "atlas-debug",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/diagnosing-bugs/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/diagnosing-bugs/agents/openai.yaml",
+          "classification": "verbatim",
+          "sourceSha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+          "carriedPath": "references/upstream/agents/openai.yaml",
+          "carriedSha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b"
+        },
+        {
+          "upstreamPath": "skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
+          "classification": "verbatim",
+          "sourceSha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503",
+          "carriedPath": "scripts/hitl-loop.template.sh",
+          "carriedSha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+      "carriedPath": "SKILL.md",
+      "carriedSha256": "ac07fd0cfdb8c8beeb7e89cab256f48a8895202f8036520b569bc3712c441150",
+      "licensePath": "licenses/diagnosing-bugs.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Rename the public skill entry and title to Atlas Debug. Preserve the diagnosis process and trigger description. Keep the reproduction script and upstream invocation metadata verbatim; retain the latter separately while Atlas owns package invocation metadata.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": [],
+      "patch": "sources/patches/diagnosing-bugs.patch",
+      "patchSha256": "abcba73b2dde3fa375cdc6bd67db84128f61921f891158bb4749c8f5a1dfeeb5"
+    }
+  ],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "ac07fd0cfdb8c8beeb7e89cab256f48a8895202f8036520b569bc3712c441150",
+    "agents/openai.yaml": "8ad5d63139b61fdda0ec91198a9c3cf946ea14067667e457d34e1931ba2025e5",
+    "licenses/diagnosing-bugs.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/upstream/agents/openai.yaml": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+    "scripts/hitl-loop.template.sh": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
+  }
+}

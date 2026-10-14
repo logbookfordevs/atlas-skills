@@ -1181,6 +1181,49 @@
       "rulings": [
         "implement-source-receipts"
       ]
+    },
+    {
+      "id": "diagnosing-bugs",
+      "owner": "atlas-debug",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/diagnosing-bugs/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/diagnosing-bugs/source.md",
+      "sourceSha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+      "license": "sources/upstream/diagnosing-bugs/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "skills/atlas-debug/SKILL.md",
+      "carriedPath": "SKILL.md",
+      "patch": "sources/patches/diagnosing-bugs.patch",
+      "adaptation": "Rename the public skill entry and title to Atlas Debug. Preserve the diagnosis process and trigger description. Keep the reproduction script and upstream invocation metadata verbatim; retain the latter separately while Atlas owns package invocation metadata.",
+      "consumers": [
+        "atlas-debug"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/diagnosing-bugs/agents/openai.yaml",
+          "snapshot": "sources/upstream/diagnosing-bugs/support/agents/openai.yaml",
+          "sourceSha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+          "relativePath": "agents/openai.yaml"
+        },
+        {
+          "upstreamPath": "skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
+          "snapshot": "sources/upstream/diagnosing-bugs/support/scripts/hitl-loop.template.sh",
+          "sourceSha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503",
+          "relativePath": "scripts/hitl-loop.template.sh"
+        }
+      ],
+      "supportingFileTargets": {
+        "agents/openai.yaml": "references/upstream/agents/openai.yaml"
+      },
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": []
     }
   ],
   "workflows": [
@@ -1464,6 +1507,15 @@
           "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
         }
       ]
+    },
+    {
+      "id": "atlas-debug",
+      "entry": "skills/atlas-debug/SKILL.md",
+      "agent": "skills/atlas-debug/agents/openai.yaml",
+      "methods": [
+        "diagnosing-bugs"
+      ],
+      "dependencies": []
     }
   ],
   "rulings": [

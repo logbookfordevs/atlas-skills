@@ -3,6 +3,7 @@
   "packages": [
     "animated-driven-frontend",
     "atlas-craft",
+    "atlas-debug",
     "atlas-implement",
     "atlas-motion",
     "atlas-review",
