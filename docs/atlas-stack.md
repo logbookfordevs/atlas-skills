@@ -22,4 +22,6 @@ The stack lists selected skills as an installable collection; it does not define
 
 The carried-source manifest in `sources/composition.json` is separate: it preserves pinned snapshots and adaptations inside Atlas’s own packages. Its scheduled update issues do not update external installations or this stack’s source selection.
 
+Atlas Implement carries TDD and Source-Driven Development as directly loaded methods, so those two no longer need separate stack installations. Doubt-Driven Development remains an independent selection. Updating the shared stack does not remove existing standalone installations from a user's machine.
+
 Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.

@@ -13,6 +13,7 @@
         "tracking-implementation",
         "atlas-motion",
         "atlas-craft",
+        "atlas-implement",
         "atlas-review",
         "atlas-verify",
         "animated-driven-frontend",
@@ -29,7 +30,6 @@
       "skills": [
         "implement-spec",
         "diagnosing-bugs",
-        "tdd",
         "research",
         "writing-for-agents",
         "wizard",
@@ -104,7 +104,6 @@
       "name": "Addy Osmani",
       "source": "https://github.com/addyosmani/agent-skills.git",
       "skills": [
-        "source-driven-development",
         "doubt-driven-development",
         "code-simplification"
       ]

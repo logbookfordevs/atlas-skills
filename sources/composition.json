@@ -1104,6 +1104,83 @@
         "verify-qa-list-home",
         "verify-browser-driver"
       ]
+    },
+    {
+      "id": "tdd",
+      "owner": "atlas-implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/tdd/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/tdd/source.md",
+      "sourceSha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
+      "license": "sources/upstream/tdd/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "skills/atlas-implement/references/tdd/tdd.md",
+      "carriedPath": "references/tdd/tdd.md",
+      "patch": "sources/patches/tdd.patch",
+      "adaptation": "Keep the TDD method and all supporting examples and invocation metadata. Resolve helper skill loading through the active harness, route review ownership to Atlas Review, and honor Test Seams already approved in the source artifact. The red-green loop, public-interface test discipline and seam coverage notes remain intact.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/tdd/agents/openai.yaml",
+          "snapshot": "sources/upstream/tdd/support/agents/openai.yaml",
+          "sourceSha256": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b",
+          "relativePath": "agents/openai.yaml"
+        },
+        {
+          "upstreamPath": "skills/engineering/tdd/mocking.md",
+          "snapshot": "sources/upstream/tdd/support/mocking.md",
+          "sourceSha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
+          "relativePath": "mocking.md"
+        },
+        {
+          "upstreamPath": "skills/engineering/tdd/tests.md",
+          "snapshot": "sources/upstream/tdd/support/tests.md",
+          "sourceSha256": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
+          "relativePath": "tests.md"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "implement-tdd-seam-and-review"
+      ]
+    },
+    {
+      "id": "source-driven-development",
+      "owner": "atlas-implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "path": "skills/source-driven-development/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/source-driven-development/source.md",
+      "sourceSha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
+      "license": "sources/upstream/source-driven-development/LICENSE",
+      "licenseSha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "method": "skills/atlas-implement/references/source-driven/source-driven.md",
+      "carriedPath": "references/source-driven/source-driven.md",
+      "patch": "sources/patches/source-driven-development.patch",
+      "adaptation": "Keep the version detection, official-documentation retrieval, documented implementation and citation method. Make retrieval safety self-contained rather than requiring the separate security-and-hardening skill. Place source receipts in execution evidence and handoff, with code comments reserved for enduring non-obvious contracts.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "implement-source-receipts"
+      ]
     }
   ],
   "workflows": [
@@ -1255,6 +1332,12 @@
           "relationship": "tool",
           "required": false,
           "condition": "When available for scoped implementation questions, checkpoint guide delivery and acceptance replies."
+        },
+        {
+          "id": "atlas-implement",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence."
         }
       ]
     },
@@ -1356,6 +1439,29 @@
           "relationship": "behavioral",
           "required": false,
           "condition": "When verification needs product, interface or fidelity judgment rather than behavior proof."
+        }
+      ]
+    },
+    {
+      "id": "atlas-implement",
+      "entry": "skills/atlas-implement/SKILL.md",
+      "agent": "skills/atlas-implement/agents/openai.yaml",
+      "methods": [
+        "tdd",
+        "source-driven-development"
+      ],
+      "dependencies": [
+        {
+          "id": "atlas-review",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When implementation or refactoring needs a review; Tracking retains its own review gate."
+        },
+        {
+          "id": "codebase-design",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
         }
       ]
     }
@@ -1480,6 +1586,26 @@
         "pe-verify"
       ],
       "decision": "Prefer agent-browser when available and able to produce the required video, timestamped checkpoints and stills. Use Playwright when that proof requires it. Missing browser coverage remains skipped with reasons."
+    },
+    {
+      "id": "implement-tdd-seam-and-review",
+      "owner": "atlas-implement",
+      "document": "skills/atlas-implement/references/tdd/tdd.md",
+      "section": "Seams: where tests go",
+      "sources": [
+        "tdd"
+      ],
+      "decision": "Approved source-artifact Test Seams count as pre-agreed. Ask only for missing, ambiguous or invalidated seams. Use host-supported named skill loading for optional Codebase Design vocabulary and Atlas Review for refactoring review; Tracking retains its acceptance gate."
+    },
+    {
+      "id": "implement-source-receipts",
+      "owner": "atlas-implement",
+      "document": "skills/atlas-implement/references/source-driven/source-driven.md",
+      "section": "Step 4: Cite Your Sources",
+      "sources": [
+        "source-driven-development"
+      ],
+      "decision": "Preserve official-doc evidence and retrieval hygiene within the bundled method. Source receipts belong in execution evidence and handoff; comments preserve enduring non-obvious code contracts rather than routine citations. Ordinary documentation retrieval does not require the external security-and-hardening skill."
     }
   ]
 }

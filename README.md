@@ -15,6 +15,7 @@ Install the Atlas-owned packages below, or import the shared stack to include th
 | [HTML UI](skills/html-ui/SKILL.md) | Wireframe and polished Model modes |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
+| [Atlas Implement](skills/atlas-implement/SKILL.md) | Bundled TDD and Source-Driven methods, selected independently or together |
 | [Atlas Review](skills/atlas-review/SKILL.md) | Code, Static, Interface, Motion and Motion Audit review |
 | [Atlas Verify](skills/atlas-verify/SKILL.md) | Behavior verification and project QA with recorded evidence and rendered reports |
 | [Atlas Craft](skills/atlas-craft/SKILL.md) | Color, Type, Layout, Accessibility, UI Polish and Copy |
@@ -39,7 +40,7 @@ The [Atlas stack manifest](stacks/atlas.json) combines these packages and the re
 
 ## Recommended independent skills
 
-The stack manifest lists the unchanged skills used alongside Atlas, including Research, Wayfinder, Grill Me, Grill with Docs, Prototype, TDD, Diagnosing Bugs, Writing for Agents, and library-specific tools. Their original authors own their upstream updates. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the full disposition.
+The stack manifest lists the unchanged skills used alongside Atlas, including Research, Wayfinder, Grill Me, Grill with Docs, Prototype, Doubt-Driven Development, Diagnosing Bugs, Writing for Agents, and library-specific tools. TDD and Source-Driven Development ship inside Atlas Implement with pinned source receipts. Independent authors own upstream updates; Atlas maintains its carried adaptations. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the original disposition.
 
 AFK CLI and Profile Use are companion skills owned by the AFK project, not Atlas packages. Compass is excluded for now. A public stack website and thin installer are possible follow-up work; neither is implemented here. Atlas Setup currently checks dependencies rather than installing the entire recommended stack.
 

@@ -3,6 +3,7 @@
   "packages": [
     "animated-driven-frontend",
     "atlas-craft",
+    "atlas-implement",
     "atlas-motion",
     "atlas-review",
     "atlas-to-spec",
@@ -14,6 +15,19 @@
     "writing-for-humans"
   ],
   "dependencies": [
+    {
+      "id": "codebase-design",
+      "source": "https://github.com/mattpocock/skills",
+      "skill": "codebase-design",
+      "command": "npx skills add https://github.com/mattpocock/skills --skill codebase-design",
+      "consumers": [
+        {
+          "skill": "atlas-implement",
+          "required": false,
+          "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
+        }
+      ]
+    },
     {
       "id": "design-artifact",
       "source": "https://github.com/plannotator/effective-html",
