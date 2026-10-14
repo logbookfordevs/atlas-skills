@@ -17,6 +17,4 @@ Treat requests for `tdd` or `source-driven-development` as requests for the corr
 | TDD | Test-first feature or bug work, red-green-refactor, integration tests, or behavior with an agreed public Test Seam | [TDD](references/tdd/tdd.md) |
 | Source-Driven Development | Implementation whose correctness depends on framework, library or API versions and their official documentation | [Source-Driven](references/source-driven/source-driven.md) |
 
-For combined work, use Source-Driven to establish version-specific facts and TDD to prove the behavior through the agreed seam. Retain each method's evidence and scope. Mechanical edits and version-independent work use normal project validation when neither method applies.
-
-When Tracking is active, record selected methods separately as `atlas-implement:tdd` and `atlas-implement:source-driven`. Return their evidence to the existing Implementation Record. Tracking owns execution state, the review baseline and acceptance; Atlas Implement supplies the selected implementation methods.
+For combined work, use Source-Driven to establish version-specific facts and TDD to prove the behavior through the agreed seam. Mechanical edits and version-independent work use normal project validation when neither method applies.
