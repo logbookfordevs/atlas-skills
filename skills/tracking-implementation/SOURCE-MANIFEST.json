@@ -4,8 +4,7 @@
   "generated": true,
   "managedFiles": [
     "references/show-me.md",
-    "licenses/show-me.txt",
-    "references/agents/openai.yaml"
+    "licenses/show-me.txt"
   ],
   "authoredInputs": [
     "skills/tracking-implementation/SKILL.md",
@@ -71,15 +70,7 @@
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
-      "supportingFiles": [
-        {
-          "upstreamPath": "plugins/show-me/skills/show-me/agents/openai.yaml",
-          "classification": "verbatim",
-          "sourceSha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
-          "carriedPath": "references/agents/openai.yaml",
-          "carriedSha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
-        }
-      ],
+      "supportingFiles": [],
       "notices": [],
       "sourceSha256": "434a2346cc95e313b0d367d477dda2e23ba642dd2181757415a09500664af100",
       "carriedPath": "references/show-me.md",
@@ -112,7 +103,6 @@
     "references/resume.md": "6130bbe5c9110014ecc6652397c8e921dc677a87b35c7f92628daa13dfc5aae8",
     "references/review-guides.md": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f",
     "references/show-me.md": "434a2346cc95e313b0d367d477dda2e23ba642dd2181757415a09500664af100",
-    "licenses/show-me.txt": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
-    "references/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
+    "licenses/show-me.txt": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f"
   }
 }

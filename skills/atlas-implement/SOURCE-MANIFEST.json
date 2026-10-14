@@ -5,7 +5,6 @@
   "managedFiles": [
     "references/tdd/tdd.md",
     "licenses/tdd.txt",
-    "references/tdd/agents/openai.yaml",
     "references/tdd/mocking.md",
     "references/tdd/tests.md",
     "references/source-driven/source-driven.md",
@@ -44,13 +43,6 @@
       },
       "supportingFiles": [
         {
-          "upstreamPath": "skills/engineering/tdd/agents/openai.yaml",
-          "classification": "verbatim",
-          "sourceSha256": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b",
-          "carriedPath": "references/tdd/agents/openai.yaml",
-          "carriedSha256": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b"
-        },
-        {
           "upstreamPath": "skills/engineering/tdd/mocking.md",
           "classification": "verbatim",
           "sourceSha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
@@ -71,7 +63,7 @@
       "carriedSha256": "ce62a1a96ae6df6033be485d7ad5fc0089dbb2bf341331d9cd683b266ed3a93e",
       "licensePath": "licenses/tdd.txt",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "adaptation": "Keep the TDD method and all supporting examples and invocation metadata. Resolve helper skill loading through the active harness, route review ownership to Atlas Review, and honor Test Seams already approved in the source artifact. The red-green loop, public-interface test discipline and seam coverage notes remain intact.",
+      "adaptation": "Keep the TDD method and all supporting examples. Preserve upstream invocation metadata in source snapshots only. Resolve helper skill loading through the active harness, route review ownership to Atlas Review, and honor Test Seams already approved in the source artifact. The red-green loop, public-interface test discipline and seam coverage notes remain intact.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-14",
       "rulings": [
@@ -135,7 +127,6 @@
     "agents/openai.yaml": "b9e7cbf6472584d5bf9cfff1f5adcb63558be4b2fb888b11d83b37205d3f1721",
     "references/tdd/tdd.md": "ce62a1a96ae6df6033be485d7ad5fc0089dbb2bf341331d9cd683b266ed3a93e",
     "licenses/tdd.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-    "references/tdd/agents/openai.yaml": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b",
     "references/tdd/mocking.md": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
     "references/tdd/tests.md": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
     "references/source-driven/source-driven.md": "60f6fc03b9b659e578dc8a93dbfbb17ae5f78978a00c7b97ed7eb87a3d7e48e7",

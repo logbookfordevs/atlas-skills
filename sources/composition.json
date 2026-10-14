@@ -396,9 +396,6 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
       "patch": "sources/patches/to-spec.patch",
-      "supportingFileTargets": {
-        "agents/openai.yaml": "references/upstream/agents/openai.yaml"
-      },
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/to-spec/supporting/agents/openai.yaml",
@@ -433,9 +430,6 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
       "patch": "sources/patches/to-tickets.patch",
-      "supportingFileTargets": {
-        "agents/openai.yaml": "references/upstream/agents/openai.yaml"
-      },
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/to-tickets/supporting/agents/openai.yaml",
@@ -1123,7 +1117,7 @@
       "method": "skills/atlas-implement/references/tdd/tdd.md",
       "carriedPath": "references/tdd/tdd.md",
       "patch": "sources/patches/tdd.patch",
-      "adaptation": "Keep the TDD method and all supporting examples and invocation metadata. Resolve helper skill loading through the active harness, route review ownership to Atlas Review, and honor Test Seams already approved in the source artifact. The red-green loop, public-interface test discipline and seam coverage notes remain intact.",
+      "adaptation": "Keep the TDD method and all supporting examples. Preserve upstream invocation metadata in source snapshots only. Resolve helper skill loading through the active harness, route review ownership to Atlas Review, and honor Test Seams already approved in the source artifact. The red-green loop, public-interface test discipline and seam coverage notes remain intact.",
       "consumers": [
         "atlas-implement"
       ],
@@ -1185,7 +1179,7 @@
     {
       "id": "diagnosing-bugs",
       "owner": "atlas-debug",
-      "classification": "patched",
+      "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
         "commit": "49dd158d1076134a641b33efb035946536778336",
@@ -1197,10 +1191,9 @@
       "sourceSha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
       "license": "sources/upstream/diagnosing-bugs/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "skills/atlas-debug/SKILL.md",
-      "carriedPath": "SKILL.md",
-      "patch": "sources/patches/diagnosing-bugs.patch",
-      "adaptation": "Rename the public skill entry and title to Atlas Debug. Preserve the diagnosis process and trigger description. Keep the reproduction script and upstream invocation metadata verbatim; retain the latter separately while Atlas owns package invocation metadata.",
+      "method": "sources/upstream/diagnosing-bugs/source.md",
+      "carriedPath": "references/diagnosis/diagnosing-bugs.md",
+      "adaptation": "Carry the diagnosis method and reproduction script verbatim behind the Atlas Debug router. Preserve upstream invocation metadata only in source snapshots for update detection; Atlas owns package invocation metadata.",
       "consumers": [
         "atlas-debug"
       ],
@@ -1218,9 +1211,6 @@
           "relativePath": "scripts/hitl-loop.template.sh"
         }
       ],
-      "supportingFileTargets": {
-        "agents/openai.yaml": "references/upstream/agents/openai.yaml"
-      },
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-14",
       "rulings": []

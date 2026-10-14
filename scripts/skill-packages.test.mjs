@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join, posix } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
@@ -157,6 +157,43 @@ test('supporting source trees remain portable and reject tampering and escaping 
   source.supportingFiles[0].relativePath = originalPath;
   writeFileSync(path, JSON.stringify(manifest));
   writeFileSync(join(root, source.supportingFiles[0].snapshot), 'unexpected changes');
+  assert.throws(() => composeSkills(root), /Supporting file integrity failure/);
+});
+
+test('upstream invocation metadata stays in snapshots and retired copies are removed', t => {
+  const root = fixture(t);
+  const manifestPath = join(root, 'sources/composition.json');
+  const manifest = JSON.parse(readFileSync(manifestPath));
+  const source = manifest.sources[0];
+  const snapshot = 'sources/upstream/fixture-source/support/agents/openai.yaml';
+  const upstreamMetadata = Buffer.from('interface:\n  display_name: Upstream Fixture\n');
+  mkdirSync(join(root, snapshot, '..'), { recursive: true });
+  writeFileSync(join(root, snapshot), upstreamMetadata);
+  source.supportingFiles.push({ relativePath: 'agents/openai.yaml', snapshot, sourceSha256: sha256(upstreamMetadata) });
+  source.supportingFileTargets = { 'agents/openai.yaml': 'references/upstream/agents/openai.yaml' };
+  writeFileSync(manifestPath, JSON.stringify(manifest));
+  buildSkills(root);
+
+  const packagePath = join(root, 'skills/logbook-fixture');
+  const retired = 'references/upstream/agents/openai.yaml';
+  mkdirSync(join(packagePath, retired, '..'), { recursive: true });
+  writeFileSync(join(packagePath, retired), upstreamMetadata);
+  const receiptPath = join(packagePath, 'SOURCE-MANIFEST.json');
+  const previous = JSON.parse(readFileSync(receiptPath));
+  previous.managedFiles.push(retired);
+  previous.files[retired] = sha256(upstreamMetadata);
+  writeFileSync(receiptPath, JSON.stringify(previous));
+  buildSkills(root);
+
+  assert.equal(existsSync(join(packagePath, retired)), false);
+  assert.deepEqual(readFileSync(join(root, snapshot)), upstreamMetadata);
+  assert.equal(readFileSync(join(packagePath, 'agents/openai.yaml'), 'utf8'), 'policy:\n  allow_implicit_invocation: true\n');
+  const files = composeSkills(root).get('logbook-fixture');
+  assert.deepEqual([...files.keys()].filter(name => name.endsWith('agents/openai.yaml')), ['agents/openai.yaml']);
+  assert.ok(files.has('references/fixture-source.md'));
+  assert.ok(files.has('references/details.md'));
+  buildSkills(root, { check: true });
+  writeFileSync(join(root, snapshot), 'changed upstream metadata');
   assert.throws(() => composeSkills(root), /Supporting file integrity failure/);
 });
 
