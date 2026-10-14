@@ -10,6 +10,8 @@ metadata:
 
 Select from the requested outcome and implementation context, honoring an explicit method choice. Read and follow each selected method before editing; combine methods when both needs apply.
 
+Treat requests for `tdd` or `source-driven-development` as requests for the corresponding bundled method, and load it through the links below.
+
 | Method | When it applies | Read and follow |
 | --- | --- | --- |
 | TDD | Test-first feature or bug work, red-green-refactor, integration tests, or behavior with an agreed public Test Seam | [TDD](references/tdd/tdd.md) |
