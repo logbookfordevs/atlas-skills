@@ -424,6 +424,13 @@
             "skills": [
               "anatomy"
             ]
+          },
+          {
+            "name": "Huashu Art Motion",
+            "source": "https://github.com/alchaincyf/huashu-art-motion",
+            "skills": [
+              "huashu-art-motion"
+            ]
           }
         ],
         "description": "Creative Skills for creative ideas"
@@ -434,12 +441,24 @@
   "savedSkills": [
     {
       "scope": "Global",
-      "savedAt": "2026-10-09T13:45:23.407Z",
+      "savedAt": "2026-10-13T05:05:19.536Z",
       "skills": [
         {
           "name": "animated-driven-frontend",
           "source": "logbookfordevs/atlas-skills",
           "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "architect",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "arena",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
           "invocation": ""
         },
         {
@@ -479,6 +498,24 @@
           "invocation": ""
         },
         {
+          "name": "automate-me",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "benchmark-checklist",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "blast-radius",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
           "name": "bro",
           "source": "backnotprop/bro",
           "available": true,
@@ -506,6 +543,18 @@
           "name": "codebase-design",
           "source": "mattpocock/skills",
           "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "correct",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "create-verification-skill",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
           "invocation": ""
         },
         {
@@ -550,6 +599,12 @@
           "invocation": ""
         },
         {
+          "name": "figure-it-out",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
           "name": "grill-me",
           "source": "mattpocock/skills",
           "available": true,
@@ -580,6 +635,12 @@
           "invocation": ""
         },
         {
+          "name": "how",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
           "name": "html-ui",
           "source": "logbookfordevs/atlas-skills",
           "available": true,
@@ -607,6 +668,18 @@
           "name": "logbook-branding",
           "source": "leoreisdias/productivity-skills",
           "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "maintain-verification-skill",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "no-comments",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
           "invocation": ""
         },
         {
@@ -654,10 +727,160 @@
           "invocation": ""
         },
         {
+          "name": "poteto-mode",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
           "name": "pr",
           "source": "mattpocock/skills",
           "available": true,
-          "invocation": "Manual only"
+          "invocation": ""
+        },
+        {
+          "name": "principle-attack-the-premise",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-boundary-discipline",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-build-the-lever",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-encode-lessons-in-structure",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-exhaust-the-design-space",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-experience-first",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-explain-the-number",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-fix-root-causes",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-foundational-thinking",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-guard-the-context-window",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-laziness-protocol",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-make-operations-idempotent",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-migrate-callers-then-delete-legacy-apis",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-minimize-reader-load",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-model-the-domain",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-never-block-on-the-human",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-outcome-oriented-execution",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-prove-it-works",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-redesign-from-first-principles",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-separate-before-serializing-shared-state",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-sequence-verifiable-units",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-subtract-before-you-add",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-test-behavior-not-implementation",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "principle-type-system-discipline",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
         },
         {
           "name": "prototype",
@@ -672,9 +895,21 @@
           "invocation": ""
         },
         {
+          "name": "recall",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
           "name": "recap",
           "source": "backnotprop/bro",
           "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "reflect",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
           "invocation": ""
         },
         {
@@ -690,6 +925,12 @@
           "invocation": ""
         },
         {
+          "name": "setup-pstack",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
           "name": "shadcn",
           "source": "shadcn-ui/ui",
           "available": true,
@@ -702,9 +943,21 @@
           "invocation": ""
         },
         {
+          "name": "show-me-your-work",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
           "name": "source-driven-development",
           "source": "addyosmani/agent-skills",
           "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "swarm",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
           "invocation": ""
         },
         {
@@ -726,6 +979,12 @@
           "invocation": ""
         },
         {
+          "name": "technical-writing",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
           "name": "to-questionnaire",
           "source": "mattpocock/skills",
           "available": true,
@@ -742,6 +1001,18 @@
           "source": "leoreisdias/truss-framework",
           "available": true,
           "invocation": "Automatic allowed"
+        },
+        {
+          "name": "typescript-best-practices",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
+        },
+        {
+          "name": "unslop",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
+          "invocation": ""
         },
         {
           "name": "use-daily-desk",
@@ -788,6 +1059,12 @@
         {
           "name": "waypoint",
           "available": true,
+          "invocation": ""
+        },
+        {
+          "name": "why",
+          "source": "https://github.com/backnotprop/pstack",
+          "available": false,
           "invocation": ""
         },
         {
