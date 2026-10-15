@@ -14,6 +14,7 @@ Install the packages below, or import the shared stack to include the recommende
 
 | Package | Purpose |
 | --- | --- |
+| [Atlas Mode](skills/atlas-mode/SKILL.md) | Manual entry point that selects Atlas methods for the task and its follow-ups |
 | [HTML UI](skills/html-ui/SKILL.md) | Wireframe and polished Model modes |
 | [Atlas Grill](skills/atlas-grill/SKILL.md) | Grilling by default; Domain Modeling and documentation on explicit request |
 | [Atlas Wayfinder](skills/atlas-wayfinder/SKILL.md) | Manually invoked decision maps with shared Grilling and Domain Modeling methods |
@@ -39,6 +40,8 @@ npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-revi
 ```
 
 Select the active packages by name: retained historical entries may appear in recursive discovery. No personal installation is changed by building the repository.
+
+Start a task with `Use atlas-mode to <your task>` to let the agent select and follow the relevant installed Atlas methods. Invoking `atlas-mode` alone asks what you want to work on. The mode follows the task across follow-ups; it does not require every planning, implementation, review or verification phase. Tracking and explicit-only methods retain their own opt-in conditions. Individual skills remain directly usable. Atlas Mode routes installed skills rather than bundling their implementations; install the packages you need or use the shared stack. Leave the mode by asking the agent to stop using Atlas Mode.
 
 The standalone core is still being completed. Atlas Wayfinder currently requires the independent Research and Prototype skills for those ticket types. Use [Atlas Setup](skills/atlas-setup/SKILL.md) to check declared dependencies and obtain direct install commands without AFK. Optional extensions and their loading conditions are listed in [the dependency registry](skills/atlas-setup/references/dependencies.json).
 

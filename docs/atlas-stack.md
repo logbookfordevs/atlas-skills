@@ -34,6 +34,8 @@ The stack schema points to AFK’s main branch; Atlas packages come from Atlas�
 
 ## Maintenance
 
+The stack includes `atlas-mode`, a manually invoked entry point for choosing Atlas methods during a task. It routes installed packages and keeps their existing scope and opt-in conditions. It is not an installer or a requirement for using individual skills. Tracking records the chosen execution evidence; it does not select or require Atlas Verify.
+
 Edit `stacks/atlas.json`, then run `pnpm build:skills` to refresh Setup’s dependency references and `pnpm check` to validate the stack and packages. Run `npm run build` from `sites/atlas` to generate the site and its public JSON assets from the canonical manifest. `pnpm check` rejects stale snapshots or missing skill pages. Installation scope and agent are chosen in AFK; the manifest contains no executable commands, profile state, invocation overrides, tool installs or post-install actions.
 
 The stack lists selected skills as an installable collection; it does not define daily activation. This file is a selection manifest, not a lockfile. External references follow the authors’ repositories and Skills CLI update behavior. Implement Spec and PR install from Matt Pocock’s repository; Atlas Retro installs from Atlas with bundled Diagnose and Enforce methods; Atlas Verify installs from Atlas, carrying the maintained verification source and report engine from Product Engineering.

@@ -2544,12 +2544,6 @@
           "condition": "When the executor has not already provided the checkpoint code review."
         },
         {
-          "id": "atlas-verify",
-          "relationship": "behavioral",
-          "required": false,
-          "condition": "When a verification report or QA run is requested, or changed behavior needs reproducible acceptance evidence beyond routine project checks."
-        },
-        {
           "id": "plannotator",
           "relationship": "tool",
           "required": false,
@@ -2819,6 +2813,92 @@
           "relationship": "behavioral",
           "required": false,
           "condition": "When Diagnose assesses agent instructions or Enforce authors enduring agent-facing judgment guidance; report unavailable criteria and continue independent work."
+        }
+      ]
+    },
+    {
+      "id": "atlas-mode",
+      "entry": "skills/atlas-mode/SKILL.md",
+      "agent": "skills/atlas-mode/agents/openai.yaml",
+      "methods": [],
+      "dependencies": [
+        {
+          "id": "atlas-grill",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When the task is to challenge a plan or resolve unclear choices."
+        },
+        {
+          "id": "atlas-to-spec",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When a settled conversation needs an actionable specification."
+        },
+        {
+          "id": "atlas-to-tickets",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When a specification needs executable slices."
+        },
+        {
+          "id": "atlas-implement",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When architecture, test-first behavior or version-sensitive implementation needs a selected method."
+        },
+        {
+          "id": "atlas-explain",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When the requested outcome is understanding mechanics, rationale or learning."
+        },
+        {
+          "id": "html-ui",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When a wireframe or interactive model will answer an interface question."
+        },
+        {
+          "id": "atlas-craft",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When refining an established interface."
+        },
+        {
+          "id": "atlas-motion",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When building or assessing opportunities for animation and gestures."
+        },
+        {
+          "id": "atlas-review",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When review findings are requested or the selected workflow requires review."
+        },
+        {
+          "id": "atlas-verify",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When the conversation calls for behavior QA, reusable verification or performance evidence."
+        },
+        {
+          "id": "writing-for-humans",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When authoring substantial human-facing prose or technical documentation."
+        },
+        {
+          "id": "team-up",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When delegation is authorized and useful."
+        },
+        {
+          "id": "tracking-implementation",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When tracking or resuming tracked implementation is requested."
         }
       ]
     }

@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "workflow": "atlas-mode",
+  "generated": true,
+  "managedFiles": [],
+  "authoredInputs": [
+    "skills/atlas-mode/SKILL.md",
+    "skills/atlas-mode/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "atlas-grill",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When the task is to challenge a plan or resolve unclear choices."
+    },
+    {
+      "id": "atlas-to-spec",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When a settled conversation needs an actionable specification."
+    },
+    {
+      "id": "atlas-to-tickets",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When a specification needs executable slices."
+    },
+    {
+      "id": "atlas-implement",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When architecture, test-first behavior or version-sensitive implementation needs a selected method."
+    },
+    {
+      "id": "atlas-explain",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When the requested outcome is understanding mechanics, rationale or learning."
+    },
+    {
+      "id": "html-ui",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When a wireframe or interactive model will answer an interface question."
+    },
+    {
+      "id": "atlas-craft",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When refining an established interface."
+    },
+    {
+      "id": "atlas-motion",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When building or assessing opportunities for animation and gestures."
+    },
+    {
+      "id": "atlas-review",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When review findings are requested or the selected workflow requires review."
+    },
+    {
+      "id": "atlas-verify",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When the conversation calls for behavior QA, reusable verification or performance evidence."
+    },
+    {
+      "id": "writing-for-humans",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When authoring substantial human-facing prose or technical documentation."
+    },
+    {
+      "id": "team-up",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When delegation is authorized and useful."
+    },
+    {
+      "id": "tracking-implementation",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When tracking or resuming tracked implementation is requested."
+    }
+  ],
+  "sources": [],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "51856570afc5f10d2a6eb3937e24945adaee8ab709c6c699e22c1445e4f6b989",
+    "agents/openai.yaml": "3988be548b0e4e6349ac6dc2623b2785cb7b1ef7f0582dbad25ff54703cbf43c"
+  }
+}

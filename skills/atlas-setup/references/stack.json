@@ -9,6 +9,7 @@
       "name": "Logbook Atlas",
       "source": "https://github.com/logbookfordevs/atlas-skills",
       "skills": [
+        "atlas-mode",
         "atlas-setup",
         "tracking-implementation",
         "atlas-motion",

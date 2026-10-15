@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas Mode"
+  short_description: "Choose Atlas methods for the task at hand."
+  default_prompt: "Use $atlas-mode for this task, selecting and following the Atlas methods that fit the work."
+policy:
+  allow_implicit_invocation: false
