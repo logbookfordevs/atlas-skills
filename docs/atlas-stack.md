@@ -40,4 +40,6 @@ Team Up now exposes Arena and Swarm alongside its default delegation policy. Are
 
 Writing for Humans loads Pstack Technical Writing for technical documentation. Its four layers sit within the existing author, reader and factual contracts, with Unslop as the shared editorial catalog. PR guidance is removed from Writing for Humans; the independently selected Matt `pr` skill owns that workflow. Unslop replaces Stop Slop, with contextual punctuation and terminology rules and explicit preservation of voice and factual qualifications. No standalone Unslop installation is required.
 
+Tracking offers Audit Trail on explicit request, retaining the selection on resume. It carries Pstack Show Me Your Work with its append-only TSV format, template and logging helper, plus the shared Unslop catalog and contextual evidence principle. The trail is linked from the canonical Tracking Home. Transcript reconciliation and reviewer independence report actual host coverage and gaps; Attention accompanies checkpoint handoffs. HumanLayer Show Me still guides presentation, and Tracking retains code-review, commit and acceptance policy.
+
 Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.

@@ -1809,10 +1809,11 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/writing-for-humans/references/unslop/unslop.md",
       "carriedPath": "references/unslop/unslop.md",
-      "adaptation": "Share one editorial catalog between Writing for Humans and Explain. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
+      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
       "consumers": [
         "atlas-explain",
-        "writing-for-humans"
+        "writing-for-humans",
+        "tracking-implementation"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2016,9 +2017,10 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-encode-lessons-in-structure/source.md",
       "carriedPath": "references/principles/principle-encode-lessons-in-structure/SKILL.md",
-      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena and Audit Trail evidence reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "atlas-implement",
+        "tracking-implementation"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2419,6 +2421,49 @@
       "rulings": [
         "human-writing-technical-contract"
       ]
+    },
+    {
+      "id": "pstack-show-me-your-work",
+      "owner": "tracking-implementation",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/show-me-your-work/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-show-me-your-work/source.md",
+      "sourceSha256": "4debc5860a7b389e4496f5b908340e4bb79cddabf36e5d56cab399a0a299df35",
+      "license": "sources/upstream/pstack-show-me-your-work/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/tracking-implementation/references/audit-trail/audit-trail.md",
+      "carriedPath": "references/audit-trail/audit-trail.md",
+      "patch": "sources/patches/pstack-show-me-your-work.patch",
+      "adaptation": "Select Audit Trail explicitly within Tracking, keeping one canonical state home and a linked append-only TSV. Preserve the full format, run ownership and helper/template. Use bundled Unslop and the evidence principle. Resolve transcript discovery and cross-family review against actual host capabilities with explicit gaps; Attention appears at checkpoint handoffs instead of every progress reply. Tracking retains commit, code-review and acceptance policy.",
+      "consumers": [
+        "tracking-implementation"
+      ],
+      "supportingFiles": [
+        {
+          "relativePath": "scripts/log.sh",
+          "upstreamPath": "skills/show-me-your-work/scripts/log.sh",
+          "snapshot": "sources/upstream/pstack-show-me-your-work/scripts/log.sh",
+          "sourceSha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e"
+        },
+        {
+          "relativePath": "references/decision-log-template.tsv",
+          "upstreamPath": "skills/show-me-your-work/references/decision-log-template.tsv",
+          "snapshot": "sources/upstream/pstack-show-me-your-work/references/decision-log-template.tsv",
+          "sourceSha256": "6779378006a2f5225e8c06deb84f1d913fb532041ebbb6e50d94600bfe3f4b76"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "tracking-audit-trail-ownership",
+        "tracking-audit-trail-coverage"
+      ]
     }
   ],
   "workflows": [
@@ -2533,7 +2578,10 @@
       "entry": "skills/tracking-implementation/SKILL.md",
       "agent": "skills/tracking-implementation/agents/openai.yaml",
       "methods": [
-        "show-me"
+        "show-me",
+        "pstack-show-me-your-work",
+        "pstack-unslop",
+        "pstack-principle-encode-lessons-in-structure"
       ],
       "authoredReferences": [
         {
@@ -3201,7 +3249,30 @@
       "sources": [
         "pstack-unslop"
       ],
-      "decision": "Unslop is the single editorial catalog shared by Writing for Humans and Explain. Meaning, author voice and evidence qualifications outrank style patterns. Punctuation and domain terminology are contextual; preserve useful general guidance and requested narrative purposes. Each consumer carries the same patched bytes with stable rule IDs."
+      "decision": "Unslop is the single editorial catalog shared by Writing for Humans, Explain and Tracking Audit Trail. Meaning, author voice and evidence qualifications outrank style patterns. Punctuation and domain terminology are contextual; preserve useful general guidance and requested narrative purposes. Each consumer carries the same patched bytes with stable rule IDs."
+    },
+    {
+      "id": "tracking-audit-trail-ownership",
+      "owner": "tracking-implementation",
+      "document": "skills/tracking-implementation/SKILL.md",
+      "section": "Optional Audit Trail",
+      "sources": [
+        "pstack-show-me-your-work",
+        "show-me"
+      ],
+      "decision": "Audit Trail activates on explicit request or resume of a selected trail. Its append-only TSV is linked evidence attached to the single Tracking Home, not a second execution-state system. Show Me still owns presentation; Tracking retains commit, code-review, handoff and acceptance policy. Only selected Audit Trail adds an extra required tracking artifact."
+    },
+    {
+      "id": "tracking-audit-trail-coverage",
+      "owner": "tracking-implementation",
+      "document": "skills/tracking-implementation/references/audit-trail/audit-trail.md",
+      "section": "Cross-model review of the trail",
+      "sources": [
+        "pstack-show-me-your-work",
+        "pstack-unslop",
+        "pstack-principle-encode-lessons-in-structure"
+      ],
+      "decision": "Reconcile only the current run's stretches against its workspace-scoped transcript and evidence. Use a different-family read-only reviewer when available; report missing transcript access, independence or review as gaps without substituting self-review or unperformed No flags. Preserve append-only corrections and run ownership. Attention is recorded at checkpoint handoffs, not every progress reply; audit findings feed existing tracking state without a new acceptance gate."
     }
   ]
 }

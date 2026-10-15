@@ -4,7 +4,15 @@
   "generated": true,
   "managedFiles": [
     "references/show-me.md",
-    "licenses/show-me.txt"
+    "licenses/show-me.txt",
+    "references/audit-trail/audit-trail.md",
+    "licenses/pstack-show-me-your-work.txt",
+    "references/audit-trail/scripts/log.sh",
+    "references/audit-trail/references/decision-log-template.tsv",
+    "references/unslop/unslop.md",
+    "licenses/pstack-unslop.txt",
+    "references/principles/principle-encode-lessons-in-structure/SKILL.md",
+    "licenses/pstack-principle-encode-lessons-in-structure.txt"
   ],
   "authoredInputs": [
     "skills/tracking-implementation/SKILL.md",
@@ -17,7 +25,7 @@
       "input": "skills/tracking-implementation/references/resume.md",
       "target": "references/resume.md",
       "classification": "atlas-authored",
-      "carriedSha256": "6130bbe5c9110014ecc6652397c8e921dc677a87b35c7f92628daa13dfc5aae8"
+      "carriedSha256": "723139fa18286617f6305f078927079970c1abd5699b47ce9462087c9f53a0b2"
     },
     {
       "input": "skills/tracking-implementation/references/review-guides.md",
@@ -89,6 +97,100 @@
       "rulings": [
         "tracking-show-me-handoff"
       ]
+    },
+    {
+      "id": "pstack-show-me-your-work",
+      "owner": "tracking-implementation",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/show-me-your-work/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/show-me-your-work/scripts/log.sh",
+          "classification": "verbatim",
+          "sourceSha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e",
+          "carriedPath": "references/audit-trail/scripts/log.sh",
+          "carriedSha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e"
+        },
+        {
+          "upstreamPath": "skills/show-me-your-work/references/decision-log-template.tsv",
+          "classification": "verbatim",
+          "sourceSha256": "6779378006a2f5225e8c06deb84f1d913fb532041ebbb6e50d94600bfe3f4b76",
+          "carriedPath": "references/audit-trail/references/decision-log-template.tsv",
+          "carriedSha256": "6779378006a2f5225e8c06deb84f1d913fb532041ebbb6e50d94600bfe3f4b76"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "4debc5860a7b389e4496f5b908340e4bb79cddabf36e5d56cab399a0a299df35",
+      "carriedPath": "references/audit-trail/audit-trail.md",
+      "carriedSha256": "5f9f87a1262b8a1c6f5d4144cd269593f103f9851e816309bf3e988751838244",
+      "licensePath": "licenses/pstack-show-me-your-work.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Select Audit Trail explicitly within Tracking, keeping one canonical state home and a linked append-only TSV. Preserve the full format, run ownership and helper/template. Use bundled Unslop and the evidence principle. Resolve transcript discovery and cross-family review against actual host capabilities with explicit gaps; Attention appears at checkpoint handoffs instead of every progress reply. Tracking retains commit, code-review and acceptance policy.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "tracking-audit-trail-ownership",
+        "tracking-audit-trail-coverage"
+      ],
+      "patch": "sources/patches/pstack-show-me-your-work.patch",
+      "patchSha256": "c8eccc6c5d7eb90fe7dfa47099d6899743821b47eb3856f02825a853cf6da372"
+    },
+    {
+      "id": "pstack-unslop",
+      "owner": "writing-for-humans",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/unslop/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+      "carriedPath": "references/unslop/unslop.md",
+      "carriedSha256": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
+      "licensePath": "licenses/pstack-unslop.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "explain-evidence-editing",
+        "human-writing-editorial-contract"
+      ],
+      "patch": "sources/patches/pstack-unslop.patch",
+      "patchSha256": "d2655d54a3c5a1d1910308d94808f97a2d2e3438c32c31ae2b3cc3b152f3ed71"
+    },
+    {
+      "id": "pstack-principle-encode-lessons-in-structure",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-encode-lessons-in-structure/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
+      "carriedPath": "references/principles/principle-encode-lessons-in-structure/SKILL.md",
+      "carriedSha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
+      "licensePath": "licenses/pstack-principle-encode-lessons-in-structure.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena and Audit Trail evidence reference, not a global rule or public skill selection.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": []
     }
   ],
   "rulings": [
@@ -101,14 +203,45 @@
         "show-me"
       ],
       "decision": "Tracking sets HTML as the default for new local records, allows an explicitly requested alternative, and preserves existing formats unless conversion is requested. Load Show Me before creating or updating the tracking artifact to guide layout and representations within that format, preserving complete evidence, structured state and the existing acceptance contract."
+    },
+    {
+      "id": "tracking-audit-trail-ownership",
+      "owner": "tracking-implementation",
+      "document": "skills/tracking-implementation/SKILL.md",
+      "section": "Optional Audit Trail",
+      "sources": [
+        "pstack-show-me-your-work",
+        "show-me"
+      ],
+      "decision": "Audit Trail activates on explicit request or resume of a selected trail. Its append-only TSV is linked evidence attached to the single Tracking Home, not a second execution-state system. Show Me still owns presentation; Tracking retains commit, code-review, handoff and acceptance policy. Only selected Audit Trail adds an extra required tracking artifact."
+    },
+    {
+      "id": "tracking-audit-trail-coverage",
+      "owner": "tracking-implementation",
+      "document": "skills/tracking-implementation/references/audit-trail/audit-trail.md",
+      "section": "Cross-model review of the trail",
+      "sources": [
+        "pstack-show-me-your-work",
+        "pstack-unslop",
+        "pstack-principle-encode-lessons-in-structure"
+      ],
+      "decision": "Reconcile only the current run's stretches against its workspace-scoped transcript and evidence. Use a different-family read-only reviewer when available; report missing transcript access, independence or review as gaps without substituting self-review or unperformed No flags. Preserve append-only corrections and run ownership. Attention is recorded at checkpoint handoffs, not every progress reply; audit findings feed existing tracking state without a new acceptance gate."
     }
   ],
   "files": {
-    "SKILL.md": "4226ea1f950737107b0432f47292b0602b640643cc146a3686e8e04f3ccbb661",
-    "agents/openai.yaml": "e6d5f07bd54729be9ae4dc0c2bb8b251a679530a048623e8f815a154437a5abb",
-    "references/resume.md": "6130bbe5c9110014ecc6652397c8e921dc677a87b35c7f92628daa13dfc5aae8",
+    "SKILL.md": "796106533a5908543ece8df97717e4a1b2ce48882b34d51598b6c8cfeb20a618",
+    "agents/openai.yaml": "6ab2c66fa97ccfb10c7149239063fa3abe88d32179ff987192a451d14aec45ce",
+    "references/resume.md": "723139fa18286617f6305f078927079970c1abd5699b47ce9462087c9f53a0b2",
     "references/review-guides.md": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f",
     "references/show-me.md": "434a2346cc95e313b0d367d477dda2e23ba642dd2181757415a09500664af100",
-    "licenses/show-me.txt": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f"
+    "licenses/show-me.txt": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
+    "references/audit-trail/audit-trail.md": "5f9f87a1262b8a1c6f5d4144cd269593f103f9851e816309bf3e988751838244",
+    "licenses/pstack-show-me-your-work.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/audit-trail/scripts/log.sh": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e",
+    "references/audit-trail/references/decision-log-template.tsv": "6779378006a2f5225e8c06deb84f1d913fb532041ebbb6e50d94600bfe3f4b76",
+    "references/unslop/unslop.md": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
+    "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/principles/principle-encode-lessons-in-structure/SKILL.md": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
+    "licenses/pstack-principle-encode-lessons-in-structure.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }

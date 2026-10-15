@@ -62,7 +62,7 @@
       "carriedSha256": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
       "licensePath": "licenses/pstack-unslop.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Share one editorial catalog between Writing for Humans and Explain. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
+      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
@@ -120,7 +120,7 @@
       "sources": [
         "pstack-unslop"
       ],
-      "decision": "Unslop is the single editorial catalog shared by Writing for Humans and Explain. Meaning, author voice and evidence qualifications outrank style patterns. Punctuation and domain terminology are contextual; preserve useful general guidance and requested narrative purposes. Each consumer carries the same patched bytes with stable rule IDs."
+      "decision": "Unslop is the single editorial catalog shared by Writing for Humans, Explain and Tracking Audit Trail. Meaning, author voice and evidence qualifications outrank style patterns. Punctuation and domain terminology are contextual; preserve useful general guidance and requested narrative purposes. Each consumer carries the same patched bytes with stable rule IDs."
     }
   ],
   "files": {

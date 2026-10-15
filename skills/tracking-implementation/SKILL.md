@@ -1,6 +1,6 @@
 ---
 name: tracking-implementation
-description: "Track implementation when the user asks to track progress, maintain an implementation record, or resume previously tracked work. Apply alongside any executor; a request to implement alone does not activate tracking."
+description: "Track implementation when the user asks to track progress, maintain an implementation record, or resume previously tracked work. Apply alongside any executor; a request to implement alone does not activate tracking. Audit Trail adds decision provenance on request."
 disable-model-invocation: false
 metadata:
   short-description: Implement work with durable tracking, validation, and review.
@@ -15,6 +15,9 @@ Activate when the user requests tracking, or resumes an existing tracked impleme
 If the user asks to resume tracked implementation, use [resume.md](references/resume.md).
 
 Skip tiny one-shot edits unless the user asks for tracked implementation.
+
+## Optional Audit Trail
+For an explicit Audit Trail or Show Me Your Work request, read and follow [Audit Trail](references/audit-trail/audit-trail.md). Resume it when the active record already selects it. Ordinary tracking uses no separate decision log.
 
 ## Artifact presentation
 Create new local Implementation Records as HTML unless the user explicitly requests Markdown or another format. When resuming an existing record, retain its format unless the user requests a conversion.
@@ -35,7 +38,7 @@ An existing remote ticket may host the record when remote tracking is chosen. Ot
 
 Keep local Implementation Records outside agent-created commits unless the user or repository convention explicitly opts them in. Remote tracking remains external to Git unless a local counterpart is selected.
 
-The selected Tracking Home is the only required tracking artifact.
+The selected Tracking Home is the only required tracking artifact by default. Selecting Audit Trail adds its linked canonical decision log as evidence; execution state remains in the Tracking Home.
 
 When parallel implementation needs separate worktrees, prefer `yggtree` when available before falling back to native Git worktree commands.
 

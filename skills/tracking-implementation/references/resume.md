@@ -10,6 +10,8 @@ Recover the active record's `review_base`, last green atomic commit, implementat
 
 Recover its Guided Review link and checkpoint revision, Inbox references and unresolved questions. Reconcile unread replies and check the guide still matches the active checkpoint under the main skill's handoff policy.
 
+If Execution Evidence selects Audit Trail, recover its canonical log and audit coverage, then follow the main skill's Audit Trail reference before appending.
+
 If implementation-owned paths are dirty, distinguish unfinished behavior work from tracking updates and follow the main skill’s commit policy.
 
 Report done, active, blocked, and the executor’s next recorded action.

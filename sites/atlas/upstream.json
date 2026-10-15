@@ -270,6 +270,27 @@
         "author": "HumanLayer",
         "url": "https://github.com/humanlayer/skills/blob/ca7c8088db69e315a8b2deea43820270457f8f3c/plugins/show-me/skills/show-me/SKILL.md",
         "classification": "verbatim"
+      },
+      {
+        "id": "pstack-show-me-your-work",
+        "title": "Show Me Your Work",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/show-me-your-work/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-unslop",
+        "title": "Unslop",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/unslop/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-principle-encode-lessons-in-structure",
+        "title": "Encode Lessons in Structure",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-encode-lessons-in-structure/SKILL.md",
+        "classification": "verbatim"
       }
     ],
     "collections": []

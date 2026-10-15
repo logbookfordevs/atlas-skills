@@ -213,7 +213,7 @@ test('automatic design discovery metadata and supporting receipts agree', () => 
 });
 
 
-test('Tracking Implementation is automatically discoverable with portable authored references', () => {
+test('Tracking Implementation is automatically discoverable with portable runtime references', () => {
   const files = composeSkills().get('tracking-implementation');
   assert.ok(files);
   assert.match(files.get('SKILL.md').toString().split('---')[1], /disable-model-invocation: false/);
@@ -224,7 +224,11 @@ test('Tracking Implementation is automatically discoverable with portable author
     assert.equal(sha256(files.get(source.licensePath)), source.licenseSha256);
   }
   for (const reference of receipt.authoredReferences) assert.equal(sha256(files.get(reference.target)), reference.carriedSha256);
-  for (const ruling of receipt.rulings) assert.ok(receipt.authoredInputs.includes(ruling.document));
+  const packagePrefix = 'skills/tracking-implementation/';
+  for (const ruling of receipt.rulings) {
+    assert.ok(ruling.document.startsWith(packagePrefix));
+    assert.ok(files.has(ruling.document.slice(packagePrefix.length)), `Missing bundled ruling: ${ruling.document}`);
+  }
 });
 
 test('Atlas Verify validates and renders from a portable package without the source repo', t => {
