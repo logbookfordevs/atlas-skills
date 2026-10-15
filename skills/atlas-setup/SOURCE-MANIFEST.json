@@ -42,7 +42,7 @@
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "dd29b301722f74f9b5f0f1eae6db741744a6972b79329e688ad554609d8d2a9f",
+    "SKILL.md": "8db95a41ded07e14f090e2ee708fd96761d991cb4a6a7bf873e6732eff428f64",
     "agents/openai.yaml": "caf11b5bc46d0b1181c27f69da4135b287be82ebfcfe9dfff4d2048dda6812f7",
     "references/cleanup.md": "0fd0efee090c394d5cade57c44180b5fce9f40e1e7b8bc5ef3b644b07eac93de",
     "references/dependencies.json": "ad54b83bdd3d50b26082337109bfcbeff679cc7b94efad55d3644966d574e534",
