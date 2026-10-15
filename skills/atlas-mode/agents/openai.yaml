@@ -1,6 +1,6 @@
 interface:
   display_name: "Atlas Mode"
-  short_description: "Choose Atlas methods for the task at hand."
-  default_prompt: "Use $atlas-mode for this task, selecting and following the Atlas methods that fit the work."
+  short_description: "Work in Atlas Mode across skills and inner methods."
+  default_prompt: "Enter $atlas-mode for this task and its follow-ups. Choose and apply the relevant Atlas skills and inner methods as the work develops."
 policy:
   allow_implicit_invocation: false

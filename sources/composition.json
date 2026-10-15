@@ -2832,13 +2832,13 @@
           "id": "atlas-to-spec",
           "relationship": "behavioral",
           "required": false,
-          "condition": "When a settled conversation needs an actionable specification."
+          "condition": "When settled requirements need an agreed specification."
         },
         {
           "id": "atlas-to-tickets",
           "relationship": "behavioral",
           "required": false,
-          "condition": "When a specification needs executable slices."
+          "condition": "When a plan or specification needs executable slices."
         },
         {
           "id": "atlas-implement",
@@ -2899,6 +2899,36 @@
           "relationship": "behavioral",
           "required": false,
           "condition": "When tracking or resuming tracked implementation is requested."
+        },
+        {
+          "id": "atlas-wayfinder",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When unresolved decisions need a cross-session map or an existing decision map needs continuation."
+        },
+        {
+          "id": "atlas-retro",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When session friction warrants Diagnose, or the user explicitly authorizes Enforce."
+        },
+        {
+          "id": "atlas-setup",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When skill availability or stack alignment needs inspection; installation and removals retain approval."
+        },
+        {
+          "id": "animated-driven-frontend",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When synchronized interaction or rendering engineering needs the relevant technical references."
+        },
+        {
+          "id": "writing-for-agents",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When authoring agent instructions, skills or agent-facing policies."
         }
       ]
     }

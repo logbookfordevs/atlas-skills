@@ -19,13 +19,13 @@
       "id": "atlas-to-spec",
       "relationship": "behavioral",
       "required": false,
-      "condition": "When a settled conversation needs an actionable specification."
+      "condition": "When settled requirements need an agreed specification."
     },
     {
       "id": "atlas-to-tickets",
       "relationship": "behavioral",
       "required": false,
-      "condition": "When a specification needs executable slices."
+      "condition": "When a plan or specification needs executable slices."
     },
     {
       "id": "atlas-implement",
@@ -86,12 +86,43 @@
       "relationship": "behavioral",
       "required": false,
       "condition": "When tracking or resuming tracked implementation is requested."
+    },
+    {
+      "id": "atlas-wayfinder",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When unresolved decisions need a cross-session map or an existing decision map needs continuation."
+    },
+    {
+      "id": "atlas-retro",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When session friction warrants Diagnose, or the user explicitly authorizes Enforce."
+    },
+    {
+      "id": "atlas-setup",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When skill availability or stack alignment needs inspection; installation and removals retain approval."
+    },
+    {
+      "id": "animated-driven-frontend",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When synchronized interaction or rendering engineering needs the relevant technical references."
+    },
+    {
+      "id": "writing-for-agents",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When authoring agent instructions, skills or agent-facing policies."
     }
   ],
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "51856570afc5f10d2a6eb3937e24945adaee8ab709c6c699e22c1445e4f6b989",
-    "agents/openai.yaml": "3988be548b0e4e6349ac6dc2623b2785cb7b1ef7f0582dbad25ff54703cbf43c"
+    "SKILL.md": "2ecff577ad0c423b0c4a98a354c6ca6d414b7eda74b8e782576158ea185517ae",
+    "agents/openai.yaml": "787a0b0c3dd164bbde78dc04fdd805f0d282da70a5bfe07b9f4198438bb4e1aa",
+    "references/methods.md": "272d62b0e90550cdd4b95f594f12665bea4a86a8bd584a1ec5223b45a41fa645"
   }
 }

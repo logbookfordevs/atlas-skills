@@ -95,6 +95,11 @@
           "skill": "atlas-retro",
           "required": false,
           "condition": "When Diagnose assesses agent instructions or Enforce authors enduring agent-facing judgment guidance; report unavailable criteria and continue independent work."
+        },
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When authoring agent instructions, skills or agent-facing policies."
         }
       ]
     }

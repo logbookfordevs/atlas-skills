@@ -1,33 +1,28 @@
 ---
 name: atlas-mode
-description: "Use Atlas methods for the current task, selecting the workflow that fits the work."
+description: "Work in Atlas Mode: apply the collection's skills and inner methods throughout the task."
 disable-model-invocation: true
 ---
 
 # Atlas Mode
 
-Use Atlas as the workflow entry point for this task and its follow-ups until the user changes direction or exits the mode. Honor the requested outcome, scope and explicit method choices.
+Work in Atlas Mode for this task and its follow-ups until the user exits it. Take responsibility for choosing and applying the Atlas methods the work needs. The user supplies the outcome; they need not remember skill names, inner modes or invocation syntax.
 
-If invoked without a task, ask what the user wants to work on. Otherwise select the applicable routes below, briefly name the selected skills and methods, then read and follow their installed instructions before doing the work. Select again when the task changes; load only the methods needed for the next work.
+## Working in the mode
 
-| Work in front of you | Route |
-| --- | --- |
-| Challenge a plan or clarify unresolved choices | `atlas-grill` |
-| Turn settled requirements into a specification | `atlas-to-spec` |
-| Slice a specification into executable tickets | `atlas-to-tickets` |
-| Design implementation structure, build test-first, or resolve version-sensitive API choices | `atlas-implement`; select Architect, TDD or Source-Driven as applicable |
-| Explain mechanics, investigate rationale or teach | `atlas-explain`; retain its mode chooser |
-| Explore an interface through a wireframe or interactive model | `html-ui` |
-| Refine an established interface | `atlas-craft` |
-| Build motion or identify useful animation opportunities | `atlas-motion` |
-| Assess code, interfaces, motion or downstream impact | `atlas-review` |
-| Prove behavior, run QA, maintain project verifiers or assess performance evidence | `atlas-verify`, when the conversation calls for that work |
-| Write substantial prose or technical documentation | `writing-for-humans` |
-| Delegate authorized work | `team-up` |
-| Track implementation or resume an existing implementation record | `tracking-implementation`, when requested |
+1. Establish the outcome from the conversation and inspect the relevant project context. If invoked without a task, ask what the user wants to work on.
+2. Read [Methods](references/methods.md), identify the applicable skills and inner methods, and briefly state the working approach. Resolve selected skills through the host's installed catalog, read their entry instructions and selected references, and perform the work. A recommendation to invoke another skill is not completion of this step.
+3. Reconsider the methods at meaningful transitions: an unresolved design decision, implementation ready for checks, material uncertainty in behavior, or recurring session friction. Apply the next relevant method within the task's scope; continue until the requested outcome and selected methods' completion conditions are met. Carry explicit choices and active records into follow-ups rather than restarting the workflow.
+4. Hand off the result with the evidence, remaining uncertainty and decisions the user needs. Each selected method owns its evidence format; reuse the same evidence when it answers the same question.
 
-These are routes, not mandatory phases. Continue a settled implementation directly; routine changes use normal project validation when no specialized method applies. Review and verification are selected from the conversation and task needs, independently of Tracking. Each selected skill owns its procedure, evidence and acceptance rules.
+A manually invoked skill remains manual outside Atlas Mode. Inside this explicitly requested mode, select and read its instructions directly when the task calls for it, including Wayfinder, To Spec, To Tickets, Writing for Humans, Retro, Setup and Animated-Driven Frontend. Treat natural-language requests for their outcomes as sufficient selection; require no extra invocation ceremony.
 
-Keep explicit-only choices explicit: With Docs, Audit Trail and other opt-in methods retain their existing triggers. For manually invoked companions such as `atlas-wayfinder`, `atlas-retro`, `atlas-setup` or `animated-driven-frontend`, suggest the relevant invocation when useful and let the user select it. Entering Atlas Mode alone does not activate those companions or authorize tracking, delegation, product fixes during a review, installation or publication.
+Select complementary methods where they address different needs. A settled implementation can begin directly; routine changes use normal project validation. The method guide supplies selection conditions, not mandatory phases or instructions to run the whole collection. Apply the selected skill's actual procedure rather than reproducing it here.
 
-Resolve skills through the host's installed skill catalog. If a selected route is unavailable, name the missing skill and its effect; continue independent work and offer a targeted installation or an ordinary-workflow fallback. Obtain the user's choice before replacing a requested method. Independent companion skills remain usable when explicitly selected or required by a loaded method.
+## Scope and choices
+
+Explicit user choices take precedence over inferred selections. Preserve method-level opt-ins: With Docs, Tracking, Audit Trail and Retro Enforce require their requested outcomes in the conversation or an existing active selection. Retain Atlas Explain's chooser when the explanation mode remains unspecified. Atlas Mode's activation alone does not request those outcomes.
+
+Keep the task's authority through transitions: a review stays read-only toward product code, Retro Diagnose stays advisory, and Setup inspection does not authorize installation or removal. Honor existing approval for concrete work without asking again. Follow the selected method's rules for external writes, acceptance and publication.
+
+If a needed skill is unavailable, identify it and the affected work. Continue independent work; use Setup when resolving availability or stack alignment is needed. Offer targeted installation or a clearly identified fallback, obtaining the user's choice before replacing an explicitly requested method. Use independent companion skills when the task or selected method needs them; Atlas Mode is a working preference, not an exclusivity rule.

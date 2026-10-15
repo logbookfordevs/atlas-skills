@@ -1,0 +1,42 @@
+# Atlas methods
+
+Choose from the outcome and the uncertainty in the work. Read the selected skill's entry and method references before applying it; this guide exposes choices that may be hidden behind its description.
+
+## Understand and plan
+
+| Skill | Methods and selection |
+| --- | --- |
+| `atlas-explain` | **How:** trace mechanics, runtime flow and responsibility. **Why:** investigate historical decisions and constraints. **Teach:** build conversational understanding. Preserve its chooser when no mode is specified. |
+| `atlas-grill` | **Grilling:** challenge assumptions and resolve unclear choices. **With Docs:** retain the answers as documentation when that outcome is explicitly requested. |
+| `atlas-wayfinder` | For an effort whose unresolved decisions exceed one session, create or resume a decision map and resolve its next useful frontier. Keep decision planning distinct from executable implementation tickets. |
+| `atlas-to-spec` | Synthesize settled discussion into a specification when work needs an agreed behavior contract; use existing context rather than restarting an interview. |
+| `atlas-to-tickets` | Turn a spec, plan or conversation into vertical implementation slices with blocking relationships when the work needs executable units. |
+
+## Build and refine
+
+| Skill | Methods and selection |
+| --- | --- |
+| `atlas-implement` | **Architect:** resolve interfaces, ownership, types and module shape before implementation when the design warrants exploration. **TDD:** prove behavior test-first through a meaningful seam. **Source-Driven:** establish version-sensitive framework, library or API facts. Combine the methods that address the task's actual needs. |
+| `html-ui` | **Wireframe:** answer hierarchy, layout and flow questions at low fidelity. **Model:** make an agreed interface concrete as a polished interactive artifact. |
+| `atlas-craft` | **Color:** palette, tokens and contrast. **Type:** fonts, scale and wrapping. **Layout:** grouping, spacing and adaptivity. **Accessibility:** semantics, keyboard paths, focus and forms. **UI Polish:** surfaces, elevation, icons and optical details. **Copy:** labels, errors, empty states and localization. Preserve the accepted visual identity. |
+| `atlas-motion` | **Opportunities:** find worthwhile motion and reject unnecessary animation, read-only. **Animate:** build transitions and animations. **Fluid:** direct manipulation, momentum and interruptible springs. |
+| `animated-driven-frontend` | **Interaction systems:** shared progress, seeking and synchronized sequences. **Rendering pipeline:** WebGL, assets, shaders and device performance. **Frontend constraints:** runtime ownership, loading, accessibility and failure behavior. Use for demanding motion engineering alongside the relevant design method. |
+| `writing-for-humans` | Create, revise or critique prose while preserving meaning and voice. Select **reader progression**, **articles and newsletters**, **technical writing**, or **visual explanations** for the relevant genre and reader need; apply its bundled **Unslop** guidance. A fresh-reader proxy remains request-only. Agent instructions use the independent `writing-for-agents` skill. |
+
+## Check the result
+
+Select checks from the task and material uncertainty; Tracking does not select verification for you.
+
+| Skill | Methods and selection |
+| --- | --- |
+| `atlas-review` | **Code:** assess standards and originating intent. **Adversarial:** challenge blind spots with independent reviewers. **Impact:** trace downstream consequences. **Static:** run and judge scoped lint/typechecks. **Interface Changes:** identify introduced or regressed interface problems in a diff. **Interface Audit:** assess an existing screen or flow. **Motion:** review animation. **Motion Audit:** survey existing animation and prepare improvement plans. Select the review question rather than adding every review method. |
+| `atlas-verify` | **Run:** prove implemented behavior or execute QA with recorded evidence. **Create:** build reusable project verification assets when that is the requested deliverable. **Maintain:** update an existing verifier. **Performance:** assess a benchmark, speedup or regression. A missing verifier alone does not select Create; verification alone does not authorize product fixes. |
+
+## Coordinate and improve the work
+
+| Skill | Methods and selection |
+| --- | --- |
+| `team-up` | **Delegation:** choose useful assignments, roles, models and effort when delegation is authorized. **Arena:** compare competing complete candidates and synthesize a result. **Swarm:** partition coverage or race approaches and consolidate evidence. Select Arena or Swarm deliberately when the outcome warrants it. |
+| `tracking-implementation` | Start, maintain or resume the durable Implementation Record when tracking is requested or already active. **Audit Trail:** add Show Me Your Work's append-only decision provenance and reconciliation only when requested or already selected. |
+| `atlas-retro` | **Diagnose:** inspect relevant session friction and propose improvements; use when recurring failures or workflow problems warrant reflection, keeping the scope to the selected conversation. **Enforce:** implement prevention for explicitly authorized recurring mistakes. A correction alone does not authorize prevention edits. |
+| `atlas-setup` | Inspect dependencies and stack alignment when availability is blocking a selected method or the user wants their installation checked. Offer missing additions; propose obsolete-installation cleanup from provenance. Installation and named removals require their respective approval. |
