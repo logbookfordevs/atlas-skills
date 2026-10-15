@@ -22,6 +22,7 @@ const titles = {
   'review-animations': 'Review Animations', 'to-spec': 'To Spec', 'to-tickets': 'To Tickets',
   'show-me': 'Show Me', 'pstack-unslop': 'Unslop', 'pstack-technical-writing': 'Technical Writing',
   'pstack-show-me-your-work': 'Show Me Your Work',
+  'matt-retro': 'Retro', 'pstack-correct': 'Correct',
   'pstack-principle-encode-lessons-in-structure': 'Encode Lessons in Structure',
 };
 const skills = JSON.parse(await readFile(new URL('../content.json', import.meta.url), 'utf8'));

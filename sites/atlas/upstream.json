@@ -298,5 +298,24 @@
   "atlas-setup": {
     "references": [],
     "collections": []
+  },
+  "retro": {
+    "references": [
+      {
+        "id": "matt-retro",
+        "title": "Retro",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/retro/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-correct",
+        "title": "Correct",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/correct/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
   }
 }

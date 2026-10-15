@@ -15,6 +15,7 @@
     "atlas-verify",
     "atlas-wayfinder",
     "html-ui",
+    "retro",
     "teach",
     "team-up",
     "tracking-implementation",
@@ -70,6 +71,19 @@
           "skill": "atlas-wayfinder",
           "required": true,
           "condition": "When resolving an AFK Research ticket or charting research work."
+        }
+      ]
+    },
+    {
+      "id": "writing-for-agents",
+      "source": "https://github.com/mattpocock/skills",
+      "skill": "writing-for-agents",
+      "command": "npx skills add https://github.com/mattpocock/skills --skill writing-for-agents",
+      "consumers": [
+        {
+          "skill": "retro",
+          "required": false,
+          "condition": "When Diagnose assesses agent instructions or Enforce authors enduring agent-facing judgment guidance; report unavailable criteria and continue independent work."
         }
       ]
     }

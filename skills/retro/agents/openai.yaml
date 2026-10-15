@@ -1,0 +1,6 @@
+interface:
+  display_name: "Retro"
+  short_description: "Diagnose session friction or enforce recurring-mistake prevention."
+  default_prompt: "Use $retro to diagnose this session and propose improvements."
+policy:
+  allow_implicit_invocation: false

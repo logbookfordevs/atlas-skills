@@ -27,7 +27,8 @@
         "atlas-to-spec",
         "atlas-to-tickets",
         "atlas-explain",
-        "teach"
+        "teach",
+        "retro"
       ]
     },
     {
@@ -42,8 +43,7 @@
         "prototype",
         "handoff",
         "codebase-design",
-        "pr",
-        "retro"
+        "pr"
       ]
     },
     {
