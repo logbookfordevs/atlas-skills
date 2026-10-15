@@ -2431,6 +2431,35 @@
         "team-up-method-selection",
         "team-up-swarm-evidence"
       ]
+    },
+    {
+      "id": "pstack-technical-writing",
+      "owner": "writing-for-humans",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/technical-writing/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-technical-writing/source.md",
+      "sourceSha256": "61fe9c424a798ebf36ad94941f87be049cb8827bdf86d21474a0dde37b513c43",
+      "license": "sources/upstream/pstack-technical-writing/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/writing-for-humans/references/technical/technical-writing.md",
+      "carriedPath": "references/technical/technical-writing.md",
+      "patch": "sources/patches/pstack-technical-writing.patch",
+      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Replace Unslop with the existing bundled Stop Slop catalog; remove PR/commit scope and catalog-maintenance output. Resolve strict Di\u00e1taxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
+      "consumers": [
+        "writing-for-humans"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "human-writing-technical-contract"
+      ]
     }
   ],
   "workflows": [
@@ -2517,7 +2546,8 @@
       "entry": "skills/writing-for-humans/SKILL.md",
       "agent": "skills/writing-for-humans/agents/openai.yaml",
       "methods": [
-        "stop-slop"
+        "stop-slop",
+        "pstack-technical-writing"
       ],
       "authoredReferences": [
         {
@@ -2527,10 +2557,6 @@
         {
           "input": "skills/writing-for-humans/references/fresh-reader-pass.md",
           "target": "references/fresh-reader-pass.md"
-        },
-        {
-          "input": "skills/writing-for-humans/references/pr-descriptions.md",
-          "target": "references/pr-descriptions.md"
         },
         {
           "input": "skills/writing-for-humans/references/reader-progression.md",
@@ -3196,6 +3222,17 @@
         "pstack-principle-prove-it-works"
       ],
       "decision": "Share the maintained Arena method and complete four-principle closure with Architect while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported. No external audit workflow is activated."
+    },
+    {
+      "id": "human-writing-technical-contract",
+      "owner": "writing-for-humans",
+      "document": "skills/writing-for-humans/references/technical/technical-writing.md",
+      "section": "Technical writing",
+      "sources": [
+        "pstack-technical-writing",
+        "stop-slop"
+      ],
+      "decision": "Technical documentation uses the four writing layers within the existing author, reader and factual contracts. Section-level Di\u00e1taxis permits useful mixed READMEs/RFCs; evidence qualifications survive certainty rules; length rules are heuristics and code formatting follows the repository. Reuse the already loaded Stop Slop catalog without an additional mandatory pass. PR writing is removed from this package."
     }
   ]
 }

@@ -38,4 +38,6 @@ Atlas Implement adds Architect as a selective design-first method alongside TDD 
 
 Team Up now exposes Arena and Swarm alongside its default delegation policy. Arena shares the existing maintained source with Architect and carries its four required principle references. Swarm carries Pstack's full partition/race/hybrid method with host and evidence adaptations. The role/model/effort policy and model ladder have one maintained authored input, bundled into both Team Up and Implement so Arena uses the policy without re-entering a workflow router. No separate Arena, Swarm or Team Up installation is required by Architect.
 
+Writing for Humans loads Pstack Technical Writing for technical documentation. Its four layers sit within the existing author, reader and factual contracts, with the bundled Stop Slop catalog retained. PR guidance is removed from Writing for Humans; the independently selected Matt `pr` skill owns that workflow. The broader Unslop adoption decision remains open.
+
 Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.

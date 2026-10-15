@@ -65,3 +65,11 @@ Team Up adds Arena and Swarm as selectable methods while ordinary delegation rem
 Arena shares its maintained source with Architect and carries the complete four-principle closure in Team Up. The shared selection policy and ladder are also bundled in Implement, so Architect remains independently usable. Caller-specific candidate minimums and validation criteria stay with the caller; generic Arena reports its actual runner/judge roster and gaps.
 
 Swarm preserves partition, race and hybrid shapes, declared winner policy, revision/measurement evidence, one retry for missing evidence, and explicit coverage gaps. Patches replace fixed cloud/Cursor/provider defaults with bounded host execution, current-environment scope and sequential fallback. Worker writes inherit task authority; selected winners require actual artifact/evidence checks, and remaining workers and cleanup are accounted for. Swarm's source and MIT notice use the same immutable modified Pstack mirror baseline. No automatic external publication or audit workflow is added.
+
+## Technical documentation within Writing for Humans
+
+Writing for Humans adds the complete Pstack Technical Writing method behind a technical-documentation loading condition. Its Diátaxis, Google developer style, STE and Global English layers remain available, along with the worked example. Adaptations resolve strict document separation, certainty, sentence length and code formatting against the existing author/reader contract, evidence and repository conventions. Mixed READMEs and RFCs may use sections with distinct purposes; uncertainty and exact technical strings survive editorial rules.
+
+The method reuses the existing verbatim Stop Slop tree instead of importing a second editorial pass or requiring Unslop catalog-maintenance output. The broader Unslop choice stays open. The authored PR-description reference and its routing are removed; Matt's independently selected `pr` skill owns PR writing. Retained legacy files are unchanged.
+
+Technical Writing uses the same pinned modified Pstack mirror and MIT notice as the other adopted methods, with pristine source bytes, an independent source record, a replayable patch and watcher registration. Package checks validate distribution integrity; no comparative writing-quality trial is claimed.
