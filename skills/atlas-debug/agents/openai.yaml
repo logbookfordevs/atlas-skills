@@ -1,6 +1,0 @@
-interface:
-  display_name: "Atlas Debug"
-  short_description: "Diagnose hard bugs and performance regressions."
-  default_prompt: "Use $atlas-debug to diagnose this bug or performance regression."
-policy:
-  allow_implicit_invocation: true

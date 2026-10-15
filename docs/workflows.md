@@ -83,7 +83,7 @@ The [ADF Cinematic Production Map](https://tot.page/BKxaG-aUkUFc5f180RsQ4Q) is t
 
 | Situation | Suggested order | Boundary |
 | --- | --- | --- |
-| A bug with an unknown cause | `atlas-debug` → review | Establish the cause, fix it and prove the regression through the diagnosis method. Use tracked implementation when the fix warrants it. |
+| A bug with an unknown cause | `diagnosing-bugs` → review | Establish the cause, fix it and prove the regression through the diagnosis method. Use tracked implementation when the fix warrants it. |
 | A large, interdependent planning problem | `atlas-wayfinder` → focused research, grilling, or prototypes → implementation planning | Wayfinder resolves a shared decision map; implementation tickets organize work whose decisions are ready. |
 | A finished change needs scrutiny | `afk-static-review` and `afk-code-review` | Static checks and intent review answer different questions. Neither is user acceptance. |
 | Findings need adjudication before fixes | `afk-code-review-verdicts` → discussion → approved fixes | The wrapper runs the review itself, then verifies its findings. |

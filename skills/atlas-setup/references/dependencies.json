@@ -3,25 +3,35 @@
   "packages": [
     "animated-driven-frontend",
     "atlas-craft",
-    "atlas-debug",
     "atlas-explain",
     "atlas-grill",
     "atlas-implement",
     "atlas-motion",
     "atlas-retro",
     "atlas-review",
-    "atlas-simplify",
     "atlas-to-spec",
     "atlas-to-tickets",
     "atlas-verify",
     "atlas-wayfinder",
     "html-ui",
-    "teach",
     "team-up",
     "tracking-implementation",
     "writing-for-humans"
   ],
   "dependencies": [
+    {
+      "id": "code-simplification",
+      "source": "https://github.com/addyosmani/agent-skills.git",
+      "skill": "code-simplification",
+      "command": "npx skills add https://github.com/addyosmani/agent-skills.git --skill code-simplification",
+      "consumers": [
+        {
+          "skill": "tracking-implementation",
+          "required": false,
+          "condition": "When the user authorizes a material simplification opportunity identified during tracked work."
+        }
+      ]
+    },
     {
       "id": "codebase-design",
       "source": "https://github.com/mattpocock/skills",

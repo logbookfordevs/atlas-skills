@@ -18,12 +18,9 @@ Install the packages below, or import the shared stack to include the recommende
 | [Atlas Grill](skills/atlas-grill/SKILL.md) | Grilling by default; Domain Modeling and documentation on explicit request |
 | [Atlas Wayfinder](skills/atlas-wayfinder/SKILL.md) | Manually invoked decision maps with shared Grilling and Domain Modeling methods |
 | [Atlas Explain](skills/atlas-explain/SKILL.md) | How, Why and conversational Teach modes; asks for a mode when none is supplied |
-| [Teach](skills/teach/SKILL.md) | Matt Pocock's independent, verbatim learning-workspace skill |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
 | [Atlas Implement](skills/atlas-implement/SKILL.md) | Architect, TDD and Source-Driven methods, selected independently or together |
-| [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose hard bugs and performance regressions through reproduction, hypotheses and regression proof |
-| [Atlas Simplify](skills/atlas-simplify/SKILL.md) | Improve code clarity while preserving behavior through the bundled Code Simplification method |
 | [Atlas Review](skills/atlas-review/SKILL.md) | Code, Adversarial, Impact, Static, Interface, Motion and Motion Audit review |
 | [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, create or maintain project verifiers, and assess performance evidence |
 | [Atlas Craft](skills/atlas-craft/SKILL.md) | Color, Type, Layout, Accessibility, UI Polish and Copy |
@@ -51,7 +48,7 @@ The [Atlas stack manifest](stacks/atlas.json) combines these packages and the re
 
 ## Recommended independent skills
 
-The stack manifest lists the unchanged skills used alongside Atlas, including Research, Prototype, Doubt-Driven Development, Writing for Agents, and library-specific tools. TDD and Source-Driven Development ship inside Atlas Implement; Diagnosing Bugs ships as Atlas Debug; Code Simplification ships as Atlas Simplify. Atlas Grill and Atlas Wayfinder share bundled Grilling and Domain Modeling references. These packages retain pinned source receipts. Independent authors own upstream updates; Atlas maintains its carried adaptations. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the original disposition.
+The stack manifest lists the unchanged skills used alongside Atlas, including Research, Prototype, Doubt-Driven Development, Writing for Agents, and library-specific tools. TDD and Source-Driven Development ship inside Atlas Implement; Teach and Diagnosing Bugs install directly from Matt Pocock; Code Simplification installs directly from Addy Osmani. Atlas Grill and Atlas Wayfinder share bundled Grilling and Domain Modeling references. These packages retain pinned source receipts. Independent authors own upstream updates; Atlas maintains its carried adaptations. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the original disposition.
 
 AFK CLI and Profile Use are companion skills owned by the AFK project, not Atlas packages. Compass is excluded for now. A public stack website and thin installer are possible follow-up work; neither is implemented here. Atlas Setup currently checks dependencies rather than installing the entire recommended stack.
 

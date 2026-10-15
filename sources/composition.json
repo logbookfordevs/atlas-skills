@@ -1158,45 +1158,6 @@
       ]
     },
     {
-      "id": "diagnosing-bugs",
-      "owner": "atlas-debug",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/mattpocock/skills",
-        "commit": "49dd158d1076134a641b33efb035946536778336",
-        "path": "skills/engineering/diagnosing-bugs/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/diagnosing-bugs/source.md",
-      "sourceSha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
-      "license": "sources/upstream/diagnosing-bugs/LICENSE",
-      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/upstream/diagnosing-bugs/source.md",
-      "carriedPath": "references/diagnosis/diagnosing-bugs.md",
-      "adaptation": "Carry the diagnosis method and reproduction script verbatim behind the Atlas Debug router. Preserve upstream invocation metadata only in source snapshots for update detection; Atlas owns package invocation metadata.",
-      "consumers": [
-        "atlas-debug"
-      ],
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/engineering/diagnosing-bugs/agents/openai.yaml",
-          "snapshot": "sources/upstream/diagnosing-bugs/support/agents/openai.yaml",
-          "sourceSha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
-          "relativePath": "agents/openai.yaml"
-        },
-        {
-          "upstreamPath": "skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
-          "snapshot": "sources/upstream/diagnosing-bugs/support/scripts/hitl-loop.template.sh",
-          "sourceSha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503",
-          "relativePath": "scripts/hitl-loop.template.sh"
-        }
-      ],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-14",
-      "rulings": []
-    },
-    {
       "id": "grilling",
       "owner": "atlas-grill",
       "classification": "verbatim",
@@ -1379,32 +1340,6 @@
         "wayfinder-local-routing"
       ],
       "patch": "sources/patches/wayfinder.patch"
-    },
-    {
-      "id": "code-simplification",
-      "owner": "atlas-simplify",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/addyosmani/agent-skills",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d",
-        "path": "skills/code-simplification/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/code-simplification/source.md",
-      "sourceSha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d",
-      "license": "sources/upstream/code-simplification/LICENSE",
-      "licenseSha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
-      "method": "sources/upstream/code-simplification/source.md",
-      "carriedPath": "references/simplification/code-simplification.md",
-      "adaptation": "Carry Code Simplification verbatim behind the Atlas Simplify router, preserving its behavior, examples and upstream attribution. Atlas owns package invocation metadata.",
-      "consumers": [
-        "atlas-simplify"
-      ],
-      "supportingFiles": [],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-14",
-      "rulings": []
     },
     {
       "id": "pstack-create-verification-skill",
@@ -1823,63 +1758,6 @@
         "human-writing-editorial-contract"
       ],
       "patch": "sources/patches/pstack-unslop.patch"
-    },
-    {
-      "id": "matt-teach",
-      "owner": "teach",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/mattpocock/skills",
-        "commit": "49dd158d1076134a641b33efb035946536778336",
-        "path": "skills/productivity/teach/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/matt-teach/source.md",
-      "sourceSha256": "550482c2d674b085c9043b87bfdc14a8f2ec453c736119e7fcbb1e9332bffeba",
-      "license": "sources/upstream/matt-teach/LICENSE",
-      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/upstream/matt-teach/source.md",
-      "carriedPath": "SKILL.md",
-      "adaptation": "None. Original-name independently installable Matt Teach package, with verbatim entry, four format references and original invocation metadata. Not a mode of Atlas Explain.",
-      "consumers": [
-        "teach"
-      ],
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/productivity/teach/GLOSSARY-FORMAT.md",
-          "snapshot": "sources/upstream/matt-teach/support/GLOSSARY-FORMAT.md",
-          "sourceSha256": "9b99859ec28437668130d8f2ce5a342938970f8a1ed4fd38c3eab4f4b5fff210",
-          "relativePath": "GLOSSARY-FORMAT.md"
-        },
-        {
-          "upstreamPath": "skills/productivity/teach/LEARNING-RECORD-FORMAT.md",
-          "snapshot": "sources/upstream/matt-teach/support/LEARNING-RECORD-FORMAT.md",
-          "sourceSha256": "701fa34b6748aa89e6c960ffb815257f481a7d77fb2900f9028f7edf3fdd6052",
-          "relativePath": "LEARNING-RECORD-FORMAT.md"
-        },
-        {
-          "upstreamPath": "skills/productivity/teach/MISSION-FORMAT.md",
-          "snapshot": "sources/upstream/matt-teach/support/MISSION-FORMAT.md",
-          "sourceSha256": "8cacbb3c0644d3ae0ea4965564797099401a6930a23f7cf462918576587f2418",
-          "relativePath": "MISSION-FORMAT.md"
-        },
-        {
-          "upstreamPath": "skills/productivity/teach/RESOURCES-FORMAT.md",
-          "snapshot": "sources/upstream/matt-teach/support/RESOURCES-FORMAT.md",
-          "sourceSha256": "e9cacf34026e11a8d1c8f9de88abe5bcbf654f4ebdb25cae8c0de0d5f48f44ec",
-          "relativePath": "RESOURCES-FORMAT.md"
-        },
-        {
-          "upstreamPath": "skills/productivity/teach/agents/openai.yaml",
-          "snapshot": "sources/upstream/matt-teach/support/agents/openai.yaml",
-          "sourceSha256": "5856f3ae8aec742f1499c640aecdd5f1d6af5fa210a7c6ec794de8263a6f733f",
-          "relativePath": "agents/openai.yaml"
-        }
-      ],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": []
     },
     {
       "id": "pstack-architect",
@@ -2690,7 +2568,7 @@
           "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence."
         },
         {
-          "id": "atlas-simplify",
+          "id": "code-simplification",
           "relationship": "behavioral",
           "required": false,
           "condition": "When the user authorizes a material simplification opportunity identified during tracked work."
@@ -2870,15 +2748,6 @@
       ]
     },
     {
-      "id": "atlas-debug",
-      "entry": "skills/atlas-debug/SKILL.md",
-      "agent": "skills/atlas-debug/agents/openai.yaml",
-      "methods": [
-        "diagnosing-bugs"
-      ],
-      "dependencies": []
-    },
-    {
       "id": "atlas-grill",
       "entry": "skills/atlas-grill/SKILL.md",
       "agent": "skills/atlas-grill/agents/openai.yaml",
@@ -2915,15 +2784,6 @@
       ]
     },
     {
-      "id": "atlas-simplify",
-      "entry": "skills/atlas-simplify/SKILL.md",
-      "agent": "skills/atlas-simplify/agents/openai.yaml",
-      "methods": [
-        "code-simplification"
-      ],
-      "dependencies": []
-    },
-    {
       "id": "atlas-explain",
       "entry": "skills/atlas-explain/SKILL.md",
       "agent": "skills/atlas-explain/agents/openai.yaml",
@@ -2932,15 +2792,6 @@
         "pstack-why",
         "pstack-teach",
         "pstack-unslop"
-      ],
-      "dependencies": []
-    },
-    {
-      "id": "teach",
-      "entry": "skills/teach/SKILL.md",
-      "agent": "skills/teach/agents/openai.yaml",
-      "methods": [
-        "matt-teach"
       ],
       "dependencies": []
     },

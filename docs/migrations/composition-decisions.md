@@ -99,3 +99,7 @@ The Matt source uses `49dd158d1076134a641b33efb035946536778336`; its original ag
 ## Retro package prefix
 
 The composed Retro package is renamed to `atlas-retro`, with stack selection, invocation metadata and source ownership updated together. Diagnose remains the advisory default and Enforce remains explicit. Upstream source identities and behavior patches stay unchanged. The general prefix policy remains undecided.
+
+## Independent Teach, diagnosis and simplification
+
+The unchanged Matt Teach, Diagnosing Bugs and Addy Osmani Code Simplification methods return to direct upstream stack selections as `teach`, `diagnosing-bugs` and `code-simplification`. Their Atlas package wrappers, carried source registrations and unused source snapshots are removed. Tracking's optional simplification dependency and workflow references now resolve to the original skill name. No composed method depends on the removed carried trees; Atlas Explain retains its separate Pstack Teach method. Retained legacy baselines remain intact. Existing personal installations are not modified by this repository change.

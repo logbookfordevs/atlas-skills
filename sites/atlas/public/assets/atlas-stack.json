@@ -34,7 +34,6 @@
         "writing-for-agents",
         "wizard",
         "to-questionnaire",
-        "teach",
         "grill-with-docs",
         "grill-me",
         "prototype",
@@ -43,7 +42,8 @@
         "grilling",
         "domain-modeling",
         "codebase-design",
-        "pr"
+        "pr",
+        "teach"
       ]
     },
     {
