@@ -61,3 +61,9 @@ Tracking offers Audit Trail on explicit request, retaining the selection on resu
 Atlas Retro (`atlas-retro`) is a manually invoked composition. Diagnose carries Matt's session retrospective and remains advisory by default; Enforce carries Pstack Correct and implements only explicitly authorized recurring-mistake prevention. Both source methods retain independent provenance and patches. The shared stack selects Atlas Retro once from Atlas. Writing for Agents remains an explicitly declared independent companion for assessing or authoring agent instructions; missing availability is reported while independent work continues.
 
 Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.
+
+## Setup and cleanup
+
+Atlas Setup compares installed source/skill identities with the current selected stack and its bundled dependency registry. It uses a supplied manifest or the Atlas checkout's canonical manifest, otherwise the public URL; the bundled stack is a disclosed freshness fallback. Missing stack selections are recommendations, while dependencies retain their package-specific conditions.
+
+Cleanup is proposed from previous selections or installation provenance, not simply from absence in the stack. The agent presents exact source, path, scope, shared-use effects and replacement evidence before asking for removal approval. Only the approved targets are removed using the installed manager's supported scoped command; unrelated skills and shared copies still in use remain intact.

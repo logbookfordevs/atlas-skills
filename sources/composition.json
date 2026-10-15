@@ -2630,6 +2630,16 @@
         {
           "generator": "setup-dependencies",
           "target": "references/dependencies.json"
+        },
+        {
+          "generator": "stack-manifest",
+          "target": "references/stack.json"
+        }
+      ],
+      "authoredReferences": [
+        {
+          "input": "skills/atlas-setup/references/cleanup.md",
+          "target": "references/cleanup.md"
         }
       ]
     },
