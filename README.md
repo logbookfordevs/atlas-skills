@@ -4,7 +4,9 @@
 
 The skill stack I use for Logbook for Devs: core workflows with Atlas invocations, authored utilities, intentional upstream adaptations and a few focused compositions. Complementary skills remain independently available from their original sources.
 
-Atlas maintains what it authors, patches or bundles. Unchanged independent skills are recommended from their original sources in [the stack manifest](stacks/atlas.json). [AFK](https://github.com/logbookfordevs/ai-field-kit) manages installed skills and activation; Skills CLI handles installation.
+Keep methods independently maintained; bundle what Atlas needs to deliver its core workflows without relying on AFK.
+
+Atlas maintains what it authors, patches or bundles. Complementary independent skills are recommended from their original sources in [the stack manifest](stacks/atlas.json). [AFK](https://github.com/logbookfordevs/ai-field-kit) is optional tooling for managing installed skills and activation. Install Atlas packages directly with Skills CLI; AFK is not a workflow requirement.
 
 ## Skills V2
 
@@ -38,6 +40,8 @@ npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-revi
 
 Select the active packages by name: retained historical entries may appear in recursive discovery. No personal installation is changed by building the repository.
 
+The standalone core is still being completed. Atlas Wayfinder currently requires the independent Research and Prototype skills for those ticket types. Use [Atlas Setup](skills/atlas-setup/SKILL.md) to check declared dependencies and obtain direct install commands without AFK. Optional extensions and their loading conditions are listed in [the dependency registry](skills/atlas-setup/references/dependencies.json).
+
 ## Share the stack
 
 The [Atlas stack manifest](stacks/atlas.json) combines these packages and the retained independent skills in AFK’s version-one format. Import pasted JSON or a direct manifest URL in AFK’s Sources & Stacks, review the selection, and copy an install script. See [stack installation and maintenance](docs/atlas-stack.md). AFK 2.0 supports the version-one stack format.
@@ -64,7 +68,7 @@ pnpm check
 
 Follow [Skill maintenance](docs/authoring/source-composition.md) to add, edit, patch, compose or remove skills. It defines editable files, source registration, dependency maintenance and validation. [Composition decision history](docs/migrations/composition-decisions.md) preserves the rationale separately.
 
-`legacy/` preserves retained migration baselines. Git history preserves retired experiments and proposal iterations; the [fresh-start record](docs/specs/atlas-fresh-start.md) defines the current direction.
+`legacy/` preserves retained migration baselines. Git history preserves retired experiments and proposal iterations; the [fresh-start record](docs/specs/atlas-fresh-start.md) records earlier distribution decisions.
 
 ---
 

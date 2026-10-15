@@ -1,5 +1,7 @@
 # Installing the Atlas stack with AFK
 
+AFK import is an optional installation route. For direct package installation and the current standalone-core gaps, see [the README](../README.md#skills-v2).
+
 [stacks/atlas.json](../stacks/atlas.json) is the portable AFK version-one stack manifest. It combines Atlas packages with selected independent skills from their original repositories. This manifest is edited directly and is the single source of truth for the shared skill selection.
 
 ## Import
