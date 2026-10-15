@@ -190,6 +190,10 @@
     {
       "name": "Anatomy",
       "source": "https://github.com/wheresryan22/anatomy"
+    },
+    {
+      "name": "Atlas In Progress",
+      "source": "https://github.com/logbookfordevs/atlas-skills#feat/atlas-implement"
     }
   ],
   "welcomeDismissed": true,
