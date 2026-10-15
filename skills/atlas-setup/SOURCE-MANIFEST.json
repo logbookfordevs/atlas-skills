@@ -18,7 +18,7 @@
         "sources/composition.json",
         "stacks/atlas.json"
       ],
-      "carriedSha256": "32913355ca905a657faae8fff45a4e9712a977360dd9ad5edaa824fcca132711"
+      "carriedSha256": "46ae42dac0a9f7ca491babaeba38c0ba201dc23a0e5575488611d7d5c9224120"
     }
   ],
   "dependencies": [],
@@ -27,6 +27,6 @@
   "files": {
     "SKILL.md": "e610568e05b844be6f29927bc54c21aa7c0c60c267984ac9a8b6746075cedcba",
     "agents/openai.yaml": "0f837eabef8e760e3e7e79a1b4cc756ace6e0958d3567eaaa9e8d2c576cdc50c",
-    "references/dependencies.json": "32913355ca905a657faae8fff45a4e9712a977360dd9ad5edaa824fcca132711"
+    "references/dependencies.json": "46ae42dac0a9f7ca491babaeba38c0ba201dc23a0e5575488611d7d5c9224120"
   }
 }

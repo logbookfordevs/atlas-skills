@@ -4,6 +4,7 @@
     "animated-driven-frontend",
     "atlas-craft",
     "atlas-debug",
+    "atlas-explain",
     "atlas-grill",
     "atlas-implement",
     "atlas-motion",
@@ -14,6 +15,7 @@
     "atlas-verify",
     "atlas-wayfinder",
     "html-ui",
+    "teach",
     "team-up",
     "tracking-implementation",
     "writing-for-humans"

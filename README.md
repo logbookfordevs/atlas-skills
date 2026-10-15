@@ -10,13 +10,15 @@ Atlas maintains what it authors, patches or bundles. Complementary independent s
 
 ## Skills V2
 
-Install the Atlas-owned packages below, or import the shared stack to include the recommended independent skills.
+Install the packages below, or import the shared stack to include the recommended independent skills. Original-name upstream packages retain their authorship and methods.
 
 | Package | Purpose |
 | --- | --- |
 | [HTML UI](skills/html-ui/SKILL.md) | Wireframe and polished Model modes |
 | [Atlas Grill](skills/atlas-grill/SKILL.md) | Grilling by default; Domain Modeling and documentation on explicit request |
 | [Atlas Wayfinder](skills/atlas-wayfinder/SKILL.md) | Manually invoked decision maps with shared Grilling and Domain Modeling methods |
+| [Atlas Explain](skills/atlas-explain/SKILL.md) | How, Why and conversational Teach modes; asks for a mode when none is supplied |
+| [Teach](skills/teach/SKILL.md) | Matt Pocock's independent, verbatim learning-workspace skill |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
 | [Atlas Implement](skills/atlas-implement/SKILL.md) | Bundled TDD and Source-Driven methods, selected independently or together |

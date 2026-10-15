@@ -25,7 +25,9 @@
         "atlas-grill",
         "atlas-wayfinder",
         "atlas-to-spec",
-        "atlas-to-tickets"
+        "atlas-to-tickets",
+        "atlas-explain",
+        "teach"
       ]
     },
     {
@@ -37,7 +39,6 @@
         "writing-for-agents",
         "wizard",
         "to-questionnaire",
-        "teach",
         "prototype",
         "handoff",
         "codebase-design",
