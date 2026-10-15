@@ -8,7 +8,7 @@ The active stack preserves atomic operations. HTML UI composes HTML Wireframe an
 
 Craft and Review also carry Animate and Apple Design as conditionally loaded rule references. The shared Motion ownership ruling gives UI Polish surfaces and icons, Animate transition decisions, and Fluid gesture physics. UI presets yield to the owner, including conflicts in preserved supporting examples. Review's copies supply criteria and do not authorize implementation; Motion Audit writes plans and hands execution off. PE Verify remains independent for behavioral QA evidence.
 
-Writing for Humans carries the complete verbatim Stop Slop tree with its frontmatter, supporting references and MIT license.
+Writing for Humans originally carried the complete verbatim Stop Slop tree. The later editorial-catalog replacement below records its retirement.
 
 Decide, Design and Specify are retired as active umbrella entries. Their prior files are recoverable from Git history. Their former unchanged independent methods remain recommended upstream; source receipts are retained only for active consumers.
 
@@ -73,3 +73,9 @@ Writing for Humans adds the complete Pstack Technical Writing method behind a te
 The method reuses the existing verbatim Stop Slop tree instead of importing a second editorial pass or requiring Unslop catalog-maintenance output. The broader Unslop choice stays open. The authored PR-description reference and its routing are removed; Matt's independently selected `pr` skill owns PR writing. Retained legacy files are unchanged.
 
 Technical Writing uses the same pinned modified Pstack mirror and MIT notice as the other adopted methods, with pristine source bytes, an independent source record, a replayable patch and watcher registration. Package checks validate distribution integrity; no comparative writing-quality trial is claimed.
+
+## One shared editorial catalog
+
+Unslop replaces Stop Slop in Writing for Humans and remains bundled in Explain for Teach. Both consumers carry identical bytes from one maintained source record, now classified as patched. Technical Writing points directly to this catalog without adding a second pass. Stop Slop's active source registration, bundled tree and license are retired; retained legacy baselines remain unchanged.
+
+The patch preserves meaning, author voice, factual qualifications, uncertainty, citations and exact technical strings above style patterns. Punctuation and domain terminology become contextual guidance, and useful general guidance or requested narrative purposes survive the specificity rule. Stable upstream rule IDs remain intact. The original Unslop snapshot, immutable mirror pin, MIT notice and watcher contract are preserved, with one replayable patch shared by both packages. Distribution checks do not establish comparative writing quality.

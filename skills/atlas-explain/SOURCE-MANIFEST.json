@@ -226,8 +226,8 @@
     },
     {
       "id": "pstack-unslop",
-      "owner": "atlas-explain",
-      "classification": "verbatim",
+      "owner": "writing-for-humans",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
         "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
@@ -239,15 +239,18 @@
       "notices": [],
       "sourceSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
       "carriedPath": "references/unslop/unslop.md",
-      "carriedSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+      "carriedSha256": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
       "licensePath": "licenses/pstack-unslop.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "None. Complete original Unslop entry carried only as the Teach method's private editorial dependency; not a standalone installation or replacement for Writing for Humans.",
+      "adaptation": "Share one editorial catalog between Writing for Humans and Explain. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
-        "explain-evidence-editing"
-      ]
+        "explain-evidence-editing",
+        "human-writing-editorial-contract"
+      ],
+      "patch": "sources/patches/pstack-unslop.patch",
+      "patchSha256": "d2655d54a3c5a1d1910308d94808f97a2d2e3438c32c31ae2b3cc3b152f3ed71"
     }
   ],
   "rulings": [
@@ -284,7 +287,7 @@
         "pstack-teach",
         "pstack-unslop"
       ],
-      "decision": "Teach owns pacing and conversational synthesis. Preserve Why confidence, uncertainty, citations, competing hypotheses and evidence gaps through Unslop edits; editorial cleanup cannot upgrade evidence strength. Unslop is only a bundled Teach dependency, not a global writing default."
+      "decision": "Teach owns pacing and conversational synthesis. Preserve Why confidence, uncertainty, citations, competing hypotheses and evidence gaps through Unslop edits; editorial cleanup cannot upgrade evidence strength. Teach uses the same maintained Unslop catalog as Writing for Humans, bundled locally without invoking the broader writing workflow."
     },
     {
       "id": "explain-host-capabilities",
@@ -321,7 +324,7 @@
     "references/why/references/synthesizer-prompt.md": "efd1a207836e90e61db0a312d475d0f7343cbe4f286089e48aa7d248973d1eba",
     "references/teach/teach.md": "045227ddee108efd6cb385df9ee4de786a827c2f55bb7a97c86e011c224b7220",
     "licenses/pstack-teach.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/unslop/unslop.md": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+    "references/unslop/unslop.md": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
     "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }

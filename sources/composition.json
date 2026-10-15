@@ -509,50 +509,6 @@
       ]
     },
     {
-      "id": "stop-slop",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/hardikpandya/stop-slop",
-        "commit": "8da1f030185bdfe8471220585162991eaeb970e9",
-        "path": "SKILL.md",
-        "trackingRef": "main",
-        "licensePath": "LICENSE",
-        "includePaths": [
-          "SKILL.md",
-          "references"
-        ]
-      },
-      "snapshot": "sources/upstream/stop-slop/source.md",
-      "method": "sources/upstream/stop-slop/source.md",
-      "sourceSha256": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
-      "license": "sources/upstream/stop-slop/LICENSE",
-      "licenseSha256": "2e2b2beaf41cc0ce28485455a62aed81777cdcdf68702e142427aef1cd720f2c",
-      "licenseSpdx": "MIT",
-      "adaptation": "None. Preserve the complete upstream skill, frontmatter and three supporting references byte-for-byte.",
-      "carriedPath": "references/stop-slop/stop-slop.md",
-      "supportingFiles": [
-        {
-          "relativePath": "references/examples.md",
-          "snapshot": "sources/upstream/stop-slop/references/examples.md",
-          "sourceSha256": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d"
-        },
-        {
-          "relativePath": "references/phrases.md",
-          "snapshot": "sources/upstream/stop-slop/references/phrases.md",
-          "sourceSha256": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93"
-        },
-        {
-          "relativePath": "references/structures.md",
-          "snapshot": "sources/upstream/stop-slop/references/structures.md",
-          "sourceSha256": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
-        }
-      ],
-      "consumers": [
-        "writing-for-humans"
-      ],
-      "rulings": []
-    },
-    {
       "id": "show-me",
       "owner": "tracking-implementation",
       "classification": "verbatim",
@@ -1838,8 +1794,8 @@
     },
     {
       "id": "pstack-unslop",
-      "owner": "atlas-explain",
-      "classification": "verbatim",
+      "owner": "writing-for-humans",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
         "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
@@ -1851,18 +1807,21 @@
       "sourceSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
       "license": "sources/upstream/pstack-unslop/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "sources/upstream/pstack-unslop/source.md",
+      "method": "skills/writing-for-humans/references/unslop/unslop.md",
       "carriedPath": "references/unslop/unslop.md",
-      "adaptation": "None. Complete original Unslop entry carried only as the Teach method's private editorial dependency; not a standalone installation or replacement for Writing for Humans.",
+      "adaptation": "Share one editorial catalog between Writing for Humans and Explain. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
       "consumers": [
-        "atlas-explain"
+        "atlas-explain",
+        "writing-for-humans"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
-        "explain-evidence-editing"
-      ]
+        "explain-evidence-editing",
+        "human-writing-editorial-contract"
+      ],
+      "patch": "sources/patches/pstack-unslop.patch"
     },
     {
       "id": "matt-teach",
@@ -2450,7 +2409,7 @@
       "method": "skills/writing-for-humans/references/technical/technical-writing.md",
       "carriedPath": "references/technical/technical-writing.md",
       "patch": "sources/patches/pstack-technical-writing.patch",
-      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Replace Unslop with the existing bundled Stop Slop catalog; remove PR/commit scope and catalog-maintenance output. Resolve strict Di\u00e1taxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
+      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Load the shared bundled Unslop catalog without an additional editorial pass; remove PR/commit scope and catalog-maintenance output. Resolve strict Di\u00e1taxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
       "consumers": [
         "writing-for-humans"
       ],
@@ -2546,7 +2505,7 @@
       "entry": "skills/writing-for-humans/SKILL.md",
       "agent": "skills/writing-for-humans/agents/openai.yaml",
       "methods": [
-        "stop-slop",
+        "pstack-unslop",
         "pstack-technical-writing"
       ],
       "authoredReferences": [
@@ -3130,7 +3089,7 @@
         "pstack-teach",
         "pstack-unslop"
       ],
-      "decision": "Teach owns pacing and conversational synthesis. Preserve Why confidence, uncertainty, citations, competing hypotheses and evidence gaps through Unslop edits; editorial cleanup cannot upgrade evidence strength. Unslop is only a bundled Teach dependency, not a global writing default."
+      "decision": "Teach owns pacing and conversational synthesis. Preserve Why confidence, uncertainty, citations, competing hypotheses and evidence gaps through Unslop edits; editorial cleanup cannot upgrade evidence strength. Teach uses the same maintained Unslop catalog as Writing for Humans, bundled locally without invoking the broader writing workflow."
     },
     {
       "id": "explain-host-capabilities",
@@ -3230,9 +3189,19 @@
       "section": "Technical writing",
       "sources": [
         "pstack-technical-writing",
-        "stop-slop"
+        "pstack-unslop"
       ],
-      "decision": "Technical documentation uses the four writing layers within the existing author, reader and factual contracts. Section-level Di\u00e1taxis permits useful mixed READMEs/RFCs; evidence qualifications survive certainty rules; length rules are heuristics and code formatting follows the repository. Reuse the already loaded Stop Slop catalog without an additional mandatory pass. PR writing is removed from this package."
+      "decision": "Technical documentation uses the four writing layers within the existing author, reader and factual contracts. Section-level Di\u00e1taxis permits useful mixed READMEs/RFCs; evidence qualifications survive certainty rules; length rules are heuristics and code formatting follows the repository. Reuse the already loaded Unslop catalog without an additional mandatory pass. PR writing is removed from this package."
+    },
+    {
+      "id": "human-writing-editorial-contract",
+      "owner": "writing-for-humans",
+      "document": "skills/writing-for-humans/references/unslop/unslop.md",
+      "section": "Unslop",
+      "sources": [
+        "pstack-unslop"
+      ],
+      "decision": "Unslop is the single editorial catalog shared by Writing for Humans and Explain. Meaning, author voice and evidence qualifications outrank style patterns. Punctuation and domain terminology are contextual; preserve useful general guidance and requested narrative purposes. Each consumer carries the same patched bytes with stable rule IDs."
     }
   ]
 }

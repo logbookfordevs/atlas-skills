@@ -90,7 +90,7 @@ Keep each section focused on its reader job. Place background or lookup material
 
 ## Voice and repo specifics
 
-- Use the bundled [Stop Slop](../stop-slop/stop-slop.md) reference loaded by Writing for Humans for the editorial catalog; this method adds no second editorial pass. Apply catalog suggestions within the author and factual contracts above.
+- Use the bundled [Unslop](../unslop/unslop.md) reference loaded by Writing for Humans for the editorial catalog; this method adds no second editorial pass. Apply catalog suggestions within the author and factual contracts above.
 - Product UI strings are not documentation. Use your product's copy guidelines for those.
 - Format code snippets using the repository and language conventions. Write real paths. Tie counts and tree claims to the inspected revision; include a reproduction command when readers need to regenerate them.
 

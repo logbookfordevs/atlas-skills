@@ -242,11 +242,18 @@
   "writing-for-humans": {
     "references": [
       {
-        "id": "stop-slop",
-        "title": "Stop Slop",
-        "author": "Hardik Pandya",
-        "url": "https://github.com/hardikpandya/stop-slop/blob/8da1f030185bdfe8471220585162991eaeb970e9/SKILL.md",
-        "classification": "verbatim"
+        "id": "pstack-unslop",
+        "title": "Unslop",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/unslop/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-technical-writing",
+        "title": "Technical Writing",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/technical-writing/SKILL.md",
+        "classification": "patched"
       }
     ],
     "collections": []

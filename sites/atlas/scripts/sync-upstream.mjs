@@ -10,7 +10,7 @@ const authors = {
   'https://github.com/emilkowalski/skills': 'Emil Kowalski',
   'https://github.com/mattpocock/skills': 'Matt Pocock',
   'https://github.com/humanlayer/skills': 'HumanLayer',
-  'https://github.com/hardikpandya/stop-slop': 'Hardik Pandya',
+  'https://github.com/backnotprop/pstack': 'Lauren Tan / Pstack mirror',
 };
 const titles = {
   'html-wireframe': 'HTML Wireframe', 'html-prototype': 'HTML Prototype',
@@ -20,7 +20,7 @@ const titles = {
   'improve-animations': 'Improve Animations', 'find-animation-opportunities': 'Find Animation Opportunities',
   animate: 'Animate', 'apple-design': 'Apple Design', 'code-review': 'Code Review',
   'review-animations': 'Review Animations', 'to-spec': 'To Spec', 'to-tickets': 'To Tickets',
-  'show-me': 'Show Me', 'stop-slop': 'Stop Slop',
+  'show-me': 'Show Me', 'pstack-unslop': 'Unslop', 'pstack-technical-writing': 'Technical Writing',
 };
 const skills = JSON.parse(await readFile(new URL('../content.json', import.meta.url), 'utf8'));
 const snapshot = {};

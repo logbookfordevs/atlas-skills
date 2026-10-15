@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 3e6d261..33605c2 100644
+index 3e6d261..dbccb80 100644
 --- a/source.md
 +++ b/source.md
 @@ -1,12 +1,12 @@
@@ -78,7 +78,7 @@ index 3e6d261..33605c2 100644
  
 -- Apply the **unslop** skill to every doc this skill touches. That skill owns the slop-pattern catalog: AI vocabulary, filler, hedging, formatting tells.
 -- PR descriptions and commit messages are writing too. Every layer except Diátaxis applies to them. A PR body is a briefing that a reviewer can read in under a minute. Do not paste swarm logs, SHA lists, or metric tables. Link them.
-+- Use the bundled [Stop Slop](../stop-slop/stop-slop.md) reference loaded by Writing for Humans for the editorial catalog; this method adds no second editorial pass. Apply catalog suggestions within the author and factual contracts above.
++- Use the bundled [Unslop](../unslop/unslop.md) reference loaded by Writing for Humans for the editorial catalog; this method adds no second editorial pass. Apply catalog suggestions within the author and factual contracts above.
  - Product UI strings are not documentation. Use your product's copy guidelines for those.
 -- Indent code snippets with tabs. Write real paths. Make every count or tree claim true at the commit that lands it, and include the command that regenerates it.
 +- Format code snippets using the repository and language conventions. Write real paths. Tie counts and tree claims to the inspected revision; include a reproduction command when readers need to regenerate them.
