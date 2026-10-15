@@ -2913,12 +2913,6 @@
           "condition": "When session friction warrants Diagnose, or the user explicitly authorizes Enforce."
         },
         {
-          "id": "atlas-setup",
-          "relationship": "behavioral",
-          "required": false,
-          "condition": "When skill availability or stack alignment needs inspection; installation and removals retain approval."
-        },
-        {
           "id": "animated-driven-frontend",
           "relationship": "behavioral",
           "required": false,

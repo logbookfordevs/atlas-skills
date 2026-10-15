@@ -100,12 +100,6 @@
       "condition": "When session friction warrants Diagnose, or the user explicitly authorizes Enforce."
     },
     {
-      "id": "atlas-setup",
-      "relationship": "behavioral",
-      "required": false,
-      "condition": "When skill availability or stack alignment needs inspection; installation and removals retain approval."
-    },
-    {
       "id": "animated-driven-frontend",
       "relationship": "behavioral",
       "required": false,
@@ -121,8 +115,8 @@
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "2ecff577ad0c423b0c4a98a354c6ca6d414b7eda74b8e782576158ea185517ae",
+    "SKILL.md": "d57db1652d4800d2bdd2690f82aec2250105045240f9b14d6698610531423aff",
     "agents/openai.yaml": "787a0b0c3dd164bbde78dc04fdd805f0d282da70a5bfe07b9f4198438bb4e1aa",
-    "references/methods.md": "272d62b0e90550cdd4b95f594f12665bea4a86a8bd584a1ec5223b45a41fa645"
+    "references/methods.md": "9c0ea1e007542ada3b690edcd99bffbb45d8efd9804cc42cb31f38ebad1a1ba5"
   }
 }
