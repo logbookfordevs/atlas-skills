@@ -12,6 +12,11 @@ export function Stack() {
       <p>Atlas maintains its own utilities, adaptations, and compositions. The independent skills listed here remain separate and receive updates from their upstream authors.</p>
       <h2>Install the collection with AFK</h2>
       <p><a href="https://ai-field-kit.logbookfordevs.com/">AFK — AI Field Kit</a> is a local workspace for managing coding-agent skills, reusable profiles, tools and shared rules. Use it to install the Atlas collection, then manage which skills are available globally or in each project.</p>
+      <h3>From your terminal</h3>
+      <p>Install the stack without opening the AFK interface. The command guides you through choosing an agent and installation destination.</p>
+      <CopyCommand command="npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json" />
+      <h3>Through the AFK interface</h3>
+      <p>Open AFK to review the collection and manage your installed skills.</p>
       <CopyCommand command="npx @logbookfordevs/afk" />
       <ol>
         <li>Open <strong>Sources &amp; Stacks → Import stack</strong> in AFK.</li>

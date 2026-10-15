@@ -8,6 +8,18 @@ AFK import is an optional installation route. For direct package installation an
 
 [AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) is a local workspace for managing agent skills, profiles, tools and shared rules. Start it with `npx @logbookfordevs/afk`. It installs selected skills through Skills CLI; using Atlas does not require adopting AFK's profiles.
 
+### Terminal
+
+Install without opening the interface:
+
+```sh
+npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json
+```
+
+The command guides agent and destination selection. Stack URL installation is implemented in the next AFK release; publish this recommendation after that release is available.
+
+### AFK interface
+
 In AFK’s Sources & Stacks, add a stack by pasting the manifest JSON or providing its direct HTTPS JSON URL. Inspect the sources and skill selections before saving. Copy the stack’s install script, select the installation destination and agent, and run the copied script when ready. Import and copy do not install or activate skills. Profiles remain optional activation groups.
 
 AFK 2.0 includes Sources & Stacks on its main branch. Import Atlas’s published manifest from:
@@ -16,7 +28,7 @@ AFK 2.0 includes Sources & Stacks on its main branch. Import Atlas’s published
 https://atlas.logbookfordevs.com/stack.json
 ```
 
-The `/stack/` URL is the human-readable guide; `/stack.json` is the machine-readable import URL. The older `/assets/atlas-stack.json` remains an equivalent download. AFK's checked CLI does not yet provide `install <stack-url>`; use the import flow above.
+The `/stack/` URL is the human-readable guide; `/stack.json` is the machine-readable import URL. The older `/assets/atlas-stack.json` remains an equivalent download. The terminal command and interface use the same stack manifest.
 
 The stack schema points to AFK’s main branch; Atlas packages come from Atlas’s default branch. Explicit skill selections prevent retained legacy entries or newly added upstream skills from joining the stack automatically.
 
