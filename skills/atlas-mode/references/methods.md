@@ -1,6 +1,6 @@
 # Atlas methods
 
-Choose from the outcome and the uncertainty in the work. Read the selected skill's entry and method references before applying it; this guide exposes choices that may be hidden behind its description.
+Use this guide with Atlas Mode’s selection rule to distinguish methods by their outcomes and the uncertainty they address. Read the selected skill's entry and method references before applying it; this guide exposes choices that may be hidden behind its description.
 
 ## Understand and plan
 
