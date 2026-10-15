@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Arena
 
-Track Frame, Fan out, Cross-judge, Pick, Graft and Verify with the host's available planning mechanism. When used by Architect, its integration rules determine the minimum distinct candidates and the proof expected of design artifacts.
+Track Frame, Fan out, Cross-judge, Pick, Graft and Verify with the host's available planning mechanism. Honor the caller's minimum candidate requirements and artifact validation criteria.
 
 ## Phase A: Frame
 
@@ -14,7 +14,7 @@ Every candidate gets the same prompt, so the prompt is the contract.
 
 1. State the artifact each candidate is producing.
 2. Derive the rubric, 3-6 concrete gradeable criteria for what success looks like on *this* task. It is the picker's tool in Phase D. Candidates only see the task.
-3. Pick available runners through the host's delegation tools, honoring user choices and project policy. Prefer different model perspectives for judgment-sensitive work; same-model candidates are valid when disclosed. If an explicitly requested model is unavailable, resolve the fallback with the user. Without delegation, produce candidates sequentially in isolated output locations and disclose the lack of independent contexts.
+3. Choose candidates and judges through the shared [selection policy](../selection.md), reading that reference directly rather than re-entering Team Up's mode router. Default to two candidates unless a count is supplied or additional design directions warrant more. Prefer different model perspectives for judgment-sensitive work; same-model candidates are valid when disclosed. Without delegation, produce candidates sequentially in isolated output locations and disclose the lack of independent contexts.
 4. Give each candidate its own output location (a git worktree where possible, otherwise `/tmp/arena-<slug>/candidate-<n>/`), per the [Separate Before Serializing Shared State](../principles/principle-separate-before-serializing-shared-state/SKILL.md) reference.
 
 ## Phase B: Fan out
@@ -45,4 +45,4 @@ Verify the synthesized artifact like any other output, per the [Prove It Works](
 
 ## Outputs
 
-One synthesized artifact, with a short synthesis note alongside naming the base and why, the cross-judge's verdict, each graft with its source candidate, what was rejected and why, any convergence or dropouts, and the verification result.
+One synthesized artifact, with a short synthesis note alongside naming the base and why, the actual runner/judge roster and independence gaps, the cross-judge's verdict, each graft with its source candidate, what was rejected and why, any convergence or dropouts, and the verification result.

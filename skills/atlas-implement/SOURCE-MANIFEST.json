@@ -71,9 +71,24 @@
   ],
   "authoredInputs": [
     "skills/atlas-implement/SKILL.md",
-    "skills/atlas-implement/agents/openai.yaml"
+    "skills/atlas-implement/agents/openai.yaml",
+    "skills/team-up/references/selection.md",
+    "skills/team-up/references/model-preferences.md"
   ],
-  "authoredReferences": [],
+  "authoredReferences": [
+    {
+      "input": "skills/team-up/references/selection.md",
+      "target": "references/selection.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "15fe18e5133bd7b406b22cc8877add39ebf889816376eaae81efce12cd806247"
+    },
+    {
+      "input": "skills/team-up/references/model-preferences.md",
+      "target": "references/model-preferences.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "c62982b7e098e91a7aa8428ae6c7ab2aaa8024f2b811c7a822b96eb0bc4cf4d0"
+    }
+  ],
   "dependencies": [
     {
       "id": "atlas-review",
@@ -232,19 +247,21 @@
       "notices": [],
       "sourceSha256": "6c54c51f7115a95df4505b94579edd890af8cacac6014a4c6c350e26f54f8226",
       "carriedPath": "references/arena/arena.md",
-      "carriedSha256": "c71297a22f20102a0db9ffbf99bf97d09769efd1f0f2540b935fd653611bd53b",
+      "carriedSha256": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
       "licensePath": "licenses/pstack-arena.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Carry Arena privately for Architect candidate comparison. Adapt host models, bounded scheduling, output isolation and sequential fallback while disclosing independence gaps. Link the complete required principle references locally; this does not register Arena as a public workflow mode.",
+      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference without re-entering mode routing; adapt bounded scheduling, output isolation and sequential fallback with honest independence gaps. Carry the complete contextual principle closure.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
-        "implement-principle-scope"
+        "implement-principle-scope",
+        "team-up-method-selection",
+        "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-arena.patch",
-      "patchSha256": "85ab1272fc2fb696e5df829e863b8381e25b5014e61ff7f39e0f0d2eece6ea29"
+      "patchSha256": "5fea1490cf0988626d9ca9aa982caae239c8a68d98a4c8215ce92e12aa6ae0af"
     },
     {
       "id": "pstack-principle-boundary-discipline",
@@ -417,7 +434,9 @@
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
-      "rulings": []
+      "rulings": [
+        "team-up-arena-policy"
+      ]
     },
     {
       "id": "pstack-principle-make-operations-idempotent",
@@ -512,7 +531,8 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
-        "implement-principle-scope"
+        "implement-principle-scope",
+        "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-principle-prove-it-works.patch",
       "patchSha256": "b012e43feec228e8899ceb01468fcd83b6c460ec3e3b4407afa8344814875c84"
@@ -538,7 +558,9 @@
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
-      "rulings": []
+      "rulings": [
+        "team-up-arena-policy"
+      ]
     },
     {
       "id": "pstack-principle-separate-before-serializing-shared-state",
@@ -562,7 +584,8 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
-        "implement-candidate-ownership"
+        "implement-candidate-ownership",
+        "team-up-arena-policy"
       ]
     },
     {
@@ -885,6 +908,8 @@
   "files": {
     "SKILL.md": "4aaf9b70de258e2f80d922574c2c452529eba6a4db9438b14ff0ec8eb3b40766",
     "agents/openai.yaml": "e1c29c686c46375d94bd9c9a4b8ca4a4d906c4402d42c0d9c41df6de8f5b88f1",
+    "references/selection.md": "15fe18e5133bd7b406b22cc8877add39ebf889816376eaae81efce12cd806247",
+    "references/model-preferences.md": "c62982b7e098e91a7aa8428ae6c7ab2aaa8024f2b811c7a822b96eb0bc4cf4d0",
     "references/tdd/tdd.md": "ce62a1a96ae6df6033be485d7ad5fc0089dbb2bf341331d9cd683b266ed3a93e",
     "licenses/tdd.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
     "references/tdd/mocking.md": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
@@ -896,7 +921,7 @@
     "references/architect/references/design-red-flags.md": "8e87fa13355b2df71fb4cac9c8f6ae0e8ec2d606ee7514c3a3bd611c5958cccc",
     "references/architect/references/rationale-template.md": "a2b7d4f2ccbfedd1ab3898deb87dced19327fc512888d6de2b8f89d07280acd2",
     "references/architect/references/runner-prompt.md": "8694dd96680cfb5b9b1eab550b060fc46b7392f9cc9f739fa973573884407afa",
-    "references/arena/arena.md": "c71297a22f20102a0db9ffbf99bf97d09769efd1f0f2540b935fd653611bd53b",
+    "references/arena/arena.md": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
     "licenses/pstack-arena.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-boundary-discipline/SKILL.md": "13911681c8cc3ee9f8cc47e3e80c0730f1d9e17ef9070382a4bc2d1640d42314",
     "licenses/pstack-principle-boundary-discipline.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",

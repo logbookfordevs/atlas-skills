@@ -30,7 +30,7 @@ Install the packages below, or import the shared stack to include the recommende
 | [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid and read-only Opportunities |
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Automatic tracking alongside any selected executor |
 | [Animated-Driven Frontend](skills/animated-driven-frontend/SKILL.md) | Manually invoked ZERO engineering knowledge |
-| [Team Up](skills/team-up/SKILL.md) | Deliberate model, effort and custom-agent selection |
+| [Team Up](skills/team-up/SKILL.md) | Role/model/effort selection, Arena candidate synthesis and Swarm coverage or races |
 | [Writing for Humans](skills/writing-for-humans/SKILL.md) | Existing writing method with verbatim Stop Slop |
 | [Atlas Setup](skills/atlas-setup/SKILL.md) | Manual check of independent dependencies for installed packages |
 

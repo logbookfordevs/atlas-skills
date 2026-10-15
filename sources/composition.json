@@ -1994,9 +1994,10 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/arena/arena.md",
       "carriedPath": "references/arena/arena.md",
-      "adaptation": "Carry Arena privately for Architect candidate comparison. Adapt host models, bounded scheduling, output isolation and sequential fallback while disclosing independence gaps. Link the complete required principle references locally; this does not register Arena as a public workflow mode.",
+      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference without re-entering mode routing; adapt bounded scheduling, output isolation and sequential fallback with honest independence gaps. Carry the complete contextual principle closure.",
       "consumers": [
-        "atlas-implement"
+        "atlas-implement",
+        "team-up"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2004,7 +2005,9 @@
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
-        "implement-principle-scope"
+        "implement-principle-scope",
+        "team-up-method-selection",
+        "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-arena.patch"
     },
@@ -2193,12 +2196,15 @@
       "carriedPath": "references/principles/principle-laziness-protocol/SKILL.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "atlas-implement",
+        "team-up"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
-      "rulings": []
+      "rulings": [
+        "team-up-arena-policy"
+      ]
     },
     {
       "id": "pstack-principle-make-operations-idempotent",
@@ -2299,13 +2305,15 @@
       "carriedPath": "references/principles/principle-prove-it-works/SKILL.md",
       "adaptation": "Preserve direct outcome proof while using the agreed artifact/delivery scope; remove the optional external Show Me Your Work audit dependency, whose adoption remains a separate decision.",
       "consumers": [
-        "atlas-implement"
+        "atlas-implement",
+        "team-up"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
-        "implement-principle-scope"
+        "implement-principle-scope",
+        "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-principle-prove-it-works.patch"
     },
@@ -2328,12 +2336,15 @@
       "carriedPath": "references/principles/principle-redesign-from-first-principles/SKILL.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "atlas-implement",
+        "team-up"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
-      "rulings": []
+      "rulings": [
+        "team-up-arena-policy"
+      ]
     },
     {
       "id": "pstack-principle-separate-before-serializing-shared-state",
@@ -2354,13 +2365,15 @@
       "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/SKILL.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "atlas-implement",
+        "team-up"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
-        "implement-candidate-ownership"
+        "implement-candidate-ownership",
+        "team-up-arena-policy"
       ]
     },
     {
@@ -2388,6 +2401,36 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": []
+    },
+    {
+      "id": "pstack-swarm",
+      "owner": "team-up",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/swarm/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-swarm/source.md",
+      "sourceSha256": "63e724b308f355f9940fa6753a6fa728d7c5c0df2104742fa1000019e11b17cd",
+      "license": "sources/upstream/pstack-swarm/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/team-up/references/swarm/swarm.md",
+      "carriedPath": "references/swarm/swarm.md",
+      "patch": "sources/patches/pstack-swarm.patch",
+      "adaptation": "Replace fixed cloud/Cursor/model defaults with shared Team Up selection and host-bounded execution. Preserve partition/race/hybrid shapes, declared winner policy, exact revision/measurement evidence, retry-on-missing-evidence and explicit coverage gaps. Bind worker writes to task scope and account for worker completion and cleanup.",
+      "consumers": [
+        "team-up"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "team-up-method-selection",
+        "team-up-swarm-evidence"
+      ]
     }
   ],
   "workflows": [
@@ -2581,8 +2624,24 @@
       "id": "team-up",
       "entry": "skills/team-up/SKILL.md",
       "agent": "skills/team-up/agents/openai.yaml",
-      "methods": [],
-      "authoredReferences": [],
+      "methods": [
+        "pstack-arena",
+        "pstack-principle-separate-before-serializing-shared-state",
+        "pstack-principle-laziness-protocol",
+        "pstack-principle-redesign-from-first-principles",
+        "pstack-principle-prove-it-works",
+        "pstack-swarm"
+      ],
+      "authoredReferences": [
+        {
+          "input": "skills/team-up/references/selection.md",
+          "target": "references/selection.md"
+        },
+        {
+          "input": "skills/team-up/references/model-preferences.md",
+          "target": "references/model-preferences.md"
+        }
+      ],
       "dependencies": []
     },
     {
@@ -2699,6 +2758,16 @@
           "relationship": "behavioral",
           "required": false,
           "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
+        }
+      ],
+      "authoredReferences": [
+        {
+          "input": "skills/team-up/references/selection.md",
+          "target": "references/selection.md"
+        },
+        {
+          "input": "skills/team-up/references/model-preferences.md",
+          "target": "references/model-preferences.md"
         }
       ]
     },
@@ -3092,6 +3161,41 @@
         "pstack-principle-prove-it-works"
       ],
       "decision": "Required principles are contextual bundled references within authorized scope. Internal trust depends on established invariants; legitimate guards and enduring comments remain. Direct outcome proof uses the agreed artifact and commit policy rather than activating an unselected external Show Me Your Work audit. Global principle-library and public Arena adoption remain independent decisions."
+    },
+    {
+      "id": "team-up-method-selection",
+      "owner": "team-up",
+      "document": "skills/team-up/SKILL.md",
+      "section": "Team Up",
+      "sources": [
+        "pstack-arena",
+        "pstack-swarm"
+      ],
+      "decision": "Ordinary delegation and selection-only calls remain the default policy path. Arena owns candidate comparison/synthesis; Swarm owns partition/race/hybrid aggregation. Both use the shared selection reference directly without recursively selecting another workflow. Selected methods inherit the task write, evidence and delivery scope."
+    },
+    {
+      "id": "team-up-swarm-evidence",
+      "owner": "team-up",
+      "document": "skills/team-up/references/swarm/swarm.md",
+      "section": "Phase C: Aggregate",
+      "sources": [
+        "pstack-swarm"
+      ],
+      "decision": "Preserve declared race/coverage semantics and exact revision/measurement evidence. Bounded waves or sequential fallback do not claim unavailable concurrency. Retry evidence omissions once, keep dropouts and unproved slices as gaps, verify winning artifacts and account for every worker and its cleanup."
+    },
+    {
+      "id": "team-up-arena-policy",
+      "owner": "team-up",
+      "document": "skills/team-up/references/arena/arena.md",
+      "section": "Phase A: Frame",
+      "sources": [
+        "pstack-arena",
+        "pstack-principle-separate-before-serializing-shared-state",
+        "pstack-principle-laziness-protocol",
+        "pstack-principle-redesign-from-first-principles",
+        "pstack-principle-prove-it-works"
+      ],
+      "decision": "Share the maintained Arena method and complete four-principle closure with Architect while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported. No external audit workflow is activated."
     }
   ]
 }
