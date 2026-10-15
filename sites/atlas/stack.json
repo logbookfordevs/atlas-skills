@@ -13,13 +13,18 @@
         "tracking-implementation",
         "atlas-motion",
         "atlas-craft",
+        "atlas-implement",
         "atlas-review",
+        "atlas-verify",
         "animated-driven-frontend",
         "writing-for-humans",
         "team-up",
         "html-ui",
+        "atlas-grill",
+        "atlas-wayfinder",
         "atlas-to-spec",
         "atlas-to-tickets",
+        "atlas-explain",
         "atlas-retro"
       ]
     },
@@ -28,29 +33,16 @@
       "source": "https://github.com/mattpocock/skills",
       "skills": [
         "implement-spec",
-        "diagnosing-bugs",
-        "tdd",
         "research",
         "writing-for-agents",
         "wizard",
         "to-questionnaire",
-        "grill-with-docs",
-        "grill-me",
         "prototype",
         "handoff",
-        "wayfinder",
-        "grilling",
-        "domain-modeling",
         "codebase-design",
         "pr",
-        "teach"
-      ]
-    },
-    {
-      "name": "Product Engineering",
-      "source": "https://github.com/backnotprop/product-engineering",
-      "skills": [
-        "pe-verify"
+        "teach",
+        "diagnosing-bugs"
       ]
     },
     {
@@ -110,7 +102,6 @@
       "name": "Addy Osmani",
       "source": "https://github.com/addyosmani/agent-skills.git",
       "skills": [
-        "source-driven-development",
         "doubt-driven-development",
         "code-simplification"
       ]

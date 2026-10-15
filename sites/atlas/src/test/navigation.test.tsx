@@ -116,10 +116,25 @@ describe('Atlas navigation', () => {
     expect(wireframe.getAttribute('href')).toMatch(/^https:\/\/github.com\/plannotator\/effective-html\/blob\/[a-f0-9]{40}\/skills\/html-wireframe\/SKILL.md$/);
     expect(prototype.getAttribute('href')).toMatch(/\/skills\/html-prototype\/SKILL.md$/);
     expect(within(origins).getAllByText('Plannotator')).toHaveLength(2);
-    await user.click(screen.getByRole('link', { name: 'Team Up' }));
-    await screen.findByRole('heading', { level: 1, name: 'Team Up' });
+    await user.click(screen.getByRole('link', { name: 'Animated-Driven Frontend' }));
+    await screen.findByRole('heading', { level: 1, name: 'Animated-Driven Frontend' });
     expect(screen.queryByRole('region', { name: 'Built on' })).toBeNull();
     expect(screen.getByRole('link', { name: 'Source receipt' })).toBeTruthy();
+  });
+
+  it('offers a JSON manifest for AFK and resolves every Atlas stack link', async () => {
+    const user = userEvent.setup();
+    const router = open('/stack/');
+    expect(screen.getByRole('link', { name: /Download the manifest/ }).getAttribute('href')).toBe('/stack.json');
+    expect(screen.getByRole('link', { name: 'AFK — AI Field Kit' }).getAttribute('href')).toBe('https://github.com/logbookfordevs/ai-field-kit');
+    await user.click(screen.getByRole('button', { name: 'Copy manifest URL' }));
+    expect(await navigator.clipboard.readText()).toBe('https://atlas.logbookfordevs.com/stack.json');
+    const atlasLinks = screen.getAllByRole('link').filter(link => link.getAttribute('href')?.startsWith('/skills/'));
+    for (const link of atlasLinks) {
+      await router.navigate(link.getAttribute('href')!);
+      expect(screen.queryByRole('heading', { name: 'Page not found.' })).toBeNull();
+      await screen.findByRole('heading', { level: 1 });
+    }
   });
 
   it('shows both original authors and the collection that selected Craft references', () => {

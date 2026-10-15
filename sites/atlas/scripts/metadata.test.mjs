@@ -63,3 +63,14 @@ test('the deployed PNG matches its image metadata and is under 5 MB', async () =
   assert.equal(image.readUInt32BE(20), site.socialImage.height);
   assert.ok(image.length < 5_000_000);
 });
+
+
+test('both public manifest URLs serve the exact stack shown on the website', async () => {
+  const snapshot = await readFile(new URL('../stack.json', import.meta.url), 'utf8');
+  for (const path of ['stack.json', 'assets/atlas-stack.json']) {
+    assert.equal(await readFile(new URL(`../dist/${path}`, import.meta.url), 'utf8'), snapshot);
+  }
+  const manifest = JSON.parse(snapshot);
+  const atlas = manifest.sources.find(source => source.source === 'https://github.com/logbookfordevs/atlas-skills');
+  assert.deepEqual(skills.map(skill => skill.id).sort(), [...atlas.skills].sort());
+});

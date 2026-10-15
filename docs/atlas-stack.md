@@ -6,19 +6,23 @@ AFK import is an optional installation route. For direct package installation an
 
 ## Import
 
+[AFK — AI Field Kit](https://github.com/logbookfordevs/ai-field-kit) is a local workspace for managing agent skills, profiles, tools and shared rules. Start it with `npx @logbookfordevs/afk`. It installs selected skills through Skills CLI; using Atlas does not require adopting AFK's profiles.
+
 In AFK’s Sources & Stacks, add a stack by pasting the manifest JSON or providing its direct HTTPS JSON URL. Inspect the sources and skill selections before saving. Copy the stack’s install script, select the installation destination and agent, and run the copied script when ready. Import and copy do not install or activate skills. Profiles remain optional activation groups.
 
 AFK 2.0 includes Sources & Stacks on its main branch. Import Atlas’s published manifest from:
 
 ```text
-https://raw.githubusercontent.com/logbookfordevs/atlas-skills/main/stacks/atlas.json
+https://atlas.logbookfordevs.com/stack.json
 ```
+
+The `/stack/` URL is the human-readable guide; `/stack.json` is the machine-readable import URL. The older `/assets/atlas-stack.json` remains an equivalent download. AFK's checked CLI does not yet provide `install <stack-url>`; use the import flow above.
 
 The stack schema points to AFK’s main branch; Atlas packages come from Atlas’s default branch. Explicit skill selections prevent retained legacy entries or newly added upstream skills from joining the stack automatically.
 
 ## Maintenance
 
-Edit `stacks/atlas.json`, then run `pnpm build:skills` to refresh Setup’s dependency references and `pnpm check` to validate the stack and packages. Installation scope and agent are chosen in AFK; the manifest contains no executable commands, profile state, invocation overrides, tool installs or post-install actions.
+Edit `stacks/atlas.json`, then run `pnpm build:skills` to refresh Setup’s dependency references and `pnpm check` to validate the stack and packages. Run `npm run build` from `sites/atlas` to generate the site and its public JSON assets from the canonical manifest. `pnpm check` rejects stale snapshots or missing skill pages. Installation scope and agent are chosen in AFK; the manifest contains no executable commands, profile state, invocation overrides, tool installs or post-install actions.
 
 The stack lists selected skills as an installable collection; it does not define daily activation. This file is a selection manifest, not a lockfile. External references follow the authors’ repositories and Skills CLI update behavior. Implement Spec and PR install from Matt Pocock’s repository; Atlas Retro installs from Atlas with bundled Diagnose and Enforce methods; Atlas Verify installs from Atlas, carrying the maintained verification source and report engine from Product Engineering.
 
