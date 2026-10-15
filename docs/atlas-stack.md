@@ -34,4 +34,6 @@ Atlas Verify carries PE Verify's Run/report engine and Pstack's Create, Maintain
 
 Atlas Explain carries How, Why and conversational Teach from the same pinned Pstack mirror. A missing mode prompts the user to choose before investigation. Teach's How/Why calls load bundled references directly, and Unslop is carried as its private editorial dependency rather than a global writing choice. Matt Pocock's stateful Teach remains a separate, manually invoked `teach` package, carried verbatim with all four format references and original invocation metadata. Its stack selection now comes from Atlas's distribution, so there is one installation entry for Matt Teach.
 
+Atlas Implement adds Architect as a selective design-first method alongside TDD and Source-Driven. Its private Arena comparison method, required principle references, and complete shared How/Why/Interrogate methods are bundled; Architect needs no separate installation of Atlas Explain, Atlas Review or Pstack. Shared methods retain one maintained source record and portable copies in each consumer. This does not expose Arena as a public Team Up method or install a global principle library.
+
 Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.

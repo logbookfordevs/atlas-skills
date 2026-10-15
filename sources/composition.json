@@ -1167,7 +1167,8 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-14",
       "rulings": [
-        "implement-tdd-seam-and-review"
+        "implement-tdd-seam-and-review",
+        "implement-architect-phases"
       ]
     },
     {
@@ -1196,7 +1197,8 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-14",
       "rulings": [
-        "implement-source-receipts"
+        "implement-source-receipts",
+        "implement-architect-phases"
       ]
     },
     {
@@ -1577,7 +1579,8 @@
       "patch": "sources/patches/pstack-interrogate.patch",
       "adaptation": "Use available host reviewers and disclose actual model diversity instead of fixed provider defaults or automatic model-table PRs. Preserve independent same-intent review, attribution and lead judgment; treat quality heuristics as contextual findings and keep review read-only.",
       "consumers": [
-        "atlas-review"
+        "atlas-review",
+        "atlas-implement"
       ],
       "supportingFiles": [
         {
@@ -1615,7 +1618,8 @@
       "adoptedAt": "2026-10-15",
       "rulings": [
         "review-adversarial-owner",
-        "review-impact-proof"
+        "review-impact-proof",
+        "implement-candidate-ownership"
       ]
     },
     {
@@ -1666,7 +1670,8 @@
       "carriedPath": "references/how/how.md",
       "adaptation": "Replace fixed Cursor/provider dispatch with available host roles and models, bounded concurrency and sequential fallback. Preserve the exploration/explanation split and complete templates; link the companion Why method locally.",
       "consumers": [
-        "atlas-explain"
+        "atlas-explain",
+        "atlas-implement"
       ],
       "supportingFiles": [
         {
@@ -1686,7 +1691,8 @@
       "adoptedAt": "2026-10-15",
       "rulings": [
         "explain-mode-choice",
-        "explain-host-capabilities"
+        "explain-host-capabilities",
+        "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-how.patch"
     },
@@ -1709,7 +1715,8 @@
       "carriedPath": "references/why/why.md",
       "adaptation": "Adapt host dispatch and history/tool availability without inventing access; keep investigation read-only. Standalone Why retains full evidence-category coverage, while explicit caller scope permits bounded Teach investigations with documented exclusions. Preserve epistemics and all source playbooks.",
       "consumers": [
-        "atlas-explain"
+        "atlas-explain",
+        "atlas-implement"
       ],
       "supportingFiles": [
         {
@@ -1793,7 +1800,8 @@
         "explain-mode-choice",
         "explain-why-scope",
         "explain-evidence-editing",
-        "explain-host-capabilities"
+        "explain-host-capabilities",
+        "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-why.patch"
     },
@@ -1909,6 +1917,474 @@
           "relativePath": "agents/openai.yaml"
         }
       ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": []
+    },
+    {
+      "id": "pstack-architect",
+      "owner": "atlas-implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/architect/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-architect/source.md",
+      "sourceSha256": "1a1c56ec1fe352ddb832e8eaf9fe6c282ce2b0428d65fb4ebb4a9e4128cbb438",
+      "license": "sources/upstream/pstack-architect/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-implement/references/architect/architect.md",
+      "carriedPath": "references/architect/architect.md",
+      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena, Interrogate and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/architect/references/design-red-flags.md",
+          "snapshot": "sources/upstream/pstack-architect/support/references/design-red-flags.md",
+          "sourceSha256": "d0e639e4cc588ec865f930d3a4111faad60987ae36925917e319d7ceca7c69ce",
+          "relativePath": "references/design-red-flags.md",
+          "method": "skills/atlas-implement/references/architect/references/design-red-flags.md",
+          "patch": "sources/patches/pstack-architect-design-red-flags.patch"
+        },
+        {
+          "upstreamPath": "skills/architect/references/rationale-template.md",
+          "snapshot": "sources/upstream/pstack-architect/support/references/rationale-template.md",
+          "sourceSha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
+          "relativePath": "references/rationale-template.md",
+          "method": "skills/atlas-implement/references/architect/references/rationale-template.md",
+          "patch": "sources/patches/pstack-architect-rationale-template.patch"
+        },
+        {
+          "upstreamPath": "skills/architect/references/runner-prompt.md",
+          "snapshot": "sources/upstream/pstack-architect/support/references/runner-prompt.md",
+          "sourceSha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
+          "relativePath": "references/runner-prompt.md",
+          "method": "skills/atlas-implement/references/architect/references/runner-prompt.md",
+          "patch": "sources/patches/pstack-architect-runner-prompt.patch"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "implement-architect-phases",
+        "implement-candidate-ownership",
+        "implement-principle-scope"
+      ],
+      "patch": "sources/patches/pstack-architect.patch"
+    },
+    {
+      "id": "pstack-arena",
+      "owner": "atlas-implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/arena/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-arena/source.md",
+      "sourceSha256": "6c54c51f7115a95df4505b94579edd890af8cacac6014a4c6c350e26f54f8226",
+      "license": "sources/upstream/pstack-arena/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-implement/references/arena/arena.md",
+      "carriedPath": "references/arena/arena.md",
+      "adaptation": "Carry Arena privately for Architect candidate comparison. Adapt host models, bounded scheduling, output isolation and sequential fallback while disclosing independence gaps. Link the complete required principle references locally; this does not register Arena as a public workflow mode.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "implement-architect-phases",
+        "implement-candidate-ownership",
+        "implement-principle-scope"
+      ],
+      "patch": "sources/patches/pstack-arena.patch"
+    },
+    {
+      "id": "pstack-principle-boundary-discipline",
+      "owner": "atlas-implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-boundary-discipline/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-boundary-discipline/source.md",
+      "sourceSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
+      "license": "sources/upstream/pstack-principle-boundary-discipline/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-implement/references/principles/principle-boundary-discipline/SKILL.md",
+      "carriedPath": "references/principles/principle-boundary-discipline/SKILL.md",
+      "adaptation": "Qualify internal trust by established, preserved invariants rather than unconditional trust; retain boundary validation and pure-core guidance.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "implement-principle-scope"
+      ],
+      "patch": "sources/patches/pstack-principle-boundary-discipline.patch"
+    },
+    {
+      "id": "pstack-principle-encode-lessons-in-structure",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-encode-lessons-in-structure/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-encode-lessons-in-structure/source.md",
+      "sourceSha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
+      "license": "sources/upstream/pstack-principle-encode-lessons-in-structure/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-encode-lessons-in-structure/source.md",
+      "carriedPath": "references/principles/principle-encode-lessons-in-structure/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": []
+    },
+    {
+      "id": "pstack-principle-exhaust-the-design-space",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-exhaust-the-design-space/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-exhaust-the-design-space/source.md",
+      "sourceSha256": "2de83d99f93f60ec6313455b0bc9aa9f0bfb93dd59f414f403691322db00d4db",
+      "license": "sources/upstream/pstack-principle-exhaust-the-design-space/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-exhaust-the-design-space/source.md",
+      "carriedPath": "references/principles/principle-exhaust-the-design-space/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "implement-candidate-ownership"
+      ]
+    },
+    {
+      "id": "pstack-principle-fix-root-causes",
+      "owner": "atlas-implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-fix-root-causes/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-fix-root-causes/source.md",
+      "sourceSha256": "2131069d285d82fb799458494f2e4ac8759c9c6a60f9e300828c17874f514c6e",
+      "license": "sources/upstream/pstack-principle-fix-root-causes/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-implement/references/principles/principle-fix-root-causes/SKILL.md",
+      "carriedPath": "references/principles/principle-fix-root-causes/SKILL.md",
+      "adaptation": "Preserve justified safety guards and enduring invariant comments, and keep repeated-pattern repair within authorized scope; retain reproduction and root-cause investigation.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "implement-principle-scope"
+      ],
+      "patch": "sources/patches/pstack-principle-fix-root-causes.patch"
+    },
+    {
+      "id": "pstack-principle-foundational-thinking",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-foundational-thinking/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-foundational-thinking/source.md",
+      "sourceSha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
+      "license": "sources/upstream/pstack-principle-foundational-thinking/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-foundational-thinking/source.md",
+      "carriedPath": "references/principles/principle-foundational-thinking/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "implement-architect-phases"
+      ]
+    },
+    {
+      "id": "pstack-principle-guard-the-context-window",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-guard-the-context-window/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-guard-the-context-window/source.md",
+      "sourceSha256": "af0b9dd70b43628ce4a59a4d332e9d9ad055084e460f430e7a757495c627e81a",
+      "license": "sources/upstream/pstack-principle-guard-the-context-window/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-guard-the-context-window/source.md",
+      "carriedPath": "references/principles/principle-guard-the-context-window/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": []
+    },
+    {
+      "id": "pstack-principle-laziness-protocol",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-laziness-protocol/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-laziness-protocol/source.md",
+      "sourceSha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
+      "license": "sources/upstream/pstack-principle-laziness-protocol/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-laziness-protocol/source.md",
+      "carriedPath": "references/principles/principle-laziness-protocol/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": []
+    },
+    {
+      "id": "pstack-principle-make-operations-idempotent",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-make-operations-idempotent/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-make-operations-idempotent/source.md",
+      "sourceSha256": "540738217c3da7bf513b9886924ad6a2bc77e58be867f5bd2e1831c74bf2ce70",
+      "license": "sources/upstream/pstack-principle-make-operations-idempotent/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-make-operations-idempotent/source.md",
+      "carriedPath": "references/principles/principle-make-operations-idempotent/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": []
+    },
+    {
+      "id": "pstack-principle-minimize-reader-load",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-minimize-reader-load/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-minimize-reader-load/source.md",
+      "sourceSha256": "1ea2b7fef2391cae5844c4efdbd59031f775e8a52d06b7495d707229a200dcca",
+      "license": "sources/upstream/pstack-principle-minimize-reader-load/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-minimize-reader-load/source.md",
+      "carriedPath": "references/principles/principle-minimize-reader-load/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": []
+    },
+    {
+      "id": "pstack-principle-outcome-oriented-execution",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-outcome-oriented-execution/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-outcome-oriented-execution/source.md",
+      "sourceSha256": "10eb91633aa570355ba4bb37088fcade2b22e498df7a58edc749e65bc5a78e2d",
+      "license": "sources/upstream/pstack-principle-outcome-oriented-execution/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-outcome-oriented-execution/source.md",
+      "carriedPath": "references/principles/principle-outcome-oriented-execution/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "implement-architect-phases"
+      ]
+    },
+    {
+      "id": "pstack-principle-prove-it-works",
+      "owner": "atlas-implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-prove-it-works/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-prove-it-works/source.md",
+      "sourceSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
+      "license": "sources/upstream/pstack-principle-prove-it-works/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-implement/references/principles/principle-prove-it-works/SKILL.md",
+      "carriedPath": "references/principles/principle-prove-it-works/SKILL.md",
+      "adaptation": "Preserve direct outcome proof while using the agreed artifact/delivery scope; remove the optional external Show Me Your Work audit dependency, whose adoption remains a separate decision.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "implement-principle-scope"
+      ],
+      "patch": "sources/patches/pstack-principle-prove-it-works.patch"
+    },
+    {
+      "id": "pstack-principle-redesign-from-first-principles",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-redesign-from-first-principles/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-redesign-from-first-principles/source.md",
+      "sourceSha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
+      "license": "sources/upstream/pstack-principle-redesign-from-first-principles/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-redesign-from-first-principles/source.md",
+      "carriedPath": "references/principles/principle-redesign-from-first-principles/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": []
+    },
+    {
+      "id": "pstack-principle-separate-before-serializing-shared-state",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-separate-before-serializing-shared-state/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/source.md",
+      "sourceSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+      "license": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/source.md",
+      "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "implement-candidate-ownership"
+      ]
+    },
+    {
+      "id": "pstack-principle-subtract-before-you-add",
+      "owner": "atlas-implement",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/principle-subtract-before-you-add/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-principle-subtract-before-you-add/source.md",
+      "sourceSha256": "8c93bb9d1a7f38e2ef37655d93f0e790fa59903105af3d500cc8a663ebe45f3f",
+      "license": "sources/upstream/pstack-principle-subtract-before-you-add/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-principle-subtract-before-you-add/source.md",
+      "carriedPath": "references/principles/principle-subtract-before-you-add/SKILL.md",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "consumers": [
+        "atlas-implement"
+      ],
+      "supportingFiles": [],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": []
@@ -2190,7 +2666,26 @@
       "agent": "skills/atlas-implement/agents/openai.yaml",
       "methods": [
         "tdd",
-        "source-driven-development"
+        "source-driven-development",
+        "pstack-architect",
+        "pstack-arena",
+        "pstack-principle-boundary-discipline",
+        "pstack-principle-encode-lessons-in-structure",
+        "pstack-principle-exhaust-the-design-space",
+        "pstack-principle-fix-root-causes",
+        "pstack-principle-foundational-thinking",
+        "pstack-principle-guard-the-context-window",
+        "pstack-principle-laziness-protocol",
+        "pstack-principle-make-operations-idempotent",
+        "pstack-principle-minimize-reader-load",
+        "pstack-principle-outcome-oriented-execution",
+        "pstack-principle-prove-it-works",
+        "pstack-principle-redesign-from-first-principles",
+        "pstack-principle-separate-before-serializing-shared-state",
+        "pstack-principle-subtract-before-you-add",
+        "pstack-how",
+        "pstack-why",
+        "pstack-interrogate"
       ],
       "dependencies": [
         {
@@ -2552,6 +3047,51 @@
         "pstack-why"
       ],
       "decision": "Use host-available read capabilities, roles, models and bounded delegation rather than fixed Cursor/provider defaults. Missing history, connectors or delegation are disclosed gaps; investigation remains read-only and never invents availability."
+    },
+    {
+      "id": "implement-architect-phases",
+      "owner": "atlas-implement",
+      "document": "skills/atlas-implement/references/architect/integration.md",
+      "section": "Sketches and TDD",
+      "sources": [
+        "pstack-architect",
+        "pstack-arena",
+        "tdd",
+        "source-driven-development",
+        "pstack-principle-foundational-thinking",
+        "pstack-principle-outcome-oriented-execution"
+      ],
+      "decision": "Architect is a selected design-first method, not a mandatory prelude to implementation. Respect design-only scope and opt-in checkpoints. Keep candidate stubs isolated, distinguish design validation from red/green behavior proof, and start selected TDD through the chosen agreed interface. Source-Driven supplies version-specific constraints. Existing verification and commit boundaries remain authoritative."
+    },
+    {
+      "id": "implement-candidate-ownership",
+      "owner": "atlas-implement",
+      "document": "skills/atlas-implement/references/architect/integration.md",
+      "section": "Candidate comparison and evidence",
+      "sources": [
+        "pstack-architect",
+        "pstack-arena",
+        "pstack-how",
+        "pstack-why",
+        "pstack-interrogate",
+        "pstack-principle-exhaust-the-design-space",
+        "pstack-principle-separate-before-serializing-shared-state"
+      ],
+      "decision": "Architect requires two structurally distinct candidates before synthesis even if generic Arena allows dropout or convergence. Candidate runners execute only their isolated sketch assignment, never recursively launch the workflow. Shared grounding/review sources load directly without the Explain chooser. Host limitations and actual reviewer independence are disclosed; Interrogate is selected rather than automatic."
+    },
+    {
+      "id": "implement-principle-scope",
+      "owner": "atlas-implement",
+      "document": "skills/atlas-implement/references/architect/integration.md",
+      "section": "Candidate comparison and evidence",
+      "sources": [
+        "pstack-architect",
+        "pstack-arena",
+        "pstack-principle-boundary-discipline",
+        "pstack-principle-fix-root-causes",
+        "pstack-principle-prove-it-works"
+      ],
+      "decision": "Required principles are contextual bundled references within authorized scope. Internal trust depends on established invariants; legitimate guards and enduring comments remain. Direct outcome proof uses the agreed artifact and commit policy rather than activating an unselected external Show Me Your Work audit. Global principle-library and public Arena adoption remain independent decisions."
     }
   ]
 }

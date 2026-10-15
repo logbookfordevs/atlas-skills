@@ -71,7 +71,8 @@
       "adoptedAt": "2026-10-15",
       "rulings": [
         "explain-mode-choice",
-        "explain-host-capabilities"
+        "explain-host-capabilities",
+        "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-how.patch",
       "patchSha256": "0fc232f01f85440a41ebba75e3c278cddf0df9fbe7c291b10e46d9b44388bb35"
@@ -188,7 +189,8 @@
         "explain-mode-choice",
         "explain-why-scope",
         "explain-evidence-editing",
-        "explain-host-capabilities"
+        "explain-host-capabilities",
+        "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-why.patch",
       "patchSha256": "98b991df7f6eb1472bf995333aea759357135f99f81e6e356c6dc569b3336835"

@@ -820,7 +820,8 @@
       "adoptedAt": "2026-10-15",
       "rulings": [
         "review-adversarial-owner",
-        "review-impact-proof"
+        "review-impact-proof",
+        "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-interrogate.patch",
       "patchSha256": "7c36013ac30957bb06b505604caf5a5d389f62e0f12eac7e395503079458febb"

@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index f8503c9..05c76e2 100644
+--- a/source.md
++++ b/source.md
+@@ -42,7 +42,7 @@ Give each piece of state one owner. Other modules read it or ask the owner to ch
+ 
+ The design supports more than one way to do the same task. An agent copies whichever way it finds first, so every way keeps gaining callers.
+ 
+-Keep one way. Move callers off the others and delete them in the same change.
++Prefer one canonical path. Account for supported external consumers, migration boundaries and retained baselines before proposing removal; keep changes within the agreed scope.
+ 
+ ## Importable internals
+ 

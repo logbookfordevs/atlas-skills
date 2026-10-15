@@ -21,7 +21,7 @@ Install the packages below, or import the shared stack to include the recommende
 | [Teach](skills/teach/SKILL.md) | Matt Pocock's independent, verbatim learning-workspace skill |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
-| [Atlas Implement](skills/atlas-implement/SKILL.md) | Bundled TDD and Source-Driven methods, selected independently or together |
+| [Atlas Implement](skills/atlas-implement/SKILL.md) | Architect, TDD and Source-Driven methods, selected independently or together |
 | [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose hard bugs and performance regressions through reproduction, hypotheses and regression proof |
 | [Atlas Simplify](skills/atlas-simplify/SKILL.md) | Improve code clarity while preserving behavior through the bundled Code Simplification method |
 | [Atlas Review](skills/atlas-review/SKILL.md) | Code, Adversarial, Impact, Static, Interface, Motion and Motion Audit review |
