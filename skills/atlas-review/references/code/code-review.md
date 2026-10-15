@@ -70,7 +70,7 @@ Prefer `pathfinder` or a comparably capable native teammate with high reasoning 
 
 - The exact comparison commands, applicable commit list, and file inventory, including relevant untracked files.
 - The list of standards-source files you found in step 3, **plus the smell baseline from step 3** pasted in full; the reviewer has no other access to it.
-- The brief: "Report, per file/hunk where relevant: (a) every place the diff violates a documented standard, citing the standard file and rule; and (b) any baseline smell you spot, naming it and quoting the hunk. Distinguish hard violations from judgement calls. Documented-standard breaches can be hard, but baseline smells are always judgement calls, and a documented repo standard overrides the baseline. Skip anything tooling enforces. Under 400 words."
+- The brief: "Report, per file/hunk where relevant: (a) every place the diff violates a documented standard, citing the standard file and rule; and (b) any baseline smell you spot, naming it and quoting the hunk. Check added or changed comments against the repository's comment policy. Distinguish hard violations from judgement calls. Documented-standard breaches can be hard, but baseline smells are always judgement calls, and a documented repo standard overrides the baseline. Skip anything tooling enforces. Under 400 words."
 
 **Spec sub-agent prompt** - include:
 

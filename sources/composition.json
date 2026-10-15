@@ -455,7 +455,7 @@
       "license": "sources/upstream/code-review/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "skills/atlas-review/references/code/code-review.md",
-      "adaptation": "Leonardo\u2019s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources.",
+      "adaptation": "Leonardo\u2019s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources. Standards review explicitly checks added or changed comments against the repository comment policy.",
       "consumers": [
         "atlas-review"
       ],

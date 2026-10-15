@@ -123,17 +123,17 @@
       "notices": [],
       "sourceSha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357",
       "carriedPath": "references/code/code-review.md",
-      "carriedSha256": "ee04fb7e49b5c715d7430af1a9cd209c057fcd9b6a4b90b42e5a825317b33504",
+      "carriedSha256": "96e672975df1e46f8482c7be9494c009b750b2ac841c4b61e4c385e2528434bb",
       "licensePath": "licenses/code-review.txt",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources.",
+      "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources. Standards review explicitly checks added or changed comments against the repository comment policy.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
       "rulings": [
         "review-adversarial-owner"
       ],
       "patch": "sources/patches/code-review.patch",
-      "patchSha256": "9a3738900259e73c4a7f3a6a00f8574881a2b1ad4d1e66b961b58e8100dfe0d4"
+      "patchSha256": "4f187a2a773a3ac4d06153760b647873c151313763d10589d2ff8e19e20e8cfa"
     },
     {
       "id": "review-animations",
@@ -914,7 +914,7 @@
     "references/static/static-review.md": "a105165ead3aa7af298ec25dcd881c60463d97805830b62b8f9dcc0e00b85b0d",
     "references/static/scripts/changed-files.sh": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7",
     "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
-    "references/code/code-review.md": "ee04fb7e49b5c715d7430af1a9cd209c057fcd9b6a4b90b42e5a825317b33504",
+    "references/code/code-review.md": "96e672975df1e46f8482c7be9494c009b750b2ac841c4b61e4c385e2528434bb",
     "licenses/code-review.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
     "references/motion/review-animations.md": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
     "licenses/review-animations.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
