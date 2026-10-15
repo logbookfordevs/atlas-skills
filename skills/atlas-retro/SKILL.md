@@ -1,12 +1,12 @@
 ---
-name: retro
+name: atlas-retro
 description: "Review a coding session and improve future agent runs: Diagnose proposes environment improvements; Enforce implements explicitly requested prevention of recurring mistakes."
 disable-model-invocation: true
 ---
 
-# Retro
+# Atlas Retro
 
-Plain `retro` selects Diagnose. Select Enforce only when the user explicitly asks to implement prevention for recurring mistakes; a correction or request for recommendations alone stays advisory. An explicit mode takes precedence.
+Plain `atlas-retro` selects Diagnose. Select Enforce only when the user explicitly asks to implement prevention for recurring mistakes; a correction or request for recommendations alone stays advisory. An explicit mode takes precedence.
 
 | Mode | Outcome | Read and follow |
 | --- | --- | --- |

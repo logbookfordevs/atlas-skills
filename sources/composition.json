@@ -2467,7 +2467,7 @@
     },
     {
       "id": "matt-retro",
-      "owner": "retro",
+      "owner": "atlas-retro",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
@@ -2480,12 +2480,12 @@
       "sourceSha256": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696",
       "license": "sources/upstream/matt-retro/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "skills/retro/references/diagnose/retro.md",
+      "method": "skills/atlas-retro/references/diagnose/retro.md",
       "carriedPath": "references/diagnose/retro.md",
       "patch": "sources/patches/matt-retro.patch",
       "adaptation": "Keep the complete retrospective categories and severity-ordered advisory output. Bind source access to the selected session, use available skill loading, and resolve suggestions to build checks as proposals in Diagnose. Preserve upstream agent metadata only in snapshots.",
       "consumers": [
-        "retro"
+        "atlas-retro"
       ],
       "supportingFiles": [
         {
@@ -2503,7 +2503,7 @@
     },
     {
       "id": "pstack-correct",
-      "owner": "retro",
+      "owner": "atlas-retro",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -2516,12 +2516,12 @@
       "sourceSha256": "bf482bacc972b3f124a4af8bf9364b4b3e280cb5845e44c326ea4f4565e5c904",
       "license": "sources/upstream/pstack-correct/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/retro/references/enforce/correct.md",
+      "method": "skills/atlas-retro/references/enforce/correct.md",
       "carriedPath": "references/enforce/correct.md",
       "patch": "sources/patches/pstack-correct.patch",
       "adaptation": "Keep recurring-class evidence, architecture/types/checks-first prevention and real-mistake proof. Activate only for explicit authorized Enforce scope; remove correction-triggered repairs and mandatory AGENTS rule tables. Respect existing validation, exceptions and delivery policy; distinguish local proof from actual CI execution.",
       "consumers": [
-        "retro"
+        "atlas-retro"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2945,9 +2945,9 @@
       "dependencies": []
     },
     {
-      "id": "retro",
-      "entry": "skills/retro/SKILL.md",
-      "agent": "skills/retro/agents/openai.yaml",
+      "id": "atlas-retro",
+      "entry": "skills/atlas-retro/SKILL.md",
+      "agent": "skills/atlas-retro/agents/openai.yaml",
       "methods": [
         "matt-retro",
         "pstack-correct"
@@ -3358,9 +3358,9 @@
     },
     {
       "id": "retro-mode-authority",
-      "owner": "retro",
-      "document": "skills/retro/SKILL.md",
-      "section": "Retro",
+      "owner": "atlas-retro",
+      "document": "skills/atlas-retro/SKILL.md",
+      "section": "Atlas Retro",
       "sources": [
         "matt-retro",
         "pstack-correct"

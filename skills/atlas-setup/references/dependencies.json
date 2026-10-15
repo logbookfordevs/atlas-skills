@@ -8,6 +8,7 @@
     "atlas-grill",
     "atlas-implement",
     "atlas-motion",
+    "atlas-retro",
     "atlas-review",
     "atlas-simplify",
     "atlas-to-spec",
@@ -15,7 +16,6 @@
     "atlas-verify",
     "atlas-wayfinder",
     "html-ui",
-    "retro",
     "teach",
     "team-up",
     "tracking-implementation",
@@ -81,7 +81,7 @@
       "command": "npx skills add https://github.com/mattpocock/skills --skill writing-for-agents",
       "consumers": [
         {
-          "skill": "retro",
+          "skill": "atlas-retro",
           "required": false,
           "condition": "When Diagnose assesses agent instructions or Enforce authors enduring agent-facing judgment guidance; report unavailable criteria and continue independent work."
         }

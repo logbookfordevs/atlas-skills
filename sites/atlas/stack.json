@@ -19,7 +19,8 @@
         "team-up",
         "html-ui",
         "atlas-to-spec",
-        "atlas-to-tickets"
+        "atlas-to-tickets",
+        "atlas-retro"
       ]
     },
     {
@@ -42,8 +43,7 @@
         "grilling",
         "domain-modeling",
         "codebase-design",
-        "pr",
-        "retro"
+        "pr"
       ]
     },
     {

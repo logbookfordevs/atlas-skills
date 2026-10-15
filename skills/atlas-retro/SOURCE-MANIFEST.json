@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "workflow": "retro",
+  "workflow": "atlas-retro",
   "generated": true,
   "managedFiles": [
     "references/diagnose/retro.md",
@@ -9,8 +9,8 @@
     "licenses/pstack-correct.txt"
   ],
   "authoredInputs": [
-    "skills/retro/SKILL.md",
-    "skills/retro/agents/openai.yaml"
+    "skills/atlas-retro/SKILL.md",
+    "skills/atlas-retro/agents/openai.yaml"
   ],
   "authoredReferences": [],
   "dependencies": [
@@ -24,7 +24,7 @@
   "sources": [
     {
       "id": "matt-retro",
-      "owner": "retro",
+      "owner": "atlas-retro",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
@@ -51,7 +51,7 @@
     },
     {
       "id": "pstack-correct",
-      "owner": "retro",
+      "owner": "atlas-retro",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -80,9 +80,9 @@
   "rulings": [
     {
       "id": "retro-mode-authority",
-      "owner": "retro",
-      "document": "skills/retro/SKILL.md",
-      "section": "Retro",
+      "owner": "atlas-retro",
+      "document": "skills/atlas-retro/SKILL.md",
+      "section": "Atlas Retro",
       "sources": [
         "matt-retro",
         "pstack-correct"
@@ -91,8 +91,8 @@
     }
   ],
   "files": {
-    "SKILL.md": "c3ec9f6ae6b208f626ded4255a27e5ac2401b2e9015c0a4e3f251eee1ddc637a",
-    "agents/openai.yaml": "af7dd16d484c37a1aab8a05dd64bba51a1ea201e06e1880f1cfe8647dc76d291",
+    "SKILL.md": "de56e15fc8031fc5ca345ac36ecc89b13eb513958d6329dc391bfe5e7e59f52d",
+    "agents/openai.yaml": "63b0009a7f7e2f835f98ea02e27a00b98bb3be6dfb611f20af978c6218e13abd",
     "references/diagnose/retro.md": "6ec54ebc782792a09ad0a638baa0cfe7ed6aedcbdfc83a4a75686b19b6060136",
     "licenses/matt-retro.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
     "references/enforce/correct.md": "9b626de4e2ba07da48b682b25232775c5ce2ba43c7c12c3d7c6af45790d9586d",
