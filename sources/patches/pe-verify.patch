@@ -1,12 +1,11 @@
 diff --git a/source.md b/source.md
-index f5bd8b1..9c92095 100644
+index f5bd8b1..afa86ed 100644
 --- a/source.md
 +++ b/source.md
-@@ -1,22 +1,23 @@
+@@ -1,22 +1,24 @@
  ---
--name: pe-verify
+ name: pe-verify
 -description: Prove that behavior works, with evidence. Use after a feature is built ("verify this", "create a verification for the toolbar") or to re-run the project's QA list before a release ("run the QA list", "release check"). Classifies each check as code, browser, or mixed; drives the product with Playwright, recording video and checkpoint screenshots; writes one report.json and renders it into a branded HTML report with a checkpoint video player. Triggers on verify, verification, "does it work", "prove it works", QA, QA list, release check, smoke test, regression check. Read-only toward product code — reports pass, fail, flag, skipped, or not-run; fixes go to pe-build, and judgment of design quality is pe-review.
-+name: atlas-verify
 +description: "Verify implemented behavior or run project QA with reproducible evidence and a rendered report. Use for feature verification, smoke or regression checks, and release QA. Product code stays read-only; implementation fixes belong to the selected executor and quality judgment to Atlas Review."
 +disable-model-invocation: false
  license: Apache-2.0
@@ -16,12 +15,16 @@ index f5bd8b1..9c92095 100644
  ---
  
 -# Verify
-+# Atlas Verify
++# Run verification
  
- Proof that behavior works. This spine routes; the report contract, the QA-list
- conventions, and the capture method live in `references/` — load what the run needs.
+-Proof that behavior works. This spine routes; the report contract, the QA-list
+-conventions, and the capture method live in `references/` — load what the run needs.
++Proof that behavior works. The report contract, QA-list conventions and capture
++method are sibling references — load what the run needs. Package-root paths below
++are relative to the Atlas Verify installation, not this reference file.
  
- ## Contract (both modes)
+-## Contract (both modes)
++## Contract (feature and list reports)
  
 -- **Read-only toward product code.** A failed check is reported, never fixed here; hand
 -  it to the pe-build skill by name. The only repo write this skill ever makes is the
@@ -33,18 +36,18 @@ index f5bd8b1..9c92095 100644
    under the system temp directory (`$TMPDIR`, else `/tmp`) — JSON, HTML, recordings,
    screenshots. Never inside the repo, never committed. Copy
    `report.json` into `.product/runs/` only on an explicit request.
-@@ -34,8 +35,8 @@ conventions, and the capture method live in `references/` — load what the run
+@@ -34,8 +36,8 @@ conventions, and the capture method live in `references/` — load what the run
  
  | Mode | When | Load |
  | --- | --- | --- |
 -| **feature** | "Verify this", "create a verification for X", or the last step after a build. The checks come from the change and the conversation: what was built, what the user said it must do, what it must not break. | `report-schema.md`, `evidence.md` |
 -| **list** | "Run the QA list", "release check", "QA". The user's own markdown list, found under `.product/`; one report item per list entry, every entry present. | `qa-list.md`, `report-schema.md`, `evidence.md` |
-+| **feature** | "Verify this", "create a verification for X", or verification selected after a build. The checks come from the change and the conversation: what was built, what the user said it must do, what it must not break. | [Report contract](references/report-schema.md), [Evidence](references/evidence.md) |
-+| **list** | "Run the QA list", "release check", "QA". Use the user's selected list or the repository's QA-list convention; one report item per list entry, every entry present. | [QA list](references/qa-list.md), [Report contract](references/report-schema.md), [Evidence](references/evidence.md) |
++| **feature** | "Verify this", "create a verification for X", or verification selected after a build. The checks come from the change and the conversation: what was built, what the user said it must do, what it must not break. | [Report contract](report-schema.md), [Evidence](evidence.md) |
++| **list** | "Run the QA list", "release check", "QA". Use the user's selected list or the repository's QA-list convention; one report item per list entry, every entry present. | [QA list](qa-list.md), [Report contract](report-schema.md), [Evidence](evidence.md) |
  
  A list run is **selective** or **all**, and the report says which (`selection` is
  required for list runs). Selective: the agent chooses the entries the change set can
-@@ -57,7 +58,7 @@ Decide per item, at run time. A list entry may carry a hint ("— browser"); mos
+@@ -57,7 +59,7 @@ Decide per item, at run time. A list entry may carry a hint ("— browser"); mos
  - **code** — read, trace, run tests or commands; no browser. "Bun is still pinned to
    1.3.x", "no config-breaking changes in this release", "the install script still
    targets both paths".
@@ -53,20 +56,35 @@ index f5bd8b1..9c92095 100644
    headlessly", "every toolbar button is present", "the diff loads on a 2MB file".
  - **mixed** — both: a behavior in the browser plus the code path behind it.
  
-@@ -79,9 +80,9 @@ fragment shaped by the contract; the orchestrator assembles `report.json`, sets
+@@ -68,6 +70,10 @@ fixture, no access) and its `summary` says why; choosing not to run an entry is
+ 
+ ## Orchestrate with what exists
+ 
++Use existing project instructions and harnesses. When a project-local verifier supplies
++driving knowledge, follow [Project verifiers](project-verifiers.md) for scope, session
++ownership and coverage mapping; its feature map is not automatically a QA list.
++
+ Use the running harness as it is: parallel subagents when they exist, a cheaper model
+ for quick code checks and a stronger one for browser or multi-step checks where the
+ choice exists, sequential execution when nothing else is available. Never require a
+@@ -79,23 +85,23 @@ fragment shaped by the contract; the orchestrator assembles `report.json`, sets
  
  1. **Scope.** Name the mode, the target (a feature, or the list and its path), the
     commit, and how the product will be reached (local server, built artifact, CLI).
 -   Check that Playwright has a browser; when it does not, offer
 -   `npx playwright install chromium` in one line and continue with whatever answer
 -   comes — no answer means browser items skip.
-+   Check the available browser driver once, following [Evidence](references/evidence.md).
++   Check the available browser driver once, following [Evidence](evidence.md).
 +   When none is available, offer installation and continue code checks; without an
 +   available browser, browser items report `skipped` with the reason.
  2. **Classify** each check as above.
  3. **Run.** Browser items per `references/evidence.md`: a recording, three to six
     checkpoints with stills, one-line narration each. Code items: the command or the
-@@ -91,11 +92,15 @@ fragment shaped by the contract; the orchestrator assembles `report.json`, sets
+    trace, captured as evidence.
+-4. **Assemble** `report.json` in the run folder, then, with `<skill>` as this skill's
+-   installed folder and `<run>` as the run folder:
++4. **Assemble** `report.json` in the run folder, then, with `<skill>` as the Atlas Verify
++   package root (the parent of this reference directory) and `<run>` as the run folder:
     `python3 <skill>/scripts/validate-report.py <run>/report.json` — fix every listed
     problem — then `python3 <skill>/scripts/render-report.py <run>/report.json --open`.
  5. **Report in chat:** the path, the selection and its basis for list runs, counts by
@@ -83,7 +101,3 @@ index f5bd8b1..9c92095 100644
 +Fixes belong to the selected implementation executor. Product, interface and fidelity
 +judgment belong to **atlas-review**, using the supplied reference or approved direction.
 +Document verified behavior through the user's selected documentation workflow when requested.
-+
-+When called by **tracking-implementation**, return the report, checked revision and
-+coverage gaps to its Execution Evidence and checkpoint handoff. Verification establishes
-+behavioral evidence; Tracking retains the implementation state and user acceptance gate.

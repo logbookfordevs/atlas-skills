@@ -3,7 +3,7 @@
   "workflow": "atlas-verify",
   "generated": true,
   "managedFiles": [
-    "SKILL.md",
+    "references/run.md",
     "licenses/pe-verify.txt",
     "assets/report-template.html",
     "assets/report.schema.json",
@@ -21,7 +21,16 @@
     "scripts/test-render.py",
     "scripts/validate-report.py",
     "scripts/validate_report_lib.py",
-    "licenses/pe-verify-NOTICE.txt"
+    "licenses/pe-verify-NOTICE.txt",
+    "references/create/create-verification-skill.md",
+    "licenses/pstack-create-verification-skill.txt",
+    "references/create/references/feature-map-example/README.md",
+    "references/create/references/feature-map-example/create-note.md",
+    "references/create/references/feature-map-example/search.md",
+    "references/maintain/maintain-verification-skill.md",
+    "licenses/pstack-maintain-verification-skill.txt",
+    "references/performance/benchmark-checklist.md",
+    "licenses/pstack-benchmark-checklist.txt"
   ],
   "authoredInputs": [
     "skills/atlas-verify/SKILL.md",
@@ -177,27 +186,136 @@
         }
       ],
       "sourceSha256": "18a7611a2dfa5a977000eb4223cb3e917b98c8ead0b8b9dce9fe2baba26379aa",
-      "carriedPath": "SKILL.md",
-      "carriedSha256": "1042eef8cc00c3d4c5271ea7eef2cc95eced3909590bb170a2d47e2a7fde2bd3",
+      "carriedPath": "references/run.md",
+      "carriedSha256": "b153d3724fe4b54e0ffd900a66da346c36fbe6a25c5ce6fab3e7fdb22ada40cb",
       "licensePath": "licenses/pe-verify.txt",
       "licenseSha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
-      "adaptation": "Atlas-owned verification invocation for the core workflow. Preserve the report schema, validator, renderer, fixtures and evidence requirements. Adapt executor and review handoffs, project-local QA-list discovery, browser-driver selection, run directory naming and report page title. Product-code verification remains read-only; Tracking owns implementation and acceptance. The complete upstream skill tree and root license and notice are retained at the pinned revision.",
+      "adaptation": "Carry PE Verify as the Run method behind the Atlas Verify selector. Preserve the complete report engine and root support paths. Adapt executor/review handoffs, QA-list discovery, browser-driver choice, report naming and project-verifier use. Run remains read-only toward product code; Create, Maintain and Performance have separate selected contracts.",
       "licenseSpdx": "Apache-2.0",
       "adoptedAt": "2026-10-14",
       "rulings": [
         "verify-executor-handoff",
         "verify-qa-list-home",
-        "verify-browser-driver"
+        "verify-browser-driver",
+        "verify-method-authority",
+        "verify-project-verifier-bridge",
+        "verify-performance-evidence"
       ],
       "patch": "sources/patches/pe-verify.patch",
-      "patchSha256": "af4039c1609e8bc22140848d04048e47d76fd3122eee1ab7700bc45a66ad51b3"
+      "patchSha256": "d7e7901134439c7815b35785019d2bc8c48041a6bd0f3dfd95086bf2389b3ca8"
+    },
+    {
+      "id": "pstack-create-verification-skill",
+      "owner": "atlas-verify",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/create-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/README.md",
+          "classification": "verbatim",
+          "sourceSha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+          "carriedPath": "references/create/references/feature-map-example/README.md",
+          "carriedSha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba"
+        },
+        {
+          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/create-note.md",
+          "classification": "verbatim",
+          "sourceSha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+          "carriedPath": "references/create/references/feature-map-example/create-note.md",
+          "carriedSha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7"
+        },
+        {
+          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/search.md",
+          "classification": "verbatim",
+          "sourceSha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+          "carriedPath": "references/create/references/feature-map-example/search.md",
+          "carriedSha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "bba612e8b81a02df0f49e6f6911f3b543c8c7d9f1f3c13ae6c0e2d58cc8c3ad3",
+      "carriedPath": "references/create/create-verification-skill.md",
+      "carriedSha256": "8b2c2c89a65b70a45a12699c8f693b6eaa566af4854072d78b995119ce9c4050",
+      "licensePath": "licenses/pstack-create-verification-skill.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Bound generator writes to the project verifier directory, report product startup failures instead of repairing them, distinguish unmet prerequisites from verified regressions, and route maintenance to the bundled method. Preserve self-proof, cleanup and the complete feature-map examples.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "verify-method-authority",
+        "verify-project-verifier-bridge"
+      ],
+      "patch": "sources/patches/pstack-create-verification-skill.patch",
+      "patchSha256": "808be8cda7486926604e4a8a53a5d1d6dc7f42ec38cbaaa9c2709b21321807cb"
+    },
+    {
+      "id": "pstack-maintain-verification-skill",
+      "owner": "atlas-verify",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/maintain-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "5943f7747da6aafcf5c1063c988e725c97e415866f5c7746279012f35cb49815",
+      "carriedPath": "references/maintain/maintain-verification-skill.md",
+      "carriedSha256": "f1232cc546bf4cb0dadfd155fd959634c7037a3aa69ea5e8fc24fa631074432e",
+      "licensePath": "licenses/pstack-maintain-verification-skill.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Use host-bounded source readers with a sequential fallback, keep one live driver, make changed mean proven local corrections rather than publication, and resolve creation through the bundled method. Preserve all-feature source/live coverage and product-code read-only scope.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "verify-method-authority",
+        "verify-project-verifier-bridge"
+      ],
+      "patch": "sources/patches/pstack-maintain-verification-skill.patch",
+      "patchSha256": "2b2488da1b0a1446ba0620f6e9ee2d9db1753e0bd375c72e70145a1f86c6f286"
+    },
+    {
+      "id": "pstack-benchmark-checklist",
+      "owner": "atlas-verify",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/benchmark-checklist/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+      "carriedPath": "references/performance/benchmark-checklist.md",
+      "carriedSha256": "90b3c7aea438ef7c0f4341ed5d0f6e58c8711dc701a5c82180bfd16734af392b",
+      "licensePath": "licenses/pstack-benchmark-checklist.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Adapt host measurement tools and bind instrumentation to agreed verification assets. Keep benchmark evidence proportional and separate from optimization, PR and external perf playbooks; preserve the full measurement checklist.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "verify-method-authority",
+        "verify-performance-evidence"
+      ],
+      "patch": "sources/patches/pstack-benchmark-checklist.patch",
+      "patchSha256": "5b76c8e4ef90160d551ba4b34b1034afbe23162674251934ea73cf3c608b5b2e"
     }
   ],
   "rulings": [
     {
       "id": "verify-executor-handoff",
       "owner": "atlas-verify",
-      "document": "skills/atlas-verify/SKILL.md",
+      "document": "skills/atlas-verify/references/run.md",
       "section": "Handoffs",
       "sources": [
         "pe-verify"
@@ -223,11 +341,48 @@
         "pe-verify"
       ],
       "decision": "Prefer agent-browser when available and able to produce the required video, timestamped checkpoints and stills. Use Playwright when that proof requires it. Missing browser coverage remains skipped with reasons."
+    },
+    {
+      "id": "verify-method-authority",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/SKILL.md",
+      "section": "Atlas Verify",
+      "sources": [
+        "pe-verify",
+        "pstack-create-verification-skill",
+        "pstack-maintain-verification-skill",
+        "pstack-benchmark-checklist"
+      ],
+      "decision": "Select Run, Create, Maintain or Performance from the requested outcome. Product fixes remain outside verification. Run owns PE reporting; Create/Maintain own selected verifier assets, and standalone Performance owns measurement evidence. Missing local verifier assets do not add generator/maintenance work to a Run."
+    },
+    {
+      "id": "verify-project-verifier-bridge",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/project-verifiers.md",
+      "section": "Coverage and reporting",
+      "sources": [
+        "pe-verify",
+        "pstack-create-verification-skill",
+        "pstack-maintain-verification-skill"
+      ],
+      "decision": "Use reusable app-driving instructions without copying the report engine. Map requested features and entrypoints deliberately into PE feature/list reports, preserve prerequisites and lifecycle-versus-behavior states, reuse evidence, and keep one driver/cleanup owner per shared instance. Creation proves one seeded feature; maintenance accounts for every mapped feature."
+    },
+    {
+      "id": "verify-performance-evidence",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/performance/benchmark-checklist.md",
+      "section": "Report",
+      "sources": [
+        "pe-verify",
+        "pstack-benchmark-checklist"
+      ],
+      "decision": "Vet actual measured claims with raw work/error/repetition/limiter evidence. Adapt host tools, keep optimization outside verification, and use existing schema fields when contributing to a Run; standalone benchmarks do not require a rendered PE report or external perf playbook."
     }
   ],
   "files": {
-    "SKILL.md": "1042eef8cc00c3d4c5271ea7eef2cc95eced3909590bb170a2d47e2a7fde2bd3",
-    "agents/openai.yaml": "adc5fa8fce8753312dd45dbf6b920bfd898ef94237f1bbd30e4a9fcc9e0f86b6",
+    "SKILL.md": "c3d681ffb8aae931a83edf1f5d2da2ca78da731951bda457855379587d2f1200",
+    "agents/openai.yaml": "28906318a14aa16e6fe8bc58e9217453c28501ef4569cd58c20b9165e3e5aa30",
+    "references/run.md": "b153d3724fe4b54e0ffd900a66da346c36fbe6a25c5ce6fab3e7fdb22ada40cb",
     "licenses/pe-verify.txt": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
     "assets/report-template.html": "1930221f277f20c83f263539ed9d429e92396e76633805214d9fb7b4c48f7721",
     "assets/report.schema.json": "684b3c117fb07b436222793549c64431dbd81730e02ef1635753ab492d5324de",
@@ -245,6 +400,16 @@
     "scripts/test-render.py": "669ffac073dac9cc807fdccdd309d71bb0508cb8fa2d2e0c60ad8d74a038051b",
     "scripts/validate-report.py": "6d7ed4cc7f760d962d866a1cd7a73f4e0d77ec3502dab7d856065e11b83059ee",
     "scripts/validate_report_lib.py": "cd9af844b9ed3ebb05bb29167627757a7ca69fec7f858da43db61459eb427126",
-    "licenses/pe-verify-NOTICE.txt": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488"
+    "licenses/pe-verify-NOTICE.txt": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488",
+    "references/create/create-verification-skill.md": "8b2c2c89a65b70a45a12699c8f693b6eaa566af4854072d78b995119ce9c4050",
+    "licenses/pstack-create-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/create/references/feature-map-example/README.md": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+    "references/create/references/feature-map-example/create-note.md": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+    "references/create/references/feature-map-example/search.md": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+    "references/maintain/maintain-verification-skill.md": "f1232cc546bf4cb0dadfd155fd959634c7037a3aa69ea5e8fc24fa631074432e",
+    "licenses/pstack-maintain-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/performance/benchmark-checklist.md": "90b3c7aea438ef7c0f4341ed5d0f6e58c8711dc701a5c82180bfd16734af392b",
+    "licenses/pstack-benchmark-checklist.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/project-verifiers.md": "03557c3aec5c58eebb6c58f53aa052967c223bdc0259d94a0909054c65f11c1c"
   }
 }

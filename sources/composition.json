@@ -459,7 +459,9 @@
       "consumers": [
         "atlas-review"
       ],
-      "rulings": [],
+      "rulings": [
+        "review-adversarial-owner"
+      ],
       "carriedPath": "references/code/code-review.md",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
@@ -971,10 +973,10 @@
       "sourceSha256": "18a7611a2dfa5a977000eb4223cb3e917b98c8ead0b8b9dce9fe2baba26379aa",
       "license": "sources/upstream/pe-verify/LICENSE",
       "licenseSha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
-      "method": "skills/atlas-verify/SKILL.md",
-      "carriedPath": "SKILL.md",
+      "method": "skills/atlas-verify/references/run.md",
+      "carriedPath": "references/run.md",
       "patch": "sources/patches/pe-verify.patch",
-      "adaptation": "Atlas-owned verification invocation for the core workflow. Preserve the report schema, validator, renderer, fixtures and evidence requirements. Adapt executor and review handoffs, project-local QA-list discovery, browser-driver selection, run directory naming and report page title. Product-code verification remains read-only; Tracking owns implementation and acceptance. The complete upstream skill tree and root license and notice are retained at the pinned revision.",
+      "adaptation": "Carry PE Verify as the Run method behind the Atlas Verify selector. Preserve the complete report engine and root support paths. Adapt executor/review handoffs, QA-list discovery, browser-driver choice, report naming and project-verifier use. Run remains read-only toward product code; Create, Maintain and Performance have separate selected contracts.",
       "consumers": [
         "atlas-verify"
       ],
@@ -1096,8 +1098,29 @@
       "rulings": [
         "verify-executor-handoff",
         "verify-qa-list-home",
-        "verify-browser-driver"
-      ]
+        "verify-browser-driver",
+        "verify-method-authority",
+        "verify-project-verifier-bridge",
+        "verify-performance-evidence"
+      ],
+      "supportingFileTargets": {
+        "assets/report-template.html": "assets/report-template.html",
+        "assets/report.schema.json": "assets/report.schema.json",
+        "assets/sample/cp-1.png": "assets/sample/cp-1.png",
+        "assets/sample/cp-10.png": "assets/sample/cp-10.png",
+        "assets/sample/cp-16.png": "assets/sample/cp-16.png",
+        "assets/sample/cp-21.png": "assets/sample/cp-21.png",
+        "assets/sample/cp-4.png": "assets/sample/cp-4.png",
+        "assets/sample/recording.mp4": "assets/sample/recording.mp4",
+        "assets/sample/report.json": "assets/sample/report.json",
+        "references/evidence.md": "references/evidence.md",
+        "references/qa-list.md": "references/qa-list.md",
+        "references/report-schema.md": "references/report-schema.md",
+        "scripts/render-report.py": "scripts/render-report.py",
+        "scripts/test-render.py": "scripts/test-render.py",
+        "scripts/validate-report.py": "scripts/validate-report.py",
+        "scripts/validate_report_lib.py": "scripts/validate_report_lib.py"
+      }
     },
     {
       "id": "tdd",
@@ -1424,6 +1447,205 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-14",
       "rulings": []
+    },
+    {
+      "id": "pstack-create-verification-skill",
+      "owner": "atlas-verify",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/create-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-create-verification-skill/source.md",
+      "sourceSha256": "bba612e8b81a02df0f49e6f6911f3b543c8c7d9f1f3c13ae6c0e2d58cc8c3ad3",
+      "license": "sources/upstream/pstack-create-verification-skill/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-verify/references/create/create-verification-skill.md",
+      "carriedPath": "references/create/create-verification-skill.md",
+      "patch": "sources/patches/pstack-create-verification-skill.patch",
+      "adaptation": "Bound generator writes to the project verifier directory, report product startup failures instead of repairing them, distinguish unmet prerequisites from verified regressions, and route maintenance to the bundled method. Preserve self-proof, cleanup and the complete feature-map examples.",
+      "consumers": [
+        "atlas-verify"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/README.md",
+          "snapshot": "sources/upstream/pstack-create-verification-skill/support/references/feature-map-example/README.md",
+          "sourceSha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+          "relativePath": "references/feature-map-example/README.md"
+        },
+        {
+          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/create-note.md",
+          "snapshot": "sources/upstream/pstack-create-verification-skill/support/references/feature-map-example/create-note.md",
+          "sourceSha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+          "relativePath": "references/feature-map-example/create-note.md"
+        },
+        {
+          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/search.md",
+          "snapshot": "sources/upstream/pstack-create-verification-skill/support/references/feature-map-example/search.md",
+          "sourceSha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+          "relativePath": "references/feature-map-example/search.md"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "verify-method-authority",
+        "verify-project-verifier-bridge"
+      ]
+    },
+    {
+      "id": "pstack-maintain-verification-skill",
+      "owner": "atlas-verify",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/maintain-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-maintain-verification-skill/source.md",
+      "sourceSha256": "5943f7747da6aafcf5c1063c988e725c97e415866f5c7746279012f35cb49815",
+      "license": "sources/upstream/pstack-maintain-verification-skill/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-verify/references/maintain/maintain-verification-skill.md",
+      "carriedPath": "references/maintain/maintain-verification-skill.md",
+      "patch": "sources/patches/pstack-maintain-verification-skill.patch",
+      "adaptation": "Use host-bounded source readers with a sequential fallback, keep one live driver, make changed mean proven local corrections rather than publication, and resolve creation through the bundled method. Preserve all-feature source/live coverage and product-code read-only scope.",
+      "consumers": [
+        "atlas-verify"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "verify-method-authority",
+        "verify-project-verifier-bridge"
+      ]
+    },
+    {
+      "id": "pstack-benchmark-checklist",
+      "owner": "atlas-verify",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/benchmark-checklist/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-benchmark-checklist/source.md",
+      "sourceSha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+      "license": "sources/upstream/pstack-benchmark-checklist/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-verify/references/performance/benchmark-checklist.md",
+      "carriedPath": "references/performance/benchmark-checklist.md",
+      "patch": "sources/patches/pstack-benchmark-checklist.patch",
+      "adaptation": "Adapt host measurement tools and bind instrumentation to agreed verification assets. Keep benchmark evidence proportional and separate from optimization, PR and external perf playbooks; preserve the full measurement checklist.",
+      "consumers": [
+        "atlas-verify"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "verify-method-authority",
+        "verify-performance-evidence"
+      ]
+    },
+    {
+      "id": "pstack-interrogate",
+      "owner": "atlas-review",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/interrogate/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-interrogate/source.md",
+      "sourceSha256": "cf994ce47a2cf9daed0b4fe437eef1f13dd93683f75c4f01818ace51ce653a9c",
+      "license": "sources/upstream/pstack-interrogate/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-review/references/adversarial/interrogate.md",
+      "carriedPath": "references/adversarial/interrogate.md",
+      "patch": "sources/patches/pstack-interrogate.patch",
+      "adaptation": "Use available host reviewers and disclose actual model diversity instead of fixed provider defaults or automatic model-table PRs. Preserve independent same-intent review, attribution and lead judgment; treat quality heuristics as contextual findings and keep review read-only.",
+      "consumers": [
+        "atlas-review"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/interrogate/references/code-quality-review.md",
+          "snapshot": "sources/upstream/pstack-interrogate/support/references/code-quality-review.md",
+          "sourceSha256": "79162fda183eafd40d51661fbb5e151c7ba250f89e506ba17f5bd135dcbd50a8",
+          "relativePath": "references/code-quality-review.md",
+          "method": "skills/atlas-review/references/adversarial/references/code-quality-review.md",
+          "patch": "sources/patches/pstack-interrogate-code-quality-review.patch"
+        },
+        {
+          "upstreamPath": "skills/interrogate/references/lead-judgment.md",
+          "snapshot": "sources/upstream/pstack-interrogate/support/references/lead-judgment.md",
+          "sourceSha256": "6e5bdf5670eb34017692e9b6c546f36ac7552e6bb9f3f2f3429164fcc46a9361",
+          "relativePath": "references/lead-judgment.md",
+          "method": "skills/atlas-review/references/adversarial/references/lead-judgment.md",
+          "patch": "sources/patches/pstack-interrogate-lead-judgment.patch"
+        },
+        {
+          "upstreamPath": "skills/interrogate/references/reviewer-prompt.md",
+          "snapshot": "sources/upstream/pstack-interrogate/support/references/reviewer-prompt.md",
+          "sourceSha256": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25",
+          "relativePath": "references/reviewer-prompt.md"
+        },
+        {
+          "upstreamPath": "skills/interrogate/references/rubric.md",
+          "snapshot": "sources/upstream/pstack-interrogate/support/references/rubric.md",
+          "sourceSha256": "0f9c6bdb0b96e26dbde5f6407f417e0c02f54080e7a1268d8994f3c3ec6c5ac0",
+          "relativePath": "references/rubric.md",
+          "method": "skills/atlas-review/references/adversarial/references/rubric.md",
+          "patch": "sources/patches/pstack-interrogate-rubric.patch"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "review-adversarial-owner",
+        "review-impact-proof"
+      ]
+    },
+    {
+      "id": "pstack-blast-radius",
+      "owner": "atlas-review",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/blast-radius/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-blast-radius/source.md",
+      "sourceSha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
+      "license": "sources/upstream/pstack-blast-radius/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-review/references/impact/blast-radius.md",
+      "carriedPath": "references/impact/blast-radius.md",
+      "patch": "sources/patches/pstack-blast-radius.patch",
+      "adaptation": "Keep risk tracing and executable safety proof within read-only Review using owned scratch probes. Replace external How/Why/Arena/Unslop calls with scoped history/source evidence, optional bundled Adversarial review and concise cited output; no external skill installation is required.",
+      "consumers": [
+        "atlas-review"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "review-impact-proof"
+      ]
     }
   ],
   "workflows": [
@@ -1444,7 +1666,9 @@
         "better-writing",
         "animate",
         "apple-design",
-        "improve-animations"
+        "improve-animations",
+        "pstack-interrogate",
+        "pstack-blast-radius"
       ],
       "authoredReferences": [
         {
@@ -1680,7 +1904,10 @@
       "entry": "skills/atlas-verify/SKILL.md",
       "agent": "skills/atlas-verify/agents/openai.yaml",
       "methods": [
-        "pe-verify"
+        "pe-verify",
+        "pstack-create-verification-skill",
+        "pstack-maintain-verification-skill",
+        "pstack-benchmark-checklist"
       ],
       "dependencies": [
         {
@@ -1863,7 +2090,7 @@
     {
       "id": "verify-executor-handoff",
       "owner": "atlas-verify",
-      "document": "skills/atlas-verify/SKILL.md",
+      "document": "skills/atlas-verify/references/run.md",
       "section": "Handoffs",
       "sources": [
         "pe-verify"
@@ -1934,6 +2161,64 @@
         "wayfinder-local-tracker"
       ],
       "decision": "Load the shared Grilling and Domain Modeling references directly as required by Wayfinder. Use host-supported loading for independent methods. Honor the configured tracker adapter; without one, use the bundled local fallback under the active artifact convention."
+    },
+    {
+      "id": "verify-method-authority",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/SKILL.md",
+      "section": "Atlas Verify",
+      "sources": [
+        "pe-verify",
+        "pstack-create-verification-skill",
+        "pstack-maintain-verification-skill",
+        "pstack-benchmark-checklist"
+      ],
+      "decision": "Select Run, Create, Maintain or Performance from the requested outcome. Product fixes remain outside verification. Run owns PE reporting; Create/Maintain own selected verifier assets, and standalone Performance owns measurement evidence. Missing local verifier assets do not add generator/maintenance work to a Run."
+    },
+    {
+      "id": "verify-project-verifier-bridge",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/project-verifiers.md",
+      "section": "Coverage and reporting",
+      "sources": [
+        "pe-verify",
+        "pstack-create-verification-skill",
+        "pstack-maintain-verification-skill"
+      ],
+      "decision": "Use reusable app-driving instructions without copying the report engine. Map requested features and entrypoints deliberately into PE feature/list reports, preserve prerequisites and lifecycle-versus-behavior states, reuse evidence, and keep one driver/cleanup owner per shared instance. Creation proves one seeded feature; maintenance accounts for every mapped feature."
+    },
+    {
+      "id": "verify-performance-evidence",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/performance/benchmark-checklist.md",
+      "section": "Report",
+      "sources": [
+        "pe-verify",
+        "pstack-benchmark-checklist"
+      ],
+      "decision": "Vet actual measured claims with raw work/error/repetition/limiter evidence. Adapt host tools, keep optimization outside verification, and use existing schema fields when contributing to a Run; standalone benchmarks do not require a rendered PE report or external perf playbook."
+    },
+    {
+      "id": "review-adversarial-owner",
+      "owner": "atlas-review",
+      "document": "skills/atlas-review/SKILL.md",
+      "section": "Atlas Review",
+      "sources": [
+        "code-review",
+        "pstack-interrogate"
+      ],
+      "decision": "Select Interrogate for independent same-intent challenge without automatically adding it to Code review. Keep lead-filtered findings separate from Standards/Spec axes. Honor actual host reviewers and disclose diversity/context gaps; quality blockers require concrete consequences, not a line-count or finding-count heuristic. Review remains read-only."
+    },
+    {
+      "id": "review-impact-proof",
+      "owner": "atlas-review",
+      "document": "skills/atlas-review/references/impact/blast-radius.md",
+      "section": "Steps",
+      "sources": [
+        "pstack-blast-radius",
+        "pstack-interrogate"
+      ],
+      "decision": "Impact traces downstream contracts and proves safety facts through existing checks or owned isolated scratch probes. Product edits and external effects require separate authority. Use source/history evidence directly and select bundled Adversarial only when independent challenge is needed; external How/Why/Arena/Unslop installations are not required."
     }
   ]
 }

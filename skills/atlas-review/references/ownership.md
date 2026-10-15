@@ -8,4 +8,6 @@ Domain entries and supporting examples may describe fixes. During review, treat 
 
 Follow [Motion ownership](motion-ownership.md) for conflicts between UI polish and motion, including supporting examples. Load construction methods only for the rules needed to judge a finding. Whole-interface severity consolidation does not merge the Code method's separate Standards and Spec reports.
 
-PE Verify remains independent: it proves requested behavior with recorded evidence. An Interface or Motion verdict does not establish QA completion. Native/Expo motion is outside these bundled construction methods.
+Adversarial owns same-intent independent challenge and lead-filtered findings; Impact owns downstream-risk investigation and executable safety facts. Their outputs stay separate from Code's Standards and Spec axes. Impact's scratch proofs do not authorize repairs. Reuse adequate existing proof; a broader QA report is a separately selected Atlas Verify task.
+
+Atlas Verify proves requested behavior with recorded evidence. A review verdict does not establish QA completion. Native/Expo motion is outside these bundled construction methods.

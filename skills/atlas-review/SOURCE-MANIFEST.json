@@ -62,7 +62,15 @@
     "references/motion-audit/index.md",
     "licenses/improve-animations.txt",
     "references/motion-audit/AUDIT.md",
-    "references/motion-audit/PLAN-TEMPLATE.md"
+    "references/motion-audit/PLAN-TEMPLATE.md",
+    "references/adversarial/interrogate.md",
+    "licenses/pstack-interrogate.txt",
+    "references/adversarial/references/code-quality-review.md",
+    "references/adversarial/references/lead-judgment.md",
+    "references/adversarial/references/reviewer-prompt.md",
+    "references/adversarial/references/rubric.md",
+    "references/impact/blast-radius.md",
+    "licenses/pstack-blast-radius.txt"
   ],
   "authoredInputs": [
     "skills/atlas-review/SKILL.md",
@@ -121,7 +129,9 @@
       "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
-      "rulings": [],
+      "rulings": [
+        "review-adversarial-owner"
+      ],
       "patch": "sources/patches/code-review.patch",
       "patchSha256": "9a3738900259e73c4a7f3a6a00f8574881a2b1ad4d1e66b961b58e8100dfe0d4"
     },
@@ -751,6 +761,96 @@
       ],
       "patch": "sources/patches/improve-animations.patch",
       "patchSha256": "a1fe392a15464467e16dbffc9c8509e0102c81db62e8e6c6f0870c7f668cded0"
+    },
+    {
+      "id": "pstack-interrogate",
+      "owner": "atlas-review",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/interrogate/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/interrogate/references/code-quality-review.md",
+          "classification": "patched",
+          "sourceSha256": "79162fda183eafd40d51661fbb5e151c7ba250f89e506ba17f5bd135dcbd50a8",
+          "carriedPath": "references/adversarial/references/code-quality-review.md",
+          "carriedSha256": "4f6c4bedc9cb0321a1ebacb8a7dabf70cb0089aaf31fa75072cdde9d56101985",
+          "patch": "sources/patches/pstack-interrogate-code-quality-review.patch",
+          "patchSha256": "f0a4211b0f0c519ec2b50ba65d9dd571e85da8ad02bab0be48a282d955df1559"
+        },
+        {
+          "upstreamPath": "skills/interrogate/references/lead-judgment.md",
+          "classification": "patched",
+          "sourceSha256": "6e5bdf5670eb34017692e9b6c546f36ac7552e6bb9f3f2f3429164fcc46a9361",
+          "carriedPath": "references/adversarial/references/lead-judgment.md",
+          "carriedSha256": "3a7b1c463d1e22fce84bacb631721c07899cf62e5a8a4cdbe690a920ba605fd0",
+          "patch": "sources/patches/pstack-interrogate-lead-judgment.patch",
+          "patchSha256": "5884695178b90ec276922bab897270b6aeb122dee3a21e25c43d1a9a3a639ecb"
+        },
+        {
+          "upstreamPath": "skills/interrogate/references/reviewer-prompt.md",
+          "classification": "verbatim",
+          "sourceSha256": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25",
+          "carriedPath": "references/adversarial/references/reviewer-prompt.md",
+          "carriedSha256": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25"
+        },
+        {
+          "upstreamPath": "skills/interrogate/references/rubric.md",
+          "classification": "patched",
+          "sourceSha256": "0f9c6bdb0b96e26dbde5f6407f417e0c02f54080e7a1268d8994f3c3ec6c5ac0",
+          "carriedPath": "references/adversarial/references/rubric.md",
+          "carriedSha256": "bf4e0f9b620cd54823cbf606aaef16a4aad62e9a46af1c3f288c80a5aaada869",
+          "patch": "sources/patches/pstack-interrogate-rubric.patch",
+          "patchSha256": "476ed4eea17371a2a4e0e394ed4ce70c32260b722c431af294b287ae64c20ed0"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "cf994ce47a2cf9daed0b4fe437eef1f13dd93683f75c4f01818ace51ce653a9c",
+      "carriedPath": "references/adversarial/interrogate.md",
+      "carriedSha256": "4606413b795c358c5e9b95b55c7a780ed66e3da8ae5db3f260956a972584fafa",
+      "licensePath": "licenses/pstack-interrogate.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Use available host reviewers and disclose actual model diversity instead of fixed provider defaults or automatic model-table PRs. Preserve independent same-intent review, attribution and lead judgment; treat quality heuristics as contextual findings and keep review read-only.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "review-adversarial-owner",
+        "review-impact-proof"
+      ],
+      "patch": "sources/patches/pstack-interrogate.patch",
+      "patchSha256": "7c36013ac30957bb06b505604caf5a5d389f62e0f12eac7e395503079458febb"
+    },
+    {
+      "id": "pstack-blast-radius",
+      "owner": "atlas-review",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/blast-radius/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
+      "carriedPath": "references/impact/blast-radius.md",
+      "carriedSha256": "0136c722bcc2897b95b01ae986bb57f4c6bb75ba32f916ec7e704aa992a274d2",
+      "licensePath": "licenses/pstack-blast-radius.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Keep risk tracing and executable safety proof within read-only Review using owned scratch probes. Replace external How/Why/Arena/Unslop calls with scoped history/source evidence, optional bundled Adversarial review and concise cited output; no external skill installation is required.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "review-impact-proof"
+      ],
+      "patch": "sources/patches/pstack-blast-radius.patch",
+      "patchSha256": "c9d2454a94b4e5561a17a96dfdcb44e3421c1c117263370511a7fd8f18bbbf4d"
     }
   ],
   "rulings": [
@@ -783,11 +883,33 @@
         "improve-animations"
       ],
       "decision": "Shared motion ownership governs judgments; review and audit do not authorize implementation."
+    },
+    {
+      "id": "review-adversarial-owner",
+      "owner": "atlas-review",
+      "document": "skills/atlas-review/SKILL.md",
+      "section": "Atlas Review",
+      "sources": [
+        "code-review",
+        "pstack-interrogate"
+      ],
+      "decision": "Select Interrogate for independent same-intent challenge without automatically adding it to Code review. Keep lead-filtered findings separate from Standards/Spec axes. Honor actual host reviewers and disclose diversity/context gaps; quality blockers require concrete consequences, not a line-count or finding-count heuristic. Review remains read-only."
+    },
+    {
+      "id": "review-impact-proof",
+      "owner": "atlas-review",
+      "document": "skills/atlas-review/references/impact/blast-radius.md",
+      "section": "Steps",
+      "sources": [
+        "pstack-blast-radius",
+        "pstack-interrogate"
+      ],
+      "decision": "Impact traces downstream contracts and proves safety facts through existing checks or owned isolated scratch probes. Product edits and external effects require separate authority. Use source/history evidence directly and select bundled Adversarial only when independent challenge is needed; external How/Why/Arena/Unslop installations are not required."
     }
   ],
   "files": {
-    "SKILL.md": "3cf54a4944db3bddd9d3f8e827af79b147829c93b5a35b48f22b5c9d5f47ca76",
-    "agents/openai.yaml": "c33039fa49b6a4c44bd2d9a0ee660341533e47ff1c6ef28ad69b975f7076882d",
+    "SKILL.md": "0e287df994915e59b6193ed9f914b15e4729547386828175bf44f77a8ec2328f",
+    "agents/openai.yaml": "9b78d611bb041022a034a993fc70b605d29d162c4526650a80fad72932bdd0a6",
     "references/static/static-review.md": "a105165ead3aa7af298ec25dcd881c60463d97805830b62b8f9dcc0e00b85b0d",
     "references/static/scripts/changed-files.sh": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7",
     "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
@@ -851,6 +973,14 @@
     "licenses/improve-animations.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/motion-audit/AUDIT.md": "551c8473e20e5f4774680bc24d45e1c68e50992582720905c6b077756b7b5a55",
     "references/motion-audit/PLAN-TEMPLATE.md": "2bd69a945e3111154442b0137f9a56336f139357b8cf2c95abeed6b36c85506b",
-    "references/ownership.md": "61589e5b13798ea1250a62d17e6508056e4fe572a07d3ca2059d70f1ce612aa1"
+    "references/adversarial/interrogate.md": "4606413b795c358c5e9b95b55c7a780ed66e3da8ae5db3f260956a972584fafa",
+    "licenses/pstack-interrogate.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/adversarial/references/code-quality-review.md": "4f6c4bedc9cb0321a1ebacb8a7dabf70cb0089aaf31fa75072cdde9d56101985",
+    "references/adversarial/references/lead-judgment.md": "3a7b1c463d1e22fce84bacb631721c07899cf62e5a8a4cdbe690a920ba605fd0",
+    "references/adversarial/references/reviewer-prompt.md": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25",
+    "references/adversarial/references/rubric.md": "bf4e0f9b620cd54823cbf606aaef16a4aad62e9a46af1c3f288c80a5aaada869",
+    "references/impact/blast-radius.md": "0136c722bcc2897b95b01ae986bb57f4c6bb75ba32f916ec7e704aa992a274d2",
+    "licenses/pstack-blast-radius.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/ownership.md": "f141d5ff5a8079aa1d4f2966ef05fa1ab3e4847ffbab7f3a54315f3bfb4bf3e1"
   }
 }

@@ -30,4 +30,6 @@ Atlas Grill replaces Grilling, Grill Me and Grill with Docs. It defaults to Gril
 
 Atlas Simplify carries Code Simplification verbatim and replaces its independent stack selection. Tracking offers Atlas Simplify for material simplification opportunities while preserving the checkpoint's agreed scope.
 
+Atlas Verify carries PE Verify's Run/report engine and Pstack's Create, Maintain and Performance methods. Atlas Review adds Pstack Interrogate as Adversarial and Blast Radius as Impact. These methods and their support files ship inside the consuming packages; no separate Pstack installation is needed. The Pstack baseline is the modified standalone mirror at `backnotprop/pstack`, with its own pinned source records and MIT notices. Method selection does not add automatic review passes, product repairs or publication steps.
+
 Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.

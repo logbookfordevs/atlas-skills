@@ -22,8 +22,8 @@ Install the Atlas-owned packages below, or import the shared stack to include th
 | [Atlas Implement](skills/atlas-implement/SKILL.md) | Bundled TDD and Source-Driven methods, selected independently or together |
 | [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose hard bugs and performance regressions through reproduction, hypotheses and regression proof |
 | [Atlas Simplify](skills/atlas-simplify/SKILL.md) | Improve code clarity while preserving behavior through the bundled Code Simplification method |
-| [Atlas Review](skills/atlas-review/SKILL.md) | Code, Static, Interface, Motion and Motion Audit review |
-| [Atlas Verify](skills/atlas-verify/SKILL.md) | Behavior verification and project QA with recorded evidence and rendered reports |
+| [Atlas Review](skills/atlas-review/SKILL.md) | Code, Adversarial, Impact, Static, Interface, Motion and Motion Audit review |
+| [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, create or maintain project verifiers, and assess performance evidence |
 | [Atlas Craft](skills/atlas-craft/SKILL.md) | Color, Type, Layout, Accessibility, UI Polish and Copy |
 | [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid and read-only Opportunities |
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Automatic tracking alongside any selected executor |
