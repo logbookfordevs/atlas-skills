@@ -126,7 +126,7 @@ describe('Atlas navigation', () => {
     const user = userEvent.setup();
     const router = open('/stack/');
     expect(screen.getByRole('link', { name: /Download the manifest/ }).getAttribute('href')).toBe('/stack.json');
-    expect(screen.getByRole('link', { name: 'AFK — AI Field Kit' }).getAttribute('href')).toBe('https://github.com/logbookfordevs/ai-field-kit');
+    expect(screen.getByRole('link', { name: 'AFK — AI Field Kit' }).getAttribute('href')).toBe('https://ai-field-kit.logbookfordevs.com/');
     await user.click(screen.getByRole('button', { name: 'Copy manifest URL' }));
     expect(await navigator.clipboard.readText()).toBe('https://atlas.logbookfordevs.com/stack.json');
     const atlasLinks = screen.getAllByRole('link').filter(link => link.getAttribute('href')?.startsWith('/skills/'));

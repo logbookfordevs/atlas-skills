@@ -6,7 +6,7 @@ AFK import is an optional installation route. For direct package installation an
 
 ## Import
 
-[AFK — AI Field Kit](https://github.com/logbookfordevs/ai-field-kit) is a local workspace for managing agent skills, profiles, tools and shared rules. Start it with `npx @logbookfordevs/afk`. It installs selected skills through Skills CLI; using Atlas does not require adopting AFK's profiles.
+[AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) is a local workspace for managing agent skills, profiles, tools and shared rules. Start it with `npx @logbookfordevs/afk`. It installs selected skills through Skills CLI; using Atlas does not require adopting AFK's profiles.
 
 In AFK’s Sources & Stacks, add a stack by pasting the manifest JSON or providing its direct HTTPS JSON URL. Inspect the sources and skill selections before saving. Copy the stack’s install script, select the installation destination and agent, and run the copied script when ready. Import and copy do not install or activate skills. Profiles remain optional activation groups.
 
