@@ -72,15 +72,15 @@ Statuses: `pending`, `in_progress`, `validating`, `review`, `blocked`, `done`.
 
 `review_gate` uses `pending`, `changes_requested`, `awaiting_acceptance`, and `accepted`:
 
-- `pending`: automated code review has not completed.
+- `pending`: the selected automated reviews have not completed.
 - `changes_requested`: the latest review has findings being judged or fixed.
-- `awaiting_acceptance`: the review was clean, or its findings were judged and warranted fixes were validated and committed; the gate awaits the user's final judgment.
+- `awaiting_acceptance`: selected reviews are complete or have recorded coverage gaps, findings are resolved, and warranted fixes are validated and committed; the gate awaits the user's final judgment.
 - `accepted`: the user accepted the checkpoint.
 
 Keep the implementation status `review` until the review gate is accepted. Preserve the automatic review under `## Complete Review Record`:
 
 - For actionable findings, preserve the complete review output plus the judgment and resolution for each finding.
-- For a clean review, keep a compact receipt with the reviewed range, finding count per axis, verification gaps, and `awaiting_acceptance` gate state.
+- For clean reviews, keep a compact receipt for each selected method with its scope, reviewed revision, finding counts, coverage gaps, and `awaiting_acceptance` gate state. Preserve Code's finding counts per axis.
 
 Use `blocked_by` for record dependencies, human decisions, missing context, or external blockers.
 
@@ -110,7 +110,9 @@ Commit all implementation-owned changes before opening the automated Review Gate
 History rewrites and remote or public actions still require approval. If local commits are unavailable, ask.
 
 ## Review Gate
-After final validation, run `atlas-review` in Code mode once automatically from `review_base`. If it reports findings, set `changes_requested`; judge each finding against the code and its cited source, fix warranted findings, record evidence for dismissals, revalidate, and commit. Do not rerun it automatically. Once the review is clean or warranted fixes are committed, set `awaiting_acceptance`. The user decides whether fixes or later changes require another review.
+After final validation, read [Review Selection](references/review-selection.md) and record the checkpoint's selected methods and review questions. Run `atlas-review` in Code mode plus the applicable selected methods once automatically, using `review_base` for change reviews. Reuse adequate review evidence already provided for the same checkpoint and question. Keep each method's scope and findings distinct in Complete Review Record.
+
+If any selected review reports findings, set `changes_requested`; judge each finding against the implementation and its cited evidence, fix warranted findings, record evidence for dismissals, revalidate, and commit. Do not rerun the reviews automatically. Set `awaiting_acceptance` only after every selected review has completed and its findings are resolved, or its unavailable coverage has an explicit recorded gap. The user decides whether fixes or later changes require another review.
 
 At `awaiting_acceptance`, use Plannotator's available skills and tool guidance to generate a Guided Review of the final implementation-owned diff from `review_base`. When Inbox is available, deliver it as a native Guided Review card, not an attached HTML export. If native delivery fails, disclose the delivery gap before providing a fallback. Link the current guide from the Tracking Home and final handoff. Use local delivery unless hosted sharing is authorized. Interactive diff review and record annotation run on user request.
 

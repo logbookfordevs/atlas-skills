@@ -2541,7 +2541,7 @@
           "id": "atlas-review",
           "relationship": "behavioral",
           "required": true,
-          "condition": "When the executor has not already provided the checkpoint code review."
+          "condition": "For checkpoint Code review and applicable specialist methods selected from the change; reuse adequate evidence for the same checkpoint and question."
         },
         {
           "id": "plannotator",

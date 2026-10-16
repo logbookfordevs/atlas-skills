@@ -6,7 +6,7 @@ Find the active workflow from the user's hint, current repo, branch, existing lo
 
 Read the smallest useful set: active records, blockers, continuation context, their sources, and directly referenced specs or ADRs.
 
-Recover the active record's `review_base`, last green atomic commit, implementation-owned dirty paths, validation state, automatic code-review evidence, and review-gate states.
+Recover the active record's `review_base`, last green atomic commit, implementation-owned dirty paths, validation state, selected review methods and questions, completed review evidence, coverage gaps, and review-gate states. For older records without a selection, use the main skill's Review Selection guidance for pending reviews; preserve completed review history without silently launching additional passes.
 
 Recover its Guided Review link and checkpoint revision, Inbox references and unresolved questions. Reconcile unread replies and check the guide still matches the active checkpoint under the main skill's handoff policy.
 

@@ -64,6 +64,8 @@ Atlas Retro (`atlas-retro`) is a manually invoked composition. Diagnose carries 
 
 Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.
 
+Tracking’s checkpoint gate runs Code review plus applicable Interface Changes, Motion, Impact or Adversarial reviews. Selection follows the actual change and a recorded question for each method. Adversarial requires a concrete high-consequence risk and unresolved assumption. Completed evidence for the same checkpoint and question is reused; selected methods, findings and coverage gaps persist on resume. This does not add automatic verification runs.
+
 ## Setup and cleanup
 
 Atlas Setup compares installed source/skill identities with the current selected stack and its bundled dependency registry. It uses a supplied manifest or the Atlas checkout's canonical manifest, otherwise the public URL; the bundled stack is a disclosed freshness fallback. Missing stack selections are recommendations, while dependencies retain their package-specific conditions.
