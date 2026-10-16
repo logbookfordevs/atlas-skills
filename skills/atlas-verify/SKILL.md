@@ -1,6 +1,6 @@
 ---
 name: atlas-verify
-description: "Run requested verification of implemented behavior or project QA, including requests to verify after implementation or in an existing browser session. Run produces a structured report with recorded evidence. Also create or maintain reusable project verifiers, or assess benchmark and performance claims."
+description: "Run requested verification of implemented behavior or project QA, including requests to verify after implementation or in an existing browser session. Also create or maintain reusable project verifiers, or assess benchmark and performance claims."
 disable-model-invocation: false
 metadata:
   short-description: Verify behavior, maintain project verifiers and assess measurements.
