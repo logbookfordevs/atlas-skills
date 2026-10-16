@@ -1,6 +1,6 @@
 ---
 name: atlas-explain
-description: "Explain a codebase, change or subsystem: How traces mechanics and ownership, Why investigates historical rationale, and Teach builds conversational understanding. Ask the user to choose when no mode is supplied."
+description: "Explain a codebase, change or subsystem: How traces mechanics and ownership, Why investigates historical rationale, and Teach builds conversational understanding."
 disable-model-invocation: false
 metadata:
   short-description: Explain mechanics, investigate rationale or teach through conversation.
