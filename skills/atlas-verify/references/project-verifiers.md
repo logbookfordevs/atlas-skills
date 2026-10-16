@@ -1,6 +1,6 @@
 # Project verifiers
 
-A project-local verifier owns app-specific launch, doctor, driving, feature-map and cleanup knowledge. Keep it usable directly, without an AFK installation or a copied Atlas report engine. Select Create or Maintain when reusable assets are the requested outcome; a Run can use existing recipes without modifying them.
+A project-local verifier owns app-specific launch, doctor, driving, feature-map and cleanup knowledge. Keep it usable directly, without a copied Atlas report engine. Select Create or Maintain when reusable assets are the requested outcome; a Run can use existing recipes without modifying them.
 
 ## Scope and live sessions
 

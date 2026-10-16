@@ -57,6 +57,8 @@ The stack manifest lists the unchanged skills used alongside Atlas, including Re
 
 AFK CLI and Profile Use are companion skills owned by the AFK project, not Atlas packages. Compass is excluded for now. The website publishes the stack manifest; terminal stack installation is provided by AFK. Atlas Setup currently checks dependencies rather than installing the entire recommended stack.
 
+For examples of combining the current skills, see [Work with Atlas](docs/workflows.md).
+
 ## Source maintenance
 
 A single [composition manifest](sources/composition.json) tracks carried sources, immutable revisions, licenses, supporting files, patches and consumers. Preserved upstream frontmatter stays with each source. Installable packages include source receipts and required notices.

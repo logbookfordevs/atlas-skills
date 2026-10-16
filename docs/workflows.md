@@ -1,123 +1,85 @@
-# Compose a workflow
+# Work with Atlas
 
-Choose the next skill by what remains unresolved. If the behavior is already agreed, start implementation. If the code is ready, start review. A longer chain is useful only when each step answers a real question or preserves something the next step needs.
+Choose the next method from what remains unresolved. A small change can go straight to implementation. A larger effort may need a decision map, a specification or executable tickets first. Each step earns its place by answering a question or preserving context the next step needs.
 
-The [skill guide](catalog-guide.md) helps you choose individual tools. This chapter explains how they work together.
+[Atlas Mode](../skills/atlas-mode/SKILL.md) can help choose an approach and carry it out. It applies clearly selected methods directly and explains materially different workflows before you choose. Individual skills remain usable on their own. [The package list](../README.md#skills-v2) and [website reference](https://atlas.logbookfordevs.com/) describe the available methods.
 
-<h2 id="workflows-composition">Small skills, named compositions</h2>
+## Skills and bundled methods
 
-AFK's composition model borrows the intuition of React components: small pieces can be reused inside a named whole. This is a way to describe agent behavior; no React runtime executes the skills.
+Atlas packages group related methods while preserving their source records and concrete ownership rules. For example, Atlas Implement offers Architect, TDD and Source-Driven Development; choosing TDD does not require running Architect too.
 
-| Role | Job | Example |
+Required source methods and supporting files ship inside the consuming package. Some independent companions, such as Research and Prototype for Wayfinder ticket types, still require their own installation. Atlas Setup checks declared dependencies when requested. The [composition manifest](../sources/composition.json) records package contents; the [stack manifest](../stacks/atlas.json) selects packages to install. Neither is a runtime execution schedule.
+
+AFK — AI Field Kit is optional installation and management tooling. Its profiles are not Atlas workflow stages. See [stack installation](atlas-stack.md) for terminal and interface instructions.
+
+## Example: build saved filters
+
+Suppose users need to save a dashboard filter, return later and restore it, but sharing, ownership and empty states are undecided.
+
+| What remains unresolved | Method | Useful result |
 | --- | --- | --- |
-| Primitive | Supply a reusable practice. | `grilling` challenges assumptions; `tdd` develops behavior test-first. |
-| Wrapper | Apply practices to a narrower job. | `afk-code-grill` focuses grilling on technical choices. |
-| Workflow | Own several stages, state, or approval points. | `afk-implement` tracks work through validation and acceptance. |
-| Utility | Perform a bounded supporting task. | `afk-ask` captures a second opinion. |
-| Reference | Supply knowledge another skill can consult. | Shared vocabulary or decision guidance. |
-| Router | Choose or load the right instructions. | `afk-compass` recommends a route; `afk-profile-use` loads a working set. |
+| Behavior and trade-offs | Atlas Grill; With Docs when documentation is requested | Decisions and constraints to build against |
+| A settled conversation needs a contract | Atlas To Spec | A local specification with behavior, exclusions and test seams |
+| The work needs executable slices | Atlas To Tickets | Vertical implementation tickets with explicit blockers |
+| Implementation shape, tests or version-specific APIs | Atlas Implement: Architect, TDD or Source-Driven as applicable | Working code with the selected method's evidence |
+| Progress must survive handoffs | Tracking Implementation, when requested | One durable Implementation Record alongside the executor |
+| Completed behavior needs proof | Atlas Verify: Run, when requested or selected for the task | A structured verification report with actual evidence and coverage gaps |
+| The change needs judgment | Atlas Review, or Tracking's checkpoint review gate | Findings, their resolution and remaining uncertainty |
 
-In the catalog, `role` describes that shape and `composes` lists the skills a composition builds on. For example:
+These are choices, not required phases. Once scope is settled, a request might be:
 
-```text
-afk-code-grill
-├── grilling             asks the hard questions
-├── truss-evaluation     evaluates consequential trade-offs
-└── codebase-design      supplies module and interface vocabulary
-```
+> Build saved filters test-first. Track the implementation in a local HTML record, then run a verification of the completed behavior in my logged-in browser session.
 
-AFK setup warns about and includes declared composed dependencies when you select a parent skill. At runtime, the agent follows the skill instructions; `composes` is not an execution scheduler or a guarantee that every skill mentioned in prose is installed. Direct installation from a repository also does not apply AFK's catalog dependency selection.
+Tracking records execution state; Atlas Implement supplies selected implementation methods. Tracking's gate runs Code review plus applicable specialist reviews, each with a concrete question and scope. Existing same-checkpoint evidence can be reused. Its Guided Review is delivered as a native Inbox card when available; final checkpoint acceptance remains the user's decision. Tracking does not automatically select Atlas Verify.
 
-Invocation policy is independent of composition. A manually invoked wrapper can use a primitive without making the whole wrapper an automatic response to every task. A profile groups available instructions; it does not prescribe their execution order.
+For a tiny edit, ordinary project validation may be enough. A local test run, a review, a commit, a push and user acceptance are distinct outcomes.
 
-<h2 id="workflows-feature">Example: take a feature from questions to accepted code</h2>
+## Example: settle an interface question
 
-Suppose you want to add saved filters to an existing dashboard. Users should save a filter, return later, and restore it. Storage, sharing, and empty-state behavior are still undecided.
+Choose the artifact or judgment that answers the current question:
 
-| Step | Use | Decision or handoff |
+- **Hierarchy and navigation:** HTML UI's Wireframe method keeps fidelity low while you judge structure.
+- **An interactive visual commitment:** HTML UI's Model method makes the agreed flow concrete. It uses the independently available Design Artifact guidance.
+- **An uncertain state model or behavior:** the independent Prototype skill can build a bounded experiment.
+- **An established interface needs refinement:** Atlas Craft supplies Color, Type, Layout, Accessibility, UI Polish and Copy methods while preserving accepted identity.
+- **A changed interface needs review:** Atlas Review's Interface Changes distinguishes introduced, regressed and pre-existing problems. Interface Audit assesses an existing screen or flow more broadly.
+
+Carry approved references, viewport expectations, states and permitted adaptations into the spec or ticket. Reopen direction only when a material choice remains unresolved.
+
+## Example: build demanding motion
+
+Atlas Motion builds animations with Animate, physical gestures with Fluid, or identifies worthwhile Opportunities without changing product code. Atlas Review supplies Motion review and Motion Audit for judging existing work.
+
+Use Animated-Driven Frontend for synchronized progress, scroll sequences, rendering pipelines, WebGL assets and runtime ownership. Test uncertain effects with a representative sample before expanding them, including interruption, mobile performance and reduced motion. The active package is engineering guidance; it does not prescribe the retired cinematic production stages or a production binder.
+
+## Other entry points
+
+| Situation | Use | Boundary |
 | --- | --- | --- |
-| 1. Settle the behavior | `grill-with-docs` or `afk-code-grill` | Decide ownership, persistence, constraints, and testable behavior. Use the docs route when vocabulary and ADRs need recording. |
-| 2. Capture the agreement | `afk-to-spec` | Preserve the behavior, trade-offs, exclusions, and testing decisions. |
-| 3. Slice if useful | `afk-to-tickets` | Agree independently verifiable tickets and their blockers, such as saving one filter before adding sharing. |
-| 4. Implement the next unblocked slice | `afk-implement` | Choose local or remote tracking, record execution evidence, and complete the review gate. |
-| 5. Accept or request changes | User review | Confirm the result, including behavior or visual evidence that automated review cannot decide for you. |
+| A bug has an unknown cause | Independent Diagnosing Bugs | Establish the cause and validate the fix through the actual behavior. |
+| Unresolved decisions exceed one session | Atlas Wayfinder | Create or resume a decision map; it plans by default rather than executing the whole project. |
+| You need to understand code | Atlas Explain: How, Why or Teach | Select the explanation mode; the topic alone does not bypass its chooser. |
+| A shared contract could affect other consumers | Atlas Review: Impact | Trace downstream assumptions and preserve evidence for the risks. |
+| A consequential assumption needs challenge | Atlas Review: Adversarial | Independent review supplies evidence for judgment, not automatic authority. |
+| Work benefits from teammates | Team Up: Delegation, Arena or Swarm | Choose the smallest capable team; use Arena for competing candidates and Swarm for structured coverage or races. |
+| A session exposes recurring workflow friction | Atlas Retro: Diagnose | Propose improvements. Enforce requires authorization to implement prevention. |
+| Installed dependencies or stack alignment need inspection | Atlas Setup | Installation and named removals retain their own approvals. Setup stays outside Atlas Mode. |
+| A tracked implementation needs continuation | Tracking Implementation: Resume | Recover the existing record, source, blockers, review selections and evidence. |
 
-These are separate requests, made when the preceding work is ready:
-
-```text
-Use afk-code-grill to settle the saved-filter behavior and technical choices.
-Use afk-to-spec to capture the decisions we have agreed.
-Use afk-to-tickets to propose independently verifiable slices from that spec.
-Use afk-implement for the first unblocked ticket, using the linked spec.
-```
-
-Ticket writing waits for approval of the breakdown and destination. Implementation asks where its tracking record should live, validates the selected development disciplines, and runs `afk-code-review` after implementation-owned changes are committed. Its status stays in review until you accept the checkpoint. You do not need to run a second code review just because the sequence reaches its last row.
-
-For one bounded change, skip tickets and implement from the spec. For a tiny edit, skip durable implementation tracking unless you want it. If the conversation already establishes the behavior, skip grilling. `afk-to-spec` records known decisions; it cannot make unresolved product choices disappear.
-
-<h2 id="workflows-design">Example: settle a frontend direction</h2>
-
-Use `afk-design-grill` when the visual direction is still open. It makes consequential choices visible and records the selected reference, what must be preserved, and what implementation may adapt.
-
-Choose an experiment for the remaining question:
-
-- **Hierarchy or navigation:** use `html-wireframe` to judge structure without polish.
-- **A state model or behavior inside an existing product:** use `prototype` for a bounded experiment.
-- **A polished standalone surface or interactive flow:** use `html-prototype` when the artifact needs enough fidelity to approve visually.
-
-Bring the selected reference and visual commitment into the spec or implementation ticket. A useful handoff says which frames, viewports, and states are authoritative. “Make it look like the prototype” leaves too much to interpretation.
-
-If an external design is already approved, begin from that reference and its constraints. Reopen direction only when a material unresolved choice requires it.
-
-<h2 id="workflows-cinematic">Example: produce a cinematic frontend</h2>
-
-Use `afk-animated-driven-frontend` when pacing, motion, and cinematic direction carry the experience. The user and agent act as co-directors, approving production stages with rendered evidence.
-
-The broad order is **development → treatment → preproduction → production → rough-cut screening and picture lock → post-production → delivery**. It is an iterative production process: a risky shot may need a real tracer implementation before the next decision can be made.
-
-The production binder preserves creative continuity across sessions. Its director's notebook indexes approved choices, rejected directions, open questions, and evidence. When several approved cuts are ready for independent work, use `afk-to-tickets` to schedule that frontier and `afk-implement` to track execution. Keep creative greenlights in the binder and validation/review state in the Implementation Record, linked together.
-
-The [ADF Cinematic Production Map](https://tot.page/BKxaG-aUkUFc5f180RsQ4Q) is the visual companion for stages, artifacts, and greenlights. Start there if the film-production vocabulary is unfamiliar.
-
-<h2 id="workflows-other-routes">Other useful entry points</h2>
-
-| Situation | Suggested order | Boundary |
-| --- | --- | --- |
-| A bug with an unknown cause | `diagnosing-bugs` → review | Establish the cause, fix it and prove the regression through the diagnosis method. Use tracked implementation when the fix warrants it. |
-| A large, interdependent planning problem | `atlas-wayfinder` → focused research, grilling, or prototypes → implementation planning | Wayfinder resolves a shared decision map; implementation tickets organize work whose decisions are ready. |
-| A finished change needs scrutiny | `afk-static-review` and `afk-code-review` | Static checks and intent review answer different questions. Neither is user acceptance. |
-| Findings need adjudication before fixes | `afk-code-review-verdicts` → discussion → approved fixes | The wrapper runs the review itself, then verifies its findings. |
-| Framework behavior is uncertain | `research` or `source-driven-development` → implementation | Preserve the source and version assumptions that justify the choice. |
-| A difficult decision needs another view | `afk-ask` or `clean-room` → reconcile the evidence | A second opinion is input to judgment, not automatic authority. |
-| The next session needs to continue | `handoff` → resume from the linked source and current record | Carry decisions, evidence, blockers, and the next unresolved step. |
-
-Use `afk-architect` when bounded work benefits from independent agent ownership. Use `orchestrator` when coordination needs separate processes or runtimes. Neither replaces the selected specialist's instructions or the user's approval gates.
-
-<h2 id="workflows-handoffs">What survives between skills</h2>
-
-A skill sequence works when each step can recover the decisions it depends on. Preserve the smallest useful artifact and link to it rather than copying every document into every subsequent one.
+## Preserve useful handoffs
 
 | Artifact | What it carries |
 | --- | --- |
-| Spec | Intended behavior, constraints, accepted trade-offs, testing decisions, and exclusions. |
-| Visual commitment | The approved reference, must-preserve details, permitted adaptations, and evidence required for visual acceptance. |
-| Ticket | One executable slice, source references, blockers, acceptance criteria, and test seam. |
-| Implementation Record | Current execution state, validation evidence, review findings, and handoff notes. |
-| Production binder | Creative continuity and approved greenlights across cinematic cuts or sessions. |
+| Specification | Intended behavior, constraints, accepted trade-offs, test seams and exclusions |
+| Approved visual reference | Authoritative states, viewports, must-preserve details and permitted adaptations |
+| Ticket | One executable slice, source references, blockers and acceptance criteria |
+| Implementation Record | Execution state, evidence, review findings, acceptance and continuation context |
+| Verification report | Checked behavior, results, recordings or other evidence, and coverage gaps |
 
-Follow the repository's artifact conventions. Decide explicitly when a remote tracker owns a record. For example, a ticket's “implemented” note is an execution claim; a reviewer still checks the code against the originating spec.
+Follow repository or user storage conventions. Choose explicitly when a remote tracker owns a record, and link existing artifacts rather than duplicating their state.
 
-<h2 id="workflows-maps">Explore the interactive maps</h2>
+## Current references and historical maps
 
-- [Skill Composition Studio](https://tot.page/mhPWYwLnjw_yGzIs8FQOXg): explore primitives, wrappers, workflows, and their relationships. The [source artifact](https://github.com/logbookfordevs/logbook-atlas/blob/main/docs/skill-composition.html) is maintained in Atlas.
-- [ADF Cinematic Production Map](https://tot.page/BKxaG-aUkUFc5f180RsQ4Q): follow filmmaking concepts into frontend stages, artifacts, and approval gates. See its [source artifact](https://github.com/logbookfordevs/logbook-atlas/blob/main/docs/adf-cinematic-production-map.html).
-- [AFK skills and profiles switchyard](https://tot.page/13T7lSXk6SIhvGNt0aa_tw): explore how skill commands, profiles, catalog policy, storage, and recovery paths interact. See its [source artifact](https://github.com/logbookfordevs/logbook-atlas/blob/main/docs/afk-skills-profiles-state-machine.html).
+Use [Skill maintenance](authoring/source-composition.md) for package changes, [the stack guide](atlas-stack.md) for installation, and the [website](https://atlas.logbookfordevs.com/) for user-facing examples.
 
-The published maps are explanatory snapshots. For the composition in your current catalog, generate a fresh local view:
-
-```bash inspect your current composition
-afk show skills --react
-afk show skills --visualize
-```
-
-Continue with [skill installation and maintenance](/docs?chapter=skills), or [profiles](/docs?chapter=profiles) to group the instructions you use together.
+The previous composition, skills/profile and cinematic maps described retired workflows. Their source files are retained as [historical snapshots](migrations/retired-guides/README.md), not current invocation or CLI guidance. Previously published external copies are also snapshots; this repository update does not republish them.

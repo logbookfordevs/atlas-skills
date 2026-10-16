@@ -2777,7 +2777,7 @@
           "id": "research",
           "relationship": "behavioral",
           "required": true,
-          "condition": "When resolving an AFK Research ticket or charting research work."
+          "condition": "When resolving an autonomous Research ticket or charting research work."
         },
         {
           "id": "prototype",

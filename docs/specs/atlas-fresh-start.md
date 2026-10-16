@@ -1,5 +1,7 @@
 # Atlas fresh-start discussion
 
+> Historical decision record. Package counts, names and delivery states below describe that stage, not the current collection. See [the current package list](../../README.md) and [current workflows](../workflows.md).
+
 This records the fresh-start review of the original 54-entry AFK catalog plus five new candidates. The decisions below now define the locally implemented stack; Git history preserves the earlier proposal. Keep original list numbers for discussion continuity.
 
 ## Recorded choices
