@@ -13,6 +13,8 @@ npm run dev
 
 The application uses React, TypeScript, Vite, and React Router. Edit skill summaries in `content.json`, the canonical stack in `../../stacks/atlas.json`, and the visual system in `src/styles/site.css`. Pages live in `src/pages/`; the persistent shell and internal navigation live in `src/components/`.
 
+Each method in `content.json` has a `title`, `description` and `example`. Reference pages show the example beside the method it demonstrates. Use concrete requests that distinguish the method's outcome and preserve its scope. A skill with one workflow gets one complete example; workflow steps are not presented as separate invocation modes. Named submethods, such as Interface Changes and Interface Audit or Run's Feature and QA-list choices, have separate examples. The complete skill remains the authority for behavior and limits.
+
 Run `npm run typecheck`, `npm test`, and `npm run build` before publishing. `npm run preview` serves the production build on port 4173. The build emits a React entry at all catalog URLs, so direct reference links and refreshes work without depending on a host rewrite. Assets and fonts are bundled locally.
 
 Sharing metadata uses the trusted production origin in `site.json`. The build writes canonical, Open Graph, and X card tags into every route’s initial HTML; client navigation updates the same fields. Overview and stack pages use `public/og.png`. Skill references use their own title and summary without inheriting the generic overview image. Run `npm run test:metadata` after building to check all generated HTML entries and the image dimensions. The fields follow the [Open Graph protocol](https://ogp.me/).
