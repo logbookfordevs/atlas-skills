@@ -112,7 +112,7 @@ History rewrites and remote or public actions still require approval. If local c
 ## Review Gate
 After final validation, run `atlas-review` in Code mode once automatically from `review_base`. If it reports findings, set `changes_requested`; judge each finding against the code and its cited source, fix warranted findings, record evidence for dismissals, revalidate, and commit. Do not rerun it automatically. Once the review is clean or warranted fixes are committed, set `awaiting_acceptance`. The user decides whether fixes or later changes require another review.
 
-At `awaiting_acceptance`, use Plannotator's available skills and tool guidance to generate a Guided Review of the final implementation-owned diff from `review_base` and deliver it through Inbox when available. Link the current guide from the Tracking Home and final handoff. Use local delivery unless hosted sharing is authorized. Interactive diff review and record annotation run on user request.
+At `awaiting_acceptance`, use Plannotator's available skills and tool guidance to generate a Guided Review of the final implementation-owned diff from `review_base`. When Inbox is available, deliver it as a native Guided Review card, not an attached HTML export. If native delivery fails, disclose the delivery gap before providing a fallback. Link the current guide from the Tracking Home and final handoff. Use local delivery unless hosted sharing is authorized. Interactive diff review and record annotation run on user request.
 
 When guide delivery is unavailable, record the gap and provide an inline checkpoint walkthrough. Refresh the guide after implementation changes so it matches the checkpoint awaiting acceptance.
 
