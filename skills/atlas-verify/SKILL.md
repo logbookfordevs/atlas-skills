@@ -10,8 +10,6 @@ metadata:
 
 Select from the requested outcome, honoring an explicit method choice. Read and follow the selected method; combine only when the requested proof needs both.
 
-A combined implementation-and-verification request, such as “once you finish, run a verification,” selects Run for the verification portion. Read Run before planning or performing that portion, including when the user specifies an existing logged-in browser session. Automated checks and browser observations supply evidence under Run's report contract. Routine implementation validation alone does not select Run.
-
 | Method | When it applies | Read and follow |
 | --- | --- | --- |
 | Run | Verify implemented behavior, smoke/regression checks or a QA list; default for “verify this” | [Run](references/run.md) |
