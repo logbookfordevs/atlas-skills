@@ -20,7 +20,7 @@ export function SkillReference() {
     <section><h2>When to use it</h2><p>{skill.use}</p></section>
     <section>
       <h2>How it works</h2>
-      <p className="small-copy">Find the method that fits your task, then adapt its example to your project.</p>
+      <p className="small-copy">With this skill selected, describe your task in your own words. Adapt these examples to your project.</p>
       <dl className="method-list">{skill.modes.map((mode) => <div key={mode.title}>
         <dt>{mode.title}</dt>
         <dd>
