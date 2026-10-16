@@ -27,13 +27,13 @@
       "input": "skills/team-up/references/selection.md",
       "target": "references/selection.md",
       "classification": "atlas-authored",
-      "carriedSha256": "15fe18e5133bd7b406b22cc8877add39ebf889816376eaae81efce12cd806247"
+      "carriedSha256": "9b48da7990c5a2bd0e0a3120baf651d26b19263957a6150465b13c2507834b26"
     },
     {
       "input": "skills/team-up/references/model-preferences.md",
       "target": "references/model-preferences.md",
       "classification": "atlas-authored",
-      "carriedSha256": "c62982b7e098e91a7aa8428ae6c7ab2aaa8024f2b811c7a822b96eb0bc4cf4d0"
+      "carriedSha256": "7dc403c401f941e1a4e6b72503862b169931e598d2fbc6cd90ba203803dfc770"
     }
   ],
   "dependencies": [],
@@ -242,8 +242,8 @@
   "files": {
     "SKILL.md": "83095c2263f00ffc2209a9850bdf741e818769e91f8865f55e0a24f203ea866d",
     "agents/openai.yaml": "e947cf31c93940a23d63d0793f9c29e771d2a143145b5f8ff911c17ac657f6b5",
-    "references/selection.md": "15fe18e5133bd7b406b22cc8877add39ebf889816376eaae81efce12cd806247",
-    "references/model-preferences.md": "c62982b7e098e91a7aa8428ae6c7ab2aaa8024f2b811c7a822b96eb0bc4cf4d0",
+    "references/selection.md": "9b48da7990c5a2bd0e0a3120baf651d26b19263957a6150465b13c2507834b26",
+    "references/model-preferences.md": "7dc403c401f941e1a4e6b72503862b169931e598d2fbc6cd90ba203803dfc770",
     "references/arena/arena.md": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
     "licenses/pstack-arena.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-separate-before-serializing-shared-state/SKILL.md": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
