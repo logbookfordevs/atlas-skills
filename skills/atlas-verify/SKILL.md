@@ -1,6 +1,6 @@
 ---
 name: atlas-verify
-description: "Verify behavior or run project QA with recorded evidence; create or maintain reusable project verification skills; vet benchmark and performance claims. Select the requested verification method."
+description: "Run requested verification of implemented behavior or project QA, including requests to verify after implementation or in an existing browser session. Run produces a structured report with recorded evidence. Also create or maintain reusable project verifiers, or assess benchmark and performance claims."
 disable-model-invocation: false
 metadata:
   short-description: Verify behavior, maintain project verifiers and assess measurements.
@@ -9,6 +9,8 @@ metadata:
 # Atlas Verify
 
 Select from the requested outcome, honoring an explicit method choice. Read and follow the selected method; combine only when the requested proof needs both.
+
+A combined implementation-and-verification request, such as “once you finish, run a verification,” selects Run for the verification portion. Read Run before planning or performing that portion, including when the user specifies an existing logged-in browser session. Automated checks and browser observations supply evidence under Run's report contract. Routine implementation validation alone does not select Run.
 
 | Method | When it applies | Read and follow |
 | --- | --- | --- |
