@@ -114,14 +114,9 @@ After final validation, read [Review Selection](references/review-selection.md) 
 
 If any selected review reports findings, set `changes_requested`; judge each finding against the implementation and its cited evidence, fix warranted findings, record evidence for dismissals, revalidate, and commit. Do not rerun the reviews automatically. Set `awaiting_acceptance` only after every selected review has completed and its findings are resolved, or its unavailable coverage has an explicit recorded gap. The user decides whether fixes or later changes require another review.
 
-At `awaiting_acceptance`, use Plannotator's available skills and tool guidance to generate a Guided Review of the final implementation-owned diff from `review_base`. When Inbox is available, deliver it as a native Guided Review card, not an attached HTML export. If native delivery fails, disclose the delivery gap before providing a fallback. Link the current guide from the Tracking Home and final handoff. Use local delivery unless hosted sharing is authorized. Interactive diff review and record annotation run on user request.
+When the gate first reaches `awaiting_acceptance`, use Plannotator's available skills and tool guidance to launch an interactive review of the final implementation-owned diff from `review_base` (`plannotator review --base <review_base>`). Approval of the identified checkpoint sets `accepted`. Change requests set `changes_requested` and return to implementation. Closing or dismissing the review, or receiving no reply, leaves acceptance pending.
 
-When guide delivery is unavailable, record the gap and provide an inline checkpoint walkthrough. Refresh the guide after implementation changes so it matches the checkpoint awaiting acceptance.
-
-Explicit acceptance of the identified checkpoint, including an Inbox reply, sets `accepted`. Change requests set `changes_requested` and return to implementation. Opening the guide, resolving an Inbox thread, dismissing a review, or receiving no reply leaves acceptance pending.
-
-## Inbox Coordination
-Use Plannotator Inbox for unresolved implementation decisions and checkpoint handoff, following its available skills and tool guidance. Continue independent work while decisions are pending. Reconcile replies into the Tracking Home's decisions, blockers and acceptance state before resuming affected work; keep Inbox references there for continuation.
+After resolving that review session's outcome, use Plannotator to annotate the implementation record when the Tracking Home is a local file, and reconcile its feedback before final handoff. If Plannotator is unavailable, record the gap, recommend installing it and continue the normal handoff with acceptance pending until explicitly given.
 
 ## Implementation Record
 Keep task-local state in the Tracking Home using these content groups, or equivalent tracker fields:
@@ -129,7 +124,6 @@ Keep task-local state in the Tracking Home using these content groups, or equiva
 - **Source links:** reference the authoritative scope, acceptance criteria, parent and story coverage instead of copying them. When no accessible source supplies this information, write the agreed scope and acceptance criteria in the record, plus any missing source context. Record local deviations and coverage gaps.
 - **Structured state:** preserve the Implementation State schema for identity, status, blockers, review baseline and gate; add explanations where needed.
 - **Changes and Decisions:** material changes, reasons, implementation-specific invariants, deviations and important constraints.
-- **Guided Review:** an Open Guided Review link for the current checkpoint, its reviewed revision or diff identity, and delivery references or explicit availability gaps.
 - **Execution Evidence:** selected execution disciplines with their required proof, actual validation runs and results, and explicit gaps or skip reasons. Apply the Execution Evidence requirements above.
 - **Complete Review Record:** the full actionable review output, judgment and resolution for every finding, dismissal evidence, unresolved items, or the clean-review receipt defined above.
 - **Acceptance Journey:** hands-on inspection guidance when product or design acceptance needs it; follow [Review Guides](references/review-guides.md).
