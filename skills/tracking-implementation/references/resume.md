@@ -8,7 +8,7 @@ Read the smallest useful set: active records, blockers, continuation context, th
 
 Recover the active record's `review_base`, last green atomic commit, implementation-owned dirty paths, validation state, selected review methods and questions, completed review evidence, coverage gaps, and review-gate states. For older records without a selection, use the main skill's Review Selection guidance for pending reviews; preserve completed review history without silently launching additional passes.
 
-Recover unresolved implementation questions and any Plannotator review feedback, including the checkpoint it applies to. Reconcile decisions and change requests into the record before resuming affected work.
+Recover unresolved implementation questions, any pending interactive-review owner and next action, and any Plannotator review feedback, including the checkpoint it applies to. Reconcile decisions and change requests into the record before resuming affected work.
 
 If Execution Evidence selects Audit Trail, recover its canonical log and audit coverage, then follow the main skill's Audit Trail reference before appending.
 

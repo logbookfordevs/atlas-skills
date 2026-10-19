@@ -118,6 +118,8 @@ When the gate first reaches `awaiting_acceptance`, use Plannotator's available s
 
 After resolving that review session's outcome, use Plannotator to annotate the implementation record when the Tracking Home is a local file, and reconcile its feedback before final handoff. If Plannotator is unavailable, record the gap, recommend installing it and continue the normal handoff with acceptance pending until explicitly given.
 
+**Review ownership:** when Plannotator directs a delegated agent to report to its parent, hand off the Tracking Home, worktree, `review_base` and checkpoint revision. The parent able to host the session owns this gate's interactive review and record annotation, keeps the session alive, records feedback and delegates requested changes back to the implementer. Record the pending owner and next action in Continuation Context. The implementer remains responsible for validation and automated reviews.
+
 ## Implementation Record
 Keep task-local state in the Tracking Home using these content groups, or equivalent tracker fields:
 

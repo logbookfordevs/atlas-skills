@@ -30,7 +30,7 @@ These are choices, not required phases. Once scope is settled, a request might b
 
 > Build saved filters test-first. Track the implementation in a local HTML record, then run a verification of the completed behavior in my logged-in browser session.
 
-Tracking records execution state; Atlas Implement supplies selected implementation methods. Tracking's gate runs Code review plus applicable specialist reviews, each with a concrete question and scope. Existing same-checkpoint evidence can be reused. At acceptance, Tracking launches Plannotator's interactive diff review when available, then offers annotation of the local implementation record. Final checkpoint acceptance remains the user's decision. Tracking does not automatically select Atlas Verify.
+Tracking records execution state; Atlas Implement supplies selected implementation methods. Tracking's gate runs Code review plus applicable specialist reviews, each with a concrete question and scope. Existing same-checkpoint evidence can be reused. At acceptance, Tracking launches Plannotator's interactive diff review when available, then offers annotation of the local implementation record. For delegated work, the parent able to host the interactive session owns its launch, records feedback and delegates requested implementation changes back. Final checkpoint acceptance remains the user's decision. Tracking does not automatically select Atlas Verify.
 
 For a tiny edit, ordinary project validation may be enough. A local test run, a review, a commit, a push and user acceptance are distinct outcomes.
 
