@@ -29,10 +29,10 @@ Start with one Implementation Record. It persists across sessions, compactions, 
 
 Split only when the work has independently owned, validated, or reviewed implementation slices. Each implementing agent owns one record and its directly relevant handoff notes; research and review agents report into the record they support.
 
-Before implementation, ask whether the Tracking Home should be local or use an available remote mechanism:
+Default new Tracking Homes to local records without asking. Use a remote mechanism only when the user requests remote tracking. When resuming, retain the existing Tracking Home unless the user requests a move:
 
-- **Local:** create one Implementation Record in the format defined by Artifact presentation, following the repository or user storage convention. Let Show Me guide its layout and representations for the work and review needs; retain the chosen record across updates.
-- **Remote:** inspect the available mechanism and agree where status, execution evidence, review state, findings, and handoff notes will live.
+- **Local (default):** create one Implementation Record in the format defined by Artifact presentation, following the repository or user storage convention. Let Show Me guide its layout and representations for the work and review needs; retain the chosen record across updates.
+- **Remote (on request):** inspect the available mechanism and agree where status, execution evidence, review state, findings, and handoff notes will live.
 
 An existing remote ticket may host the record when remote tracking is chosen. Otherwise keep the source artifact unchanged and reference it from the Implementation Record. Treat secondary representations as references unless the user agrees to a synchronization contract.
 

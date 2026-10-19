@@ -76,7 +76,7 @@ Use Animated-Driven Frontend for synchronized progress, scroll sequences, render
 | Implementation Record | Execution state, evidence, review findings, acceptance and continuation context |
 | Verification report | Checked behavior, results, recordings or other evidence, and coverage gaps |
 
-Follow repository or user storage conventions. Choose explicitly when a remote tracker owns a record, and link existing artifacts rather than duplicating their state.
+Tracking creates local HTML records by default, following repository or user storage conventions. Use remote tracking on user request; resume existing records in their current home. Link existing artifacts rather than duplicating their state.
 
 ## Current references and historical maps
 
