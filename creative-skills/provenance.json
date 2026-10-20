@@ -5,7 +5,7 @@
     {
       "id": "iso-glow",
       "path": "iso-glow",
-      "classification": "verbatim",
+      "classification": "patched",
       "author": {
         "name": "April Zhu",
         "profile": "https://x.com/Aprilzz423"
@@ -40,12 +40,20 @@
         "assets/lumen/picker.js": "174984d81067d2e54c4471d2c15f281731028f36090336039bde28854721e232",
         "references/anatomy-builds.md": "84afbec69d2149fc561ec56ed98a97ebfc27b83c5aa0f5089ec1326142f66ca6",
         "references/lumen.md": "33301b7df2601c8d6d13ed9a670ecf6332048b50bf5a492a2dff587c3f271128"
-      }
+      },
+      "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI. All other downloaded files remain verbatim.",
+      "patches": [
+        {
+          "file": "SKILL.md",
+          "patch": "patches/iso-glow.patch",
+          "packagedSha256": "1a5615b10c0897b510e08977c8e9ad95c293abd2d86625bdf19047034a1ea9c4"
+        }
+      ]
     },
     {
       "id": "colorfigures",
       "path": "colorfigures",
-      "classification": "verbatim",
+      "classification": "patched",
       "author": {
         "name": "April Zhu",
         "profile": "https://x.com/Aprilzz423"
@@ -78,7 +86,15 @@
         "assets/examples/vending.html": "0ac4b570492fe3481d433b1429617c82ffea00688a7f8d81aff35897b9dc8cc9",
         "assets/examples/washer.html": "1c84f0e43dd43c7bc1c0e741f30a5207537d4bcd907a6a5d4d44329e0052ef70",
         "scripts/build.py": "7fd1f0ca3525c477f873be73f1deb9e222a763d7de333532efecf2899920907e"
-      }
+      },
+      "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI. All other downloaded files remain verbatim.",
+      "patches": [
+        {
+          "file": "SKILL.md",
+          "patch": "patches/colorfigures.patch",
+          "packagedSha256": "ecac624192b68d54288d09ca420ca4229f0be30c107c5fdbc484d0b6609c77df"
+        }
+      ]
     }
   ]
 }

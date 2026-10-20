@@ -1,6 +1,7 @@
 ---
 name: colorfigures
-description: Build colourful, hand-inked, interactive isometric figures of everyday objects and machines (washing machine, vending machine, toaster, kettle, radio, lamp, coffee set, arcade cabinet…) as one self-contained HTML page — real 3D bodies shaded in flat light/mid/dark bands, a heavy ink silhouette with finer inner lines, a flat blue cast shadow, a "hand-drawn wobble" slider, warm paper and body-colour swatches. Every figure does something: buttons press, doors open, items drop, parts move. Use this whenever someone wants a colourful / illustrated / hand-drawn / sketchy isometric object, a "Colorfigures" figure, a "how does X work" figure, or a playable or clickable object illustration — even if they don't name the skill. For dark glowing line-art use iso-glow instead.
+description: >-
+  Build colourful, hand-inked, interactive isometric figures of everyday objects and machines (washing machine, vending machine, toaster, kettle, radio, lamp, coffee set, arcade cabinet…) as one self-contained HTML page — real 3D bodies shaded in flat light/mid/dark bands, a heavy ink silhouette with finer inner lines, a flat blue cast shadow, a "hand-drawn wobble" slider, warm paper and body-colour swatches. Every figure does something: buttons press, doors open, items drop, parts move. Use this whenever someone wants a colourful / illustrated / hand-drawn / sketchy isometric object, a "Colorfigures" figure, a "how does X work" figure, or a playable or clickable object illustration — even if they don't name the skill. For dark glowing line-art use iso-glow instead.
 ---
 
 # Colorfigures
