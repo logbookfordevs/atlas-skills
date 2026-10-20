@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "importedAt": "2026-10-19",
+  "skills": [
+    {
+      "id": "iso-glow",
+      "path": "iso-glow",
+      "classification": "verbatim",
+      "author": {
+        "name": "April Zhu",
+        "profile": "https://x.com/Aprilzz423"
+      },
+      "distributionPage": "https://isoglow.dev/",
+      "source": {
+        "type": "user-provided-download",
+        "archive": "iso-glow.zip",
+        "sha256": "6c88dba1424bada2ee651a1b273095f9a13b82dd9362f9bc873600b5bff6b0a1"
+      },
+      "license": "MIT",
+      "licenseFile": "iso-glow/LICENSE",
+      "basedOn": [
+        {
+          "name": "iso-figure",
+          "author": "Tolga Cohce",
+          "repository": "https://github.com/MrBongoC/ai-iso-skill"
+        }
+      ],
+      "filesSha256": {
+        "LICENSE": "1a1281a84e233c0501448f641943d1a3e6c07aa7dfcfd07ea59f212f0608426a",
+        "SKILL.md": "e2dbb499c58e894db8ab01a59eede4235289daa5fa2f73f03d9b8f3ee1b20196",
+        "assets/examples/desk-computer.js": "635cc20b15b867d77495acf536625d37b3b256b299b3e764ca20546b51ed60a6",
+        "assets/examples/lens-camera-3d.js": "66632f67734b35ddabaa6adf0b2ff8dd1d0d8a09c290b82f2579c6b241cd27c7",
+        "assets/examples/office-tower.js": "2bdb553f2f52f20235dfa6253f80e7e8d03482ba6ae34e75e495ba1396a0912a",
+        "assets/gallery-3d.html": "f8a98a5dcdb05e67d2ccbf1712133dc66cfe54459fe1742b2ed4c9a34ec398b3",
+        "assets/gallery.html": "c1821987bea64207d127cd7d54bc1d147e14bd286a8c11aa4844ab4e12882df5",
+        "assets/lumen/examples/card-terminal.js": "558715686b5b6e1b50a68ee1067de454469d4a20a1d7f4c539ade9a88126381a",
+        "assets/lumen/examples/eth-blocks.js": "6e67cc2307a71824b4d805229d8f6f8b465d9c8c2444e935912692d3a0235214",
+        "assets/lumen/examples/vault-safe.js": "d28308eb0a2865bd03443139d9ae231b3056aea739bf0b6df23106827d89d142",
+        "assets/lumen/kit.js": "39768068b3f30868b4ef909f0c4e0ac14b9c341f2d8e4062e045d90b14430c5f",
+        "assets/lumen/picker.js": "174984d81067d2e54c4471d2c15f281731028f36090336039bde28854721e232",
+        "references/anatomy-builds.md": "84afbec69d2149fc561ec56ed98a97ebfc27b83c5aa0f5089ec1326142f66ca6",
+        "references/lumen.md": "33301b7df2601c8d6d13ed9a670ecf6332048b50bf5a492a2dff587c3f271128"
+      }
+    },
+    {
+      "id": "colorfigures",
+      "path": "colorfigures",
+      "classification": "verbatim",
+      "author": {
+        "name": "April Zhu",
+        "profile": "https://x.com/Aprilzz423"
+      },
+      "distributionPage": "https://april-zhu.com/colorfigures",
+      "source": {
+        "type": "user-provided-download",
+        "archive": "colorfigures.zip",
+        "sha256": "4782d1c38431a3f3ca26410f8250d357e0249a1889a698a6096ae24050341883"
+      },
+      "license": "MIT",
+      "licenseFile": "colorfigures/LICENSE",
+      "basedOn": [
+        {
+          "name": "iso-figure",
+          "author": "Tolga Cohce",
+          "repository": "https://github.com/MrBongoC/ai-iso-skill"
+        },
+        {
+          "name": "iso-glow",
+          "author": "April Zhu",
+          "website": "https://isoglow.dev/"
+        }
+      ],
+      "filesSha256": {
+        "LICENSE": "bc54cadb579906c051d7aad84f41f88c0df6c50089e052134226fe0b76fd5280",
+        "README.md": "02f08905ad4dfcf6f322ac49558b75085cca566114ae13c15f70cc94ffcf4fd4",
+        "SKILL.md": "1fec683c1de77975d981073f6e26bc4df4b7eea94b6df64714f97167ff8f1115",
+        "assets/core.js": "a871d6cec944addaeef78b1273adf2337c02e6094d8d38b1324a3a995120ee9a",
+        "assets/examples/vending.html": "0ac4b570492fe3481d433b1429617c82ffea00688a7f8d81aff35897b9dc8cc9",
+        "assets/examples/washer.html": "1c84f0e43dd43c7bc1c0e741f30a5207537d4bcd907a6a5d4d44329e0052ef70",
+        "scripts/build.py": "7fd1f0ca3525c477f873be73f1deb9e222a763d7de333532efecf2899920907e"
+      }
+    }
+  ]
+}

@@ -53,6 +53,10 @@ The [shared stack page](https://atlas.logbookfordevs.com/stack/) explains the co
 
 [AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) is a local workspace for managing coding-agent skills, reusable profiles, tools and shared rules. Install from your terminal with `npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json`. To use the interface instead, run `npx @logbookfordevs/afk`, open **Sources & Stacks → Import stack**, and paste `https://atlas.logbookfordevs.com/stack.json`. Review and save the selection, choose your agent and destination, then install or copy its install script. AFK remains optional; individual packages can be installed directly with Skills CLI. See [stack installation and maintenance](docs/atlas-stack.md). AFK 2.0 supports the version-one stack format.
 
+## Creative skills
+
+[ISO-GLOW and Colorfigures](creative-skills/README.md) by [April Zhu (@Aprilzz423)](https://x.com/Aprilzz423) are preserved from their downloadable distributions under `creative-skills/`. Both retain their MIT licenses and credit [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill), the underlying project. These independent creative packages remain separate from Atlas’s composed workflows.
+
 ## Recommended independent skills
 
 The stack manifest lists the unchanged skills used alongside Atlas, including Research, Prototype, Doubt-Driven Development, Writing for Agents, and library-specific tools. TDD and Source-Driven Development ship inside Atlas Implement; Teach and Diagnosing Bugs install directly from Matt Pocock; Code Simplification installs directly from Addy Osmani. Atlas Grill and Atlas Wayfinder share bundled Grilling and Domain Modeling references. These packages retain pinned source receipts. Independent authors own upstream updates; Atlas maintains its carried adaptations. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the original disposition.
