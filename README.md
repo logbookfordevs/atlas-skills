@@ -10,6 +10,8 @@ Atlas maintains what it authors, patches or bundles. Complementary independent s
 
 ## Skills V2
 
+Collection releases use Git tags and GitHub releases. **v1.1.0** identifies this skill set; see the [release notes](CHANGELOG.md). Upstream revisions remain recorded separately in each package’s source receipt.
+
 Install the packages below, or import the shared stack to include the recommended independent skills. Original-name upstream packages retain their authorship and methods.
 
 | Package | Purpose |
