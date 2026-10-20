@@ -52,3 +52,5 @@ for (const page of pages) {
 
 await writeFile(new URL('../dist/assets/atlas-stack.json', import.meta.url), await readFile(new URL('../stack.json', import.meta.url)));
 console.log(`Built React entries and sharing metadata for ${pages.length} Atlas URLs.`);
+
+await writeFile(new URL('../dist/stack.json', import.meta.url), await readFile(new URL('../stack.json', import.meta.url)));

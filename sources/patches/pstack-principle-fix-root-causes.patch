@@ -1,0 +1,17 @@
+diff --git a/source.md b/source.md
+index 5291682..dd208bf 100644
+--- a/source.md
++++ b/source.md
+@@ -13,9 +13,9 @@ When debugging, do not fix symptoms. Trace every problem to its root cause and f
+ **Pattern:**
+ - Reproduce first
+ - Ask "why" until you hit the root cause
+-- Do not add guards (adding a nil check to silence a crash is a symptom fix)
+-- If a workaround needs a paragraph-long comment to justify it, the code is wrong (fix the code, not the comment)
+-- Check for the pattern, not just the instance (grep for the same pattern, fix all instances)
++- Fix the cause rather than hiding a broken invariant; retain guards that enforce actual boundary or safety requirements
++- Investigate complex workarounds; preserve enduring invariant or external-contract comments when the constraint cannot be encoded safely
++- Check for the pattern, not just the instance (search for the same pattern and repair instances within the authorized scope)
+ - When stuck, instrument. Don't guess (add logging, read the actual error)
+ - If the deciding fact took a deep dig to find, propose the cheap, always-on signal that would have shown it at first look
+ 

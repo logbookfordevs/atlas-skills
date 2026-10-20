@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "workflow": "atlas-retro",
+  "generated": true,
+  "managedFiles": [
+    "references/diagnose/retro.md",
+    "licenses/matt-retro.txt",
+    "references/enforce/correct.md",
+    "licenses/pstack-correct.txt"
+  ],
+  "authoredInputs": [
+    "skills/atlas-retro/SKILL.md",
+    "skills/atlas-retro/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "writing-for-agents",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When Diagnose assesses agent instructions or Enforce authors enduring agent-facing judgment guidance; report unavailable criteria and continue independent work."
+    }
+  ],
+  "sources": [
+    {
+      "id": "matt-retro",
+      "owner": "atlas-retro",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/retro/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696",
+      "carriedPath": "references/diagnose/retro.md",
+      "carriedSha256": "6ec54ebc782792a09ad0a638baa0cfe7ed6aedcbdfc83a4a75686b19b6060136",
+      "licensePath": "licenses/matt-retro.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Keep the complete retrospective categories and severity-ordered advisory output. Bind source access to the selected session, use available skill loading, and resolve suggestions to build checks as proposals in Diagnose. Preserve upstream agent metadata only in snapshots.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "retro-mode-authority"
+      ],
+      "patch": "sources/patches/matt-retro.patch",
+      "patchSha256": "32e24761dded61ac18ba273c2c72df3e967020e6adc6081b6db358acf77dc6d8"
+    },
+    {
+      "id": "pstack-correct",
+      "owner": "atlas-retro",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/correct/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "bf482bacc972b3f124a4af8bf9364b4b3e280cb5845e44c326ea4f4565e5c904",
+      "carriedPath": "references/enforce/correct.md",
+      "carriedSha256": "9b626de4e2ba07da48b682b25232775c5ce2ba43c7c12c3d7c6af45790d9586d",
+      "licensePath": "licenses/pstack-correct.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Keep recurring-class evidence, architecture/types/checks-first prevention and real-mistake proof. Activate only for explicit authorized Enforce scope; remove correction-triggered repairs and mandatory AGENTS rule tables. Respect existing validation, exceptions and delivery policy; distinguish local proof from actual CI execution.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "retro-mode-authority"
+      ],
+      "patch": "sources/patches/pstack-correct.patch",
+      "patchSha256": "48c4362bee0b3857357704f8115fbad6ece4ecb03af614ecbf82857e8c9bff8d"
+    }
+  ],
+  "rulings": [
+    {
+      "id": "retro-mode-authority",
+      "owner": "atlas-retro",
+      "document": "skills/atlas-retro/SKILL.md",
+      "section": "Atlas Retro",
+      "sources": [
+        "matt-retro",
+        "pstack-correct"
+      ],
+      "decision": "Diagnose is the advisory default; Enforce requires explicit implementation authority and bounded recurring mistake classes. Corrections alone do not trigger edits. Preserve recurrence evidence, structural prevention and real-mistake proof without mandatory rule tables, unrelated repairs or automatic publication. Existing authorization needs no repeated approval."
+    }
+  ],
+  "files": {
+    "SKILL.md": "de56e15fc8031fc5ca345ac36ecc89b13eb513958d6329dc391bfe5e7e59f52d",
+    "agents/openai.yaml": "63b0009a7f7e2f835f98ea02e27a00b98bb3be6dfb611f20af978c6218e13abd",
+    "references/diagnose/retro.md": "6ec54ebc782792a09ad0a638baa0cfe7ed6aedcbdfc83a4a75686b19b6060136",
+    "licenses/matt-retro.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/enforce/correct.md": "9b626de4e2ba07da48b682b25232775c5ce2ba43c7c12c3d7c6af45790d9586d",
+    "licenses/pstack-correct.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+  }
+}

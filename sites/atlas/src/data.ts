@@ -10,8 +10,7 @@ export interface Skill {
   summary: string;
   intro: string;
   use: string;
-  modes: string[][];
-  prompt: string;
+  modes: { title: string; description: string; example: string }[];
   note: string;
   origin?: string;
 }

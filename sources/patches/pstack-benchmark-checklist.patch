@@ -1,0 +1,34 @@
+diff --git a/source.md b/source.md
+index e901d1f..ac2ea4a 100644
+--- a/source.md
++++ b/source.md
+@@ -6,7 +6,7 @@ disable-model-invocation: true
+ 
+ # Benchmark checklist
+ 
+-Use this when you produce a performance number: a PR's before and after, a regression claim, a hillclimb harness, or a library or config choice. Answer each question with evidence from a run, not a guess about the code.
++Use this when you produce a performance number: a PR's before and after, a regression claim, a benchmark harness, or a library or config choice. Answer each question with evidence from a run, not a guess about the code. Use existing harnesses; changes to measurement assets stay within the agreed verification scope. Product optimization belongs to the implementation executor.
+ 
+ For a quick ballpark the user asked for, one run is enough. Still check questions 4 and 7, and say that it is one run. Skip the rest unless that run looks wrong. A choice between options is never a ballpark.
+ 
+@@ -14,7 +14,7 @@ For a quick ballpark the user asked for, one run is enough. Still check question
+ 
+ - Write down the claim you expect to make, in the words you would ship ("export is 30% faster at p50 on the 60k-row dataset"). The questions test that sentence.
+ - Read the measurement script. Note what it times, counts, and ignores.
+-- Check the load average with `uptime` and the core count with `nproc`. If the machine is busy, find out what is running. If you cannot stop it, interleave the sides so both see the same noise, and say so in the report.
++- Check system load and core count with the host's available tools (`uptime` and `nproc` on Linux, `uptime` and `sysctl -n hw.logicalcpu` on macOS). If the machine is busy, identify the competing work; change only processes owned by the verification run. Interleave the sides so both see the same noise, and say so in the report.
+ 
+ ## The questions
+ 
+@@ -31,9 +31,6 @@ For a quick ballpark the user asked for, one run is enough. Still check question
+ - Lead with the verdict: faster, slower, no measurable difference, or inconclusive.
+ - Give the number with its unit, the run count, the range, and the limiter. For example, "p50 41 ms → 33 ms, median of 7 runs per side, range 32 to 35 ms after, bound by JSON parsing on one core."
+ - Call the verdict inconclusive when you claim a difference but cannot name the limiter, when a side ran untuned, or when you could not check questions 4 and 7. Name the gap.
+-- Keep a PR body to one primary number, per the **Opening a PR** playbook. Put the runs, range, and limiter evidence in a linked artifact or notes file.
++- Put raw runs, range, environment, work/error counts and limiter evidence in linked temporary artifacts. A standalone measurement needs no rendered report. When contributing to a Run, reuse these measurements in the existing feature/list report, with commands and evidence paths; keep schema v1 unchanged. An inconclusive measured claim stays unresolved rather than becoming a pass.
+ 
+-## Other perf material
+-
+-- Vet the **Perf issue** playbook's baseline before the playbook plans from it, and every number after that.
+-- Vet the **Hillclimb** playbook's harness before it is frozen. The frozen harness then prints error and work counts, so each keep-or-revert checks questions 4 and 7 for free.
++The profiler examples above are host-specific; use available equivalents and state measurement gaps. Five runs per side is a starting point, not a universal confidence guarantee. Preserve the checklist's ballpark exception and qualify conclusions when variation or limited repetitions prevent a comparison.

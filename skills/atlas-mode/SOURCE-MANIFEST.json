@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "workflow": "atlas-mode",
+  "generated": true,
+  "managedFiles": [],
+  "authoredInputs": [
+    "skills/atlas-mode/SKILL.md",
+    "skills/atlas-mode/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "atlas-grill",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When the task is to challenge a plan or resolve unclear choices."
+    },
+    {
+      "id": "atlas-to-spec",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When settled requirements need an agreed specification."
+    },
+    {
+      "id": "atlas-to-tickets",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When a plan or specification needs executable slices."
+    },
+    {
+      "id": "atlas-implement",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When architecture, test-first behavior or version-sensitive implementation needs a selected method."
+    },
+    {
+      "id": "atlas-explain",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When the requested outcome is understanding mechanics, rationale or learning."
+    },
+    {
+      "id": "html-ui",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When a wireframe or interactive model will answer an interface question."
+    },
+    {
+      "id": "atlas-craft",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When refining an established interface."
+    },
+    {
+      "id": "atlas-motion",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When building or assessing opportunities for animation and gestures."
+    },
+    {
+      "id": "atlas-review",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When review findings are requested or the selected workflow requires review."
+    },
+    {
+      "id": "atlas-verify",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When the conversation calls for behavior QA, reusable verification or performance evidence."
+    },
+    {
+      "id": "writing-for-humans",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When authoring substantial human-facing prose or technical documentation."
+    },
+    {
+      "id": "team-up",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When delegation is authorized and useful."
+    },
+    {
+      "id": "tracking-implementation",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When tracking or resuming tracked implementation is requested."
+    },
+    {
+      "id": "atlas-wayfinder",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When unresolved decisions need a cross-session map or an existing decision map needs continuation."
+    },
+    {
+      "id": "atlas-retro",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When session friction warrants Diagnose, or the user explicitly authorizes Enforce."
+    },
+    {
+      "id": "animated-driven-frontend",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When synchronized interaction or rendering engineering needs the relevant technical references."
+    },
+    {
+      "id": "writing-for-agents",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When authoring agent instructions, skills or agent-facing policies."
+    }
+  ],
+  "sources": [],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "949c7d40c8a46b9f325ef63b9531b0264248c2cbb86583a75d5fc30086424979",
+    "agents/openai.yaml": "a702cacd9b54e4c83fd63333bc69967a5e03a04c2454f717143ab8fd57575081",
+    "references/methods.md": "944c33fae0475f2d11e5f51f8025abc8a4329fe20ead38c590ddd68d14fffe6e"
+  }
+}

@@ -3,18 +3,16 @@
   "workflow": "writing-for-humans",
   "generated": true,
   "managedFiles": [
-    "references/stop-slop/stop-slop.md",
-    "licenses/stop-slop.txt",
-    "references/stop-slop/references/examples.md",
-    "references/stop-slop/references/phrases.md",
-    "references/stop-slop/references/structures.md"
+    "references/unslop/unslop.md",
+    "licenses/pstack-unslop.txt",
+    "references/technical/technical-writing.md",
+    "licenses/pstack-technical-writing.txt"
   ],
   "authoredInputs": [
     "skills/writing-for-humans/SKILL.md",
     "skills/writing-for-humans/agents/openai.yaml",
     "skills/writing-for-humans/references/articles-and-newsletters.md",
     "skills/writing-for-humans/references/fresh-reader-pass.md",
-    "skills/writing-for-humans/references/pr-descriptions.md",
     "skills/writing-for-humans/references/reader-progression.md",
     "skills/writing-for-humans/references/visual-explanations.md"
   ],
@@ -32,12 +30,6 @@
       "carriedSha256": "1a47ba17c94310d25fe676108b583cd6d3e4c47fc5ebc6370897e90ccf852239"
     },
     {
-      "input": "skills/writing-for-humans/references/pr-descriptions.md",
-      "target": "references/pr-descriptions.md",
-      "classification": "atlas-authored",
-      "carriedSha256": "51e88709e4b217cfee1f404362c71e5c55c3b79147b7b5fe987012dc88a0561f"
-    },
-    {
       "input": "skills/writing-for-humans/references/reader-progression.md",
       "target": "references/reader-progression.md",
       "classification": "atlas-authored",
@@ -53,63 +45,94 @@
   "dependencies": [],
   "sources": [
     {
-      "id": "stop-slop",
-      "classification": "verbatim",
+      "id": "pstack-unslop",
+      "owner": "writing-for-humans",
+      "classification": "patched",
       "upstream": {
-        "repository": "https://github.com/hardikpandya/stop-slop",
-        "commit": "8da1f030185bdfe8471220585162991eaeb970e9",
-        "path": "SKILL.md",
-        "trackingRef": "main",
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/unslop/SKILL.md",
         "licensePath": "LICENSE",
-        "includePaths": [
-          "SKILL.md",
-          "references"
-        ]
+        "trackingRef": "main"
       },
-      "supportingFiles": [
-        {
-          "classification": "verbatim",
-          "sourceSha256": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d",
-          "carriedPath": "references/stop-slop/references/examples.md",
-          "carriedSha256": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d"
-        },
-        {
-          "classification": "verbatim",
-          "sourceSha256": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93",
-          "carriedPath": "references/stop-slop/references/phrases.md",
-          "carriedSha256": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93"
-        },
-        {
-          "classification": "verbatim",
-          "sourceSha256": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58",
-          "carriedPath": "references/stop-slop/references/structures.md",
-          "carriedSha256": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
-        }
-      ],
+      "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
-      "carriedPath": "references/stop-slop/stop-slop.md",
-      "carriedSha256": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
-      "licensePath": "licenses/stop-slop.txt",
-      "licenseSha256": "2e2b2beaf41cc0ce28485455a62aed81777cdcdf68702e142427aef1cd720f2c",
-      "adaptation": "None. Preserve the complete upstream skill, frontmatter and three supporting references byte-for-byte.",
+      "sourceSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+      "carriedPath": "references/unslop/unslop.md",
+      "carriedSha256": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
+      "licensePath": "licenses/pstack-unslop.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
       "licenseSpdx": "MIT",
-      "rulings": []
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "explain-evidence-editing",
+        "human-writing-editorial-contract"
+      ],
+      "patch": "sources/patches/pstack-unslop.patch",
+      "patchSha256": "d2655d54a3c5a1d1910308d94808f97a2d2e3438c32c31ae2b3cc3b152f3ed71"
+    },
+    {
+      "id": "pstack-technical-writing",
+      "owner": "writing-for-humans",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/technical-writing/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "61fe9c424a798ebf36ad94941f87be049cb8827bdf86d21474a0dde37b513c43",
+      "carriedPath": "references/technical/technical-writing.md",
+      "carriedSha256": "a0266e8a3f9b53e2836f10da5e61952fcdf08871082ab0c5636d84c1e5ddd104",
+      "licensePath": "licenses/pstack-technical-writing.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Load the shared bundled Unslop catalog without an additional editorial pass; remove PR/commit scope and catalog-maintenance output. Resolve strict Diátaxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "human-writing-technical-contract"
+      ],
+      "patch": "sources/patches/pstack-technical-writing.patch",
+      "patchSha256": "490d36d97e08d4e722a9ff8ae88355ec833b71e6a897423a4b5ad364247071dd"
     }
   ],
-  "rulings": [],
+  "rulings": [
+    {
+      "id": "human-writing-technical-contract",
+      "owner": "writing-for-humans",
+      "document": "skills/writing-for-humans/references/technical/technical-writing.md",
+      "section": "Technical writing",
+      "sources": [
+        "pstack-technical-writing",
+        "pstack-unslop"
+      ],
+      "decision": "Technical documentation uses the four writing layers within the existing author, reader and factual contracts. Section-level Diátaxis permits useful mixed READMEs/RFCs; evidence qualifications survive certainty rules; length rules are heuristics and code formatting follows the repository. Reuse the already loaded Unslop catalog without an additional mandatory pass. PR writing is removed from this package."
+    },
+    {
+      "id": "human-writing-editorial-contract",
+      "owner": "writing-for-humans",
+      "document": "skills/writing-for-humans/references/unslop/unslop.md",
+      "section": "Unslop",
+      "sources": [
+        "pstack-unslop"
+      ],
+      "decision": "Unslop is the single editorial catalog shared by Writing for Humans, Explain and Tracking Audit Trail. Meaning, author voice and evidence qualifications outrank style patterns. Punctuation and domain terminology are contextual; preserve useful general guidance and requested narrative purposes. Each consumer carries the same patched bytes with stable rule IDs."
+    }
+  ],
   "files": {
-    "SKILL.md": "e281d240618f2d0148af3a3f4b2be463ab80d213f834925295242ee0cbaebe1a",
+    "SKILL.md": "2b15038886386f8bde9b01572c69a4dac912e8c94322d4d666b04150c28bd18b",
     "agents/openai.yaml": "0525ad3256714209332dbce79f4389e7ae87d17f3cb2307ba1c9f15d98fdd698",
     "references/articles-and-newsletters.md": "bdcc64970d5ad53a67e69706d4690296da953bb6831472a830472249732abd89",
     "references/fresh-reader-pass.md": "1a47ba17c94310d25fe676108b583cd6d3e4c47fc5ebc6370897e90ccf852239",
-    "references/pr-descriptions.md": "51e88709e4b217cfee1f404362c71e5c55c3b79147b7b5fe987012dc88a0561f",
     "references/reader-progression.md": "dd00107f404658e0048c2a7553ba02d21717faa2d50fff335dde010201e08df6",
     "references/visual-explanations.md": "a5bdd3136e8467aea33b1f4890c3d535abebd4fb44b3141a43ab7e64eed6e8aa",
-    "references/stop-slop/stop-slop.md": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
-    "licenses/stop-slop.txt": "2e2b2beaf41cc0ce28485455a62aed81777cdcdf68702e142427aef1cd720f2c",
-    "references/stop-slop/references/examples.md": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d",
-    "references/stop-slop/references/phrases.md": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93",
-    "references/stop-slop/references/structures.md": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
+    "references/unslop/unslop.md": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
+    "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/technical/technical-writing.md": "a0266e8a3f9b53e2836f10da5e61952fcdf08871082ab0c5636d84c1e5ddd104",
+    "licenses/pstack-technical-writing.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }

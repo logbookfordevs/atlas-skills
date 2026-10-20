@@ -18,8 +18,17 @@ export function SkillReference() {
       <p className="lead">{skill.intro}</p><code className="skill-id">{skill.id}</code>
     </header>
     <section><h2>When to use it</h2><p>{skill.use}</p></section>
-    <section><h2>How it works</h2><dl className="method-list">{skill.modes.map(([title, text]) => <div key={title}><dt>{title}</dt><dd>{text}</dd></div>)}</dl></section>
-    <section><h2>Try it</h2><blockquote className="prompt"><p>“{skill.prompt}”</p></blockquote></section>
+    <section>
+      <h2>How it works</h2>
+      <p className="small-copy">With this skill selected, describe your task in your own words. Adapt these examples to your project.</p>
+      <dl className="method-list">{skill.modes.map((mode) => <div key={mode.title}>
+        <dt>{mode.title}</dt>
+        <dd>
+          <p className="method-description">{mode.description}</p>
+          <blockquote className="method-example"><span className="example-label">Try this</span><p>“{mode.example}”</p></blockquote>
+        </dd>
+      </div>)}</dl>
+    </section>
     <section><h2>Install</h2><CopyCommand command={`npx skills add ${repository} --skill ${skill.id}`} />
       <p className="small-copy">Install this package by name. Then use <AtlasLink to={skillPath('atlas-setup')}>Atlas Setup</AtlasLink> to check any independent dependencies.</p>
     </section>

@@ -1,4 +1,63 @@
 {
+  "atlas-grill": {
+    "references": [
+      {
+        "id": "grilling",
+        "title": "Grilling",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/grilling/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "domain-modeling",
+        "title": "Domain Modeling",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/domain-modeling/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "grill-with-docs",
+        "title": "Grill With Docs",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/grill-with-docs/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-wayfinder": {
+    "references": [
+      {
+        "id": "wayfinder",
+        "title": "Wayfinder",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/wayfinder/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "grilling",
+        "title": "Grilling",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/grilling/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "domain-modeling",
+        "title": "Domain Modeling",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/domain-modeling/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "wayfinder-local-tracker",
+        "title": "Wayfinder local tracker",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
   "atlas-to-spec": {
     "references": [
       {
@@ -18,6 +77,339 @@
         "title": "To Tickets",
         "author": "Matt Pocock",
         "url": "https://github.com/mattpocock/skills/blob/b0618bc436ad893b3c5e84e55fba86586d34a404/skills/engineering/to-tickets/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-implement": {
+    "references": [
+      {
+        "id": "tdd",
+        "title": "TDD",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/tdd/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "source-driven-development",
+        "title": "Source-Driven Development",
+        "author": "Addy Osmani",
+        "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/source-driven-development/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-architect",
+        "title": "Architect",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/architect/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-arena",
+        "title": "Arena",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/arena/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-principle-boundary-discipline",
+        "title": "Boundary Discipline",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-boundary-discipline/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-principle-encode-lessons-in-structure",
+        "title": "Encode Lessons in Structure",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-encode-lessons-in-structure/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-exhaust-the-design-space",
+        "title": "Exhaust The Design Space",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-exhaust-the-design-space/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-fix-root-causes",
+        "title": "Fix Root Causes",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-fix-root-causes/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-principle-foundational-thinking",
+        "title": "Foundational Thinking",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-foundational-thinking/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-guard-the-context-window",
+        "title": "Guard The Context Window",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-guard-the-context-window/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-laziness-protocol",
+        "title": "Laziness Protocol",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-laziness-protocol/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-make-operations-idempotent",
+        "title": "Make Operations Idempotent",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-make-operations-idempotent/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-minimize-reader-load",
+        "title": "Minimize Reader Load",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-minimize-reader-load/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-outcome-oriented-execution",
+        "title": "Outcome Oriented Execution",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-outcome-oriented-execution/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-prove-it-works",
+        "title": "Prove It Works",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-prove-it-works/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-principle-redesign-from-first-principles",
+        "title": "Redesign From First Principles",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-redesign-from-first-principles/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-separate-before-serializing-shared-state",
+        "title": "Separate Before Serializing Shared State",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-separate-before-serializing-shared-state/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-subtract-before-you-add",
+        "title": "Subtract Before You Add",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-subtract-before-you-add/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-how",
+        "title": "How",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/how/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-why",
+        "title": "Why",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/why/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-interrogate",
+        "title": "Interrogate",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/interrogate/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-verify": {
+    "references": [
+      {
+        "id": "pe-verify",
+        "title": "PE Verify",
+        "author": "Product Engineering",
+        "url": "https://github.com/backnotprop/product-engineering/blob/0642a58496d4dfa1de9688a82c29dfa34d24370a/skills/pe-verify/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-create-verification-skill",
+        "title": "Create Verification Skill",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/create-verification-skill/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-maintain-verification-skill",
+        "title": "Maintain Verification Skill",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/maintain-verification-skill/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-benchmark-checklist",
+        "title": "Benchmark Checklist",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/benchmark-checklist/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-review": {
+    "references": [
+      {
+        "id": "code-review",
+        "title": "Code Review",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/b0618bc436ad893b3c5e84e55fba86586d34a404/skills/engineering/code-review/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "review-animations",
+        "title": "Review Animations",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/review-animations/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "better-interface",
+        "title": "Better Interface",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-interface/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "interface-review",
+        "title": "Interface Review",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/interface-review/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-colors",
+        "title": "Better Colors",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-colors/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-typography",
+        "title": "Better Typography",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-typography/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-layout",
+        "title": "Better Layout",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-layout/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-accessibility",
+        "title": "Better Accessibility",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-accessibility/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-ui",
+        "title": "Better UI",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-ui/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-writing",
+        "title": "Better Writing",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-writing/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "animate",
+        "title": "Animate",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/animate/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "apple-design",
+        "title": "Apple Design",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/apple-design/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "improve-animations",
+        "title": "Improve Animations",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/improve-animations/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-interrogate",
+        "title": "Interrogate",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/interrogate/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-blast-radius",
+        "title": "Blast Radius",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/blast-radius/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": [
+      {
+        "title": "Product Engineering",
+        "url": "https://github.com/backnotprop/product-engineering"
+      }
+    ]
+  },
+  "atlas-explain": {
+    "references": [
+      {
+        "id": "pstack-how",
+        "title": "How",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/how/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-why",
+        "title": "Why",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/why/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-teach",
+        "title": "Teach",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/teach/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-unslop",
+        "title": "Unslop",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/unslop/SKILL.md",
         "classification": "patched"
       }
     ],
@@ -134,125 +526,78 @@
     ],
     "collections": []
   },
-  "atlas-review": {
-    "references": [
-      {
-        "id": "code-review",
-        "title": "Code Review",
-        "author": "Matt Pocock",
-        "url": "https://github.com/mattpocock/skills/blob/b0618bc436ad893b3c5e84e55fba86586d34a404/skills/engineering/code-review/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "review-animations",
-        "title": "Review Animations",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/review-animations/SKILL.md",
-        "classification": "verbatim"
-      },
-      {
-        "id": "better-interface",
-        "title": "Better Interface",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-interface/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "interface-review",
-        "title": "Interface Review",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/interface-review/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-colors",
-        "title": "Better Colors",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-colors/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-typography",
-        "title": "Better Typography",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-typography/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-layout",
-        "title": "Better Layout",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-layout/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-accessibility",
-        "title": "Better Accessibility",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-accessibility/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-ui",
-        "title": "Better UI",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-ui/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-writing",
-        "title": "Better Writing",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/d574cc8a576dc24256ad38268b8d03d86724a1b3/skills/better-writing/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "animate",
-        "title": "Animate",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/animate/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "apple-design",
-        "title": "Apple Design",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/apple-design/SKILL.md",
-        "classification": "verbatim"
-      },
-      {
-        "id": "improve-animations",
-        "title": "Improve Animations",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/improve-animations/SKILL.md",
-        "classification": "patched"
-      }
-    ],
-    "collections": [
-      {
-        "title": "Product Engineering",
-        "url": "https://github.com/backnotprop/product-engineering"
-      }
-    ]
-  },
   "animated-driven-frontend": {
+    "references": [],
+    "collections": []
+  },
+  "atlas-mode": {
     "references": [],
     "collections": []
   },
   "writing-for-humans": {
     "references": [
       {
-        "id": "stop-slop",
-        "title": "Stop Slop",
-        "author": "Hardik Pandya",
-        "url": "https://github.com/hardikpandya/stop-slop/blob/8da1f030185bdfe8471220585162991eaeb970e9/SKILL.md",
-        "classification": "verbatim"
+        "id": "pstack-unslop",
+        "title": "Unslop",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/unslop/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-technical-writing",
+        "title": "Technical Writing",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/technical-writing/SKILL.md",
+        "classification": "patched"
       }
     ],
     "collections": []
   },
   "team-up": {
-    "references": [],
+    "references": [
+      {
+        "id": "pstack-arena",
+        "title": "Arena",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/arena/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-principle-separate-before-serializing-shared-state",
+        "title": "Separate Before Serializing Shared State",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-separate-before-serializing-shared-state/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-laziness-protocol",
+        "title": "Laziness Protocol",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-laziness-protocol/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-redesign-from-first-principles",
+        "title": "Redesign From First Principles",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-redesign-from-first-principles/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-principle-prove-it-works",
+        "title": "Prove It Works",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-prove-it-works/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-swarm",
+        "title": "Swarm",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/swarm/SKILL.md",
+        "classification": "patched"
+      }
+    ],
     "collections": []
   },
   "tracking-implementation": {
@@ -263,6 +608,46 @@
         "author": "HumanLayer",
         "url": "https://github.com/humanlayer/skills/blob/ca7c8088db69e315a8b2deea43820270457f8f3c/plugins/show-me/skills/show-me/SKILL.md",
         "classification": "verbatim"
+      },
+      {
+        "id": "pstack-show-me-your-work",
+        "title": "Show Me Your Work",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/show-me-your-work/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-unslop",
+        "title": "Unslop",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/unslop/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-principle-encode-lessons-in-structure",
+        "title": "Encode Lessons in Structure",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-encode-lessons-in-structure/SKILL.md",
+        "classification": "verbatim"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-retro": {
+    "references": [
+      {
+        "id": "matt-retro",
+        "title": "Retro",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/retro/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-correct",
+        "title": "Correct",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/correct/SKILL.md",
+        "classification": "patched"
       }
     ],
     "collections": []

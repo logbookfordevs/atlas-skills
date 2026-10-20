@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "workflow": "atlas-grill",
+  "generated": true,
+  "managedFiles": [
+    "references/grilling/grilling.md",
+    "licenses/grilling.txt",
+    "references/domain-modeling/domain-modeling.md",
+    "licenses/domain-modeling.txt",
+    "references/domain-modeling/ADR-FORMAT.md",
+    "references/domain-modeling/GLOSSARY-FORMAT.md",
+    "references/with-docs/grill-with-docs.md",
+    "licenses/grill-with-docs.txt"
+  ],
+  "authoredInputs": [
+    "skills/atlas-grill/SKILL.md",
+    "skills/atlas-grill/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [],
+  "sources": [
+    {
+      "id": "grilling",
+      "owner": "atlas-grill",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/productivity/grilling/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+      "carriedPath": "references/grilling/grilling.md",
+      "carriedSha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+      "licensePath": "licenses/grilling.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Carry Grilling verbatim in both packages. Each Atlas package owns its invocation metadata; upstream metadata remains in source snapshots.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": []
+    },
+    {
+      "id": "domain-modeling",
+      "owner": "atlas-grill",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/domain-modeling/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/domain-modeling/ADR-FORMAT.md",
+          "classification": "verbatim",
+          "sourceSha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+          "carriedPath": "references/domain-modeling/ADR-FORMAT.md",
+          "carriedSha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0"
+        },
+        {
+          "upstreamPath": "skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+          "classification": "verbatim",
+          "sourceSha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+          "carriedPath": "references/domain-modeling/GLOSSARY-FORMAT.md",
+          "carriedSha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "carriedPath": "references/domain-modeling/domain-modeling.md",
+      "carriedSha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "licensePath": "licenses/domain-modeling.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Carry Domain Modeling and both format references verbatim from one registered source into both packages. Upstream invocation metadata remains in source snapshots.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": []
+    },
+    {
+      "id": "grill-with-docs",
+      "owner": "atlas-grill",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "carriedPath": "references/with-docs/grill-with-docs.md",
+      "carriedSha256": "caed0be13a651e09e3b0ad0964d544f1bce7efc18837504b74f4d4197e4271ec",
+      "licensePath": "licenses/grill-with-docs.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Replace sibling skill calls with direct links to the bundled Grilling and Domain Modeling methods. The Atlas Grill router selects this mode only on an explicit user request.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-14",
+      "rulings": [
+        "grill-docs-mode"
+      ],
+      "patch": "sources/patches/grill-with-docs.patch",
+      "patchSha256": "5998e14256c0c67c59f0f63b5e7f2344639a3d5e961f0c81d99dc4fdec3e4e48"
+    }
+  ],
+  "rulings": [
+    {
+      "id": "grill-docs-mode",
+      "owner": "atlas-grill",
+      "document": "skills/atlas-grill/SKILL.md",
+      "section": "Atlas Grill",
+      "sources": [
+        "grilling",
+        "domain-modeling",
+        "grill-with-docs"
+      ],
+      "decision": "Grilling is the default mode and retains upstream automatic discovery. With Docs adds Domain Modeling only when the user explicitly requests the documentation mode."
+    }
+  ],
+  "files": {
+    "SKILL.md": "73fc323d96778cb390a6a80dd3e03142da650c266f96e4d81504ed92a4204e96",
+    "agents/openai.yaml": "b8bb39986498b8a8a9da9c594e5203f672d0b89b9050726e1b1db6dafcd71181",
+    "references/grilling/grilling.md": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+    "licenses/grilling.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/domain-modeling/domain-modeling.md": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+    "licenses/domain-modeling.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "references/domain-modeling/ADR-FORMAT.md": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+    "references/domain-modeling/GLOSSARY-FORMAT.md": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+    "references/with-docs/grill-with-docs.md": "caed0be13a651e09e3b0ad0964d544f1bce7efc18837504b74f4d4197e4271ec",
+    "licenses/grill-with-docs.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

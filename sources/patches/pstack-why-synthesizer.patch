@@ -1,0 +1,22 @@
+diff --git a/source.md b/source.md
+index 287a350..d5e96f0 100644
+--- a/source.md
++++ b/source.md
+@@ -62,7 +62,7 @@ File paths, line ranges, key symbols. Two or three lines to orient a cold reader
+ 
+ Claims with textual evidence, each quoted or paraphrased and cited precisely:
+ 
+-- **[Direct]** {Claim}. Source: [PR #123](url) / ticket ID / file:line. {Brief quote or paraphrase.}
++- **[Direct]** {Claim}. Source: {real PR URL, ticket ID or file:line}. {Brief quote or paraphrase.}
+ - **[Supported]** {Claim}. Evidence: {list of items and what each contributes}.
+ 
+ `[Direct]` is single-source, explicit evidence. `[Supported]` is multiple indirect items converging on a conclusion.
+@@ -98,7 +98,7 @@ Specific gaps: "We searched the issue tracker for [query1], [query2], [query3] a
+ 
+ What was actually searched, so the user can judge coverage and redirect:
+ 
+-- **Source control history**: {file paths}, {number of commits reviewed}, PRs #{numbers}, and code comments searched. Or "Not searched. This should not happen because git and `gh` are always expected."
++- **Source control history**: {file paths}, {number of commits reviewed}, PRs #{numbers}, and code comments searched. Or state the unavailable history/tools or explicit scope exclusion. Never imply history or PR access was available without checking.
+ - **Issue / ticket tracker**: {ticket IDs and keyword searches}. Or "Not searched. No matching MCP available in this environment."
+ - **Long-form documents**: {page titles and search queries}. Or "Not searched. No matching MCP available in this environment."
+ - **Real-time team chat**: {channels searched, date ranges, queries}. Or "Not searched. No matching MCP available in this environment."

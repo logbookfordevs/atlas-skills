@@ -1,6 +1,6 @@
 interface:
   display_name: "Atlas Review"
-  short_description: "Review code against standards and intent, assess frontend interfaces or motion, and audit existing animation with improvement plans."
+  short_description: "Review code, challenge blind spots, trace impact, and assess interfaces or motion."
   default_prompt: "Use $atlas-review for the requested review work."
 policy:
   allow_implicit_invocation: true

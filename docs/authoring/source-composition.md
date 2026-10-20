@@ -1,5 +1,7 @@
 # Skill maintenance
 
+Use [Atlas's distribution premise](../../README.md) when choosing what to bundle. Core workflow methods and their required supporting files belong in the consuming packages, with independent source records and provenance. Declare complementary external skills and their loading conditions explicitly. Check package dependencies without assuming the AFK stack has been installed; document any remaining core dependency gap until it is bundled.
+
 ## Ownership
 
 | Location | Edit here for |
@@ -45,10 +47,10 @@ The builder refreshes bundled upstream files, Setup’s dependency registry and 
    | `supportingFiles` | Each file’s `upstreamPath`, `snapshot`, `sourceSha256` and relative path beside the carried entry |
    | `consumers`, `rulings` | Packages using the source and intentional caller decisions |
 
-4. For `verbatim`, set `method` to the pristine snapshot. For `patched`, put the maintained entry in `skills/<consumer>/<carriedPath>`, set `method` to that file and `patch` to `sources/patches/<source-id>.patch`, then record the patch. For a standalone patched skill, `carriedPath` is `SKILL.md` and its workflow entry is that same file.
+4. For `verbatim`, set `method` to the pristine snapshot. For `patched`, put the maintained entry in `skills/<consumer>/<carriedPath>`, set `method` to that file and `patch` to `sources/patches/<source-id>.patch`, then record the patch. For a standalone upstream package, `carriedPath` is `SKILL.md` and its workflow entry is that same file; a verbatim package's entry matches its pristine snapshot. Keep the original name when no new composition warrants a different invocation.
 5. Add the source ID to each consumer’s `methods` list and point the skill’s loading condition to the bundled reference. Preserve supporting paths so upstream relative links resolve. Declare `upstream.includePaths` for repository-root entries or a deliberately narrower tracked scope; other entries track their containing skill directory.
 
-   When a standalone adaptation owns its invocation metadata, retain upstream metadata verbatim at a separate package path using `supportingFileTargets`, for example `{ "agents/openai.yaml": "references/upstream/agents/openai.yaml" }`. Keys are upstream-relative supporting paths; values are package-relative destinations. The watcher still tracks the complete selected tree. Use relocation only for files whose upstream-relative location is not required by runtime links.
+   Each Atlas package owns its `agents/openai.yaml`. Preserve upstream invocation metadata in source snapshots and hashes for update detection; the builder excludes it from bundled references. Use `supportingFileTargets` to relocate runtime support only when its original location is not required by relative links. Keys are upstream-relative supporting paths; values are package-relative destinations.
 6. Register any concrete conflict ruling in `rulings`, with its owning package, runtime document, source IDs and decision. Runtime guidance carries the actionable ruling; maintenance explanations stay here or in receipts.
 7. Finish with validation. Only independently installable packages belong in the stack selection; bundled references need no separate installation.
 

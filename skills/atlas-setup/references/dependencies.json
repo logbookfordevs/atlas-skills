@@ -3,16 +3,49 @@
   "packages": [
     "animated-driven-frontend",
     "atlas-craft",
+    "atlas-explain",
+    "atlas-grill",
+    "atlas-implement",
+    "atlas-mode",
     "atlas-motion",
+    "atlas-retro",
     "atlas-review",
     "atlas-to-spec",
     "atlas-to-tickets",
+    "atlas-verify",
+    "atlas-wayfinder",
     "html-ui",
     "team-up",
     "tracking-implementation",
     "writing-for-humans"
   ],
   "dependencies": [
+    {
+      "id": "code-simplification",
+      "source": "https://github.com/addyosmani/agent-skills.git",
+      "skill": "code-simplification",
+      "command": "npx skills add https://github.com/addyosmani/agent-skills.git --skill code-simplification",
+      "consumers": [
+        {
+          "skill": "tracking-implementation",
+          "required": false,
+          "condition": "When the user authorizes a material simplification opportunity identified during tracked work."
+        }
+      ]
+    },
+    {
+      "id": "codebase-design",
+      "source": "https://github.com/mattpocock/skills",
+      "skill": "codebase-design",
+      "command": "npx skills add https://github.com/mattpocock/skills --skill codebase-design",
+      "consumers": [
+        {
+          "skill": "atlas-implement",
+          "required": false,
+          "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
+        }
+      ]
+    },
     {
       "id": "design-artifact",
       "source": "https://github.com/plannotator/effective-html",
@@ -27,15 +60,46 @@
       ]
     },
     {
-      "id": "pe-verify",
-      "source": "https://github.com/backnotprop/product-engineering",
-      "skill": "pe-verify",
-      "command": "npx skills add https://github.com/backnotprop/product-engineering --skill pe-verify",
+      "id": "prototype",
+      "source": "https://github.com/mattpocock/skills",
+      "skill": "prototype",
+      "command": "npx skills add https://github.com/mattpocock/skills --skill prototype",
       "consumers": [
         {
-          "skill": "tracking-implementation",
+          "skill": "atlas-wayfinder",
+          "required": true,
+          "condition": "When resolving a human-led Prototype ticket."
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "source": "https://github.com/mattpocock/skills",
+      "skill": "research",
+      "command": "npx skills add https://github.com/mattpocock/skills --skill research",
+      "consumers": [
+        {
+          "skill": "atlas-wayfinder",
+          "required": true,
+          "condition": "When resolving an autonomous Research ticket or charting research work."
+        }
+      ]
+    },
+    {
+      "id": "writing-for-agents",
+      "source": "https://github.com/mattpocock/skills",
+      "skill": "writing-for-agents",
+      "command": "npx skills add https://github.com/mattpocock/skills --skill writing-for-agents",
+      "consumers": [
+        {
+          "skill": "atlas-retro",
           "required": false,
-          "condition": "When a verification report or QA run is requested, or changed behavior needs reproducible acceptance evidence beyond routine project checks."
+          "condition": "When Diagnose assesses agent instructions or Enforce authors enduring agent-facing judgment guidance; report unavailable criteria and continue independent work."
+        },
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When authoring agent instructions, skills or agent-facing policies."
         }
       ]
     }

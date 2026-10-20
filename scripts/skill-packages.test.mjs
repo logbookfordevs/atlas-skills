@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join, posix } from 'node:path';
 import { tmpdir } from 'node:os';
+import { spawnSync } from 'node:child_process';
+import { runInNewContext } from 'node:vm';
 import { test } from 'node:test';
 import { recordPatches } from './record-patches.mjs';
 import { buildSkills, composeSkills, repositoryRoot, sha256 } from './build-skills.mjs';
@@ -158,6 +160,43 @@ test('supporting source trees remain portable and reject tampering and escaping 
   assert.throws(() => composeSkills(root), /Supporting file integrity failure/);
 });
 
+test('upstream invocation metadata stays in snapshots and retired copies are removed', t => {
+  const root = fixture(t);
+  const manifestPath = join(root, 'sources/composition.json');
+  const manifest = JSON.parse(readFileSync(manifestPath));
+  const source = manifest.sources[0];
+  const snapshot = 'sources/upstream/fixture-source/support/agents/openai.yaml';
+  const upstreamMetadata = Buffer.from('interface:\n  display_name: Upstream Fixture\n');
+  mkdirSync(join(root, snapshot, '..'), { recursive: true });
+  writeFileSync(join(root, snapshot), upstreamMetadata);
+  source.supportingFiles.push({ relativePath: 'agents/openai.yaml', snapshot, sourceSha256: sha256(upstreamMetadata) });
+  source.supportingFileTargets = { 'agents/openai.yaml': 'references/upstream/agents/openai.yaml' };
+  writeFileSync(manifestPath, JSON.stringify(manifest));
+  buildSkills(root);
+
+  const packagePath = join(root, 'skills/logbook-fixture');
+  const retired = 'references/upstream/agents/openai.yaml';
+  mkdirSync(join(packagePath, retired, '..'), { recursive: true });
+  writeFileSync(join(packagePath, retired), upstreamMetadata);
+  const receiptPath = join(packagePath, 'SOURCE-MANIFEST.json');
+  const previous = JSON.parse(readFileSync(receiptPath));
+  previous.managedFiles.push(retired);
+  previous.files[retired] = sha256(upstreamMetadata);
+  writeFileSync(receiptPath, JSON.stringify(previous));
+  buildSkills(root);
+
+  assert.equal(existsSync(join(packagePath, retired)), false);
+  assert.deepEqual(readFileSync(join(root, snapshot)), upstreamMetadata);
+  assert.equal(readFileSync(join(packagePath, 'agents/openai.yaml'), 'utf8'), 'policy:\n  allow_implicit_invocation: true\n');
+  const files = composeSkills(root).get('logbook-fixture');
+  assert.deepEqual([...files.keys()].filter(name => name.endsWith('agents/openai.yaml')), ['agents/openai.yaml']);
+  assert.ok(files.has('references/fixture-source.md'));
+  assert.ok(files.has('references/details.md'));
+  buildSkills(root, { check: true });
+  writeFileSync(join(root, snapshot), 'changed upstream metadata');
+  assert.throws(() => composeSkills(root), /Supporting file integrity failure/);
+});
+
 test('automatic design discovery metadata and supporting receipts agree', () => {
   const files = composeSkills().get('html-ui');
   assert.ok(files);
@@ -174,7 +213,7 @@ test('automatic design discovery metadata and supporting receipts agree', () => 
 });
 
 
-test('Tracking Implementation is automatically discoverable with portable authored references', () => {
+test('Tracking Implementation is automatically discoverable with portable runtime references', () => {
   const files = composeSkills().get('tracking-implementation');
   assert.ok(files);
   assert.match(files.get('SKILL.md').toString().split('---')[1], /disable-model-invocation: false/);
@@ -185,7 +224,48 @@ test('Tracking Implementation is automatically discoverable with portable author
     assert.equal(sha256(files.get(source.licensePath)), source.licenseSha256);
   }
   for (const reference of receipt.authoredReferences) assert.equal(sha256(files.get(reference.target)), reference.carriedSha256);
-  for (const ruling of receipt.rulings) assert.ok(receipt.authoredInputs.includes(ruling.document));
+  const packagePrefix = 'skills/tracking-implementation/';
+  for (const ruling of receipt.rulings) {
+    assert.ok(ruling.document.startsWith(packagePrefix));
+    assert.ok(files.has(ruling.document.slice(packagePrefix.length)), `Missing bundled ruling: ${ruling.document}`);
+  }
+});
+
+test('Atlas Verify validates and renders from a portable package without the source repo', t => {
+  const python = spawnSync('python3', ['--version'], { encoding: 'utf8' });
+  if (python.error?.code === 'ENOENT') {
+    t.skip('Python 3 is unavailable; the verification report tools require it.');
+    return;
+  }
+
+  assert.equal(python.status, 0, python.stderr);
+  const root = mkdtempSync(join(tmpdir(), 'atlas-verify-package-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  for (const [name, bytes] of composeSkills().get('atlas-verify')) {
+    const path = join(root, name);
+    mkdirSync(join(path, '..'), { recursive: true });
+    writeFileSync(path, bytes);
+  }
+
+  const report = join(root, 'assets/sample/report.json');
+  const options = { cwd: root, encoding: 'utf8', env: { ...process.env, PYTHONDONTWRITEBYTECODE: '1' } };
+  const validation = spawnSync('python3', [join(root, 'scripts/validate-report.py'), report], options);
+  assert.equal(validation.status, 0, validation.stdout + validation.stderr);
+
+  const rendering = spawnSync('python3', [join(root, 'scripts/render-report.py'), report, '--no-convert'], options);
+  assert.equal(rendering.status, 0, rendering.stdout + rendering.stderr);
+  const rendered = readFileSync(join(root, 'assets/sample/report.html'), 'utf8');
+  const payload = rendered.match(/<script id="report-data">([\s\S]*?)<\/script>/)[1];
+  const browser = { window: {} };
+  runInNewContext(payload, browser);
+  assert.deepEqual(JSON.parse(JSON.stringify(browser.window.__REPORT__)), JSON.parse(readFileSync(report, 'utf8')));
+
+  const malformed = join(root, 'invalid.json');
+  writeFileSync(malformed, JSON.stringify({ schema_version: 1, title: 'Incomplete report' }));
+  const rejection = spawnSync('python3', [join(root, 'scripts/validate-report.py'), malformed], options);
+  assert.equal(rejection.status, 1);
+  assert.ok(rejection.stdout.includes('mode'));
 });
 
 

@@ -3,13 +3,22 @@
   "workflow": "atlas-setup",
   "generated": true,
   "managedFiles": [
-    "references/dependencies.json"
+    "references/dependencies.json",
+    "references/stack.json"
   ],
   "authoredInputs": [
     "skills/atlas-setup/SKILL.md",
-    "skills/atlas-setup/agents/openai.yaml"
+    "skills/atlas-setup/agents/openai.yaml",
+    "skills/atlas-setup/references/cleanup.md"
   ],
-  "authoredReferences": [],
+  "authoredReferences": [
+    {
+      "input": "skills/atlas-setup/references/cleanup.md",
+      "target": "references/cleanup.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "0fd0efee090c394d5cade57c44180b5fce9f40e1e7b8bc5ef3b644b07eac93de"
+    }
+  ],
   "generatedReferences": [
     {
       "generator": "setup-dependencies",
@@ -18,15 +27,25 @@
         "sources/composition.json",
         "stacks/atlas.json"
       ],
-      "carriedSha256": "6665458ce3952f1ace3a786d05cca2b9923db2bc6df9bae5e3a004b0dadad258"
+      "carriedSha256": "d9b138499ce0135d3f947149fc97bb4db6feee4bddaf6a6f34a4af424d686c1c"
+    },
+    {
+      "generator": "stack-manifest",
+      "target": "references/stack.json",
+      "inputs": [
+        "stacks/atlas.json"
+      ],
+      "carriedSha256": "5949d00c5008a95b5ca640c825070addc3c65c5d21aeab078cc962e26b187b3c"
     }
   ],
   "dependencies": [],
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "e610568e05b844be6f29927bc54c21aa7c0c60c267984ac9a8b6746075cedcba",
-    "agents/openai.yaml": "0f837eabef8e760e3e7e79a1b4cc756ace6e0958d3567eaaa9e8d2c576cdc50c",
-    "references/dependencies.json": "6665458ce3952f1ace3a786d05cca2b9923db2bc6df9bae5e3a004b0dadad258"
+    "SKILL.md": "8db95a41ded07e14f090e2ee708fd96761d991cb4a6a7bf873e6732eff428f64",
+    "agents/openai.yaml": "caf11b5bc46d0b1181c27f69da4135b287be82ebfcfe9dfff4d2048dda6812f7",
+    "references/cleanup.md": "0fd0efee090c394d5cade57c44180b5fce9f40e1e7b8bc5ef3b644b07eac93de",
+    "references/dependencies.json": "d9b138499ce0135d3f947149fc97bb4db6feee4bddaf6a6f34a4af424d686c1c",
+    "references/stack.json": "5949d00c5008a95b5ca640c825070addc3c65c5d21aeab078cc962e26b187b3c"
   }
 }

@@ -1,6 +1,6 @@
 # Composition glossary from AFK Next
 
-Historical terminology introduced during this proposal, preserved from AFK’s CONTEXT.md. The current proposal refines ownership under Atlas.
+Historical terminology introduced during this proposal, preserved from AFK’s CONTEXT.md. It does not define current Atlas behavior; see [Skill maintenance](../authoring/source-composition.md) for the maintained package and source model.
 
 
 **Capability Composition**:

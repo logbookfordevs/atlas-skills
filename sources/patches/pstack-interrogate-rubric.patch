@@ -1,0 +1,19 @@
+diff --git a/source.md b/source.md
+index 8dab195..0b2f2fa 100644
+--- a/source.md
++++ b/source.md
+@@ -33,12 +33,12 @@ Answering this often requires looking beyond the changed files. Read the surroun
+ 
+ Does the code fit well into the system it's part of?
+ 
+-- Boundary discipline: is validation at system boundaries, or scattered through business logic? Validate data once where it enters the system, then trust it internally.
++- Boundary discipline: is validation at system boundaries, or scattered through business logic? Validate external data at its boundary; justify internal trust with enforced invariants and account for mutable or unvalidated paths.
+ - Abstraction level: is the code mixing high-level orchestration with low-level detail?
+ - Coupling: does this change introduce dependencies that will make future changes harder?
+ - Data model fit: do the data structures match the actual access patterns?
+ - Bolted-on vs. integrated: if the new requirement had been known from the start, would the code look like this, or does the change feel patched onto the existing design?
+-- Legacy dual-paths: does the change introduce a new API while keeping the old one alive? If there are no external consumers, migrate callers and delete the old path in the same wave. Don't leave compatibility layers that will become permanent.
++- Legacy dual-paths: does the change introduce a new API while keeping the old one alive? Check actual consumers, migration scope and retained-baseline policy before recommending removal. Propose coordinated caller migration when authorized; review does not authorize deletion.
+ 
+ Don't penalize simple code for lacking abstraction. Premature abstraction is worse than duplication.
+ 

@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
-import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
 import { inspectSource, prepareUpdate, publishIssue } from './upstream-sync.mjs';
-import { buildSkills, sha256 } from './build-skills.mjs';
+import { buildSkills, composeSkills, sha256 } from './build-skills.mjs';
 
 const bytes = text => Buffer.from(text);
 function fixture(t) {
@@ -104,11 +104,10 @@ test('a missing baseline resource is distinguished from an upstream revision upd
   assert.equal(result.changed.length, 1);
 });
 
-test('preparation preserves Atlas invocation metadata while carrying relocated upstream metadata', t => {
+test('preparation updates upstream metadata snapshots and preserves only Atlas invocation metadata in the package', t => {
   const { root, source, revision } = fixture(t);
   const write = (name, value) => { mkdirSync(join(root, name, '..'), { recursive: true }); writeFileSync(join(root, name), value); };
   source.carriedPath = 'SKILL.md';
-  source.supportingFileTargets = { 'agents/openai.yaml': 'references/upstream/agents/openai.yaml' };
   write(source.snapshot, 'before\n'); write(source.license, 'license\n');
   const agent = 'skills/fixture-skill/agents/openai.yaml';
   write(agent, 'interface:\n  display_name: Atlas Fixture\n');
@@ -120,16 +119,20 @@ test('preparation preserves Atlas invocation metadata while carrying relocated u
   prepareUpdate(root, source, inspectSource(source, revision, root), manifest);
   assert.equal(readFileSync(join(root, agent), 'utf8'), 'interface:\n  display_name: Atlas Fixture\n');
   const carried = 'skills/fixture-skill/references/upstream/agents/openai.yaml';
-  assert.equal(readFileSync(join(root, carried), 'utf8'), 'interface:\n  display_name: Upstream Fixture\n');
+  assert.equal(existsSync(join(root, carried)), false);
   const next = JSON.parse(readFileSync(join(root, 'sources/composition.json')));
+  const upstreamMetadata = next.sources[0].supportingFiles.find(file => file.relativePath === 'agents/openai.yaml');
+  assert.equal(readFileSync(join(root, upstreamMetadata.snapshot), 'utf8'), 'interface:\n  display_name: Upstream Fixture\n');
   revision.commit = 'c'.repeat(40);
   revision.files.set('skills/fixture/agents/openai.yaml', bytes('interface:\n  display_name: Updated Upstream\n'));
   prepareUpdate(root, next.sources[0], inspectSource(next.sources[0], revision, root), next);
-  assert.equal(readFileSync(join(root, carried), 'utf8'), 'interface:\n  display_name: Updated Upstream\n');
+  assert.equal(readFileSync(join(root, upstreamMetadata.snapshot), 'utf8'), 'interface:\n  display_name: Updated Upstream\n');
+  assert.equal(existsSync(join(root, carried)), false);
   assert.equal(readFileSync(join(root, agent), 'utf8'), 'interface:\n  display_name: Atlas Fixture\n');
+  assert.deepEqual([...composeSkills(root).get('fixture-skill').keys()].filter(name => name.endsWith('agents/openai.yaml')), ['agents/openai.yaml']);
   buildSkills(root, { check: true });
   const unsafe = JSON.parse(readFileSync(join(root, 'sources/composition.json')));
-  unsafe.sources[0].supportingFileTargets['agents/openai.yaml'] = '../escape';
+  unsafe.sources[0].supportingFileTargets = { 'agents/openai.yaml': '../escape' };
   write('sources/composition.json', JSON.stringify(unsafe));
   assert.throws(() => buildSkills(root), /Invalid package path/);
 });

@@ -1,0 +1,20 @@
+diff --git a/source.md b/source.md
+index dfe9a6f..35d3453 100644
+--- a/source.md
++++ b/source.md
+@@ -6,7 +6,7 @@ disable-model-invocation: true
+ 
+ # Boundary Discipline
+ 
+-Place validation, type narrowing, and error handling at system boundaries. Trust internal code unconditionally. Business logic lives in pure functions. The shell is thin and mechanical.
++Place validation, type narrowing, and error handling at system boundaries. Trust internal values where validation and preserved invariants justify it; mutation, foreign code or unvalidated paths can invalidate that trust. Business logic lives in pure functions. The shell is thin and mechanical.
+ 
+ **Why:** Scattered validation is noisy, redundant, and gives a false sense of safety. Keep logic out of framework wiring so it can be tested without the framework.
+ 
+@@ -30,5 +30,5 @@ Code organization:
+ - Scoring and assessment: pure transforms from state to results
+ 
+ **The tests:**
+-- "Is this data crossing a system boundary right now?" If not, validation is redundant.
++- "Is this data crossing a system boundary right now?" If not, check whether its invariants are already established and preserved before adding or removing validation.
+ - "Can this be a pure function that the shell just calls?" If yes, extract it.

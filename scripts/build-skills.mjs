@@ -73,10 +73,17 @@ export function composeSkills(root = repositoryRoot) {
       return { ...reference, classification: 'atlas-authored', carriedSha256: sha256(read(reference.input)) };
     });
     const generatedReferences = (workflow.generatedReferences ?? []).map(reference => {
-      if (reference.generator !== 'setup-dependencies') throw new Error(`Unknown reference generator: ${reference.generator}`);
-      const bytes = Buffer.from(json(setupDependencies(composition, JSON.parse(read('stacks/atlas.json')))));
+      let bytes;
+      let inputs;
+      if (reference.generator === 'setup-dependencies') {
+        bytes = Buffer.from(json(setupDependencies(composition, JSON.parse(read('stacks/atlas.json')))));
+        inputs = ['sources/composition.json', 'stacks/atlas.json'];
+      } else if (reference.generator === 'stack-manifest') {
+        bytes = read('stacks/atlas.json');
+        inputs = ['stacks/atlas.json'];
+      } else throw new Error(`Unknown reference generator: ${reference.generator}`);
       put(reference.target, bytes);
-      return { ...reference, inputs: ['sources/composition.json', 'stacks/atlas.json'], carriedSha256: sha256(bytes) };
+      return { ...reference, inputs, carriedSha256: sha256(bytes) };
     });
     const receipts = workflow.methods.map(id => {
       const source = sources.get(id);
@@ -91,7 +98,7 @@ export function composeSkills(root = repositoryRoot) {
         portablePath(relativePath);
         portablePath(carriedPath);
       }
-      const supportingFiles = (source.supportingFiles ?? []).map(file => {
+      const supportingFiles = (source.supportingFiles ?? []).flatMap(file => {
         portablePath(file.relativePath);
         const original = read(file.snapshot);
         if (sha256(original) !== file.sourceSha256) throw new Error(`Supporting file integrity failure: ${id}/${file.relativePath}`);
@@ -99,9 +106,10 @@ export function composeSkills(root = repositoryRoot) {
         if (patched && (source.classification !== 'patched' || !file.method || !file.patch)) throw new Error(`Incomplete supporting patch: ${id}/${file.relativePath}`);
         const bytes = patched ? read(file.method) : original;
         if (patched && !bytes.equals(replayPatch(original, read(file.patch)))) throw new Error(`Supporting patch replay mismatch: ${id}/${file.relativePath}`);
+        if (file.relativePath === 'agents/openai.yaml') return [];
         const carriedPath = source.supportingFileTargets?.[file.relativePath] ?? join(dirname(target), file.relativePath);
         put(carriedPath, bytes);
-        return { upstreamPath: file.upstreamPath, classification: patched ? 'patched' : 'verbatim', sourceSha256: file.sourceSha256, carriedPath, carriedSha256: sha256(bytes), ...(patched ? { patch: file.patch, patchSha256: sha256(read(file.patch)) } : {}) };
+        return [{ upstreamPath: file.upstreamPath, classification: patched ? 'patched' : 'verbatim', sourceSha256: file.sourceSha256, carriedPath, carriedSha256: sha256(bytes), ...(patched ? { patch: file.patch, patchSha256: sha256(read(file.patch)) } : {}) }];
       });
       const notices = (source.notices ?? []).map(notice => {
         const bytes = read(notice.input);

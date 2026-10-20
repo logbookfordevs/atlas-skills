@@ -12,7 +12,7 @@ function fixture() {
     composition: { version: 1, sources: [], workflows: [
       { id: 'atlas-fixture', entry: 'skills/atlas-fixture/SKILL.md', agent: 'skills/atlas-fixture/agents/openai.yaml', methods: [], dependencies: [dependency, { id: 'atlas-owned', relationship: 'behavioral', required: true, condition: 'Owned path.' }, { id: 'tool', relationship: 'tool' }] },
       { id: 'atlas-owned', entry: 'skills/atlas-owned/SKILL.md', agent: 'skills/atlas-owned/agents/openai.yaml', methods: [], dependencies: [{ ...dependency, required: false }] },
-      { id: 'atlas-setup', entry: 'skills/atlas-setup/SKILL.md', agent: 'skills/atlas-setup/agents/openai.yaml', methods: [], generatedReferences: [{ generator: 'setup-dependencies', target: 'references/dependencies.json' }] },
+      { id: 'atlas-setup', entry: 'skills/atlas-setup/SKILL.md', agent: 'skills/atlas-setup/agents/openai.yaml', methods: [], generatedReferences: [{ generator: 'setup-dependencies', target: 'references/dependencies.json' }, { generator: 'stack-manifest', target: 'references/stack.json' }] },
     ] },
     stack: { version: 1, sources: [{ name: 'Upstream', source: 'https://github.com/upstream/skills', skills: ['external'] }] },
   };
@@ -52,10 +52,13 @@ test('setup regenerates when its stack source or required dependencies change wi
     writeFileSync(join(root, 'stacks/atlas.json'), JSON.stringify(stack));
   };
   save(); buildSkills(root); buildSkills(root, { check: true });
+  const bundledStack = join(root, 'skills/atlas-setup/references/stack.json');
+  assert.deepEqual(JSON.parse(readFileSync(bundledStack)), stack);
   stack.sources[0].source = 'https://github.com/new-upstream/skills';
   save();
   assert.throws(() => buildSkills(root, { check: true }), /Generated packages differ/);
   buildSkills(root);
+  assert.deepEqual(JSON.parse(readFileSync(bundledStack)), stack);
   const output = JSON.parse(readFileSync(join(root, 'skills/atlas-setup/references/dependencies.json')));
   assert.equal(output.dependencies[0].source, stack.sources[0].source);
   composition.workflows[0].dependencies = [];

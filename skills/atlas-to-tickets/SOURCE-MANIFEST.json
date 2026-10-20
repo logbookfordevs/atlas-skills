@@ -4,8 +4,7 @@
   "generated": true,
   "managedFiles": [
     "SKILL.md",
-    "licenses/to-tickets.txt",
-    "references/upstream/agents/openai.yaml"
+    "licenses/to-tickets.txt"
   ],
   "authoredInputs": [
     "skills/atlas-to-tickets/SKILL.md",
@@ -33,35 +32,26 @@
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/engineering/to-tickets/agents/openai.yaml",
-          "classification": "verbatim",
-          "sourceSha256": "21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090",
-          "carriedPath": "references/upstream/agents/openai.yaml",
-          "carriedSha256": "21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090"
-        }
-      ],
+      "supportingFiles": [],
       "notices": [],
       "sourceSha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995",
       "carriedPath": "SKILL.md",
-      "carriedSha256": "3dcf0b15ce1fea474ebf05bb0c716406d06411e5dd34aefeaa5252bad9638750",
+      "carriedSha256": "7a65a7fd1cb9239f027cc604e69b87774c5443d0b124ca4f4298304e428f8c54",
       "licensePath": "licenses/to-tickets.txt",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "adaptation": "Existing Leonardo fork bytes preserved. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Public entry renamed to atlas-to-tickets; remaining behavior preserved.",
+      "adaptation": "Existing Leonardo fork bytes preserved. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Public entry renamed to atlas-to-tickets; remaining behavior preserved. The description reflects local-first artifact storage and tracker publication on request.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
       "rulings": [],
       "patch": "sources/patches/to-tickets.patch",
-      "patchSha256": "d92eee3b524b76562c13c5bccb4875b69699845f1d33eb28dd55b2ac0d6eba1c"
+      "patchSha256": "bb1a0396a2d9be35440f4e5beb23fa96e7e05ca0e2b1500535e61e9ff407a9d0"
     }
   ],
   "rulings": [],
   "files": {
-    "SKILL.md": "3dcf0b15ce1fea474ebf05bb0c716406d06411e5dd34aefeaa5252bad9638750",
+    "SKILL.md": "7a65a7fd1cb9239f027cc604e69b87774c5443d0b124ca4f4298304e428f8c54",
     "agents/openai.yaml": "c870af372978ea66f9fba609bc00d27db275dbcfb10fe7156b6b4a81e4b79681",
     "references/ticket-templates.md": "0e85802c6d3509a5cf5e94416b5262700e68636a6083bbb1edb3a7585ec8c113",
-    "licenses/to-tickets.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-    "references/upstream/agents/openai.yaml": "21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090"
+    "licenses/to-tickets.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
   }
 }

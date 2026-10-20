@@ -5,7 +5,6 @@
   "managedFiles": [
     "references/color/index.md",
     "licenses/better-colors.txt",
-    "references/color/agents/openai.yaml",
     "references/color/color-formats.md",
     "references/color/color-usage.md",
     "references/color/contrast.md",
@@ -14,7 +13,6 @@
     "references/color/token-naming.md",
     "references/type/index.md",
     "licenses/better-typography.txt",
-    "references/type/agents/openai.yaml",
     "references/type/choosing-fonts.md",
     "references/type/css-cheat-sheet.md",
     "references/type/details-and-accessibility.md",
@@ -23,12 +21,10 @@
     "references/type/wrapping-and-punctuation.md",
     "references/layout/index.md",
     "licenses/better-layout.txt",
-    "references/layout/agents/openai.yaml",
     "references/layout/grouping-and-alignment.md",
     "references/layout/spacing-and-adaptivity.md",
     "references/accessibility/index.md",
     "licenses/better-accessibility.txt",
-    "references/accessibility/agents/openai.yaml",
     "references/accessibility/focus-and-keyboard.md",
     "references/accessibility/forms.md",
     "references/accessibility/hit-areas.md",
@@ -37,7 +33,6 @@
     "references/accessibility/semantics-and-aria.md",
     "references/ui/index.md",
     "licenses/better-ui.txt",
-    "references/ui/agents/openai.yaml",
     "references/ui/animations.md",
     "references/ui/enter-exit.md",
     "references/ui/icon-transitions.md",
@@ -46,7 +41,6 @@
     "references/ui/surfaces.md",
     "references/copy/index.md",
     "licenses/better-writing.txt",
-    "references/copy/agents/openai.yaml",
     "references/copy/patterns.md",
     "references/animate/animate.md",
     "licenses/animate.txt",
@@ -81,13 +75,6 @@
         "trackingRef": "main"
       },
       "supportingFiles": [
-        {
-          "upstreamPath": "skills/better-colors/agents/openai.yaml",
-          "classification": "verbatim",
-          "sourceSha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
-          "carriedPath": "references/color/agents/openai.yaml",
-          "carriedSha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a"
-        },
         {
           "upstreamPath": "skills/better-colors/color-formats.md",
           "classification": "verbatim",
@@ -171,13 +158,6 @@
       },
       "supportingFiles": [
         {
-          "upstreamPath": "skills/better-typography/agents/openai.yaml",
-          "classification": "verbatim",
-          "sourceSha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
-          "carriedPath": "references/type/agents/openai.yaml",
-          "carriedSha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8"
-        },
-        {
           "upstreamPath": "skills/better-typography/choosing-fonts.md",
           "classification": "verbatim",
           "sourceSha256": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
@@ -258,13 +238,6 @@
       },
       "supportingFiles": [
         {
-          "upstreamPath": "skills/better-layout/agents/openai.yaml",
-          "classification": "verbatim",
-          "sourceSha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
-          "carriedPath": "references/layout/agents/openai.yaml",
-          "carriedSha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15"
-        },
-        {
           "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
           "classification": "patched",
           "sourceSha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
@@ -320,13 +293,6 @@
         "trackingRef": "main"
       },
       "supportingFiles": [
-        {
-          "upstreamPath": "skills/better-accessibility/agents/openai.yaml",
-          "classification": "verbatim",
-          "sourceSha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
-          "carriedPath": "references/accessibility/agents/openai.yaml",
-          "carriedSha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563"
-        },
         {
           "upstreamPath": "skills/better-accessibility/focus-and-keyboard.md",
           "classification": "verbatim",
@@ -403,13 +369,6 @@
       },
       "supportingFiles": [
         {
-          "upstreamPath": "skills/better-ui/agents/openai.yaml",
-          "classification": "verbatim",
-          "sourceSha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
-          "carriedPath": "references/ui/agents/openai.yaml",
-          "carriedSha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871"
-        },
-        {
           "upstreamPath": "skills/better-ui/animations.md",
           "classification": "verbatim",
           "sourceSha256": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
@@ -484,13 +443,6 @@
         "trackingRef": "main"
       },
       "supportingFiles": [
-        {
-          "upstreamPath": "skills/better-writing/agents/openai.yaml",
-          "classification": "verbatim",
-          "sourceSha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
-          "carriedPath": "references/copy/agents/openai.yaml",
-          "carriedSha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67"
-        },
         {
           "upstreamPath": "skills/better-writing/patterns.md",
           "classification": "patched",
@@ -628,7 +580,6 @@
     "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
     "references/color/index.md": "c49f15e8e320fb2ba9b96de6c0acd41b279bbdea44165b362eac3f4ca7f906e5",
     "licenses/better-colors.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/color/agents/openai.yaml": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
     "references/color/color-formats.md": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
     "references/color/color-usage.md": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
     "references/color/contrast.md": "5bd96efee5f5a0603bda06929809b3c8684a5507ff12806007a4b712ba2dd041",
@@ -637,7 +588,6 @@
     "references/color/token-naming.md": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
     "references/type/index.md": "877a0763bae9413c1b91e102c7b97d05abc19e4a7279f18061178345e845552c",
     "licenses/better-typography.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/type/agents/openai.yaml": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
     "references/type/choosing-fonts.md": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
     "references/type/css-cheat-sheet.md": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
     "references/type/details-and-accessibility.md": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
@@ -646,12 +596,10 @@
     "references/type/wrapping-and-punctuation.md": "44ef7be30b3342c0a81f7b07c2f7138c9743b8df8c8edab518907e8ec0abd68a",
     "references/layout/index.md": "27ecc29f5b3ad1101ccd7322804f064601bb63112e42549e68dbc7c43c5c01ba",
     "licenses/better-layout.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/layout/agents/openai.yaml": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
     "references/layout/grouping-and-alignment.md": "57fb668fc41bbfb3c57b4a39b547f54f47edd0d7965531e31b6d8b3fa6762036",
     "references/layout/spacing-and-adaptivity.md": "bfd2eb6f0ff442a11db7459d2a838070da7dd54ed637a02de9c0da09d541f599",
     "references/accessibility/index.md": "00b7e0af49793cdade0ef23338f5517f9a21d753272aab899a020b43804158c4",
     "licenses/better-accessibility.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/accessibility/agents/openai.yaml": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
     "references/accessibility/focus-and-keyboard.md": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
     "references/accessibility/forms.md": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4",
     "references/accessibility/hit-areas.md": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
@@ -660,7 +608,6 @@
     "references/accessibility/semantics-and-aria.md": "574a3bf880b5331f865e4e0642818c0977df53cb33207fd03fd92165f574b476",
     "references/ui/index.md": "38eebc1536201375f9ca5a17faf2019a3fdaa1f345034c1d259bd3dd842140e3",
     "licenses/better-ui.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/ui/agents/openai.yaml": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
     "references/ui/animations.md": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
     "references/ui/enter-exit.md": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
     "references/ui/icon-transitions.md": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
@@ -669,7 +616,6 @@
     "references/ui/surfaces.md": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
     "references/copy/index.md": "ae78d7772c0257f18ff19852dc69fdeaed46270c0077b9382d3f9acf1bc00cbb",
     "licenses/better-writing.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/copy/agents/openai.yaml": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
     "references/copy/patterns.md": "bb7b6bb17fbdf9e249eeb5d2ada2bcc9863f67dd6659489b4f25a59587a0c324",
     "references/animate/animate.md": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",

@@ -1,6 +1,6 @@
 ---
 name: atlas-to-spec
-description: Turn the current conversation into a spec and save it as an AFK artifact, or publish it to the project issue tracker when requested — no interview, just synthesis of what you've already discussed.
+description: "Turn a settled conversation into an actionable specification. Save locally by default; publish to the project tracker when requested."
 disable-model-invocation: true
 metadata:
   short-description: Create or normalize an agent-ready spec.
