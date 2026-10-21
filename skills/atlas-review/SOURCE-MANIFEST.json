@@ -437,9 +437,9 @@
           "classification": "patched",
           "sourceSha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
           "carriedPath": "references/layout/spacing-and-adaptivity.md",
-          "carriedSha256": "bfd2eb6f0ff442a11db7459d2a838070da7dd54ed637a02de9c0da09d541f599",
+          "carriedSha256": "c128de093d6a11f6991d5fd02b92297f0d6720882f6eba5ab861e2ae49ac533a",
           "patch": "sources/patches/better-layout/spacing-and-adaptivity.md.patch",
-          "patchSha256": "d982ccb959c35614e4b8ad1607b03504a86a451af3ec28000f7018bcf5704277"
+          "patchSha256": "ce9c2a7e9eb8bb140700fa36c1967c6572e1fe3067a7eef1aa174f4a8ac17edb"
         }
       ],
       "notices": [],
@@ -453,10 +453,10 @@
       },
       "sourceSha256": "8c5883ccb23c27c39b7c58d101154ff35e032410e0dc4794be9ab7fe070c2297",
       "carriedPath": "references/layout/index.md",
-      "carriedSha256": "27ecc29f5b3ad1101ccd7322804f064601bb63112e42549e68dbc7c43c5c01ba",
+      "carriedSha256": "451812dff8cce89cb2b336cd1ce10d64547c4b8e394a850a979312d6989f6751",
       "licensePath": "licenses/better-layout.txt",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches. Correct the keyboard-clearance claim: dynamic viewport units handle browser chrome but do not guarantee software-keyboard clearance; preserve explicit browser verification.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
       "rulings": [
@@ -465,7 +465,7 @@
         "review-interface-routing"
       ],
       "patch": "sources/patches/better-layout.patch",
-      "patchSha256": "9b076ca40d7eae0e0123d032b161187be2295d0b3e46d6b53fcda336b58fcd70"
+      "patchSha256": "31c5bd47d98bf3e567fb767e644f930e9698191124e5124eabd0b54d1aeaecf6"
     },
     {
       "id": "better-accessibility",
@@ -942,10 +942,10 @@
     "references/type/spacing-and-sizing.md": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
     "references/type/variable-fonts-and-opentype.md": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
     "references/type/wrapping-and-punctuation.md": "44ef7be30b3342c0a81f7b07c2f7138c9743b8df8c8edab518907e8ec0abd68a",
-    "references/layout/index.md": "27ecc29f5b3ad1101ccd7322804f064601bb63112e42549e68dbc7c43c5c01ba",
+    "references/layout/index.md": "451812dff8cce89cb2b336cd1ce10d64547c4b8e394a850a979312d6989f6751",
     "licenses/better-layout.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
     "references/layout/grouping-and-alignment.md": "57fb668fc41bbfb3c57b4a39b547f54f47edd0d7965531e31b6d8b3fa6762036",
-    "references/layout/spacing-and-adaptivity.md": "bfd2eb6f0ff442a11db7459d2a838070da7dd54ed637a02de9c0da09d541f599",
+    "references/layout/spacing-and-adaptivity.md": "c128de093d6a11f6991d5fd02b92297f0d6720882f6eba5ab861e2ae49ac533a",
     "references/accessibility/index.md": "00b7e0af49793cdade0ef23338f5517f9a21d753272aab899a020b43804158c4",
     "licenses/better-accessibility.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
     "references/accessibility/focus-and-keyboard.md": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",

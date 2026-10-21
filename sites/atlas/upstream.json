@@ -263,6 +263,13 @@
         "author": "Lauren Tan / Pstack mirror",
         "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/benchmark-checklist/SKILL.md",
         "classification": "patched"
+      },
+      {
+        "id": "break-ui",
+        "title": "Break UI",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/break-ui/SKILL.md",
+        "classification": "patched"
       }
     ],
     "collections": []
@@ -491,6 +498,13 @@
         "author": "Emil Kowalski",
         "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/apple-design/SKILL.md",
         "classification": "verbatim"
+      },
+      {
+        "id": "mobile-native",
+        "title": "Mobile Native",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/mobile-native/SKILL.md",
+        "classification": "patched"
       }
     ],
     "collections": [
@@ -521,6 +535,13 @@
         "title": "Find Animation Opportunities",
         "author": "Emil Kowalski",
         "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/find-animation-opportunities/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "animation-performance",
+        "title": "Animation Performance",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/animation-performance/SKILL.md",
         "classification": "patched"
       }
     ],

@@ -9,7 +9,9 @@
     "references/fluid/apple-design.md",
     "licenses/apple-design.txt",
     "references/opportunities/index.md",
-    "licenses/find-animation-opportunities.txt"
+    "licenses/find-animation-opportunities.txt",
+    "references/performance/animation-performance.md",
+    "licenses/animation-performance.txt"
   ],
   "authoredInputs": [
     "skills/atlas-motion/SKILL.md",
@@ -107,6 +109,33 @@
       ],
       "patch": "sources/patches/find-animation-opportunities.patch",
       "patchSha256": "da2ccb6e3e0d6da5216cbb7ab0075ddde555e806dadd972d2e5bf68813716b51"
+    },
+    {
+      "id": "animation-performance",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+        "path": "skills/animation-performance/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "ceb9dd3fe912615830f725a0120ccf8d012d15a6218001a5cd6c15d38e39a957",
+      "carriedPath": "references/performance/animation-performance.md",
+      "carriedSha256": "0ac163de625c2d237880e4a907de864948f20fedd4f09e87b493242e667232b3",
+      "licensePath": "licenses/animation-performance.txt",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "adaptation": "Remove canned readiness text, route Animate locally and motion review to Atlas Review. Qualify compositor and library-driver claims, preserve layout semantics in property swaps, and retain diagnosis-first evidence and request-only repairs.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-20",
+      "rulings": [
+        "motion-local-routing"
+      ],
+      "patch": "sources/patches/animation-performance.patch",
+      "patchSha256": "5b36a8556fa42c297490f4a51918b862307e15b6180bf304d8dd1a436093c744"
     }
   ],
   "rulings": [
@@ -117,14 +146,15 @@
       "section": "Scope and ownership",
       "sources": [
         "animate",
-        "find-animation-opportunities"
+        "find-animation-opportunities",
+        "animation-performance"
       ],
-      "decision": "Discovery is read-only; implementation follows authorization; review handoffs use Atlas Review and Native remains external."
+      "decision": "Discovery is read-only; implementation follows authorization; review handoffs use Atlas Review and Native remains external. Performance diagnoses frame-budget causes and applies repairs only on request."
     }
   ],
   "files": {
-    "SKILL.md": "df90ba8a7d4c2b604c49ec0e40833f6dd0786f79427aeb21d66755a59489e8a0",
-    "agents/openai.yaml": "4a898c95714535fb6ecaa1027c7fc19e6ef8ce0107cc4a843049568b5b8f0fd3",
+    "SKILL.md": "ab2467f2f82e129db855724d0e6a275ed25d1df2948b7c9a487794bacddd7069",
+    "agents/openai.yaml": "24008d76cda887dae17117fc04ee5497944ae6583cd0435923ac98028e02dc59",
     "references/animate/animate.md": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
@@ -132,6 +162,8 @@
     "licenses/apple-design.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/opportunities/index.md": "aebe5a1d1949b11d05be67d94d82a1d888a4a9d22342974fa66f543c772b0b18",
     "licenses/find-animation-opportunities.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/performance/animation-performance.md": "0ac163de625c2d237880e4a907de864948f20fedd4f09e87b493242e667232b3",
+    "licenses/animation-performance.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
     "references/ownership.md": "166cf8437712cb30e2cc2306a029dd47c824089bee86677a8d12bc944307d91a"
   }

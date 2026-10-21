@@ -23,6 +23,8 @@ Suppose users need to save a dashboard filter, return later and restore it, but 
 | The work needs executable slices | Atlas To Tickets | Vertical implementation tickets with explicit blockers |
 | Implementation shape, tests or version-specific APIs | Atlas Implement: Architect, TDD or Source-Driven as applicable | Working code with the selected method's evidence |
 | Progress must survive handoffs | Tracking Implementation, when requested | One durable Implementation Record alongside the executor |
+| An interface needs realistic edge-case data | Atlas Verify: UI Stress | An isolated data-switching harness and findings, with fixes handed to implementation |
+| Animation drops frames | Atlas Motion: Performance | A cause-based diagnosis with code evidence and available profiling results |
 | Completed behavior needs proof | Atlas Verify: Run, when requested or selected for the task | A structured verification report with actual evidence and coverage gaps |
 | The change needs judgment | Atlas Review, or Tracking's checkpoint review gate | Findings, their resolution and remaining uncertainty |
 

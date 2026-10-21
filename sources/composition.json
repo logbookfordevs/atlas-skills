@@ -200,7 +200,7 @@
         "sha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
         "trackingRef": "main"
       },
-      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches. Correct the keyboard-clearance claim: dynamic viewport units handle browser chrome but do not guarantee software-keyboard clearance; preserve explicit browser verification.",
       "patch": "sources/patches/better-layout.patch"
     },
     {
@@ -2407,6 +2407,101 @@
       "rulings": [
         "retro-mode-authority"
       ]
+    },
+    {
+      "id": "animation-performance",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+        "path": "skills/animation-performance/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/animation-performance/source.md",
+      "sourceSha256": "ceb9dd3fe912615830f725a0120ccf8d012d15a6218001a5cd6c15d38e39a957",
+      "license": "sources/upstream/animation-performance/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "skills/atlas-motion/references/performance/animation-performance.md",
+      "carriedPath": "references/performance/animation-performance.md",
+      "patch": "sources/patches/animation-performance.patch",
+      "adaptation": "Remove canned readiness text, route Animate locally and motion review to Atlas Review. Qualify compositor and library-driver claims, preserve layout semantics in property swaps, and retain diagnosis-first evidence and request-only repairs.",
+      "consumers": [
+        "atlas-motion"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-20",
+      "rulings": [
+        "motion-local-routing"
+      ]
+    },
+    {
+      "id": "break-ui",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+        "path": "skills/break-ui/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/break-ui/source.md",
+      "sourceSha256": "e7eec1d70ac56a04255e9c0dbe98084ea3d544cc04aaad34f32c95d6fa9dff5e",
+      "license": "sources/upstream/break-ui/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "skills/atlas-verify/references/stress/break-ui.md",
+      "carriedPath": "references/stress/break-ui.md",
+      "patch": "sources/patches/break-ui.patch",
+      "adaptation": "Remove canned readiness text and external sibling calls. Confine fixtures and toggle to an owned temporary harness exercising the real component; preserve read-only product verification, explicit retention and executor-owned repairs. Require accessible access to truncated values; preserve the upstream catalog verbatim.",
+      "consumers": [
+        "atlas-verify"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/break-ui/CATALOG.md",
+          "relativePath": "CATALOG.md",
+          "snapshot": "sources/upstream/break-ui/support/CATALOG.md",
+          "sourceSha256": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-20",
+      "rulings": [
+        "verify-method-authority",
+        "verify-stress-isolation"
+      ]
+    },
+    {
+      "id": "mobile-native",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+        "path": "skills/mobile-native/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/mobile-native/source.md",
+      "sourceSha256": "888b7651d66d66dbac4e72b7c554638eb19bd971d686d6cbdf030a5ef3788f55",
+      "license": "sources/upstream/mobile-native/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "skills/atlas-craft/references/mobile-web/mobile-native.md",
+      "carriedPath": "references/mobile-web/mobile-native.md",
+      "patch": "sources/patches/mobile-native.patch",
+      "adaptation": "Condense Mobile Native into a conditional mobile-web reference. Link overlapping rules to bundled Craft owners; scope platform resets to demonstrated needs, preserve selectable text and accessible activation, and qualify keyboard viewport and PWA metadata behavior. Retain device evidence limits.",
+      "consumers": [
+        "atlas-craft"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-21",
+      "rulings": [
+        "craft-mobile-web-ownership"
+      ]
     }
   ],
   "workflows": [
@@ -2466,7 +2561,8 @@
         "better-ui",
         "better-writing",
         "animate",
-        "apple-design"
+        "apple-design",
+        "mobile-native"
       ],
       "authoredReferences": [
         {
@@ -2483,7 +2579,8 @@
       "methods": [
         "animate",
         "apple-design",
-        "find-animation-opportunities"
+        "find-animation-opportunities",
+        "animation-performance"
       ],
       "authoredReferences": [],
       "dependencies": []
@@ -2682,7 +2779,8 @@
         "pe-verify",
         "pstack-create-verification-skill",
         "pstack-maintain-verification-skill",
-        "pstack-benchmark-checklist"
+        "pstack-benchmark-checklist",
+        "break-ui"
       ],
       "dependencies": [
         {
@@ -3008,9 +3106,10 @@
       "section": "Scope and ownership",
       "sources": [
         "animate",
-        "find-animation-opportunities"
+        "find-animation-opportunities",
+        "animation-performance"
       ],
-      "decision": "Discovery is read-only; implementation follows authorization; review handoffs use Atlas Review and Native remains external."
+      "decision": "Discovery is read-only; implementation follows authorization; review handoffs use Atlas Review and Native remains external. Performance diagnoses frame-budget causes and applies repairs only on request."
     },
     {
       "id": "verify-executor-handoff",
@@ -3096,9 +3195,10 @@
         "pe-verify",
         "pstack-create-verification-skill",
         "pstack-maintain-verification-skill",
-        "pstack-benchmark-checklist"
+        "pstack-benchmark-checklist",
+        "break-ui"
       ],
-      "decision": "Select Run, Create, Maintain or Performance from the requested outcome. Product fixes remain outside verification. Run owns PE reporting; Create/Maintain own selected verifier assets, and standalone Performance owns measurement evidence. Missing local verifier assets do not add generator/maintenance work to a Run."
+      "decision": "Select Run, Create, Maintain or Performance from the requested outcome. Product fixes remain outside verification. Run owns PE reporting; Create/Maintain own selected verifier assets, and standalone Performance owns measurement evidence. Missing local verifier assets do not add generator/maintenance work to a Run. UI Stress exercises worst-case data in isolated temporary fixtures and returns repairs to the executor; it retains its own report unless contributing to Run."
     },
     {
       "id": "verify-project-verifier-bridge",
@@ -3325,6 +3425,33 @@
         "pstack-correct"
       ],
       "decision": "Diagnose is the advisory default; Enforce requires explicit implementation authority and bounded recurring mistake classes. Corrections alone do not trigger edits. Preserve recurrence evidence, structural prevention and real-mistake proof without mandatory rule tables, unrelated repairs or automatic publication. Existing authorization needs no repeated approval."
+    },
+    {
+      "id": "verify-stress-isolation",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/stress/break-ui.md",
+      "section": "Verification scope",
+      "sources": [
+        "break-ui",
+        "pe-verify"
+      ],
+      "decision": "Worst-case UI data enters the real component through an isolated temporary harness. Product source and live data stay unchanged; retaining fixtures and implementing fixes are separate authorized work. A recreation is not proof of the original component."
+    },
+    {
+      "id": "craft-mobile-web-ownership",
+      "owner": "atlas-craft",
+      "document": "skills/atlas-craft/references/mobile-web/mobile-native.md",
+      "section": "Existing domain owners",
+      "sources": [
+        "mobile-native",
+        "better-layout",
+        "better-typography",
+        "better-accessibility",
+        "better-ui",
+        "animate",
+        "apple-design"
+      ],
+      "decision": "Mobile Web is a conditional reference, not a seventh Craft mode. Existing methods own type, accessibility, layout, UI and motion. Platform fixes preserve selectable text, native activation and useful browser behavior; keyboard clearance requires browser-specific evidence rather than a dvh guarantee."
     }
   ]
 }

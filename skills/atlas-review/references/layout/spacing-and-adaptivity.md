@@ -154,3 +154,5 @@ Typical clip-prone spots are the bottom edge of a resizable pane, the bottom of 
 - Size full-height panes with `100dvh`, not `100vh`, which ignores mobile browser toolbars.
 - Give a modal `max-height: 100dvh`, a scrolling body and an action row outside the scroll area.
 - Keep primary actions in stable chrome, such as a sticky footer with safe-area padding or the top of the view.
+
+The software keyboard can resize the visual viewport without resizing the layout viewport. `dvh` and safe-area padding alone do not guarantee clearance. Keep focused content scrollable and verify inputs and fixed actions with the keyboard open in supported browsers; use a supported viewport-resize policy or keyboard-aware positioning only when the layout needs it.

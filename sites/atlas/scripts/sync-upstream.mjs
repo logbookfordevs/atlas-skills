@@ -15,6 +15,9 @@ const authors = {
   'https://github.com/backnotprop/pstack': 'Lauren Tan / Pstack mirror',
 };
 const titles = {
+  "mobile-native": "Mobile Native",
+  "animation-performance": "Animation Performance",
+  "break-ui": "Break UI",
   "pe-verify": "PE Verify",
   "tdd": "TDD",
   "source-driven-development": "Source-Driven Development",
