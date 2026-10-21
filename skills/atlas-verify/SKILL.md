@@ -8,7 +8,7 @@ metadata:
 
 # Atlas Verify
 
-For verification work, select Run, UI Stress or Performance from the task and its material risks, honoring an explicit method choice. Combine methods only when each adds distinct proof; reuse shared evidence rather than repeat checks. Briefly state the selection, then read and follow the selected methods.
+For verification work, select Run, UI Stress or Performance from the task and its material risks, honoring an explicit method choice. Combine methods only when each adds distinct proof; reuse shared evidence rather than repeat checks. Briefly state the selection. Read the selected methods before planning checks or collecting verification evidence, then follow them.
 
 | Method | When it applies | Read and follow |
 | --- | --- | --- |
