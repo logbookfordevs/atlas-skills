@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Refresh optional Colorfigures from April Zhu’s download with full rotation, see-through mechanisms, zoom, mobile controls and new examples.
+
 - Add Animation Performance to Atlas Motion and UI Stress to Atlas Verify, preserving their distinct diagnosis and verification scopes.
 - Add a conditional Mobile Web reference to Atlas Craft without adding a mode; correct shared Layout guidance about software-keyboard clearance.
 - Update method discovery, Atlas Mode guidance, source credits and website examples for the new references.
