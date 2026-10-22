@@ -1,0 +1,6 @@
+interface:
+  display_name: "Source Composition"
+  short_description: "Apply source provenance and reviewed update practices."
+  default_prompt: "Use $source-composition to apply Atlas’s source composition methodology to this project."
+policy:
+  allow_implicit_invocation: false
