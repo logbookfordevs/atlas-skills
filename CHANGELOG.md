@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add a Skills CLI marketplace catalog grouping Atlas workflows, optional creative skills and standalone utilities.
+
 - Add the optional, manually invoked Source Composition utility for applying Atlas’s source-maintenance methodology in other projects.
 
 - Refresh optional Colorfigures from April Zhu’s download with full rotation, see-through mechanisms, zoom, mobile controls and new examples.
