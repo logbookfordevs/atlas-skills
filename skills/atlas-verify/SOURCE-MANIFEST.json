@@ -30,7 +30,10 @@
     "references/maintain/maintain-verification-skill.md",
     "licenses/pstack-maintain-verification-skill.txt",
     "references/performance/benchmark-checklist.md",
-    "licenses/pstack-benchmark-checklist.txt"
+    "licenses/pstack-benchmark-checklist.txt",
+    "references/stress/break-ui.md",
+    "licenses/break-ui.txt",
+    "references/stress/CATALOG.md"
   ],
   "authoredInputs": [
     "skills/atlas-verify/SKILL.md",
@@ -309,6 +312,42 @@
       ],
       "patch": "sources/patches/pstack-benchmark-checklist.patch",
       "patchSha256": "5b76c8e4ef90160d551ba4b34b1034afbe23162674251934ea73cf3c608b5b2e"
+    },
+    {
+      "id": "break-ui",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+        "path": "skills/break-ui/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/break-ui/CATALOG.md",
+          "classification": "verbatim",
+          "sourceSha256": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15",
+          "carriedPath": "references/stress/CATALOG.md",
+          "carriedSha256": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "e7eec1d70ac56a04255e9c0dbe98084ea3d544cc04aaad34f32c95d6fa9dff5e",
+      "carriedPath": "references/stress/break-ui.md",
+      "carriedSha256": "cda2c95f025b7214aced34bf70b14bd39b54aabcc0368da227b1fa7d54d52edb",
+      "licensePath": "licenses/break-ui.txt",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "adaptation": "Remove canned readiness text and external sibling calls. Confine fixtures and toggle to an owned temporary harness exercising the real component; preserve read-only product verification, explicit retention and executor-owned repairs. Require accessible access to truncated values; preserve the upstream catalog verbatim.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-20",
+      "rulings": [
+        "verify-method-authority",
+        "verify-stress-isolation"
+      ],
+      "patch": "sources/patches/break-ui.patch",
+      "patchSha256": "c120b6db87fe375767e350a01a13cf221cdcca040bd9d008c0011cc156135810"
     }
   ],
   "rulings": [
@@ -351,9 +390,10 @@
         "pe-verify",
         "pstack-create-verification-skill",
         "pstack-maintain-verification-skill",
-        "pstack-benchmark-checklist"
+        "pstack-benchmark-checklist",
+        "break-ui"
       ],
-      "decision": "Select Run, Create, Maintain or Performance from the requested outcome. Product fixes remain outside verification. Run owns PE reporting; Create/Maintain own selected verifier assets, and standalone Performance owns measurement evidence. Missing local verifier assets do not add generator/maintenance work to a Run."
+      "decision": "Select Run, Create, Maintain or Performance from the requested outcome. Product fixes remain outside verification. Run owns PE reporting; Create/Maintain own selected verifier assets, and standalone Performance owns measurement evidence. Missing local verifier assets do not add generator/maintenance work to a Run. UI Stress exercises worst-case data in isolated temporary fixtures and returns repairs to the executor; it retains its own report unless contributing to Run."
     },
     {
       "id": "verify-project-verifier-bridge",
@@ -377,11 +417,22 @@
         "pstack-benchmark-checklist"
       ],
       "decision": "Vet actual measured claims with raw work/error/repetition/limiter evidence. Adapt host tools, keep optimization outside verification, and use existing schema fields when contributing to a Run; standalone benchmarks do not require a rendered PE report or external perf playbook."
+    },
+    {
+      "id": "verify-stress-isolation",
+      "owner": "atlas-verify",
+      "document": "skills/atlas-verify/references/stress/break-ui.md",
+      "section": "Verification scope",
+      "sources": [
+        "break-ui",
+        "pe-verify"
+      ],
+      "decision": "Worst-case UI data enters the real component through an isolated temporary harness. Product source and live data stay unchanged; retaining fixtures and implementing fixes are separate authorized work. A recreation is not proof of the original component."
     }
   ],
   "files": {
-    "SKILL.md": "ea99c57fa19e74614fe916398274dde1a47a3341701af61b16348eb2cab82d5e",
-    "agents/openai.yaml": "fe57d1aa5b303e249d3bf53a5b93c21d0896b31dc99ad849a14a8f5080d2494b",
+    "SKILL.md": "6d6306ee5bceb25e67e6079f1925ab4cccd70ba62702cd994d4242c13a306dc3",
+    "agents/openai.yaml": "61b94c481f785dc5a979ec390f7efc73adcdc17714ae18ceaf5617a1ce639590",
     "references/run.md": "b153d3724fe4b54e0ffd900a66da346c36fbe6a25c5ce6fab3e7fdb22ada40cb",
     "licenses/pe-verify.txt": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
     "assets/report-template.html": "1930221f277f20c83f263539ed9d429e92396e76633805214d9fb7b4c48f7721",
@@ -410,6 +461,9 @@
     "licenses/pstack-maintain-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/performance/benchmark-checklist.md": "90b3c7aea438ef7c0f4341ed5d0f6e58c8711dc701a5c82180bfd16734af392b",
     "licenses/pstack-benchmark-checklist.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/stress/break-ui.md": "cda2c95f025b7214aced34bf70b14bd39b54aabcc0368da227b1fa7d54d52edb",
+    "licenses/break-ui.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/stress/CATALOG.md": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15",
     "references/project-verifiers.md": "5d02375e821d88955c71c238d8d835f0c6be0d80398c4c976ec50593687b5f80"
   }
 }

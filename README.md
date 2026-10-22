@@ -25,9 +25,9 @@ Install the packages below, or import the shared stack to include the recommende
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
 | [Atlas Implement](skills/atlas-implement/SKILL.md) | Architect, TDD and Source-Driven methods, selected independently or together |
 | [Atlas Review](skills/atlas-review/SKILL.md) | Code, Adversarial, Impact, Static, Interface, Motion and Motion Audit review |
-| [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, create or maintain project verifiers, and assess performance evidence |
-| [Atlas Craft](skills/atlas-craft/SKILL.md) | Color, Type, Layout, Accessibility, UI Polish and Copy |
-| [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid and read-only Opportunities |
+| [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, stress-test UI data, maintain project verifiers and assess performance evidence |
+| [Atlas Craft](skills/atlas-craft/SKILL.md) | Color, Type, Layout, Accessibility, UI Polish and Copy; conditional Mobile Web guidance |
+| [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid, Performance diagnosis and read-only Opportunities |
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Implementation state and evidence alongside any executor, with optional Audit Trail |
 | [Animated-Driven Frontend](skills/animated-driven-frontend/SKILL.md) | Manually invoked ZERO engineering knowledge |
 | [Team Up](skills/team-up/SKILL.md) | Role/model/effort selection, Arena candidate synthesis and Swarm coverage or races; optional shared subject preferences |
@@ -41,7 +41,13 @@ Select packages explicitly:
 npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-review
 ```
 
-Select the active packages by name: retained historical entries may appear in recursive discovery. No personal installation is changed by building the repository.
+Browse the repository catalog before installing:
+
+```sh
+npx skills add https://github.com/logbookfordevs/atlas-skills --list
+```
+
+The [CLI catalog](.claude-plugin/marketplace.json) groups packages as **Atlas Workflows**, **Creative Skills** and **Utility Skills**. Individual names and descriptions come from each package’s `SKILL.md`. Creative and utility skills remain optional and outside the shared stack. The catalog adds discovery paths and grouping; it is not an exclusion list, so `--full-depth` can still expose retained historical entries. No personal installation is changed by building the repository.
 
 Start with `Use atlas-mode to <your task>`. Atlas Mode applies clearly selected skills and inner methods, including manually invoked packages such as Wayfinder and Retro. When alternatives imply materially different workflows, it explains the relevant choices, recommends an approach and waits for your selection. Requests for advice stay advisory. You can describe the outcome without remembering invocation names. Invoking the mode alone asks what you want to work on. Tracking, Audit Trail and other outcome-specific opt-ins retain their conditions; entering the mode is not approval for installation, cleanup or publication. The installed skills own their procedures, so install the packages you need or use the shared stack. Atlas Setup remains separately requested. Individual skills remain directly usable. Ask to exit Atlas Mode when you want to leave it.
 
@@ -56,6 +62,10 @@ The [shared stack page](https://atlas.logbookfordevs.com/stack/) explains the co
 ## Creative skills
 
 [ISO-GLOW and Colorfigures](creative-skills/README.md) by [April Zhu (@Aprilzz423)](https://x.com/Aprilzz423) are preserved from their downloadable distributions under `creative-skills/`. Both retain their MIT licenses and credit [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill), the underlying project. Install either optionally with Skills CLI using the commands in their README; neither is included in the shared stack. These independent creative packages remain separate from Atlas’s composed workflows.
+
+## Utility skills
+
+[Source Composition](utility-skills/README.md) is an optional, manually invoked skill for applying Atlas’s provenance, verbatim and patched-source contracts, composition rulings and reviewed update strategy in other projects. Utility skills live in `utility-skills/` and install individually with Skills CLI; they are outside the shared stack.
 
 ## Recommended independent skills
 

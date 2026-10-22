@@ -21,4 +21,6 @@ Preserve accepted identity and project foundations; a new design direction needs
 
 When polish includes animation or gestures, follow [Motion ownership](references/motion-ownership.md). Motion references are bundled for those decisions. Whole-interface audits and change reviews belong to Atlas Review; substantial prose belongs to Writing for Humans.
 
+When the task involves mobile browser behavior—keyboard overlap, browser chrome, tap feedback or scroll gestures—read [Mobile Web](references/mobile-web/mobile-native.md).
+
 Report browser and assistive-technology checks that could not run as verification gaps. Bundled instructions do not supply missing runtime tools.

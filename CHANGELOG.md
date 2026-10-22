@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+- Add a Skills CLI marketplace catalog grouping Atlas workflows, optional creative skills and standalone utilities.
+
+- Add the optional, manually invoked Source Composition utility for applying Atlas’s source-maintenance methodology in other projects.
+
+- Refresh optional Colorfigures from April Zhu’s download with full rotation, see-through mechanisms, zoom, mobile controls and new examples.
+
+- Add Animation Performance to Atlas Motion and UI Stress to Atlas Verify, preserving their distinct diagnosis and verification scopes.
+- Add a conditional Mobile Web reference to Atlas Craft without adding a mode; correct shared Layout guidance about software-keyboard clearance.
+- Update method discovery, Atlas Mode guidance, source credits and website examples for the new references.
+
 ## 1.1.0
 
 - Add Atlas Implement, Verify, Grill, Wayfinder, Explain, Retro and the manually invoked Atlas Mode entry point.

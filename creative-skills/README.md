@@ -5,7 +5,7 @@ Download-distributed skills by **[April Zhu (@Aprilzz423)](https://x.com/Aprilzz
 | Skill | What it creates | Author’s site |
 | --- | --- | --- |
 | [ISO-GLOW](iso-glow/SKILL.md) | Interactive isometric figures with glowing line art, 3D variants and the solid Lumen style | [isoglow.dev](https://isoglow.dev/) |
-| [Colorfigures](colorfigures/SKILL.md) | Hand-inked, flat-colour interactive isometric objects with optional explanatory labels | [Colorfigures](https://april-zhu.com/colorfigures) |
+| [Colorfigures](colorfigures/SKILL.md) | Hand-inked, flat-colour interactive 3D objects with rotation, see-through mechanisms, labels and zoom | [Colorfigures](https://april-zhu.com/colorfigures) |
 
 ## Credits and licenses
 
@@ -22,8 +22,8 @@ npx skills add https://github.com/logbookfordevs/atlas-skills/tree/main/creative
 npx skills add https://github.com/logbookfordevs/atlas-skills/tree/main/creative-skills/colorfigures
 ```
 
-Choose the destination agent when prompted. Add `-g` for a global installation. These remote commands become available after this addition is published to Atlas’s main branch.
+Choose the destination agent when prompted. Add `-g` for a global installation.
 
 These packages live separately from Atlas’s composed workflows in `skills/` and are optional: they are excluded from `stacks/atlas.json`. They are not registered in the Git-based upstream watcher because April distributes them as downloads rather than Git repositories.
 
-[provenance.json](provenance.json) records the imported download fingerprints and each original file’s SHA-256. All 21 original files were checked against the supplied ZIP archives on import. The two description-format fixes are recorded as replayable patches under `patches/`, with packaged hashes in the provenance record. Updates are manual: obtain a new author-provided distribution, review its changes and license, then refresh the fingerprints together. Keep attribution outside the instruction files; retain only the recorded compatibility adaptations unless a further change is intentional.
+[provenance.json](provenance.json) records the imported download fingerprints and each original file’s SHA-256. Original files are checked against their recorded download archives. Colorfigures was refreshed from April’s distribution on 2026-10-22; it includes rotation, see-through mechanisms, zoom, mobile controls and three new examples. The two description-format fixes are recorded as replayable patches under `patches/`, with packaged hashes in the provenance record. Updates are manual: obtain a new author-provided distribution, review its changes and license, then refresh the fingerprints together. Keep attribution outside the instruction files; retain only the recorded compatibility adaptations unless a further change is intentional.
