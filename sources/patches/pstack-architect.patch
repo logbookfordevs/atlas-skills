@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 44412e9..eee8430 100644
+index eaff1d9..eee8430 100644
 --- a/source.md
 +++ b/source.md
 @@ -8,29 +8,31 @@ disable-model-invocation: true
@@ -33,7 +33,7 @@ index 44412e9..eee8430 100644
 -Run the **arena** skill with the design-sketch task and the Phase A grounding artifacts. Pass `references/runner-prompt.md` as each runner's prompt.
 +Follow the bundled [Arena method](../arena/arena.md) with the design-sketch task and the Phase A grounding artifacts. Pass `references/runner-prompt.md` as each runner's prompt.
  
--Take the runners from the `architect runners` line in the pstack settings file (`~/.cursor/rules/pstack-models.mdc` in Cursor, `~/.agents/pstack-models.md` in other harnesses), in place of the `arena runners` line. If the file or that line is missing, use `claude-opus-5-5-xhigh` and `grok-4.7-xhigh-fast`. Alias and rejected entries follow the runner rules in the **arena** skill's Phase A.
+-Take the runners from the `architect runners` line in the pstack settings file (`~/.cursor/rules/pstack-models.mdc` in Cursor, `~/.claude/rules/pstack-models.md` in Claude Code, `~/.agents/pstack-models.md` in other harnesses), in place of the `arena runners` line. If the file or that line is missing, use `claude-opus-5-5-xhigh` and `grok-4.7-xhigh-fast`. Alias and rejected entries follow the runner rules in the **arena** skill's Phase A.
 +Choose candidate runners from the host's available roles and models, honoring user choices and project policy. Prefer distinct model perspectives when available; disclose same-model or sequential exploration. Use Arena's isolation and bounded scheduling. Candidate runners execute only the design-sketch assignment, not the full Architect workflow.
  
 -Design it twice. Require at least two structurally distinct candidates before synthesis, even when the first looks sufficient. This is the **exhaust-the-design-space** principle skill made concrete. Whole-shape alternatives, not point fixes inside one shape.

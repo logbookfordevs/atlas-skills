@@ -1,8 +1,8 @@
 diff --git a/source.md b/source.md
-index 24a5662..332c6c5 100644
+index e0b3049..caa7294 100644
 --- a/source.md
 +++ b/source.md
-@@ -5,11 +5,14 @@ description: Helps you build and check a color system for your project. It gener
+@@ -5,11 +5,14 @@ description: Builds and checks color systems by generating palettes, naming sema
  
  # Colors
  

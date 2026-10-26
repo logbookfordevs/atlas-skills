@@ -181,7 +181,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/architect/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -216,21 +216,21 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "1a1c56ec1fe352ddb832e8eaf9fe6c282ce2b0428d65fb4ebb4a9e4128cbb438",
+      "sourceSha256": "8b06915a5e728c4f78b6a685fec0213b5cb1a89b9476fae680d4cc3f67d4e79e",
       "carriedPath": "references/architect/architect.md",
       "carriedSha256": "061badac9081274d48847fc19f162df22175de177fc86b64cd7aeb875e55d722",
       "licensePath": "licenses/pstack-architect.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena, Interrogate and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
         "implement-principle-scope"
       ],
       "patch": "sources/patches/pstack-architect.patch",
-      "patchSha256": "b5bc91128025cf80e041e6196af1bdfb220d0c8b2ed488ff56dd7967a8b4bc1a"
+      "patchSha256": "a9eca9b9f6444b2cbc3d56aea1f3d53350c41bf93bb8040b0e5f45c855800dde"
     },
     {
       "id": "pstack-arena",
@@ -238,21 +238,21 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "6c54c51f7115a95df4505b94579edd890af8cacac6014a4c6c350e26f54f8226",
+      "sourceSha256": "d9ba4883b0fde1c73238f6a58a0666d667606a74b23c38e9c4de0d84d8e8f4d2",
       "carriedPath": "references/arena/arena.md",
       "carriedSha256": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
       "licensePath": "licenses/pstack-arena.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference without re-entering mode routing; adapt bounded scheduling, output isolation and sequential fallback with honest independence gaps. Carry the complete contextual principle closure.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -261,7 +261,7 @@
         "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-arena.patch",
-      "patchSha256": "5fea1490cf0988626d9ca9aa982caae239c8a68d98a4c8215ce92e12aa6ae0af"
+      "patchSha256": "ab13831375e8ac1abad5d054a080b09b1d77d55e477c209c82997f132ce9f969"
     },
     {
       "id": "pstack-principle-boundary-discipline",
@@ -344,26 +344,26 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/principle-fix-root-causes/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "2131069d285d82fb799458494f2e4ac8759c9c6a60f9e300828c17874f514c6e",
+      "sourceSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
       "carriedPath": "references/principles/principle-fix-root-causes/SKILL.md",
-      "carriedSha256": "47acc5f8248e306e9439a7ae78f4c1b2abcd77286f8a41e35fc1ad95d11d307f",
+      "carriedSha256": "66a5db54551ac63de0230ed5114a4b89a79c1f9860f10021e7f06ff6dbce285a",
       "licensePath": "licenses/pstack-principle-fix-root-causes.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Preserve justified safety guards and enduring invariant comments, and keep repeated-pattern repair within authorized scope; retain reproduction and root-cause investigation.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "implement-principle-scope"
       ],
       "patch": "sources/patches/pstack-principle-fix-root-causes.patch",
-      "patchSha256": "c17b7f01c01de0f29fc525ffa1b7dec7e0ddea4a9709f337660f025b56b31d78"
+      "patchSha256": "90cf86c57a385dffa8c5369cc4c9b79ec39c53ffe1805d5927334e57de49ebeb"
     },
     {
       "id": "pstack-principle-foundational-thinking",
@@ -444,21 +444,21 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/principle-make-operations-idempotent/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "540738217c3da7bf513b9886924ad6a2bc77e58be867f5bd2e1831c74bf2ce70",
+      "sourceSha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019",
       "carriedPath": "references/principles/principle-make-operations-idempotent/SKILL.md",
-      "carriedSha256": "540738217c3da7bf513b9886924ad6a2bc77e58be867f5bd2e1831c74bf2ce70",
+      "carriedSha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019",
       "licensePath": "licenses/pstack-principle-make-operations-idempotent.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": []
     },
     {
@@ -617,7 +617,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/how/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -639,21 +639,21 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "c80558c167c5feb69b68ab87006231509649a5ac8ed7fd499f282330418dfa83",
+      "sourceSha256": "a63ac90597960cfdc4d51ec88960b3bf0a05d44a7dff1d5a2b8639981c25ca54",
       "carriedPath": "references/how/how.md",
       "carriedSha256": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
       "licensePath": "licenses/pstack-how.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Replace fixed Cursor/provider dispatch with available host roles and models, bounded concurrency and sequential fallback. Preserve the exploration/explanation split and complete templates; link the companion Why method locally.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "explain-mode-choice",
         "explain-host-capabilities",
         "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-how.patch",
-      "patchSha256": "0fc232f01f85440a41ebba75e3c278cddf0df9fbe7c291b10e46d9b44388bb35"
+      "patchSha256": "0456950bd44ed3cd470e4dd7f385751a8ab45fc00acc6606ac7762ac2927f24c"
     },
     {
       "id": "pstack-why",
@@ -661,7 +661,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/why/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -755,14 +755,14 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "9145d2f5c26931930f68485a265eb89b2ecfe95d852f1c86ced3faa21da6da44",
+      "sourceSha256": "b12ea2757ff1d1d111c7b4e74e3e764d337c6a08458b8d6240d3f01c4be490ec",
       "carriedPath": "references/why/why.md",
       "carriedSha256": "2fe47d81670fcf84122ddee3358ee08cc50a2126b30fdd6f5586ffaa36310837",
       "licensePath": "licenses/pstack-why.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Adapt host dispatch and history/tool availability without inventing access; keep investigation read-only. Standalone Why retains full evidence-category coverage, while explicit caller scope permits bounded Teach investigations with documented exclusions. Preserve epistemics and all source playbooks.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "explain-mode-choice",
         "explain-why-scope",
@@ -771,7 +771,7 @@
         "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-why.patch",
-      "patchSha256": "98b991df7f6eb1472bf995333aea759357135f99f81e6e356c6dc569b3336835"
+      "patchSha256": "a3ee8a2f7dda19425eacbc4e1a6b39a7993cbe5d16b16df8064d85e78223c772"
     },
     {
       "id": "pstack-interrogate",
@@ -779,7 +779,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/interrogate/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -796,12 +796,10 @@
         },
         {
           "upstreamPath": "skills/interrogate/references/lead-judgment.md",
-          "classification": "patched",
-          "sourceSha256": "6e5bdf5670eb34017692e9b6c546f36ac7552e6bb9f3f2f3429164fcc46a9361",
+          "classification": "verbatim",
+          "sourceSha256": "355f5195a76bc75a655125292369f2a8231a2b61fabe5188d8f1386060922b87",
           "carriedPath": "references/adversarial/references/lead-judgment.md",
-          "carriedSha256": "3a7b1c463d1e22fce84bacb631721c07899cf62e5a8a4cdbe690a920ba605fd0",
-          "patch": "sources/patches/pstack-interrogate-lead-judgment.patch",
-          "patchSha256": "5884695178b90ec276922bab897270b6aeb122dee3a21e25c43d1a9a3a639ecb"
+          "carriedSha256": "355f5195a76bc75a655125292369f2a8231a2b61fabe5188d8f1386060922b87"
         },
         {
           "upstreamPath": "skills/interrogate/references/reviewer-prompt.md",
@@ -821,21 +819,21 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "cf994ce47a2cf9daed0b4fe437eef1f13dd93683f75c4f01818ace51ce653a9c",
+      "sourceSha256": "a6680059321f614ba65b91a4b5a98dcf18d1d1b9c3ad7f7d437d06ae094ba2bd",
       "carriedPath": "references/adversarial/interrogate.md",
       "carriedSha256": "4606413b795c358c5e9b95b55c7a780ed66e3da8ae5db3f260956a972584fafa",
       "licensePath": "licenses/pstack-interrogate.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Use available host reviewers and disclose actual model diversity instead of fixed provider defaults or automatic model-table PRs. Preserve independent same-intent review, attribution and lead judgment; treat quality heuristics as contextual findings and keep review read-only.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "review-adversarial-owner",
         "review-impact-proof",
         "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-interrogate.patch",
-      "patchSha256": "7c36013ac30957bb06b505604caf5a5d389f62e0f12eac7e395503079458febb"
+      "patchSha256": "56f37ba93a3fe321731eed41db904769ee936888d232d2f41d87ddb138dcb3d1"
     }
   ],
   "rulings": [
@@ -929,7 +927,7 @@
     "licenses/pstack-principle-encode-lessons-in-structure.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-exhaust-the-design-space/SKILL.md": "2de83d99f93f60ec6313455b0bc9aa9f0bfb93dd59f414f403691322db00d4db",
     "licenses/pstack-principle-exhaust-the-design-space.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-fix-root-causes/SKILL.md": "47acc5f8248e306e9439a7ae78f4c1b2abcd77286f8a41e35fc1ad95d11d307f",
+    "references/principles/principle-fix-root-causes/SKILL.md": "66a5db54551ac63de0230ed5114a4b89a79c1f9860f10021e7f06ff6dbce285a",
     "licenses/pstack-principle-fix-root-causes.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-foundational-thinking/SKILL.md": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
     "licenses/pstack-principle-foundational-thinking.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
@@ -937,7 +935,7 @@
     "licenses/pstack-principle-guard-the-context-window.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-laziness-protocol/SKILL.md": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
     "licenses/pstack-principle-laziness-protocol.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-make-operations-idempotent/SKILL.md": "540738217c3da7bf513b9886924ad6a2bc77e58be867f5bd2e1831c74bf2ce70",
+    "references/principles/principle-make-operations-idempotent/SKILL.md": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019",
     "licenses/pstack-principle-make-operations-idempotent.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-minimize-reader-load/SKILL.md": "1ea2b7fef2391cae5844c4efdbd59031f775e8a52d06b7495d707229a200dcca",
     "licenses/pstack-principle-minimize-reader-load.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
@@ -972,7 +970,7 @@
     "references/adversarial/interrogate.md": "4606413b795c358c5e9b95b55c7a780ed66e3da8ae5db3f260956a972584fafa",
     "licenses/pstack-interrogate.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/adversarial/references/code-quality-review.md": "4f6c4bedc9cb0321a1ebacb8a7dabf70cb0089aaf31fa75072cdde9d56101985",
-    "references/adversarial/references/lead-judgment.md": "3a7b1c463d1e22fce84bacb631721c07899cf62e5a8a4cdbe690a920ba605fd0",
+    "references/adversarial/references/lead-judgment.md": "355f5195a76bc75a655125292369f2a8231a2b61fabe5188d8f1386060922b87",
     "references/adversarial/references/reviewer-prompt.md": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25",
     "references/adversarial/references/rubric.md": "bf4e0f9b620cd54823cbf606aaef16a4aad62e9a46af1c3f288c80a5aaada869",
     "references/architect/integration.md": "4aa03f124fd237f133deef9d08483e869b2743d93e0172a3dac8ed5ea6fa46dc"

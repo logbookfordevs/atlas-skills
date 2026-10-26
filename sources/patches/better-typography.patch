@@ -1,8 +1,8 @@
 diff --git a/source.md b/source.md
-index e23e310..356f95f 100644
+index 843e22d..acbe625 100644
 --- a/source.md
 +++ b/source.md
-@@ -5,9 +5,12 @@ description: Sets and reviews how text renders in your product, from the type sc
+@@ -5,9 +5,12 @@ description: Sets and reviews how text renders, from the type scale and spacing
  
  # Typography
  

@@ -146,13 +146,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/better-layout/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-layout/source.md",
-      "sourceSha256": "8c5883ccb23c27c39b7c58d101154ff35e032410e0dc4794be9ab7fe070c2297",
+      "sourceSha256": "4e7fd6880f41a87a21bb3be8e0b2bd7e7b8c561af5fb706ec0bb3e58877d60ec",
       "license": "sources/upstream/better-layout/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-craft/references/layout/index.md",
@@ -162,7 +162,7 @@
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-10-26",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/better-layout/supporting/agents/openai.yaml",
@@ -209,13 +209,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/better-typography/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-typography/source.md",
-      "sourceSha256": "e60ca6467ba60e68f95ed2d2cfa35f2a850d96ef2a0c0d3fcfcfd9510e51f184",
+      "sourceSha256": "8f00a576f6c8d2f8d72dfbffe765ce569982509d01533ea5881de6e1918d3a68",
       "license": "sources/upstream/better-typography/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-craft/references/type/index.md",
@@ -225,7 +225,7 @@
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-10-26",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/better-typography/supporting/agents/openai.yaml",
@@ -292,13 +292,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/better-colors/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-colors/source.md",
-      "sourceSha256": "e74f1c413a4094dc2a73fb0baa0da2241465e01d593b0257ba995500df9b0068",
+      "sourceSha256": "2fc5964fe9adae02e8ba4d80d40ad85d23da227f3eab3b55e06c7df0ac7e7652",
       "license": "sources/upstream/better-colors/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-craft/references/color/index.md",
@@ -308,7 +308,7 @@
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-10-26",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/better-colors/supporting/agents/openai.yaml",
@@ -549,13 +549,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/better-accessibility/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-accessibility/source.md",
-      "sourceSha256": "df0cafe0e75a08548cf46a2a430f46c198e7e0ee9d46bdf7884c2afefb44b70e",
+      "sourceSha256": "f3f9dc26c947dbdfc64be80d3c0d278d5d8bb070c7826b2dae6bf8c380e81586",
       "license": "sources/upstream/better-accessibility/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-craft/references/accessibility/index.md",
@@ -570,7 +570,7 @@
       ],
       "carriedPath": "references/accessibility/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-10-26",
       "patch": "sources/patches/better-accessibility.patch",
       "supportingFiles": [
         {
@@ -583,7 +583,9 @@
           "snapshot": "sources/upstream/better-accessibility/supporting/focus-and-keyboard.md",
           "relativePath": "focus-and-keyboard.md",
           "upstreamPath": "skills/better-accessibility/focus-and-keyboard.md",
-          "sourceSha256": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b"
+          "sourceSha256": "47857a860f25f3159ace5b3e06e4961e9c47bd0f9c30f35d1aab22e97e3f0b5c",
+          "method": "skills/atlas-craft/references/accessibility/focus-and-keyboard.md",
+          "patch": "sources/patches/better-accessibility-focus-and-keyboard.patch"
         },
         {
           "snapshot": "sources/upstream/better-accessibility/supporting/forms.md",
@@ -601,7 +603,7 @@
           "snapshot": "sources/upstream/better-accessibility/supporting/motion-and-zoom.md",
           "relativePath": "motion-and-zoom.md",
           "upstreamPath": "skills/better-accessibility/motion-and-zoom.md",
-          "sourceSha256": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+          "sourceSha256": "16c0c3daeab2f01ed04ee0189998b5711d3c4c9a4ff10604a757577af9bb5896",
           "method": "skills/atlas-craft/references/accessibility/motion-and-zoom.md",
           "patch": "sources/patches/better-accessibility/motion-and-zoom.md.patch"
         },
@@ -627,13 +629,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/better-ui/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-ui/source.md",
-      "sourceSha256": "fb9807bb5c59a3ca9d4a27b25f56b36e5596251d280fb30c4b7f2ff8b6f4fe2d",
+      "sourceSha256": "2d5f9fa4f3bbf045da914349b6e5fde559c947e5323968350b65bb2cdc6b3e4f",
       "license": "sources/upstream/better-ui/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-craft/references/ui/index.md",
@@ -650,7 +652,7 @@
       ],
       "carriedPath": "references/ui/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-10-26",
       "patch": "sources/patches/better-ui.patch",
       "supportingFiles": [
         {
@@ -705,13 +707,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/better-writing/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-writing/source.md",
-      "sourceSha256": "ef6843cbfcbafa62614b1a6e012c0b1ab6fd33eee0bdd84123cf49fe275c3a31",
+      "sourceSha256": "109e4337da3621410c225b137d4683d8c246ca06071990a22882376ad60ec6e3",
       "license": "sources/upstream/better-writing/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-craft/references/copy/index.md",
@@ -726,7 +728,7 @@
       ],
       "carriedPath": "references/copy/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-10-26",
       "patch": "sources/patches/better-writing.patch",
       "supportingFiles": [
         {
@@ -751,13 +753,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/better-interface/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-interface/source.md",
-      "sourceSha256": "23416fef4d08e0417927b6eb6763b7b08ed832451abfb9e26ea699262a28abcb",
+      "sourceSha256": "915ed5dc1442d9b78782900ff8b62160133362a2fe23998917814bfb6422869e",
       "license": "sources/upstream/better-interface/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/interface/audit/index.md",
@@ -770,7 +772,7 @@
       ],
       "carriedPath": "references/interface/audit/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-10-26",
       "patch": "sources/patches/better-interface.patch",
       "supportingFiles": [
         {
@@ -795,13 +797,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/interface-review/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/interface-review/source.md",
-      "sourceSha256": "8977988d63d7c17b8b0cd334ebd722d4e2dff00af0f152de2bc6f100d13d59ce",
+      "sourceSha256": "976098555c7fe5dc0d082d70fd37b579f7513eb84a653d1abec8e347c80e32c1",
       "license": "sources/upstream/interface-review/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/interface/changes/index.md",
@@ -814,7 +816,7 @@
       ],
       "carriedPath": "references/interface/changes/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-10-26",
       "patch": "sources/patches/interface-review.patch",
       "supportingFiles": [
         {
@@ -1456,13 +1458,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/interrogate/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-interrogate/source.md",
-      "sourceSha256": "cf994ce47a2cf9daed0b4fe437eef1f13dd93683f75c4f01818ace51ce653a9c",
+      "sourceSha256": "a6680059321f614ba65b91a4b5a98dcf18d1d1b9c3ad7f7d437d06ae094ba2bd",
       "license": "sources/upstream/pstack-interrogate/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-review/references/adversarial/interrogate.md",
@@ -1475,38 +1477,36 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/interrogate/references/code-quality-review.md",
           "snapshot": "sources/upstream/pstack-interrogate/support/references/code-quality-review.md",
-          "sourceSha256": "79162fda183eafd40d51661fbb5e151c7ba250f89e506ba17f5bd135dcbd50a8",
           "relativePath": "references/code-quality-review.md",
+          "upstreamPath": "skills/interrogate/references/code-quality-review.md",
+          "sourceSha256": "79162fda183eafd40d51661fbb5e151c7ba250f89e506ba17f5bd135dcbd50a8",
           "method": "skills/atlas-review/references/adversarial/references/code-quality-review.md",
           "patch": "sources/patches/pstack-interrogate-code-quality-review.patch"
         },
         {
-          "upstreamPath": "skills/interrogate/references/lead-judgment.md",
           "snapshot": "sources/upstream/pstack-interrogate/support/references/lead-judgment.md",
-          "sourceSha256": "6e5bdf5670eb34017692e9b6c546f36ac7552e6bb9f3f2f3429164fcc46a9361",
           "relativePath": "references/lead-judgment.md",
-          "method": "skills/atlas-review/references/adversarial/references/lead-judgment.md",
-          "patch": "sources/patches/pstack-interrogate-lead-judgment.patch"
+          "upstreamPath": "skills/interrogate/references/lead-judgment.md",
+          "sourceSha256": "355f5195a76bc75a655125292369f2a8231a2b61fabe5188d8f1386060922b87"
         },
         {
-          "upstreamPath": "skills/interrogate/references/reviewer-prompt.md",
           "snapshot": "sources/upstream/pstack-interrogate/support/references/reviewer-prompt.md",
-          "sourceSha256": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25",
-          "relativePath": "references/reviewer-prompt.md"
+          "relativePath": "references/reviewer-prompt.md",
+          "upstreamPath": "skills/interrogate/references/reviewer-prompt.md",
+          "sourceSha256": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25"
         },
         {
-          "upstreamPath": "skills/interrogate/references/rubric.md",
           "snapshot": "sources/upstream/pstack-interrogate/support/references/rubric.md",
-          "sourceSha256": "0f9c6bdb0b96e26dbde5f6407f417e0c02f54080e7a1268d8994f3c3ec6c5ac0",
           "relativePath": "references/rubric.md",
+          "upstreamPath": "skills/interrogate/references/rubric.md",
+          "sourceSha256": "0f9c6bdb0b96e26dbde5f6407f417e0c02f54080e7a1268d8994f3c3ec6c5ac0",
           "method": "skills/atlas-review/references/adversarial/references/rubric.md",
           "patch": "sources/patches/pstack-interrogate-rubric.patch"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "review-adversarial-owner",
         "review-impact-proof",
@@ -1548,13 +1548,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/how/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-how/source.md",
-      "sourceSha256": "c80558c167c5feb69b68ab87006231509649a5ac8ed7fd499f282330418dfa83",
+      "sourceSha256": "a63ac90597960cfdc4d51ec88960b3bf0a05d44a7dff1d5a2b8639981c25ca54",
       "license": "sources/upstream/pstack-how/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-explain/references/how/how.md",
@@ -1566,20 +1566,20 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/how/references/explainer-prompt.md",
           "snapshot": "sources/upstream/pstack-how/support/references/explainer-prompt.md",
-          "sourceSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
-          "relativePath": "references/explainer-prompt.md"
+          "relativePath": "references/explainer-prompt.md",
+          "upstreamPath": "skills/how/references/explainer-prompt.md",
+          "sourceSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff"
         },
         {
-          "upstreamPath": "skills/how/references/explorer-prompt.md",
           "snapshot": "sources/upstream/pstack-how/support/references/explorer-prompt.md",
-          "sourceSha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1",
-          "relativePath": "references/explorer-prompt.md"
+          "relativePath": "references/explorer-prompt.md",
+          "upstreamPath": "skills/how/references/explorer-prompt.md",
+          "sourceSha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "explain-mode-choice",
         "explain-host-capabilities",
@@ -1593,13 +1593,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/why/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-why/source.md",
-      "sourceSha256": "9145d2f5c26931930f68485a265eb89b2ecfe95d852f1c86ced3faa21da6da44",
+      "sourceSha256": "b12ea2757ff1d1d111c7b4e74e3e764d337c6a08458b8d6240d3f01c4be490ec",
       "license": "sources/upstream/pstack-why/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-explain/references/why/why.md",
@@ -1611,82 +1611,82 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/why/references/epistemics.md",
           "snapshot": "sources/upstream/pstack-why/support/references/epistemics.md",
-          "sourceSha256": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758",
-          "relativePath": "references/epistemics.md"
+          "relativePath": "references/epistemics.md",
+          "upstreamPath": "skills/why/references/epistemics.md",
+          "sourceSha256": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758"
         },
         {
-          "upstreamPath": "skills/why/references/investigator-prompt.md",
           "snapshot": "sources/upstream/pstack-why/support/references/investigator-prompt.md",
-          "sourceSha256": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3",
-          "relativePath": "references/investigator-prompt.md"
+          "relativePath": "references/investigator-prompt.md",
+          "upstreamPath": "skills/why/references/investigator-prompt.md",
+          "sourceSha256": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3"
         },
         {
-          "upstreamPath": "skills/why/references/source-playbook.md",
           "snapshot": "sources/upstream/pstack-why/support/references/source-playbook.md",
-          "sourceSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a",
-          "relativePath": "references/source-playbook.md"
+          "relativePath": "references/source-playbook.md",
+          "upstreamPath": "skills/why/references/source-playbook.md",
+          "sourceSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a"
         },
         {
-          "upstreamPath": "skills/why/references/sources/code-archaeology.md",
           "snapshot": "sources/upstream/pstack-why/support/references/sources/code-archaeology.md",
-          "sourceSha256": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7",
-          "relativePath": "references/sources/code-archaeology.md"
+          "relativePath": "references/sources/code-archaeology.md",
+          "upstreamPath": "skills/why/references/sources/code-archaeology.md",
+          "sourceSha256": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7"
         },
         {
-          "upstreamPath": "skills/why/references/sources/databricks.md",
           "snapshot": "sources/upstream/pstack-why/support/references/sources/databricks.md",
-          "sourceSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6",
-          "relativePath": "references/sources/databricks.md"
+          "relativePath": "references/sources/databricks.md",
+          "upstreamPath": "skills/why/references/sources/databricks.md",
+          "sourceSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6"
         },
         {
-          "upstreamPath": "skills/why/references/sources/datadog.md",
           "snapshot": "sources/upstream/pstack-why/support/references/sources/datadog.md",
-          "sourceSha256": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd",
-          "relativePath": "references/sources/datadog.md"
+          "relativePath": "references/sources/datadog.md",
+          "upstreamPath": "skills/why/references/sources/datadog.md",
+          "sourceSha256": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd"
         },
         {
-          "upstreamPath": "skills/why/references/sources/incident-postmortem.md",
           "snapshot": "sources/upstream/pstack-why/support/references/sources/incident-postmortem.md",
-          "sourceSha256": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839",
-          "relativePath": "references/sources/incident-postmortem.md"
+          "relativePath": "references/sources/incident-postmortem.md",
+          "upstreamPath": "skills/why/references/sources/incident-postmortem.md",
+          "sourceSha256": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839"
         },
         {
-          "upstreamPath": "skills/why/references/sources/linear.md",
           "snapshot": "sources/upstream/pstack-why/support/references/sources/linear.md",
-          "sourceSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c",
-          "relativePath": "references/sources/linear.md"
+          "relativePath": "references/sources/linear.md",
+          "upstreamPath": "skills/why/references/sources/linear.md",
+          "sourceSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c"
         },
         {
-          "upstreamPath": "skills/why/references/sources/notion.md",
           "snapshot": "sources/upstream/pstack-why/support/references/sources/notion.md",
-          "sourceSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997",
-          "relativePath": "references/sources/notion.md"
+          "relativePath": "references/sources/notion.md",
+          "upstreamPath": "skills/why/references/sources/notion.md",
+          "sourceSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997"
         },
         {
-          "upstreamPath": "skills/why/references/sources/sentry.md",
           "snapshot": "sources/upstream/pstack-why/support/references/sources/sentry.md",
-          "sourceSha256": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702",
-          "relativePath": "references/sources/sentry.md"
+          "relativePath": "references/sources/sentry.md",
+          "upstreamPath": "skills/why/references/sources/sentry.md",
+          "sourceSha256": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702"
         },
         {
-          "upstreamPath": "skills/why/references/sources/slack.md",
           "snapshot": "sources/upstream/pstack-why/support/references/sources/slack.md",
-          "sourceSha256": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
-          "relativePath": "references/sources/slack.md"
+          "relativePath": "references/sources/slack.md",
+          "upstreamPath": "skills/why/references/sources/slack.md",
+          "sourceSha256": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c"
         },
         {
-          "upstreamPath": "skills/why/references/synthesizer-prompt.md",
           "snapshot": "sources/upstream/pstack-why/support/references/synthesizer-prompt.md",
-          "sourceSha256": "11c62671aa7b7a6e3d36929ffe2b59bf95e6ca664eee4d93e6ee527dd3390ddb",
           "relativePath": "references/synthesizer-prompt.md",
+          "upstreamPath": "skills/why/references/synthesizer-prompt.md",
+          "sourceSha256": "11c62671aa7b7a6e3d36929ffe2b59bf95e6ca664eee4d93e6ee527dd3390ddb",
           "method": "skills/atlas-explain/references/why/references/synthesizer-prompt.md",
           "patch": "sources/patches/pstack-why-synthesizer.patch"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "explain-mode-choice",
         "explain-why-scope",
@@ -1765,13 +1765,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/architect/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-architect/source.md",
-      "sourceSha256": "1a1c56ec1fe352ddb832e8eaf9fe6c282ce2b0428d65fb4ebb4a9e4128cbb438",
+      "sourceSha256": "8b06915a5e728c4f78b6a685fec0213b5cb1a89b9476fae680d4cc3f67d4e79e",
       "license": "sources/upstream/pstack-architect/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/architect/architect.md",
@@ -1782,32 +1782,32 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/architect/references/design-red-flags.md",
           "snapshot": "sources/upstream/pstack-architect/support/references/design-red-flags.md",
-          "sourceSha256": "d0e639e4cc588ec865f930d3a4111faad60987ae36925917e319d7ceca7c69ce",
           "relativePath": "references/design-red-flags.md",
+          "upstreamPath": "skills/architect/references/design-red-flags.md",
+          "sourceSha256": "d0e639e4cc588ec865f930d3a4111faad60987ae36925917e319d7ceca7c69ce",
           "method": "skills/atlas-implement/references/architect/references/design-red-flags.md",
           "patch": "sources/patches/pstack-architect-design-red-flags.patch"
         },
         {
-          "upstreamPath": "skills/architect/references/rationale-template.md",
           "snapshot": "sources/upstream/pstack-architect/support/references/rationale-template.md",
-          "sourceSha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
           "relativePath": "references/rationale-template.md",
+          "upstreamPath": "skills/architect/references/rationale-template.md",
+          "sourceSha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
           "method": "skills/atlas-implement/references/architect/references/rationale-template.md",
           "patch": "sources/patches/pstack-architect-rationale-template.patch"
         },
         {
-          "upstreamPath": "skills/architect/references/runner-prompt.md",
           "snapshot": "sources/upstream/pstack-architect/support/references/runner-prompt.md",
-          "sourceSha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
           "relativePath": "references/runner-prompt.md",
+          "upstreamPath": "skills/architect/references/runner-prompt.md",
+          "sourceSha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
           "method": "skills/atlas-implement/references/architect/references/runner-prompt.md",
           "patch": "sources/patches/pstack-architect-runner-prompt.patch"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -1821,13 +1821,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-arena/source.md",
-      "sourceSha256": "6c54c51f7115a95df4505b94579edd890af8cacac6014a4c6c350e26f54f8226",
+      "sourceSha256": "d9ba4883b0fde1c73238f6a58a0666d667606a74b23c38e9c4de0d84d8e8f4d2",
       "license": "sources/upstream/pstack-arena/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/arena/arena.md",
@@ -1839,7 +1839,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -1939,13 +1939,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/principle-fix-root-causes/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-principle-fix-root-causes/source.md",
-      "sourceSha256": "2131069d285d82fb799458494f2e4ac8759c9c6a60f9e300828c17874f514c6e",
+      "sourceSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
       "license": "sources/upstream/pstack-principle-fix-root-causes/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/principles/principle-fix-root-causes/SKILL.md",
@@ -1956,7 +1956,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "implement-principle-scope"
       ],
@@ -2051,13 +2051,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/principle-make-operations-idempotent/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-principle-make-operations-idempotent/source.md",
-      "sourceSha256": "540738217c3da7bf513b9886924ad6a2bc77e58be867f5bd2e1831c74bf2ce70",
+      "sourceSha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019",
       "license": "sources/upstream/pstack-principle-make-operations-idempotent/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-make-operations-idempotent/source.md",
@@ -2068,7 +2068,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": []
     },
     {
@@ -2247,13 +2247,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/swarm/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-swarm/source.md",
-      "sourceSha256": "63e724b308f355f9940fa6753a6fa728d7c5c0df2104742fa1000019e11b17cd",
+      "sourceSha256": "c94b57907ef23936623da152ae15da2b1e6f2af50917f5368cb41a8e1041933b",
       "license": "sources/upstream/pstack-swarm/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/team-up/references/swarm/swarm.md",
@@ -2265,7 +2265,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "team-up-method-selection",
         "team-up-swarm-evidence"
@@ -2306,13 +2306,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/show-me-your-work/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-show-me-your-work/source.md",
-      "sourceSha256": "4debc5860a7b389e4496f5b908340e4bb79cddabf36e5d56cab399a0a299df35",
+      "sourceSha256": "63a79b3d849af1d3e0b76cf7c1dcba0a0d1ff2823edad60675d25623804d3058",
       "license": "sources/upstream/pstack-show-me-your-work/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/tracking-implementation/references/audit-trail/audit-trail.md",
@@ -2324,20 +2324,20 @@
       ],
       "supportingFiles": [
         {
-          "relativePath": "scripts/log.sh",
-          "upstreamPath": "skills/show-me-your-work/scripts/log.sh",
-          "snapshot": "sources/upstream/pstack-show-me-your-work/scripts/log.sh",
-          "sourceSha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e"
-        },
-        {
+          "snapshot": "sources/upstream/pstack-show-me-your-work/references/decision-log-template.tsv",
           "relativePath": "references/decision-log-template.tsv",
           "upstreamPath": "skills/show-me-your-work/references/decision-log-template.tsv",
-          "snapshot": "sources/upstream/pstack-show-me-your-work/references/decision-log-template.tsv",
           "sourceSha256": "6779378006a2f5225e8c06deb84f1d913fb532041ebbb6e50d94600bfe3f4b76"
+        },
+        {
+          "snapshot": "sources/upstream/pstack-show-me-your-work/scripts/log.sh",
+          "relativePath": "scripts/log.sh",
+          "upstreamPath": "skills/show-me-your-work/scripts/log.sh",
+          "sourceSha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "tracking-audit-trail-ownership",
         "tracking-audit-trail-coverage"
@@ -2385,13 +2385,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/correct/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-correct/source.md",
-      "sourceSha256": "bf482bacc972b3f124a4af8bf9364b4b3e280cb5845e44c326ea4f4565e5c904",
+      "sourceSha256": "e347045d00c967a0b831ef883cc6ac79d21329aa10b5968637df95de7febf0ba",
       "license": "sources/upstream/pstack-correct/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-retro/references/enforce/correct.md",
@@ -2403,7 +2403,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "retro-mode-authority"
       ]

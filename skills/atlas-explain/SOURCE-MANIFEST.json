@@ -45,7 +45,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/how/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -67,21 +67,21 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "c80558c167c5feb69b68ab87006231509649a5ac8ed7fd499f282330418dfa83",
+      "sourceSha256": "a63ac90597960cfdc4d51ec88960b3bf0a05d44a7dff1d5a2b8639981c25ca54",
       "carriedPath": "references/how/how.md",
       "carriedSha256": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
       "licensePath": "licenses/pstack-how.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Replace fixed Cursor/provider dispatch with available host roles and models, bounded concurrency and sequential fallback. Preserve the exploration/explanation split and complete templates; link the companion Why method locally.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "explain-mode-choice",
         "explain-host-capabilities",
         "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-how.patch",
-      "patchSha256": "0fc232f01f85440a41ebba75e3c278cddf0df9fbe7c291b10e46d9b44388bb35"
+      "patchSha256": "0456950bd44ed3cd470e4dd7f385751a8ab45fc00acc6606ac7762ac2927f24c"
     },
     {
       "id": "pstack-why",
@@ -89,7 +89,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/why/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -183,14 +183,14 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "9145d2f5c26931930f68485a265eb89b2ecfe95d852f1c86ced3faa21da6da44",
+      "sourceSha256": "b12ea2757ff1d1d111c7b4e74e3e764d337c6a08458b8d6240d3f01c4be490ec",
       "carriedPath": "references/why/why.md",
       "carriedSha256": "2fe47d81670fcf84122ddee3358ee08cc50a2126b30fdd6f5586ffaa36310837",
       "licensePath": "licenses/pstack-why.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Adapt host dispatch and history/tool availability without inventing access; keep investigation read-only. Standalone Why retains full evidence-category coverage, while explicit caller scope permits bounded Teach investigations with documented exclusions. Preserve epistemics and all source playbooks.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "explain-mode-choice",
         "explain-why-scope",
@@ -199,7 +199,7 @@
         "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-why.patch",
-      "patchSha256": "98b991df7f6eb1472bf995333aea759357135f99f81e6e356c6dc569b3336835"
+      "patchSha256": "a3ee8a2f7dda19425eacbc4e1a6b39a7993cbe5d16b16df8064d85e78223c772"
     },
     {
       "id": "pstack-teach",

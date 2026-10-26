@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 5f251e5..d058bf4 100644
+index 4d586c9..d058bf4 100644
 --- a/source.md
 +++ b/source.md
 @@ -1,18 +1,18 @@
@@ -65,7 +65,7 @@ index 5f251e5..d058bf4 100644
  
  ## Cross-model review of the trail
  
--Before handing back, spawn a subagent on a different model family from the one that did the work. Self-review is not a substitute. The subagent reads the audit trail and the run's transcript, then flags what the user should pay attention to. Not a redo of the work, a scan for what's suboptimal or risky.
+-Before handing back, spawn a subagent on a different model family from the one that did the work. Self-review is not a substitute. The subagent reads the audit trail and the run's transcript, then flags what the user should pay attention to. Not a redo of the work, a scan for what's suboptimal or risky. Pick each subagent's reasoning level and fast or standard speed for the job, per the Subagents section of the **poteto-mode** skill.
 +Before a checkpoint handoff, use available delegation controls to request a read-only reviewer on a different model family from the one that did the work. Give the reviewer the run identity, trail, audited row ranges and the same bounded transcript evidence. Self-review is not independent review. The reviewer flags what the user should pay attention to; it does not redo the implementation.
 +
 +If a different family, delegation or transcript access is unavailable, record the actual reviewer/model and evidence coverage, or that review was not run. A same-family independent review may supply useful findings but does not fulfill cross-family review. Keep unmet independence or transcript coverage visible as gaps; do not invent a reviewer or report "No flags" as evidence of an unperformed review.

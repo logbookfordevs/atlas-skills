@@ -1,8 +1,8 @@
 diff --git a/source.md b/source.md
-index 5bff16d..e8cdfab 100644
+index d2a6a82..44329e9 100644
 --- a/source.md
 +++ b/source.md
-@@ -5,11 +5,14 @@ description: Helps with grouping, alignment, reading order, responsive structure
+@@ -5,11 +5,14 @@ description: Sets grouping, alignment, reading order, responsive structure and r
  
  # Layout
  

@@ -44,21 +44,21 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "6c54c51f7115a95df4505b94579edd890af8cacac6014a4c6c350e26f54f8226",
+      "sourceSha256": "d9ba4883b0fde1c73238f6a58a0666d667606a74b23c38e9c4de0d84d8e8f4d2",
       "carriedPath": "references/arena/arena.md",
       "carriedSha256": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
       "licensePath": "licenses/pstack-arena.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference without re-entering mode routing; adapt bounded scheduling, output isolation and sequential fallback with honest independence gaps. Carry the complete contextual principle closure.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -67,7 +67,7 @@
         "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-arena.patch",
-      "patchSha256": "5fea1490cf0988626d9ca9aa982caae239c8a68d98a4c8215ce92e12aa6ae0af"
+      "patchSha256": "ab13831375e8ac1abad5d054a080b09b1d77d55e477c209c82997f132ce9f969"
     },
     {
       "id": "pstack-principle-separate-before-serializing-shared-state",
@@ -179,27 +179,27 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/swarm/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "63e724b308f355f9940fa6753a6fa728d7c5c0df2104742fa1000019e11b17cd",
+      "sourceSha256": "c94b57907ef23936623da152ae15da2b1e6f2af50917f5368cb41a8e1041933b",
       "carriedPath": "references/swarm/swarm.md",
-      "carriedSha256": "fef684f443bc9dfdcc4fc2ca235ae62cc9bbb32f71bd5a01bbb83d45d6f7ec28",
+      "carriedSha256": "91e8602356fd5c53fb13a83422edb59955e85214fd07be994686ea316540a97c",
       "licensePath": "licenses/pstack-swarm.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Replace fixed cloud/Cursor/model defaults with shared Team Up selection and host-bounded execution. Preserve partition/race/hybrid shapes, declared winner policy, exact revision/measurement evidence, retry-on-missing-evidence and explicit coverage gaps. Bind worker writes to task scope and account for worker completion and cleanup.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "team-up-method-selection",
         "team-up-swarm-evidence"
       ],
       "patch": "sources/patches/pstack-swarm.patch",
-      "patchSha256": "4dba39465340525736dbc1d9a03fcc74d7804c91fe47679978320026ec274ab5"
+      "patchSha256": "cd964bf314bc317e5d065d72d3460ac79b9d2d08eac31d86643df46118f3625a"
     }
   ],
   "rulings": [
@@ -254,7 +254,7 @@
     "licenses/pstack-principle-redesign-from-first-principles.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-prove-it-works/SKILL.md": "66a9ae716dc1e6a8df742d835ed10c8ae3b81946f2bc15e4a9334afcd6269853",
     "licenses/pstack-principle-prove-it-works.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/swarm/swarm.md": "fef684f443bc9dfdcc4fc2ca235ae62cc9bbb32f71bd5a01bbb83d45d6f7ec28",
+    "references/swarm/swarm.md": "91e8602356fd5c53fb13a83422edb59955e85214fd07be994686ea316540a97c",
     "licenses/pstack-swarm.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }
