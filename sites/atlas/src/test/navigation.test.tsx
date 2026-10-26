@@ -150,3 +150,11 @@ describe('Atlas navigation', () => {
     expect(within(origins).getByRole('link', { name: 'Product Engineering' }).getAttribute('href')).toBe('https://github.com/backnotprop/product-engineering');
   });
 });
+
+
+it('links optional creative references to their actual source directory', async () => {
+  open('/skills/atlas-figures/');
+  await screen.findByRole('heading', { level: 1, name: 'Atlas Figures' });
+  expect(screen.getByRole('link', { name: /Read the complete skill/ }).getAttribute('href')).toBe('https://github.com/logbookfordevs/atlas-skills/blob/main/creative-skills/atlas-figures/SKILL.md');
+  expect(screen.getByRole('link', { name: /Source receipt/ }).getAttribute('href')).toBe('https://github.com/logbookfordevs/atlas-skills/blob/main/creative-skills/atlas-figures/SOURCE-MANIFEST.json');
+});

@@ -35,9 +35,10 @@
     {
       "name": "creative-skills",
       "source": "./",
-      "description": "Optional creative skills by April Zhu, preserving upstream credits and licenses.",
+      "description": "Optional figure composition and independent creative skills, with upstream credits and licenses.",
       "strict": false,
       "skills": [
+        "./creative-skills/atlas-figures",
         "./creative-skills/colorfigures",
         "./creative-skills/iso-glow"
       ]

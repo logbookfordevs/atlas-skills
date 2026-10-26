@@ -455,7 +455,7 @@
       "license": "sources/upstream/code-review/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "skills/atlas-review/references/code/code-review.md",
-      "adaptation": "Leonardo\u2019s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources. Standards review explicitly checks added or changed comments against the repository comment policy.",
+      "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources. Standards review explicitly checks added or changed comments against the repository comment policy.",
       "consumers": [
         "atlas-review"
       ],
@@ -524,7 +524,7 @@
       "license": "sources/upstream/show-me/LICENSE",
       "licenseSha256": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
       "method": "sources/upstream/show-me/source.md",
-      "adaptation": "Complete Show Me source preserved verbatim, including manual invocation frontmatter and examples. Tracking loads its method when creating or updating the Implementation Record, to govern artifact presentation throughout the work. Required state, evidence and acceptance remain governed by Tracking. The independent Show Me skill remains unchanged; host-specific artifact opening uses the caller\u2019s supported mechanism.",
+      "adaptation": "Complete Show Me source preserved verbatim, including manual invocation frontmatter and examples. Tracking loads its method when creating or updating the Implementation Record, to govern artifact presentation throughout the work. Required state, evidence and acceptance remain governed by Tracking. The independent Show Me skill remains unchanged; host-specific artifact opening uses the caller’s supported mechanism.",
       "consumers": [
         "tracking-implementation"
       ],
@@ -2289,7 +2289,7 @@
       "method": "skills/writing-for-humans/references/technical/technical-writing.md",
       "carriedPath": "references/technical/technical-writing.md",
       "patch": "sources/patches/pstack-technical-writing.patch",
-      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Load the shared bundled Unslop catalog without an additional editorial pass; remove PR/commit scope and catalog-maintenance output. Resolve strict Di\u00e1taxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
+      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Load the shared bundled Unslop catalog without an additional editorial pass; remove PR/commit scope and catalog-maintenance output. Resolve strict Diátaxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
       "consumers": [
         "writing-for-humans"
       ],
@@ -2609,6 +2609,1570 @@
       "adoptedAt": "2026-10-26",
       "rulings": [
         "craft-states-workbench"
+      ]
+    },
+    {
+      "id": "hairline-create",
+      "owner": "Atlas Figures",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/lucasmarkes/hairline",
+        "commit": "37d2e78dcb333ab30c3338e28ed4a690364ea014",
+        "path": "skills/hairline-create/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main",
+        "includePaths": [
+          "skills/hairline-create"
+        ]
+      },
+      "snapshot": "sources/upstream/hairline-create/source.md",
+      "sourceSha256": "8675ceec106ec227aec00cd6a4ec883333e1acc16da5cc96e8e10a3c758ea841",
+      "license": "sources/upstream/hairline-create/LICENSE",
+      "licenseSha256": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "method": "sources/upstream/hairline-create/source.md",
+      "carriedPath": "references/hairline-create/SKILL.md",
+      "adaptation": "Original method and complete selected supporting tree carried verbatim.",
+      "supportingFiles": [
+        {
+          "relativePath": "bench.html",
+          "upstreamPath": "skills/hairline-create/bench.html",
+          "snapshot": "sources/upstream/hairline-create/support/bench.html",
+          "sourceSha256": "0870fd54e137be0f7635cd309b48a4703a791cfca5915bf22d46b941ebc33278"
+        },
+        {
+          "relativePath": "build.mjs",
+          "upstreamPath": "skills/hairline-create/build.mjs",
+          "snapshot": "sources/upstream/hairline-create/support/build.mjs",
+          "sourceSha256": "7907c722890a9758ed4b479e819f9f8c12b9df3c4a59fa050577b235eee233e7"
+        },
+        {
+          "relativePath": "concepts.md",
+          "upstreamPath": "skills/hairline-create/concepts.md",
+          "snapshot": "sources/upstream/hairline-create/support/concepts.md",
+          "sourceSha256": "af001b0859cb98cfaeb6411dd6a7d815bfde5a9a107954b9aec31b2daeae0d63"
+        },
+        {
+          "relativePath": "examples/riffle.js",
+          "upstreamPath": "skills/hairline-create/examples/riffle.js",
+          "snapshot": "sources/upstream/hairline-create/support/examples/riffle.js",
+          "sourceSha256": "f54ee2de62ac4161291dfd0f4c2cb6646e1289adb286cecad23a7356d97cc4d1"
+        },
+        {
+          "relativePath": "examples/terrain.js",
+          "upstreamPath": "skills/hairline-create/examples/terrain.js",
+          "snapshot": "sources/upstream/hairline-create/support/examples/terrain.js",
+          "sourceSha256": "7755307a1ddb023ed7e119c5c89e549116f1068f0c0a15b96e692fed5e93014b"
+        },
+        {
+          "relativePath": "kernel.js",
+          "upstreamPath": "skills/hairline-create/kernel.js",
+          "snapshot": "sources/upstream/hairline-create/support/kernel.js",
+          "sourceSha256": "47ebec7647174e04e4f59c0305277c2a1dab83a763676946b17fa1694e7952fe"
+        },
+        {
+          "relativePath": "look.md",
+          "upstreamPath": "skills/hairline-create/look.md",
+          "snapshot": "sources/upstream/hairline-create/support/look.md",
+          "sourceSha256": "72e44b7c373284fa6aca2f83dd405230c8680af018a4801d2f1869cd13375eaf"
+        },
+        {
+          "relativePath": "look.mjs",
+          "upstreamPath": "skills/hairline-create/look.mjs",
+          "snapshot": "sources/upstream/hairline-create/support/look.mjs",
+          "sourceSha256": "4a41ef266614928095655cb914ceb5cc74d1dc0fff05c8a72741558cfce4afaa"
+        },
+        {
+          "relativePath": "read.mjs",
+          "upstreamPath": "skills/hairline-create/read.mjs",
+          "snapshot": "sources/upstream/hairline-create/support/read.mjs",
+          "sourceSha256": "68c59af73d978279b2ec8c8ae59ea7654aee472337c6000b674dfd7e77be1d4f"
+        },
+        {
+          "relativePath": "rules.md",
+          "upstreamPath": "skills/hairline-create/rules.md",
+          "snapshot": "sources/upstream/hairline-create/support/rules.md",
+          "sourceSha256": "01c7880d75beac8bb222519c10bda4d44151bdfc17d07563b9b8e2d19fc7de09"
+        },
+        {
+          "relativePath": "source.md",
+          "upstreamPath": "skills/hairline-create/source.md",
+          "snapshot": "sources/upstream/hairline-create/support/source.md",
+          "sourceSha256": "edbc8ec2ce1a04a70cdcb46de9cbc19d6db52541c8dc9b90e5d721924974b8f7"
+        },
+        {
+          "relativePath": "validate.mjs",
+          "upstreamPath": "skills/hairline-create/validate.mjs",
+          "snapshot": "sources/upstream/hairline-create/support/validate.mjs",
+          "sourceSha256": "a60ad12271cdf3faf0ee4b84131d2474481ab9196360956ba8383c17928378ff"
+        }
+      ],
+      "consumers": [
+        "atlas-figures"
+      ],
+      "rulings": [],
+      "notices": [
+        {
+          "input": "sources/upstream/hairline-create/LICENSE",
+          "target": "references/hairline-create/LICENSE",
+          "sha256": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59"
+        }
+      ]
+    },
+    {
+      "id": "hairline-adopt",
+      "owner": "Atlas Figures",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/lucasmarkes/hairline",
+        "commit": "37d2e78dcb333ab30c3338e28ed4a690364ea014",
+        "path": "skills/hairline-adopt/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main",
+        "includePaths": [
+          "skills/hairline-adopt"
+        ]
+      },
+      "snapshot": "sources/upstream/hairline-adopt/source.md",
+      "sourceSha256": "0b53d688ce047d5bcca29fe4d2ae3d834ed4b9ff5100c02de72e7e4913404f42",
+      "license": "sources/upstream/hairline-adopt/LICENSE",
+      "licenseSha256": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "method": "creative-skills/atlas-figures/references/hairline-adopt/SKILL.md",
+      "carriedPath": "references/hairline-adopt/SKILL.md",
+      "adaptation": "Replace the independent Hairline Create invocation with a direct bundled reference. Remaining instructions are verbatim.",
+      "supportingFiles": [],
+      "consumers": [
+        "atlas-figures"
+      ],
+      "rulings": [],
+      "patch": "sources/patches/hairline-adopt.patch",
+      "notices": [
+        {
+          "input": "sources/upstream/hairline-adopt/LICENSE",
+          "target": "references/hairline-adopt/LICENSE",
+          "sha256": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59"
+        }
+      ]
+    },
+    {
+      "id": "anatomy",
+      "owner": "Atlas Figures",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/wheresryan22/anatomy",
+        "commit": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
+        "path": "SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main",
+        "includePaths": [
+          "SKILL.md",
+          "agents",
+          "references",
+          "kit",
+          "scripts",
+          "examples"
+        ]
+      },
+      "snapshot": "sources/upstream/anatomy/source.md",
+      "sourceSha256": "3423ada45a05033bb6e320dfc3b3ac832569969a5afb059bbfc9096c5cf0c71b",
+      "license": "sources/upstream/anatomy/LICENSE",
+      "licenseSha256": "87c078ab9d90a3044f359e6b563d4e6afea7aa060897cf4f21618687b3856796",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "method": "sources/upstream/anatomy/source.md",
+      "carriedPath": "references/anatomy/SKILL.md",
+      "adaptation": "Original method and complete selected supporting tree carried verbatim.",
+      "supportingFiles": [
+        {
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "agents/openai.yaml",
+          "snapshot": "sources/upstream/anatomy/support/agents/openai.yaml",
+          "sourceSha256": "254b17510460bc5151295b1e1e40b6a1aceeff60a0dda4e9594adcfa36819526"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/arcade-cabinet-detailed-a4.pdf",
+          "upstreamPath": "examples/arcade-cabinet/arcade-cabinet-detailed-a4.pdf",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/arcade-cabinet-detailed-a4.pdf",
+          "sourceSha256": "592a5cd875f386cfc2bdd6f4b7ae6b1bba17677d79a4ce9074b5cc28620b70a3"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/arcade-cabinet-drawing-a4.pdf",
+          "upstreamPath": "examples/arcade-cabinet/arcade-cabinet-drawing-a4.pdf",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/arcade-cabinet-drawing-a4.pdf",
+          "sourceSha256": "233092454ca079083346c3287bab477fcb3f1fd4805ceae8a037bdf7d04b8658"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/arcade-cabinet-light.html",
+          "upstreamPath": "examples/arcade-cabinet/arcade-cabinet-light.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/arcade-cabinet-light.html",
+          "sourceSha256": "f54197aa4c3b7e5b00469266f38f79bc0d907f52bf572838eea2acaac89ddbc7"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/arcade-cabinet-poster-a4.pdf",
+          "upstreamPath": "examples/arcade-cabinet/arcade-cabinet-poster-a4.pdf",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/arcade-cabinet-poster-a4.pdf",
+          "sourceSha256": "2d45bd3bdf863bd908d19cd2c1304bdbceed117a7a817098af4e751d88f376e8"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/arcade-cabinet.css",
+          "upstreamPath": "examples/arcade-cabinet/arcade-cabinet.css",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/arcade-cabinet.css",
+          "sourceSha256": "a0ea7bce89a665ddd13f72daf31849c07d8b517b66a3d555543aa506b8933629"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/arcade-cabinet.html",
+          "upstreamPath": "examples/arcade-cabinet/arcade-cabinet.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/arcade-cabinet.html",
+          "sourceSha256": "54dffaa73cca2169198de6db28bf4b370cff28bd3b5d4fb32078ae4fde80d0ab"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/build.mjs",
+          "upstreamPath": "examples/arcade-cabinet/build.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/build.mjs",
+          "sourceSha256": "be649f9fed8f1841b96546577729096af63670ef7b83d4cec32716df3429a03d"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/live.js",
+          "upstreamPath": "examples/arcade-cabinet/live.js",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/live.js",
+          "sourceSha256": "d9f02ea9193f3109501333bdfb4ab297a71457aaba431f05f5df667ea8c40c8f"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/parts.mjs",
+          "upstreamPath": "examples/arcade-cabinet/parts.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/parts.mjs",
+          "sourceSha256": "3ba74b8c55e72933b1e119e3d24c939f654b2c43d41ff26cf855f064cbc7d2a3"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/screen.mjs",
+          "upstreamPath": "examples/arcade-cabinet/screen.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/screen.mjs",
+          "sourceSha256": "8fbb8aebb1d657508979ec9b58a29281c71403396df1fcdc6f8f834fe9097be9"
+        },
+        {
+          "relativePath": "examples/arcade-cabinet/sheet.mjs",
+          "upstreamPath": "examples/arcade-cabinet/sheet.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/arcade-cabinet/sheet.mjs",
+          "sourceSha256": "b5f71ec5682e49c954ba344ee66a2f75d06f76fe7006e6a714c71cc0552eff81"
+        },
+        {
+          "relativePath": "examples/desk-computer/build.mjs",
+          "upstreamPath": "examples/desk-computer/build.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/desk-computer/build.mjs",
+          "sourceSha256": "d378f9814acf75bc915921d4f2d83ed1eb4991a8b4298eb0de0e10383b2ff66d"
+        },
+        {
+          "relativePath": "examples/desk-computer/desk-computer-light.html",
+          "upstreamPath": "examples/desk-computer/desk-computer-light.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/desk-computer/desk-computer-light.html",
+          "sourceSha256": "ce63c5bed81b76491a82f5e94d22e5f64744c87bc448fdad8726ae0c6ecd0b59"
+        },
+        {
+          "relativePath": "examples/desk-computer/desk-computer.html",
+          "upstreamPath": "examples/desk-computer/desk-computer.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/desk-computer/desk-computer.html",
+          "sourceSha256": "94f04084c1ce997a88e60fc0b4d9c5b6dbe859b95ee0dd7a10603e648fced2bc"
+        },
+        {
+          "relativePath": "examples/dial-indicator/build.mjs",
+          "upstreamPath": "examples/dial-indicator/build.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/dial-indicator/build.mjs",
+          "sourceSha256": "e4eaa2324af7f2630650ca72e52a78d56159213a786e14fba8321344789f990d"
+        },
+        {
+          "relativePath": "examples/dial-indicator/dial-indicator-light.html",
+          "upstreamPath": "examples/dial-indicator/dial-indicator-light.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/dial-indicator/dial-indicator-light.html",
+          "sourceSha256": "bc1810e340d916a25cc1749589b44096b7e41970f22fa7fce569bbefc0613093"
+        },
+        {
+          "relativePath": "examples/dial-indicator/dial-indicator.html",
+          "upstreamPath": "examples/dial-indicator/dial-indicator.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/dial-indicator/dial-indicator.html",
+          "sourceSha256": "2ba95d49a5432a5aa764fca89af91ab91043531669609ed57b92bd50b51e5519"
+        },
+        {
+          "relativePath": "examples/push-button/build.mjs",
+          "upstreamPath": "examples/push-button/build.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/push-button/build.mjs",
+          "sourceSha256": "830973d137441897f03f55d2f19ba0a5f9b22221e72bf5060809753ebfb02e45"
+        },
+        {
+          "relativePath": "examples/push-button/push-button-detailed-a4.pdf",
+          "upstreamPath": "examples/push-button/push-button-detailed-a4.pdf",
+          "snapshot": "sources/upstream/anatomy/support/examples/push-button/push-button-detailed-a4.pdf",
+          "sourceSha256": "694380d98939910affe24844a39bbd8e52527f07c1754ba0d184a9e4a029789a"
+        },
+        {
+          "relativePath": "examples/push-button/push-button-drawing-a4.pdf",
+          "upstreamPath": "examples/push-button/push-button-drawing-a4.pdf",
+          "snapshot": "sources/upstream/anatomy/support/examples/push-button/push-button-drawing-a4.pdf",
+          "sourceSha256": "0e2f2a3b1aeaa1ba52ef6a8cfd65762f6b3227f04cfb3a8143b6f9394602c308"
+        },
+        {
+          "relativePath": "examples/push-button/push-button-light.html",
+          "upstreamPath": "examples/push-button/push-button-light.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/push-button/push-button-light.html",
+          "sourceSha256": "88b1a2a242d7674a23c802d3657257dda52c997ccbe7bdff4534d0dff5ad29bd"
+        },
+        {
+          "relativePath": "examples/push-button/push-button-poster-a4.pdf",
+          "upstreamPath": "examples/push-button/push-button-poster-a4.pdf",
+          "snapshot": "sources/upstream/anatomy/support/examples/push-button/push-button-poster-a4.pdf",
+          "sourceSha256": "c757010ee2c207724557da3dd6c0d4e760b4033ed126490f4c2fd350a2b4e98b"
+        },
+        {
+          "relativePath": "examples/push-button/push-button.html",
+          "upstreamPath": "examples/push-button/push-button.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/push-button/push-button.html",
+          "sourceSha256": "1408c226200c87cb36409e3c687ec4945fe9e4b9025ba0e91bcffce2dc1a2815"
+        },
+        {
+          "relativePath": "examples/push-button/sheet.mjs",
+          "upstreamPath": "examples/push-button/sheet.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/push-button/sheet.mjs",
+          "sourceSha256": "be472b279a847016d4ea3ca4ab28365998e1f737248049248270a4d7471db828"
+        },
+        {
+          "relativePath": "examples/raptor-engine/build.mjs",
+          "upstreamPath": "examples/raptor-engine/build.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/raptor-engine/build.mjs",
+          "sourceSha256": "cf5dc0d679bee415fc36c74f2e67d4620e106011037dd3a0d44dcdc559084427"
+        },
+        {
+          "relativePath": "examples/raptor-engine/live.js",
+          "upstreamPath": "examples/raptor-engine/live.js",
+          "snapshot": "sources/upstream/anatomy/support/examples/raptor-engine/live.js",
+          "sourceSha256": "03d801ef2b75e17a38ebc3d5cb9178747226ea8c2e0c527caafb9c72844d88d8"
+        },
+        {
+          "relativePath": "examples/raptor-engine/raptor-engine-detailed-a4.pdf",
+          "upstreamPath": "examples/raptor-engine/raptor-engine-detailed-a4.pdf",
+          "snapshot": "sources/upstream/anatomy/support/examples/raptor-engine/raptor-engine-detailed-a4.pdf",
+          "sourceSha256": "8ea62e8fc0566dc54c54f3e58112cb7bf4d2a5ebb3666782d85bc4e8a3ef179e"
+        },
+        {
+          "relativePath": "examples/raptor-engine/raptor-engine-drawing-a4.pdf",
+          "upstreamPath": "examples/raptor-engine/raptor-engine-drawing-a4.pdf",
+          "snapshot": "sources/upstream/anatomy/support/examples/raptor-engine/raptor-engine-drawing-a4.pdf",
+          "sourceSha256": "3a4de2fc7dd52dc9149dc9038996ce2da8b3dcce250be8bae42faeebb4cca698"
+        },
+        {
+          "relativePath": "examples/raptor-engine/raptor-engine-light.html",
+          "upstreamPath": "examples/raptor-engine/raptor-engine-light.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/raptor-engine/raptor-engine-light.html",
+          "sourceSha256": "48f64b954b93567f1a5ca87fa823c34ae9e81842fa5b95512deba6b22b37a537"
+        },
+        {
+          "relativePath": "examples/raptor-engine/raptor-engine-poster-a4.pdf",
+          "upstreamPath": "examples/raptor-engine/raptor-engine-poster-a4.pdf",
+          "snapshot": "sources/upstream/anatomy/support/examples/raptor-engine/raptor-engine-poster-a4.pdf",
+          "sourceSha256": "a3f3c40c5b9f916a0d457909d853f83e1aef61f2858f09632430a9065fe25756"
+        },
+        {
+          "relativePath": "examples/raptor-engine/raptor-engine.html",
+          "upstreamPath": "examples/raptor-engine/raptor-engine.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/raptor-engine/raptor-engine.html",
+          "sourceSha256": "cb2b7df8f24bf86fe870aa25598e348626af263332c553b90bd574dd029a257b"
+        },
+        {
+          "relativePath": "examples/raptor-engine/raptor.css",
+          "upstreamPath": "examples/raptor-engine/raptor.css",
+          "snapshot": "sources/upstream/anatomy/support/examples/raptor-engine/raptor.css",
+          "sourceSha256": "f850575feeeacac8ef5d9d9c49359f4deaef848666c68a4dafa9727fe926cd6e"
+        },
+        {
+          "relativePath": "examples/raptor-engine/sheet.mjs",
+          "upstreamPath": "examples/raptor-engine/sheet.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/raptor-engine/sheet.mjs",
+          "sourceSha256": "20a125dc6db40c7e874e3c928e5e119ad4e998387b7e0bf62bb612d6d9815c48"
+        },
+        {
+          "relativePath": "examples/ripple-tank/build.mjs",
+          "upstreamPath": "examples/ripple-tank/build.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/ripple-tank/build.mjs",
+          "sourceSha256": "5a5b846bcd146630be3eafb73ebd04cfdd2101d05def15a877fff7188822b493"
+        },
+        {
+          "relativePath": "examples/ripple-tank/live.js",
+          "upstreamPath": "examples/ripple-tank/live.js",
+          "snapshot": "sources/upstream/anatomy/support/examples/ripple-tank/live.js",
+          "sourceSha256": "5bff25143635ff13af50a7bee015289d8ada5a2f5b13c0cdb8a1516897f03944"
+        },
+        {
+          "relativePath": "examples/ripple-tank/model.mjs",
+          "upstreamPath": "examples/ripple-tank/model.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/ripple-tank/model.mjs",
+          "sourceSha256": "f6315aa53e80c0c69bf3c52baf0a1340ca4daacfae80245def02f357c2d33882"
+        },
+        {
+          "relativePath": "examples/ripple-tank/ripple-tank-light.html",
+          "upstreamPath": "examples/ripple-tank/ripple-tank-light.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/ripple-tank/ripple-tank-light.html",
+          "sourceSha256": "15b5b7a1e738fb5e435e9c1dccea874f6d292962fb31943fdd4466c15b351b59"
+        },
+        {
+          "relativePath": "examples/ripple-tank/ripple-tank.html",
+          "upstreamPath": "examples/ripple-tank/ripple-tank.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/ripple-tank/ripple-tank.html",
+          "sourceSha256": "7bd07bcc9784d9536bb9f00d6fa3440765edf65fe086687718229a0a31a5911e"
+        },
+        {
+          "relativePath": "examples/ripple-tank/ripple.css",
+          "upstreamPath": "examples/ripple-tank/ripple.css",
+          "snapshot": "sources/upstream/anatomy/support/examples/ripple-tank/ripple.css",
+          "sourceSha256": "1bf7a778f0b50928adcd54e67c44aa2b12a6877b45f15a0b697d87ab7be0dd5c"
+        },
+        {
+          "relativePath": "examples/spot-plate/art.tsx",
+          "upstreamPath": "examples/spot-plate/art.tsx",
+          "snapshot": "sources/upstream/anatomy/support/examples/spot-plate/art.tsx",
+          "sourceSha256": "aecef8d6ee247e99d52717371a319283af8b1bbba2adfcdd4d012553d2963b38"
+        },
+        {
+          "relativePath": "examples/spot-plate/drops.ts",
+          "upstreamPath": "examples/spot-plate/drops.ts",
+          "snapshot": "sources/upstream/anatomy/support/examples/spot-plate/drops.ts",
+          "sourceSha256": "9bec874c5e324d69a25cc9085ecf2c5d9c3c2e3bd1a8c667c45e048301b899d4"
+        },
+        {
+          "relativePath": "examples/spot-plate/fan.ts",
+          "upstreamPath": "examples/spot-plate/fan.ts",
+          "snapshot": "sources/upstream/anatomy/support/examples/spot-plate/fan.ts",
+          "sourceSha256": "648c1d946e9512afcae60e077d2436926ca1ea94b02c944df8624419812077b1"
+        },
+        {
+          "relativePath": "examples/spot-plate/figure.tsx",
+          "upstreamPath": "examples/spot-plate/figure.tsx",
+          "snapshot": "sources/upstream/anatomy/support/examples/spot-plate/figure.tsx",
+          "sourceSha256": "b9db1ef99bfac58d55d0506f05e0c178e5c9566c61cbf26826ea25cfaa57805f"
+        },
+        {
+          "relativePath": "examples/spot-plate/geometry.ts",
+          "upstreamPath": "examples/spot-plate/geometry.ts",
+          "snapshot": "sources/upstream/anatomy/support/examples/spot-plate/geometry.ts",
+          "sourceSha256": "faf7d6bf1b475daacd4751687d409d7a5c03a6c2bb216ae81beadce5a3cea99a"
+        },
+        {
+          "relativePath": "examples/spot-plate/live.tsx",
+          "upstreamPath": "examples/spot-plate/live.tsx",
+          "snapshot": "sources/upstream/anatomy/support/examples/spot-plate/live.tsx",
+          "sourceSha256": "e96fd47aa4ab250a6b2c6fe3c6c3c96d4bcf737dff7f084d4912f5d1ef195116"
+        },
+        {
+          "relativePath": "examples/spot-plate/rig.ts",
+          "upstreamPath": "examples/spot-plate/rig.ts",
+          "snapshot": "sources/upstream/anatomy/support/examples/spot-plate/rig.ts",
+          "sourceSha256": "b19fc1637a1f4c411c23f34c7a48361f308402b15b11efc44fb6555e8f67ceea"
+        },
+        {
+          "relativePath": "examples/spot-plate/spot-plate.css",
+          "upstreamPath": "examples/spot-plate/spot-plate.css",
+          "snapshot": "sources/upstream/anatomy/support/examples/spot-plate/spot-plate.css",
+          "sourceSha256": "b31e4c8e02f4de0b77fe0a71718f59d7df2e3abc3d9772f802e00fc3d8a582bd"
+        },
+        {
+          "relativePath": "examples/test-rig/art.tsx",
+          "upstreamPath": "examples/test-rig/art.tsx",
+          "snapshot": "sources/upstream/anatomy/support/examples/test-rig/art.tsx",
+          "sourceSha256": "a6b8c1094a9402380d9835ecedbcc677254686b7391027a20da10fc8bf24dae5"
+        },
+        {
+          "relativePath": "examples/test-rig/figure.tsx",
+          "upstreamPath": "examples/test-rig/figure.tsx",
+          "snapshot": "sources/upstream/anatomy/support/examples/test-rig/figure.tsx",
+          "sourceSha256": "2dbaef167b9a6a96de74357fc57ae2a650159007852d3d4e8c471b8837e463a9"
+        },
+        {
+          "relativePath": "examples/test-rig/geometry.ts",
+          "upstreamPath": "examples/test-rig/geometry.ts",
+          "snapshot": "sources/upstream/anatomy/support/examples/test-rig/geometry.ts",
+          "sourceSha256": "b8c275eb58b093a85c312f90dc5d79fd9d9a93ae266e42a8a6fa7f6f9aaeb571"
+        },
+        {
+          "relativePath": "examples/test-rig/live.tsx",
+          "upstreamPath": "examples/test-rig/live.tsx",
+          "snapshot": "sources/upstream/anatomy/support/examples/test-rig/live.tsx",
+          "sourceSha256": "46a4c338a2805fc0078a20d6f4e12d9de20fc4145ec051ffce3964b164c5a7da"
+        },
+        {
+          "relativePath": "examples/test-rig/pose.ts",
+          "upstreamPath": "examples/test-rig/pose.ts",
+          "snapshot": "sources/upstream/anatomy/support/examples/test-rig/pose.ts",
+          "sourceSha256": "380e1d07afcaa3a4e2cd1b13556500f2b336e354fa1c369918b3173f0c9d0866"
+        },
+        {
+          "relativePath": "examples/test-rig/rig.ts",
+          "upstreamPath": "examples/test-rig/rig.ts",
+          "snapshot": "sources/upstream/anatomy/support/examples/test-rig/rig.ts",
+          "sourceSha256": "9672431d6982acaa7b6f28e88e1371443bd6a10fb906ff52fc7bdb0f5fd88b05"
+        },
+        {
+          "relativePath": "examples/test-rig/stretch.css",
+          "upstreamPath": "examples/test-rig/stretch.css",
+          "snapshot": "sources/upstream/anatomy/support/examples/test-rig/stretch.css",
+          "sourceSha256": "dd15f4582b5fb9b228dc7e32ef57dbcba0129dad38b36e5707247eeb7a2abe8b"
+        },
+        {
+          "relativePath": "examples/test-rig/view.ts",
+          "upstreamPath": "examples/test-rig/view.ts",
+          "snapshot": "sources/upstream/anatomy/support/examples/test-rig/view.ts",
+          "sourceSha256": "5465a3e122c2074f8de755b874c7bdb783b365e4140e3e741fc91a32cd69500c"
+        },
+        {
+          "relativePath": "examples/turning-dial/build.mjs",
+          "upstreamPath": "examples/turning-dial/build.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/turning-dial/build.mjs",
+          "sourceSha256": "dcb1b2a1fec2c98c2cea401c6a5b1c7e6545da3b5ea08433cfd72a7f27a49248"
+        },
+        {
+          "relativePath": "examples/turning-dial/dial.css",
+          "upstreamPath": "examples/turning-dial/dial.css",
+          "snapshot": "sources/upstream/anatomy/support/examples/turning-dial/dial.css",
+          "sourceSha256": "769fc9596dcd2bbc46823d6e2816a3e584b52e0a6db359d93bedce16f354bedd"
+        },
+        {
+          "relativePath": "examples/turning-dial/live.js",
+          "upstreamPath": "examples/turning-dial/live.js",
+          "snapshot": "sources/upstream/anatomy/support/examples/turning-dial/live.js",
+          "sourceSha256": "e872f0d930ba583ce7c4c252a3767aa6b9f6cd1f97fe6dddb212653a0579b41f"
+        },
+        {
+          "relativePath": "examples/turning-dial/stress.mjs",
+          "upstreamPath": "examples/turning-dial/stress.mjs",
+          "snapshot": "sources/upstream/anatomy/support/examples/turning-dial/stress.mjs",
+          "sourceSha256": "6d3aec19d8ce6daadffe15113da9415c2fe084c6407d1bb7fb4b5fec86330314"
+        },
+        {
+          "relativePath": "examples/turning-dial/turning-dial-light.html",
+          "upstreamPath": "examples/turning-dial/turning-dial-light.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/turning-dial/turning-dial-light.html",
+          "sourceSha256": "7873a4873e4f1a204ca59691765915f155f44095c2c290730aa2b915b4c88c9e"
+        },
+        {
+          "relativePath": "examples/turning-dial/turning-dial-verify-light.html",
+          "upstreamPath": "examples/turning-dial/turning-dial-verify-light.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/turning-dial/turning-dial-verify-light.html",
+          "sourceSha256": "7516d25e04c8a2c7d3abc7bf19e78985cfca2a2f37e1de72740808a977346366"
+        },
+        {
+          "relativePath": "examples/turning-dial/turning-dial.html",
+          "upstreamPath": "examples/turning-dial/turning-dial.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/turning-dial/turning-dial.html",
+          "sourceSha256": "e477d45029568c45966bf2e4ae2353265e065b90663877e8c21de5b6741e4e90"
+        },
+        {
+          "relativePath": "examples/turning-dial/turning-stress-light.html",
+          "upstreamPath": "examples/turning-dial/turning-stress-light.html",
+          "snapshot": "sources/upstream/anatomy/support/examples/turning-dial/turning-stress-light.html",
+          "sourceSha256": "e175e82f1bba087bb6031e375fb5da386f4f779e89e91a7864f7fc298b8b14e3"
+        },
+        {
+          "relativePath": "kit/audit.mjs",
+          "upstreamPath": "kit/audit.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/audit.mjs",
+          "sourceSha256": "74e605b5d549c1f31c8a1104db7560057105cf86809bf6ced00e4ac79194c8e2"
+        },
+        {
+          "relativePath": "kit/canvas-painter.mjs",
+          "upstreamPath": "kit/canvas-painter.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/canvas-painter.mjs",
+          "sourceSha256": "1918db10279c9d9df87d7df52c7ed8c2de8acd0bbce214c8f2115a39e7f955ac"
+        },
+        {
+          "relativePath": "kit/gl-shared.mjs",
+          "upstreamPath": "kit/gl-shared.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/gl-shared.mjs",
+          "sourceSha256": "8c3773cf3e15844df332db3ba55af940186edb2227201e5839347ecc390c039c"
+        },
+        {
+          "relativePath": "kit/gl.mjs",
+          "upstreamPath": "kit/gl.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/gl.mjs",
+          "sourceSha256": "17a477411e0b9fcb8e84e718094eaefa6be2c0b7d6ce15ee03fe8e252944130a"
+        },
+        {
+          "relativePath": "kit/iso-kit.mjs",
+          "upstreamPath": "kit/iso-kit.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/iso-kit.mjs",
+          "sourceSha256": "6d3ecc725d30c3b0346da309cf61dfa5a65017c23620bbd4093009d4fb104018"
+        },
+        {
+          "relativePath": "kit/iso-kit.ts",
+          "upstreamPath": "kit/iso-kit.ts",
+          "snapshot": "sources/upstream/anatomy/support/kit/iso-kit.ts",
+          "sourceSha256": "e9fc988c61a11bfac1f097e62419915ea86b2130ab091f1b50c0e019c907e253"
+        },
+        {
+          "relativePath": "kit/iso.css",
+          "upstreamPath": "kit/iso.css",
+          "snapshot": "sources/upstream/anatomy/support/kit/iso.css",
+          "sourceSha256": "ef19bac5a42ba9be42b56b2c1cf7fc7e21d332a8060765e9ca1d987b8ab23924"
+        },
+        {
+          "relativePath": "kit/lathe.mjs",
+          "upstreamPath": "kit/lathe.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/lathe.mjs",
+          "sourceSha256": "a4e7e974b1a37e603ad2b76363b6f9815cc101dfff0ad277a5d4e8f1dc56fccb"
+        },
+        {
+          "relativePath": "kit/pdf-button.mjs",
+          "upstreamPath": "kit/pdf-button.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/pdf-button.mjs",
+          "sourceSha256": "884de49c75f11c78a102b4b413006f36b087e0e3bc9f33dc462dc44430d69342"
+        },
+        {
+          "relativePath": "kit/react/draw.tsx",
+          "upstreamPath": "kit/react/draw.tsx",
+          "snapshot": "sources/upstream/anatomy/support/kit/react/draw.tsx",
+          "sourceSha256": "d5389bd78aa3d5424a37b1ce6f635bd102eb86faf27d064b10957716278a631c"
+        },
+        {
+          "relativePath": "kit/react/live.tsx",
+          "upstreamPath": "kit/react/live.tsx",
+          "snapshot": "sources/upstream/anatomy/support/kit/react/live.tsx",
+          "sourceSha256": "6d01fa12bca4ec14d1b7d7d5331d18a997dd3ee131d59dd57f83b932a1705f42"
+        },
+        {
+          "relativePath": "kit/tube.mjs",
+          "upstreamPath": "kit/tube.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/tube.mjs",
+          "sourceSha256": "bcb3cc360f6d83e6a5753f4c464b4587ab7965028b05a5d58e285abce58667c9"
+        },
+        {
+          "relativePath": "kit/turn-audit.mjs",
+          "upstreamPath": "kit/turn-audit.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/turn-audit.mjs",
+          "sourceSha256": "e4385f1a8a388c4544b49c6677ff8ab7048f7fcfa8cd5fe653d96a4a0df62843"
+        },
+        {
+          "relativePath": "kit/turn-build.mjs",
+          "upstreamPath": "kit/turn-build.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/turn-build.mjs",
+          "sourceSha256": "0c088efd9f22329d1b0c2190c95e5b5b43a2c46deae6ff047b3166ef643cfa83"
+        },
+        {
+          "relativePath": "kit/turn-fixed.mjs",
+          "upstreamPath": "kit/turn-fixed.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/turn-fixed.mjs",
+          "sourceSha256": "7429b46eb7673aefb6ed90adeaf130c1dafe8e32af038cbde24a04e693d13fc7"
+        },
+        {
+          "relativePath": "kit/turn.mjs",
+          "upstreamPath": "kit/turn.mjs",
+          "snapshot": "sources/upstream/anatomy/support/kit/turn.mjs",
+          "sourceSha256": "cb4b530b5e1750ba0e4fd2367d5f25e00195c0136672aa2ecd665c0622ffd1a2"
+        },
+        {
+          "relativePath": "references/3d.md",
+          "upstreamPath": "references/3d.md",
+          "snapshot": "sources/upstream/anatomy/support/references/3d.md",
+          "sourceSha256": "de58da5415b4c9fe7712b5b71e0868c4d36363d54e4e32d98a6b016363554536"
+        },
+        {
+          "relativePath": "references/craft.md",
+          "upstreamPath": "references/craft.md",
+          "snapshot": "sources/upstream/anatomy/support/references/craft.md",
+          "sourceSha256": "38761fa9b81d66b30e50b05488501d4815830d3627f153d60f76ca783f598936"
+        },
+        {
+          "relativePath": "references/kit.md",
+          "upstreamPath": "references/kit.md",
+          "snapshot": "sources/upstream/anatomy/support/references/kit.md",
+          "sourceSha256": "684672e069fdb52735efabc3f4310dedd840d0c8066a8dc7784be2b7e656be71"
+        },
+        {
+          "relativePath": "references/motion.md",
+          "upstreamPath": "references/motion.md",
+          "snapshot": "sources/upstream/anatomy/support/references/motion.md",
+          "sourceSha256": "dda401ca1b4661a5f0b7c1e33dac6e7e4b8c13d51ca5d9312123a5c02dab320b"
+        },
+        {
+          "relativePath": "references/print.md",
+          "upstreamPath": "references/print.md",
+          "snapshot": "sources/upstream/anatomy/support/references/print.md",
+          "sourceSha256": "1b4146c35214f76bf8ddc1765b3d1540d9bdfceba0c641e7b93c33229265c0be"
+        },
+        {
+          "relativePath": "references/publish.md",
+          "upstreamPath": "references/publish.md",
+          "snapshot": "sources/upstream/anatomy/support/references/publish.md",
+          "sourceSha256": "57790e740662bc8f2044ba5f0385598bad955d6a38dd2a47d56d644f21d8deb8"
+        },
+        {
+          "relativePath": "references/react.md",
+          "upstreamPath": "references/react.md",
+          "snapshot": "sources/upstream/anatomy/support/references/react.md",
+          "sourceSha256": "76b5cee6e0a7513e3c77a832e3f58b1343806597d469774e1749f141525801fd"
+        },
+        {
+          "relativePath": "references/verify.md",
+          "upstreamPath": "references/verify.md",
+          "snapshot": "sources/upstream/anatomy/support/references/verify.md",
+          "sourceSha256": "fb81437fc5d75094a34432eb6f545644aa228e15173a27d08b3cace912033561"
+        },
+        {
+          "relativePath": "references/walkthrough.md",
+          "upstreamPath": "references/walkthrough.md",
+          "snapshot": "sources/upstream/anatomy/support/references/walkthrough.md",
+          "sourceSha256": "4d157e0169080a6ed44d5b06de0a5de2931baf3d0fac30283d2644dd66506dfa"
+        },
+        {
+          "relativePath": "references/webgl.md",
+          "upstreamPath": "references/webgl.md",
+          "snapshot": "sources/upstream/anatomy/support/references/webgl.md",
+          "sourceSha256": "fb4e2421c6a705d4ad849c8e516731ebc958bc5ff0855548ff58232b0aa01923"
+        },
+        {
+          "relativePath": "scripts/audit-affine-bounds.test.mjs",
+          "upstreamPath": "scripts/audit-affine-bounds.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-affine-bounds.test.mjs",
+          "sourceSha256": "038e0a879363c4b0d2c7146a62065b09f2973210114928d5005e9082219654d2"
+        },
+        {
+          "relativePath": "scripts/audit-cache.test.mjs",
+          "upstreamPath": "scripts/audit-cache.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-cache.test.mjs",
+          "sourceSha256": "00b49601c068897e94bf8309d652bb55595e541283c510bba34957c457edd57e"
+        },
+        {
+          "relativePath": "scripts/audit-clearance-envelope.test.mjs",
+          "upstreamPath": "scripts/audit-clearance-envelope.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-clearance-envelope.test.mjs",
+          "sourceSha256": "ffa8321d25996ac165dd1fdb6473a903c1c6f03b86996b2fef6978203b8f2bd8"
+        },
+        {
+          "relativePath": "scripts/audit-empty-clipping.test.mjs",
+          "upstreamPath": "scripts/audit-empty-clipping.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-empty-clipping.test.mjs",
+          "sourceSha256": "a28384ccbf303acc32f7788753459a7338c94bc74ee5efe70762daa75a62c8cb"
+        },
+        {
+          "relativePath": "scripts/audit-order-convergence.test.mjs",
+          "upstreamPath": "scripts/audit-order-convergence.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-order-convergence.test.mjs",
+          "sourceSha256": "9ad7b9a645d9e90a788e561484013b0fdefb1a8abd38fcb160f5d1a6464be278"
+        },
+        {
+          "relativePath": "scripts/audit-path-origin.test.mjs",
+          "upstreamPath": "scripts/audit-path-origin.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-path-origin.test.mjs",
+          "sourceSha256": "1e5917a4a3bc337aa4497e5717de47b198db8fc9538d5f10d40a788f5f821d37"
+        },
+        {
+          "relativePath": "scripts/audit-profile.test.mjs",
+          "upstreamPath": "scripts/audit-profile.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-profile.test.mjs",
+          "sourceSha256": "80179ae38afa6e58ed254a597daeee27240e85f87d1bbd0421def4e347ec37c0"
+        },
+        {
+          "relativePath": "scripts/audit-projection.test.mjs",
+          "upstreamPath": "scripts/audit-projection.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-projection.test.mjs",
+          "sourceSha256": "0cd790e0dfc64633019db3233b87fec823c6148037d9335e1c2b16ea1c722db6"
+        },
+        {
+          "relativePath": "scripts/audit-slide-clearance.test.mjs",
+          "upstreamPath": "scripts/audit-slide-clearance.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-slide-clearance.test.mjs",
+          "sourceSha256": "007f68aa5262eae40aceef00eec91e4d5be0164bd5fb9377680996164ff9ac19"
+        },
+        {
+          "relativePath": "scripts/audit-svg-attributes.test.mjs",
+          "upstreamPath": "scripts/audit-svg-attributes.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-svg-attributes.test.mjs",
+          "sourceSha256": "2d2a949639f90d6328eeea401f6b7f3a3dc1fcc17f1d46cbe2de208afc3c6533"
+        },
+        {
+          "relativePath": "scripts/audit-taper.test.mjs",
+          "upstreamPath": "scripts/audit-taper.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-taper.test.mjs",
+          "sourceSha256": "ea4415ef743efc4ba1393457c571cdfc2b91bfd5ea931ae32829926c80aed487"
+        },
+        {
+          "relativePath": "scripts/audit-tube-support.test.mjs",
+          "upstreamPath": "scripts/audit-tube-support.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/audit-tube-support.test.mjs",
+          "sourceSha256": "2bbc676aee00f03394a1c9a0594dfb3aeecec6a40698db1c71b68377fd3b762f"
+        },
+        {
+          "relativePath": "scripts/capture-current-geometry.test.mjs",
+          "upstreamPath": "scripts/capture-current-geometry.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/capture-current-geometry.test.mjs",
+          "sourceSha256": "ad0c0555e693c8c9e2b14a3098b91acd04df6e7c45779615aaa86e81be452756"
+        },
+        {
+          "relativePath": "scripts/capture-selector.test.mjs",
+          "upstreamPath": "scripts/capture-selector.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/capture-selector.test.mjs",
+          "sourceSha256": "046ce21a686e99c1a5a760f529b999cdca5b7f504961784bc087395b0b586eff"
+        },
+        {
+          "relativePath": "scripts/capture.mjs",
+          "upstreamPath": "scripts/capture.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/capture.mjs",
+          "sourceSha256": "12e901efe79df75073eeeaf5462ac989a8e2892279253d27f8ee114c54be43d3"
+        },
+        {
+          "relativePath": "scripts/capture.test.mjs",
+          "upstreamPath": "scripts/capture.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/capture.test.mjs",
+          "sourceSha256": "7d45da7f2862a45113fd677b511e3a3708161954615d5b7bf39e57f6e7b2bb6a"
+        },
+        {
+          "relativePath": "scripts/chrome-port.mjs",
+          "upstreamPath": "scripts/chrome-port.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/chrome-port.mjs",
+          "sourceSha256": "6775d3d389d26f37a52be8358aa88d1dc0aded63cb24ae20a936505a192e5d9d"
+        },
+        {
+          "relativePath": "scripts/chrome-startup.test.mjs",
+          "upstreamPath": "scripts/chrome-startup.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/chrome-startup.test.mjs",
+          "sourceSha256": "bd3c0eb4b699ebfbfd4efa5920acf386f31876ed490aaee839886dd8ed4cf797"
+        },
+        {
+          "relativePath": "scripts/curve-density.test.mjs",
+          "upstreamPath": "scripts/curve-density.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/curve-density.test.mjs",
+          "sourceSha256": "5679ff6f139bfee47099cab2f475b041ddcb6813e812c67d13526679915831b6"
+        },
+        {
+          "relativePath": "scripts/drive-actions.test.mjs",
+          "upstreamPath": "scripts/drive-actions.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/drive-actions.test.mjs",
+          "sourceSha256": "bf3e2525ae4abbf07d27565418757139a8b305dcef4c287e11ae3da96f2107d3"
+        },
+        {
+          "relativePath": "scripts/drive-async-until.test.mjs",
+          "upstreamPath": "scripts/drive-async-until.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/drive-async-until.test.mjs",
+          "sourceSha256": "86058cb8456c1c9c2822c7a3ece698e2dba40a1a01f2746668cfe2e2cb193435"
+        },
+        {
+          "relativePath": "scripts/drive-page-load.test.mjs",
+          "upstreamPath": "scripts/drive-page-load.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/drive-page-load.test.mjs",
+          "sourceSha256": "a19d8f9335b023100cce3704013ae8e73d06e9b447978ffef66ed1aa3b4e2733"
+        },
+        {
+          "relativePath": "scripts/drive-turn-controller.test.mjs",
+          "upstreamPath": "scripts/drive-turn-controller.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/drive-turn-controller.test.mjs",
+          "sourceSha256": "2b7deda0e9706208ae9c21cc2ada09d623eebee9e0dfc512503b8ddbeb4ddcac"
+        },
+        {
+          "relativePath": "scripts/drive.mjs",
+          "upstreamPath": "scripts/drive.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/drive.mjs",
+          "sourceSha256": "49c22499827a2a5effb802513976bcb8b6dfced139bb4d677ff6e9edd2700eec"
+        },
+        {
+          "relativePath": "scripts/drive.test.mjs",
+          "upstreamPath": "scripts/drive.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/drive.test.mjs",
+          "sourceSha256": "c4f354f8c79e766858d913321fcb84786355e814ca2e096992a088b2181529f0"
+        },
+        {
+          "relativePath": "scripts/enter-key.test.mjs",
+          "upstreamPath": "scripts/enter-key.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/enter-key.test.mjs",
+          "sourceSha256": "2592318f2b41735e4ff8ed2edcbc3abee46d81f9184b02dd99c121d8900d3838"
+        },
+        {
+          "relativePath": "scripts/fidelity-cut.test.mjs",
+          "upstreamPath": "scripts/fidelity-cut.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/fidelity-cut.test.mjs",
+          "sourceSha256": "ab6cf4423852a1c1d32c3cb87f7bfab9e796effd57883a717ff8836adb2ac6c6"
+        },
+        {
+          "relativePath": "scripts/fidelity-tube-coverage.test.mjs",
+          "upstreamPath": "scripts/fidelity-tube-coverage.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/fidelity-tube-coverage.test.mjs",
+          "sourceSha256": "eef7300ea786d82268811cc4e4153c1de913bae17cec58bd4a28f64ea875c525"
+        },
+        {
+          "relativePath": "scripts/fingerprint.mjs",
+          "upstreamPath": "scripts/fingerprint.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/fingerprint.mjs",
+          "sourceSha256": "1582728c6f70b340f8fdda28f287e6f8d45e291ab739ef9ff527a5374f7b1654"
+        },
+        {
+          "relativePath": "scripts/inline-kit.mjs",
+          "upstreamPath": "scripts/inline-kit.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/inline-kit.mjs",
+          "sourceSha256": "01e08df7c2556ce52a7e8ed9009a332036b209ab7e42389874af2a65fda6e9db"
+        },
+        {
+          "relativePath": "scripts/line-ends.mjs",
+          "upstreamPath": "scripts/line-ends.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/line-ends.mjs",
+          "sourceSha256": "da79cc624c5bda0cb8af8f864dbe53026e44ca2377dab3665076ad570d804f42"
+        },
+        {
+          "relativePath": "scripts/lines-arcs.test.mjs",
+          "upstreamPath": "scripts/lines-arcs.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/lines-arcs.test.mjs",
+          "sourceSha256": "ae915157d4bbdfe8e4af031c0e2e5f5f566c938ba7bb88884ae377489aff540e"
+        },
+        {
+          "relativePath": "scripts/lines-bezier.test.mjs",
+          "upstreamPath": "scripts/lines-bezier.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/lines-bezier.test.mjs",
+          "sourceSha256": "7a95169325fed35eecb0c7aefcb806a48bfd09eaba3df5461dc2e30c5d0695f4"
+        },
+        {
+          "relativePath": "scripts/lines-round.test.mjs",
+          "upstreamPath": "scripts/lines-round.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/lines-round.test.mjs",
+          "sourceSha256": "7a012c3eb010b7f8082ee49ce939d6f35f384d188d897e3fd3708682c5d3a657"
+        },
+        {
+          "relativePath": "scripts/lines-rounded-rect.test.mjs",
+          "upstreamPath": "scripts/lines-rounded-rect.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/lines-rounded-rect.test.mjs",
+          "sourceSha256": "88d0a27b047895a00f5654f59d93c775fb8312a5c28be3b47b5e673d80efe5b6"
+        },
+        {
+          "relativePath": "scripts/lines.mjs",
+          "upstreamPath": "scripts/lines.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/lines.mjs",
+          "sourceSha256": "b0ca73ab3a0d1cd4a28fda933496cbd7384ef315d821b5d2fffae1c704ce79cc"
+        },
+        {
+          "relativePath": "scripts/lines.test.mjs",
+          "upstreamPath": "scripts/lines.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/lines.test.mjs",
+          "sourceSha256": "82931231d33d977bcc44c54b05bdb7b78c4ddebc422848ab59539018dd43583a"
+        },
+        {
+          "relativePath": "scripts/navigation.test.mjs",
+          "upstreamPath": "scripts/navigation.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/navigation.test.mjs",
+          "sourceSha256": "b9bd9d7360735e178b24e086e5c875e1703e3e0593e7ddff5f10fe0b4f0f7587"
+        },
+        {
+          "relativePath": "scripts/orbit-sampling.test.mjs",
+          "upstreamPath": "scripts/orbit-sampling.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/orbit-sampling.test.mjs",
+          "sourceSha256": "ed6ce6b0dd32f6c7ab51a5a50ea2dd4b920858ff35d725bea22bee79e323b97a"
+        },
+        {
+          "relativePath": "scripts/print-sheet.mjs",
+          "upstreamPath": "scripts/print-sheet.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/print-sheet.mjs",
+          "sourceSha256": "d2874dd7353a55b1a4aec87bd642fdeb8230a2aadeb33a16ed9cb5bae96d091c"
+        },
+        {
+          "relativePath": "scripts/print-sheet.test.mjs",
+          "upstreamPath": "scripts/print-sheet.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/print-sheet.test.mjs",
+          "sourceSha256": "901148d898201be2df6f57961117d492e47df0a0cbcc4594cce718cc62952558"
+        },
+        {
+          "relativePath": "scripts/print.mjs",
+          "upstreamPath": "scripts/print.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/print.mjs",
+          "sourceSha256": "eb3b2c6f45f10c9a66ddd9e7f89867b70c8dcb6a8200ac030028f16df306b6e8"
+        },
+        {
+          "relativePath": "scripts/publish.mjs",
+          "upstreamPath": "scripts/publish.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/publish.mjs",
+          "sourceSha256": "03400f14063e717a7f05d599d02fc47fd18ba60756f170d6e0ed5065fae1fdbe"
+        },
+        {
+          "relativePath": "scripts/publish.test.mjs",
+          "upstreamPath": "scripts/publish.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/publish.test.mjs",
+          "sourceSha256": "a183a233471852e188322c4de083a0e13a59ec0d036a4da8e1569fbe6449df99"
+        },
+        {
+          "relativePath": "scripts/react-dots-opacity.test.mjs",
+          "upstreamPath": "scripts/react-dots-opacity.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/react-dots-opacity.test.mjs",
+          "sourceSha256": "e7d2b5386f397efe4197b4607f2131170bf88dc52ccc3cfcfea2677f28d41aec"
+        },
+        {
+          "relativePath": "scripts/react-readout-first-write.test.mjs",
+          "upstreamPath": "scripts/react-readout-first-write.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/react-readout-first-write.test.mjs",
+          "sourceSha256": "088a2d29d67e9638f7e43e9b5204c027566934d38302c0ee5e406752f2a4780a"
+        },
+        {
+          "relativePath": "scripts/react-readout-target.test.mjs",
+          "upstreamPath": "scripts/react-readout-target.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/react-readout-target.test.mjs",
+          "sourceSha256": "1354dc4a3fc44063034bd586b7e0e1e589804c65e47ee522c5c553dbded9e05d"
+        },
+        {
+          "relativePath": "scripts/react-solid-seamless.test.mjs",
+          "upstreamPath": "scripts/react-solid-seamless.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/react-solid-seamless.test.mjs",
+          "sourceSha256": "f45927c14dd6023eec7109da5db10cddd46cd46b21f58675a6d4dc6ca12122b0"
+        },
+        {
+          "relativePath": "scripts/react-visibility-target.test.mjs",
+          "upstreamPath": "scripts/react-visibility-target.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/react-visibility-target.test.mjs",
+          "sourceSha256": "78c630aa974d2fbd04cb096a95b528d64d3027e2a9666b85e9d7a50965160925"
+        },
+        {
+          "relativePath": "scripts/session.mjs",
+          "upstreamPath": "scripts/session.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/session.mjs",
+          "sourceSha256": "8896ea1587a5a612a20db7a7a9310a53387d6eef640277834f7bac7e69109302"
+        },
+        {
+          "relativePath": "scripts/session.test.mjs",
+          "upstreamPath": "scripts/session.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/session.test.mjs",
+          "sourceSha256": "200fe708d40646b5ee24451e561744ac281e1cf0bf2c75c233d340eeed304f79"
+        },
+        {
+          "relativePath": "scripts/turn-audit-samples.test.mjs",
+          "upstreamPath": "scripts/turn-audit-samples.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/turn-audit-samples.test.mjs",
+          "sourceSha256": "52eaa87e9cfea81c0b4b27ef35df9b1be7c28f823a9a12c1920b21272ff3f506"
+        },
+        {
+          "relativePath": "scripts/turn-bench.mjs",
+          "upstreamPath": "scripts/turn-bench.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/turn-bench.mjs",
+          "sourceSha256": "d86cd53e3702fa92e22b4052ee9bf47da10fd0a71401fe477bd8da2fe30b1631"
+        },
+        {
+          "relativePath": "scripts/turn-check.mjs",
+          "upstreamPath": "scripts/turn-check.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/turn-check.mjs",
+          "sourceSha256": "c76f93ad3aad63006b4539dd420d671e4665ac148ba733d3cd50b2ffd4b5c5f2"
+        },
+        {
+          "relativePath": "scripts/turn-convex-check.test.mjs",
+          "upstreamPath": "scripts/turn-convex-check.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/turn-convex-check.test.mjs",
+          "sourceSha256": "044c35b5942d98c392753818297e3643777d55244508c3718f415c33ec90bd8d"
+        },
+        {
+          "relativePath": "scripts/turn-fidelity.mjs",
+          "upstreamPath": "scripts/turn-fidelity.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/turn-fidelity.mjs",
+          "sourceSha256": "d033fa1fcff2672db9a823d5155b531d190875a42e2812091cb6079b14d4bf20"
+        },
+        {
+          "relativePath": "scripts/turn-group-reference.test.mjs",
+          "upstreamPath": "scripts/turn-group-reference.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/turn-group-reference.test.mjs",
+          "sourceSha256": "bfac2f910c80c7fcfba9e4861391552000a0f25414ae86576a9ef9ef46291412"
+        },
+        {
+          "relativePath": "scripts/turn-rounded-polygon.test.mjs",
+          "upstreamPath": "scripts/turn-rounded-polygon.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/turn-rounded-polygon.test.mjs",
+          "sourceSha256": "a6a7dec89a2864f68b559c64cb94731d697ef36221dc54ed100a539744f2ac04"
+        },
+        {
+          "relativePath": "scripts/turn-split-owner.test.mjs",
+          "upstreamPath": "scripts/turn-split-owner.test.mjs",
+          "snapshot": "sources/upstream/anatomy/support/scripts/turn-split-owner.test.mjs",
+          "sourceSha256": "829febf610ba09cdca651fbd86340f13932f241b4e3525a3d8566ac70d75a69d"
+        }
+      ],
+      "consumers": [
+        "atlas-figures"
+      ],
+      "rulings": [],
+      "notices": [
+        {
+          "input": "sources/upstream/anatomy/LICENSE",
+          "target": "references/anatomy/LICENSE",
+          "sha256": "87c078ab9d90a3044f359e6b563d4e6afea7aa060897cf4f21618687b3856796"
+        }
+      ]
+    },
+    {
+      "id": "engraved-figures",
+      "owner": "Atlas Figures",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/OutThisLife/brooklyn-skills",
+        "commit": "b28c329ab529e4eba38a731556e8b1e5aed52dbd",
+        "path": "skills/engraved-figures/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main",
+        "includePaths": [
+          "skills/engraved-figures"
+        ]
+      },
+      "snapshot": "sources/upstream/engraved-figures/source.md",
+      "sourceSha256": "4e8a147489e6762a0172af74ab3c4825b1b22c1b416f7daafd00059a318a2908",
+      "license": "sources/upstream/engraved-figures/LICENSE",
+      "licenseSha256": "0b4744a12759709e0c6a120eecdf10c2902ac7fce09b403c8e47347b0b0bca70",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "method": "sources/upstream/engraved-figures/source.md",
+      "carriedPath": "references/engraved-figures/SKILL.md",
+      "adaptation": "Original method and complete selected supporting tree carried verbatim.",
+      "supportingFiles": [
+        {
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/engraved-figures/agents/openai.yaml",
+          "snapshot": "sources/upstream/engraved-figures/support/agents/openai.yaml",
+          "sourceSha256": "4b131d7e6f3f44218825c00d59809bad7993e5fba127c3e2e3e6f3c83a0a64ed"
+        },
+        {
+          "relativePath": "references/chart-direction.md",
+          "upstreamPath": "skills/engraved-figures/references/chart-direction.md",
+          "snapshot": "sources/upstream/engraved-figures/support/references/chart-direction.md",
+          "sourceSha256": "e7efc2184ce7c733a97950e7b5ce4967d408adb4d797dc524c91c8b6bbbfcd24"
+        },
+        {
+          "relativePath": "references/example-set.md",
+          "upstreamPath": "skills/engraved-figures/references/example-set.md",
+          "snapshot": "sources/upstream/engraved-figures/support/references/example-set.md",
+          "sourceSha256": "4e9c7a03d0c6bad7eae5ee9a312fc9a988524eba257414ccad42914197b43c25"
+        },
+        {
+          "relativePath": "references/examples/reference-chart.png",
+          "upstreamPath": "skills/engraved-figures/references/examples/reference-chart.png",
+          "snapshot": "sources/upstream/engraved-figures/support/references/examples/reference-chart.png",
+          "sourceSha256": "a4c5d4da60aa9406d39fe1c6cdd2b05b9dbce8d5d03ce93c02795afd938f46e7"
+        },
+        {
+          "relativePath": "references/examples/reference-plate.png",
+          "upstreamPath": "skills/engraved-figures/references/examples/reference-plate.png",
+          "snapshot": "sources/upstream/engraved-figures/support/references/examples/reference-plate.png",
+          "sourceSha256": "11f3228041f976b6fe9b013e43f87e82c720deed5bd5a07631a64f6103f080a2"
+        },
+        {
+          "relativePath": "references/examples/showcase.html",
+          "upstreamPath": "skills/engraved-figures/references/examples/showcase.html",
+          "snapshot": "sources/upstream/engraved-figures/support/references/examples/showcase.html",
+          "sourceSha256": "0d49aebca2ff4f4223263daa1ab0c07c1b82923e938e0e2edc74ae564b026fa9"
+        },
+        {
+          "relativePath": "references/poster-direction.md",
+          "upstreamPath": "skills/engraved-figures/references/poster-direction.md",
+          "snapshot": "sources/upstream/engraved-figures/support/references/poster-direction.md",
+          "sourceSha256": "fcc8b239763e1da8062b4c700775087264f5bd76acd59a867ca4f3ae15d80bbf"
+        },
+        {
+          "relativePath": "references/technical-figures.md",
+          "upstreamPath": "skills/engraved-figures/references/technical-figures.md",
+          "snapshot": "sources/upstream/engraved-figures/support/references/technical-figures.md",
+          "sourceSha256": "da6defb8aa031a596b5f7d929ed3f17f6fc510314004eb69327808ef8116ec66"
+        },
+        {
+          "relativePath": "scripts/generate-reference-chart.py",
+          "upstreamPath": "skills/engraved-figures/scripts/generate-reference-chart.py",
+          "snapshot": "sources/upstream/engraved-figures/support/scripts/generate-reference-chart.py",
+          "sourceSha256": "5e2bd4b747fc549b23db6b3db90da854d948b123cc4a3e5c5eb7a6a3556ed418"
+        }
+      ],
+      "consumers": [
+        "atlas-figures"
+      ],
+      "rulings": [],
+      "notices": [
+        {
+          "input": "sources/upstream/engraved-figures/LICENSE",
+          "target": "references/engraved-figures/LICENSE",
+          "sha256": "0b4744a12759709e0c6a120eecdf10c2902ac7fce09b403c8e47347b0b0bca70"
+        }
+      ]
+    },
+    {
+      "id": "teardown",
+      "owner": "Atlas Figures",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "path": "skills/teardown/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main",
+        "includePaths": [
+          "skills/teardown"
+        ]
+      },
+      "snapshot": "sources/upstream/teardown/source.md",
+      "sourceSha256": "9cf92fbee3ffbf28da72ef02ff2ba74bb6333f406cebf379a5c54a3554a72298",
+      "license": "sources/upstream/teardown/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "method": "creative-skills/atlas-figures/references/teardown/SKILL.md",
+      "carriedPath": "references/teardown/SKILL.md",
+      "adaptation": "Resolve upstream sibling design-domain skills through the corresponding references in installed Atlas Craft. Load domains conditionally without activating Craft’s broader workflow. Drawing procedure, assets and supporting files remain verbatim.",
+      "supportingFiles": [
+        {
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/teardown/agents/openai.yaml",
+          "snapshot": "sources/upstream/teardown/support/agents/openai.yaml",
+          "sourceSha256": "1950aef13a1fd28ff67c520b6120e303faaeb3f2e84790a3bf73c82195895b6e"
+        },
+        {
+          "relativePath": "assets/export.js",
+          "upstreamPath": "skills/teardown/assets/export.js",
+          "snapshot": "sources/upstream/teardown/support/assets/export.js",
+          "sourceSha256": "2f868e7cdb77ac2ca2da583c77d1b780d81267b73e3a0dbb655df4cd17feb38e"
+        },
+        {
+          "relativePath": "assets/flipbook.js",
+          "upstreamPath": "skills/teardown/assets/flipbook.js",
+          "snapshot": "sources/upstream/teardown/support/assets/flipbook.js",
+          "sourceSha256": "b98b159d30ece1e0e992fa9bef2304fc91de9d82d161a4c63eaf659a6f405043"
+        },
+        {
+          "relativePath": "assets/geometry.js",
+          "upstreamPath": "skills/teardown/assets/geometry.js",
+          "snapshot": "sources/upstream/teardown/support/assets/geometry.js",
+          "sourceSha256": "e9ea047144490ff141b498b96f5d5d6194ab90a9d6a6597ed7d1b01983dc8263"
+        },
+        {
+          "relativePath": "assets/projection.js",
+          "upstreamPath": "skills/teardown/assets/projection.js",
+          "snapshot": "sources/upstream/teardown/support/assets/projection.js",
+          "sourceSha256": "14cdf44cc47e0262700793d1d3677b4231351b243230c9112bbd6cd2b827aabb"
+        },
+        {
+          "relativePath": "assets/render-queue.js",
+          "upstreamPath": "skills/teardown/assets/render-queue.js",
+          "snapshot": "sources/upstream/teardown/support/assets/render-queue.js",
+          "sourceSha256": "8abced3d453f9f2384171b38b515797186f2eafe4b4fa2ef93f7405a8624d37e"
+        },
+        {
+          "relativePath": "assets/sheet.js",
+          "upstreamPath": "skills/teardown/assets/sheet.js",
+          "snapshot": "sources/upstream/teardown/support/assets/sheet.js",
+          "sourceSha256": "304218a3ab6dfae7abdc08d03c31060f69a6197d6948ed41396aea87e5e9b3e8"
+        },
+        {
+          "relativePath": "assets/theme.js",
+          "upstreamPath": "skills/teardown/assets/theme.js",
+          "snapshot": "sources/upstream/teardown/support/assets/theme.js",
+          "sourceSha256": "23e48045a4649ec18d07e7d1c8616b01414ebd5d74939b7d302a3f0ce1440522"
+        },
+        {
+          "relativePath": "assets/viewer.html",
+          "upstreamPath": "skills/teardown/assets/viewer.html",
+          "snapshot": "sources/upstream/teardown/support/assets/viewer.html",
+          "sourceSha256": "ba1d2f92c71727aff74ce2fab66b1195d7fcfbbc3a8948d7c2fa8c449469ef73"
+        },
+        {
+          "relativePath": "assets/viewer.js",
+          "upstreamPath": "skills/teardown/assets/viewer.js",
+          "snapshot": "sources/upstream/teardown/support/assets/viewer.js",
+          "sourceSha256": "9ad90667efc9bc8a90f64c18af6a9867aec9db481e52917b55e922d2e35ddd48"
+        },
+        {
+          "relativePath": "assets/worker.js",
+          "upstreamPath": "skills/teardown/assets/worker.js",
+          "snapshot": "sources/upstream/teardown/support/assets/worker.js",
+          "sourceSha256": "848fe2de18810e47a9a629fefda9e78864ccb0e6dacccb41d6f41836d9da3696"
+        },
+        {
+          "relativePath": "exploded-views.md",
+          "upstreamPath": "skills/teardown/exploded-views.md",
+          "snapshot": "sources/upstream/teardown/support/exploded-views.md",
+          "sourceSha256": "6a968a7a759745c07c06fa98365de76ab30a502a123780b9c7c8afb0f33a45ef"
+        },
+        {
+          "relativePath": "geometry-library.md",
+          "upstreamPath": "skills/teardown/geometry-library.md",
+          "snapshot": "sources/upstream/teardown/support/geometry-library.md",
+          "sourceSha256": "a47ed64bd040accfe072e8d47a3f23bbde395de751989939f14475d0079d2b60"
+        },
+        {
+          "relativePath": "geometry.md",
+          "upstreamPath": "skills/teardown/geometry.md",
+          "snapshot": "sources/upstream/teardown/support/geometry.md",
+          "sourceSha256": "a350075e0e9aefecf928068309bcf195a94bdabece3abc02677f8237e74d98fa"
+        },
+        {
+          "relativePath": "preview-page.md",
+          "upstreamPath": "skills/teardown/preview-page.md",
+          "snapshot": "sources/upstream/teardown/support/preview-page.md",
+          "sourceSha256": "34947a8fab61f37a8efb78479bad7d2dcd723fe1ccb000c0d649815ccefbf96f"
+        },
+        {
+          "relativePath": "scripts/build-viewer.cjs",
+          "upstreamPath": "skills/teardown/scripts/build-viewer.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/build-viewer.cjs",
+          "sourceSha256": "fbe648107f114092d4f9ca58b7052a49d1aec1c7e6c3a1a1491469d3a523706c"
+        },
+        {
+          "relativePath": "scripts/check-viewer.cjs",
+          "upstreamPath": "skills/teardown/scripts/check-viewer.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/check-viewer.cjs",
+          "sourceSha256": "60eea8994d52fafa1c28665bb91b07092bf463d294608adf77bb60d8f40d6652"
+        },
+        {
+          "relativePath": "scripts/commands.cjs",
+          "upstreamPath": "skills/teardown/scripts/commands.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/commands.cjs",
+          "sourceSha256": "b7eb5bf51612e168bef5c43d4bce6b42825f87edb705c554bc32c575df59fac5"
+        },
+        {
+          "relativePath": "scripts/config.cjs",
+          "upstreamPath": "skills/teardown/scripts/config.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/config.cjs",
+          "sourceSha256": "7a1699de8bd0adda56ca435c25c049f735528416ecffd7e49f06c1e1c6c4bf32"
+        },
+        {
+          "relativePath": "scripts/proof.cjs",
+          "upstreamPath": "skills/teardown/scripts/proof.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/proof.cjs",
+          "sourceSha256": "e36db21dbf39ea9cbeb533871de8f343bcfe23e623d6d478083ce155f4225369"
+        },
+        {
+          "relativePath": "scripts/test-flipbook.cjs",
+          "upstreamPath": "skills/teardown/scripts/test-flipbook.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/test-flipbook.cjs",
+          "sourceSha256": "99619c4bf802b4e97393711383c20902a720241ec7cea029d26372c4b4c35505"
+        },
+        {
+          "relativePath": "scripts/test-geometry.cjs",
+          "upstreamPath": "skills/teardown/scripts/test-geometry.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/test-geometry.cjs",
+          "sourceSha256": "61b522abe7d23ade913ce29c602360892d604e96f1b8e8a4a748596b9e51a465"
+        },
+        {
+          "relativePath": "scripts/test-render-queue.cjs",
+          "upstreamPath": "skills/teardown/scripts/test-render-queue.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/test-render-queue.cjs",
+          "sourceSha256": "bd690d8261834a960c20cfcaa55cf2bc08b7555fcb251f69ef9a1a0039b3ddf7"
+        },
+        {
+          "relativePath": "scripts/test-theme.cjs",
+          "upstreamPath": "skills/teardown/scripts/test-theme.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/test-theme.cjs",
+          "sourceSha256": "3d0d0e6b6112b68529803b1209d105632326cfe6001e7816e1583dde4b07f79d"
+        },
+        {
+          "relativePath": "scripts/test-viewer-builder.cjs",
+          "upstreamPath": "skills/teardown/scripts/test-viewer-builder.cjs",
+          "snapshot": "sources/upstream/teardown/support/scripts/test-viewer-builder.cjs",
+          "sourceSha256": "27ccc23adada5f839d13060a905705908e4f0191170c00a0b8d366a04d689670"
+        },
+        {
+          "relativePath": "sheet-and-svg.md",
+          "upstreamPath": "skills/teardown/sheet-and-svg.md",
+          "snapshot": "sources/upstream/teardown/support/sheet-and-svg.md",
+          "sourceSha256": "e279c238b401d89eecd1e0c3851f11e193e788aa4b9b64f77c92c0ad85d57619"
+        },
+        {
+          "relativePath": "verification.md",
+          "upstreamPath": "skills/teardown/verification.md",
+          "snapshot": "sources/upstream/teardown/support/verification.md",
+          "sourceSha256": "8d620e68580fc2f5553a48b507711feec22e6623c21c177dc9cb3d938ceb245d"
+        },
+        {
+          "relativePath": "viewer-assets.md",
+          "upstreamPath": "skills/teardown/viewer-assets.md",
+          "snapshot": "sources/upstream/teardown/support/viewer-assets.md",
+          "sourceSha256": "e8e98457f7b7baf34b78707f671d889e2d0bcfe70ef769da2f5cb5c9a9524d7e"
+        },
+        {
+          "relativePath": "views-and-annotations.md",
+          "upstreamPath": "skills/teardown/views-and-annotations.md",
+          "snapshot": "sources/upstream/teardown/support/views-and-annotations.md",
+          "sourceSha256": "79d7816f553047aa9678f6ae6585e155304b61d5f02a41c1ebbd4e6eda372313"
+        }
+      ],
+      "consumers": [
+        "atlas-figures"
+      ],
+      "rulings": [],
+      "patch": "sources/patches/teardown.patch",
+      "notices": [
+        {
+          "input": "sources/upstream/teardown/LICENSE",
+          "target": "references/teardown/LICENSE",
+          "sha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f"
+        }
+      ]
+    },
+    {
+      "id": "iso-glow",
+      "owner": "Atlas Figures",
+      "classification": "patched",
+      "upstream": {
+        "type": "download",
+        "page": "https://isoglow.dev/",
+        "archive": "iso-glow.zip",
+        "archiveSha256": "6c88dba1424bada2ee651a1b273095f9a13b82dd9362f9bc873600b5bff6b0a1",
+        "path": "SKILL.md"
+      },
+      "snapshot": "sources/upstream/iso-glow/source.md",
+      "sourceSha256": "e2dbb499c58e894db8ab01a59eede4235289daa5fa2f73f03d9b8f3ee1b20196",
+      "license": "sources/upstream/iso-glow/LICENSE",
+      "licenseSha256": "1a1281a84e233c0501448f641943d1a3e6c07aa7dfcfd07ea59f212f0608426a",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "method": "creative-skills/atlas-figures/references/iso-glow/SKILL.md",
+      "carriedPath": "references/iso-glow/SKILL.md",
+      "patch": "sources/patches/iso-glow.patch",
+      "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI. All other downloaded files remain verbatim.",
+      "supportingFiles": [
+        {
+          "relativePath": "assets/examples/desk-computer.js",
+          "upstreamPath": "assets/examples/desk-computer.js",
+          "snapshot": "sources/upstream/iso-glow/support/assets/examples/desk-computer.js",
+          "sourceSha256": "635cc20b15b867d77495acf536625d37b3b256b299b3e764ca20546b51ed60a6"
+        },
+        {
+          "relativePath": "assets/examples/lens-camera-3d.js",
+          "upstreamPath": "assets/examples/lens-camera-3d.js",
+          "snapshot": "sources/upstream/iso-glow/support/assets/examples/lens-camera-3d.js",
+          "sourceSha256": "66632f67734b35ddabaa6adf0b2ff8dd1d0d8a09c290b82f2579c6b241cd27c7"
+        },
+        {
+          "relativePath": "assets/examples/office-tower.js",
+          "upstreamPath": "assets/examples/office-tower.js",
+          "snapshot": "sources/upstream/iso-glow/support/assets/examples/office-tower.js",
+          "sourceSha256": "2bdb553f2f52f20235dfa6253f80e7e8d03482ba6ae34e75e495ba1396a0912a"
+        },
+        {
+          "relativePath": "assets/gallery-3d.html",
+          "upstreamPath": "assets/gallery-3d.html",
+          "snapshot": "sources/upstream/iso-glow/support/assets/gallery-3d.html",
+          "sourceSha256": "f8a98a5dcdb05e67d2ccbf1712133dc66cfe54459fe1742b2ed4c9a34ec398b3"
+        },
+        {
+          "relativePath": "assets/gallery.html",
+          "upstreamPath": "assets/gallery.html",
+          "snapshot": "sources/upstream/iso-glow/support/assets/gallery.html",
+          "sourceSha256": "c1821987bea64207d127cd7d54bc1d147e14bd286a8c11aa4844ab4e12882df5"
+        },
+        {
+          "relativePath": "assets/lumen/examples/card-terminal.js",
+          "upstreamPath": "assets/lumen/examples/card-terminal.js",
+          "snapshot": "sources/upstream/iso-glow/support/assets/lumen/examples/card-terminal.js",
+          "sourceSha256": "558715686b5b6e1b50a68ee1067de454469d4a20a1d7f4c539ade9a88126381a"
+        },
+        {
+          "relativePath": "assets/lumen/examples/eth-blocks.js",
+          "upstreamPath": "assets/lumen/examples/eth-blocks.js",
+          "snapshot": "sources/upstream/iso-glow/support/assets/lumen/examples/eth-blocks.js",
+          "sourceSha256": "6e67cc2307a71824b4d805229d8f6f8b465d9c8c2444e935912692d3a0235214"
+        },
+        {
+          "relativePath": "assets/lumen/examples/vault-safe.js",
+          "upstreamPath": "assets/lumen/examples/vault-safe.js",
+          "snapshot": "sources/upstream/iso-glow/support/assets/lumen/examples/vault-safe.js",
+          "sourceSha256": "d28308eb0a2865bd03443139d9ae231b3056aea739bf0b6df23106827d89d142"
+        },
+        {
+          "relativePath": "assets/lumen/kit.js",
+          "upstreamPath": "assets/lumen/kit.js",
+          "snapshot": "sources/upstream/iso-glow/support/assets/lumen/kit.js",
+          "sourceSha256": "39768068b3f30868b4ef909f0c4e0ac14b9c341f2d8e4062e045d90b14430c5f"
+        },
+        {
+          "relativePath": "assets/lumen/picker.js",
+          "upstreamPath": "assets/lumen/picker.js",
+          "snapshot": "sources/upstream/iso-glow/support/assets/lumen/picker.js",
+          "sourceSha256": "174984d81067d2e54c4471d2c15f281731028f36090336039bde28854721e232"
+        },
+        {
+          "relativePath": "references/anatomy-builds.md",
+          "upstreamPath": "references/anatomy-builds.md",
+          "snapshot": "sources/upstream/iso-glow/support/references/anatomy-builds.md",
+          "sourceSha256": "84afbec69d2149fc561ec56ed98a97ebfc27b83c5aa0f5089ec1326142f66ca6"
+        },
+        {
+          "relativePath": "references/lumen.md",
+          "upstreamPath": "references/lumen.md",
+          "snapshot": "sources/upstream/iso-glow/support/references/lumen.md",
+          "sourceSha256": "33301b7df2601c8d6d13ed9a670ecf6332048b50bf5a492a2dff587c3f271128"
+        }
+      ],
+      "consumers": [
+        "atlas-figures"
+      ],
+      "rulings": [],
+      "notices": [
+        {
+          "input": "sources/upstream/iso-glow/LICENSE",
+          "target": "references/iso-glow/LICENSE",
+          "sha256": "1a1281a84e233c0501448f641943d1a3e6c07aa7dfcfd07ea59f212f0608426a"
+        }
+      ]
+    },
+    {
+      "id": "colorfigures",
+      "owner": "Atlas Figures",
+      "classification": "patched",
+      "upstream": {
+        "type": "download",
+        "page": "https://april-zhu.com/colorfigures",
+        "archive": "colorfigures.tar.gz",
+        "archiveSha256": "40775dfb4d305a4d11ba9e25436177e8dc63c4a2e5100cf92a36d6449f5b225f",
+        "path": "SKILL.md",
+        "url": "https://april-zhu.com/colorfigures/colorfigures.tar.gz"
+      },
+      "snapshot": "sources/upstream/colorfigures/source.md",
+      "sourceSha256": "5bf7e80eb4d31273dada38544b75cdee2c3667dc98a2c8565c509ef492ef1256",
+      "license": "sources/upstream/colorfigures/LICENSE",
+      "licenseSha256": "bc54cadb579906c051d7aad84f41f88c0df6c50089e052134226fe0b76fd5280",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "method": "creative-skills/atlas-figures/references/colorfigures/SKILL.md",
+      "carriedPath": "references/colorfigures/SKILL.md",
+      "patch": "sources/patches/colorfigures.patch",
+      "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI. All other downloaded files remain verbatim.",
+      "supportingFiles": [
+        {
+          "relativePath": "README.md",
+          "upstreamPath": "README.md",
+          "snapshot": "sources/upstream/colorfigures/support/README.md",
+          "sourceSha256": "2818f4aa0c3bb3dd59865522a1d375fbe29101d95c492fc579ba94c5e9be342d"
+        },
+        {
+          "relativePath": "assets/core.js",
+          "upstreamPath": "assets/core.js",
+          "snapshot": "sources/upstream/colorfigures/support/assets/core.js",
+          "sourceSha256": "a78aab94ab7396b99080bf72673d5d4d689d771764d76cb08f1a0d28033f7fc3"
+        },
+        {
+          "relativePath": "assets/examples/claw.html",
+          "upstreamPath": "assets/examples/claw.html",
+          "snapshot": "sources/upstream/colorfigures/support/assets/examples/claw.html",
+          "sourceSha256": "aca6069e1b0c472a1aee556aabb28dbefd77db1d62bc3df6aaebf6fd8b11d36f"
+        },
+        {
+          "relativePath": "assets/examples/lamp.html",
+          "upstreamPath": "assets/examples/lamp.html",
+          "snapshot": "sources/upstream/colorfigures/support/assets/examples/lamp.html",
+          "sourceSha256": "8db118ca548e79f2aeab94b6601ca4dc1c83b9b89c1810232bcaea4fda0b281b"
+        },
+        {
+          "relativePath": "assets/examples/toaster.html",
+          "upstreamPath": "assets/examples/toaster.html",
+          "snapshot": "sources/upstream/colorfigures/support/assets/examples/toaster.html",
+          "sourceSha256": "685e9e297fdc8f7104d2d3f04325bbbc567b76941934a8c37c6e127ab1cd9950"
+        },
+        {
+          "relativePath": "scripts/build.py",
+          "upstreamPath": "scripts/build.py",
+          "snapshot": "sources/upstream/colorfigures/support/scripts/build.py",
+          "sourceSha256": "364b3028aed6980811ad49ac3c39725c4b901ef85dc0aa6b778fe612ae104ee4"
+        }
+      ],
+      "consumers": [
+        "atlas-figures"
+      ],
+      "rulings": [],
+      "notices": [
+        {
+          "input": "sources/upstream/colorfigures/LICENSE",
+          "target": "references/colorfigures/LICENSE",
+          "sha256": "bc54cadb579906c051d7aad84f41f88c0df6c50089e052134226fe0b76fd5280"
+        }
       ]
     }
   ],
@@ -3127,6 +4691,29 @@
           "condition": "When authoring agent instructions, skills or agent-facing policies."
         }
       ]
+    },
+    {
+      "id": "atlas-figures",
+      "directory": "creative-skills/atlas-figures",
+      "entry": "creative-skills/atlas-figures/SKILL.md",
+      "agent": "creative-skills/atlas-figures/agents/openai.yaml",
+      "methods": [
+        "hairline-create",
+        "hairline-adopt",
+        "anatomy",
+        "engraved-figures",
+        "teardown",
+        "iso-glow",
+        "colorfigures"
+      ],
+      "dependencies": [
+        {
+          "id": "atlas-craft",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "Teardown’s typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Craft."
+        }
+      ]
     }
   ],
   "rulings": [
@@ -3490,7 +5077,7 @@
         "pstack-technical-writing",
         "pstack-unslop"
       ],
-      "decision": "Technical documentation uses the four writing layers within the existing author, reader and factual contracts. Section-level Di\u00e1taxis permits useful mixed READMEs/RFCs; evidence qualifications survive certainty rules; length rules are heuristics and code formatting follows the repository. Reuse the already loaded Unslop catalog without an additional mandatory pass. PR writing is removed from this package."
+      "decision": "Technical documentation uses the four writing layers within the existing author, reader and factual contracts. Section-level Diátaxis permits useful mixed READMEs/RFCs; evidence qualifications survive certainty rules; length rules are heuristics and code formatting follows the repository. Reuse the already loaded Unslop catalog without an additional mandatory pass. PR writing is removed from this package."
     },
     {
       "id": "human-writing-editorial-contract",
@@ -3581,7 +5168,7 @@
       "sources": [
         "state-machine"
       ],
-      "decision": "States is an explicitly requested workbench, not automatic setup for ordinary refinement or a review. Preserve the real component and its production styling; isolate fixture reads, refreshes and mutations and use separate inspection chrome. Setup hands over before visual edits; cleanup requires the user\u2019s request."
+      "decision": "States is an explicitly requested workbench, not automatic setup for ordinary refinement or a review. Preserve the real component and its production styling; isolate fixture reads, refreshes and mutations and use separate inspection chrome. Setup hands over before visual edits; cleanup requires the user’s request."
     }
   ]
 }

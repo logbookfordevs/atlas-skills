@@ -690,5 +690,59 @@
   "atlas-setup": {
     "references": [],
     "collections": []
+  },
+  "atlas-figures": {
+    "references": [
+      {
+        "id": "hairline-create",
+        "title": "Hairline Create",
+        "author": "Lucas Marques",
+        "url": "https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/skills/hairline-create/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "hairline-adopt",
+        "title": "Hairline Adopt",
+        "author": "Lucas Marques",
+        "url": "https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/skills/hairline-adopt/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "anatomy",
+        "title": "Anatomy",
+        "author": "Ryan",
+        "url": "https://github.com/wheresryan22/anatomy/blob/1482e8469b0a9e0d8cc18ea2740a01423d29ae80/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "engraved-figures",
+        "title": "Engraved Figures",
+        "author": "Brooklyn Nicholson",
+        "url": "https://github.com/OutThisLife/brooklyn-skills/blob/b28c329ab529e4eba38a731556e8b1e5aed52dbd/skills/engraved-figures/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "teardown",
+        "title": "Teardown",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/teardown/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "iso-glow",
+        "title": "ISO-GLOW",
+        "author": "April Zhu (based on Tolga Cohce’s iso-figure)",
+        "url": "https://isoglow.dev/",
+        "classification": "patched"
+      },
+      {
+        "id": "colorfigures",
+        "title": "Colorfigures",
+        "author": "April Zhu (based on Tolga Cohce’s iso-figure)",
+        "url": "https://april-zhu.com/colorfigures",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
   }
 }

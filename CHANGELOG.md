@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add the optional, manually invoked Atlas Figures chooser with six treatments, complete supporting assets, original licenses and source receipts. Keep creative packages outside the shared stack.
+
 - Add Jakub Krehel’s Explain Interface to Atlas Explain and an explicitly requested States workbench to Atlas Craft, with pinned support files, source credits and replayable adaptations.
 
 - Add a Skills CLI marketplace catalog grouping Atlas workflows, optional creative skills and standalone utilities.

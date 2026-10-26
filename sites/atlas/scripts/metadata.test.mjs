@@ -72,5 +72,5 @@ test('both public manifest URLs serve the exact stack shown on the website', asy
   }
   const manifest = JSON.parse(snapshot);
   const atlas = manifest.sources.find(source => source.source === 'https://github.com/logbookfordevs/atlas-skills');
-  assert.deepEqual(skills.map(skill => skill.id).sort(), [...atlas.skills].sort());
+  assert.deepEqual(skills.filter(skill => !skill.optional).map(skill => skill.id).sort(), [...atlas.skills].sort());
 });

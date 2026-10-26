@@ -61,7 +61,7 @@ The [shared stack page](https://atlas.logbookfordevs.com/stack/) explains the co
 
 ## Creative skills
 
-[ISO-GLOW and Colorfigures](creative-skills/README.md) by [April Zhu (@Aprilzz423)](https://x.com/Aprilzz423) are preserved from their downloadable distributions under `creative-skills/`. Both retain their MIT licenses and credit [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill), the underlying project. Install either optionally with Skills CLI using the commands in their README; neither is included in the shared stack. These independent creative packages remain separate from Atlas’s composed workflows.
+[ISO-GLOW and Colorfigures](creative-skills/README.md) by [April Zhu (@Aprilzz423)](https://x.com/Aprilzz423) are preserved from their downloadable distributions under `creative-skills/`. Both retain their MIT licenses and credit [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill), the underlying project. Install either optionally with Skills CLI using the commands in their README; neither is included in the shared stack. The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition bundles these alongside Hairline, Anatomy, Engraved Figures and Teardown. It presents all six treatments and leaves selection to you. Creative packages remain outside the shared stack.
 
 ## Utility skills
 

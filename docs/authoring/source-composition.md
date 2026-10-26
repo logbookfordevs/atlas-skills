@@ -7,6 +7,7 @@ Use [Atlas's distribution premise](../../README.md) when choosing what to bundle
 | Location | Edit here for |
 | --- | --- |
 | `skills/<id>/` | Atlas instructions, templates and references; maintained upstream adaptations |
+| `creative-skills/<id>/` | Optional creative compositions and independent download-distributed packages |
 | `utility-skills/<id>/` | Optional standalone utilities, outside the core workflow registry and shared stack |
 | `sources/composition.json` | Package registration, carried sources, consumers, dependencies and rulings |
 | `sources/upstream/<source-id>/` | Pinned, untouched upstream files and license evidence |
@@ -94,3 +95,9 @@ Update the consumer relationship and stack selection together when a dependency 
 Run `pnpm build:skills`, then `pnpm check`. Inspect the diff for intended behavior changes, complete license/support trees, updated receipts and preserved Atlas-owned files. Commit maintained files, source records, patches and refreshed receipts together when delivery is authorized.
 
 Tests cover metadata, discovery, packaging, hashes, patch replay and observable tooling behavior. Authored wording, headings and examples are not test contracts. Package validation establishes integrity; invocation and behavioral quality require a separate model trial when those claims matter.
+
+## Optional creative compositions
+
+A registered workflow may set `directory: "creative-skills/<id>"`; its entry and agent files live there. The builder and reviewed Git adoption support that destination. Leave optional creative packages outside `stacks/atlas.json`; add their paths to the Creative Skills CLI catalog and mark their website entries `optional: true`.
+
+Download sources use `upstream.type: "download"`, the author's `page`, original `archive` name and `archiveSha256`, plus a direct `url` when available. They retain the same pristine-file hashes, licenses, patch replay and receipts as Git sources, with no fabricated commit. The watcher reports `manual-download` and does not fetch or prepare them. Review a new author distribution manually and refresh source snapshots, patches and receipts together. Independent download copies retain their own `creative-skills/provenance.json`; reconcile both copies explicitly when updating a shared download.

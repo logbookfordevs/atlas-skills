@@ -14,7 +14,7 @@ for (const target of targets) {
 const content = JSON.parse(readFileSync(new URL('../content.json', import.meta.url)));
 const stack = JSON.parse(bytes);
 const atlas = stack.sources.find(source => source.source === 'https://github.com/logbookfordevs/atlas-skills');
-assert.deepEqual(content.map(skill => skill.id).sort(), [...atlas.skills].sort(), 'Website references must cover the Atlas stack selection exactly');
+assert.deepEqual(content.filter(skill => !skill.optional).map(skill => skill.id).sort(), [...atlas.skills].sort(), 'Website references must cover the Atlas stack selection exactly');
 if (existsSync(canonical)) {
   const composition = JSON.parse(readFileSync(new URL('../../../sources/composition.json', import.meta.url)));
   assert.deepEqual(content.map(skill => skill.id).sort(), composition.workflows.map(workflow => workflow.id).sort(), 'Website references must cover every active Atlas package');

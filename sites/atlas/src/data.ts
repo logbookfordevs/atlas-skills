@@ -13,6 +13,7 @@ export interface Skill {
   modes: { title: string; description: string; example: string }[];
   note: string;
   origin?: string;
+  optional?: boolean;
 }
 
 export interface UpstreamCredit {

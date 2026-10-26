@@ -85,3 +85,7 @@ Tracking creates local HTML records by default, following repository or user sto
 Use [Skill maintenance](authoring/source-composition.md) for package changes, [the stack guide](atlas-stack.md) for installation, and the [website](https://atlas.logbookfordevs.com/) for user-facing examples.
 
 The previous composition, skills/profile and cinematic maps described retired workflows. Their source files are retained as [historical snapshots](migrations/retired-guides/README.md), not current invocation or CLI guidance. Previously published external copies are also snapshots; this repository update does not republish them.
+
+## Choose a figure treatment
+
+The optional `atlas-figures` skill presents Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW and Colorfigures. It recommends fits from the subject and intended medium; you select before construction. Ask, for example, “Help me choose a treatment to explain our cache for a blog post.” If you already chose, say “Make this coffee machine in Colorfigures.” Figure methods are bundled; Teardown reuses installed Atlas Craft for its design-domain guidance. See [Creative skills](../creative-skills/README.md) for installation and source credits.
