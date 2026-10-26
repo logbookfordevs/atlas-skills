@@ -1,0 +1,31 @@
+diff --git a/source.md b/source.md
+index 26f8352..45d9687 100644
+--- a/source.md
++++ b/source.md
+@@ -8,7 +8,7 @@ disable-model-invocation: true
+ 
+ This skill takes one component and renders it on a throwaway page in every state it can be in. Mock data feeds each state, a switcher flips between them and the page is deleted in one step when you are done.
+ 
+-It is a workbench, not a review. The page stays up while the user works on the visuals, one state on screen and every other a keypress away. Stacking hostile scenarios on one page for a single look is `break`, exploring alternative designs is `variant` and reviewing finished work is `interface-review`.
++It is a workbench, not a review. The page stays up while the user works on the visuals, one state on screen and every other a keypress away. Worst-case stress testing belongs to Atlas Verify’s UI Stress method; finished-work review belongs to Atlas Review’s Interface methods. Design alternatives are a separate request.
+ 
+ ## 1. Scope one component
+ 
+@@ -36,7 +36,7 @@ A scratch route inside the app holds the real component, imported from the proje
+ 
+ Where the framework splits server from client components, the page is client code, `"use client"` in Next. Otherwise fixture data can silently vanish crossing that boundary, and the page renders empty.
+ 
+-Render one instance in a container as wide as the component is in production. The container, the fixtures and the switcher are everything the page adds, with no fonts, styles or themes of its own. Keep the page, its fixtures and its switcher in one folder, such as `/states/audit-log`, so removal is one delete.
++Render one instance in a container as wide as the component is in production. The component retains its production styles and theme. Only the surrounding switcher uses the isolated inspection chrome in [switcher.md](switcher.md). Keep the page, its fixtures and its switcher in one folder, such as `/states/audit-log`, so removal is one delete.
+ 
+ ## 4. Feed each state at the data boundary
+ 
+@@ -49,7 +49,7 @@ A fixture threaded through props five levels down tests a path production never
+ 
+ Make the data look like the product. Real-shaped names, timestamps, amounts and the item counts users actually have. Three rows of "Test item" make every state look fine.
+ 
+-Loading and pending states hold still. Keep them pending until the switcher moves, rather than resolving after a timeout.
++Keep fixture providers, refreshes and mutations isolated from live data. Loading and pending states hold still. Keep them pending until the switcher moves, rather than resolving after a timeout.
+ 
+ ## 5. Add the switcher
+ 

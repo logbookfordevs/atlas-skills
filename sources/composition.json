@@ -2502,6 +2502,114 @@
       "rulings": [
         "craft-mobile-web-ownership"
       ]
+    },
+    {
+      "id": "explain-interface",
+      "owner": "Atlas Explain",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "path": "skills/explain-interface/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/explain-interface/source.md",
+      "sourceSha256": "6795aff9a133b94c6398a95b5c8958a2eaccade5db18f58e752bc02460a356e0",
+      "license": "sources/upstream/explain-interface/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "skills/atlas-explain/references/interface/explain-interface.md",
+      "carriedPath": "references/interface/explain-interface.md",
+      "patch": "sources/patches/explain-interface.patch",
+      "adaptation": "Replace standalone invocation and sibling skill calls with Atlas handoffs. Use available host browser capabilities, preserve measured/derived/inferred evidence and screenshot uncertainty, keep supporting inspection read-only, and make domain observations explanatory rather than normative audits. Preserve all source files and original metadata.",
+      "consumers": [
+        "atlas-explain"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/explain-interface/from-an-image.md",
+          "relativePath": "from-an-image.md",
+          "snapshot": "sources/upstream/explain-interface/support/from-an-image.md",
+          "sourceSha256": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
+          "method": "skills/atlas-explain/references/interface/from-an-image.md",
+          "patch": "sources/patches/explain-interface-from-an-image.patch"
+        },
+        {
+          "upstreamPath": "skills/explain-interface/read-the-system.md",
+          "relativePath": "read-the-system.md",
+          "snapshot": "sources/upstream/explain-interface/support/read-the-system.md",
+          "sourceSha256": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
+          "method": "skills/atlas-explain/references/interface/read-the-system.md",
+          "patch": "sources/patches/explain-interface-read-the-system.patch"
+        },
+        {
+          "upstreamPath": "skills/explain-interface/no-browser.md",
+          "relativePath": "no-browser.md",
+          "snapshot": "sources/upstream/explain-interface/support/no-browser.md",
+          "sourceSha256": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f"
+        },
+        {
+          "upstreamPath": "skills/explain-interface/find-the-effect.md",
+          "relativePath": "find-the-effect.md",
+          "snapshot": "sources/upstream/explain-interface/support/find-the-effect.md",
+          "sourceSha256": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+          "method": "skills/atlas-explain/references/interface/find-the-effect.md",
+          "patch": "sources/patches/explain-interface-find-the-effect.patch"
+        },
+        {
+          "upstreamPath": "skills/explain-interface/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "snapshot": "sources/upstream/explain-interface/support/agents/openai.yaml",
+          "sourceSha256": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "rulings": [
+        "explain-interface-evidence"
+      ]
+    },
+    {
+      "id": "state-machine",
+      "owner": "Atlas Craft",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "path": "skills/state-machine/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/state-machine/source.md",
+      "sourceSha256": "a94d55cf0a6b71bb8e374e66da9fd66fc8095141e7ff9859ab7c23e6f704f5cf",
+      "license": "sources/upstream/state-machine/LICENSE",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "method": "skills/atlas-craft/references/states/state-machine.md",
+      "carriedPath": "references/states/state-machine.md",
+      "patch": "sources/patches/state-machine.patch",
+      "adaptation": "Route stress testing and interface review to their existing Atlas owners. Clarify that production styling belongs to the component while switcher chrome stays isolated; keep fixture refreshes and mutations separate from live data. Preserve existing-state discovery, the real-component workbench, explicit seam approval and user-requested cleanup.",
+      "consumers": [
+        "atlas-craft"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/state-machine/switcher.md",
+          "relativePath": "switcher.md",
+          "snapshot": "sources/upstream/state-machine/support/switcher.md",
+          "sourceSha256": "32f0f1c82362557bfc7f83554359883b0c3d931d578ec8a7a390529699973c6d"
+        },
+        {
+          "upstreamPath": "skills/state-machine/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "snapshot": "sources/upstream/state-machine/support/agents/openai.yaml",
+          "sourceSha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "rulings": [
+        "craft-states-workbench"
+      ]
     }
   ],
   "workflows": [
@@ -2562,7 +2670,8 @@
         "better-writing",
         "animate",
         "apple-design",
-        "mobile-native"
+        "mobile-native",
+        "state-machine"
       ],
       "authoredReferences": [
         {
@@ -2887,7 +2996,8 @@
         "pstack-how",
         "pstack-why",
         "pstack-teach",
-        "pstack-unslop"
+        "pstack-unslop",
+        "explain-interface"
       ],
       "dependencies": []
     },
@@ -3451,7 +3561,27 @@
         "animate",
         "apple-design"
       ],
-      "decision": "Mobile Web is a conditional reference, not a seventh Craft mode. Existing methods own type, accessibility, layout, UI and motion. Platform fixes preserve selectable text, native activation and useful browser behavior; keyboard clearance requires browser-specific evidence rather than a dvh guarantee."
+      "decision": "Mobile Web is a conditional reference, not a Craft mode. Existing methods own type, accessibility, layout, UI and motion. Platform fixes preserve selectable text, native activation and useful browser behavior; keyboard clearance requires browser-specific evidence rather than a dvh guarantee."
+    },
+    {
+      "id": "explain-interface-evidence",
+      "owner": "atlas-explain",
+      "document": "skills/atlas-explain/references/interface/explain-interface.md",
+      "section": "Measured, derived, inferred",
+      "sources": [
+        "explain-interface"
+      ],
+      "decision": "Interface explains observed mechanisms without a craft or accessibility verdict. Browser inspection stays read-only; a screenshot supports a qualified reconstruction, not proof of authored CSS, framework identity or accessibility conformance."
+    },
+    {
+      "id": "craft-states-workbench",
+      "owner": "atlas-craft",
+      "document": "skills/atlas-craft/SKILL.md",
+      "section": "Atlas Craft",
+      "sources": [
+        "state-machine"
+      ],
+      "decision": "States is an explicitly requested workbench, not automatic setup for ordinary refinement or a review. Preserve the real component and its production styling; isolate fixture reads, refreshes and mutations and use separate inspection chrome. Setup hands over before visual edits; cleanup requires the user\u2019s request."
     }
   ]
 }

@@ -48,7 +48,10 @@
     "references/fluid/apple-design.md",
     "licenses/apple-design.txt",
     "references/mobile-web/mobile-native.md",
-    "licenses/mobile-native.txt"
+    "licenses/mobile-native.txt",
+    "references/states/state-machine.md",
+    "licenses/state-machine.txt",
+    "references/states/switcher.md"
   ],
   "authoredInputs": [
     "skills/atlas-craft/SKILL.md",
@@ -560,6 +563,41 @@
       ],
       "patch": "sources/patches/mobile-native.patch",
       "patchSha256": "7c70f9afd5b750ad674f54888d73eb890417b379f1789ccd70176cea1706e689"
+    },
+    {
+      "id": "state-machine",
+      "owner": "Atlas Craft",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "path": "skills/state-machine/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/state-machine/switcher.md",
+          "classification": "verbatim",
+          "sourceSha256": "32f0f1c82362557bfc7f83554359883b0c3d931d578ec8a7a390529699973c6d",
+          "carriedPath": "references/states/switcher.md",
+          "carriedSha256": "32f0f1c82362557bfc7f83554359883b0c3d931d578ec8a7a390529699973c6d"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "a94d55cf0a6b71bb8e374e66da9fd66fc8095141e7ff9859ab7c23e6f704f5cf",
+      "carriedPath": "references/states/state-machine.md",
+      "carriedSha256": "a551306b0e1bf0cc46400d1327c8188b298c89f48f4cbcdff89d6cac1b4b43a9",
+      "licensePath": "licenses/state-machine.txt",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "adaptation": "Route stress testing and interface review to their existing Atlas owners. Clarify that production styling belongs to the component while switcher chrome stays isolated; keep fixture refreshes and mutations separate from live data. Preserve existing-state discovery, the real-component workbench, explicit seam approval and user-requested cleanup.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "rulings": [
+        "craft-states-workbench"
+      ],
+      "patch": "sources/patches/state-machine.patch",
+      "patchSha256": "faa623c437aa9e8782002ca8497c0c72e799fcb287b5d5db17e2b39cbe7bdfb4"
     }
   ],
   "rulings": [
@@ -616,12 +654,22 @@
         "animate",
         "apple-design"
       ],
-      "decision": "Mobile Web is a conditional reference, not a seventh Craft mode. Existing methods own type, accessibility, layout, UI and motion. Platform fixes preserve selectable text, native activation and useful browser behavior; keyboard clearance requires browser-specific evidence rather than a dvh guarantee."
+      "decision": "Mobile Web is a conditional reference, not a Craft mode. Existing methods own type, accessibility, layout, UI and motion. Platform fixes preserve selectable text, native activation and useful browser behavior; keyboard clearance requires browser-specific evidence rather than a dvh guarantee."
+    },
+    {
+      "id": "craft-states-workbench",
+      "owner": "atlas-craft",
+      "document": "skills/atlas-craft/SKILL.md",
+      "section": "Atlas Craft",
+      "sources": [
+        "state-machine"
+      ],
+      "decision": "States is an explicitly requested workbench, not automatic setup for ordinary refinement or a review. Preserve the real component and its production styling; isolate fixture reads, refreshes and mutations and use separate inspection chrome. Setup hands over before visual edits; cleanup requires the user’s request."
     }
   ],
   "files": {
-    "SKILL.md": "c9a04d7abfcf746d238a0ef89a50771494b3a56d96daf0c8bfb2f1391f667d06",
-    "agents/openai.yaml": "3ca2dcbde4b2ff99bab9a6daa5c29e236baa3d9c401a9fa1bf586bac0216165f",
+    "SKILL.md": "6bc4b03664613e4d42fe8eb0ba9002c50505825cb47a554f52ba1d603cb3d169",
+    "agents/openai.yaml": "48c44e6c74b77a96b543cf5b33bb169e577033fdadb3867d2a9540f79782d4d9",
     "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
     "references/color/index.md": "c49f15e8e320fb2ba9b96de6c0acd41b279bbdea44165b362eac3f4ca7f906e5",
     "licenses/better-colors.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
@@ -669,6 +717,9 @@
     "licenses/apple-design.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/mobile-web/mobile-native.md": "cb96506843c445354d1dbfc1ec9bcb2df47578e9888fc2600a70ac174c8f3022",
     "licenses/mobile-native.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/states/state-machine.md": "a551306b0e1bf0cc46400d1327c8188b298c89f48f4cbcdff89d6cac1b4b43a9",
+    "licenses/state-machine.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+    "references/states/switcher.md": "32f0f1c82362557bfc7f83554359883b0c3d931d578ec8a7a390529699973c6d",
     "references/ownership.md": "ec025ecc463b5304bcfb628ce028789720cc3d828c73d5c436742a668e2b1e32"
   }
 }

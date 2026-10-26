@@ -6,7 +6,7 @@ disable-model-invocation: false
 
 # Atlas Review
 
-Choose from the requested outcome and context, honoring an explicit choice. Ask only when ambiguity changes the method. Read [Scope and ownership](references/ownership.md) and the selected methods.
+Select methods from the requested outcome and the change's material risks. Combine methods when they answer distinct review questions. An explicitly bounded request such as “Code only” limits selection; an open-ended review leaves selection to you. Ask only when ambiguity changes the method. Read [Scope and ownership](references/ownership.md) and the selected methods.
 
 | Mode | Need | Read and follow |
 | --- | --- | --- |
@@ -20,7 +20,7 @@ Choose from the requested outcome and context, honoring an explicit choice. Ask 
 
 For Interface, use [Interface Changes](references/interface/changes/index.md) when the request names a branch, PR, commit range or uncommitted changes. Use [Interface Audit](references/interface/audit/index.md) for a screen, flow or repository audit. Preserve a supplied scope; ask when both interpretations remain materially different. Changes classifies introduced, regressed and pre-existing findings; Audit owns severity, consolidation and coverage. The six interface disciplines are bundled here, independent of a Craft installation.
 
-Requests for `interrogate` or `blast-radius` select the corresponding bundled method. Select the review question; a Code review does not automatically add Adversarial or Impact. When multiple methods are requested, keep Code's Standards and Spec reports distinct from Adversarial synthesis and Impact's proof/risks.
+Requests for `interrogate` or `blast-radius` select the corresponding bundled method. Keep Code's Standards and Spec reports distinct from other selected methods' findings.
 
 Reviewing does not authorize fixes. Impact may run existing checks or owned scratch probes in isolated state; product code remains read-only. Motion Audit may write requested plans under the repository's artifact convention. Construction references bundled for motion judgments do not change that authorization. Follow [Motion ownership](references/motion-ownership.md) when UI polish and motion methods disagree.
 

@@ -418,6 +418,13 @@
         "author": "Lauren Tan / Pstack mirror",
         "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/unslop/SKILL.md",
         "classification": "patched"
+      },
+      {
+        "id": "explain-interface",
+        "title": "Explain Interface",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/explain-interface/SKILL.md",
+        "classification": "patched"
       }
     ],
     "collections": []
@@ -504,6 +511,13 @@
         "title": "Mobile Native",
         "author": "Emil Kowalski",
         "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/mobile-native/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "state-machine",
+        "title": "State Machine",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/state-machine/SKILL.md",
         "classification": "patched"
       }
     ],

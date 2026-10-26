@@ -1,0 +1,25 @@
+diff --git a/source.md b/source.md
+index c40dacd..35725c6 100644
+--- a/source.md
++++ b/source.md
+@@ -6,9 +6,9 @@ disable-model-invocation: true
+ 
+ # Explain interface
+ 
+-This skill answers how something on the web was built. `/explain-interface how the gradient on example.com was built` finds the layers producing that gradient and explains what each one contributes.
++This skill answers how something on the web was built. “Explain how the gradient on example.com was built” finds the layers producing that gradient and explains what each one contributes.
+ 
+-It explains rather than judges. There is no verdict, because how someone else built their interface is not a finding. Reviewing against a standard is `interface-review` and `better-interface`, and exploring alternatives for your own is `variant`. Name what you find in the vocabulary of the domain skill that owns it, such as `better-typography` for type or `better-colors` for palette.
++It explains rather than judges. There is no verdict, because how someone else built their interface is not a finding. Reviewing against a standard belongs to Atlas Review’s Interface methods. Use domain vocabulary to explain the mechanism; this method does not load a craft audit or build alternative designs.
+ 
+ ## Scope to the question
+ 
+@@ -37,7 +37,7 @@ Use both where the question is worth it. Prefer the browser when:
+ - Several rules match and you need the one that won.
+ - The answer depends on motion.
+ 
+-The `chrome-devtools-mcp` server is the easiest browser to add. Its `evaluate_script` takes a function, so every recipe in this skill is written as `() => { ... }`. Pass the same function to Playwright's `page.evaluate`, or call it in the console. The server also has `resize_page` and `take_screenshot` for another width, `list_network_requests` for what is served and `performance_start_trace` for a stutter.
++Use the host’s available browser and its documented capabilities. The JavaScript recipes are functions returning evidence; adapt them only where script execution is supported. Use the fetch or screenshot method when the browser cannot expose the required evidence, and report the limit.
+ 
+ Never kill a browser you did not start. A `pkill` pattern matching `chrome` takes down the MCP's own browser and every session attached to it, so quit the process you launched by its pid.
+ 

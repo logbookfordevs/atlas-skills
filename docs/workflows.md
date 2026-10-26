@@ -43,7 +43,7 @@ Choose the artifact or judgment that answers the current question:
 - **Hierarchy and navigation:** HTML UI's Wireframe method keeps fidelity low while you judge structure.
 - **An interactive visual commitment:** HTML UI's Model method makes the agreed flow concrete. It uses the independently available Design Artifact guidance.
 - **An uncertain state model or behavior:** the independent Prototype skill can build a bounded experiment.
-- **An established interface needs refinement:** Atlas Craft supplies Color, Type, Layout, Accessibility, UI Polish and Copy methods while preserving accepted identity.
+- **An established interface needs refinement:** Atlas Craft supplies Color, Type, Layout, Accessibility, UI Polish and Copy methods while preserving accepted identity. Ask for States to inspect one real component’s existing states with fixtures and a switcher before requesting visual changes.
 - **A changed interface needs review:** Atlas Review's Interface Changes distinguishes introduced, regressed and pre-existing problems. Interface Audit assesses an existing screen or flow more broadly.
 
 Carry approved references, viewport expectations, states and permitted adaptations into the spec or ticket. Reopen direction only when a material choice remains unresolved.
@@ -60,7 +60,7 @@ Use Animated-Driven Frontend for synchronized progress, scroll sequences, render
 | --- | --- | --- |
 | A bug has an unknown cause | Independent Diagnosing Bugs | Establish the cause and validate the fix through the actual behavior. |
 | Unresolved decisions exceed one session | Atlas Wayfinder | Create or resume a decision map; it plans by default rather than executing the whole project. |
-| You need to understand code | Atlas Explain: How, Why or Teach | Select the explanation mode; the topic alone does not bypass its chooser. |
+| You need to understand code or an interface | Atlas Explain: How, Why, Teach or Interface | Request Interface to explain a live page or reconstruct a screenshot; otherwise retain the chooser when the mode is unspecified. |
 | A shared contract could affect other consumers | Atlas Review: Impact | Trace downstream assumptions and preserve evidence for the risks. |
 | A consequential assumption needs challenge | Atlas Review: Adversarial | Independent review supplies evidence for judgment, not automatic authority. |
 | Work benefits from teammates | Team Up: Delegation, Arena or Swarm | Choose the smallest capable team; use Arena for competing candidates and Swarm for structured coverage or races. |

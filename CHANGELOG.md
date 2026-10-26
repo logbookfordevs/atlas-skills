@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add Jakub Krehel’s Explain Interface to Atlas Explain and an explicitly requested States workbench to Atlas Craft, with pinned support files, source credits and replayable adaptations.
+
 - Add a Skills CLI marketplace catalog grouping Atlas workflows, optional creative skills and standalone utilities.
 
 - Add the optional, manually invoked Source Composition utility for applying Atlas’s source-maintenance methodology in other projects.

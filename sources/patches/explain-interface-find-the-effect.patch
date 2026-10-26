@@ -1,0 +1,21 @@
+diff --git a/source.md b/source.md
+index 03d6248..64740c1 100644
+--- a/source.md
++++ b/source.md
+@@ -62,14 +62,14 @@ Where the layer search comes back empty for the region you care about, the effec
+     return {
+       tag: el.tagName.toLowerCase(),
+       box: `${Math.round(r.width)}x${Math.round(r.height)} @ y${Math.round(r.top)}`,
+-      ctx: el.tagName === 'CANVAS' ? (el.getContext('2d') ? '2d-or-unused' : 'webgl-or-other') : null,
++      context: el.tagName === 'CANVAS' ? 'not inspected' : null,
+       src: (el.currentSrc || el.getAttribute('src') || '').slice(0, 90),
+     };
+   }),
+ })
+ ```
+ 
+-A canvas returns `null` for a context type other than the one it already holds, so `webgl-or-other` means a WebGL context is likely. Probing an unused canvas creates a 2D context on it, which is why this runs only after the page has drawn. A WebGL canvas plus a matching library is a shader. Say so and describe roughly what it looks like, rather than describing CSS that is not there. An `svg` may carry `<filter>` primitives worth reading directly.
++Creating a canvas context can change an unused canvas, so the read-only recipe does not call `getContext`. Canvas presence and library filenames alone do not prove a WebGL or shader implementation; report the evidence and remaining uncertainty. An `svg` may carry `<filter>` primitives worth reading directly.
+ 
+ ## Narrowing to a region
+ 
