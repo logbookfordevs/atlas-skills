@@ -15,7 +15,7 @@ Work in Atlas Mode for this task and its follow-ups until the user exits it. Tak
 3. At meaningful transitions, use the same selection rule before changing the approach. Continue an agreed workflow without asking again; carry explicit choices and active records into follow-ups. Finish when the requested outcome and selected methods' completion conditions are met.
 4. Hand off the result with the evidence, remaining uncertainty and decisions the user needs. Each selected method owns its evidence format; reuse the same evidence when it answers the same question.
 
-A manually invoked skill remains manual outside Atlas Mode. Inside this explicitly requested mode, read and apply its instructions directly once the approach is selected, including Wayfinder, To Spec, To Tickets, Writing for Humans, Retro and Animated-Driven Frontend. Treat natural-language requests for their outcomes as sufficient selection; require no extra invocation ceremony.
+A manually invoked skill remains manual outside Atlas Mode. Inside this explicitly requested mode, read and apply its instructions directly once the approach is selected, including Wayfinder, To Spec, To Tickets, Writing for Humans, Retro, Figures and Animated-Driven Frontend. Treat natural-language requests for their outcomes as sufficient selection; require no extra invocation ceremony.
 
 Select complementary methods where they address different needs. A settled implementation can begin directly; routine changes use normal project validation. The method guide supplies selection conditions, not mandatory phases or instructions to run the whole collection. Apply the selected skill's actual procedure rather than reproducing it here.
 
@@ -29,7 +29,7 @@ A request for advice, options or what to do next stays advisory until the user s
 
 ## Scope and choices
 
-Explicit user choices take precedence over inferred selections. Preserve method-level opt-ins: With Docs, Tracking, Audit Trail and Retro Enforce require their requested outcomes in the conversation or an existing active selection. Retain Atlas Explain's chooser when the explanation mode remains unspecified. Atlas Mode's activation alone does not request those outcomes.
+Explicit user choices take precedence over inferred selections. Preserve method-level opt-ins: With Docs, States, Tracking, Audit Trail and Retro Enforce require their requested outcomes in the conversation or an existing active selection. Retain Atlas Explain's chooser when the explanation mode remains unspecified, and Atlas Figures' treatment menu and user selection. Atlas Mode's activation alone does not request those outcomes.
 
 Keep the task's authority through transitions: a review stays read-only toward product code and Retro Diagnose stays advisory. Honor existing approval for concrete work without asking again. Follow the selected method's rules for external writes, acceptance and publication.
 

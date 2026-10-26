@@ -37,7 +37,7 @@
       "id": "atlas-explain",
       "relationship": "behavioral",
       "required": false,
-      "condition": "When the requested outcome is understanding mechanics, rationale or learning."
+      "condition": "When the requested outcome is code mechanics, historical rationale, conversational learning or explaining how an interface was built."
     },
     {
       "id": "html-ui",
@@ -49,13 +49,19 @@
       "id": "atlas-craft",
       "relationship": "behavioral",
       "required": false,
-      "condition": "When refining an established interface."
+      "condition": "When refining an established interface or explicitly requesting a component-state workbench; mobile browser behavior loads its conditional reference."
     },
     {
       "id": "atlas-motion",
       "relationship": "behavioral",
       "required": false,
-      "condition": "When building or assessing opportunities for animation and gestures."
+      "condition": "When building animation or gestures, diagnosing rendering performance, or assessing worthwhile motion opportunities."
+    },
+    {
+      "id": "atlas-figures",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When a figure or technical illustration needs a visual treatment; preserve Figures’ menu and user-owned treatment selection."
     },
     {
       "id": "atlas-review",
@@ -67,7 +73,7 @@
       "id": "atlas-verify",
       "relationship": "behavioral",
       "required": false,
-      "condition": "When the conversation calls for behavior QA, reusable verification or performance evidence."
+      "condition": "When the conversation calls for behavior QA, UI stress testing, reusable project verification assets or measured performance evidence."
     },
     {
       "id": "writing-for-humans",
@@ -115,8 +121,8 @@
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "949c7d40c8a46b9f325ef63b9531b0264248c2cbb86583a75d5fc30086424979",
+    "SKILL.md": "2d46cfdf677651edc195ff58426682a68b4f88d277a3c4d971938c9df352b0c2",
     "agents/openai.yaml": "a702cacd9b54e4c83fd63333bc69967a5e03a04c2454f717143ab8fd57575081",
-    "references/methods.md": "a0f08ea5a0d35b2538637eefb8cd343d5b0c79a37ba076e478ddf480b4c422d7"
+    "references/methods.md": "33ee9deae5daa034c28dfcab035dd8c6fccd7250cf8c867ef880cbaa52fe6756"
   }
 }
