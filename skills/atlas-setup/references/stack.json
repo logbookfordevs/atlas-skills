@@ -76,7 +76,7 @@
     },
     {
       "name": "Bro",
-      "source": "backnotprop/bro",
+      "source": "https://github.com/backnotprop/bro",
       "skills": [
         "bro",
         "facts",

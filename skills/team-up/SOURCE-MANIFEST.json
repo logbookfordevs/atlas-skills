@@ -36,7 +36,14 @@
       "carriedSha256": "7dc403c401f941e1a4e6b72503862b169931e598d2fbc6cd90ba203803dfc770"
     }
   ],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "clean-room",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "Only when Clean Room is explicitly selected for a decision from a neutral brief and fresh context."
+    }
+  ],
   "sources": [
     {
       "id": "pstack-arena",
@@ -240,8 +247,8 @@
     }
   ],
   "files": {
-    "SKILL.md": "83095c2263f00ffc2209a9850bdf741e818769e91f8865f55e0a24f203ea866d",
-    "agents/openai.yaml": "e947cf31c93940a23d63d0793f9c29e771d2a143145b5f8ff911c17ac657f6b5",
+    "SKILL.md": "2978f282ae148fbdea5047fc13dad32ba659b10706d05251e35326db758d7749",
+    "agents/openai.yaml": "deef56133b14f1b645686acecff23bee04b64457332bdb6f733c4ed53f92d151",
     "references/selection.md": "9b48da7990c5a2bd0e0a3120baf651d26b19263957a6150465b13c2507834b26",
     "references/model-preferences.md": "7dc403c401f941e1a4e6b72503862b169931e598d2fbc6cd90ba203803dfc770",
     "references/arena/arena.md": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
@@ -255,6 +262,7 @@
     "references/principles/principle-prove-it-works/SKILL.md": "66a9ae716dc1e6a8df742d835ed10c8ae3b81946f2bc15e4a9334afcd6269853",
     "licenses/pstack-principle-prove-it-works.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/swarm/swarm.md": "91e8602356fd5c53fb13a83422edb59955e85214fd07be994686ea316540a97c",
-    "licenses/pstack-swarm.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    "licenses/pstack-swarm.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/clean-room.md": "780422cd7e34543d5b1082cbe84116574c9f29b6ac115c056e21a43a2cdb10d4"
   }
 }

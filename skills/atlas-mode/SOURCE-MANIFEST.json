@@ -121,8 +121,8 @@
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "2d46cfdf677651edc195ff58426682a68b4f88d277a3c4d971938c9df352b0c2",
+    "SKILL.md": "4abb1df59cb9f1182247999ecf27e44e8326845b1c9d4a8b6fb300325224906c",
     "agents/openai.yaml": "a702cacd9b54e4c83fd63333bc69967a5e03a04c2454f717143ab8fd57575081",
-    "references/methods.md": "33ee9deae5daa034c28dfcab035dd8c6fccd7250cf8c867ef880cbaa52fe6756"
+    "references/methods.md": "63e30ebd4c1cee69cf9e608f73171ffc596c3774f72b3b6ee9dd2f7dae03e5b8"
   }
 }

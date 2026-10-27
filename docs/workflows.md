@@ -63,7 +63,7 @@ Use Animated-Driven Frontend for synchronized progress, scroll sequences, render
 | You need to understand code or an interface | Atlas Explain: How, Why, Teach or Interface | Request Interface to explain a live page or reconstruct a screenshot; otherwise retain the chooser when the mode is unspecified. |
 | A shared contract could affect other consumers | Atlas Review: Impact | Trace downstream assumptions and preserve evidence for the risks. |
 | A consequential assumption needs challenge | Atlas Review: Adversarial | Independent review supplies evidence for judgment, not automatic authority. |
-| Work benefits from teammates | Team Up: Delegation, Arena or Swarm | Choose the smallest capable team; use Arena for competing candidates and Swarm for structured coverage or races. |
+| Work benefits from teammates | Team Up: Delegation, Arena, Swarm or Clean Room | Choose the smallest capable team; use Arena for competing candidates, Swarm for structured coverage or races, and Clean Room for an explicitly requested neutral-brief decision from fresh context. |
 | A session exposes recurring workflow friction | Atlas Retro: Diagnose | Propose improvements. Enforce requires authorization to implement prevention. |
 | Installed dependencies or stack alignment need inspection | Atlas Setup | Installation and named removals retain their own approvals. Setup stays outside Atlas Mode. |
 | A tracked implementation needs continuation | Tracking Implementation: Resume | Recover the existing record, source, blockers, review selections and evidence. |
@@ -89,3 +89,15 @@ The previous composition, skills/profile and cinematic maps described retired wo
 ## Choose a figure treatment
 
 The optional `atlas-figures` skill presents Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW and Colorfigures. It recommends fits from the subject and intended medium; you select before construction. Ask, for example, “Help me choose a treatment to explain our cache for a blog post.” If you already chose, say “Make this coffee machine in Colorfigures.” Figure methods are bundled; Teardown reuses installed Atlas Craft for its design-domain guidance. See [Creative skills](../creative-skills/README.md) for installation and source credits.
+
+## Get an independent decision
+
+Ask Team Up, “Get a clean-room opinion on whether we should replace this dependency.” Clean Room frames one decision neutrally, sends evidence to a fresh child agent without the current conversation, and returns its verdict unchanged. It differs from Arena’s candidate synthesis and Swarm’s parallel coverage. Team Up supplies model selection and host dispatch; the independently installed `clean-room` skill owns the method.
+
+Clean Room already belongs to the shared stack. Install it separately when needed:
+
+```sh
+npx skills add backnotprop/bro --skill clean-room
+```
+
+Atlas Setup reports the conditional dependency. It is not a copied source composition: Bro’s current repository has no redistribution license covering Clean Room; its MIT notice covers Sharpen only. [Reviewed Clean Room source](https://github.com/backnotprop/bro/blob/3737bf2b3e5ef8f44639ebf6e6bbbf821b3edfb9/skills/clean-room/SKILL.md).

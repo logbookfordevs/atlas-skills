@@ -22,6 +22,19 @@
   ],
   "dependencies": [
     {
+      "id": "clean-room",
+      "source": "https://github.com/backnotprop/bro",
+      "skill": "clean-room",
+      "command": "npx skills add https://github.com/backnotprop/bro --skill clean-room",
+      "consumers": [
+        {
+          "skill": "team-up",
+          "required": true,
+          "condition": "Only when Clean Room is explicitly selected for a decision from a neutral brief and fresh context."
+        }
+      ]
+    },
+    {
       "id": "code-simplification",
       "source": "https://github.com/addyosmani/agent-skills.git",
       "skill": "code-simplification",

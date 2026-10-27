@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add an explicit Clean Room mode to Team Up and Atlas Mode, using Bro’s independent skill for neutral-brief, fresh-context decisions. Declare the conditional dependency while keeping its original instructions in the independently installed skill.
+
 - Adopt the 18 open upstream updates: Jakub’s interface methods at `592aedc` and Pstack’s selected methods at `f51fdeb`. Refresh accessibility, root-cause, idempotency and test-quality guidance; preserve Atlas routing, motion ownership, scoped repairs and host/model selection. Retire the superseded lead-judgment count-cap patch.
 
 - Add the optional, manually invoked Atlas Figures chooser with six treatments, complete supporting assets, original licenses and source receipts. Keep creative packages outside the shared stack.
@@ -10,7 +12,7 @@
 
 - Add a Skills CLI marketplace catalog grouping Atlas workflows, optional creative skills and standalone utilities.
 
-- Add the optional, manually invoked Source Composition utility for applying Atlas’s source-maintenance methodology in other projects.
+- Add the optional, manually invoked Skill Source Composition utility for applying Atlas’s source-maintenance methodology in other projects.
 
 - Refresh optional Colorfigures from April Zhu’s download with full rotation, see-through mechanisms, zoom, mobile controls and new examples.
 

@@ -49,7 +49,7 @@
       "description": "Optional standalone utilities for use beyond Atlas’s core workflows.",
       "strict": false,
       "skills": [
-        "./utility-skills/source-composition"
+        "./utility-skills/skill-source-composition"
       ]
     }
   ]

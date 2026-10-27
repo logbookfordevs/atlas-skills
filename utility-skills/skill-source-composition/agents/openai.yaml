@@ -1,0 +1,6 @@
+interface:
+  display_name: "Skill Source Composition"
+  short_description: "Apply source provenance and reviewed update practices."
+  default_prompt: "Use $skill-source-composition to apply Atlas’s source composition methodology to this project."
+policy:
+  allow_implicit_invocation: false

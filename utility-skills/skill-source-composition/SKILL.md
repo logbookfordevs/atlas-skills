@@ -1,10 +1,10 @@
 ---
-name: source-composition
+name: skill-source-composition
 description: Apply Atlas’s source composition, provenance and reviewed upstream-update methodology to a project.
 disable-model-invocation: true
 ---
 
-# Source Composition
+# Skill Source Composition
 
 Apply this methodology to the requested import, adaptation or composition, whether the sources are skills, code or documentation. Reuse the project's conventions and tooling; introduce only the machinery its maintenance needs justify.
 
