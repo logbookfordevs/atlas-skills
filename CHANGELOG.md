@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.2.0
+
+- Add an interactive Anatomy workflow figure with five selectable stations, stage inputs and outputs, copyable requests, and a review feedback route. Preserve the upstream renderer and MIT license.
+
+- Keep grouped skill navigation available across the website, with a mobile directory toggle. Add a Workflow walkthrough with copyable prompts, expected outputs, optional stack companions and browser/review setup links.
+
+- Adopt the 18 open upstream updates: Jakub’s interface methods at `592aedc` and Pstack’s selected methods at `f51fdeb`. Refresh accessibility, root-cause, idempotency and test-quality guidance; preserve Atlas routing, motion ownership, scoped repairs and host/model selection. Retire the superseded lead-judgment count-cap patch.
+
+- Add the optional, manually invoked Atlas Figures chooser with six treatments, complete supporting assets, original licenses and source receipts. Keep creative packages outside the shared stack.
+
+- Add Jakub Krehel’s Explain Interface to Atlas Explain and an explicitly requested States workbench to Atlas Craft, with pinned support files, source credits and replayable adaptations.
+
+- Add a Skills CLI marketplace catalog grouping Atlas workflows, optional creative skills and standalone utilities.
+
+- Add the optional, manually invoked Skill Source Composition utility for applying Atlas’s source-maintenance methodology in other projects.
+
+- Refresh optional Colorfigures from April Zhu’s download with full rotation, see-through mechanisms, zoom, mobile controls and new examples.
+
+- Add Animation Performance to Atlas Motion and UI Stress to Atlas Verify, preserving their distinct diagnosis and verification scopes.
+- Add a conditional Mobile Web reference to Atlas Craft without adding a mode; correct shared Layout guidance about software-keyboard clearance.
+- Update method discovery, Atlas Mode guidance, source credits and website examples for the new references.
+
 ## 1.1.0
 
 - Add Atlas Implement, Verify, Grill, Wayfinder, Explain, Retro and the manually invoked Atlas Mode entry point.

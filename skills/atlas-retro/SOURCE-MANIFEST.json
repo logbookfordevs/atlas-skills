@@ -55,26 +55,26 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/correct/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "bf482bacc972b3f124a4af8bf9364b4b3e280cb5845e44c326ea4f4565e5c904",
+      "sourceSha256": "e347045d00c967a0b831ef883cc6ac79d21329aa10b5968637df95de7febf0ba",
       "carriedPath": "references/enforce/correct.md",
-      "carriedSha256": "9b626de4e2ba07da48b682b25232775c5ce2ba43c7c12c3d7c6af45790d9586d",
+      "carriedSha256": "ff0f23936170f7956ab45dede649086377f55100dd5ce1adab5dc17b91c8015c",
       "licensePath": "licenses/pstack-correct.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Keep recurring-class evidence, architecture/types/checks-first prevention and real-mistake proof. Activate only for explicit authorized Enforce scope; remove correction-triggered repairs and mandatory AGENTS rule tables. Respect existing validation, exceptions and delivery policy; distinguish local proof from actual CI execution.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "retro-mode-authority"
       ],
       "patch": "sources/patches/pstack-correct.patch",
-      "patchSha256": "48c4362bee0b3857357704f8115fbad6ece4ecb03af614ecbf82857e8c9bff8d"
+      "patchSha256": "9736d7d90230718d171de57ee867934537e499f8eed1a9154b8912783060f6b3"
     }
   ],
   "rulings": [
@@ -95,7 +95,7 @@
     "agents/openai.yaml": "63b0009a7f7e2f835f98ea02e27a00b98bb3be6dfb611f20af978c6218e13abd",
     "references/diagnose/retro.md": "6ec54ebc782792a09ad0a638baa0cfe7ed6aedcbdfc83a4a75686b19b6060136",
     "licenses/matt-retro.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-    "references/enforce/correct.md": "9b626de4e2ba07da48b682b25232775c5ce2ba43c7c12c3d7c6af45790d9586d",
+    "references/enforce/correct.md": "ff0f23936170f7956ab45dede649086377f55100dd5ce1adab5dc17b91c8015c",
     "licenses/pstack-correct.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }

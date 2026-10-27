@@ -16,5 +16,13 @@
     "width": 1730,
     "height": 909,
     "alt": "Atlas — Reusable skills for coding agents. Warm paper, walnut typography, and an ocean route line. Logbook for Devs."
+  },
+  "workflow": {
+    "title": "Workflow",
+    "description": "Follow a complete Atlas example from an idea to implementation, QA and human review, then adapt it with independent skills from the shared stack."
+  },
+  "tools": {
+    "title": "Recommended tools",
+    "description": "Leonardo’s companion tools for Atlas: browser access, Plannotator, Yggtree, T3 Code, AFK and a shareable AGENTS.md example."
   }
 }

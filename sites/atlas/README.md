@@ -1,6 +1,6 @@
 # Atlas website
 
-The Guided Reading website for Logbook Atlas: an overview, references for every active Atlas package, and a guide to the shared stack.
+The Guided Reading website for Logbook Atlas: an overview, references for every active Atlas package, an example workflow, and a guide to the shared stack. The grouped skill directory stays available on every page; on mobile it opens from Browse skills.
 
 ## Edit and build
 
@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-The application uses React, TypeScript, Vite, and React Router. Edit skill summaries in `content.json`, the canonical stack in `../../stacks/atlas.json`, and the visual system in `src/styles/site.css`. Pages live in `src/pages/`; the persistent shell and internal navigation live in `src/components/`.
+The application uses React, TypeScript, Vite, and React Router. Edit skill summaries in `content.json`, the canonical stack in `../../stacks/atlas.json`, and the visual system in `src/styles/site.css`. Optional creative compositions set `optional: true` in `content.json`; their reference pages remain visible while the stack excludes them. Their source links use `creative-skills/`. The `/workflow/` walkthrough lives in `src/pages/Workflow.tsx`. Pages live in `src/pages/`; the persistent shell and internal navigation live in `src/components/`.
 
 Each method in `content.json` has a `title`, `description` and `example`. Reference pages show the example beside the method it demonstrates. Write natural requests that distinguish the outcome and preserve its scope, rather than repeating invocation syntax in every example. Keep invocation instructions outside the example requests. The page establishes which skill is selected and explains any required mode choice, as Atlas Explain does. A skill with one workflow gets one complete example; workflow steps are not presented as separate invocation modes. Named submethods, such as Interface Changes and Interface Audit or Run's Feature and QA-list choices, have separate examples. The complete skill remains the authority for behavior and limits.
 

@@ -3,7 +3,8 @@
 A Claude skill. Describe an everyday object in one line and Claude draws it hand-inked and isometric, as one
 self-contained HTML file with buttons that actually work: real 3D bodies shaded in flat light, mid and dark bands,
 a heavy ink silhouette with finer inner lines, a flat blue cast shadow, a hand-drawn wobble, warm paper and
-body-colour swatches. Ask how something works and it labels the parts, lighting each one up as it works.
+body-colour swatches. Drag to turn it all the way round, switch on See-through to watch the real mechanism work
+inside, with labels that light up on each part as it works, and zoom in. It works on a phone too.
 
 Live examples: https://april-zhu.com/colorfigures-demo · Skill page: https://april-zhu.com/colorfigures
 
@@ -29,9 +30,9 @@ Claude saves an `.html` file. Open it in your browser and press things.
 ## What's inside
 
 - `SKILL.md` — the instructions Claude follows
-- `assets/core.js` — the engine: projection, 3D shapes and shading, ink, labels, the page with its buttons and controls
-- `assets/examples/` — complete figures to learn from (vending machine, washing machine)
-- `scripts/build.py` — makes one self-contained file: `python3 scripts/build.py figure.html OUT.html`
+- `assets/core.js` — the engine: free 3D camera, shapes and shading, ink, see-through and labels, game keypad, the page with its buttons and controls
+- `assets/examples/` — complete figures to learn from (toaster, desk lamp, claw machine)
+- `scripts/build.py` — makes one self-contained file with zoom and the phone layout: `python3 scripts/build.py figure.html OUT.html`
 
 Plain text only. Nothing runs on install; figures run in the browser like any web page, with no outside requests.
 

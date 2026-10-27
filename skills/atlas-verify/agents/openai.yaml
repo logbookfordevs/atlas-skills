@@ -1,6 +1,6 @@
 interface:
   display_name: "Atlas Verify"
-  short_description: "Run requested verification with reports, maintain verifiers or assess performance."
+  short_description: "Verify behavior, stress-test UI data, maintain verifiers or assess measurements."
   default_prompt: "Use $atlas-verify for the requested verification outcome."
 policy:
   allow_implicit_invocation: true

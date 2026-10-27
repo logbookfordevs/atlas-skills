@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 799e521..c8af362 100644
+index 5e9ab11..442aa79 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,11 +5,14 @@ description: Reviews and fixes keyboard and focus behavior, ARIA, accessible nam
@@ -17,6 +17,15 @@ index 799e521..c8af362 100644
 +Contrast measurement and color fixes belong to [Color](../color/index.md). Text sizing, iOS input zoom and language metadata belong to [Type](../type/index.md). Spacing between targets and spatial RTL belong to [Layout](../layout/index.md). Label, error and alt-text wording belong to [Copy](../copy/index.md). Animation recipes, hover styling and scroll containment belong to [UI Polish](../ui/index.md).
  
  ## Criteria, not conventions
+ 
+@@ -29,7 +32,7 @@ Style `:focus-visible`, not bare `:focus`. Keyboard users get a ring and mouse u
+ 
+ A custom ring needs a project focus token or another explicit color. It must reach 3:1 against every adjacent color it crosses, `currentColor` included, under 1.4.11. A `2px` solid perimeter with a 3:1 change of contrast is the 2.4.13 AAA target. Never use `outline: none` without a verified replacement, and preserve system colors in forced-colors mode.
+ 
+-A focused element must never sit fully hidden behind a sticky header, footer or banner (2.4.11). Pad the scroller by the sticky chrome's height, a fix `better-layout` owns. Recipes are in [focus-and-keyboard.md](focus-and-keyboard.md).
++A focused element must never sit fully hidden behind a sticky header, footer or banner (2.4.11). Pad the scroller by the sticky chrome's height, a fix [Layout](../layout/index.md) owns. Recipes are in [focus-and-keyboard.md](focus-and-keyboard.md).
+ 
+ ## Full keyboard support
  
 @@ -77,7 +80,7 @@ This skill decides which contrast requirement applies:
  | 1.4.3 AA | Large text, at least `24px` or `18.67px` bold | 3:1 |
@@ -36,7 +45,7 @@ index 799e521..c8af362 100644
  
  ## Before you finish
  
-@@ -126,7 +129,7 @@ Text must survive 200% resize (1.4.4), and the page must reflow at 320px width w
+@@ -125,7 +128,7 @@ Text must survive 200% resize (1.4.4), and the page must reflow at 320px width w
  
  ## Reporting
  

@@ -1,6 +1,6 @@
 # Checkpoint review selection
 
-Use Code as the baseline for every checkpoint. Select additional Atlas Review methods when the actual change raises a question they address; honor an explicit user-selected review scope. Before dispatch, record each selected method, its review question and the affected scope in Complete Review Record. Read Atlas Review's entry and selected method instructions for execution.
+Use Code as the baseline for every checkpoint. Select additional Atlas Review methods when the actual change raises a question they address. Before dispatch, record each selected method, its review question and the affected scope in Complete Review Record. Read Atlas Review's entry and selected method instructions for execution.
 
 | Change or uncertainty | Additional method | Question to make concrete for this checkpoint |
 | --- | --- | --- |

@@ -1,6 +1,6 @@
 ---
 name: better-layout
-description: Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored.
+description: Sets grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored.
 ---
 
 # Layout
@@ -74,7 +74,7 @@ Never park a critical action where resizing, zoom or scrolling clips it. Keep it
 | --- | --- |
 | `grid-template-columns: … 1fr` or a flex child holding long text or a wide table, overflowing its track | `minmax(0, 1fr)` on the track, `min-width: 0` on the flex child |
 | `width: 100vw` | `width: 100%`; `100vw` includes the scrollbar and scrolls horizontally on desktop |
-| `height: 100vh` on a full-height mobile pane | `100dvh`, so the browser toolbar and keyboard never cover the bottom |
+| `height: 100vh` on a full-height mobile pane | `100dvh` for browser-toolbar changes; verify software-keyboard clearance separately |
 | `height:` with a fixed length on a box holding text | `min-height`, or `max-height` with `overflow-y: auto` |
 | `@media (max-width: …)` inside a reusable component | `@container` on the component's parent |
 | `container-type: inline-size` on a flex item, inline-block or absolute element with no width | Give it a definite width; size containment collapses a shrink-to-fit box to zero |

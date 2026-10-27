@@ -1,6 +1,6 @@
 ---
 name: team-up
-description: "Choose subagent roles, models and reasoning effort for delegation; use Arena to compare and synthesize competing candidates, or Swarm for parallel coverage and races with consolidated evidence."
+description: "Choose subagent roles, models and effort for delegation; compare candidates with Arena, coordinate parallel coverage or races with Swarm."
 ---
 
 # Team Up
@@ -13,4 +13,4 @@ Default to Delegation for ordinary assignments and role/model selection. Select 
 | Arena | Compare complete candidates against a rubric, select a base, graft useful strengths and verify the synthesized artifact. | [Arena](references/arena/arena.md) |
 | Swarm | Partition coverage, race the same brief or mix both, then return one evidenced report with gaps and a declared race rule. | [Swarm](references/swarm/swarm.md) |
 
-Requests for `arena` or `swarm` select that bundled method. A caller requesting only role/model selection uses the selection policy and returns to its existing workflow; policy use does not launch Arena or Swarm. The selected task determines permitted writes, evidence and delivery scope.
+Requests for `arena` or `swarm` select that bundled method. A caller requesting only role/model selection uses the selection policy and returns to its existing workflow; policy use does not launch another mode. The selected task determines permitted writes, evidence and delivery scope.

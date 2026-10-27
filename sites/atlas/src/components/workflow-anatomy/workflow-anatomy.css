@@ -1,0 +1,32 @@
+.workflow-press { margin: 26px 0 22px; }
+.workflow-machine-frame { padding: 16px 18px; border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
+.workflow-machine-labels { display: flex; justify-content: space-between; gap: 16px; color: var(--muted); font: 400 11px/1.6 var(--mono); }
+.workflow-press.iso { --anatomy-paper: var(--surface); --anatomy-top: #f6ecdd; --anatomy-face: #e9ddcb; --anatomy-shade-0: #baaa96; --anatomy-shade-1: #c9bba7; --anatomy-shade-2: #d8cbb8; --anatomy-shade-3: #e3d7c5; --anatomy-lit-top: #e9ddcb; --anatomy-lit-shade: #b8a58b; --anatomy-hi: #574335; --anatomy-mid: #88715e; --anatomy-lo: #aa927d; --anatomy-faint: #c7b6a0; --anatomy-lit: var(--ink); --anatomy-dot: var(--ink); --anatomy-weight: .65px; }
+:root[data-theme='dark'] .workflow-press.iso { --anatomy-top: #4b4036; --anatomy-face: #473c32; --anatomy-shade-0: #171410; --anatomy-shade-1: #231e19; --anatomy-shade-2: #302820; --anatomy-shade-3: #3a3027; --anatomy-lit-top: #685641; --anatomy-lit-shade: #45372b; --anatomy-hi: #dac7ad; --anatomy-mid: #a58d72; --anatomy-lo: #75614e; --anatomy-faint: #504335; }
+.workflow-carriage { transition: transform 850ms cubic-bezier(.16, 1, .3, 1); pointer-events: none; }
+.workflow-station { cursor: pointer; }
+.workflow-station:hover .iso-edge, .workflow-station[data-selected='true'] .iso-edge { stroke: var(--anatomy-hi); }
+.workflow-station-controls { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border: 1px solid var(--border); border-top: 0; }
+.workflow-station-controls button { display: grid; gap: 5px; align-content: center; min-height: 70px; padding: 9px 4px; background: transparent; color: var(--muted); border: 0; font: 400 12px/1.5 var(--sans); }
+.workflow-station-controls button + button { border-inline-start: 1px solid var(--border); }
+.workflow-station-controls button span { font: 400 10px/1.6 var(--mono); }
+.workflow-station-controls button[aria-pressed='true'] { background: var(--action-bg); color: var(--action-fg); }
+.workflow-station-controls button:hover { text-decoration: underline; text-underline-offset: 3px; }
+.workflow-press figcaption { margin-top: 14px; font-size: 14px; color: var(--muted); text-wrap: pretty; }
+.workflow-machine-detail { padding: 24px 0; border-block: 1px solid var(--border); }
+.workflow-machine-detail h3 { font-size: 19px; margin-bottom: 7px; }
+.workflow-machine-method { font: 400 12px/1.7 var(--sans); color: var(--muted); }
+.workflow-machine-detail dl { margin: 20px 0; }
+.workflow-machine-detail dl > div { display: grid; grid-template-columns: 95px 1fr; gap: 16px; margin-top: 10px; }
+.workflow-machine-detail dt { font: 600 12px/1.8 var(--sans); }
+.workflow-machine-detail dd { margin: 0; }
+.workflow-machine-actions { display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; font: 400 12px/1.6 var(--sans); }
+.workflow-machine-actions a, .workflow-machine-actions button { min-height: 44px; display: inline-flex; align-items: center; }
+.workflow-machine-actions button { border: 0; padding: 0; background: transparent; color: var(--link); font: inherit; text-decoration: underline; text-underline-offset: .2em; }
+@media (max-width: 640px) {
+  .workflow-machine-frame { padding: 14px 10px; }
+  .workflow-machine-labels { font-size: 9px; gap: 8px; }
+  .workflow-station-controls button { font-size: 11px; }
+  .workflow-machine-detail dl > div { grid-template-columns: 1fr; gap: 2px; }
+}
+@media (prefers-reduced-motion: reduce) { .workflow-carriage { transition: none; } }

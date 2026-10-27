@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas Figures"
+  short_description: "Explore six visual treatments and choose one for your figure."
+  default_prompt: "Use $atlas-figures to show all available treatments, recommend suitable options for my subject, and let me choose before building."
+policy:
+  allow_implicit_invocation: false

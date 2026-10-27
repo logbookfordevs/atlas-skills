@@ -3,7 +3,7 @@ import { defineConfig } from "eslint/config";
 import globals from "globals";
 
 export default defineConfig({
-  ignores: ["**/node_modules/**", "**/dist/**", "**/.sites-runtime/**", "**/.impeccable/**", "creative-skills/**"],
+  ignores: ["**/node_modules/**", "**/dist/**", "**/.sites-runtime/**", "**/.impeccable/**", "creative-skills/**", "sources/upstream/**"],
 }, {
   files: ["**/*.{js,mjs}"],
   extends: [js.configs.recommended],

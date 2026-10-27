@@ -4,6 +4,7 @@
     "animated-driven-frontend",
     "atlas-craft",
     "atlas-explain",
+    "atlas-figures",
     "atlas-grill",
     "atlas-implement",
     "atlas-mode",
@@ -22,9 +23,9 @@
   "dependencies": [
     {
       "id": "code-simplification",
-      "source": "https://github.com/addyosmani/agent-skills.git",
+      "source": "https://github.com/addyosmani/agent-skills",
       "skill": "code-simplification",
-      "command": "npx skills add https://github.com/addyosmani/agent-skills.git --skill code-simplification",
+      "command": "npx skills add https://github.com/addyosmani/agent-skills --skill code-simplification",
       "consumers": [
         {
           "skill": "tracking-implementation",

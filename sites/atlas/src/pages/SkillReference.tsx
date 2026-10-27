@@ -11,6 +11,7 @@ export function SkillReference() {
   const isTransitioning = useViewTransitionState(skillPath(id));
   const skill = skills.find((entry) => entry.id === id);
   if (!skill) return <NotFound />;
+  const sourceDirectory = skill.optional ? 'creative-skills' : 'skills';
 
   return <article className="article" key={skill.id}>
     <header className="article-header">
@@ -36,8 +37,8 @@ export function SkillReference() {
     <SkillOrigins skill={skill} />
     <section className="reference-sources">
       <h2>Go to the source</h2>
-      <a href={`${repository}/blob/main/skills/${skill.id}/SKILL.md`}>Read the complete skill <Arrow /></a>
-      <a href={`${repository}/blob/main/skills/${skill.id}/SOURCE-MANIFEST.json`}>Source receipt <Arrow /></a>
+      <a href={`${repository}/blob/main/${sourceDirectory}/${skill.id}/SKILL.md`}>Read the complete skill <Arrow /></a>
+      <a href={`${repository}/blob/main/${sourceDirectory}/${skill.id}/SOURCE-MANIFEST.json`}>Source receipt <Arrow /></a>
     </section>
     <AtlasLink className="back-link" to="/#skills">Back to all skills</AtlasLink>
   </article>;

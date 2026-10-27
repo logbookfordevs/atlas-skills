@@ -9,6 +9,12 @@ import { setupDependencies } from './setup-dependencies.mjs';
 
 export const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
+export const packageDirectory = workflow => {
+  const directory = workflow.directory ?? `skills/${workflow.id}`;
+  if (!['skills', 'creative-skills'].some(base => directory === `${base}/${workflow.id}`)) throw new Error(`Invalid package directory: ${directory}`);
+  return directory;
+};
+
 const json = value => `${JSON.stringify(value, null, 2)}\n`;
 
 function filesIn(directory, prefix = '') {
@@ -31,7 +37,10 @@ export function composeSkills(root = repositoryRoot) {
   const sources = new Map();
   for (const source of composition.sources) {
     if (sources.has(source.id)) throw new Error(`Duplicate source: ${source.id}`);
-    if (!/^[a-z0-9-]+$/.test(source.id) || !/^[a-f0-9]{40}$/.test(source.upstream.commit)) throw new Error(`Invalid source identity: ${source.id}`);
+    const validOrigin = source.upstream.type === 'download'
+      ? /^https:\/\//.test(source.upstream.page ?? '') && /^[a-f0-9]{64}$/.test(source.upstream.archiveSha256 ?? '')
+      : /^[a-f0-9]{40}$/.test(source.upstream.commit ?? '');
+    if (!/^[a-z0-9-]+$/.test(source.id) || !validOrigin) throw new Error(`Invalid source identity: ${source.id}`);
     if (sha256(read(source.snapshot)) !== source.sourceSha256) throw new Error(`Snapshot integrity failure: ${source.id}`);
     if (sha256(read(source.license)) !== source.licenseSha256) throw new Error(`License integrity failure: ${source.id}`);
     if (!['verbatim', 'patched', 'derived'].includes(source.classification)) throw new Error(`Invalid classification: ${source.id}`);
@@ -132,7 +141,7 @@ export function composeSkills(root = repositoryRoot) {
       ...receipts.flatMap(source => [source.carriedPath, source.licensePath, ...source.supportingFiles.map(file => file.carriedPath), ...source.notices.map(file => file.carriedPath)]),
       ...generatedReferences.map(reference => reference.target),
     ])];
-    const directory = join(root, 'skills', workflow.id);
+    const directory = join(root, packageDirectory(workflow));
     const receiptPath = join(directory, 'SOURCE-MANIFEST.json');
     const previous = existsSync(receiptPath) ? JSON.parse(readFileSync(receiptPath)) : {};
     const previousManaged = new Set(previous.managedFiles ?? [
@@ -163,8 +172,9 @@ export function composeSkills(root = repositoryRoot) {
 
 export function buildSkills(root = repositoryRoot, { check = false } = {}) {
   const mismatches = [];
+  const workflows = JSON.parse(readFileSync(join(root, 'sources/composition.json'))).workflows;
   for (const [id, output] of composeSkills(root)) {
-    const directory = join(root, 'skills', id);
+    const directory = join(root, packageDirectory(workflows.find(workflow => workflow.id === id)));
     for (const [path, bytes] of output) {
       const target = join(directory, path);
       if (check) {

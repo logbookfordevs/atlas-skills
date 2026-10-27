@@ -1,6 +1,6 @@
 ---
 name: atlas-implement
-description: "Use for test-first feature or bug work, architectural decisions about types and module boundaries, or implementation grounded in official framework and API documentation. Select TDD, Architect or Source-Driven as applicable."
+description: "Test-driven and source-driven implementation. Use when building features or fixing bugs test-first, using red-green-refactor, or writing integration tests; checking an approach against official framework or library documentation before implementing; or designing interfaces, ownership and module boundaries."
 disable-model-invocation: false
 metadata:
   short-description: Design first, test first or implement from official documentation.

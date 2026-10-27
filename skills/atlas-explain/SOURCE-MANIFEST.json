@@ -24,7 +24,13 @@
     "references/teach/teach.md",
     "licenses/pstack-teach.txt",
     "references/unslop/unslop.md",
-    "licenses/pstack-unslop.txt"
+    "licenses/pstack-unslop.txt",
+    "references/interface/explain-interface.md",
+    "licenses/explain-interface.txt",
+    "references/interface/from-an-image.md",
+    "references/interface/read-the-system.md",
+    "references/interface/no-browser.md",
+    "references/interface/find-the-effect.md"
   ],
   "authoredInputs": [
     "skills/atlas-explain/SKILL.md",
@@ -39,7 +45,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/how/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -61,21 +67,21 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "c80558c167c5feb69b68ab87006231509649a5ac8ed7fd499f282330418dfa83",
+      "sourceSha256": "a63ac90597960cfdc4d51ec88960b3bf0a05d44a7dff1d5a2b8639981c25ca54",
       "carriedPath": "references/how/how.md",
       "carriedSha256": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
       "licensePath": "licenses/pstack-how.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Replace fixed Cursor/provider dispatch with available host roles and models, bounded concurrency and sequential fallback. Preserve the exploration/explanation split and complete templates; link the companion Why method locally.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "explain-mode-choice",
         "explain-host-capabilities",
         "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-how.patch",
-      "patchSha256": "0fc232f01f85440a41ebba75e3c278cddf0df9fbe7c291b10e46d9b44388bb35"
+      "patchSha256": "0456950bd44ed3cd470e4dd7f385751a8ab45fc00acc6606ac7762ac2927f24c"
     },
     {
       "id": "pstack-why",
@@ -83,7 +89,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
         "path": "skills/why/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -177,14 +183,14 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "9145d2f5c26931930f68485a265eb89b2ecfe95d852f1c86ced3faa21da6da44",
+      "sourceSha256": "b12ea2757ff1d1d111c7b4e74e3e764d337c6a08458b8d6240d3f01c4be490ec",
       "carriedPath": "references/why/why.md",
       "carriedSha256": "2fe47d81670fcf84122ddee3358ee08cc50a2126b30fdd6f5586ffaa36310837",
       "licensePath": "licenses/pstack-why.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Adapt host dispatch and history/tool availability without inventing access; keep investigation read-only. Standalone Why retains full evidence-category coverage, while explicit caller scope permits bounded Teach investigations with documented exclusions. Preserve epistemics and all source playbooks.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-10-26",
       "rulings": [
         "explain-mode-choice",
         "explain-why-scope",
@@ -193,7 +199,7 @@
         "implement-candidate-ownership"
       ],
       "patch": "sources/patches/pstack-why.patch",
-      "patchSha256": "98b991df7f6eb1472bf995333aea759357135f99f81e6e356c6dc569b3336835"
+      "patchSha256": "a3ee8a2f7dda19425eacbc4e1a6b39a7993cbe5d16b16df8064d85e78223c772"
     },
     {
       "id": "pstack-teach",
@@ -251,6 +257,68 @@
       ],
       "patch": "sources/patches/pstack-unslop.patch",
       "patchSha256": "d2655d54a3c5a1d1910308d94808f97a2d2e3438c32c31ae2b3cc3b152f3ed71"
+    },
+    {
+      "id": "explain-interface",
+      "owner": "Atlas Explain",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/jakubkrehel/skills",
+        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "path": "skills/explain-interface/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/explain-interface/from-an-image.md",
+          "classification": "patched",
+          "sourceSha256": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
+          "carriedPath": "references/interface/from-an-image.md",
+          "carriedSha256": "c918493497596830c13dbd752781ddd1268090b244e5ded028d3569480a25fde",
+          "patch": "sources/patches/explain-interface-from-an-image.patch",
+          "patchSha256": "f1ed856f2c48fa379b63f999a7e4e92bfffef5cdad4a0eee00cd6d69e26e7e4e"
+        },
+        {
+          "upstreamPath": "skills/explain-interface/read-the-system.md",
+          "classification": "patched",
+          "sourceSha256": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
+          "carriedPath": "references/interface/read-the-system.md",
+          "carriedSha256": "ff6d988ea7e5c45a15c5efe0f94e13e3df3e95f03e8fd163a119266844f29a67",
+          "patch": "sources/patches/explain-interface-read-the-system.patch",
+          "patchSha256": "8da9c5b5643fbe552440c7657dcf0cbbfd1f11905fbcfe332ddb22041e12c9f5"
+        },
+        {
+          "upstreamPath": "skills/explain-interface/no-browser.md",
+          "classification": "verbatim",
+          "sourceSha256": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+          "carriedPath": "references/interface/no-browser.md",
+          "carriedSha256": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f"
+        },
+        {
+          "upstreamPath": "skills/explain-interface/find-the-effect.md",
+          "classification": "patched",
+          "sourceSha256": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+          "carriedPath": "references/interface/find-the-effect.md",
+          "carriedSha256": "06786fd18303b1b931ef16ede258d01a78210ef1f5759e143dbcb188610a9627",
+          "patch": "sources/patches/explain-interface-find-the-effect.patch",
+          "patchSha256": "964f058b1f3a4df403855669b452a5df0bb99611f85858899ed77ce973123b63"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "6795aff9a133b94c6398a95b5c8958a2eaccade5db18f58e752bc02460a356e0",
+      "carriedPath": "references/interface/explain-interface.md",
+      "carriedSha256": "be349f85e8bcf80960910f1ac642487ea77127b71ea8e00113becdcace20ca1d",
+      "licensePath": "licenses/explain-interface.txt",
+      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "adaptation": "Replace standalone invocation and sibling skill calls with Atlas handoffs. Use available host browser capabilities, preserve measured/derived/inferred evidence and screenshot uncertainty, keep supporting inspection read-only, and make domain observations explanatory rather than normative audits. Preserve all source files and original metadata.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-26",
+      "rulings": [
+        "explain-interface-evidence"
+      ],
+      "patch": "sources/patches/explain-interface.patch",
+      "patchSha256": "7bdd4b94b1665e17708b107707be7a65f0ebedfbf3294e53804ec3e84b90202b"
     }
   ],
   "rulings": [
@@ -299,11 +367,21 @@
         "pstack-why"
       ],
       "decision": "Use host-available read capabilities, roles, models and bounded delegation rather than fixed Cursor/provider defaults. Missing history, connectors or delegation are disclosed gaps; investigation remains read-only and never invents availability."
+    },
+    {
+      "id": "explain-interface-evidence",
+      "owner": "atlas-explain",
+      "document": "skills/atlas-explain/references/interface/explain-interface.md",
+      "section": "Measured, derived, inferred",
+      "sources": [
+        "explain-interface"
+      ],
+      "decision": "Interface explains observed mechanisms without a craft or accessibility verdict. Browser inspection stays read-only; a screenshot supports a qualified reconstruction, not proof of authored CSS, framework identity or accessibility conformance."
     }
   ],
   "files": {
-    "SKILL.md": "4c7cfad427916ac8c1d3816ea382f36b79754388df1805f9d2d4612ac9659957",
-    "agents/openai.yaml": "c39233d4b8a8aa277b0c39d1cf221eec8ffb6a78caa5c845524a8825e0c12503",
+    "SKILL.md": "a2a8213b48915b4be29f990805d3f990389d5f9721e15104173780d2e6e3517e",
+    "agents/openai.yaml": "d00f6654cec3faa2dc505aa73854e4b8c48a1cf2abc79848601f2077e5313f39",
     "references/how/how.md": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
     "licenses/pstack-how.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/how/references/explainer-prompt.md": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
@@ -325,6 +403,12 @@
     "references/teach/teach.md": "045227ddee108efd6cb385df9ee4de786a827c2f55bb7a97c86e011c224b7220",
     "licenses/pstack-teach.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/unslop/unslop.md": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
-    "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/interface/explain-interface.md": "be349f85e8bcf80960910f1ac642487ea77127b71ea8e00113becdcace20ca1d",
+    "licenses/explain-interface.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+    "references/interface/from-an-image.md": "c918493497596830c13dbd752781ddd1268090b244e5ded028d3569480a25fde",
+    "references/interface/read-the-system.md": "ff6d988ea7e5c45a15c5efe0f94e13e3df3e95f03e8fd163a119266844f29a67",
+    "references/interface/no-browser.md": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+    "references/interface/find-the-effect.md": "06786fd18303b1b931ef16ede258d01a78210ef1f5759e143dbcb188610a9627"
   }
 }

@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index a5a9832..0097612 100644
+index 3b14135..e358077 100644
 --- a/source.md
 +++ b/source.md
 @@ -1,14 +1,16 @@
@@ -21,16 +21,16 @@ index a5a9832..0097612 100644
  
  Correctness, tests, security and performance belong to the project's general code review. Name such a concern once, point at that review and drop it.
  
-@@ -22,7 +24,7 @@ Read the whole diff before forming an opinion of it. A skimmed diff produces fin
+@@ -20,7 +22,7 @@ Read the whole diff before forming an opinion of it. A skimmed diff produces fin
  
- ### 1. Resolve the change scope first
+ ## 1. Resolve the change scope first
  
 -The whole invocation is the target, so `/interface-review pr 482` reviews pull request 482. [Scope resolution](scope-resolution.md) holds the accepted targets and how each resolves.
 +The target supplied to Atlas Review is the scope, so `atlas-review interface pr 482` reviews pull request 482. [Scope resolution](scope-resolution.md) holds the accepted targets and how each resolves.
  
  With no target supplied, resolve in this order and stop at the first match:
  
-@@ -43,7 +45,7 @@ Gather the facts in [Nothing to review](scope-resolution.md#nothing-to-review),
+@@ -41,7 +43,7 @@ Gather the facts in [Nothing to review](scope-resolution.md#nothing-to-review),
  - **The open pull request** on the current branch, first when there is one. A branch whose commits already landed resolves to no change, while its pull request is still exactly what the user meant.
  - **The last commit**, `HEAD~1..HEAD`, named by short SHA and subject so the user sees what they would get.
  - **A target they name**, such as `pr <n>`, a branch, a ref or a range.
@@ -39,12 +39,12 @@ index a5a9832..0097612 100644
  
  Where exclusions emptied the scope, name the excluded files in the offer. Never report a review of nothing as `Approve`.
  
-@@ -92,17 +94,17 @@ This is how you find the **incomplete** change, which a surface review misses be
+@@ -90,17 +92,17 @@ This is how you find the **incomplete** change, which a surface review misses be
  
  Do not report scope creep. Whether a change does too much is a process question, not an interface one.
  
--### 7. Hand the review to `better-interface`
-+### 7. Hand the review to [Interface Audit](../audit/index.md)
+-## 7. Hand the review to `better-interface`
++## 7. Hand the review to [Interface Audit](../audit/index.md)
  
 -Hand `better-interface` the scope block, the affected surfaces and a status on every finding, and report in the format below.
 +Hand [Interface Audit](../audit/index.md) the scope block, the affected surfaces and a status on every finding, and report in the format below.
@@ -52,7 +52,7 @@ index a5a9832..0097612 100644
 -If `better-interface` is unavailable, report the resolved scope and the file inventory, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
 +If [Interface Audit](../audit/index.md) is unavailable, report the resolved scope and the file inventory, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
  
- ### 8. Never mutate the working tree
+ ## Never mutate the working tree
  
  A change review is read-only, including the checkout. `git fetch` writes only to `.git` and is permitted. `gh pr checkout`, `git checkout`, `git switch` and `git stash` rewrite the files the author has open, so they are never permitted. Fetch pull request refs and read them in place.
  
@@ -61,7 +61,7 @@ index a5a9832..0097612 100644
  
  ## Before you finish
  
-@@ -132,7 +134,7 @@ Open with the scope block:
+@@ -130,7 +132,7 @@ Open with the scope block:
  | Excluded | `pnpm-lock.yaml`, `src/__snapshots__/`, lockfile and snapshots |
  | Surfaces expanded | `CheckoutPage`, `SettingsPanel`; 3 further `Button` consumers not expanded |
  
@@ -70,7 +70,7 @@ index a5a9832..0097612 100644
  
  Then the findings, with a `Status` column per **Classify every finding**:
  
-@@ -148,4 +150,4 @@ Then `Pre-existing` findings, at most three, highest severity first, stated plai
+@@ -146,4 +148,4 @@ Then `Pre-existing` findings, at most three, highest severity first, stated plai
  | --- | --- | --- | --- |
  | MEDIUM | Typography | `src/Toolbar.tsx:7` | Numeric badges use proportional figures; predates this change |
  

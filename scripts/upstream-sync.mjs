@@ -1,10 +1,10 @@
 import { execFileSync } from 'node:child_process';
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, posix, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { replayPatch } from './source-patches.mjs';
-import { buildSkills, repositoryRoot, sha256 } from './build-skills.mjs';
+import { buildSkills, packageDirectory, repositoryRoot, sha256 } from './build-skills.mjs';
 
 const json = value => `${JSON.stringify(value, null, 2)}\n`;
 const portable = value => {
@@ -115,7 +115,9 @@ export function prepareUpdate(root, source, candidate, manifest) {
   buildSkills(root, { check: true });
   const stage = mkdtempSync(join(tmpdir(), 'atlas-candidate-'));
   try {
-    for (const directory of ['sources', 'skills', 'stacks']) cpSync(join(root, directory), join(stage, directory), { recursive: true });
+    for (const directory of ['sources', 'skills', 'creative-skills', 'stacks']) {
+      if (existsSync(join(root, directory))) cpSync(join(root, directory), join(stage, directory), { recursive: true });
+    }
     const next = structuredClone(manifest);
     const record = next.sources.find(record => record.id === source.id);
     const writes = new Map();
@@ -149,12 +151,13 @@ export function prepareUpdate(root, source, candidate, manifest) {
     }
     // Remove only resources retired by the validated candidate.
     for (const consumer of source.consumers) {
-      const previous = JSON.parse(readFileSync(join(root, 'skills', consumer, 'SOURCE-MANIFEST.json')));
-      const prepared = JSON.parse(readFileSync(join(stage, 'skills', consumer, 'SOURCE-MANIFEST.json')));
+      const directory = packageDirectory(next.workflows.find(workflow => workflow.id === consumer));
+      const previous = JSON.parse(readFileSync(join(root, directory, 'SOURCE-MANIFEST.json')));
+      const prepared = JSON.parse(readFileSync(join(stage, directory, 'SOURCE-MANIFEST.json')));
       for (const path of Object.keys(previous.files)) {
-        if (!(path in prepared.files)) rmSync(join(root, 'skills', consumer, path), { force: true });
+        if (!(path in prepared.files)) rmSync(join(root, directory, path), { force: true });
       }
-      cpSync(join(stage, 'skills', consumer), join(root, 'skills', consumer), { recursive: true });
+      cpSync(join(stage, directory), join(root, directory), { recursive: true });
     }
   } finally { rmSync(stage, { recursive: true, force: true }); }
 }
@@ -173,6 +176,11 @@ export async function run(args = process.argv.slice(2)) {
   const cache = new Map(), reports = [];
   try {
     for (const source of sources) {
+      if (source.upstream.type === 'download') {
+        if (prepare) throw new Error('Download sources require manual adoption from the author distribution');
+        reports.push({ id: source.id, status: 'manual-download', page: source.upstream.page });
+        continue;
+      }
       const ref = revision ?? source.upstream.trackingRef ?? 'HEAD';
       const key = `${source.upstream.repository}#${ref}`;
       try {

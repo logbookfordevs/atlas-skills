@@ -5,6 +5,9 @@ const atlasRoot = process.argv[2];
 if (!atlasRoot) throw new Error('Pass the Atlas repository root: node scripts/sync-upstream.mjs ../..');
 
 const authors = {
+  'https://github.com/lucasmarkes/hairline': 'Lucas Marques',
+  'https://github.com/wheresryan22/anatomy': 'Ryan',
+  'https://github.com/OutThisLife/brooklyn-skills': 'Brooklyn Nicholson',
   'https://github.com/plannotator/effective-html': 'Plannotator',
   'https://github.com/jakubkrehel/skills': 'Jakub Krehel',
   'https://github.com/emilkowalski/skills': 'Emil Kowalski',
@@ -15,6 +18,14 @@ const authors = {
   'https://github.com/backnotprop/pstack': 'Lauren Tan / Pstack mirror',
 };
 const titles = {
+  'hairline-create': 'Hairline Create', 'hairline-adopt': 'Hairline Adopt',
+  anatomy: 'Anatomy', 'engraved-figures': 'Engraved Figures', teardown: 'Teardown',
+  'iso-glow': 'ISO-GLOW', colorfigures: 'Colorfigures',
+  "explain-interface": "Explain Interface",
+  "state-machine": "State Machine",
+  "mobile-native": "Mobile Native",
+  "animation-performance": "Animation Performance",
+  "break-ui": "Break UI",
   "pe-verify": "PE Verify",
   "tdd": "TDD",
   "source-driven-development": "Source-Driven Development",
@@ -62,10 +73,13 @@ const titles = {
 };
 const skills = JSON.parse(await readFile(new URL('../content.json', import.meta.url), 'utf8'));
 const snapshot = {};
+const composition = JSON.parse(await readFile(resolve(atlasRoot, 'sources/composition.json'), 'utf8'));
+const directories = new Map(composition.workflows.map(workflow => [workflow.id, workflow.directory ?? `skills/${workflow.id}`]));
 
 for (const skill of skills) {
-  const receipt = JSON.parse(await readFile(resolve(atlasRoot, 'skills', skill.id, 'SOURCE-MANIFEST.json'), 'utf8'));
+  const receipt = JSON.parse(await readFile(resolve(atlasRoot, directories.get(skill.id), 'SOURCE-MANIFEST.json'), 'utf8'));
   const references = receipt.sources.map((source) => {
+    if (source.upstream.type === 'download') return { id: source.id, title: titles[source.id], author: 'April Zhu (based on Tolga Cohce’s iso-figure)', url: source.upstream.page, classification: source.classification };
     const { repository, commit, path } = source.upstream;
     const author = authors[repository];
     const title = titles[source.id];

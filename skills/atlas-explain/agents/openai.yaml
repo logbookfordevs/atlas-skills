@@ -1,6 +1,6 @@
 interface:
   display_name: "Atlas Explain"
-  short_description: "Choose How, Why or Teach for code mechanics, historical rationale or conversational learning."
-  default_prompt: "Use $atlas-explain. If I have not supplied a mode, ask me to choose How, Why or Teach with a short description of each."
+  short_description: "Explain code, rationale or how an interface was built."
+  default_prompt: "Use $atlas-explain. Follow its chooser when my request does not identify How, Why, Teach or Interface."
 policy:
   allow_implicit_invocation: true

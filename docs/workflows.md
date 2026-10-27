@@ -1,5 +1,7 @@
 # Work with Atlas
 
+For a copyable, end-to-end introduction, follow the [website workflow example](https://atlas.logbookfordevs.com/workflow/). It walks through saved dashboard filters with Atlas, then shows where independent stack companions help.
+
 Choose the next method from what remains unresolved. A small change can go straight to implementation. A larger effort may need a decision map, a specification or executable tickets first. Each step earns its place by answering a question or preserving context the next step needs.
 
 [Atlas Mode](../skills/atlas-mode/SKILL.md) can help choose an approach and carry it out. It applies clearly selected methods directly and explains materially different workflows before you choose. Individual skills remain usable on their own. [The package list](../README.md#skills-v2) and [website reference](https://atlas.logbookfordevs.com/) describe the available methods.
@@ -23,6 +25,8 @@ Suppose users need to save a dashboard filter, return later and restore it, but 
 | The work needs executable slices | Atlas To Tickets | Vertical implementation tickets with explicit blockers |
 | Implementation shape, tests or version-specific APIs | Atlas Implement: Architect, TDD or Source-Driven as applicable | Working code with the selected method's evidence |
 | Progress must survive handoffs | Tracking Implementation, when requested | One durable Implementation Record alongside the executor |
+| An interface needs realistic edge-case data | Atlas Verify: UI Stress | An isolated data-switching harness and findings, with fixes handed to implementation |
+| Animation drops frames | Atlas Motion: Performance | A cause-based diagnosis with code evidence and available profiling results |
 | Completed behavior needs proof | Atlas Verify: Run, when requested or selected for the task | A structured verification report with actual evidence and coverage gaps |
 | The change needs judgment | Atlas Review, or Tracking's checkpoint review gate | Findings, their resolution and remaining uncertainty |
 
@@ -41,7 +45,7 @@ Choose the artifact or judgment that answers the current question:
 - **Hierarchy and navigation:** HTML UI's Wireframe method keeps fidelity low while you judge structure.
 - **An interactive visual commitment:** HTML UI's Model method makes the agreed flow concrete. It uses the independently available Design Artifact guidance.
 - **An uncertain state model or behavior:** the independent Prototype skill can build a bounded experiment.
-- **An established interface needs refinement:** Atlas Craft supplies Color, Type, Layout, Accessibility, UI Polish and Copy methods while preserving accepted identity.
+- **An established interface needs refinement:** Atlas Craft supplies Color, Type, Layout, Accessibility, UI Polish and Copy methods while preserving accepted identity. Ask for States to inspect one real component’s existing states with fixtures and a switcher before requesting visual changes.
 - **A changed interface needs review:** Atlas Review's Interface Changes distinguishes introduced, regressed and pre-existing problems. Interface Audit assesses an existing screen or flow more broadly.
 
 Carry approved references, viewport expectations, states and permitted adaptations into the spec or ticket. Reopen direction only when a material choice remains unresolved.
@@ -58,10 +62,10 @@ Use Animated-Driven Frontend for synchronized progress, scroll sequences, render
 | --- | --- | --- |
 | A bug has an unknown cause | Independent Diagnosing Bugs | Establish the cause and validate the fix through the actual behavior. |
 | Unresolved decisions exceed one session | Atlas Wayfinder | Create or resume a decision map; it plans by default rather than executing the whole project. |
-| You need to understand code | Atlas Explain: How, Why or Teach | Select the explanation mode; the topic alone does not bypass its chooser. |
+| You need to understand code or an interface | Atlas Explain: How, Why, Teach or Interface | Request Interface to explain a live page or reconstruct a screenshot; otherwise retain the chooser when the mode is unspecified. |
 | A shared contract could affect other consumers | Atlas Review: Impact | Trace downstream assumptions and preserve evidence for the risks. |
 | A consequential assumption needs challenge | Atlas Review: Adversarial | Independent review supplies evidence for judgment, not automatic authority. |
-| Work benefits from teammates | Team Up: Delegation, Arena or Swarm | Choose the smallest capable team; use Arena for competing candidates and Swarm for structured coverage or races. |
+| Work benefits from teammates | Team Up: Delegation, Arena or Swarm | Choose the smallest capable team; use Arena for competing candidates, Swarm for structured coverage or races. |
 | A session exposes recurring workflow friction | Atlas Retro: Diagnose | Propose improvements. Enforce requires authorization to implement prevention. |
 | Installed dependencies or stack alignment need inspection | Atlas Setup | Installation and named removals retain their own approvals. Setup stays outside Atlas Mode. |
 | A tracked implementation needs continuation | Tracking Implementation: Resume | Recover the existing record, source, blockers, review selections and evidence. |
@@ -83,3 +87,15 @@ Tracking creates local HTML records by default, following repository or user sto
 Use [Skill maintenance](authoring/source-composition.md) for package changes, [the stack guide](atlas-stack.md) for installation, and the [website](https://atlas.logbookfordevs.com/) for user-facing examples.
 
 The previous composition, skills/profile and cinematic maps described retired workflows. Their source files are retained as [historical snapshots](migrations/retired-guides/README.md), not current invocation or CLI guidance. Previously published external copies are also snapshots; this repository update does not republish them.
+
+## Choose a figure treatment
+
+The optional `atlas-figures` skill presents Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW and Colorfigures. It recommends fits from the subject and intended medium; you select before construction. Ask, for example, “Help me choose a treatment to explain our cache for a blog post.” If you already chose, say “Make this coffee machine in Colorfigures.” Figure methods are bundled; Teardown reuses installed Atlas Craft for its design-domain guidance. See [Creative skills](../creative-skills/README.md) for installation and source credits.
+
+## Companion tools and agent instructions
+
+The website’s [Recommended Tools](https://atlas.logbookfordevs.com/tools/) page covers browser access, Plannotator, Yggtree, T3 Code and AFK. It includes a downloadable example of Leonardo’s agent instructions, adapted for sharing. The [example source](../sites/atlas/src/content/agents-example.md) keeps personal technology preferences visible while removing organization-specific provider rules.
+
+## Explore the workflow visually
+
+The website’s [interactive workflow figure](https://atlas.logbookfordevs.com/workflow/#explore-workflow) uses Anatomy’s isometric renderer for a five-station document press. Select a stage to inspect its inputs, outputs and request, then follow the link to the detailed step. Acceptance can return to implementation. This is an explanatory model, not a live implementation record. The renderer’s pinned source and MIT license are retained beside the website component.

@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index ba4982b..f20ba61 100644
+--- a/source.md
++++ b/source.md
+@@ -36,7 +36,7 @@ Group focus styles with `:focus-within` when a wrapper should light up while an
+ 
+ ## Focus not obscured
+ 
+-Sticky chrome hides whatever scrolls under it, including the element that just received focus. Pad the scroll container by the sticky element's height with `scroll-padding-block-start`, and by a sticky footer or cookie banner's height with `scroll-padding-block-end`. The recipe is `better-layout`'s.
++Sticky chrome hides whatever scrolls under it, including the element that just received focus. Pad the scroll container by the sticky element's height with `scroll-padding-block-start`, and by a sticky footer or cookie banner's height with `scroll-padding-block-end`. See [Layout](../layout/index.md) for the recipe.
+ 
+ ## Skip link
+ 

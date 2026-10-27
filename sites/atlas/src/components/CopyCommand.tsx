@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function CopyCommand({ command, label: description = 'installation command' }: { command: string; label?: string }) {
+export function CopyCommand({ command, label: description = 'installation command', variant = 'command' }: { command: string; label?: string; variant?: 'command' | 'prompt' }) {
+  const isPrompt = variant === 'prompt';
   const [label, setLabel] = useState('Copy');
   const [status, setStatus] = useState('');
   const code = useRef<HTMLElement>(null);
@@ -29,7 +30,7 @@ export function CopyCommand({ command, label: description = 'installation comman
   }
 
   return <>
-    <div className="command">
+    <div className={isPrompt ? 'command prompt-command' : 'command'}>
       <code ref={code}>{command}</code>
       <button type="button" className="copy" aria-label={`Copy ${description}`} onClick={() => void copy()}>
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" /><path d="M15 8V4H4v11h4" /></svg><span>{label}</span>

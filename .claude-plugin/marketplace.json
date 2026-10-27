@@ -1,0 +1,56 @@
+{
+  "name": "logbook-atlas",
+  "owner": {
+    "name": "Logbook for Devs",
+    "url": "https://logbookfordevs.com/"
+  },
+  "description": "Atlas workflows, optional creative skills and standalone utilities.",
+  "plugins": [
+    {
+      "name": "atlas-workflows",
+      "source": "./",
+      "description": "Core Atlas workflows, maintained adaptations and source compositions.",
+      "strict": false,
+      "skills": [
+        "./skills/animated-driven-frontend",
+        "./skills/atlas-craft",
+        "./skills/atlas-explain",
+        "./skills/atlas-grill",
+        "./skills/atlas-implement",
+        "./skills/atlas-mode",
+        "./skills/atlas-motion",
+        "./skills/atlas-retro",
+        "./skills/atlas-review",
+        "./skills/atlas-setup",
+        "./skills/atlas-to-spec",
+        "./skills/atlas-to-tickets",
+        "./skills/atlas-verify",
+        "./skills/atlas-wayfinder",
+        "./skills/html-ui",
+        "./skills/team-up",
+        "./skills/tracking-implementation",
+        "./skills/writing-for-humans"
+      ]
+    },
+    {
+      "name": "creative-skills",
+      "source": "./",
+      "description": "Optional figure composition and independent creative skills, with upstream credits and licenses.",
+      "strict": false,
+      "skills": [
+        "./creative-skills/atlas-figures",
+        "./creative-skills/colorfigures",
+        "./creative-skills/iso-glow"
+      ]
+    },
+    {
+      "name": "utility-skills",
+      "source": "./",
+      "description": "Optional standalone utilities for use beyond Atlas’s core workflows.",
+      "strict": false,
+      "skills": [
+        "./utility-skills/skill-source-composition"
+      ]
+    }
+  ]
+}

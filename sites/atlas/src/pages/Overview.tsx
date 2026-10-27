@@ -1,7 +1,7 @@
 import { useViewTransitionState } from 'react-router';
 import { AtlasLink } from '@/components/AtlasLink';
 import { Arrow } from '@/components/Icons';
-import { skills, skillPath } from '@/data';
+import { skills, skillGroups, skillPath } from '@/data';
 import type { Skill } from '@/data';
 
 function SkillRow({ skill }: { skill: Skill }) {
@@ -13,17 +13,17 @@ function SkillRow({ skill }: { skill: Skill }) {
 }
 
 export function Overview() {
-  const groups = [...new Set(skills.map((skill) => skill.group))];
   return <>
     <section className="intro" id="overview">
       <h1>Atlas</h1><p className="lead">Reusable skills for working with coding agents.</p>
       <p>A skill gives an agent instructions for a particular kind of work, from writing a specification to refining an interface.</p>
       <p>Atlas is the Logbook for Devs collection of utilities, adaptations, and composed skills. Each reference below explains what a skill does, when to use it, and how to get started.</p>
       <p>To work in Atlas, invoke <AtlasLink to={skillPath('atlas-mode')}>Atlas Mode</AtlasLink> with your task. It applies the relevant skills and inner methods as the work develops; you can also use any skill directly.</p>
+      <AtlasLink className="text-link" to="/workflow/">Follow an example workflow <Arrow /></AtlasLink>
     </section>
     <section className="collection" id="skills">
       <h2>The skill reference</h2><p className="section-copy">Start with the work in front of you.</p>
-      {groups.map((group) => <section className="skill-group" key={group}>
+      {skillGroups.map((group) => <section className="skill-group" key={group}>
         <h3>{group}</h3><div className="skill-rows">{skills.filter((skill) => skill.group === group).map((skill) => <SkillRow key={skill.id} skill={skill} />)}</div>
       </section>)}
     </section>
