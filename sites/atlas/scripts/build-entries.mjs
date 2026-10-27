@@ -6,6 +6,8 @@ const entry = await readFile(new URL('../dist/index.html', import.meta.url), 'ut
 const escape = (value) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const pages = [
   { path: '/', ...site.overview, usesSiteImage: true },
+  { path: '/tools/', ...site.tools, usesSiteImage: true },
+  { path: '/workflow/', ...site.workflow, usesSiteImage: true },
   ...skills.map((skill) => ({ path: `/skills/${skill.id}/`, title: skill.name, description: skill.summary, usesSiteImage: false })),
   { path: '/stack/', ...site.stack, usesSiteImage: true },
 ];

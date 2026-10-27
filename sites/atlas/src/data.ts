@@ -22,6 +22,7 @@ export interface UpstreamCredit {
 }
 
 export const skills: Skill[] = content;
+export const skillGroups = [...new Set(skills.map((skill) => skill.group))];
 export const upstreamCredits: Record<string, UpstreamCredit> = upstream;
 export { site, stack };
 export const repository = 'https://github.com/logbookfordevs/atlas-skills';
@@ -30,6 +31,12 @@ export const skillPath = (id: string) => `/skills/${id}/`;
 export function pageMetadata(pathname: string) {
   const skill = skills.find((entry) => skillPath(entry.id).replace(/\/$/, '') === pathname.replace(/\/$/, ''));
   if (skill) return { title: skill.name, description: skill.summary, path: skillPath(skill.id), usesSiteImage: false };
+  if (pathname.replace(/\/$/, '') === '/workflow') {
+    return { ...site.workflow, path: '/workflow/', usesSiteImage: true };
+  }
+  if (pathname.replace(/\/$/, '') === '/tools') {
+    return { ...site.tools, path: '/tools/', usesSiteImage: true };
+  }
   if (pathname.replace(/\/$/, '') === '/stack') {
     return { ...site.stack, path: '/stack/', usesSiteImage: true };
   }

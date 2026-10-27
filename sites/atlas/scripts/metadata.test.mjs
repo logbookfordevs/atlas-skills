@@ -7,6 +7,8 @@ const site = JSON.parse(await readFile(new URL('../site.json', import.meta.url),
 const skills = JSON.parse(await readFile(new URL('../content.json', import.meta.url), 'utf8'));
 const pages = [
   { path: '/', ...site.overview, hasImage: true },
+  { path: '/tools/', ...site.tools, hasImage: true },
+  { path: '/workflow/', ...site.workflow, hasImage: true },
   { path: '/stack/', ...site.stack, hasImage: true },
   ...skills.map((skill) => ({ path: `/skills/${skill.id}/`, title: skill.name, description: skill.summary, hasImage: false })),
 ];

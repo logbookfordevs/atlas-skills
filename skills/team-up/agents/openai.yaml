@@ -1,6 +1,6 @@
 interface:
   display_name: "Team Up"
-  short_description: "Delegate, compare candidates, coordinate coverage, or request a fresh-context decision."
-  default_prompt: "Use $team-up for the requested delegation outcome, selecting Arena or Swarm when appropriate, or Clean Room when explicitly requested and applying the role, model and effort policy."
+  short_description: "Delegate, compare candidates, or coordinate coverage."
+  default_prompt: "Use $team-up for the requested delegation outcome, selecting Arena or Swarm when appropriate and applying the role, model and effort policy."
 policy:
   allow_implicit_invocation: true

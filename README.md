@@ -30,7 +30,7 @@ Install the packages below, or import the shared stack to include the recommende
 | [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid, Performance diagnosis and read-only Opportunities |
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Implementation state and evidence alongside any executor, with optional Audit Trail |
 | [Animated-Driven Frontend](skills/animated-driven-frontend/SKILL.md) | Manually invoked ZERO engineering knowledge |
-| [Team Up](skills/team-up/SKILL.md) | Role/model/effort selection, Arena candidate synthesis, Swarm coverage or races, and explicitly requested Clean Room decisions; optional shared subject preferences |
+| [Team Up](skills/team-up/SKILL.md) | Role/model/effort selection, Arena candidate synthesis, Swarm coverage or races; optional shared subject preferences |
 | [Writing for Humans](skills/writing-for-humans/SKILL.md) | Author voice and reader experience, technical documentation, and shared Unslop guidance |
 | [Atlas Retro](skills/atlas-retro/SKILL.md) | Diagnose session friction or explicitly enforce recurring-mistake prevention |
 | [Atlas Setup](skills/atlas-setup/SKILL.md) | Manual dependency and stack check, with explicitly approved cleanup |

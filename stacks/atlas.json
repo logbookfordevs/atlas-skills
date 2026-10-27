@@ -6,83 +6,85 @@
   "description": "The Logbook for Devs skill stack: Atlas utilities, adaptations and compositions alongside selected independent skills from their original authors.",
   "sources": [
     {
-      "name": "Logbook Atlas",
-      "source": "https://github.com/logbookfordevs/atlas-skills",
-      "skills": [
-        "atlas-mode",
-        "atlas-setup",
-        "tracking-implementation",
-        "atlas-motion",
-        "atlas-craft",
-        "atlas-implement",
-        "atlas-review",
-        "atlas-verify",
-        "animated-driven-frontend",
-        "writing-for-humans",
-        "team-up",
-        "html-ui",
-        "atlas-grill",
-        "atlas-wayfinder",
-        "atlas-to-spec",
-        "atlas-to-tickets",
-        "atlas-explain",
-        "atlas-retro"
-      ]
-    },
-    {
       "name": "Matt Pocock",
       "source": "https://github.com/mattpocock/skills",
       "skills": [
-        "implement-spec",
-        "research",
-        "writing-for-agents",
-        "wizard",
-        "to-questionnaire",
-        "prototype",
-        "handoff",
+        "diagnosing-bugs",
+        "domain-modeling",
         "codebase-design",
+        "handoff",
+        "implement-spec",
         "pr",
+        "prototype",
+        "research",
         "teach",
-        "diagnosing-bugs"
+        "to-questionnaire",
+        "wizard",
+        "writing-for-agents"
       ]
     },
     {
-      "name": "Truss",
-      "source": "https://github.com/leoreisdias/truss-framework",
+      "name": "Atlas Skills",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
       "skills": [
-        "truss-evaluation"
-      ]
-    },
-    {
-      "name": "shadcn/ui",
-      "source": "https://github.com/shadcn-ui/ui",
-      "skills": [
-        "shadcn"
-      ]
-    },
-    {
-      "name": "Plannotator",
-      "source": "plannotator/guides",
-      "skills": [
-        "plannotator-guide"
-      ]
-    },
-    {
-      "name": "Orchestrator",
-      "source": "backnotprop/orchestrator",
-      "skills": [
-        "orchestrator"
+        "animated-driven-frontend",
+        "atlas-craft",
+        "atlas-explain",
+        "atlas-grill",
+        "atlas-implement",
+        "atlas-mode",
+        "atlas-motion",
+        "atlas-retro",
+        "atlas-review",
+        "atlas-setup",
+        "atlas-to-spec",
+        "atlas-to-tickets",
+        "atlas-verify",
+        "atlas-wayfinder",
+        "html-ui",
+        "team-up",
+        "tracking-implementation",
+        "writing-for-humans"
       ]
     },
     {
       "name": "Bro",
       "source": "https://github.com/backnotprop/bro",
       "skills": [
+        "big-pics-little-words",
         "bro",
         "facts",
         "readback",
-        "recap",
-        "clean-room"
+        "recap"
+      ]
+    },
+    {
+      "name": "Kami",
+      "source": "https://github.com/tw93/Kami",
+      "skills": [
+        "kami"
+      ]
+    },
+    {
+      "name": "Agent-Skills",
+      "source": "https://github.com/addyosmani/agent-skills",
+      "skills": [
+        "code-simplification",
+        "doubt-driven-development"
+      ]
+    },
+    {
+      "name": "Truss Evaluation",
+      "source": "https://github.com/leoreisdias/truss-framework",
+      "skills": [
+        "truss-evaluation"
+      ]
+    },
+    {
+      "name": "Shadcn",
+      "source": "https://github.com/shadcn-ui/ui",
+      "skills": [
+        "shadcn"
       ]
     },
     {
@@ -97,21 +99,6 @@
       "source": "https://github.com/humanlayer/skills",
       "skills": [
         "show-me"
-      ]
-    },
-    {
-      "name": "Addy Osmani",
-      "source": "https://github.com/addyosmani/agent-skills.git",
-      "skills": [
-        "doubt-driven-development",
-        "code-simplification"
-      ]
-    },
-    {
-      "name": "Alesha Pro",
-      "source": "https://github.com/alesha-pro/tools",
-      "skills": [
-        "hand-drawn-canvas-animation"
       ]
     }
   ]

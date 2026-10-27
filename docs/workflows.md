@@ -1,5 +1,7 @@
 # Work with Atlas
 
+For a copyable, end-to-end introduction, follow the [website workflow example](https://atlas.logbookfordevs.com/workflow/). It walks through saved dashboard filters with Atlas, then shows where independent stack companions help.
+
 Choose the next method from what remains unresolved. A small change can go straight to implementation. A larger effort may need a decision map, a specification or executable tickets first. Each step earns its place by answering a question or preserving context the next step needs.
 
 [Atlas Mode](../skills/atlas-mode/SKILL.md) can help choose an approach and carry it out. It applies clearly selected methods directly and explains materially different workflows before you choose. Individual skills remain usable on their own. [The package list](../README.md#skills-v2) and [website reference](https://atlas.logbookfordevs.com/) describe the available methods.
@@ -63,7 +65,7 @@ Use Animated-Driven Frontend for synchronized progress, scroll sequences, render
 | You need to understand code or an interface | Atlas Explain: How, Why, Teach or Interface | Request Interface to explain a live page or reconstruct a screenshot; otherwise retain the chooser when the mode is unspecified. |
 | A shared contract could affect other consumers | Atlas Review: Impact | Trace downstream assumptions and preserve evidence for the risks. |
 | A consequential assumption needs challenge | Atlas Review: Adversarial | Independent review supplies evidence for judgment, not automatic authority. |
-| Work benefits from teammates | Team Up: Delegation, Arena, Swarm or Clean Room | Choose the smallest capable team; use Arena for competing candidates, Swarm for structured coverage or races, and Clean Room for an explicitly requested neutral-brief decision from fresh context. |
+| Work benefits from teammates | Team Up: Delegation, Arena or Swarm | Choose the smallest capable team; use Arena for competing candidates, Swarm for structured coverage or races. |
 | A session exposes recurring workflow friction | Atlas Retro: Diagnose | Propose improvements. Enforce requires authorization to implement prevention. |
 | Installed dependencies or stack alignment need inspection | Atlas Setup | Installation and named removals retain their own approvals. Setup stays outside Atlas Mode. |
 | A tracked implementation needs continuation | Tracking Implementation: Resume | Recover the existing record, source, blockers, review selections and evidence. |
@@ -90,14 +92,10 @@ The previous composition, skills/profile and cinematic maps described retired wo
 
 The optional `atlas-figures` skill presents Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW and Colorfigures. It recommends fits from the subject and intended medium; you select before construction. Ask, for example, “Help me choose a treatment to explain our cache for a blog post.” If you already chose, say “Make this coffee machine in Colorfigures.” Figure methods are bundled; Teardown reuses installed Atlas Craft for its design-domain guidance. See [Creative skills](../creative-skills/README.md) for installation and source credits.
 
-## Get an independent decision
+## Companion tools and agent instructions
 
-Ask Team Up, “Get a clean-room opinion on whether we should replace this dependency.” Clean Room frames one decision neutrally, sends evidence to a fresh child agent without the current conversation, and returns its verdict unchanged. It differs from Arena’s candidate synthesis and Swarm’s parallel coverage. Team Up supplies model selection and host dispatch; the independently installed `clean-room` skill owns the method.
+The website’s [Recommended Tools](https://atlas.logbookfordevs.com/tools/) page covers browser access, Plannotator, Yggtree, T3 Code and AFK. It includes a downloadable example of Leonardo’s agent instructions, adapted for sharing. The [example source](../sites/atlas/src/content/agents-example.md) keeps personal technology preferences visible while removing organization-specific provider rules.
 
-Clean Room already belongs to the shared stack. Install it separately when needed:
+## Explore the workflow visually
 
-```sh
-npx skills add backnotprop/bro --skill clean-room
-```
-
-Atlas Setup reports the conditional dependency. It is not a copied source composition: Bro’s current repository has no redistribution license covering Clean Room; its MIT notice covers Sharpen only. [Reviewed Clean Room source](https://github.com/backnotprop/bro/blob/3737bf2b3e5ef8f44639ebf6e6bbbf821b3edfb9/skills/clean-room/SKILL.md).
+The website’s [interactive workflow figure](https://atlas.logbookfordevs.com/workflow/#explore-workflow) uses Anatomy’s isometric renderer for a five-station document press. Select a stage to inspect its inputs, outputs and request, then follow the link to the detailed step. Acceptance can return to implementation. This is an explanatory model, not a live implementation record. The renderer’s pinned source and MIT license are retained beside the website component.

@@ -30,8 +30,8 @@ export function Stack() {
         <a className="text-link" href={`${repository}/blob/main/docs/atlas-stack.md`}>Read the stack guide <Arrow /></a>
       </div>
     </section>
-    <div className="stack-sources">{stack.sources.map((source, index) => {
-      const isAtlas = index === 0;
+    <div className="stack-sources">{stack.sources.map((source) => {
+      const isAtlas = source.source.replace(/\.git$/, '') === repository;
       const sourceUrl = source.source.startsWith('https://') ? source.source.replace(/\.git$/, '') : `https://github.com/${source.source}`;
       return <section className="stack-source" key={source.source}>
         <h2>{source.name}</h2><a className="text-link" href={sourceUrl}>{isAtlas ? 'Atlas repository' : 'Original source'} <Arrow /></a>

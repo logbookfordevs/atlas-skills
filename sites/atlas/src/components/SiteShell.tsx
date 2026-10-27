@@ -2,18 +2,22 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Outlet, ScrollRestoration, useLocation } from 'react-router';
 import { AtlasLink } from '@/components/AtlasLink';
 import { Arrow, Moon } from '@/components/Icons';
-import { repository, skills, skillPath } from '@/data';
+import { repository, skills, skillGroups, skillPath } from '@/data';
 import { updatePageMetadata } from '@/metadata';
 
 function Contents() {
   const location = useLocation();
   const showsOverview = location.pathname === '/';
   const showsReference = location.pathname.startsWith('/skills/');
+  const [directoryOpen, setDirectoryOpen] = useState(false);
   const [readingSection, setReadingSection] = useState('overview');
   const currentKind = showsOverview ? 'location' : 'page';
-  let active = 'stack';
+  let active = '';
   if (showsOverview) active = readingSection;
   else if (showsReference) active = 'skills';
+  else if (location.pathname.replace(/\/$/, '') === '/workflow') active = 'workflow';
+  else if (location.pathname.replace(/\/$/, '') === '/tools') active = 'tools';
+  else if (location.pathname.replace(/\/$/, '') === '/stack') active = 'stack';
 
   useEffect(() => {
     if (!showsOverview) return;
@@ -28,18 +32,26 @@ function Contents() {
 
   const links = [
     { id: 'overview', label: 'Overview', to: '/#overview' },
+    { id: 'workflow', label: 'Workflow', to: '/workflow/' },
     { id: 'skills', label: 'Skills', to: '/#skills' },
     { id: 'stack', label: 'The stack', to: '/stack/' },
+    { id: 'tools', label: 'Recommended tools', to: '/tools/' },
   ];
 
   return <aside className="contents">
     <nav className="contents-nav" aria-label="Contents" data-active={active}>
-      <span className="reading-mark" aria-hidden="true" />
-      {links.map((link) => <AtlasLink key={link.id} to={link.to} aria-current={link.id === active ? currentKind : undefined}>{link.label}</AtlasLink>)}
+      <span className="reading-mark" aria-hidden="true" hidden={!active} />
+      {links.map((link) => <AtlasLink key={link.id} to={link.to} onClick={() => setDirectoryOpen(false)} aria-current={link.id === active ? currentKind : undefined}>{link.label}</AtlasLink>)}
     </nav>
-    {showsReference && <nav className="reference-nav" aria-label="Skill reference">
-      {skills.map((skill) => <AtlasLink key={skill.id} to={skillPath(skill.id)} aria-current={location.pathname.replace(/\/$/, '') === skillPath(skill.id).replace(/\/$/, '') ? 'page' : undefined}>{skill.name}</AtlasLink>)}
-    </nav>}
+    <button className="reference-toggle" type="button" aria-controls="skill-reference" aria-expanded={directoryOpen} onClick={() => setDirectoryOpen(!directoryOpen)}>
+      <span>Browse skills</span><span aria-hidden="true">{directoryOpen ? '−' : '+'}</span>
+    </button>
+    <nav id="skill-reference" className="reference-nav" aria-label="Skill reference" data-expanded={directoryOpen}>
+      {skillGroups.map((group, index) => <div className="reference-group" role="group" aria-labelledby={`skill-group-${index}`} key={group}>
+        <p className="reference-group-title" id={`skill-group-${index}`}>{group}</p>
+        {skills.filter((skill) => skill.group === group).map((skill) => <AtlasLink key={skill.id} to={skillPath(skill.id)} onClick={() => setDirectoryOpen(false)} aria-current={location.pathname.replace(/\/$/, '') === skillPath(skill.id).replace(/\/$/, '') ? 'page' : undefined}>{skill.name}</AtlasLink>)}
+      </div>)}
+    </nav>
   </aside>;
 }
 
