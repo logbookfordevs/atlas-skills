@@ -380,7 +380,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "a2a8213b48915b4be29f990805d3f990389d5f9721e15104173780d2e6e3517e",
+    "SKILL.md": "60d9bae76c21317447a3a5350761313b554a4c10bb70327d72ca451ada064237",
     "agents/openai.yaml": "d00f6654cec3faa2dc505aa73854e4b8c48a1cf2abc79848601f2077e5313f39",
     "references/how/how.md": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
     "licenses/pstack-how.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",

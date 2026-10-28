@@ -1,6 +1,6 @@
 ---
 name: atlas-verify
-description: "Run requested behavior verification or project QA, including after implementation or in an existing browser session; stress-test UI with worst-case data. Also create or maintain reusable project verifiers, or assess benchmark and performance claims."
+description: "Use when the user requests behavior verification, QA, a verification report or UI stress testing; asks to create or maintain project verifiers; or wants a benchmark or performance claim assessed."
 disable-model-invocation: false
 metadata:
   short-description: Verify behavior, maintain project verifiers and assess measurements.

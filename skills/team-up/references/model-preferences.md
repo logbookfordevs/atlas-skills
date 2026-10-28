@@ -2,9 +2,13 @@
 
 Use these default model-and-effort preferences for configurable teammates. After selecting a family through the [selection policy](selection.md), use its column even when both families are available. Use the mixed column when no family is favored. The families describe models, not their hosting or orchestration tool.
 
-## Optional subject preferences
+## Selection preferences
 
-Enable these personal preferences only when the user adopts them in the conversation or applicable project/user instructions, for example, “Use Team Up's subject preferences.” They apply across Delegation, Arena and Swarm; they are not a model-capability ranking.
+These defaults apply across Delegation, Arena and Swarm; they are not a model-capability ranking.
+
+**Cross-family review:** for reviews, audits and second opinions involving teammates, prefer including a suitable model from a different family than the leading agent, for example GPT in a Claude-led session. Use available suitable models and disclose when cross-family participation is unavailable. This preference does not increase the team size by itself.
+
+**Subject preferences:**
 
 | Subject | Meaning | Preferred family |
 | --- | --- | --- |

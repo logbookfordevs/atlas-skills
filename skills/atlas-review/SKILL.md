@@ -1,6 +1,6 @@
 ---
 name: atlas-review
-description: "Review code against standards and intent, interrogate changes with independent adversarial reviewers, trace downstream blast radius, assess interfaces or motion, and audit animation."
+description: "Use when reviewing code, interfaces or motion; investigating downstream effects of a change; or stress-testing a proposed change for hidden risks."
 disable-model-invocation: false
 ---
 

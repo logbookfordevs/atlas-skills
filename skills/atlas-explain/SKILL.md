@@ -1,6 +1,6 @@
 ---
 name: atlas-explain
-description: "Explain code mechanics, historical rationale or interfaces: How traces code, Why investigates decisions, Teach builds understanding, and Interface explains a live page, visual effect or screenshot."
+description: "Use when the user asks how code works, why a decision was made, wants to learn through conversation, or wants a live interface, visual effect or screenshot explained."
 disable-model-invocation: false
 metadata:
   short-description: Explain mechanics, investigate rationale or teach through conversation.

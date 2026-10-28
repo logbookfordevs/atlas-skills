@@ -1,6 +1,6 @@
 ---
 name: tracking-implementation
-description: "Track implementation when the user asks to track progress, maintain an implementation record, or resume previously tracked work. Apply alongside any executor; a request to implement alone does not activate tracking. Audit Trail adds decision provenance on request."
+description: "Use when the user asks to track implementation progress, maintain or resume an implementation record, or keep an implementation audit trail."
 disable-model-invocation: false
 metadata:
   short-description: Implement work with durable tracking, validation, and review.

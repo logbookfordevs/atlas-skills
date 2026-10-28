@@ -431,7 +431,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "6d6306ee5bceb25e67e6079f1925ab4cccd70ba62702cd994d4242c13a306dc3",
+    "SKILL.md": "2692fc5951a63339cc610e20150f5065f915b068c1e53f3ab46f078edaa00b47",
     "agents/openai.yaml": "61b94c481f785dc5a979ec390f7efc73adcdc17714ae18ceaf5617a1ce639590",
     "references/run.md": "b153d3724fe4b54e0ffd900a66da346c36fbe6a25c5ce6fab3e7fdb22ada40cb",
     "licenses/pe-verify.txt": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
