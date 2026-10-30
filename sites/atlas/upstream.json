@@ -82,6 +82,25 @@
     ],
     "collections": []
   },
+  "atlas-debug": {
+    "references": [
+      {
+        "id": "diagnosing-bugs",
+        "title": "Diagnosing Bugs",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/skills/engineering/diagnosing-bugs/SKILL.md",
+        "classification": "verbatim"
+      },
+      {
+        "id": "pstack-statechart",
+        "title": "Statechart",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/25abb38559ddbabec563646224d09eff9a250eca/skills/statechart/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
   "atlas-implement": {
     "references": [
       {
@@ -244,6 +263,25 @@
         "classification": "patched"
       },
       {
+        "id": "pstack-benchmark-checklist",
+        "title": "Benchmark Checklist",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/benchmark-checklist/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "break-ui",
+        "title": "Break UI",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/break-ui/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "atlas-verifiers": {
+    "references": [
+      {
         "id": "pstack-create-verification-skill",
         "title": "Create Verification Skill",
         "author": "Lauren Tan / Pstack mirror",
@@ -258,17 +296,24 @@
         "classification": "patched"
       },
       {
-        "id": "pstack-benchmark-checklist",
-        "title": "Benchmark Checklist",
+        "id": "pstack-statechart",
+        "title": "Statechart",
         "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/benchmark-checklist/SKILL.md",
+        "url": "https://github.com/backnotprop/pstack/blob/25abb38559ddbabec563646224d09eff9a250eca/skills/statechart/SKILL.md",
         "classification": "patched"
       },
       {
-        "id": "break-ui",
-        "title": "Break UI",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/break-ui/SKILL.md",
+        "id": "pstack-create-formal-verification-skill",
+        "title": "Create Formal Verification Skill",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/25abb38559ddbabec563646224d09eff9a250eca/skills/create-formal-verification-skill/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-maintain-formal-verification-skill",
+        "title": "Maintain Formal Verification Skill",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/25abb38559ddbabec563646224d09eff9a250eca/skills/maintain-formal-verification-skill/SKILL.md",
         "classification": "patched"
       }
     ],
@@ -425,6 +470,20 @@
         "author": "Jakub Krehel",
         "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/explain-interface/SKILL.md",
         "classification": "patched"
+      },
+      {
+        "id": "pstack-ketchup",
+        "title": "Ketchup",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/25abb38559ddbabec563646224d09eff9a250eca/skills/ketchup/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-bro",
+        "title": "Bro (voice)",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/25abb38559ddbabec563646224d09eff9a250eca/skills/bro/SKILL.md",
+        "classification": "verbatim"
       }
     ],
     "collections": []

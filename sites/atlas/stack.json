@@ -9,7 +9,6 @@
       "name": "Matt Pocock",
       "source": "https://github.com/mattpocock/skills",
       "skills": [
-        "diagnosing-bugs",
         "domain-modeling",
         "codebase-design",
         "handoff",
@@ -29,6 +28,7 @@
       "skills": [
         "animated-driven-frontend",
         "atlas-craft",
+        "atlas-debug",
         "atlas-explain",
         "atlas-grill",
         "atlas-implement",
@@ -39,6 +39,7 @@
         "atlas-setup",
         "atlas-to-spec",
         "atlas-to-tickets",
+        "atlas-verifiers",
         "atlas-verify",
         "atlas-wayfinder",
         "html-ui",
@@ -54,8 +55,7 @@
         "big-pics-little-words",
         "bro",
         "facts",
-        "readback",
-        "recap"
+        "readback"
       ]
     },
     {

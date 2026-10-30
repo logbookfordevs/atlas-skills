@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 442292d..4526d0c 100644
+index 442292d..1d1ff94 100644
 --- a/source.md
 +++ b/source.md
 @@ -18,7 +18,7 @@ Answer these from the codebase and only ask the user what you cannot observe:
@@ -26,4 +26,4 @@ index 442292d..4526d0c 100644
  ## 5. Offer the maintenance loop
  
 -Point the user at `/maintain-verification-skill` for keeping the map honest as the app changes. Suggest a cadence only if they ask.
-+Point the user at Atlas Verify's [Maintain method](../maintain/maintain-verification-skill.md) for keeping the map honest as the app changes. Suggest a cadence only if they ask.
++Point the user at Atlas Verifiers’ [Maintain method](../maintain/maintain-verification-skill.md) for keeping the map honest as the app changes. Suggest a cadence only if they ask.

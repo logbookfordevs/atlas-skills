@@ -1,0 +1,6 @@
+interface:
+  display_name: "Atlas Verifiers"
+  short_description: "Choose and maintain reusable app or formal checks."
+  default_prompt: "Use $atlas-verifiers to help choose an approach for my verification problem, then follow the selected method."
+policy:
+  allow_implicit_invocation: false
