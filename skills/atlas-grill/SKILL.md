@@ -5,9 +5,9 @@ description: Grill the user relentlessly about a plan, decision, or idea. Use wh
 
 # Atlas Grill
 
-Default to Grilling. Select With Docs only when the user explicitly requests that mode, grilling with documentation, or `grill-with-docs`.
+Default to Grilling. Select With Docs only when the user explicitly requests that mode or grilling with documentation.
 
 | Mode | Read and follow |
 | --- | --- |
-| Grilling, including requests for `grilling` or `grill-me` | [Grilling](references/grilling/grilling.md) |
+| Grilling | [Grilling](references/grilling/grilling.md) |
 | With Docs | [Grill with Docs](references/with-docs/grill-with-docs.md) |

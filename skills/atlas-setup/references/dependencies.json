@@ -3,6 +3,7 @@
   "packages": [
     "animated-driven-frontend",
     "atlas-craft",
+    "atlas-debug",
     "atlas-explain",
     "atlas-figures",
     "atlas-grill",
@@ -13,6 +14,7 @@
     "atlas-review",
     "atlas-to-spec",
     "atlas-to-tickets",
+    "atlas-verifiers",
     "atlas-verify",
     "atlas-wayfinder",
     "html-ui",

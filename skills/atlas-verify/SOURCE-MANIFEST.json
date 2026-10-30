@@ -22,13 +22,6 @@
     "scripts/validate-report.py",
     "scripts/validate_report_lib.py",
     "licenses/pe-verify-NOTICE.txt",
-    "references/create/create-verification-skill.md",
-    "licenses/pstack-create-verification-skill.txt",
-    "references/create/references/feature-map-example/README.md",
-    "references/create/references/feature-map-example/create-note.md",
-    "references/create/references/feature-map-example/search.md",
-    "references/maintain/maintain-verification-skill.md",
-    "licenses/pstack-maintain-verification-skill.txt",
     "references/performance/benchmark-checklist.md",
     "licenses/pstack-benchmark-checklist.txt",
     "references/stress/break-ui.md",
@@ -37,9 +30,17 @@
   ],
   "authoredInputs": [
     "skills/atlas-verify/SKILL.md",
-    "skills/atlas-verify/agents/openai.yaml"
+    "skills/atlas-verify/agents/openai.yaml",
+    "skills/atlas-verifiers/references/project-verifiers.md"
   ],
-  "authoredReferences": [],
+  "authoredReferences": [
+    {
+      "input": "skills/atlas-verifiers/references/project-verifiers.md",
+      "target": "references/project-verifiers.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "5d02375e821d88955c71c238d8d835f0c6be0d80398c4c976ec50593687b5f80"
+    }
+  ],
   "dependencies": [
     {
       "id": "atlas-review",
@@ -208,84 +209,6 @@
       "patchSha256": "d7e7901134439c7815b35785019d2bc8c48041a6bd0f3dfd95086bf2389b3ca8"
     },
     {
-      "id": "pstack-create-verification-skill",
-      "owner": "atlas-verify",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
-        "path": "skills/create-verification-skill/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/README.md",
-          "classification": "verbatim",
-          "sourceSha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
-          "carriedPath": "references/create/references/feature-map-example/README.md",
-          "carriedSha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba"
-        },
-        {
-          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/create-note.md",
-          "classification": "verbatim",
-          "sourceSha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
-          "carriedPath": "references/create/references/feature-map-example/create-note.md",
-          "carriedSha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7"
-        },
-        {
-          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/search.md",
-          "classification": "verbatim",
-          "sourceSha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
-          "carriedPath": "references/create/references/feature-map-example/search.md",
-          "carriedSha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823"
-        }
-      ],
-      "notices": [],
-      "sourceSha256": "bba612e8b81a02df0f49e6f6911f3b543c8c7d9f1f3c13ae6c0e2d58cc8c3ad3",
-      "carriedPath": "references/create/create-verification-skill.md",
-      "carriedSha256": "8b2c2c89a65b70a45a12699c8f693b6eaa566af4854072d78b995119ce9c4050",
-      "licensePath": "licenses/pstack-create-verification-skill.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Bound generator writes to the project verifier directory, report product startup failures instead of repairing them, distinguish unmet prerequisites from verified regressions, and route maintenance to the bundled method. Preserve self-proof, cleanup and the complete feature-map examples.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": [
-        "verify-method-authority",
-        "verify-project-verifier-bridge"
-      ],
-      "patch": "sources/patches/pstack-create-verification-skill.patch",
-      "patchSha256": "808be8cda7486926604e4a8a53a5d1d6dc7f42ec38cbaaa9c2709b21321807cb"
-    },
-    {
-      "id": "pstack-maintain-verification-skill",
-      "owner": "atlas-verify",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
-        "path": "skills/maintain-verification-skill/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [],
-      "notices": [],
-      "sourceSha256": "5943f7747da6aafcf5c1063c988e725c97e415866f5c7746279012f35cb49815",
-      "carriedPath": "references/maintain/maintain-verification-skill.md",
-      "carriedSha256": "f1232cc546bf4cb0dadfd155fd959634c7037a3aa69ea5e8fc24fa631074432e",
-      "licensePath": "licenses/pstack-maintain-verification-skill.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Use host-bounded source readers with a sequential fallback, keep one live driver, make changed mean proven local corrections rather than publication, and resolve creation through the bundled method. Preserve all-feature source/live coverage and product-code read-only scope.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": [
-        "verify-method-authority",
-        "verify-project-verifier-bridge"
-      ],
-      "patch": "sources/patches/pstack-maintain-verification-skill.patch",
-      "patchSha256": "2b2488da1b0a1446ba0620f6e9ee2d9db1753e0bd375c72e70145a1f86c6f286"
-    },
-    {
       "id": "pstack-benchmark-checklist",
       "owner": "atlas-verify",
       "classification": "patched",
@@ -388,24 +311,10 @@
       "section": "Atlas Verify",
       "sources": [
         "pe-verify",
-        "pstack-create-verification-skill",
-        "pstack-maintain-verification-skill",
         "pstack-benchmark-checklist",
         "break-ui"
       ],
-      "decision": "Select Run, Create, Maintain or Performance from the requested outcome. Product fixes remain outside verification. Run owns PE reporting; Create/Maintain own selected verifier assets, and standalone Performance owns measurement evidence. Missing local verifier assets do not add generator/maintenance work to a Run. UI Stress exercises worst-case data in isolated temporary fixtures and returns repairs to the executor; it retains its own report unless contributing to Run."
-    },
-    {
-      "id": "verify-project-verifier-bridge",
-      "owner": "atlas-verify",
-      "document": "skills/atlas-verify/references/project-verifiers.md",
-      "section": "Coverage and reporting",
-      "sources": [
-        "pe-verify",
-        "pstack-create-verification-skill",
-        "pstack-maintain-verification-skill"
-      ],
-      "decision": "Use reusable app-driving instructions without copying the report engine. Map requested features and entrypoints deliberately into PE feature/list reports, preserve prerequisites and lifecycle-versus-behavior states, reuse evidence, and keep one driver/cleanup owner per shared instance. Creation proves one seeded feature; maintenance accounts for every mapped feature."
+      "decision": "Run, UI Stress and Performance execute requested QA. Product fixes remain outside verification. Run owns the structured report; other methods retain their deliverables and reuse evidence when contributing to Run. A missing project verifier does not select asset creation or maintenance, which belongs to Atlas Verifiers."
     },
     {
       "id": "verify-performance-evidence",
@@ -431,8 +340,9 @@
     }
   ],
   "files": {
-    "SKILL.md": "6d6306ee5bceb25e67e6079f1925ab4cccd70ba62702cd994d4242c13a306dc3",
-    "agents/openai.yaml": "61b94c481f785dc5a979ec390f7efc73adcdc17714ae18ceaf5617a1ce639590",
+    "SKILL.md": "cf2e64f4f6f1170daee5902d449d5be2d821dea25dc52b1caed1f52723aaea82",
+    "agents/openai.yaml": "d325b63ea9503ab25ac2950f68530f4675a0db95755c90df5a555f88e638251c",
+    "references/project-verifiers.md": "5d02375e821d88955c71c238d8d835f0c6be0d80398c4c976ec50593687b5f80",
     "references/run.md": "b153d3724fe4b54e0ffd900a66da346c36fbe6a25c5ce6fab3e7fdb22ada40cb",
     "licenses/pe-verify.txt": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
     "assets/report-template.html": "1930221f277f20c83f263539ed9d429e92396e76633805214d9fb7b4c48f7721",
@@ -452,18 +362,10 @@
     "scripts/validate-report.py": "6d7ed4cc7f760d962d866a1cd7a73f4e0d77ec3502dab7d856065e11b83059ee",
     "scripts/validate_report_lib.py": "cd9af844b9ed3ebb05bb29167627757a7ca69fec7f858da43db61459eb427126",
     "licenses/pe-verify-NOTICE.txt": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488",
-    "references/create/create-verification-skill.md": "8b2c2c89a65b70a45a12699c8f693b6eaa566af4854072d78b995119ce9c4050",
-    "licenses/pstack-create-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/create/references/feature-map-example/README.md": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
-    "references/create/references/feature-map-example/create-note.md": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
-    "references/create/references/feature-map-example/search.md": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
-    "references/maintain/maintain-verification-skill.md": "f1232cc546bf4cb0dadfd155fd959634c7037a3aa69ea5e8fc24fa631074432e",
-    "licenses/pstack-maintain-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/performance/benchmark-checklist.md": "90b3c7aea438ef7c0f4341ed5d0f6e58c8711dc701a5c82180bfd16734af392b",
     "licenses/pstack-benchmark-checklist.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/stress/break-ui.md": "cda2c95f025b7214aced34bf70b14bd39b54aabcc0368da227b1fa7d54d52edb",
     "licenses/break-ui.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/stress/CATALOG.md": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15",
-    "references/project-verifiers.md": "5d02375e821d88955c71c238d8d835f0c6be0d80398c4c976ec50593687b5f80"
+    "references/stress/CATALOG.md": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15"
   }
 }

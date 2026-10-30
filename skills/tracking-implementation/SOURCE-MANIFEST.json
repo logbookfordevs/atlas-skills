@@ -39,7 +39,7 @@
       "id": "atlas-review",
       "relationship": "behavioral",
       "required": true,
-      "condition": "For checkpoint Code review and applicable specialist methods selected from the change; reuse adequate evidence for the same checkpoint and question."
+      "condition": "For checkpoint Standards & Spec review and applicable specialist methods selected from the change; reuse adequate evidence for the same checkpoint and question."
     },
     {
       "id": "plannotator",
@@ -217,7 +217,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "4b24f66b58e63b974770cfba51d1a69fca33a9237d1e0ab9edc8e61b5206b168",
+    "SKILL.md": "3cf278b58b865edca2ab37a107e8e83f29cd645b82b103d8de9679e2a8ffecbc",
     "agents/openai.yaml": "6ab2c66fa97ccfb10c7149239063fa3abe88d32179ff987192a451d14aec45ce",
     "references/resume.md": "3c8fb60dd8e8dc3b6fc5375096e82d810f368c3d59f6f41d0d0c7ab4e4873bab",
     "references/review-guides.md": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f",
@@ -231,6 +231,6 @@
     "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-encode-lessons-in-structure/SKILL.md": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
     "licenses/pstack-principle-encode-lessons-in-structure.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/review-selection.md": "d5aab266a2633ab907563b3d79432e5a8e49a4c01927b873aff34f3f958680af"
+    "references/review-selection.md": "47d910d49aaba750b98e02f363d73f0d920d7588bf8c1b5ad9805c5f2080472c"
   }
 }

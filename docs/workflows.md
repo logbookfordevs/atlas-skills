@@ -28,13 +28,16 @@ Suppose users need to save a dashboard filter, return later and restore it, but 
 | An interface needs realistic edge-case data | Atlas Verify: UI Stress | An isolated data-switching harness and findings, with fixes handed to implementation |
 | Animation drops frames | Atlas Motion: Performance | A cause-based diagnosis with code evidence and available profiling results |
 | Completed behavior needs proof | Atlas Verify: Run, when requested or selected for the task | A structured verification report with actual evidence and coverage gaps |
+| Verification knowledge should be reusable, or a state model needs investigation | Atlas Verifiers, explicitly invoked | A project verifier, maintained checks or a checked statechart, selected from the problem |
 | The change needs judgment | Atlas Review, or Tracking's checkpoint review gate | Findings, their resolution and remaining uncertainty |
+
+Atlas Verify executes requested QA through Run, UI Stress or Performance. Atlas Verifiers is a separate manual entry for building or maintaining reusable checks and investigating state models. Describe the problem when invoking it; the agent recommends an approach from the context, proceeds when the intended outcome is clear, and helps you choose before starting materially different work.
 
 These are choices, not required phases. Once scope is settled, a request might be:
 
 > Build saved filters test-first. Track the implementation in a local HTML record, then run a verification of the completed behavior in my logged-in browser session.
 
-Tracking records execution state; Atlas Implement supplies selected implementation methods. Tracking's gate runs Code review plus applicable specialist reviews, each with a concrete question and scope. Existing same-checkpoint evidence can be reused. At acceptance, Tracking launches Plannotator's interactive diff review when available, then offers annotation of the local implementation record. For delegated work, the parent able to host the interactive session owns its launch, records feedback and delegates requested implementation changes back. Final checkpoint acceptance remains the user's decision. Tracking does not automatically select Atlas Verify.
+Tracking records execution state; Atlas Implement supplies selected implementation methods. Tracking's gate runs Standards & Spec review plus applicable specialist reviews, each with a concrete question and scope. Existing same-checkpoint evidence can be reused. At acceptance, Tracking launches Plannotator's interactive diff review when available, then offers annotation of the local implementation record. For delegated work, the parent able to host the interactive session owns its launch, records feedback and delegates requested implementation changes back. Final checkpoint acceptance remains the user's decision. Tracking does not automatically select Atlas Verify.
 
 For a tiny edit, ordinary project validation may be enough. A local test run, a review, a commit, a push and user acceptance are distinct outcomes.
 
@@ -62,7 +65,8 @@ Use Animated-Driven Frontend for synchronized progress, scroll sequences, render
 | --- | --- | --- |
 | A bug has an unknown cause | Independent Diagnosing Bugs | Establish the cause and validate the fix through the actual behavior. |
 | Unresolved decisions exceed one session | Atlas Wayfinder | Create or resume a decision map; it plans by default rather than executing the whole project. |
-| You need to understand code or an interface | Atlas Explain: How, Why, Teach or Interface | Request Interface to explain a live page or reconstruct a screenshot; otherwise retain the chooser when the mode is unspecified. |
+| Something is broken, failing or unexpectedly slow | Atlas Debug | Follow the reproduction-first diagnosis loop; use Statechart when modeled paths help investigate or understand the bug, or on request. |
+| You need to understand code, an interface or recent work | Atlas Explain: How, Why, Teach, Interface or Catch Up | Request Catch Up for this chat’s changes and pending decisions, or Interface for a live page or screenshot; otherwise retain the chooser when the mode is unspecified. |
 | A shared contract could affect other consumers | Atlas Review: Impact | Trace downstream assumptions and preserve evidence for the risks. |
 | A consequential assumption needs challenge | Atlas Review: Adversarial | Independent review supplies evidence for judgment, not automatic authority. |
 | Work benefits from teammates | Team Up: Delegation, Arena or Swarm | Choose the smallest capable team; use Arena for competing candidates, Swarm for structured coverage or races. |

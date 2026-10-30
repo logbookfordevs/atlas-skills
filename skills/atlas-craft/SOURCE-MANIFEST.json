@@ -670,7 +670,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "6bc4b03664613e4d42fe8eb0ba9002c50505825cb47a554f52ba1d603cb3d169",
+    "SKILL.md": "b7815acbbea3244bec5ca578d46b8354cbf06a7e51ee8cac4f4c82ca5e1fefb3",
     "agents/openai.yaml": "48c44e6c74b77a96b543cf5b33bb169e577033fdadb3867d2a9540f79782d4d9",
     "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
     "references/color/index.md": "a19738d2312c97fe40ea4a05000387085528eac9ddf994345687df72ed16a0f7",

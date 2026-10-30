@@ -15,7 +15,7 @@ Work in Atlas Mode for this task and its follow-ups until the user exits it. Tak
 3. At meaningful transitions, use the same selection rule before changing the approach. Continue an agreed workflow without asking again; carry explicit choices and active records into follow-ups. Finish when the requested outcome and selected methods' completion conditions are met.
 4. Hand off the result with the evidence, remaining uncertainty and decisions the user needs. Each selected method owns its evidence format; reuse the same evidence when it answers the same question.
 
-A manually invoked skill remains manual outside Atlas Mode. Inside this explicitly requested mode, read and apply its instructions directly once the approach is selected, including Wayfinder, To Spec, To Tickets, Writing for Humans, Retro, Figures and Animated-Driven Frontend. Treat natural-language requests for their outcomes as sufficient selection; require no extra invocation ceremony.
+A manually invoked skill remains manual outside Atlas Mode. Inside this explicitly requested mode, read and apply its instructions directly once the approach is selected, including Wayfinder, To Spec, To Tickets, Verifiers, Writing for Humans, Retro, Figures and Animated-Driven Frontend. Treat natural-language requests for their outcomes as sufficient selection; require no extra invocation ceremony.
 
 Select complementary methods where they address different needs. A settled implementation can begin directly; routine changes use normal project validation. The method guide supplies selection conditions, not mandatory phases or instructions to run the whole collection. Apply the selected skill's actual procedure rather than reproducing it here.
 

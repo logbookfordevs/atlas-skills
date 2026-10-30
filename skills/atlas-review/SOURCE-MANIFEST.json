@@ -894,7 +894,7 @@
         "code-review",
         "pstack-interrogate"
       ],
-      "decision": "Select Interrogate for independent same-intent challenge without automatically adding it to Code review. Keep lead-filtered findings separate from Standards/Spec axes. Honor actual host reviewers and disclose diversity/context gaps; quality blockers require concrete consequences, not a line-count or finding-count heuristic. Review remains read-only."
+      "decision": "Select Interrogate for independent same-intent challenge without automatically adding it to Standards & Spec review. Keep lead-filtered findings separate from Standards/Spec axes. Honor actual host reviewers and disclose diversity/context gaps; quality blockers require concrete consequences, not a line-count or finding-count heuristic. Review remains read-only."
     },
     {
       "id": "review-impact-proof",
@@ -909,7 +909,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "a230514e64e62e27206ef2a4005dbbfb5f755e036b611390fdb4d8e90dad055e",
+    "SKILL.md": "17ea9cc1f15260b1f5bd952e2f2dc213f10569f4bc13f97f09f27790b45b4b38",
     "agents/openai.yaml": "9b78d611bb041022a034a993fc70b605d29d162c4526650a80fad72932bdd0a6",
     "references/static/static-review.md": "a105165ead3aa7af298ec25dcd881c60463d97805830b62b8f9dcc0e00b85b0d",
     "references/static/scripts/changed-files.sh": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7",
@@ -982,6 +982,6 @@
     "references/adversarial/references/rubric.md": "bf4e0f9b620cd54823cbf606aaef16a4aad62e9a46af1c3f288c80a5aaada869",
     "references/impact/blast-radius.md": "0136c722bcc2897b95b01ae986bb57f4c6bb75ba32f916ec7e704aa992a274d2",
     "licenses/pstack-blast-radius.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/ownership.md": "f141d5ff5a8079aa1d4f2966ef05fa1ab3e4847ffbab7f3a54315f3bfb4bf3e1"
+    "references/ownership.md": "629d421c8a646f317ac0357053ea187d1738599d41364d1dda71cad2587a55d7"
   }
 }

@@ -30,7 +30,11 @@
     "references/interface/from-an-image.md",
     "references/interface/read-the-system.md",
     "references/interface/no-browser.md",
-    "references/interface/find-the-effect.md"
+    "references/interface/find-the-effect.md",
+    "references/catch-up/ketchup.md",
+    "licenses/pstack-ketchup.txt",
+    "references/bro/bro.md",
+    "licenses/pstack-bro.txt"
   ],
   "authoredInputs": [
     "skills/atlas-explain/SKILL.md",
@@ -319,6 +323,54 @@
       ],
       "patch": "sources/patches/explain-interface.patch",
       "patchSha256": "7bdd4b94b1665e17708b107707be7a65f0ebedfbf3294e53804ec3e84b90202b"
+    },
+    {
+      "id": "pstack-ketchup",
+      "owner": "atlas-explain",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/ketchup/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "94d04bd4f4dd5d77229f2a349796b1863143edac7551a6c2068e1d80f73228b9",
+      "carriedPath": "references/catch-up/ketchup.md",
+      "carriedSha256": "96c44a877ce57e6874ea3bd8550eee5776a2351d21e1620a6bbc82a23bd114d3",
+      "licensePath": "licenses/pstack-ketchup.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Resolve Bro voice through a bundled reference and anchor the catch-up window to the current request rather than slash-command spelling.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": [],
+      "patch": "sources/patches/pstack-ketchup.patch",
+      "patchSha256": "b061e80b70688167b3bdd5b4c81e9f6fec116ba824fb776d315be52c936c0e9d"
+    },
+    {
+      "id": "pstack-bro",
+      "owner": "atlas-explain",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/bro/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+      "carriedPath": "references/bro/bro.md",
+      "carriedSha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+      "licensePath": "licenses/pstack-bro.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Unchanged Pstack Bro reference, consumed only for its voice by Catch Up.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": []
     }
   ],
   "rulings": [
@@ -330,9 +382,11 @@
       "sources": [
         "pstack-how",
         "pstack-why",
-        "pstack-teach"
+        "pstack-teach",
+        "explain-interface",
+        "pstack-ketchup"
       ],
-      "decision": "An omitted mode requires a brief How/Why/Teach chooser and a user answer before method loading or investigation. Honor explicit mode choices and reuse them for follow-ups. Teach calls bundled methods directly so internal dispatch does not repeat the chooser."
+      "decision": "Use an explicitly selected method; Interface and Catch Up requests select their methods directly. Otherwise offer How, Why, Teach, Interface or Catch Up and wait before investigation. Catch Up requires its own request rather than continuing a previous explanation mode. Teach loads bundled methods without repeating the chooser."
     },
     {
       "id": "explain-why-scope",
@@ -380,8 +434,8 @@
     }
   ],
   "files": {
-    "SKILL.md": "a2a8213b48915b4be29f990805d3f990389d5f9721e15104173780d2e6e3517e",
-    "agents/openai.yaml": "d00f6654cec3faa2dc505aa73854e4b8c48a1cf2abc79848601f2077e5313f39",
+    "SKILL.md": "11a1e963ae678ef8afd730bc7c4735e9c150f509c125f0bb442371ee9d67dcc1",
+    "agents/openai.yaml": "84fec62002efb2e81be82388d2e74cc0fc830b2912380c116008e931ac270b99",
     "references/how/how.md": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
     "licenses/pstack-how.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/how/references/explainer-prompt.md": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
@@ -409,6 +463,10 @@
     "references/interface/from-an-image.md": "c918493497596830c13dbd752781ddd1268090b244e5ded028d3569480a25fde",
     "references/interface/read-the-system.md": "ff6d988ea7e5c45a15c5efe0f94e13e3df3e95f03e8fd163a119266844f29a67",
     "references/interface/no-browser.md": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
-    "references/interface/find-the-effect.md": "06786fd18303b1b931ef16ede258d01a78210ef1f5759e143dbcb188610a9627"
+    "references/interface/find-the-effect.md": "06786fd18303b1b931ef16ede258d01a78210ef1f5759e143dbcb188610a9627",
+    "references/catch-up/ketchup.md": "96c44a877ce57e6874ea3bd8550eee5776a2351d21e1620a6bbc82a23bd114d3",
+    "licenses/pstack-ketchup.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/bro/bro.md": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+    "licenses/pstack-bro.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }

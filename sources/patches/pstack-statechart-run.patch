@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index 4efd368..9114701 100644
+--- a/source.md
++++ b/source.md
+@@ -401,7 +401,7 @@ export async function check(specFile: string, configFile: string): Promise<Check
+     if (exit === 2) throw failed(judged.first);
+     const checked: Verdict[] = [];
+     for (const rule of rules) checked.push(must(verdicts, ruleKey(rule)));
+-    const common = {
++    const common: Pick<CheckResult, "spec" | "exit" | "stop" | "states" | "messages" | "rules"> = {
+       spec,
+       exit,
+       stop: judged.stop,

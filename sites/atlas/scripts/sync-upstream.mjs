@@ -18,6 +18,7 @@ const authors = {
   'https://github.com/backnotprop/pstack': 'Lauren Tan / Pstack mirror',
 };
 const titles = {
+  "diagnosing-bugs": "Diagnosing Bugs",
   'hairline-create': 'Hairline Create', 'hairline-adopt': 'Hairline Adopt',
   anatomy: 'Anatomy', 'engraved-figures': 'Engraved Figures', teardown: 'Teardown',
   'iso-glow': 'ISO-GLOW', colorfigures: 'Colorfigures',
@@ -36,9 +37,14 @@ const titles = {
   "wayfinder": "Wayfinder",
   "pstack-create-verification-skill": "Create Verification Skill",
   "pstack-maintain-verification-skill": "Maintain Verification Skill",
+  "pstack-statechart": "Statechart",
+  "pstack-create-formal-verification-skill": "Create Formal Verification Skill",
+  "pstack-maintain-formal-verification-skill": "Maintain Formal Verification Skill",
   "pstack-benchmark-checklist": "Benchmark Checklist",
   "pstack-interrogate": "Interrogate",
   "pstack-blast-radius": "Blast Radius",
+  "pstack-ketchup": "Ketchup",
+  "pstack-bro": "Bro (voice)",
   "pstack-how": "How",
   "pstack-why": "Why",
   "pstack-teach": "Teach",

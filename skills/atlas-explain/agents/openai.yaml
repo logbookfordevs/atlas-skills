@@ -1,6 +1,6 @@
 interface:
   display_name: "Atlas Explain"
-  short_description: "Explain code, rationale or how an interface was built."
-  default_prompt: "Use $atlas-explain. Follow its chooser when my request does not identify How, Why, Teach or Interface."
+  short_description: "Explain code, interfaces or recent work and decisions."
+  default_prompt: "Use $atlas-explain. Follow its chooser when my request does not identify How, Why, Teach, Interface or Catch Up."
 policy:
   allow_implicit_invocation: true
