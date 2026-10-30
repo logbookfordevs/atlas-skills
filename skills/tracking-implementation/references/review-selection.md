@@ -1,6 +1,6 @@
 # Checkpoint review selection
 
-Use Code as the baseline for every checkpoint. Select additional Atlas Review methods when the actual change raises a question they address. Before dispatch, record each selected method, its review question and the affected scope in Complete Review Record. Read Atlas Review's entry and selected method instructions for execution.
+Use Standards & Spec as the baseline for every checkpoint. Select additional Atlas Review methods when the actual change raises a question they address. Before dispatch, record each selected method, its review question and the affected scope in Complete Review Record. Read Atlas Review's entry and selected method instructions for execution.
 
 | Change or uncertainty | Additional method | Question to make concrete for this checkpoint |
 | --- | --- | --- |
@@ -13,4 +13,4 @@ Select on the changed behavior and a concrete review question, not file extensio
 
 For Adversarial, record both the consequence and the unresolved assumption. A local rename or easily reversed styling choice does not meet that condition merely because every change carries some uncertainty.
 
-Use the same checkpoint identity across reviews, with scopes matched to their questions. Preserve Code's Standards and Spec reports separately from specialist findings. Reuse evidence where it answers the same question; do not count one review's completion as proof that another selected method ran. Report unavailable tools, inspection or independent contexts as coverage gaps under the main skill's gate policy.
+Use the same checkpoint identity across reviews, with scopes matched to their questions. Preserve the Standards and Spec reports separately from specialist findings. Reuse evidence where it answers the same question; do not count one review's completion as proof that another selected method ran. Report unavailable tools, inspection or independent contexts as coverage gaps under the main skill's gate policy.
