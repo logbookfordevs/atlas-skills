@@ -10,7 +10,7 @@ Atlas maintains what it authors, patches or bundles. Complementary independent s
 
 ## Skills V2
 
-Collection releases use Git tags and GitHub releases. **v1.2.0** identifies this skill set; see the [release notes](CHANGELOG.md). Upstream revisions remain recorded separately in each package’s source receipt.
+Collection releases use Git tags and GitHub releases. **v1.2.0** is the latest published release; **v1.3 is in progress** on this branch. See the [release notes](CHANGELOG.md). Upstream revisions remain recorded separately in each package’s source receipt.
 
 Install the packages below, or import the shared stack to include the recommended independent skills. Original-name upstream packages retain their authorship and methods.
 
@@ -25,14 +25,14 @@ Install the packages below, or import the shared stack to include the recommende
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
 | [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose bugs with Matt’s reproduction loop; use Statechart when modeled paths help investigate or understand the bug |
 | [Atlas Implement](skills/atlas-implement/SKILL.md) | Architect, TDD and Source-Driven methods, selected independently or together |
-| [Atlas Review](skills/atlas-review/SKILL.md) | Code, Adversarial, Impact, Static, Interface, Motion and Motion Audit review |
+| [Atlas Review](skills/atlas-review/SKILL.md) | Standards & Spec, Adversarial, Impact, Static, Interface, Motion and Motion Audit review |
 | [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, stress-test UI data and assess performance evidence |
 | [Atlas Verifiers](skills/atlas-verifiers/SKILL.md) | Manual guidance for creating or maintaining app-driving and formal checks, or inspecting a state model |
 | [Atlas Craft](skills/atlas-craft/SKILL.md) | Six refinement domains plus an explicitly requested States workbench; conditional Mobile Web guidance |
 | [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid, Performance diagnosis and read-only Opportunities |
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Implementation state and evidence alongside any executor, with optional Audit Trail |
 | [Animated-Driven Frontend](skills/animated-driven-frontend/SKILL.md) | Manually invoked ZERO engineering knowledge |
-| [Team Up](skills/team-up/SKILL.md) | Role/model/effort selection, Arena candidate synthesis, Swarm coverage or races; optional shared subject preferences |
+| [Team Up](skills/team-up/SKILL.md) | Role/model/effort selection, Arena candidate synthesis and Swarm coverage or races; cross-family review and subject preferences by default, with Council team selection |
 | [Writing for Humans](skills/writing-for-humans/SKILL.md) | Author voice and reader experience, technical documentation, and shared Unslop guidance |
 | [Atlas Retro](skills/atlas-retro/SKILL.md) | Diagnose session friction or explicitly enforce recurring-mistake prevention |
 | [Atlas Setup](skills/atlas-setup/SKILL.md) | Manual dependency and stack check, with explicitly approved cleanup |
