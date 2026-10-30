@@ -18,8 +18,6 @@ Read the selected methods before planning or performing their work. Combine meth
 | Formal Create | Build reusable checks for important properties, with explicit tools, bounds, assumptions and code coverage | [Formal Create](references/formal-create/SKILL.md) |
 | Formal Maintain | Reconcile existing formal checks with changed code, distinguishing verification drift from product bugs | [Formal Maintain](references/formal-maintain/SKILL.md) |
 
-Requests for `create-verification-skill`, `maintain-verification-skill`, `statechart`, `create-formal-verification-skill` or `maintain-formal-verification-skill` select their corresponding bundled method. Formal Create uses Statechart when its chosen check is a TLA+ model; the generated skill resolves that bundled reference directly.
-
 Create and Maintain write verification assets. Statechart works in scratch space. Formal methods may introduce temporary defects to prove checks can fail; restore those experiments before handoff and preserve existing product changes. Product repairs require implementation authority. Keep each method's evidence and deliverable contract, including bounds, assumptions and unverified coverage.
 
 Running QA, UI stress checks or performance measurements belongs to Atlas Verify. Reusable app-driving skills remain usable directly; they do not require a copied Atlas report engine.

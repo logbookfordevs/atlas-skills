@@ -8,7 +8,7 @@ metadata:
 
 # Atlas Explain
 
-Use the explicitly supplied mode. An explicit Catch Up or `ketchup` request selects Catch Up. A request for `explain-interface` or to explain how a live page, visual effect, animation or screenshot was built selects Interface. Otherwise, when no mode is supplied, ask the user to choose How, Why, Teach, Interface or Catch Up, giving the short descriptions below, and wait for their answer before investigating or loading method references. A topic alone does not select a mode. Reuse the chosen mode for follow-up questions in the same explanation; Catch Up requires its own request.
+Use the explicitly supplied mode. An explicit Catch Up request selects Catch Up. A request to explain how a live page, visual effect, animation or screenshot was built selects Interface. Otherwise, when no mode is supplied, ask the user to choose How, Why, Teach, Interface or Catch Up, giving the short descriptions below, and wait for their answer before investigating or loading method references. A topic alone does not select a mode. Reuse the chosen mode for follow-up questions in the same explanation; Catch Up requires its own request.
 
 | Mode | Short description | Read and follow |
 | --- | --- | --- |

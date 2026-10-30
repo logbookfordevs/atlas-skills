@@ -10,8 +10,6 @@ metadata:
 
 Select from the requested outcome and implementation context, honoring an explicit method choice. Read and follow each selected method before editing; combine methods when their needs apply.
 
-Treat requests for `architect`, `tdd` or `source-driven-development` as requests for the corresponding bundled method, and load it through the links below.
-
 | Method | When it applies | Read and follow |
 | --- | --- | --- |
 | Architect | An explicit Architect/design-first request, or a selected architectural decision about interfaces, ownership or module shape | [Architect](references/architect/architect.md) |

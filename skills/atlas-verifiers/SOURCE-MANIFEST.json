@@ -3444,7 +3444,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "a3c943b0095c39b4534a1e077fda6e5618ef995656256b14271355c72bf5c494",
+    "SKILL.md": "fd0cd9b49d3339d71b7e8e911199b37f70e6e63c3ba558865a48f59f7a0e2a45",
     "agents/openai.yaml": "708b605ea06a1f118507734f5972c31272da06d9e3baccade42bd1a5ad68c330",
     "references/create/create-verification-skill.md": "65bdea607bdfedb4fc0c7a7aa26d8aa51a522ddfe875b8ed34e6707173dcfb14",
     "licenses/pstack-create-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",

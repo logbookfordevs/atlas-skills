@@ -20,7 +20,7 @@ Select methods from the requested outcome and the change's material risks. Combi
 
 For Interface, use [Interface Changes](references/interface/changes/index.md) when the request names a branch, PR, commit range or uncommitted changes. Use [Interface Audit](references/interface/audit/index.md) for a screen, flow or repository audit. Preserve a supplied scope; ask when both interpretations remain materially different. Changes classifies introduced, regressed and pre-existing findings; Audit owns severity, consolidation and coverage. The six interface disciplines are bundled here, independent of a Craft installation.
 
-Requests for `interrogate` or `blast-radius` select the corresponding bundled method. Keep the Standards and Spec reports distinct from other selected methods' findings.
+Keep the Standards and Spec reports distinct from other selected methods' findings.
 
 Reviewing does not authorize fixes. Impact may run existing checks or owned scratch probes in isolated state; product code remains read-only. Motion Audit may write requested plans under the repository's artifact convention. Construction references bundled for motion judgments do not change that authorization. Follow [Motion ownership](references/motion-ownership.md) when UI polish and motion methods disagree.
 
