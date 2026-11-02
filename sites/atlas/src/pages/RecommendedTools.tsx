@@ -29,7 +29,7 @@ export function RecommendedTools() {
     <section aria-labelledby="agent-tools">
       <h2 id="agent-tools">Choose a home for your agents</h2>
       <p><a href="https://t3.codes/">T3 Code</a> is a control surface for coding agents, with desktop, web and mobile access. It is an option when you want to manage agent conversations through one app. Atlas also works in your existing supported host.</p>
-      <p><a href="https://ai-field-kit.logbookfordevs.com/">AFK — AI Field Kit</a> is our optional tooling for installing and managing skills, profiles and shared rules. The <AtlasLink to="/stack/">stack guide</AtlasLink> shows both terminal and UI installation.</p>
+      <p><a href="https://ai-field-kit.logbookfordevs.com/">AFK — AI Field Kit</a> is our optional tooling for installing and managing skills, packs and shared rules. The <AtlasLink to="/stack/">Logbook Atlas Core guide</AtlasLink> covers terminal and app installation for AFK’s kit, with the earlier app labels for AFK 2.0.7.</p>
     </section>
     <section id="agent-instructions" aria-labelledby="agent-instructions-title">
       <h2 id="agent-instructions-title">Borrow my agent instructions</h2>

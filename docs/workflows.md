@@ -12,7 +12,7 @@ Atlas packages group related methods while preserving their source records and c
 
 Required source methods and supporting files ship inside the consuming package. Some independent companions, such as Research and Prototype for Wayfinder ticket types, still require their own installation. Atlas Setup checks declared dependencies when requested. The [composition manifest](../sources/composition.json) records package contents; the [stack manifest](../stacks/atlas.json) selects packages to install. Neither is a runtime execution schedule.
 
-AFK — AI Field Kit is optional installation and management tooling. Its profiles are not Atlas workflow stages. See [stack installation](atlas-stack.md) for terminal and interface instructions.
+AFK — AI Field Kit is optional installation and management tooling. Its packs group skills for activation, independently of Atlas workflow stages. See [Core installation](atlas-stack.md) for terminal and interface instructions.
 
 ## Example: build saved filters
 
