@@ -102,7 +102,7 @@
     {
       "id": "playable",
       "path": "playable",
-      "classification": "verbatim",
+      "classification": "patched",
       "importedAt": "2026-11-02",
       "author": {
         "name": "April Zhu",
@@ -140,7 +140,17 @@
         "scripts/inspect_rig.py": "81cb44873e5141b413b069fbe2a55c03a08aeacd63635e3717c874b4b5820d5b",
         "scripts/to_glb.py": "d6930164d4af05edd764c7fcc44ba911e3ba91910655fa10d2119547052dfb12"
       },
-      "adaptation": "None. All downloaded files are carried verbatim; attribution and installation guidance live in the surrounding documentation."
+      "adaptation": "Make invocation manual-only and replace the discovery description with a concise human-facing summary. Add Atlas-owned host metadata with implicit invocation disabled. The workflow, assets, examples and original license remain unchanged.",
+      "patches": [
+        {
+          "file": "SKILL.md",
+          "patch": "patches/playable.patch",
+          "packagedSha256": "99894c81b911e1791511763cf7030cb5732183a7b5d1ec8de0b5adae95d21de2"
+        }
+      ],
+      "authoredFilesSha256": {
+        "agents/openai.yaml": "007f5f6fcc0cd841cfb6f9f20e4e37c38bc05716254c127257a51b591e0a6ad1"
+      }
     }
   ]
 }

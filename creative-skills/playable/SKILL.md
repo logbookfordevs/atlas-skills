@@ -1,6 +1,7 @@
 ---
 name: playable
-description: Turn a rigged 3D model (.glb / .gltf / .fbx / .blend — robots, mechs, drones, creatures, vehicles) or a sketch / drawing / photo of a robot into a playable character in the browser — one self-contained HTML page (three.js) with third-person game controls (WASD relative to the camera, shift to run, follow camera), the model's own animation clips blended by gait, one-key moves, tap-to-walk and a phone button bar, drawn in the iso-glow hairline style with lights (eyes, lamps, footprints, muzzle flashes). For a sketch it builds the robot from solid parts on joints and authors its animations. Use whenever someone wants to play with, drive, control, walk around or animate a 3D model or character in the browser, make a .glb "playable" or "controllable", rig or bring to life a robot from a drawing, or build a small character playground — even if they don't say "playable".
+description: "Turn a rigged 3D model or robot sketch into a playable browser character with animation, lights and desktop/mobile controls."
+disable-model-invocation: true
 ---
 
 # Playable
