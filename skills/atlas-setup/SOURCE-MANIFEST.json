@@ -27,7 +27,7 @@
         "sources/composition.json",
         "stacks/atlas.json"
       ],
-      "carriedSha256": "8e92276303814c1f8087066ba448e86fe94b745ff99538d679378b58cae2a9f1"
+      "carriedSha256": "f3ee19191a2abc1bcd2011f21a63dac7d3abc8fbc07d62dfdd060c7f41064ab6"
     },
     {
       "generator": "stack-manifest",
@@ -35,7 +35,7 @@
       "inputs": [
         "stacks/atlas.json"
       ],
-      "carriedSha256": "2dc91228cc0cbab34ac7a4a8e0146cebdb08958b93ba4f8ab874a3d19f04da68"
+      "carriedSha256": "0b0d45332f655db4e5c0d12d70619ebf1fb3e008882c04e446462673ff36ec5b"
     }
   ],
   "dependencies": [],
@@ -45,7 +45,7 @@
     "SKILL.md": "8db95a41ded07e14f090e2ee708fd96761d991cb4a6a7bf873e6732eff428f64",
     "agents/openai.yaml": "caf11b5bc46d0b1181c27f69da4135b287be82ebfcfe9dfff4d2048dda6812f7",
     "references/cleanup.md": "0fd0efee090c394d5cade57c44180b5fce9f40e1e7b8bc5ef3b644b07eac93de",
-    "references/dependencies.json": "8e92276303814c1f8087066ba448e86fe94b745ff99538d679378b58cae2a9f1",
-    "references/stack.json": "2dc91228cc0cbab34ac7a4a8e0146cebdb08958b93ba4f8ab874a3d19f04da68"
+    "references/dependencies.json": "f3ee19191a2abc1bcd2011f21a63dac7d3abc8fbc07d62dfdd060c7f41064ab6",
+    "references/stack.json": "0b0d45332f655db4e5c0d12d70619ebf1fb3e008882c04e446462673ff36ec5b"
   }
 }

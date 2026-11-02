@@ -90,13 +90,6 @@
         "author": "Matt Pocock",
         "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/skills/engineering/diagnosing-bugs/SKILL.md",
         "classification": "verbatim"
-      },
-      {
-        "id": "pstack-statechart",
-        "title": "Statechart",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/25abb38559ddbabec563646224d09eff9a250eca/skills/statechart/SKILL.md",
-        "classification": "patched"
       }
     ],
     "collections": []
@@ -293,13 +286,6 @@
         "title": "Maintain Verification Skill",
         "author": "Lauren Tan / Pstack mirror",
         "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/maintain-verification-skill/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "pstack-statechart",
-        "title": "Statechart",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/25abb38559ddbabec563646224d09eff9a250eca/skills/statechart/SKILL.md",
         "classification": "patched"
       },
       {

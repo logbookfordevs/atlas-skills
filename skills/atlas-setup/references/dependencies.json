@@ -89,6 +89,19 @@
       ]
     },
     {
+      "id": "statechart",
+      "source": "https://github.com/backnotprop/pstack",
+      "skill": "statechart",
+      "command": "npx skills add https://github.com/backnotprop/pstack --skill statechart",
+      "consumers": [
+        {
+          "skill": "atlas-verifiers",
+          "required": true,
+          "condition": "When Formal Create selects a TLA+ model, use independently installed Statechart to read model-checking results. If unavailable, report the gap and offer targeted installation before dependent work."
+        }
+      ]
+    },
+    {
       "id": "writing-for-agents",
       "source": "https://github.com/mattpocock/skills",
       "skill": "writing-for-agents",

@@ -37,7 +37,6 @@ const titles = {
   "wayfinder": "Wayfinder",
   "pstack-create-verification-skill": "Create Verification Skill",
   "pstack-maintain-verification-skill": "Maintain Verification Skill",
-  "pstack-statechart": "Statechart",
   "pstack-create-formal-verification-skill": "Create Formal Verification Skill",
   "pstack-maintain-formal-verification-skill": "Maintain Formal Verification Skill",
   "pstack-benchmark-checklist": "Benchmark Checklist",

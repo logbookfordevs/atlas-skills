@@ -16,7 +16,7 @@ Use this guide with Atlas Mode’s selection rule to distinguish methods by thei
 
 | Skill | Methods and selection |
 | --- | --- |
-| `atlas-debug` | Diagnose bugs and performance regressions through a tight reproduction loop. Load Statechart when checking state transitions, retries or concurrency materially helps investigation or human understanding, or when explicitly requested; retain real-code reproduction and verification. |
+| `atlas-debug` | Diagnose bugs and performance regressions through a tight reproduction loop. Retain real-code reproduction and fix verification. |
 | `atlas-implement` | **Architect:** resolve interfaces, ownership, types and module shape before implementation when the design warrants exploration. **TDD:** prove behavior test-first through a meaningful seam. **Source-Driven:** establish version-sensitive framework, library or API facts. Combine the methods that address the task's actual needs. |
 | `html-ui` | **Wireframe:** answer hierarchy, layout and flow questions at low fidelity. **Model:** make an agreed interface concrete as a polished interactive artifact. |
 | `atlas-craft` | **Color:** palette, tokens and contrast. **Type:** fonts, scale and wrapping. **Layout:** grouping, spacing and adaptivity. **Accessibility:** semantics, keyboard paths, focus and forms. **UI Polish:** surfaces, elevation, icons and optical details. **Copy:** labels, errors, empty states and localization. **States:** on request, prepare a real component’s existing states with fixtures and a switcher; setup leaves product visuals unchanged. Mobile browser quirks use Craft’s conditional **Mobile Web** reference, not another mode. Preserve the accepted visual identity. |
@@ -38,7 +38,7 @@ Select checks from the task and material uncertainty; Tracking does not select v
 
 | Skill | Methods and selection |
 | --- | --- |
-| `atlas-verifiers` | **Create:** build a reusable app-driving verifier and feature map. **Maintain:** refresh that verifier against source and live behavior. **Statechart:** check a state model and explain paths that break its rules. **Formal Create:** build reusable property checks with a suitable model checker or code-level verifier. **Formal Maintain:** bring those checks back in sync with changed code. Select from the requested outcome and project context; explain and recommend options when the user describes only a problem, and obtain a choice when approaches imply materially different work. This manual skill can be selected within Atlas Mode; ordinary QA stays in Atlas Verify. |
+| `atlas-verifiers` | **Create:** build a reusable app-driving verifier and feature map. **Maintain:** refresh that verifier against source and live behavior. **Formal Create:** build reusable property checks with a suitable model checker or code-level verifier. **Formal Maintain:** bring those checks back in sync with changed code. Select from the requested outcome and project context; explain and recommend options when the user describes only a problem, and obtain a choice when approaches imply materially different work. This manual skill can be selected within Atlas Mode; ordinary QA stays in Atlas Verify. |
 
 ## Coordinate and improve the work
 

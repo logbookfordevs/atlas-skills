@@ -100,6 +100,13 @@
       "skills": [
         "show-me"
       ]
+    },
+    {
+      "name": "Pstack",
+      "source": "https://github.com/backnotprop/pstack",
+      "skills": [
+        "statechart"
+      ]
     }
   ]
 }
