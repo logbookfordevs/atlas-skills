@@ -1,36 +1,48 @@
-# Installing the Atlas stack with AFK
+# Installing the Logbook Atlas Core with AFK
 
-AFK import is an optional installation route. For direct package installation and the current standalone-core gaps, see [the README](../README.md#skills-v2).
+The Logbook Atlas Core is Leonardo’s always-on skill selection from his AFK kit. It combines Atlas packages with independent skills from their original repositories. [stacks/atlas.json](../stacks/atlas.json) is its canonical published manifest, using the unchanged `skill-stack.v1` format.
 
-[stacks/atlas.json](../stacks/atlas.json) is the portable AFK version-one stack manifest. It combines Atlas packages with selected independent skills from their original repositories. This manifest is edited directly and is the single source of truth for the shared skill selection.
+AFK is optional. For direct `npx skills add …` installation and the current standalone-core gaps, see [the README](../README.md#skills-v2).
 
 ## Import
 
-[AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) is a local workspace for managing agent skills, profiles, tools and shared rules. Start it with `npx @logbookfordevs/afk`. It installs selected skills through Skills CLI; using Atlas does not require adopting AFK's profiles.
+[AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) manages agent skills, tools and shared rules. Start the app with `npx @logbookfordevs/afk`.
+
+The upcoming kit release replaces profiles and Sources & Stacks with Core (always-on skills), Packs (named groups turned on globally or per project, or read once) and Try later (bookmarks). Released AFK 2.0.7 still uses the earlier labels. The instructions below distinguish the two versions.
 
 ### Terminal
 
-Install without opening the interface:
+Manifest URL installation has worked since AFK 2.0.6 and is available in 2.0.7:
+
+```sh
+afk install https://atlas.logbookfordevs.com/stack.json
+```
+
+Without a global AFK installation:
 
 ```sh
 npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json
 ```
 
-The command guides agent and destination selection. Stack URL installation is implemented in the next AFK release; publish this recommendation after that release is available.
+The command reviews sources and skills, asks for an agent and installation destination, and installs through Skills CLI. In the upcoming kit release it first saves the manifest as a pack named **Logbook Atlas**. Turn that pack on for **Global** to keep it always on. There is no single command to import a manifest directly into Core. Publishing Leonardo’s Core does not make an imported manifest part of your Core automatically.
+
+See AFK’s [manifest installation guide](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#install-directly-from-a-manifest).
 
 ### AFK interface
 
-In AFK’s Sources & Stacks, add a stack by pasting the manifest JSON or providing its direct HTTPS JSON URL. Inspect the sources and skill selections before saving. Copy the stack’s install script, select the installation destination and agent, and run the copied script when ready. Import and copy do not install or activate skills. Profiles remain optional activation groups.
-
-AFK 2.0 includes Sources & Stacks on its main branch. Import Atlas’s published manifest from:
+Choose **Import pack in Kit → Packs (in AFK 2.0.7: Sources & Stacks)**. Paste the manifest JSON or its direct HTTPS URL, then review the sources and skills before saving:
 
 ```text
 https://atlas.logbookfordevs.com/stack.json
 ```
 
-The `/stack/` URL is the human-readable guide; `/stack.json` is the machine-readable import URL. The older `/assets/atlas-stack.json` remains an equivalent download. The terminal command and interface use the same stack manifest.
+Import saves the selection without downloading or installing skills. Install through AFK or run its copied Skills CLI script. In the upcoming kit release, turn the saved **Logbook Atlas** pack on for **Global** to keep it always on. A pack can also be enabled per project or read once; see [Packs](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#packs). AFK’s [Core](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#core) remains the separate always-on selection.
 
-The stack schema points to AFK’s main branch; Atlas packages come from Atlas’s default branch. Explicit skill selections prevent retained legacy entries or newly added upstream skills from joining the stack automatically.
+The `/stack/` URL is the human-readable guide; `/stack.json` is the machine-readable import URL. The older `/assets/atlas-stack.json` remains an equivalent download. Terminal and app imports use the same manifest.
+
+In the kit release, `afk add <repo>` installs from a repository and asks where each skill belongs, `afk sync` makes a machine match its kit, and `afk migrate` moves old stack settings. These commands describe the upcoming release; see [Move from stacks](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#move-from-stacks) when upgrading from 2.0.7.
+
+The schema URL still points to AFK’s main branch; Atlas packages come from Atlas’s default branch. Explicit skill selections prevent retained legacy entries or newly added upstream skills from joining the Core automatically. See AFK’s [manifest publishing contract](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#share-a-pack-with-a-manifest).
 
 ## Maintenance
 
@@ -38,11 +50,11 @@ The stack includes `atlas-mode`, a manually invoked working mode that chooses an
 
 Edit `stacks/atlas.json`, then run `pnpm build:skills` to refresh Setup’s dependency references and `pnpm check` to validate the stack and packages. Run `npm run build` from `sites/atlas` to generate the site and its public JSON assets from the canonical manifest. `pnpm check` rejects stale snapshots or missing skill pages. Installation scope and agent are chosen in AFK; the manifest contains no executable commands, profile state, invocation overrides, tool installs or post-install actions.
 
-The stack lists selected skills as an installable collection; it does not define daily activation. This file is a selection manifest, not a lockfile. External references follow the authors’ repositories and Skills CLI update behavior. Implement Spec and PR install from Matt Pocock’s repository; Atlas Retro installs from Atlas with bundled Diagnose and Enforce methods; Atlas Verify installs from Atlas, carrying the maintained verification source and report engine from Product Engineering.
+The manifest publishes Leonardo’s Core as an installable collection. Your imported pack’s activation is managed separately in AFK. This file is a selection manifest, not a lockfile. External references follow the authors’ repositories and Skills CLI update behavior. Implement Spec and PR install from Matt Pocock’s repository; Atlas Retro installs from Atlas with bundled Diagnose and Enforce methods; Atlas Verify installs from Atlas, carrying the maintained verification source and report engine from Product Engineering.
 
 The carried-source manifest in `sources/composition.json` is separate: it preserves pinned snapshots and adaptations inside Atlas’s own packages. Its scheduled update issues do not update external installations or this stack’s source selection.
 
-Atlas Implement carries TDD and Source-Driven Development as directly loaded methods, so those two no longer need separate stack installations. Diagnosing Bugs and its reproduction script install directly from Matt Pocock as `diagnosing-bugs`. Doubt-Driven Development remains an independent selection. Updating the shared stack does not remove existing standalone installations from a user's machine.
+Atlas Implement carries TDD and Source-Driven Development as directly loaded methods, so those two no longer need separate stack installations. Diagnosing Bugs and its reproduction script install directly from Matt Pocock as `diagnosing-bugs`. Doubt-Driven Development remains an independent selection. Updating the Logbook Atlas Core does not remove existing standalone installations from a user's machine.
 
 Atlas Grill replaces Grilling, Grill Me and Grill with Docs. It defaults to Grilling and selects With Docs only on an explicit user request. Atlas Wayfinder replaces Wayfinder and remains manually invoked. Both packages carry Grilling and Domain Modeling from the same registered sources, so Domain Modeling needs no separate stack installation. Wayfinder uses the configured tracker adapter or its bundled local fallback; Research and Prototype remain independent dependencies for their ticket types.
 
@@ -60,7 +72,7 @@ Writing for Humans loads Pstack Technical Writing for technical documentation. I
 
 Tracking offers Audit Trail on explicit request, retaining the selection on resume. It carries Pstack Show Me Your Work with its append-only TSV format, template and logging helper, plus the shared Unslop catalog and contextual evidence principle. The trail is linked from the canonical Tracking Home. Transcript reconciliation and reviewer independence report actual host coverage and gaps; Attention accompanies checkpoint handoffs. HumanLayer Show Me still guides presentation, and Tracking retains code-review, commit and acceptance policy.
 
-Atlas Retro (`atlas-retro`) is a manually invoked composition. Diagnose carries Matt's session retrospective and remains advisory by default; Enforce carries Pstack Correct and implements only explicitly authorized recurring-mistake prevention. Both source methods retain independent provenance and patches. The shared stack selects Atlas Retro once from Atlas. Writing for Agents remains an explicitly declared independent companion for assessing or authoring agent instructions; missing availability is reported while independent work continues.
+Atlas Retro (`atlas-retro`) is a manually invoked composition. Diagnose carries Matt's session retrospective and remains advisory by default; Enforce carries Pstack Correct and implements only explicitly authorized recurring-mistake prevention. Both source methods retain independent provenance and patches. The Logbook Atlas Core selects Atlas Retro once from Atlas. Writing for Agents remains an explicitly declared independent companion for assessing or authoring agent instructions; missing availability is reported while independent work continues.
 
 Impeccable is used as a separately configured tool and is excluded from skill installation selections. AFK’s own CLI guidance remains a companion supplied by AFK, rather than an Atlas installation entry.
 
@@ -76,4 +88,4 @@ Atlas Motion also carries Emil Kowalski’s Animation Performance as Performance
 
 Atlas Craft conditionally loads a Mobile Web reference adapted from Emil Kowalski’s Mobile Native for browser chrome, keyboard overlap, tap feedback and scroll ownership. It preserves the six Craft modes and their domain ownership. Dynamic viewport units address browser chrome; software-keyboard clearance needs separate verification. The corrected shared Layout guidance also ships in Atlas Review.
 
-The shared selection follows Leonardo’s current stack: it includes standalone Domain Modeling, Bro’s Big Pics Little Words and Kami. Orchestrator, Plannotator Guide and Hand Drawn Canvas Animation are no longer selected. Plannotator itself remains a separately configured tool.
+The shared selection publishes Leonardo’s AFK Core: it includes standalone Domain Modeling, Bro’s Big Pics Little Words and Kami. Orchestrator, Plannotator Guide and Hand Drawn Canvas Animation are no longer selected. Plannotator itself remains a separately configured tool.

@@ -34,7 +34,7 @@ function Contents() {
     { id: 'overview', label: 'Overview', to: '/#overview' },
     { id: 'workflow', label: 'Workflow', to: '/workflow/' },
     { id: 'skills', label: 'Skills', to: '/#skills' },
-    { id: 'stack', label: 'The stack', to: '/stack/' },
+    { id: 'stack', label: 'Atlas Core', to: '/stack/' },
     { id: 'tools', label: 'Recommended tools', to: '/tools/' },
   ];
 

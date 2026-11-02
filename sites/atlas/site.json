@@ -8,8 +8,8 @@
     "description": "Understand Atlas and explore its reference: reusable coding-agent skills for planning, interface work, review, and writing."
   },
   "stack": {
-    "title": "The shared stack",
-    "description": "Explore the Atlas stack and independent skills from their original authors. Download the shared manifest."
+    "title": "Logbook Atlas Core",
+    "description": "Install Leonardo’s always-on AFK Core: Atlas and independent skills from their original authors. Download the manifest."
   },
   "socialImage": {
     "path": "/og.png",
@@ -19,7 +19,7 @@
   },
   "workflow": {
     "title": "Workflow",
-    "description": "Follow a complete Atlas example from an idea to implementation, QA and human review, then adapt it with independent skills from the shared stack."
+    "description": "Follow a complete Atlas example from an idea to implementation, QA and human review, then adapt it with independent skills from the Logbook Atlas Core."
   },
   "tools": {
     "title": "Recommended tools",

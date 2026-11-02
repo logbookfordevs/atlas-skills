@@ -48,7 +48,7 @@ describe('Atlas navigation', () => {
     expect(name('robots')).toBe('noindex');
 
     await router.navigate('/stack/');
-    await screen.findByRole('heading', { level: 1, name: 'The shared stack' });
+    await screen.findByRole('heading', { level: 1, name: 'Logbook Atlas Core' });
     expect(canonical()).toBe(`${site.origin}/stack/`);
     expect(property('og:image')).toBe(`${site.origin}/og.png`);
     expect(name('robots')).toBeUndefined();
@@ -188,7 +188,7 @@ it('opens the workflow from the overview and copies a usable implementation prom
   expect(prompt).toContain('track the implementation');
   expect(prompt).toContain('QA with atlas-verify');
   expect(prompt).toContain('give me a report');
-  await user.click(screen.getByRole('link', { name: 'With the full stack ↓' }));
+  await user.click(screen.getByRole('link', { name: 'With the full Core ↓' }));
   expect(router.state.location.hash).toBe('#full-stack');
 });
 
