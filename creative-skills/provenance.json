@@ -98,6 +98,49 @@
         }
       ],
       "updatedAt": "2026-10-22"
+    },
+    {
+      "id": "playable",
+      "path": "playable",
+      "classification": "verbatim",
+      "importedAt": "2026-11-02",
+      "author": {
+        "name": "April Zhu",
+        "profile": "https://x.com/Aprilzz423"
+      },
+      "distributionPage": "https://april-zhu.com/playable",
+      "source": {
+        "type": "user-provided-download",
+        "archive": "playable.zip",
+        "sha256": "08e13362d2097fe32732a475dbb32d94ce0aa8cc3981ed70a4c392f9181b5fc7"
+      },
+      "license": "MIT",
+      "licenseFile": "playable/LICENSE",
+      "basedOn": [
+        {
+          "name": "iso-glow",
+          "author": "April Zhu",
+          "website": "https://isoglow.dev/"
+        },
+        {
+          "name": "iso-figure",
+          "author": "Tolga Cohce",
+          "repository": "https://github.com/MrBongoC/ai-iso-skill"
+        }
+      ],
+      "filesSha256": {
+        "LICENSE": "47464cfda0afd3993769b0783ac68c02f8a8fdb2c328786438acc8b6dd2c0e91",
+        "SKILL.md": "c8fc1c4932ceb316b36b868e4a17cb27f86fcbdf78f63be1b37e0fb6dde7bd53",
+        "assets/anim.js": "7b0550b04b62f4b32071dff0ddf81b23360fadf20be69009768f795fa7c43a0e",
+        "assets/bots.js": "27d395c8c40bde58569354964cbfdcaecac21a66fc02c3f43bc465f61ecfa436",
+        "assets/examples/bots-config.js": "5de960d881a948d872fb8607a86c5e2cc9f93c680fd36c9b3f507ddbe58facd3",
+        "assets/examples/catbot.js": "4efde412e187371418b263e91f2693ed105ca8addfe4222d28a4da4e72993185",
+        "assets/template.html": "a22e97a8028b53ba197a83156cd423cbb912631984ef62a541c6b29a96942430",
+        "scripts/build.py": "bff8ccd5c0ce0ce1002f929a244c04655bc0bd202346a7da7cdb1fb547bd93d6",
+        "scripts/inspect_rig.py": "81cb44873e5141b413b069fbe2a55c03a08aeacd63635e3717c874b4b5820d5b",
+        "scripts/to_glb.py": "d6930164d4af05edd764c7fcc44ba911e3ba91910655fa10d2119547052dfb12"
+      },
+      "adaptation": "None. All downloaded files are carried verbatim; attribution and installation guidance live in the surrounding documentation."
     }
   ]
 }

@@ -2,6 +2,8 @@
 
 ## 1.3.0 — In progress
 
+- Add April Zhu’s Playable as an optional standalone creative skill, verbatim from her download with complete assets, MIT license, source fingerprints and prominent author credits. Keep it outside the shared stack and Figures chooser.
+
 - Sharpen automatic skill descriptions around concrete task and decision triggers.
 - Make cross-family review and subject preferences the default in Team Up and its shared selection policy. Add Council as shorthand for three independent model families when available.
 - Rename Atlas Review’s Code mode to Standards & Spec, preserving its two independent axes and open-ended selection of other review methods.

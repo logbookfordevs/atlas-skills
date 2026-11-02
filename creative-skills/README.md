@@ -1,12 +1,17 @@
 # Creative skills
 
-Optional creative compositions and independent skills, with original authorship and MIT licenses preserved. Atlas Figures bundles six distinct treatments; the independent April Zhu packages remain available separately.
+Optional creative compositions and independent skills, with original authorship and MIT licenses preserved. **The artists and engineers credited here created the visual methods, engines and examples. Atlas packages their work and helps you choose a treatment.** Atlas Figures bundles six distinct treatments; the independent April Zhu packages remain available separately.
+
+**[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** created [ISO-GLOW](https://isoglow.dev/), [Colorfigures](https://april-zhu.com/colorfigures) and [Playable](https://april-zhu.com/playable), including their figure engines, interactions and examples. Explore her original sites to see the work in action. Their lineage includes **[iso-figure](https://github.com/MrBongoC/ai-iso-skill)** by **Tolga Cohce**. Both authors’ notices remain with the distributed files.
 
 | Skill | What it creates | Author’s site |
 | --- | --- | --- |
 | [Atlas Figures](atlas-figures/SKILL.md) | A chooser for Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW and Colorfigures | [Sources and credits](#atlas-figures) |
 | [ISO-GLOW](iso-glow/SKILL.md) | Interactive isometric figures with glowing line art, 3D variants and the solid Lumen style | [isoglow.dev](https://isoglow.dev/) |
 | [Colorfigures](colorfigures/SKILL.md) | Hand-inked, flat-colour interactive 3D objects with rotation, see-through mechanisms, labels and zoom | [Colorfigures](https://april-zhu.com/colorfigures) |
+| [Playable](playable/SKILL.md) | Rigged 3D models or sketch-built robots with animation, camera-relative movement, lights and mobile controls | [Playable](https://april-zhu.com/playable) |
+
+Playable is a separate character-playground workflow, rather than a seventh Figures treatment. Give it a rigged model or an original robot sketch. Converting or inspecting model files uses Blender; the bundled sketch-built robot path needs no supplied model. Preserve its footer credit and the credits for any models you supply. [April’s site](https://april-zhu.com/playable) has demos and the original distribution.
 
 ## Atlas Figures
 
@@ -22,22 +27,23 @@ Invoke `atlas-figures` to see all six treatments, their differences and a recomm
 
 All sources retain their MIT licenses. The chooser is Atlas-authored. [Its source receipt](atlas-figures/SOURCE-MANIFEST.json) identifies exact revisions, download fingerprints, source classifications, carried files and patches. Teardown reuses Atlas Craft’s maintained Typography, Colors, Accessibility, Layout, Writing and UI references instead of duplicating them. It reads the relevant domain guidance within Teardown’s scope; it does not launch Craft’s broader workflow. Each treatment retains its own visual grammar.
 
-The Git-based sources use Atlas’s [reviewed upstream-update pipeline](../docs/authoring/upstream-updates.md). April’s sources retain their actual download identities and require manual review of a new distribution. Updating an independent April package also requires explicitly refreshing its bundled copy and receipt; the builder validates the current snapshots rather than silently adopting it.
+The Git-based sources use Atlas’s [reviewed upstream-update pipeline](../docs/authoring/upstream-updates.md). April’s sources retain their actual download identities and require manual review of a new distribution. Updating ISO-GLOW or Colorfigures also requires explicitly refreshing its bundled Figures copy and receipt; Playable has no bundled copy. The composition builder validates the bundled snapshots rather than silently adopting updates; independent packages retain the file fingerprints in `provenance.json`.
 
 ## Credits and licenses
 
-The independent ISO-GLOW and Colorfigures skills were created by **April Zhu**. ISO-GLOW builds on **[iso-figure](https://github.com/MrBongoC/ai-iso-skill)** by **Tolga Cohce (MrBongoC)**. Colorfigures builds on ISO-GLOW and, through it, iso-figure. Preserve this authorship chain when redistributing them.
+The independent ISO-GLOW, Colorfigures and Playable skills were created by **April Zhu**. ISO-GLOW builds on **[iso-figure](https://github.com/MrBongoC/ai-iso-skill)** by **Tolga Cohce (MrBongoC)**. Colorfigures builds on ISO-GLOW and, through it, iso-figure. Playable builds on ISO-GLOW’s 3D template and includes its own engine and controller; it needs no separate ISO-GLOW installation. Preserve this authorship chain when redistributing them.
 
-The original [ISO-GLOW license](iso-glow/LICENSE) and [Colorfigures license](colorfigures/LICENSE) contain the applicable MIT terms and copyright notices. Their files are not relicensed as Atlas-authored work.
+The original [ISO-GLOW license](iso-glow/LICENSE), [Colorfigures license](colorfigures/LICENSE) and [Playable license](playable/LICENSE) contain the applicable MIT terms and copyright notices. Their files are not relicensed as Atlas-authored work.
 
 ## Install and maintain
 
-Install the chooser, or either independent April skill, directly from Atlas with Skills CLI; no ZIP download is needed:
+Install the chooser, or an independent April skill, directly from Atlas with Skills CLI; no ZIP download is needed:
 
 ```sh
 npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-figures
 npx skills add https://github.com/logbookfordevs/atlas-skills/tree/main/creative-skills/iso-glow
 npx skills add https://github.com/logbookfordevs/atlas-skills/tree/main/creative-skills/colorfigures
+npx skills add https://github.com/logbookfordevs/atlas-skills/tree/main/creative-skills/playable
 ```
 
 Choose the destination agent when prompted. Add `-g` for a global installation. For Teardown’s design guidance, also install Atlas Craft if it is missing:
@@ -48,4 +54,4 @@ npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-craf
 
 These packages live separately from Atlas’s composed workflows in `skills/` and are optional: they are excluded from `stacks/atlas.json`. The independent April packages retain download provenance because April distributes them as downloads rather than Git repositories.
 
-[provenance.json](provenance.json) records the imported download fingerprints and each original file’s SHA-256. Original files are checked against their recorded download archives. Colorfigures was refreshed from April’s distribution on 2026-10-22; it includes rotation, see-through mechanisms, zoom, mobile controls and three new examples. The two description-format fixes are recorded as replayable patches under `patches/`, with packaged hashes in the provenance record. Updates are manual: obtain a new author-provided distribution, review its changes and license, then refresh the fingerprints together. Keep attribution outside the instruction files; retain only the recorded compatibility adaptations unless a further change is intentional.
+[provenance.json](provenance.json) records the imported download fingerprints and each original file’s SHA-256. Original files are checked against their recorded download archives. Colorfigures was refreshed from April’s distribution on 2026-10-22; it includes rotation, see-through mechanisms, zoom, mobile controls and three new examples. Playable was imported verbatim from the supplied `playable.zip` on 2026-11-02. Its MIT license includes required credit to [Playable](https://april-zhu.com/playable); credit on published scenes is requested by the author. The two description-format fixes are recorded as replayable patches under `patches/`, with packaged hashes in the provenance record. Updates are manual: obtain a new author-provided distribution, review its changes and license, then refresh the fingerprints together. Keep attribution outside the instruction files; retain only the recorded compatibility adaptations unless a further change is intentional.

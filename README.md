@@ -63,7 +63,19 @@ The [shared stack page](https://atlas.logbookfordevs.com/stack/) explains the co
 
 ## Creative skills
 
-[ISO-GLOW and Colorfigures](creative-skills/README.md) by [April Zhu (@Aprilzz423)](https://x.com/Aprilzz423) are preserved from their downloadable distributions under `creative-skills/`. Both retain their MIT licenses and credit [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill), the underlying project. Install either optionally with Skills CLI using the commands in their README; neither is included in the shared stack. The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition bundles these alongside Hairline, Anatomy, Engraved Figures and Teardown. It presents all six treatments and leaves selection to you. Creative packages remain outside the shared stack.
+The figure engines, visual styles, examples and creative methods come from the authors below. **Atlas supplies packaging and the Figures chooser; the creative work is theirs.** Visit their original projects for demos and distributions.
+
+| Author | Creative work carried in Atlas |
+| --- | --- |
+| **[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** | **[ISO-GLOW](https://isoglow.dev/)** — glowing isometric illustrations and interactive 3D; **[Colorfigures](https://april-zhu.com/colorfigures)** — hand-inked objects with working mechanisms and see-through views; **[Playable](https://april-zhu.com/playable)** — rigged models and original robots you can drive in the browser |
+| **[Lucas Marques](https://github.com/lucasmarkes/hairline)** | **Hairline** — responsive isometric line figures |
+| **[Ryan](https://github.com/wheresryan22/anatomy)** | **Anatomy** — detailed interactive mechanisms and technical illustrations |
+| **[Brooklyn Nicholson](https://github.com/OutThisLife/brooklyn-skills)** | **Engraved Figures** — scientific plates and monochrome technical drawings |
+| **[Jakub Krehel](https://github.com/jakubkrehel/skills)** | **Teardown** — coherent technical views and exploded assemblies |
+
+April’s ISO-GLOW builds on **[Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill)**; Colorfigures continues that lineage. Original licenses and copyright notices are preserved.
+
+The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition presents all six treatments and leaves selection to you. ISO-GLOW, Colorfigures and Playable are also separately installable from Atlas. Playable keeps its original name and is independent of the Figures treatment chooser. See [Creative skills](creative-skills/README.md) for installation, source credits and license details. Creative packages remain outside the shared stack.
 
 ## Utility skills
 
