@@ -13,11 +13,11 @@ export function Stack() {
       <h2>Install the Core with AFK</h2>
       <p><a href="https://ai-field-kit.logbookfordevs.com/">AFK — AI Field Kit</a> manages coding-agent skills, tools and shared rules. Its kit groups skills into Core, Packs and Try later bookmarks. Packs replace profiles and stacks; turn them on globally or per project, or read them once.</p>
       <h3>From your terminal</h3>
-      <p>Available since AFK 2.0.6. The command guides you through choosing an agent and installation destination.</p>
+      <p className="command-note">Available since AFK 2.0.6. The command guides you through choosing an agent and installation destination.</p>
       <CopyCommand command="npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json" />
-      <p>With AFK already installed, start the command with <code>afk install</code>. AFK saves the manifest as a pack named Logbook Atlas, then installs its skills through Skills CLI. Turn that pack on for <strong>Global</strong> to keep it always on. Importing a manifest does not add it directly to your Core.</p>
+      <p className="command-note">With AFK already installed, start the command with <code>afk install</code>. AFK saves the manifest as a pack named Logbook Atlas, then installs its skills through Skills CLI. Turn that pack on for <strong>Global</strong> to keep it always on. Importing a manifest does not add it directly to your Core.</p>
       <h3>Through the AFK interface</h3>
-      <p>Open AFK to review the collection and manage your installed skills.</p>
+      <p className="command-note">Open AFK to review the collection and manage your installed skills.</p>
       <CopyCommand command="npx @logbookfordevs/afk" />
       <ol>
         <li>Choose <strong>Import pack</strong> in <strong>Kit → Packs</strong> (in AFK 2.0.7: <strong>Sources &amp; Stacks</strong>).</li>
@@ -26,9 +26,9 @@ export function Stack() {
         <li>Turn the saved Logbook Atlas pack on for <strong>Global</strong> to keep it always on.</li>
       </ol>
       <CopyCommand command="https://atlas.logbookfordevs.com/stack.json" label="manifest URL" />
-      <p>AFK is optional. Install Atlas packages directly with Skills CLI, then add independent skills from the sources below. Each Atlas reference provides a command for that package.</p>
+      <p className="command-note">AFK is optional. Install Atlas packages directly with Skills CLI, then add independent skills from the sources below. Each Atlas reference provides a command for that package.</p>
       <CopyCommand command={`npx skills add ${repository}`} />
-      <p><a href="https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#install-directly-from-a-manifest">Read AFK’s manifest installation guide <Arrow /></a></p>
+      <p className="command-note"><a href="https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#install-directly-from-a-manifest">Read AFK’s manifest installation guide <Arrow /></a></p>
       <div className="stack-actions">
         <a className="text-link" href="/stack.json" download="atlas-stack.json">Download the manifest <Arrow down /></a>
         <a className="text-link" href={`${repository}/blob/main/docs/atlas-stack.md`}>Read the Core guide <Arrow /></a>
