@@ -11,11 +11,11 @@ export function Stack() {
       <h2>How it fits together</h2>
       <p>This collection is the Core of Leonardo’s AFK kit: his always-on selection. Atlas maintains its own utilities, adaptations, and compositions. Independent skills keep their original sources and update paths.</p>
       <h2>Install the Core with AFK</h2>
-      <p><a href="https://ai-field-kit.logbookfordevs.com/">AFK — AI Field Kit</a> manages coding-agent skills, tools and shared rules. Its upcoming kit release groups skills into Core, Packs and Try later bookmarks. Packs replace profiles and stacks; turn them on globally or per project, or read them once.</p>
+      <p><a href="https://ai-field-kit.logbookfordevs.com/">AFK — AI Field Kit</a> manages coding-agent skills, tools and shared rules. Its kit groups skills into Core, Packs and Try later bookmarks. Packs replace profiles and stacks; turn them on globally or per project, or read them once.</p>
       <h3>From your terminal</h3>
-      <p>Available since AFK 2.0.6, including released 2.0.7. The command guides you through choosing an agent and installation destination.</p>
+      <p>Available since AFK 2.0.6, including 2.0.7. The command guides you through choosing an agent and installation destination.</p>
       <CopyCommand command="npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json" />
-      <p>With AFK already installed, start the command with <code>afk install</code>. In the upcoming kit release, AFK saves the manifest as a pack named Logbook Atlas, then installs its skills through Skills CLI. Turn that pack on for <strong>Global</strong> to keep it always on. Importing a manifest does not add it directly to your Core.</p>
+      <p>With AFK already installed, start the command with <code>afk install</code>. AFK saves the manifest as a pack named Logbook Atlas, then installs its skills through Skills CLI. Turn that pack on for <strong>Global</strong> to keep it always on. Importing a manifest does not add it directly to your Core.</p>
       <h3>Through the AFK interface</h3>
       <p>Open AFK to review the collection and manage your installed skills.</p>
       <CopyCommand command="npx @logbookfordevs/afk" />
@@ -23,7 +23,7 @@ export function Stack() {
         <li>Choose <strong>Import pack</strong> in <strong>Kit → Packs</strong> (in AFK 2.0.7: <strong>Sources &amp; Stacks</strong>).</li>
         <li>Paste the manifest URL below and review the selected sources and skills.</li>
         <li>Import saves the selection without installing skills. Install through AFK or run its copied Skills CLI script.</li>
-        <li>In the kit release, turn the saved Logbook Atlas pack on for <strong>Global</strong> to keep it always on.</li>
+        <li>Turn the saved Logbook Atlas pack on for <strong>Global</strong> to keep it always on.</li>
       </ol>
       <CopyCommand command="https://atlas.logbookfordevs.com/stack.json" label="manifest URL" />
       <p>AFK is optional. Install Atlas packages directly with Skills CLI, then add independent skills from the sources below. Each Atlas reference provides a command for that package.</p>

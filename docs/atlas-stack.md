@@ -8,7 +8,7 @@ AFK is optional. For direct `npx skills add …` installation and the current st
 
 [AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) manages agent skills, tools and shared rules. Start the app with `npx @logbookfordevs/afk`.
 
-The upcoming kit release replaces profiles and Sources & Stacks with Core (always-on skills), Packs (named groups turned on globally or per project, or read once) and Try later (bookmarks). Released AFK 2.0.7 still uses the earlier labels. The instructions below distinguish the two versions.
+AFK’s kit replaces profiles and Sources & Stacks with Core (always-on skills), Packs (named groups turned on globally or per project, or read once) and Try later (bookmarks). AFK 2.0.7 uses the earlier labels. The instructions below include the earlier app labels for compatibility.
 
 ### Terminal
 
@@ -24,7 +24,7 @@ Without a global AFK installation:
 npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json
 ```
 
-The command reviews sources and skills, asks for an agent and installation destination, and installs through Skills CLI. In the upcoming kit release it first saves the manifest as a pack named **Logbook Atlas**. Turn that pack on for **Global** to keep it always on. There is no single command to import a manifest directly into Core. Publishing Leonardo’s Core does not make an imported manifest part of your Core automatically.
+The command reviews sources and skills, asks for an agent and installation destination, and installs through Skills CLI. It first saves the manifest as a pack named **Logbook Atlas**. Turn that pack on for **Global** to keep it always on. There is no single command to import a manifest directly into Core. Publishing Leonardo’s Core does not make an imported manifest part of your Core automatically.
 
 See AFK’s [manifest installation guide](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#install-directly-from-a-manifest).
 
@@ -36,11 +36,11 @@ Choose **Import pack in Kit → Packs (in AFK 2.0.7: Sources & Stacks)**. Paste 
 https://atlas.logbookfordevs.com/stack.json
 ```
 
-Import saves the selection without downloading or installing skills. Install through AFK or run its copied Skills CLI script. In the upcoming kit release, turn the saved **Logbook Atlas** pack on for **Global** to keep it always on. A pack can also be enabled per project or read once; see [Packs](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#packs). AFK’s [Core](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#core) remains the separate always-on selection.
+Import saves the selection without downloading or installing skills. Install through AFK or run its copied Skills CLI script. Turn the saved **Logbook Atlas** pack on for **Global** to keep it always on. A pack can also be enabled per project or read once; see [Packs](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#packs). AFK’s [Core](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#core) remains the separate always-on selection.
 
 The `/stack/` URL is the human-readable guide; `/stack.json` is the machine-readable import URL. The older `/assets/atlas-stack.json` remains an equivalent download. Terminal and app imports use the same manifest.
 
-In the kit release, `afk add <repo>` installs from a repository and asks where each skill belongs, `afk sync` makes a machine match its kit, and `afk migrate` moves old stack settings. These commands describe the upcoming release; see [Move from stacks](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#move-from-stacks) when upgrading from 2.0.7.
+`afk add <repo>` installs from a repository and asks where each skill belongs, `afk sync` makes a machine match its kit, and `afk migrate` moves old stack settings. See [Move from stacks](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#move-from-stacks) when upgrading from 2.0.7.
 
 The schema URL still points to AFK’s main branch; Atlas packages come from Atlas’s default branch. Explicit skill selections prevent retained legacy entries or newly added upstream skills from joining the Core automatically. See AFK’s [manifest publishing contract](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#share-a-pack-with-a-manifest).
 
