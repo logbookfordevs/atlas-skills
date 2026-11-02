@@ -13,7 +13,7 @@ export function Stack() {
       <h2>Install the Core with AFK</h2>
       <p><a href="https://ai-field-kit.logbookfordevs.com/">AFK — AI Field Kit</a> manages coding-agent skills, tools and shared rules. Its kit groups skills into Core, Packs and Try later bookmarks. Packs replace profiles and stacks; turn them on globally or per project, or read them once.</p>
       <h3>From your terminal</h3>
-      <p>Available since AFK 2.0.6, including 2.0.7. The command guides you through choosing an agent and installation destination.</p>
+      <p>Available since AFK 2.0.6. The command guides you through choosing an agent and installation destination.</p>
       <CopyCommand command="npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json" />
       <p>With AFK already installed, start the command with <code>afk install</code>. AFK saves the manifest as a pack named Logbook Atlas, then installs its skills through Skills CLI. Turn that pack on for <strong>Global</strong> to keep it always on. Importing a manifest does not add it directly to your Core.</p>
       <h3>Through the AFK interface</h3>

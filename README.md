@@ -57,7 +57,7 @@ The standalone core is still being completed. Atlas Wayfinder currently requires
 
 The [Logbook Atlas Core page](https://atlas.logbookfordevs.com/stack/) explains the collection and offers its [public JSON manifest](https://atlas.logbookfordevs.com/stack.json). The canonical source is [stacks/atlas.json](stacks/atlas.json).
 
-[AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) manages coding-agent skills, tools and shared rules. Install with `afk install https://atlas.logbookfordevs.com/stack.json`, or `npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json`. Manifest URL installation is available in AFK 2.0.6 and later, including 2.0.7.
+[AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) manages coding-agent skills, tools and shared rules. Install with `afk install https://atlas.logbookfordevs.com/stack.json`, or `npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json`. Manifest URL installation is available in AFK 2.0.6 and later.
 
 In AFK’s kit, Core holds always-on skills, Packs replace profiles and stacks, and Try later holds bookmarks. Installing the manifest saves a pack named **Logbook Atlas**, then installs through Skills CLI. Turn that pack on for **Global** to keep it always on; manifest import does not add skills directly to your Core.
 

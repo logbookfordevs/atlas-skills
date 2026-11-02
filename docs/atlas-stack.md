@@ -12,7 +12,7 @@ AFK’s kit replaces profiles and Sources & Stacks with Core (always-on skills),
 
 ### Terminal
 
-Manifest URL installation has worked since AFK 2.0.6 and is available in 2.0.7:
+Manifest URL installation is available in AFK 2.0.6 and later:
 
 ```sh
 afk install https://atlas.logbookfordevs.com/stack.json
