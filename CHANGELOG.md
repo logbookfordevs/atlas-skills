@@ -2,6 +2,8 @@
 
 ## 1.3.0 — In progress
 
+- Adopt ten reviewed upstream updates: fresh-context reviewers and research agents, cross-family Arena judging, version-aware Motion 14.2 acceleration guidance, the States switcher styling fix and a corrected Source-Driven citation. Retain the current Adversarial method after reviewing Interrogate’s incompatible executable-only rewrite; record declined revisions so the watcher reports the decision without reopening the same update.
+
 - Consolidate ISO-GLOW and Colorfigures under their existing pristine source snapshots and Atlas Figures methods; remove duplicate standalone packages and install listings while preserving author credits and licenses.
 
 - Recommend a fitting Atlas Explain mode with a brief reason when presenting its chooser; wait for the user’s selection.

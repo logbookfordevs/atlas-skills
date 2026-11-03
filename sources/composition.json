@@ -75,13 +75,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/animate/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/animate/source.md",
-      "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "sourceSha256": "39138996033e0dbe53e73217514116eaeca774bae84a0687c80d445a4e0cc3a6",
       "license": "sources/upstream/animate/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/animate/animate.md",
@@ -92,14 +92,14 @@
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-11-03",
       "carriedPath": "references/animate/animate.md",
       "supportingFiles": [
         {
+          "snapshot": "sources/upstream/animate/supporting/RECIPES.md",
+          "relativePath": "RECIPES.md",
           "upstreamPath": "skills/animate/RECIPES.md",
-          "snapshot": "sources/upstream/animate/support/RECIPES.md",
-          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
-          "relativePath": "RECIPES.md"
+          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2"
         }
       ],
       "rulings": [
@@ -445,13 +445,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+        "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
         "path": "skills/engineering/code-review/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/code-review/source.md",
-      "sourceSha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357",
+      "sourceSha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
       "license": "sources/upstream/code-review/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "skills/atlas-review/references/code/code-review.md",
@@ -464,7 +464,7 @@
       ],
       "carriedPath": "references/code/code-review.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-11-03",
       "patch": "sources/patches/code-review.patch",
       "supportingFiles": [
         {
@@ -481,13 +481,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/review-animations/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/review-animations/source.md",
-      "sourceSha256": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+      "sourceSha256": "5f9fb98b69cace7107af8b393a4196fd42fa42d98bce0e5afc1f866ff3b8a41c",
       "license": "sources/upstream/review-animations/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "sources/upstream/review-animations/source.md",
@@ -498,13 +498,13 @@
       "rulings": [],
       "carriedPath": "references/motion/review-animations.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
+      "adoptedAt": "2026-11-03",
       "supportingFiles": [
         {
+          "snapshot": "sources/upstream/review-animations/supporting/STANDARDS.md",
           "relativePath": "STANDARDS.md",
           "upstreamPath": "skills/review-animations/STANDARDS.md",
-          "snapshot": "sources/upstream/review-animations/supporting/STANDARDS.md",
-          "sourceSha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07"
+          "sourceSha256": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657"
         }
       ]
     },
@@ -849,7 +849,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/improve-animations/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -868,14 +868,14 @@
       ],
       "carriedPath": "references/motion-audit/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-11-03",
       "patch": "sources/patches/improve-animations.patch",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/improve-animations/supporting/AUDIT.md",
           "relativePath": "AUDIT.md",
           "upstreamPath": "skills/improve-animations/AUDIT.md",
-          "sourceSha256": "551c8473e20e5f4774680bc24d45e1c68e50992582720905c6b077756b7b5a55"
+          "sourceSha256": "63fa8fcf7e7b3a3e252938e55c60e1f399f607e73553163e8dacf9df40f3ebed"
         },
         {
           "snapshot": "sources/upstream/improve-animations/supporting/PLAN-TEMPLATE.md",
@@ -1135,13 +1135,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/addyosmani/agent-skills",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "commit": "301b02b12bff98e4688e6984af6556802322bbde",
         "path": "skills/source-driven-development/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/source-driven-development/source.md",
-      "sourceSha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
+      "sourceSha256": "df38a852658679a67c7a9e4840160570c95094a13a63307e834045ddbf8aa287",
       "license": "sources/upstream/source-driven-development/LICENSE",
       "licenseSha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
       "method": "skills/atlas-implement/references/source-driven/source-driven.md",
@@ -1153,7 +1153,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-14",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "implement-source-receipts",
         "implement-architect-phases"
@@ -1165,13 +1165,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
         "path": "skills/productivity/grilling/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/grilling/source.md",
-      "sourceSha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+      "sourceSha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
       "license": "sources/upstream/grilling/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "sources/upstream/grilling/source.md",
@@ -1183,14 +1183,14 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/productivity/grilling/agents/openai.yaml",
+          "snapshot": "sources/upstream/grilling/supporting/agents/openai.yaml",
           "relativePath": "agents/openai.yaml",
-          "snapshot": "sources/upstream/grilling/support/agents/openai.yaml",
+          "upstreamPath": "skills/productivity/grilling/agents/openai.yaml",
           "sourceSha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-14",
+      "adoptedAt": "2026-11-03",
       "rulings": []
     },
     {
@@ -1313,13 +1313,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
         "path": "skills/engineering/wayfinder/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/wayfinder/source.md",
-      "sourceSha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7",
+      "sourceSha256": "0c9fa96791aebf3b7d654cf35c6aadde97d81f57c17b07d13b27c14d9c46561f",
       "license": "sources/upstream/wayfinder/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "skills/atlas-wayfinder/references/wayfinder/wayfinder.md",
@@ -1337,7 +1337,7 @@
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-14",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "wayfinder-local-routing"
       ],
@@ -1511,6 +1511,13 @@
         "review-adversarial-owner",
         "review-impact-proof",
         "implement-candidate-ownership"
+      ],
+      "declinedUpdates": [
+        {
+          "revision": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
+          "reviewedAt": "2026-11-03",
+          "reason": "Replaces independent adversarial judgment with executable-reproduction-only findings and removes its review support references. Atlas retains supported design and maintainability risks with explicit evidence gaps; adopting this rewrite would narrow that contract and add Arena and in-your-own-words dependencies."
+        }
       ]
     },
     {
@@ -1821,25 +1828,25 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-arena/source.md",
-      "sourceSha256": "d9ba4883b0fde1c73238f6a58a0666d667606a74b23c38e9c4de0d84d8e8f4d2",
+      "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
       "license": "sources/upstream/pstack-arena/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/arena/arena.md",
       "carriedPath": "references/arena/arena.md",
-      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference without re-entering mode routing; adapt bounded scheduling, output isolation and sequential fallback with honest independence gaps. Carry the complete contextual principle closure.",
+      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure.",
       "consumers": [
         "atlas-implement",
         "team-up"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -2414,25 +2421,25 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/animation-performance/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/animation-performance/source.md",
-      "sourceSha256": "ceb9dd3fe912615830f725a0120ccf8d012d15a6218001a5cd6c15d38e39a957",
+      "sourceSha256": "6c60f45ab416ff3f7d7765a5427beead77fab0d82487fe610d2a298397558d0a",
       "license": "sources/upstream/animation-performance/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/performance/animation-performance.md",
       "carriedPath": "references/performance/animation-performance.md",
       "patch": "sources/patches/animation-performance.patch",
-      "adaptation": "Remove canned readiness text, route Animate locally and motion review to Atlas Review. Qualify compositor and library-driver claims, preserve layout semantics in property swaps, and retain diagnosis-first evidence and request-only repairs.",
+      "adaptation": "Remove canned readiness text, route Animate locally and motion review to Atlas Review. Preserve layout semantics in property swaps and browser/driver evidence limits while adopting version-specific Motion 14.2 acceleration and exceptions; repairs remain request-only.",
       "consumers": [
         "atlas-motion"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-20",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "motion-local-routing"
       ]
@@ -2575,7 +2582,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "60bf140e43c98b248e6594487384ec967e89d98a",
         "path": "skills/state-machine/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -2593,20 +2600,20 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/state-machine/switcher.md",
-          "relativePath": "switcher.md",
-          "snapshot": "sources/upstream/state-machine/support/switcher.md",
-          "sourceSha256": "32f0f1c82362557bfc7f83554359883b0c3d931d578ec8a7a390529699973c6d"
+          "snapshot": "sources/upstream/state-machine/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/state-machine/agents/openai.yaml",
+          "sourceSha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff"
         },
         {
-          "upstreamPath": "skills/state-machine/agents/openai.yaml",
-          "relativePath": "agents/openai.yaml",
-          "snapshot": "sources/upstream/state-machine/support/agents/openai.yaml",
-          "sourceSha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff"
+          "snapshot": "sources/upstream/state-machine/supporting/switcher.md",
+          "relativePath": "switcher.md",
+          "upstreamPath": "skills/state-machine/switcher.md",
+          "sourceSha256": "d6603f2512bc544f86c2d585399791d7f0e6dde50c6b32ad795d899df55a4377"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "craft-states-workbench"
       ]

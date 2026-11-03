@@ -25,11 +25,11 @@ If a candidate produces no output, proceed with N-1 and note the dropout.
 
 ## Phase C: Cross-judge
 
-After all candidates finish writing, assign a read-only cross-judge using an available model, preferably a different family from the parent's. It sees the rubric and candidates by path label, scores each criterion, and recommends a base with rationale. Its reading can run alongside Phase D. Without an independent reviewer, perform a separate sequential scoring pass and disclose that limitation; do not claim independent agreement.
+After all candidates finish writing, assign a read-only cross-judge from a different model family than the parent through the shared selection policy. It sees the rubric and candidates by path label, scores each criterion, and recommends a base with rationale. Its reading can run alongside Phase D. When no suitable cross-family judge is available, skip the judge and disclose the gap; perform the parent's scoring in Phase D without claiming independent agreement. When the parent's family is unknown, disclose that the family check could not run.
 
 ## Phase D: Pick a base
 
-Read every candidate end to end before picking. Score each against the rubric criterion by criterion, not on holistic feel, and compare with the cross-judge. Agreement on the base supports the pick; validate its reasoning against the rubric. Investigate disagreement for missed evidence, different trade-offs or rubric ambiguity. Read both rationales before deciding.
+Read every candidate end to end before picking. Score each against the rubric criterion by criterion, not on holistic feel, and compare with the cross-judge when one ran. Agreement on the base supports the pick; validate its reasoning against the rubric. Investigate disagreement for missed evidence, different trade-offs or rubric ambiguity. Read both rationales before deciding.
 
 Pick the base a future maintainer can extend most easily without breaking invariants. When two feel tied, prefer the cleaner boundary or smaller API, per [Laziness Protocol](../principles/principle-laziness-protocol/SKILL.md).
 
@@ -45,4 +45,4 @@ Verify the synthesized artifact like any other output, per the [Prove It Works](
 
 ## Outputs
 
-One synthesized artifact, with a short synthesis note alongside naming the base and why, the actual runner/judge roster and independence gaps, the cross-judge's verdict, each graft with its source candidate, what was rejected and why, any convergence or dropouts, and the verification result.
+One synthesized artifact, with a short synthesis note alongside naming the base and why, the actual runner/judge roster and independence gaps, the cross-judge's verdict or why the judge was skipped, each graft with its source candidate, what was rejected and why, any convergence or dropouts, and the verification result.

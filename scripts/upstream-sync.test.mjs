@@ -32,6 +32,17 @@ test('watcher ignores unrelated changes but detects support additions and remova
   assert(inspectSource(source, revision, root).changed.some(file => file.startsWith('removed:')));
 });
 
+test('a reviewed declined revision stays visible without reopening an issue or hiding later candidates', t => {
+  const { root, source, revision } = fixture(t);
+  source.declinedUpdates = [{ revision: revision.commit, reason: 'The rewrite excludes supported design risks.' }];
+  const declined = inspectSource(source, revision, root);
+  assert.equal(declined.status, 'declined');
+  assert.equal(declined.decision, source.declinedUpdates[0].reason);
+  assert.equal(publishIssue(declined, () => assert.fail('declined update must not call GitHub'), root), 'declined');
+  assert.throws(() => prepareUpdate(root, source, declined, {}), /cannot be prepared automatically: declined/);
+  assert.equal(inspectSource(source, { ...revision, commit: 'c'.repeat(40) }, root).status, 'ready-for-review');
+});
+
 test('patch replay preserves adaptations and conflicts leave maintained files untouched', t => {
   const { root, source, revision } = fixture(t);
   source.classification = 'patched'; source.patch = 'sources/fixture.patch';

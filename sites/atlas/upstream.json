@@ -5,7 +5,7 @@
         "id": "grilling",
         "title": "Grilling",
         "author": "Matt Pocock",
-        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/grilling/SKILL.md",
+        "url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/grilling/SKILL.md",
         "classification": "verbatim"
       },
       {
@@ -31,14 +31,14 @@
         "id": "wayfinder",
         "title": "Wayfinder",
         "author": "Matt Pocock",
-        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/wayfinder/SKILL.md",
+        "url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/wayfinder/SKILL.md",
         "classification": "patched"
       },
       {
         "id": "grilling",
         "title": "Grilling",
         "author": "Matt Pocock",
-        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/grilling/SKILL.md",
+        "url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/grilling/SKILL.md",
         "classification": "verbatim"
       },
       {
@@ -107,7 +107,7 @@
         "id": "source-driven-development",
         "title": "Source-Driven Development",
         "author": "Addy Osmani",
-        "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/source-driven-development/SKILL.md",
+        "url": "https://github.com/addyosmani/agent-skills/blob/301b02b12bff98e4688e6984af6556802322bbde/skills/source-driven-development/SKILL.md",
         "classification": "patched"
       },
       {
@@ -121,7 +121,7 @@
         "id": "pstack-arena",
         "title": "Arena",
         "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37/skills/arena/SKILL.md",
+        "url": "https://github.com/backnotprop/pstack/blob/6c75f4e67546c2ddbf9634734c1e3ebbea34861a/skills/arena/SKILL.md",
         "classification": "patched"
       },
       {
@@ -311,14 +311,14 @@
         "id": "code-review",
         "title": "Code Review",
         "author": "Matt Pocock",
-        "url": "https://github.com/mattpocock/skills/blob/b0618bc436ad893b3c5e84e55fba86586d34a404/skills/engineering/code-review/SKILL.md",
+        "url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/code-review/SKILL.md",
         "classification": "patched"
       },
       {
         "id": "review-animations",
         "title": "Review Animations",
         "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/review-animations/SKILL.md",
+        "url": "https://github.com/emilkowalski/skills/blob/f1090bec277140d02ed202440185ad9d02ac1490/skills/review-animations/SKILL.md",
         "classification": "verbatim"
       },
       {
@@ -381,7 +381,7 @@
         "id": "animate",
         "title": "Animate",
         "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/animate/SKILL.md",
+        "url": "https://github.com/emilkowalski/skills/blob/f1090bec277140d02ed202440185ad9d02ac1490/skills/animate/SKILL.md",
         "classification": "patched"
       },
       {
@@ -395,7 +395,7 @@
         "id": "improve-animations",
         "title": "Improve Animations",
         "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/improve-animations/SKILL.md",
+        "url": "https://github.com/emilkowalski/skills/blob/f1090bec277140d02ed202440185ad9d02ac1490/skills/improve-animations/SKILL.md",
         "classification": "patched"
       },
       {
@@ -541,7 +541,7 @@
         "id": "animate",
         "title": "Animate",
         "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/animate/SKILL.md",
+        "url": "https://github.com/emilkowalski/skills/blob/f1090bec277140d02ed202440185ad9d02ac1490/skills/animate/SKILL.md",
         "classification": "patched"
       },
       {
@@ -562,7 +562,7 @@
         "id": "state-machine",
         "title": "State Machine",
         "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/state-machine/SKILL.md",
+        "url": "https://github.com/jakubkrehel/skills/blob/60bf140e43c98b248e6594487384ec967e89d98a/skills/state-machine/SKILL.md",
         "classification": "patched"
       }
     ],
@@ -579,7 +579,7 @@
         "id": "animate",
         "title": "Animate",
         "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/animate/SKILL.md",
+        "url": "https://github.com/emilkowalski/skills/blob/f1090bec277140d02ed202440185ad9d02ac1490/skills/animate/SKILL.md",
         "classification": "patched"
       },
       {
@@ -600,7 +600,7 @@
         "id": "animation-performance",
         "title": "Animation Performance",
         "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/animation-performance/SKILL.md",
+        "url": "https://github.com/emilkowalski/skills/blob/f1090bec277140d02ed202440185ad9d02ac1490/skills/animation-performance/SKILL.md",
         "classification": "patched"
       }
     ],
@@ -639,7 +639,7 @@
         "id": "pstack-arena",
         "title": "Arena",
         "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37/skills/arena/SKILL.md",
+        "url": "https://github.com/backnotprop/pstack/blob/6c75f4e67546c2ddbf9634734c1e3ebbea34861a/skills/arena/SKILL.md",
         "classification": "patched"
       },
       {

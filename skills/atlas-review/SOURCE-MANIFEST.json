@@ -114,26 +114,26 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+        "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
         "path": "skills/engineering/code-review/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357",
+      "sourceSha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
       "carriedPath": "references/code/code-review.md",
-      "carriedSha256": "96e672975df1e46f8482c7be9494c009b750b2ac841c4b61e4c385e2528434bb",
+      "carriedSha256": "55d72075840b789df2837fb35aac33d3963e86e70252aa6f4334eca6a40ef5a3",
       "licensePath": "licenses/code-review.txt",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources. Standards review explicitly checks added or changed comments against the repository comment policy.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "review-adversarial-owner"
       ],
       "patch": "sources/patches/code-review.patch",
-      "patchSha256": "4f187a2a773a3ac4d06153760b647873c151313763d10589d2ff8e19e20e8cfa"
+      "patchSha256": "bd2d5ea5359f86af417bcec0d950580d0de75a1ff2fae2dd9385efdab907eeb9"
     },
     {
       "id": "review-animations",
@@ -141,7 +141,7 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/review-animations/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -150,20 +150,20 @@
         {
           "upstreamPath": "skills/review-animations/STANDARDS.md",
           "classification": "verbatim",
-          "sourceSha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07",
+          "sourceSha256": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657",
           "carriedPath": "references/motion/STANDARDS.md",
-          "carriedSha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07"
+          "carriedSha256": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657"
         }
       ],
       "notices": [],
-      "sourceSha256": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+      "sourceSha256": "5f9fb98b69cace7107af8b393a4196fd42fa42d98bce0e5afc1f866ff3b8a41c",
       "carriedPath": "references/motion/review-animations.md",
-      "carriedSha256": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+      "carriedSha256": "5f9fb98b69cace7107af8b393a4196fd42fa42d98bce0e5afc1f866ff3b8a41c",
       "licensePath": "licenses/review-animations.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "adaptation": "Complete selected runtime tree and frontmatter preserved byte-for-byte.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
+      "adoptedAt": "2026-11-03",
       "rulings": []
     },
     {
@@ -663,7 +663,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/animate/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -678,14 +678,14 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "sourceSha256": "39138996033e0dbe53e73217514116eaeca774bae84a0687c80d445a4e0cc3a6",
       "carriedPath": "references/animate/animate.md",
-      "carriedSha256": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
+      "carriedSha256": "7ad0a8ebb3864c33013fc4bb83cbb33408c151c743bead70ef71d8cf10570b73",
       "licensePath": "licenses/animate.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. Supporting files remain verbatim.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "craft-motion-owner",
         "review-motion-owner",
@@ -726,7 +726,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/improve-animations/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -735,9 +735,9 @@
         {
           "upstreamPath": "skills/improve-animations/AUDIT.md",
           "classification": "verbatim",
-          "sourceSha256": "551c8473e20e5f4774680bc24d45e1c68e50992582720905c6b077756b7b5a55",
+          "sourceSha256": "63fa8fcf7e7b3a3e252938e55c60e1f399f607e73553163e8dacf9df40f3ebed",
           "carriedPath": "references/motion-audit/AUDIT.md",
-          "carriedSha256": "551c8473e20e5f4774680bc24d45e1c68e50992582720905c6b077756b7b5a55"
+          "carriedSha256": "63fa8fcf7e7b3a3e252938e55c60e1f399f607e73553163e8dacf9df40f3ebed"
         },
         {
           "upstreamPath": "skills/improve-animations/PLAN-TEMPLATE.md",
@@ -757,7 +757,7 @@
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "adaptation": "Remove the canned initial response, link directly to bundled Motion Review, and name Atlas execution handoffs. Respect repository artifact conventions; supporting plan-template references link to Motion Audit.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "review-motion-owner"
       ],
@@ -914,11 +914,11 @@
     "references/static/static-review.md": "a105165ead3aa7af298ec25dcd881c60463d97805830b62b8f9dcc0e00b85b0d",
     "references/static/scripts/changed-files.sh": "46308cbf23f2719738288fea02a617a8d07a1b7a5df48855e2325b72e17081c7",
     "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
-    "references/code/code-review.md": "96e672975df1e46f8482c7be9494c009b750b2ac841c4b61e4c385e2528434bb",
+    "references/code/code-review.md": "55d72075840b789df2837fb35aac33d3963e86e70252aa6f4334eca6a40ef5a3",
     "licenses/code-review.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-    "references/motion/review-animations.md": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+    "references/motion/review-animations.md": "5f9fb98b69cace7107af8b393a4196fd42fa42d98bce0e5afc1f866ff3b8a41c",
     "licenses/review-animations.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/motion/STANDARDS.md": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07",
+    "references/motion/STANDARDS.md": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657",
     "references/interface/audit/index.md": "df6af8f4191c5b9d987d1e9aa1b59016eee5adf28979cd05db7ff19c38833c21",
     "licenses/better-interface.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
     "references/interface/audit/review-format.md": "e9108e7a6637e5739df9a3b685b1a80d4214a97b9137732217683e0da41123d0",
@@ -965,14 +965,14 @@
     "references/copy/index.md": "84179138a0816a54f89364b98ea9c1daf9405e65d20f858944ca3de4d5585fda",
     "licenses/better-writing.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
     "references/copy/patterns.md": "bb7b6bb17fbdf9e249eeb5d2ada2bcc9863f67dd6659489b4f25a59587a0c324",
-    "references/animate/animate.md": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
+    "references/animate/animate.md": "7ad0a8ebb3864c33013fc4bb83cbb33408c151c743bead70ef71d8cf10570b73",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
     "references/fluid/apple-design.md": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
     "licenses/apple-design.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/motion-audit/index.md": "be48d75169b89bbd05763465f639edca0a703d5cd8a126aa3cba00cb209c4439",
     "licenses/improve-animations.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/motion-audit/AUDIT.md": "551c8473e20e5f4774680bc24d45e1c68e50992582720905c6b077756b7b5a55",
+    "references/motion-audit/AUDIT.md": "63fa8fcf7e7b3a3e252938e55c60e1f399f607e73553163e8dacf9df40f3ebed",
     "references/motion-audit/PLAN-TEMPLATE.md": "2bd69a945e3111154442b0137f9a56336f139357b8cf2c95abeed6b36c85506b",
     "references/adversarial/interrogate.md": "4606413b795c358c5e9b95b55c7a780ed66e3da8ae5db3f260956a972584fafa",
     "licenses/pstack-interrogate.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",

@@ -44,21 +44,21 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "d9ba4883b0fde1c73238f6a58a0666d667606a74b23c38e9c4de0d84d8e8f4d2",
+      "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
       "carriedPath": "references/arena/arena.md",
-      "carriedSha256": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
+      "carriedSha256": "25c2bd66c60ae1d351d3d8f0fc71177b60d99893ffa51a35b7758a1b72f57819",
       "licensePath": "licenses/pstack-arena.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference without re-entering mode routing; adapt bounded scheduling, output isolation and sequential fallback with honest independence gaps. Carry the complete contextual principle closure.",
+      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -67,7 +67,7 @@
         "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-arena.patch",
-      "patchSha256": "ab13831375e8ac1abad5d054a080b09b1d77d55e477c209c82997f132ce9f969"
+      "patchSha256": "f9bcb0bf1b28351a321d775990cdf64419c66c387a11e7eeaaeaf2c80010eaf9"
     },
     {
       "id": "pstack-principle-separate-before-serializing-shared-state",
@@ -244,7 +244,7 @@
     "agents/openai.yaml": "cc2307960ff67687217ee0f6252390a54ce17a4f2b00df3ddb1805c22374e2ae",
     "references/selection.md": "0adb58bd6ff69435747dd138c9ac90bba0fde73042ace15e0701c08ab07f34e4",
     "references/model-preferences.md": "87eea498c6e602a01d0c2376c7ea2e34dbe6f5838dd44f4498efc334e8989b01",
-    "references/arena/arena.md": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
+    "references/arena/arena.md": "25c2bd66c60ae1d351d3d8f0fc71177b60d99893ffa51a35b7758a1b72f57819",
     "licenses/pstack-arena.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-separate-before-serializing-shared-state/SKILL.md": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
     "licenses/pstack-principle-separate-before-serializing-shared-state.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",

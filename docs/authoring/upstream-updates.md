@@ -29,6 +29,8 @@ Verbatim sources must match their snapshots; patched sources must replay exactly
 
 The detector is deterministic; behavior review remains a maintainer or agent task. Clean patch replay and passing package checks do not prove that changed instructions fit Atlas's workflow. Adoption remains deliberate.
 
+For a reviewed candidate that should not be adopted, record its exact `revision`, `reviewedAt` and concrete `reason` in the source’s `declinedUpdates`. Keep the carried pin intact. The watcher reports that revision as `declined` with the reason and creates no issue for it; a later revision is reviewed normally. Resolve the original issue through the PR recording the decision.
+
 ## Current scope
 
 This first implementation creates review issues, not automatic update PRs. The preparation command makes a reviewed update concrete locally; a maintainer can open a PR after inspecting it. Automated draft PR generation can later use that same preparation mechanism without changing source identity or patch handling.
