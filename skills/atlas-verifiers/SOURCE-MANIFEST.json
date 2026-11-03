@@ -10,9 +10,9 @@
     "references/create/references/feature-map-example/search.md",
     "references/maintain/maintain-verification-skill.md",
     "licenses/pstack-maintain-verification-skill.txt",
-    "references/formal-create/SKILL.md",
+    "references/formal-create/formal-create.md",
     "licenses/pstack-create-formal-verification-skill.txt",
-    "references/formal-maintain/SKILL.md",
+    "references/formal-maintain/formal-maintain.md",
     "licenses/pstack-maintain-formal-verification-skill.txt"
   ],
   "authoredInputs": [
@@ -121,16 +121,16 @@
       "supportingFiles": [],
       "notices": [],
       "sourceSha256": "30ef0ac27612ecd16fdc081112113221d673053cef3f8603db11932193861211",
-      "carriedPath": "references/formal-create/SKILL.md",
-      "carriedSha256": "85da28915922a6c3916640b34e2f39daa7bb55a517ecab31f9057e5d44a7e3a7",
+      "carriedPath": "references/formal-create/formal-create.md",
+      "carriedSha256": "9ff0a182e68db0884a9ec02f72107b65cb5d530fd9fe1a448457b6efd10b2415",
       "licensePath": "licenses/pstack-create-formal-verification-skill.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Resolve Formal Maintain through its bundled method. Keep Statechart an independently installed conditional dependency for TLA+ results and generated verifier instructions; report missing availability before dependent work.",
+      "adaptation": "Resolve Formal Maintain through its bundled method. Keep Statechart an independently installed conditional dependency for TLA+ results and generated verifier instructions; report missing availability before dependent work. Update bundled reference links for ordinary Markdown filenames.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-30",
       "rulings": [],
       "patch": "sources/patches/pstack-create-formal-verification-skill.patch",
-      "patchSha256": "ed25fbb1da8ac97ae76aaa5166567fbbdbb3d1d3e48864688259d99654659e08"
+      "patchSha256": "5726edb9e8aed58859a87a1bab1691637e76baa4616f24479eb4fd044a6075ab"
     },
     {
       "id": "pstack-maintain-formal-verification-skill",
@@ -146,16 +146,16 @@
       "supportingFiles": [],
       "notices": [],
       "sourceSha256": "0c96f54293542d3818b68754562b338073958781a9684454611dca37592e2d2c",
-      "carriedPath": "references/formal-maintain/SKILL.md",
-      "carriedSha256": "ff9ffaf9d8e195991224301ddd7ff11330f708963a1166b5af813178f86319e9",
+      "carriedPath": "references/formal-maintain/formal-maintain.md",
+      "carriedSha256": "a2713e730f2a7c3fb5ae2b2dd267239cc69267330886ae2ef7ceef6c70066309",
       "licensePath": "licenses/pstack-maintain-formal-verification-skill.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Resolve lifecycle and Statechart calls through bundled methods, including reusable generated instructions, without requiring standalone upstream installations.",
+      "adaptation": "Resolve lifecycle and Statechart calls through bundled methods, including reusable generated instructions, without requiring standalone upstream installations. Update bundled reference links for ordinary Markdown filenames.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-30",
       "rulings": [],
       "patch": "sources/patches/pstack-maintain-formal-verification-skill.patch",
-      "patchSha256": "8ddd5c9ccb0e419a519c7ed6a2c29df1d7b9fd568cf8734dbb0ec9941b9f997f"
+      "patchSha256": "c4500b378fed9475ec246836d5c21011be867d24baeba87bc4b8807460ec0ec7"
     }
   ],
   "rulings": [
@@ -173,7 +173,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "6a65d4bf2604a3f46dba2718362a916b2b90ee2156ef138d3d238c54ed237ae3",
+    "SKILL.md": "2e2f7eef8434edcd6b01cc173f9c4f8b93cc10d3169234af5cdc1b86c8bc7642",
     "agents/openai.yaml": "708b605ea06a1f118507734f5972c31272da06d9e3baccade42bd1a5ad68c330",
     "references/create/create-verification-skill.md": "65bdea607bdfedb4fc0c7a7aa26d8aa51a522ddfe875b8ed34e6707173dcfb14",
     "licenses/pstack-create-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
@@ -182,9 +182,9 @@
     "references/create/references/feature-map-example/search.md": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
     "references/maintain/maintain-verification-skill.md": "f1232cc546bf4cb0dadfd155fd959634c7037a3aa69ea5e8fc24fa631074432e",
     "licenses/pstack-maintain-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/formal-create/SKILL.md": "85da28915922a6c3916640b34e2f39daa7bb55a517ecab31f9057e5d44a7e3a7",
+    "references/formal-create/formal-create.md": "9ff0a182e68db0884a9ec02f72107b65cb5d530fd9fe1a448457b6efd10b2415",
     "licenses/pstack-create-formal-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/formal-maintain/SKILL.md": "ff9ffaf9d8e195991224301ddd7ff11330f708963a1166b5af813178f86319e9",
+    "references/formal-maintain/formal-maintain.md": "a2713e730f2a7c3fb5ae2b2dd267239cc69267330886ae2ef7ceef6c70066309",
     "licenses/pstack-maintain-formal-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/project-verifiers.md": "5d02375e821d88955c71c238d8d835f0c6be0d80398c4c976ec50593687b5f80"
   }

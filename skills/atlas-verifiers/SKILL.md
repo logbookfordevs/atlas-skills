@@ -14,8 +14,8 @@ Read the selected methods before planning or performing their work. Combine meth
 | --- | --- | --- |
 | Create | A reusable project skill for launching and driving the real app, with evidence recipes and a feature map | [Project verifiers](references/project-verifiers.md), then [Create](references/create/create-verification-skill.md) |
 | Maintain | Bring an existing app-driving skill, harness and feature map back in line with the app | [Project verifiers](references/project-verifiers.md), then [Maintain](references/maintain/maintain-verification-skill.md) |
-| Formal Create | Build reusable checks for important properties, with explicit tools, bounds, assumptions and code coverage | [Formal Create](references/formal-create/SKILL.md) |
-| Formal Maintain | Reconcile existing formal checks with changed code, distinguishing verification drift from product bugs | [Formal Maintain](references/formal-maintain/SKILL.md) |
+| Formal Create | Build reusable checks for important properties, with explicit tools, bounds, assumptions and code coverage | [Formal Create](references/formal-create/formal-create.md) |
+| Formal Maintain | Reconcile existing formal checks with changed code, distinguishing verification drift from product bugs | [Formal Maintain](references/formal-maintain/formal-maintain.md) |
 
 Create and Maintain write verification assets. Formal methods may introduce temporary defects to prove checks can fail; restore those experiments before handoff and preserve existing product changes. Product repairs require implementation authority. Keep each method's evidence and deliverable contract, including bounds, assumptions and unverified coverage.
 

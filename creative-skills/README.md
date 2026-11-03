@@ -17,11 +17,11 @@ Invoke `atlas-figures` with a treatment to start directly, or with your subject 
 
 | Treatment | Upstream author and source | Packaging |
 | --- | --- | --- |
-| Hairline Create / Adopt | [Lucas Marques](https://github.com/lucasmarkes/hairline) | Create verbatim; Adopt changes its sibling invocation to a bundled link |
-| Anatomy | [Ryan](https://github.com/wheresryan22/anatomy) | Verbatim, including kit, examples and references |
+| Hairline Create / Adopt | [Lucas Marques](https://github.com/lucasmarkes/hairline) | Create entry verbatim; supporting filename pointer patched. Adopt links to bundled Create. |
+| Anatomy | [Ryan](https://github.com/wheresryan22/anatomy) | Entry, kit and examples verbatim; verification reference updates its method filename. |
 | Engraved Figures | [Brooklyn Nicholson](https://github.com/OutThisLife/brooklyn-skills/tree/main/skills/engraved-figures) | Verbatim |
 | Teardown | [Jakub Krehel](https://github.com/jakubkrehel/skills/tree/main/skills/teardown) | Method resolves sibling design guidance through installed Atlas Craft; drawing assets unchanged |
-| ISO-GLOW / Colorfigures | [April Zhu](https://x.com/Aprilzz423), with [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill) lineage | Existing description-format compatibility patches; remaining files verbatim |
+| ISO-GLOW / Colorfigures | [April Zhu](https://x.com/Aprilzz423), with [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill) lineage | Description-format compatibility patches; Colorfigures README points to its renamed method. Engines and examples verbatim. |
 
 All sources retain their MIT licenses. The chooser is Atlas-authored. [Its source receipt](atlas-figures/SOURCE-MANIFEST.json) identifies exact revisions, download fingerprints, source classifications, carried files and patches. Teardown reuses Atlas Craft’s maintained Typography, Colors, Accessibility, Layout, Writing and UI references instead of duplicating them. It reads the relevant domain guidance within Teardown’s scope; it does not launch Craft’s broader workflow. Each treatment retains its own visual grammar.
 

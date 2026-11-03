@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 92f7aa4..eccd61a 100644
+index 92f7aa4..30e70c9 100644
 --- a/source.md
 +++ b/source.md
 @@ -32,7 +32,7 @@ Pick the tool that answers the question at the lowest cost: a model checker, a p
@@ -16,4 +16,4 @@ index 92f7aa4..eccd61a 100644
  ## Hand off
  
 -Tell the user what you verified, which tool you used and why, the bounds, what the check found in plain words, how to run it, and what it does not cover. Suggest a second target only if you found a close one. Point the user at `/maintain-formal-verification-skill` for bringing the verification back in line after changes that did not recheck it.
-+Tell the user what you verified, which tool you used and why, the bounds, what the check found in plain words, how to run it, and what it does not cover. Suggest a second target only if you found a close one. Point the user at the bundled [Formal Maintain method](../formal-maintain/SKILL.md) for bringing the verification back in line after changes that did not recheck it.
++Tell the user what you verified, which tool you used and why, the bounds, what the check found in plain words, how to run it, and what it does not cover. Suggest a second target only if you found a close one. Point the user at the bundled [Formal Maintain method](../formal-maintain/formal-maintain.md) for bringing the verification back in line after changes that did not recheck it.

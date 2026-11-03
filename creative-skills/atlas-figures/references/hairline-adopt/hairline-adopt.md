@@ -15,7 +15,7 @@ The person has a drawing and wants it alive, as a Hairline figure. This skill re
 
 ## What to do
 
-Read and follow [Hairline Create](../hairline-create/SKILL.md) with the file's path and, after it, whatever the person said about the gesture, in their words. Its step 0 reads the drawing and fixes the object and its parts; its concepts then keep them and differ in the gesture, or, when the gesture was given, in the form and the read-out. Everything after that, the build, the check and the hand-over, is that skill's.
+Read and follow [Hairline Create](../hairline-create/hairline-create.md) with the file's path and, after it, whatever the person said about the gesture, in their words. Its step 0 reads the drawing and fixes the object and its parts; its concepts then keep them and differ in the gesture, or, when the gesture was given, in the form and the read-out. Everything after that, the build, the check and the hand-over, is that skill's.
 
 ## What to say
 

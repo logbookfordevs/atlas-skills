@@ -1783,7 +1783,7 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/architect/architect.md",
       "carriedPath": "references/architect/architect.md",
-      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena, Interrogate and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating.",
+      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena, Interrogate and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "atlas-implement"
       ],
@@ -1839,7 +1839,7 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/arena/arena.md",
       "carriedPath": "references/arena/arena.md",
-      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure.",
+      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "atlas-implement",
         "team-up"
@@ -1871,8 +1871,8 @@
       "sourceSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
       "license": "sources/upstream/pstack-principle-boundary-discipline/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-boundary-discipline/SKILL.md",
-      "carriedPath": "references/principles/principle-boundary-discipline/SKILL.md",
+      "method": "skills/atlas-implement/references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
+      "carriedPath": "references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
       "adaptation": "Qualify internal trust by established, preserved invariants rather than unconditional trust; retain boundary validation and pure-core guidance.",
       "consumers": [
         "atlas-implement"
@@ -1901,7 +1901,7 @@
       "license": "sources/upstream/pstack-principle-encode-lessons-in-structure/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-encode-lessons-in-structure/source.md",
-      "carriedPath": "references/principles/principle-encode-lessons-in-structure/SKILL.md",
+      "carriedPath": "references/principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena and Audit Trail evidence reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement",
@@ -1928,7 +1928,7 @@
       "license": "sources/upstream/pstack-principle-exhaust-the-design-space/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-exhaust-the-design-space/source.md",
-      "carriedPath": "references/principles/principle-exhaust-the-design-space/SKILL.md",
+      "carriedPath": "references/principles/principle-exhaust-the-design-space/principle-exhaust-the-design-space.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -1955,8 +1955,8 @@
       "sourceSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
       "license": "sources/upstream/pstack-principle-fix-root-causes/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-fix-root-causes/SKILL.md",
-      "carriedPath": "references/principles/principle-fix-root-causes/SKILL.md",
+      "method": "skills/atlas-implement/references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
+      "carriedPath": "references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
       "adaptation": "Preserve justified safety guards and enduring invariant comments, and keep repeated-pattern repair within authorized scope; retain reproduction and root-cause investigation.",
       "consumers": [
         "atlas-implement"
@@ -1985,7 +1985,7 @@
       "license": "sources/upstream/pstack-principle-foundational-thinking/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-foundational-thinking/source.md",
-      "carriedPath": "references/principles/principle-foundational-thinking/SKILL.md",
+      "carriedPath": "references/principles/principle-foundational-thinking/principle-foundational-thinking.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2013,7 +2013,7 @@
       "license": "sources/upstream/pstack-principle-guard-the-context-window/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-guard-the-context-window/source.md",
-      "carriedPath": "references/principles/principle-guard-the-context-window/SKILL.md",
+      "carriedPath": "references/principles/principle-guard-the-context-window/principle-guard-the-context-window.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2039,7 +2039,7 @@
       "license": "sources/upstream/pstack-principle-laziness-protocol/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-laziness-protocol/source.md",
-      "carriedPath": "references/principles/principle-laziness-protocol/SKILL.md",
+      "carriedPath": "references/principles/principle-laziness-protocol/principle-laziness-protocol.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement",
@@ -2068,7 +2068,7 @@
       "license": "sources/upstream/pstack-principle-make-operations-idempotent/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-make-operations-idempotent/source.md",
-      "carriedPath": "references/principles/principle-make-operations-idempotent/SKILL.md",
+      "carriedPath": "references/principles/principle-make-operations-idempotent/principle-make-operations-idempotent.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2081,7 +2081,7 @@
     {
       "id": "pstack-principle-minimize-reader-load",
       "owner": "atlas-implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
         "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
@@ -2093,16 +2093,17 @@
       "sourceSha256": "1ea2b7fef2391cae5844c4efdbd59031f775e8a52d06b7495d707229a200dcca",
       "license": "sources/upstream/pstack-principle-minimize-reader-load/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "sources/upstream/pstack-principle-minimize-reader-load/source.md",
-      "carriedPath": "references/principles/principle-minimize-reader-load/SKILL.md",
-      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "method": "skills/atlas-implement/references/principles/principle-minimize-reader-load/principle-minimize-reader-load.md",
+      "carriedPath": "references/principles/principle-minimize-reader-load/principle-minimize-reader-load.md",
+      "adaptation": "Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "atlas-implement"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
-      "rulings": []
+      "rulings": [],
+      "patch": "sources/patches/pstack-principle-minimize-reader-load.patch"
     },
     {
       "id": "pstack-principle-outcome-oriented-execution",
@@ -2120,7 +2121,7 @@
       "license": "sources/upstream/pstack-principle-outcome-oriented-execution/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-outcome-oriented-execution/source.md",
-      "carriedPath": "references/principles/principle-outcome-oriented-execution/SKILL.md",
+      "carriedPath": "references/principles/principle-outcome-oriented-execution/principle-outcome-oriented-execution.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2147,8 +2148,8 @@
       "sourceSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
       "license": "sources/upstream/pstack-principle-prove-it-works/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-prove-it-works/SKILL.md",
-      "carriedPath": "references/principles/principle-prove-it-works/SKILL.md",
+      "method": "skills/atlas-implement/references/principles/principle-prove-it-works/principle-prove-it-works.md",
+      "carriedPath": "references/principles/principle-prove-it-works/principle-prove-it-works.md",
       "adaptation": "Preserve direct outcome proof while using the agreed artifact/delivery scope; remove the optional external Show Me Your Work audit dependency, whose adoption remains a separate decision.",
       "consumers": [
         "atlas-implement",
@@ -2179,7 +2180,7 @@
       "license": "sources/upstream/pstack-principle-redesign-from-first-principles/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-redesign-from-first-principles/source.md",
-      "carriedPath": "references/principles/principle-redesign-from-first-principles/SKILL.md",
+      "carriedPath": "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement",
@@ -2208,7 +2209,7 @@
       "license": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/source.md",
-      "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/SKILL.md",
+      "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement",
@@ -2238,7 +2239,7 @@
       "license": "sources/upstream/pstack-principle-subtract-before-you-add/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-subtract-before-you-add/source.md",
-      "carriedPath": "references/principles/principle-subtract-before-you-add/SKILL.md",
+      "carriedPath": "references/principles/principle-subtract-before-you-add/principle-subtract-before-you-add.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2325,7 +2326,7 @@
       "method": "skills/tracking-implementation/references/audit-trail/audit-trail.md",
       "carriedPath": "references/audit-trail/audit-trail.md",
       "patch": "sources/patches/pstack-show-me-your-work.patch",
-      "adaptation": "Select Audit Trail explicitly within Tracking, keeping one canonical state home and a linked append-only TSV. Preserve the full format, run ownership and helper/template. Use bundled Unslop and the evidence principle. Resolve transcript discovery and cross-family review against actual host capabilities with explicit gaps; Attention appears at checkpoint handoffs instead of every progress reply. Tracking retains commit, code-review and acceptance policy.",
+      "adaptation": "Select Audit Trail explicitly within Tracking, keeping one canonical state home and a linked append-only TSV. Preserve the full format, run ownership and helper/template. Use bundled Unslop and the evidence principle. Resolve transcript discovery and cross-family review against actual host capabilities with explicit gaps; Attention appears at checkpoint handoffs instead of every progress reply. Tracking retains commit, code-review and acceptance policy. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "tracking-implementation"
       ],
@@ -2621,7 +2622,7 @@
     {
       "id": "hairline-create",
       "owner": "Atlas Figures",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/lucasmarkes/hairline",
         "commit": "37d2e78dcb333ab30c3338e28ed4a690364ea014",
@@ -2639,8 +2640,8 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
       "method": "sources/upstream/hairline-create/source.md",
-      "carriedPath": "references/hairline-create/SKILL.md",
-      "adaptation": "Original method and complete selected supporting tree carried verbatim.",
+      "carriedPath": "references/hairline-create/hairline-create.md",
+      "adaptation": "Original method and complete selected supporting tree carried verbatim. Update bundled reference links for ordinary Markdown filenames.",
       "supportingFiles": [
         {
           "relativePath": "bench.html",
@@ -2706,7 +2707,9 @@
           "relativePath": "source.md",
           "upstreamPath": "skills/hairline-create/source.md",
           "snapshot": "sources/upstream/hairline-create/support/source.md",
-          "sourceSha256": "edbc8ec2ce1a04a70cdcb46de9cbc19d6db52541c8dc9b90e5d721924974b8f7"
+          "sourceSha256": "edbc8ec2ce1a04a70cdcb46de9cbc19d6db52541c8dc9b90e5d721924974b8f7",
+          "method": "creative-skills/atlas-figures/references/hairline-create/source.md",
+          "patch": "sources/patches/hairline-create/source.md.patch"
         },
         {
           "relativePath": "validate.mjs",
@@ -2747,9 +2750,9 @@
       "licenseSha256": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
-      "method": "creative-skills/atlas-figures/references/hairline-adopt/SKILL.md",
-      "carriedPath": "references/hairline-adopt/SKILL.md",
-      "adaptation": "Replace the independent Hairline Create invocation with a direct bundled reference. Remaining instructions are verbatim.",
+      "method": "creative-skills/atlas-figures/references/hairline-adopt/hairline-adopt.md",
+      "carriedPath": "references/hairline-adopt/hairline-adopt.md",
+      "adaptation": "Replace the independent Hairline Create invocation with a direct bundled reference. Remaining instructions are verbatim. Update bundled reference links for ordinary Markdown filenames.",
       "supportingFiles": [],
       "consumers": [
         "atlas-figures"
@@ -2767,7 +2770,7 @@
     {
       "id": "anatomy",
       "owner": "Atlas Figures",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/wheresryan22/anatomy",
         "commit": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
@@ -2790,8 +2793,8 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
       "method": "sources/upstream/anatomy/source.md",
-      "carriedPath": "references/anatomy/SKILL.md",
-      "adaptation": "Original method and complete selected supporting tree carried verbatim.",
+      "carriedPath": "references/anatomy/anatomy.md",
+      "adaptation": "Original method and complete selected supporting tree carried verbatim. Update bundled reference links for ordinary Markdown filenames.",
       "supportingFiles": [
         {
           "relativePath": "agents/openai.yaml",
@@ -3319,7 +3322,9 @@
           "relativePath": "references/verify.md",
           "upstreamPath": "references/verify.md",
           "snapshot": "sources/upstream/anatomy/support/references/verify.md",
-          "sourceSha256": "fb81437fc5d75094a34432eb6f545644aa228e15173a27d08b3cace912033561"
+          "sourceSha256": "fb81437fc5d75094a34432eb6f545644aa228e15173a27d08b3cace912033561",
+          "method": "creative-skills/atlas-figures/references/anatomy/references/verify.md",
+          "patch": "sources/patches/anatomy/references/verify.md.patch"
         },
         {
           "relativePath": "references/walkthrough.md",
@@ -3721,7 +3726,7 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
       "method": "sources/upstream/engraved-figures/source.md",
-      "carriedPath": "references/engraved-figures/SKILL.md",
+      "carriedPath": "references/engraved-figures/engraved-figures.md",
       "adaptation": "Original method and complete selected supporting tree carried verbatim.",
       "supportingFiles": [
         {
@@ -3811,8 +3816,8 @@
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
-      "method": "creative-skills/atlas-figures/references/teardown/SKILL.md",
-      "carriedPath": "references/teardown/SKILL.md",
+      "method": "creative-skills/atlas-figures/references/teardown/teardown.md",
+      "carriedPath": "references/teardown/teardown.md",
       "adaptation": "Resolve upstream sibling design-domain skills through the corresponding references in installed Atlas Craft. Load domains conditionally without activating Craft\u2019s broader workflow. Drawing procedure, assets and supporting files remain verbatim.",
       "supportingFiles": [
         {
@@ -4020,8 +4025,8 @@
       "licenseSha256": "1a1281a84e233c0501448f641943d1a3e6c07aa7dfcfd07ea59f212f0608426a",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
-      "method": "creative-skills/atlas-figures/references/iso-glow/SKILL.md",
-      "carriedPath": "references/iso-glow/SKILL.md",
+      "method": "creative-skills/atlas-figures/references/iso-glow/iso-glow.md",
+      "carriedPath": "references/iso-glow/iso-glow.md",
       "patch": "sources/patches/iso-glow.patch",
       "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI. All other downloaded files remain verbatim.",
       "supportingFiles": [
@@ -4128,16 +4133,18 @@
       "licenseSha256": "bc54cadb579906c051d7aad84f41f88c0df6c50089e052134226fe0b76fd5280",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
-      "method": "creative-skills/atlas-figures/references/colorfigures/SKILL.md",
-      "carriedPath": "references/colorfigures/SKILL.md",
+      "method": "creative-skills/atlas-figures/references/colorfigures/colorfigures.md",
+      "carriedPath": "references/colorfigures/colorfigures.md",
       "patch": "sources/patches/colorfigures.patch",
-      "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI. All other downloaded files remain verbatim.",
+      "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI; update the README pointer to the bundled Markdown reference. All engine and example files remain verbatim.",
       "supportingFiles": [
         {
           "relativePath": "README.md",
           "upstreamPath": "README.md",
           "snapshot": "sources/upstream/colorfigures/support/README.md",
-          "sourceSha256": "2818f4aa0c3bb3dd59865522a1d375fbe29101d95c492fc579ba94c5e9be342d"
+          "sourceSha256": "2818f4aa0c3bb3dd59865522a1d375fbe29101d95c492fc579ba94c5e9be342d",
+          "method": "creative-skills/atlas-figures/references/colorfigures/README.md",
+          "patch": "sources/patches/colorfigures/README.md.patch"
         },
         {
           "relativePath": "assets/core.js",
@@ -4250,9 +4257,9 @@
       "sourceSha256": "30ef0ac27612ecd16fdc081112113221d673053cef3f8603db11932193861211",
       "license": "sources/upstream/pstack-create-formal-verification-skill/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-verifiers/references/formal-create/SKILL.md",
-      "carriedPath": "references/formal-create/SKILL.md",
-      "adaptation": "Resolve Formal Maintain through its bundled method. Keep Statechart an independently installed conditional dependency for TLA+ results and generated verifier instructions; report missing availability before dependent work.",
+      "method": "skills/atlas-verifiers/references/formal-create/formal-create.md",
+      "carriedPath": "references/formal-create/formal-create.md",
+      "adaptation": "Resolve Formal Maintain through its bundled method. Keep Statechart an independently installed conditional dependency for TLA+ results and generated verifier instructions; report missing availability before dependent work. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "atlas-verifiers"
       ],
@@ -4277,9 +4284,9 @@
       "sourceSha256": "0c96f54293542d3818b68754562b338073958781a9684454611dca37592e2d2c",
       "license": "sources/upstream/pstack-maintain-formal-verification-skill/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-verifiers/references/formal-maintain/SKILL.md",
-      "carriedPath": "references/formal-maintain/SKILL.md",
-      "adaptation": "Resolve lifecycle and Statechart calls through bundled methods, including reusable generated instructions, without requiring standalone upstream installations.",
+      "method": "skills/atlas-verifiers/references/formal-maintain/formal-maintain.md",
+      "carriedPath": "references/formal-maintain/formal-maintain.md",
+      "adaptation": "Resolve lifecycle and Statechart calls through bundled methods, including reusable generated instructions, without requiring standalone upstream installations. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "atlas-verifiers"
       ],

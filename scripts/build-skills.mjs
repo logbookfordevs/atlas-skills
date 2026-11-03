@@ -74,6 +74,7 @@ export function composeSkills(root = repositoryRoot) {
     const output = new Map([['SKILL.md', read(workflow.entry)], ['agents/openai.yaml', read(workflow.agent)]]);
     const put = (path, bytes) => {
       portablePath(path);
+      if (path.split('/').at(-1).toLowerCase() === 'skill.md' && path !== 'SKILL.md') throw new Error(`Only the package entry may be named SKILL.md: ${workflow.id}/${path}`);
       if (output.has(path)) throw new Error(`Duplicate package path: ${path}`);
       output.set(path, bytes);
     };

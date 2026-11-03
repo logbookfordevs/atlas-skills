@@ -29,7 +29,7 @@ Claude saves an `.html` file. Open it in your browser and press things.
 
 ## What's inside
 
-- `SKILL.md` — the instructions Claude follows
+- `colorfigures.md` — the instructions Claude follows
 - `assets/core.js` — the engine: free 3D camera, shapes and shading, ink, see-through and labels, game keypad, the page with its buttons and controls
 - `assets/examples/` — complete figures to learn from (toaster, desk lamp, claw machine)
 - `scripts/build.py` — makes one self-contained file with zoom and the phone layout: `python3 scripts/build.py figure.html OUT.html`

@@ -185,7 +185,7 @@
         "title": "Minimize Reader Load",
         "author": "Lauren Tan / Pstack mirror",
         "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-minimize-reader-load/SKILL.md",
-        "classification": "verbatim"
+        "classification": "patched"
       },
       {
         "id": "pstack-principle-outcome-oriented-execution",
@@ -743,7 +743,7 @@
         "title": "Hairline Create",
         "author": "Lucas Marques",
         "url": "https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/skills/hairline-create/SKILL.md",
-        "classification": "verbatim"
+        "classification": "patched"
       },
       {
         "id": "hairline-adopt",
@@ -757,7 +757,7 @@
         "title": "Anatomy",
         "author": "Ryan",
         "url": "https://github.com/wheresryan22/anatomy/blob/1482e8469b0a9e0d8cc18ea2740a01423d29ae80/SKILL.md",
-        "classification": "verbatim"
+        "classification": "patched"
       },
       {
         "id": "engraved-figures",
