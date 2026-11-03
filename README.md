@@ -20,7 +20,7 @@ Install the packages below, or import the shared stack to include the recommende
 | [HTML UI](skills/html-ui/SKILL.md) | Wireframe and polished Model modes |
 | [Atlas Grill](skills/atlas-grill/SKILL.md) | Grilling by default; Domain Modeling and documentation on explicit request |
 | [Atlas Wayfinder](skills/atlas-wayfinder/SKILL.md) | Manually invoked decision maps with shared Grilling and Domain Modeling methods |
-| [Atlas Explain](skills/atlas-explain/SKILL.md) | Selects and combines How, Why, conversational Teach, Interface and Catch Up from what you need to understand |
+| [Atlas Explain](skills/atlas-explain/SKILL.md) | Selects and combines How, Why, conversational Teach, Interface and Catch Up; creates visual HTML explanations when requested |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
 | [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose bugs with Matt’s reproduction loop; explain expected versus actual behavior with Pele diagrams on request |
@@ -92,6 +92,8 @@ For examples of combining the current skills, see [Work with Atlas](docs/workflo
 ## Source maintenance
 
 A single [composition manifest](sources/composition.json) tracks carried sources, immutable revisions, licenses, supporting files, patches and consumers. Preserved upstream frontmatter stays with each source. Installable packages include source receipts and required notices.
+
+Atlas Explain’s visual-artifact guidance adapts [Big Pics Little Words](https://github.com/plannotator/effective-html/blob/975b047f6da6874e176db54f048c0c31c30e9f65/skills/big-pics-little-words/SKILL.md), originally from [backnotprop’s Bro](https://github.com/backnotprop/bro) and distributed by Plannotator under the [MIT license](https://github.com/plannotator/effective-html/blob/975b047f6da6874e176db54f048c0c31c30e9f65/LICENSE), copyright © 2026 Plannotator. This small adaptation is maintained directly, without upstream tracking.
 
 The [upstream update workflow](docs/authoring/upstream-updates.md) detects changes, replays patches in isolation and opens or updates review issues. Reviewed adoption prepares complete packages locally; it never auto-merges an update. The daily workflow runs from the default branch.
 

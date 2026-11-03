@@ -2,6 +2,8 @@
 
 ## 1.3.0 — In progress
 
+- Add requested visual HTML and interactive explanation guidance directly to Atlas Explain, usable alone or with its methods. Adapt Big Pics Little Words with source attribution and the Effective HTML MIT license link in the README, without registering another watched source.
+
 - Rename bundled `SKILL.md` references to ordinary Markdown filenames so hosts expose only public Atlas entrypoints. Update local links and source receipts, preserve original upstream snapshots, and reject nested skill entry filenames during package validation.
 
 - Adopt ten reviewed upstream updates: fresh-context reviewers and research agents, cross-family Arena judging, version-aware Motion 14.2 acceleration guidance, the States switcher styling fix and a corrected Source-Driven citation. Retain the current Adversarial method after reviewing Interrogate’s incompatible executable-only rewrite; record declined revisions so the watcher reports the decision without reopening the same update.
