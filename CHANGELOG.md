@@ -9,7 +9,7 @@
 - Rename Atlas Review’s Code mode to Standards & Spec, preserving its two independent axes and open-ended selection of other review methods.
 - Add Catch Up to Atlas Explain using Pstack Ketchup and bundled Bro voice guidance. Replace standalone Recap in the shared stack.
 - Add the manually invoked Atlas Verifiers chooser with Create, Maintain, Formal Create and Formal Maintain. Move reusable-verifier authoring out of Atlas Verify, which retains Run, UI Stress and Performance.
-- Add Atlas Debug with Matt Pocock’s diagnosis workflow. Recommend Statechart independently from Pstack in the shared stack, including as Formal Create’s conditional TLA+ dependency.
+- Add Atlas Debug with Matt Pocock’s diagnosis workflow and requested expected-versus-actual explanations rendered with Pele. Recommend Statechart independently from Pstack in the shared stack, including as Formal Create’s conditional TLA+ dependency.
 - Refresh Atlas Mode, Setup, the shared stack and website documentation for the current skill and method selection.
 
 ## 1.2.0

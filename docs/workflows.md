@@ -65,7 +65,7 @@ Use Animated-Driven Frontend for synchronized progress, scroll sequences, render
 | --- | --- | --- |
 | A bug has an unknown cause | Independent Diagnosing Bugs | Establish the cause and validate the fix through the actual behavior. |
 | Unresolved decisions exceed one session | Atlas Wayfinder | Create or resume a decision map; it plans by default rather than executing the whole project. |
-| Something is broken, failing or unexpectedly slow | Atlas Debug | Follow the reproduction-first diagnosis loop and verify fixes against the original symptom. |
+| Something is broken, failing or unexpectedly slow | Atlas Debug | Follow the reproduction-first diagnosis loop and verify fixes against the original symptom. On request, explain expected versus actual behavior with Pele diagrams. |
 | You need to understand code, an interface or recent work | Atlas Explain: How, Why, Teach, Interface or Catch Up | Request Catch Up for this chat’s changes and pending decisions, or Interface for a live page or screenshot; otherwise retain the chooser when the mode is unspecified. |
 | A shared contract could affect other consumers | Atlas Review: Impact | Trace downstream assumptions and preserve evidence for the risks. |
 | A consequential assumption needs challenge | Atlas Review: Adversarial | Independent review supplies evidence for judgment, not automatic authority. |

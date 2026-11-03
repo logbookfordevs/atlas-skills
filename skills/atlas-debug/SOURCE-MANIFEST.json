@@ -48,10 +48,11 @@
   ],
   "rulings": [],
   "files": {
-    "SKILL.md": "c5562e2ee9d8d6fe77482240c2c05047d4f7423f1295a511f31b531ff3f419ed",
-    "agents/openai.yaml": "7f91cac465c04c72899635935f8470ac6889d39f8432efe8bb9ed71c7a49f204",
+    "SKILL.md": "ce123ba86b4b1dc1ea2a005276b59fd624588ffed192ff931641ca2b2ab51394",
+    "agents/openai.yaml": "964c3cd7001eb50005f9412845ec5f8f5552d9554742519eafcb36c5d40bb27e",
     "references/diagnosis/diagnosing-bugs.md": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
     "licenses/diagnosing-bugs.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-    "references/diagnosis/scripts/hitl-loop.template.sh": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
+    "references/diagnosis/scripts/hitl-loop.template.sh": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503",
+    "references/explaining-bugs.md": "3772fddab6733684c26c2265b3a7cc992ece272fec35fff59f65e1cb22c57405"
   }
 }

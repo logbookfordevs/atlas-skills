@@ -16,7 +16,7 @@ Use this guide with Atlas Mode’s selection rule to distinguish methods by thei
 
 | Skill | Methods and selection |
 | --- | --- |
-| `atlas-debug` | Diagnose bugs and performance regressions through a tight reproduction loop. Retain real-code reproduction and fix verification. |
+| `atlas-debug` | Diagnose bugs and performance regressions through a tight reproduction loop. On request, explain expected versus actual behavior with Pele diagrams. Retain real-code reproduction and fix verification. |
 | `atlas-implement` | **Architect:** resolve interfaces, ownership, types and module shape before implementation when the design warrants exploration. **TDD:** prove behavior test-first through a meaningful seam. **Source-Driven:** establish version-sensitive framework, library or API facts. Combine the methods that address the task's actual needs. |
 | `html-ui` | **Wireframe:** answer hierarchy, layout and flow questions at low fidelity. **Model:** make an agreed interface concrete as a polished interactive artifact. |
 | `atlas-craft` | **Color:** palette, tokens and contrast. **Type:** fonts, scale and wrapping. **Layout:** grouping, spacing and adaptivity. **Accessibility:** semantics, keyboard paths, focus and forms. **UI Polish:** surfaces, elevation, icons and optical details. **Copy:** labels, errors, empty states and localization. **States:** on request, prepare a real component’s existing states with fixtures and a switcher; setup leaves product visuals unchanged. Mobile browser quirks use Craft’s conditional **Mobile Web** reference, not another mode. Preserve the accepted visual identity. |

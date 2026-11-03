@@ -23,7 +23,7 @@ Install the packages below, or import the shared stack to include the recommende
 | [Atlas Explain](skills/atlas-explain/SKILL.md) | How, Why, conversational Teach, requested Interface explanations and Catch Up; asks when the mode is unspecified |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
-| [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose bugs with Matt’s reproduction loop |
+| [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose bugs with Matt’s reproduction loop; explain expected versus actual behavior with Pele diagrams on request |
 | [Atlas Implement](skills/atlas-implement/SKILL.md) | Architect, TDD and Source-Driven methods, selected independently or together |
 | [Atlas Review](skills/atlas-review/SKILL.md) | Standards & Spec, Adversarial, Impact, Static, Interface, Motion and Motion Audit review |
 | [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, stress-test UI data and assess performance evidence |
