@@ -1,12 +1,12 @@
 ---
 name: atlas-figures
-description: "Choose a visual treatment for explanatory figures, interactive objects or technical illustrations. Explore all six treatments before choosing."
+description: "Build explanatory figures, interactive objects or technical illustrations in a chosen treatment, or explore six treatments to choose one."
 disable-model-invocation: true
 ---
 
 # Atlas Figures
 
-Present the full treatment menu below on every invocation, with a short description of each option. Recommend suitable treatments from the user's subject, medium and intended use, explaining the fit. Selection belongs to the user: wait for their choice before loading a method or building a figure. If the request already names a treatment, acknowledge that choice alongside the menu and proceed.
+When the request or conversation already selects a treatment, read its method and proceed directly. When no treatment is selected, present the full menu below with a short description of each option. Recommend suitable treatments from the user's subject, medium and intended use, explaining the fit, then wait for their choice before loading a method or building a figure. Selection belongs to the user.
 
 | Treatment | Character | Read after selection |
 | --- | --- | --- |

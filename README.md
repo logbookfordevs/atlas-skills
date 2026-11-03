@@ -75,7 +75,7 @@ The figure engines, visual styles, examples and creative methods come from the a
 
 April’s ISO-GLOW builds on **[Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill)**; Colorfigures continues that lineage. Original licenses and copyright notices are preserved.
 
-The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition presents all six treatments and leaves selection to you. ISO-GLOW, Colorfigures and Playable are also separately installable from Atlas. Playable keeps its original name and is independent of the Figures treatment chooser. See [Creative skills](creative-skills/README.md) for installation, source credits and license details. Creative packages remain outside the shared stack.
+The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition follows your chosen treatment directly, or presents all six options when you have not chosen. ISO-GLOW, Colorfigures and Playable are also separately installable from Atlas. Playable keeps its original name and is independent of the Figures treatment chooser. See [Creative skills](creative-skills/README.md) for installation, source credits and license details. Creative packages remain outside the shared stack.
 
 ## Utility skills
 

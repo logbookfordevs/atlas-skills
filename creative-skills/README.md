@@ -15,7 +15,7 @@ Invoke `/playable` explicitly. It is a separate character-playground workflow, r
 
 ## Atlas Figures
 
-Invoke `atlas-figures` to see all six treatments, their differences and a recommendation for your subject. You choose the treatment before the agent loads its method or builds anything. A request that already names a treatment can proceed after the menu. Its figure engines, examples and method references are bundled. Teardown uses installed Atlas Craft for design-domain guidance; the other treatments do not require Craft. Separate installations of the original figure skills are unnecessary.
+Invoke `atlas-figures` with a treatment to start directly, or with your subject to see all six treatments and a recommendation. When the treatment is undecided, you choose before the agent loads its method or builds anything. A choice already made in the conversation carries forward. Its figure engines, examples and method references are bundled. Teardown uses installed Atlas Craft for design-domain guidance; the other treatments do not require Craft. Separate installations of the original figure skills are unnecessary.
 
 | Treatment | Upstream author and source | Packaging |
 | --- | --- | --- |

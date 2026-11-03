@@ -1985,8 +1985,8 @@
   ],
   "rulings": [],
   "files": {
-    "SKILL.md": "425fe706c40826c396f1bab71337e4a6a38b8e482568bf08164da3fcd15af240",
-    "agents/openai.yaml": "181144fe8619468344aec5332c40f5a1ee4476abd34234b6b24e5e6e33e52809",
+    "SKILL.md": "887f27c93b2d38607e26a9fac9e521bd065e977a65e9f41dcd0a1e214f90562e",
+    "agents/openai.yaml": "fdd00c04f746dc84f2e8796604f0f06cbaabe0e3bc77ddaed191758f599bf8c9",
     "references/hairline-create/SKILL.md": "8675ceec106ec227aec00cd6a4ec883333e1acc16da5cc96e8e10a3c758ea841",
     "licenses/hairline-create.txt": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
     "references/hairline-create/bench.html": "0870fd54e137be0f7635cd309b48a4703a791cfca5915bf22d46b941ebc33278",

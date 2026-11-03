@@ -2,6 +2,8 @@
 
 ## 1.3.0 — In progress
 
+- Let Atlas Figures proceed directly with an explicitly chosen treatment; show the menu and recommendation only while the choice is open.
+
 - Add April Zhu’s Playable as an optional, manually invoked standalone creative skill from her download with complete assets, MIT license, source fingerprints and prominent author credits. Keep the workflow and assets verbatim, record the manual-invocation metadata patch, and leave it outside the shared stack and Figures chooser.
 
 - Sharpen automatic skill descriptions around concrete task and decision triggers.
