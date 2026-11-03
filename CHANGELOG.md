@@ -2,6 +2,8 @@
 
 ## 1.3.0 — In progress
 
+- Consolidate ISO-GLOW and Colorfigures under their existing pristine source snapshots and Atlas Figures methods; remove duplicate standalone packages and install listings while preserving author credits and licenses.
+
 - Recommend a fitting Atlas Explain mode with a brief reason when presenting its chooser; wait for the user’s selection.
 
 - Let Atlas Figures proceed directly with an explicitly chosen treatment; show the menu and recommendation only while the choice is open.
