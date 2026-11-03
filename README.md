@@ -20,7 +20,7 @@ Install the packages below, or import the shared stack to include the recommende
 | [HTML UI](skills/html-ui/SKILL.md) | Wireframe and polished Model modes |
 | [Atlas Grill](skills/atlas-grill/SKILL.md) | Grilling by default; Domain Modeling and documentation on explicit request |
 | [Atlas Wayfinder](skills/atlas-wayfinder/SKILL.md) | Manually invoked decision maps with shared Grilling and Domain Modeling methods |
-| [Atlas Explain](skills/atlas-explain/SKILL.md) | How, Why, conversational Teach, requested Interface explanations and Catch Up; asks when the mode is unspecified |
+| [Atlas Explain](skills/atlas-explain/SKILL.md) | Selects and combines How, Why, conversational Teach, Interface and Catch Up from what you need to understand |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
 | [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose bugs with Matt’s reproduction loop; explain expected versus actual behavior with Pele diagrams on request |

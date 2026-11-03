@@ -8,9 +8,11 @@ metadata:
 
 # Atlas Explain
 
-Use the explicitly supplied mode. An explicit Catch Up request selects Catch Up. A request to explain how a live page, visual effect, animation or screenshot was built selects Interface. Otherwise, when no mode is supplied, ask the user to choose How, Why, Teach, Interface or Catch Up, giving the short descriptions below and recommending the best fit from the conversation with a brief reason. Wait for their answer before investigating or loading method references. A topic alone does not select a mode. Reuse the chosen mode for follow-up questions in the same explanation; Catch Up requires its own request.
+Select and combine methods from the request and conversation, then read and follow the references needed for the explanation. An explicit method choice guides selection. Ask only when ambiguity would materially change the investigation or deliverable. When the user asks to explore options, present the relevant methods with short descriptions and a recommendation.
 
-| Mode | Short description | Read and follow |
+Use Teach for guided learning or when an explanation has not landed; let it coordinate How and Why for mechanics and rationale. Select Catch Up when the user asks about this chat’s recent work or pending decisions. Adapt the methods as follow-up questions change what the user needs to understand.
+
+| Method | Need | Read and follow |
 | --- | --- | --- |
 | How | Trace how the code works: architecture, runtime flow and where responsibilities live. | [How](references/how/how.md) |
 | Why | Investigate why it was built this way: decisions, constraints and trade-offs supported by historical evidence. | [Why](references/why/why.md) |
@@ -18,4 +20,4 @@ Use the explicitly supplied mode. An explicit Catch Up request selects Catch Up.
 | Interface | Explain a website's frontend or one visual mechanism from a live page; treat a screenshot as a reconstruction. | [Interface](references/interface/explain-interface.md) |
 | Catch Up | Catch up on this chat’s work and pending decisions, with evidence and useful visuals. | [Catch Up](references/catch-up/ketchup.md) |
 
-Explanation keeps code and external records read-only. Follow the selected method's evidence limits. Teach's internal How and Why calls load their references directly without another mode chooser; its bounded Why scope and confidence preservation follow the Teach method.
+Explanation keeps code and external records read-only. Reuse investigation and evidence across methods for one coherent explanation. Preserve each method’s evidence limits and confidence language; Teach retains its bounded Why scope.

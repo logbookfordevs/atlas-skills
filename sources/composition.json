@@ -1720,7 +1720,7 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-explain/references/teach/teach.md",
       "carriedPath": "references/teach/teach.md",
-      "adaptation": "Load How, Why and Unslop directly from bundled references, without nested mode choosers. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
+      "adaptation": "Load How, Why and Unslop directly from bundled references, within the selected explanation. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
       "consumers": [
         "atlas-explain"
       ],
@@ -5152,7 +5152,7 @@
         "explain-interface",
         "pstack-ketchup"
       ],
-      "decision": "Use an explicitly selected method; Interface and Catch Up requests select their methods directly. Otherwise offer How, Why, Teach, Interface or Catch Up and wait before investigation. Catch Up requires its own request rather than continuing a previous explanation mode. Teach loads bundled methods without repeating the chooser."
+      "decision": "Select and combine methods from the request and conversation. Ask only when ambiguity materially changes the investigation or deliverable; offer options with a recommendation when the user asks to explore them. Teach supplies conversational pacing and coordinates How and Why. Catch Up is selected for requests about recent chat work and pending decisions. Reuse evidence across methods and adapt to follow-up questions."
     },
     {
       "id": "explain-why-scope",

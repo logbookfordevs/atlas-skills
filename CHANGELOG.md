@@ -8,7 +8,7 @@
 
 - Consolidate ISO-GLOW and Colorfigures under their existing pristine source snapshots and Atlas Figures methods; remove duplicate standalone packages and install listings while preserving author credits and licenses.
 
-- Recommend a fitting Atlas Explain mode with a brief reason when presenting its chooser; wait for the user’s selection.
+- Let Atlas Explain select and combine methods from the conversation. Teach guides learning using How and Why; show options when requested and clarify only when ambiguity materially changes the work.
 
 - Let Atlas Figures proceed directly with an explicitly chosen treatment; show the menu and recommendation only while the choice is open.
 

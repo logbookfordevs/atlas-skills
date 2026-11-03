@@ -29,7 +29,7 @@ A request for advice, options or what to do next stays advisory until the user s
 
 ## Scope and choices
 
-Explicit user choices take precedence over inferred selections. Preserve method-level opt-ins: With Docs, States, Tracking, Audit Trail and Retro Enforce require their requested outcomes in the conversation or an existing active selection. Retain Atlas Explain's chooser when the explanation mode remains unspecified. Figures follows a selected treatment directly; otherwise present its menu and wait for the user's choice. Atlas Mode's activation alone does not request those outcomes.
+Explicit user choices take precedence over inferred selections. Preserve method-level opt-ins: With Docs, States, Tracking, Audit Trail and Retro Enforce require their requested outcomes in the conversation or an existing active selection. Atlas Explain selects and combines methods from the explanation request and conversation. Figures follows a selected treatment directly; otherwise present its menu and wait for the user's choice. Atlas Mode's activation alone does not request those outcomes.
 
 Keep the task's authority through transitions: a review stays read-only toward product code and Retro Diagnose stays advisory. Honor existing approval for concrete work without asking again. Follow the selected method's rules for external writes, acceptance and publication.
 

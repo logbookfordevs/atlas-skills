@@ -220,10 +220,10 @@
       "notices": [],
       "sourceSha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
       "carriedPath": "references/teach/teach.md",
-      "carriedSha256": "045227ddee108efd6cb385df9ee4de786a827c2f55bb7a97c86e011c224b7220",
+      "carriedSha256": "b7cf3f55f03d9e7823a3288110ed2c93b2c137795745692c095d681f2a143c46",
       "licensePath": "licenses/pstack-teach.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Load How, Why and Unslop directly from bundled references, without nested mode choosers. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
+      "adaptation": "Load How, Why and Unslop directly from bundled references, within the selected explanation. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
@@ -232,7 +232,7 @@
         "explain-evidence-editing"
       ],
       "patch": "sources/patches/pstack-teach.patch",
-      "patchSha256": "0ba3d2af4c290e80485c1b5b617972c6ad7b0b703486716b5bbb2433495b1bc4"
+      "patchSha256": "e295163c202d95c4f31ca091d648c1f48de963d3c52c76da48596ca3aadc6db4"
     },
     {
       "id": "pstack-unslop",
@@ -386,7 +386,7 @@
         "explain-interface",
         "pstack-ketchup"
       ],
-      "decision": "Use an explicitly selected method; Interface and Catch Up requests select their methods directly. Otherwise offer How, Why, Teach, Interface or Catch Up and wait before investigation. Catch Up requires its own request rather than continuing a previous explanation mode. Teach loads bundled methods without repeating the chooser."
+      "decision": "Select and combine methods from the request and conversation. Ask only when ambiguity materially changes the investigation or deliverable; offer options with a recommendation when the user asks to explore them. Teach supplies conversational pacing and coordinates How and Why. Catch Up is selected for requests about recent chat work and pending decisions. Reuse evidence across methods and adapt to follow-up questions."
     },
     {
       "id": "explain-why-scope",
@@ -434,8 +434,8 @@
     }
   ],
   "files": {
-    "SKILL.md": "0c5600ab09a1da488a6772fdb1ed3e8c4f0a76a3f52fc5c74d9aa972c4d26189",
-    "agents/openai.yaml": "e106ce3e0b2f614949e313710008cca7692c645637b7f4e0dd2a6369f2ad05d4",
+    "SKILL.md": "590fd652ca7c965f64e3340374cf4b581e6d26321e6812513624099cd078d3ed",
+    "agents/openai.yaml": "1913a5c562840fa920f320cd31043b5ccc415d19302a63a6cc583689f25eaf27",
     "references/how/how.md": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
     "licenses/pstack-how.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/how/references/explainer-prompt.md": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
@@ -454,7 +454,7 @@
     "references/why/references/sources/sentry.md": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702",
     "references/why/references/sources/slack.md": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
     "references/why/references/synthesizer-prompt.md": "efd1a207836e90e61db0a312d475d0f7343cbe4f286089e48aa7d248973d1eba",
-    "references/teach/teach.md": "045227ddee108efd6cb385df9ee4de786a827c2f55bb7a97c86e011c224b7220",
+    "references/teach/teach.md": "b7cf3f55f03d9e7823a3288110ed2c93b2c137795745692c095d681f2a143c46",
     "licenses/pstack-teach.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/unslop/unslop.md": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
     "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
