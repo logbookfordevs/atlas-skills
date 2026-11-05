@@ -1,6 +1,6 @@
 # Atlas website
 
-The Guided Reading website for Logbook Atlas: an overview, references for every active Atlas package, an example workflow, and a guide to the shared stack. The grouped skill directory stays available on every page; on mobile it opens from Browse skills.
+The Guided Reading website for Logbook Atlas: an overview, references for every active Atlas package, an example workflow, and a guide to the Logbook Atlas Core. The grouped skill directory stays available on every page; on mobile it opens from Browse skills.
 
 ## Edit and build
 
@@ -23,7 +23,7 @@ Internal links use client routing. Native view transitions hold the shell steady
 
 Tests run with Node's experimental global web storage disabled so jsdom owns the browser storage. This avoids Node 26's file-backed storage shadowing jsdom's localStorage.
 
-The stack snapshot comes from the Atlas repository's `stacks/atlas.json`. `scripts/sync-stack.mjs` refreshes `stack.json`, `public/stack.json` and the legacy `public/assets/atlas-stack.json` before development or production builds. The build publishes `/stack.json` as the direct AFK import URL, while `/stack/` remains the human guide. An isolated publication checkout uses the saved snapshot. Root `pnpm check` rejects snapshot or catalog drift. The page recommends `npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json` for terminal installation, and launching AFK to import the URL in Sources & Stacks as an interface alternative. Publish the terminal recommendation only after AFK releases stack-URL installation support. Skill summaries are authored reference material; each page links to the complete skill and its source receipt.
+The stack snapshot comes from the Atlas repository's `stacks/atlas.json`. `scripts/sync-stack.mjs` refreshes `stack.json`, `public/stack.json` and the legacy `public/assets/atlas-stack.json` before development or production builds. The build publishes `/stack.json` as the direct AFK import URL, while `/stack/` remains the human guide. An isolated publication checkout uses the saved snapshot. Root `pnpm check` rejects snapshot or catalog drift. The page recommends `afk install https://atlas.logbookfordevs.com/stack.json` or its `npx @logbookfordevs/afk install …` equivalent, supported since AFK 2.0.6. The app route is **Import pack in Kit → Packs (in AFK 2.0.7: Sources & Stacks)**. Installation saves a Logbook Atlas pack, which users turn on for Global to keep it always on. It does not promise direct manifest import into Core. Keep these instructions aligned with [AFK’s kit guide](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#install-directly-from-a-manifest). Skill summaries are authored reference material; each page links to the complete skill and its source receipt.
 
 Upstream credits are generated from the package source receipts into `upstream.json`. From the canonical `sites/atlas` directory, run `node scripts/sync-upstream.mjs ../..` after adopting or changing a source. In an isolated Sites checkout, pass the absolute Atlas repository path. The build consumes the saved snapshot; it does not need access to the parent repository. Original-reference links use the recorded commit and path. Explanatory origin text lives in `content.json`.
 

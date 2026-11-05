@@ -2,7 +2,7 @@
 
 ![Thelu charts a route through developer tools: You are here. Probably.](docs/assets/logbook-atlas-banner.png)
 
-The skill stack I use for Logbook for Devs: core workflows with Atlas invocations, authored utilities, intentional upstream adaptations and a few focused compositions. Complementary skills remain independently available from their original sources.
+The Logbook Atlas Core is the skill selection I keep on every machine in my AFK kit: core workflows with Atlas invocations, authored utilities, intentional upstream adaptations and a few focused compositions. Complementary skills remain independently available from their original sources.
 
 Keep methods independently maintained; bundle what Atlas needs to deliver its core workflows without relying on AFK.
 
@@ -10,9 +10,9 @@ Atlas maintains what it authors, patches or bundles. Complementary independent s
 
 ## Skills V2
 
-Collection releases use Git tags and GitHub releases. **v1.2.0** is the latest published release; **v1.3 is in progress** on this branch. See the [release notes](CHANGELOG.md). Upstream revisions remain recorded separately in each package’s source receipt.
+Collection releases use Git tags and GitHub releases. **v1.3.0** identifies this skill set. See the [release notes](CHANGELOG.md). Upstream revisions remain recorded separately in each package’s source receipt.
 
-Install the packages below, or import the shared stack to include the recommended independent skills. Original-name upstream packages retain their authorship and methods.
+Install the packages below, or import the Logbook Atlas Core to include the recommended independent skills. Original-name upstream packages retain their authorship and methods.
 
 | Package | Purpose |
 | --- | --- |
@@ -49,17 +49,21 @@ Browse the repository catalog before installing:
 npx skills add https://github.com/logbookfordevs/atlas-skills --list
 ```
 
-The [CLI catalog](.claude-plugin/marketplace.json) groups packages as **Atlas Workflows**, **Creative Skills** and **Utility Skills**. Individual names and descriptions come from each package’s `SKILL.md`. Creative and utility skills remain optional and outside the shared stack. The catalog adds discovery paths and grouping; it is not an exclusion list, so `--full-depth` can still expose retained historical entries. No personal installation is changed by building the repository.
+The [CLI catalog](.claude-plugin/marketplace.json) groups packages as **Atlas Workflows**, **Creative Skills** and **Utility Skills**. Individual names and descriptions come from each package’s `SKILL.md`. Creative and utility skills remain optional and outside the Logbook Atlas Core. The catalog adds discovery paths and grouping; it is not an exclusion list, so `--full-depth` can still expose retained historical entries. No personal installation is changed by building the repository.
 
-Start with `Use atlas-mode to <your task>`. Atlas Mode applies clearly selected skills and inner methods, including manually invoked packages such as Wayfinder and Retro. When alternatives imply materially different workflows, it explains the relevant choices, recommends an approach and waits for your selection. Requests for advice stay advisory. You can describe the outcome without remembering invocation names. Invoking the mode alone asks what you want to work on. Tracking, Audit Trail and other outcome-specific opt-ins retain their conditions; entering the mode is not approval for installation, cleanup or publication. The installed skills own their procedures, so install the packages you need or use the shared stack. Atlas Setup remains separately requested. Individual skills remain directly usable. Ask to exit Atlas Mode when you want to leave it.
+Start with `Use atlas-mode to <your task>`. Atlas Mode applies clearly selected skills and inner methods, including manually invoked packages such as Wayfinder and Retro. When alternatives imply materially different workflows, it explains the relevant choices, recommends an approach and waits for your selection. Requests for advice stay advisory. You can describe the outcome without remembering invocation names. Invoking the mode alone asks what you want to work on. Tracking, Audit Trail and other outcome-specific opt-ins retain their conditions; entering the mode is not approval for installation, cleanup or publication. The installed skills own their procedures, so install the packages you need or use the Logbook Atlas Core. Atlas Setup remains separately requested. Individual skills remain directly usable. Ask to exit Atlas Mode when you want to leave it.
 
 The standalone core is still being completed. Atlas Wayfinder currently requires the independent Research and Prototype skills for those ticket types. Use [Atlas Setup](skills/atlas-setup/SKILL.md) to check declared dependencies and obtain direct install commands without AFK. Optional extensions and their loading conditions are listed in [the dependency registry](skills/atlas-setup/references/dependencies.json).
 
-## Share the stack
+## Share the Core
 
-The [shared stack page](https://atlas.logbookfordevs.com/stack/) explains the collection and offers its [public JSON manifest](https://atlas.logbookfordevs.com/stack.json). The canonical source is [stacks/atlas.json](stacks/atlas.json).
+The [Logbook Atlas Core page](https://atlas.logbookfordevs.com/stack/) explains the collection and offers its [public JSON manifest](https://atlas.logbookfordevs.com/stack.json). The canonical source is [stacks/atlas.json](stacks/atlas.json).
 
-[AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) is a local workspace for managing coding-agent skills, reusable profiles, tools and shared rules. Install from your terminal with `npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json`. To use the interface instead, run `npx @logbookfordevs/afk`, open **Sources & Stacks → Import stack**, and paste `https://atlas.logbookfordevs.com/stack.json`. Review and save the selection, choose your agent and destination, then install or copy its install script. AFK remains optional; individual packages can be installed directly with Skills CLI. See [stack installation and maintenance](docs/atlas-stack.md). AFK 2.0 supports the version-one stack format.
+[AFK — AI Field Kit](https://ai-field-kit.logbookfordevs.com/) manages coding-agent skills, tools and shared rules. Install with `afk install https://atlas.logbookfordevs.com/stack.json`, or `npx @logbookfordevs/afk install https://atlas.logbookfordevs.com/stack.json`. Manifest URL installation is available in AFK 2.0.6 and later.
+
+In AFK’s kit, Core holds always-on skills, Packs replace profiles and stacks, and Try later holds bookmarks. Installing the manifest saves a pack named **Logbook Atlas**, then installs through Skills CLI. Turn that pack on for **Global** to keep it always on; manifest import does not add skills directly to your Core.
+
+To use the app, run `npx @logbookfordevs/afk` and choose **Import pack in Kit → Packs (in AFK 2.0.7: Sources & Stacks)**. Paste `https://atlas.logbookfordevs.com/stack.json` and review the selection. Import saves without installing; install through AFK or its copied Skills CLI script. AFK remains optional: use the direct `npx skills add …` commands above for Atlas packages and each listed upstream for independent skills. See [Core installation and maintenance](docs/atlas-stack.md) and [AFK’s kit guide](https://github.com/logbookfordevs/ai-field-kit/blob/main/docs/kit.md#install-directly-from-a-manifest).
 
 ## Creative skills
 
@@ -75,17 +79,17 @@ The figure engines, visual styles, examples and creative methods come from the a
 
 April’s ISO-GLOW builds on **[Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill)**; Colorfigures continues that lineage. Original licenses and copyright notices are preserved.
 
-The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition follows your chosen treatment directly, or presents all six options when you have not chosen. ISO-GLOW and Colorfigures are bundled treatments; their pristine download sources are retained under `sources/upstream/`. Playable is separately installable from Atlas. Playable keeps its original name and is independent of the Figures treatment chooser. See [Creative skills](creative-skills/README.md) for installation, source credits and license details. Creative packages remain outside the shared stack.
+The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition follows your chosen treatment directly, or presents all six options when you have not chosen. ISO-GLOW and Colorfigures are bundled treatments; their pristine download sources are retained under `sources/upstream/`. Playable is separately installable from Atlas. Playable keeps its original name and is independent of the Figures treatment chooser. See [Creative skills](creative-skills/README.md) for installation, source credits and license details. Creative packages remain outside the Logbook Atlas Core.
 
 ## Utility skills
 
-[Source Composition](utility-skills/README.md) is an optional, manually invoked skill for applying Atlas’s provenance, verbatim and patched-source contracts, composition rulings and reviewed update strategy in other projects. Utility skills live in `utility-skills/` and install individually with Skills CLI; they are outside the shared stack.
+[Source Composition](utility-skills/README.md) is an optional, manually invoked skill for applying Atlas’s provenance, verbatim and patched-source contracts, composition rulings and reviewed update strategy in other projects. Utility skills live in `utility-skills/` and install individually with Skills CLI; they are outside the Logbook Atlas Core.
 
 ## Recommended independent skills
 
 The stack manifest lists the unchanged skills used alongside Atlas, including Research, Prototype, Doubt-Driven Development, Writing for Agents, and library-specific tools. TDD and Source-Driven Development ship inside Atlas Implement; Teach and Diagnosing Bugs install directly from Matt Pocock; Code Simplification installs directly from Addy Osmani. Atlas Grill and Atlas Wayfinder share bundled Grilling and Domain Modeling references. These packages retain pinned source receipts. Independent authors own upstream updates; Atlas maintains its carried adaptations. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the original disposition.
 
-AFK CLI and Profile Use are companion skills owned by the AFK project, not Atlas packages. Compass is excluded for now. The website publishes the stack manifest; terminal stack installation is provided by AFK. Atlas Setup currently checks dependencies rather than installing the entire recommended stack.
+AFK’s CLI guidance is owned by the AFK project, not Atlas. Compass is excluded for now. The website publishes the stack manifest; terminal stack installation is provided by AFK. Atlas Setup currently checks dependencies rather than installing the entire recommended stack.
 
 For examples of combining the current skills, see [Work with Atlas](docs/workflows.md).
 

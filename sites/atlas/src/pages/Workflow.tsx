@@ -11,13 +11,13 @@ export function Workflow() {
       <p className="lead">Take one idea through planning, implementation, QA and review. Then adapt the path to your work.</p>
       <p>Our example: let people save a dashboard filter and reopen it later. Ownership and sharing still need decisions. Here is how you could work through that with Atlas.</p>
       <nav className="workflow-jumps" aria-label="On this page">
-        <AtlasLink to="/workflow/#setup">Tools &amp; setup ↓</AtlasLink><AtlasLink to="/workflow/#explore-workflow">Interactive view ↓</AtlasLink><AtlasLink to="/workflow/#atlas-example">The Atlas example ↓</AtlasLink><AtlasLink to="/workflow/#full-stack">With the full stack ↓</AtlasLink>
+        <AtlasLink to="/workflow/#setup">Tools &amp; setup ↓</AtlasLink><AtlasLink to="/workflow/#explore-workflow">Interactive view ↓</AtlasLink><AtlasLink to="/workflow/#atlas-example">The Atlas example ↓</AtlasLink><AtlasLink to="/workflow/#full-stack">With the full Core ↓</AtlasLink>
       </nav>
     </header>
 
     <section id="setup" aria-labelledby="setup-title">
       <h2 id="setup-title">Before your first run</h2>
-      <p>Install Atlas through Skills CLI, or install the shared stack from its <AtlasLink to="/stack/">installation guide</AtlasLink>.</p>
+      <p>Install Atlas through Skills CLI, or install the Logbook Atlas Core from its <AtlasLink to="/stack/">installation guide</AtlasLink>.</p>
       <CopyCommand command={`npx skills add ${repository}`} />
       <p>Choose the skills, agent and installation destination when prompted. You can ask <AtlasLink to={skillPath('atlas-setup')}>Atlas Setup</AtlasLink> to check installed skills and any missing companions.</p>
       <CopyCommand variant="prompt" label="Atlas Setup prompt" command="/atlas-setup Check my installed Atlas skills and recommend any missing companions." />
@@ -91,8 +91,8 @@ export function Workflow() {
     </section>
 
     <section id="full-stack" aria-labelledby="full-stack-title">
-      <h2 id="full-stack-title">Use the same path with the full stack</h2>
-      <p>The <AtlasLink to="/stack/">shared stack</AtlasLink> adds independent skills from other authors. Keep the same feature and add a companion when it answers a question that is still open.</p>
+      <h2 id="full-stack-title">Use the same path with the full Core</h2>
+      <p>The <AtlasLink to="/stack/">Logbook Atlas Core</AtlasLink> adds independent skills from other authors. Keep the same feature and add a companion when it answers a question that is still open.</p>
       <dl className="workflow-companions">
         <div><dt>You need evidence before choosing</dt><dd>Use <a href="https://github.com/mattpocock/skills/tree/main/skills/engineering/research">Research</a> for a separate investigation and saved findings. For example, investigate storage and sync options before committing to cross-device saved filters.</dd></div>
         <div><dt>You need to try an interaction</dt><dd>Use <a href="https://github.com/mattpocock/skills/tree/main/skills/engineering/prototype">Prototype</a> for a throwaway experiment. Try the filter picker before making it part of the product.</dd></div>
@@ -103,7 +103,7 @@ export function Workflow() {
       <CopyCommand variant="prompt" label="prototype prompt" command="Use prototype to try the saved-filter picker before we commit to its interaction. Build a throwaway version that lets us judge switching, naming and deleting filters. Keep production code unchanged." />
       <p>If an explanation does not click, <a href="https://github.com/backnotprop/bro">Bro</a> can restate it plainly. Readback can restate your request before work starts. These are useful additions whenever understanding is the next thing you need.</p>
       <p>Choose companions as needed. For a small, clear fix, you may go straight to implementation and ordinary project checks. For a large effort with unresolved decisions across sessions, <AtlasLink to={skillPath('atlas-wayfinder')}>Atlas Wayfinder</AtlasLink> can give you a decision map before you create executable tickets.</p>
-      <AtlasLink className="text-link" to="/stack/">Explore and install the full stack <Arrow /></AtlasLink>
+      <AtlasLink className="text-link" to="/stack/">Explore and install the Core <Arrow /></AtlasLink>
     </section>
 
 

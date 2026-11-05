@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.3.0 — In progress
+## 1.3.0
 
 - Add requested visual HTML and interactive explanation guidance directly to Atlas Explain, usable alone or with its methods. Adapt Big Pics Little Words with source attribution and the Effective HTML MIT license link in the README, without registering another watched source.
 

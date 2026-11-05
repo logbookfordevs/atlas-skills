@@ -30,8 +30,8 @@ export function Overview() {
     <section className="closing-note">
       <h2>One skill is a good start.</h2>
       <p>Install a package from its reference page, then ask your agent to use it. <AtlasLink to={skillPath('atlas-setup')}>Atlas Setup</AtlasLink> can check any independent dependencies it needs.</p>
-      <p>The <AtlasLink to="/stack/">shared stack</AtlasLink> brings Atlas together with skills from other authors. Those skills stay independent, with their original sources and update paths.</p>
-      <AtlasLink className="text-link" to="/stack/">Explore the shared stack <Arrow /></AtlasLink>
+      <p>The <AtlasLink to="/stack/">Logbook Atlas Core</AtlasLink> brings Atlas together with skills from other authors. Those skills stay independent, with their original sources and update paths.</p>
+      <AtlasLink className="text-link" to="/stack/">Explore the Core <Arrow /></AtlasLink>
     </section>
   </>;
 }

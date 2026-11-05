@@ -185,6 +185,8 @@ main { min-width: 0; max-width: 720px; }
 .reference-sources a, .back-link { min-height: 44px; display: inline-flex; align-items: center; gap: 7px; font: 400 13px/1.5 var(--sans); }
 .back-link { margin-top: 40px; }
 .stack-intro { margin-bottom: 50px; }
+.stack-intro .command { margin-block: 24px; }
+.stack-intro .command-note { color: var(--muted); font-size: 14px; line-height: 1.7; }
 .stack-actions { display: flex; flex-wrap: wrap; gap: 8px 30px; }
 .stack-source { padding: 29px 0; border-top: 1px solid var(--border); }
 .stack-source h2 { font-size: 19px; margin-bottom: 3px; }
