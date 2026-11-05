@@ -27,11 +27,11 @@ Suppose users need to save a dashboard filter, return later and restore it, but 
 | Progress must survive handoffs | Tracking Implementation, when requested | One durable Implementation Record alongside the executor |
 | An interface needs realistic edge-case data | Atlas Verify: UI Stress | An isolated data-switching harness and findings, with fixes handed to implementation |
 | Animation drops frames | Atlas Motion: Performance | A cause-based diagnosis with code evidence and available profiling results |
-| Completed behavior needs proof | Atlas Verify: Run, when requested or selected for the task | A structured verification report with actual evidence and coverage gaps |
+| Completed behavior needs proof | Atlas Verify: Behavior, when requested or selected for the task | A structured verification report with actual evidence and coverage gaps |
 | Verification knowledge should be reusable | Atlas Verifiers, explicitly invoked | A project verifier or maintained checks, selected from the problem |
 | The change needs judgment | Atlas Review, or Tracking's checkpoint review gate | Findings, their resolution and remaining uncertainty |
 
-Atlas Verify executes requested QA through Run, UI Stress or Performance. Atlas Verifiers is a separate manual entry for building or maintaining reusable checks and investigating state models. Describe the problem when invoking it; the agent recommends an approach from the context, proceeds when the intended outcome is clear, and helps you choose before starting materially different work.
+Atlas Verify executes requested QA through Behavior, UI Stress or Performance. Atlas Verifiers is a separate manual entry for building or maintaining reusable checks and investigating state models. Describe the problem when invoking it; the agent recommends an approach from the context, proceeds when the intended outcome is clear, and helps you choose before starting materially different work.
 
 These are choices, not required phases. Once scope is settled, a request might be:
 

@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index e901d1f..ac2ea4a 100644
+index e901d1f..1df8c67 100644
 --- a/source.md
 +++ b/source.md
 @@ -6,7 +6,7 @@ disable-model-invocation: true
@@ -25,7 +25,7 @@ index e901d1f..ac2ea4a 100644
  - Give the number with its unit, the run count, the range, and the limiter. For example, "p50 41 ms → 33 ms, median of 7 runs per side, range 32 to 35 ms after, bound by JSON parsing on one core."
  - Call the verdict inconclusive when you claim a difference but cannot name the limiter, when a side ran untuned, or when you could not check questions 4 and 7. Name the gap.
 -- Keep a PR body to one primary number, per the **Opening a PR** playbook. Put the runs, range, and limiter evidence in a linked artifact or notes file.
-+- Put raw runs, range, environment, work/error counts and limiter evidence in linked temporary artifacts. A standalone measurement needs no rendered report. When contributing to a Run, reuse these measurements in the existing feature/list report, with commands and evidence paths; keep schema v1 unchanged. An inconclusive measured claim stays unresolved rather than becoming a pass.
++- Put raw runs, range, environment, work/error counts and limiter evidence in linked temporary artifacts. A standalone measurement needs no rendered report. When contributing to a Behavior report, reuse these measurements in the existing feature/list report, with commands and evidence paths; keep schema v1 unchanged. An inconclusive measured claim stays unresolved rather than becoming a pass.
  
 -## Other perf material
 -

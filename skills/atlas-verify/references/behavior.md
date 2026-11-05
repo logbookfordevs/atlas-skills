@@ -7,7 +7,7 @@ metadata:
   short-description: Verify behavior and hand off inspectable evidence.
 ---
 
-# Run verification
+# Behavior verification
 
 Proof that behavior works. The report contract, QA-list conventions and capture
 method are sibling references — load what the run needs. Package-root paths below

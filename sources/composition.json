@@ -931,10 +931,10 @@
       "sourceSha256": "18a7611a2dfa5a977000eb4223cb3e917b98c8ead0b8b9dce9fe2baba26379aa",
       "license": "sources/upstream/pe-verify/LICENSE",
       "licenseSha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
-      "method": "skills/atlas-verify/references/run.md",
-      "carriedPath": "references/run.md",
+      "method": "skills/atlas-verify/references/behavior.md",
+      "carriedPath": "references/behavior.md",
       "patch": "sources/patches/pe-verify.patch",
-      "adaptation": "Carry PE Verify as the Run method behind the Atlas Verify selector. Preserve the complete report engine and root support paths. Adapt executor/review handoffs, QA-list discovery, browser-driver choice, report naming and project-verifier use. Run remains read-only toward product code; Create, Maintain and Performance have separate selected contracts.",
+      "adaptation": "Carry PE Verify as the Behavior method behind the Atlas Verify selector. Preserve the complete report engine and root support paths. Adapt executor/review handoffs, QA-list discovery, browser-driver choice, report naming and project-verifier use. Behavior keeps product code read-only and owns the structured report.",
       "consumers": [
         "atlas-verify"
       ],
@@ -5011,7 +5011,7 @@
     {
       "id": "verify-executor-handoff",
       "owner": "atlas-verify",
-      "document": "skills/atlas-verify/references/run.md",
+      "document": "skills/atlas-verify/references/behavior.md",
       "section": "Handoffs",
       "sources": [
         "pe-verify"
@@ -5093,7 +5093,7 @@
         "pstack-benchmark-checklist",
         "break-ui"
       ],
-      "decision": "Run, UI Stress and Performance execute requested QA. Product fixes remain outside verification. Run owns the structured report; other methods retain their deliverables and reuse evidence when contributing to Run. A missing project verifier does not select asset creation or maintenance, which belongs to Atlas Verifiers."
+      "decision": "Behavior, UI Stress and Performance execute requested QA. Product fixes remain outside verification. Behavior owns the structured report; other methods retain their deliverables and reuse evidence when contributing to a Behavior report. A missing project verifier does not select asset creation or maintenance, which belongs to Atlas Verifiers."
     },
     {
       "id": "verify-project-verifier-bridge",
@@ -5116,7 +5116,7 @@
         "pe-verify",
         "pstack-benchmark-checklist"
       ],
-      "decision": "Vet actual measured claims with raw work/error/repetition/limiter evidence. Adapt host tools, keep optimization outside verification, and use existing schema fields when contributing to a Run; standalone benchmarks do not require a rendered PE report or external perf playbook."
+      "decision": "Vet actual measured claims with raw work/error/repetition/limiter evidence. Adapt host tools, keep optimization outside verification, and use existing schema fields when contributing to a Behavior report; standalone benchmarks do not require a rendered PE report or external perf playbook."
     },
     {
       "id": "review-adversarial-owner",
