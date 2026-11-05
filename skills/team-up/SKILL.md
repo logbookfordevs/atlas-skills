@@ -1,6 +1,6 @@
 ---
 name: team-up
-description: "Use whenever the user or another skill asks to delegate work, spawn subagents, start separate agent chats, or convene a council."
+description: "Use when the user or another skill asks to delegate work, spawn subagents, start separate agent chats, convene a council, or use Arena or Swarm."
 ---
 
 # Team Up

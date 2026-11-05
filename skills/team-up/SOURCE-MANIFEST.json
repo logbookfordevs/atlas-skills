@@ -240,7 +240,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "a9907687ac8ca19262e60ec1f7d5174c0b424a6da4c72d65df701681941964fb",
+    "SKILL.md": "68917e6ba2632f0c56633cd35cde208f7ac9c62bacb8ccbab8a8a6bd349b9e7c",
     "agents/openai.yaml": "cc2307960ff67687217ee0f6252390a54ce17a4f2b00df3ddb1805c22374e2ae",
     "references/selection.md": "0adb58bd6ff69435747dd138c9ac90bba0fde73042ace15e0701c08ab07f34e4",
     "references/model-preferences.md": "87eea498c6e602a01d0c2376c7ea2e34dbe6f5838dd44f4498efc334e8989b01",

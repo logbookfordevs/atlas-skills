@@ -70,6 +70,7 @@ Use Animated-Driven Frontend for synchronized progress, scroll sequences, render
 | A shared contract could affect other consumers | Atlas Review: Impact | Trace downstream assumptions and preserve evidence for the risks. |
 | A consequential assumption needs challenge | Atlas Review: Adversarial | Independent review supplies evidence for judgment, not automatic authority. |
 | Work benefits from teammates | Team Up: Delegation, Arena or Swarm | Choose the smallest capable team; use Arena for competing candidates, Swarm for structured coverage or races. |
+| You want a fresh opinion on possible overengineering | Reality Check (manual) | One reviewer from another model family questions the framing and recommends the simplest sufficient approach; advice stays advisory. |
 | A session exposes recurring workflow friction | Atlas Retro: Diagnose | Propose improvements. Enforce requires authorization to implement prevention. |
 | Installed dependencies or stack alignment need inspection | Atlas Setup | Installation and named removals retain their own approvals. Setup stays outside Atlas Mode. |
 | A tracked implementation needs continuation | Tracking Implementation: Resume | Recover the existing record, source, blockers, review selections and evidence. |

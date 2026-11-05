@@ -4539,6 +4539,23 @@
       "dependencies": []
     },
     {
+      "id": "reality-check",
+      "entry": "skills/reality-check/SKILL.md",
+      "agent": "skills/reality-check/agents/openai.yaml",
+      "methods": [],
+      "authoredReferences": [
+        {
+          "input": "skills/team-up/references/selection.md",
+          "target": "references/selection.md"
+        },
+        {
+          "input": "skills/team-up/references/model-preferences.md",
+          "target": "references/model-preferences.md"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "id": "atlas-setup",
       "entry": "skills/atlas-setup/SKILL.md",
       "agent": "skills/atlas-setup/agents/openai.yaml",
@@ -4861,6 +4878,12 @@
           "relationship": "behavioral",
           "required": false,
           "condition": "When authoring agent instructions, skills or agent-facing policies."
+        },
+        {
+          "id": "reality-check",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When the user requests a fresh second opinion on overthinking, overengineering or the simplest sufficient approach."
         }
       ]
     },
