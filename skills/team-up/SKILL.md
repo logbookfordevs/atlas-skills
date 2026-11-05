@@ -1,6 +1,6 @@
 ---
 name: team-up
-description: "Choose subagent roles, models and effort for delegation; compare candidates with Arena, coordinate parallel coverage or races with Swarm."
+description: "Use whenever the user or another skill asks to delegate work, spawn subagents, start separate agent chats, or convene a council."
 ---
 
 # Team Up
@@ -14,3 +14,5 @@ Default to Delegation for ordinary assignments and role/model selection. Select 
 | Swarm | Partition coverage, race the same brief or mix both, then return one evidenced report with gaps and a declared race rule. | [Swarm](references/swarm/swarm.md) |
 
 Requests for `arena` or `swarm` select that bundled method. A caller requesting only role/model selection uses the selection policy and returns to its existing workflow; policy use does not launch another mode. The selected task determines permitted writes, evidence and delivery scope.
+
+A `council` request selects three independently run model families when available, for example GPT, Claude and Gemini. Use the selection policy for assignments and disclose any shortfall. Council specifies the team composition; the requested outcome determines the method.

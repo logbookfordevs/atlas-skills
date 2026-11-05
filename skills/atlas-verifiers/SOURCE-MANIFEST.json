@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "workflow": "atlas-verifiers",
+  "generated": true,
+  "managedFiles": [
+    "references/create/create-verification-skill.md",
+    "licenses/pstack-create-verification-skill.txt",
+    "references/create/references/feature-map-example/README.md",
+    "references/create/references/feature-map-example/create-note.md",
+    "references/create/references/feature-map-example/search.md",
+    "references/maintain/maintain-verification-skill.md",
+    "licenses/pstack-maintain-verification-skill.txt",
+    "references/formal-create/formal-create.md",
+    "licenses/pstack-create-formal-verification-skill.txt",
+    "references/formal-maintain/formal-maintain.md",
+    "licenses/pstack-maintain-formal-verification-skill.txt"
+  ],
+  "authoredInputs": [
+    "skills/atlas-verifiers/SKILL.md",
+    "skills/atlas-verifiers/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "statechart",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "When Formal Create selects a TLA+ model, use independently installed Statechart to read model-checking results. If unavailable, report the gap and offer targeted installation before dependent work."
+    }
+  ],
+  "sources": [
+    {
+      "id": "pstack-create-verification-skill",
+      "owner": "atlas-verifiers",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/create-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/README.md",
+          "classification": "verbatim",
+          "sourceSha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+          "carriedPath": "references/create/references/feature-map-example/README.md",
+          "carriedSha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba"
+        },
+        {
+          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/create-note.md",
+          "classification": "verbatim",
+          "sourceSha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+          "carriedPath": "references/create/references/feature-map-example/create-note.md",
+          "carriedSha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7"
+        },
+        {
+          "upstreamPath": "skills/create-verification-skill/references/feature-map-example/search.md",
+          "classification": "verbatim",
+          "sourceSha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+          "carriedPath": "references/create/references/feature-map-example/search.md",
+          "carriedSha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "bba612e8b81a02df0f49e6f6911f3b543c8c7d9f1f3c13ae6c0e2d58cc8c3ad3",
+      "carriedPath": "references/create/create-verification-skill.md",
+      "carriedSha256": "65bdea607bdfedb4fc0c7a7aa26d8aa51a522ddfe875b8ed34e6707173dcfb14",
+      "licensePath": "licenses/pstack-create-verification-skill.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Bound generator writes to the project verifier directory, report product startup failures instead of repairing them, distinguish unmet prerequisites from verified regressions, and route maintenance to the bundled method. Preserve self-proof, cleanup and the complete feature-map examples.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "verify-method-authority",
+        "verify-project-verifier-bridge"
+      ],
+      "patch": "sources/patches/pstack-create-verification-skill.patch",
+      "patchSha256": "21727947fe11c5a6410002c1fe9315d61814d38f10638fc479e7aba6e5fcb310"
+    },
+    {
+      "id": "pstack-maintain-verification-skill",
+      "owner": "atlas-verifiers",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "path": "skills/maintain-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "5943f7747da6aafcf5c1063c988e725c97e415866f5c7746279012f35cb49815",
+      "carriedPath": "references/maintain/maintain-verification-skill.md",
+      "carriedSha256": "f1232cc546bf4cb0dadfd155fd959634c7037a3aa69ea5e8fc24fa631074432e",
+      "licensePath": "licenses/pstack-maintain-verification-skill.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Use host-bounded source readers with a sequential fallback, keep one live driver, make changed mean proven local corrections rather than publication, and resolve creation through the bundled method. Preserve all-feature source/live coverage and product-code read-only scope.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-15",
+      "rulings": [
+        "verify-method-authority",
+        "verify-project-verifier-bridge"
+      ],
+      "patch": "sources/patches/pstack-maintain-verification-skill.patch",
+      "patchSha256": "2b2488da1b0a1446ba0620f6e9ee2d9db1753e0bd375c72e70145a1f86c6f286"
+    },
+    {
+      "id": "pstack-create-formal-verification-skill",
+      "owner": "atlas-verifiers",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/create-formal-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "30ef0ac27612ecd16fdc081112113221d673053cef3f8603db11932193861211",
+      "carriedPath": "references/formal-create/formal-create.md",
+      "carriedSha256": "9ff0a182e68db0884a9ec02f72107b65cb5d530fd9fe1a448457b6efd10b2415",
+      "licensePath": "licenses/pstack-create-formal-verification-skill.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Resolve Formal Maintain through its bundled method. Keep Statechart an independently installed conditional dependency for TLA+ results and generated verifier instructions; report missing availability before dependent work. Update bundled reference links for ordinary Markdown filenames.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": [],
+      "patch": "sources/patches/pstack-create-formal-verification-skill.patch",
+      "patchSha256": "5726edb9e8aed58859a87a1bab1691637e76baa4616f24479eb4fd044a6075ab"
+    },
+    {
+      "id": "pstack-maintain-formal-verification-skill",
+      "owner": "atlas-verifiers",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/maintain-formal-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "0c96f54293542d3818b68754562b338073958781a9684454611dca37592e2d2c",
+      "carriedPath": "references/formal-maintain/formal-maintain.md",
+      "carriedSha256": "a2713e730f2a7c3fb5ae2b2dd267239cc69267330886ae2ef7ceef6c70066309",
+      "licensePath": "licenses/pstack-maintain-formal-verification-skill.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Resolve lifecycle and Statechart calls through bundled methods, including reusable generated instructions, without requiring standalone upstream installations. Update bundled reference links for ordinary Markdown filenames.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": [],
+      "patch": "sources/patches/pstack-maintain-formal-verification-skill.patch",
+      "patchSha256": "c4500b378fed9475ec246836d5c21011be867d24baeba87bc4b8807460ec0ec7"
+    }
+  ],
+  "rulings": [
+    {
+      "id": "verify-project-verifier-bridge",
+      "owner": "atlas-verifiers",
+      "document": "skills/atlas-verifiers/references/project-verifiers.md",
+      "section": "Coverage and reporting",
+      "sources": [
+        "pe-verify",
+        "pstack-create-verification-skill",
+        "pstack-maintain-verification-skill"
+      ],
+      "decision": "Use reusable app-driving instructions without copying the report engine. Map requested features and entrypoints deliberately into PE feature/list reports, preserve prerequisites and lifecycle-versus-behavior states, reuse evidence, and keep one driver/cleanup owner per shared instance. Creation proves one seeded feature; maintenance accounts for every mapped feature."
+    }
+  ],
+  "files": {
+    "SKILL.md": "2e2f7eef8434edcd6b01cc173f9c4f8b93cc10d3169234af5cdc1b86c8bc7642",
+    "agents/openai.yaml": "708b605ea06a1f118507734f5972c31272da06d9e3baccade42bd1a5ad68c330",
+    "references/create/create-verification-skill.md": "65bdea607bdfedb4fc0c7a7aa26d8aa51a522ddfe875b8ed34e6707173dcfb14",
+    "licenses/pstack-create-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/create/references/feature-map-example/README.md": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+    "references/create/references/feature-map-example/create-note.md": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+    "references/create/references/feature-map-example/search.md": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+    "references/maintain/maintain-verification-skill.md": "f1232cc546bf4cb0dadfd155fd959634c7037a3aa69ea5e8fc24fa631074432e",
+    "licenses/pstack-maintain-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/formal-create/formal-create.md": "9ff0a182e68db0884a9ec02f72107b65cb5d530fd9fe1a448457b6efd10b2415",
+    "licenses/pstack-create-formal-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/formal-maintain/formal-maintain.md": "a2713e730f2a7c3fb5ae2b2dd267239cc69267330886ae2ef7ceef6c70066309",
+    "licenses/pstack-maintain-formal-verification-skill.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/project-verifiers.md": "3bdb48f1fc52bfa3d6d4ea673db2f43dee7df2c1ea0d9f7e7cc4d883b3bf96b5"
+  }
+}

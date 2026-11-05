@@ -39,14 +39,13 @@
       "strict": false,
       "skills": [
         "./creative-skills/atlas-figures",
-        "./creative-skills/colorfigures",
-        "./creative-skills/iso-glow"
+        "./creative-skills/playable"
       ]
     },
     {
       "name": "utility-skills",
       "source": "./",
-      "description": "Optional standalone utilities for use beyond Atlas’s core workflows.",
+      "description": "Optional standalone utilities for use beyond Atlas\u2019s core workflows.",
       "strict": false,
       "skills": [
         "./utility-skills/skill-source-composition"

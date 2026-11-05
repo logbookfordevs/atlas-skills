@@ -1,0 +1,6 @@
+interface:
+  display_name: "Playable"
+  short_description: "Drive animated 3D characters in the browser."
+  default_prompt: "Use $playable to turn my model or robot sketch into a playable character."
+policy:
+  allow_implicit_invocation: false

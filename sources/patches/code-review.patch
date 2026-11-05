@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 373a4f2..963a38d 100644
+index 83183e0..7e6dbe4 100644
 --- a/source.md
 +++ b/source.md
 @@ -1,89 +1,96 @@
@@ -18,10 +18,10 @@ index 373a4f2..963a38d 100644
 +- **Standards** - does the code conform to this repo's documented coding standards?
 +- **Spec** - does the code faithfully implement the originating issue, spec, or implementation ticket?
  
--Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings.
+-Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings. Start every sub-agent with a fresh context window.
 -
 -The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
-+Both axes should run in parallel sub-agents or fresh contexts so they do not pollute each other's context, then this skill aggregates their findings.
++Both axes run in parallel, each in a sub-agent with a fresh context window, then this skill aggregates their findings.
  
  ## Process
  

@@ -73,6 +73,29 @@ test('a package is portable and hand-edited output is rejected', t => {
   buildSkills(root, { check: true });
 });
 
+test('only public package entries are discoverable as SKILL.md files', t => {
+  const cases = [
+    ['carried entry', (manifest) => { manifest.sources[0].carriedPath = 'references/method/SKILL.md'; }],
+    ['support file', (manifest) => { manifest.sources[0].supportingFiles[0].relativePath = 'nested/skill.MD'; }],
+    ['support target', (manifest) => { manifest.sources[0].supportingFileTargets = { 'details.md': 'references/other/Skill.md' }; }],
+    ['authored reference', (manifest) => { manifest.workflows[0].authoredReferences = [{ input: manifest.sources[0].snapshot, target: 'references/own/SKILL.md' }]; }],
+    ['local authored file', (_manifest, root) => {
+      const directory = join(root, 'skills/logbook-fixture/references/own');
+      mkdirSync(directory, { recursive: true });
+      writeFileSync(join(directory, 'SKILL.md'), 'Nested authored instructions\n');
+    }],
+  ];
+  for (const [name, configure] of cases) {
+    const root = fixture(t);
+    const path = join(root, 'sources/composition.json');
+    const manifest = JSON.parse(readFileSync(path));
+    assert.ok(composeSkills(root).get('logbook-fixture').has('SKILL.md'));
+    configure(manifest, root);
+    writeFileSync(path, JSON.stringify(manifest));
+    assert.throws(() => composeSkills(root), /Only the package entry may be named SKILL\.md/, name);
+  }
+});
+
 test('altered upstream bytes and license notices fail integrity checks', t => {
   for (const file of ['source.md', 'LICENSE']) {
     const root = fixture(t);

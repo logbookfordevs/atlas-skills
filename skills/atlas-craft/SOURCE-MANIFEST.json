@@ -482,7 +482,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/animate/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -497,14 +497,14 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "sourceSha256": "39138996033e0dbe53e73217514116eaeca774bae84a0687c80d445a4e0cc3a6",
       "carriedPath": "references/animate/animate.md",
-      "carriedSha256": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
+      "carriedSha256": "7ad0a8ebb3864c33013fc4bb83cbb33408c151c743bead70ef71d8cf10570b73",
       "licensePath": "licenses/animate.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. Supporting files remain verbatim.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "craft-motion-owner",
         "review-motion-owner",
@@ -572,7 +572,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "60bf140e43c98b248e6594487384ec967e89d98a",
         "path": "skills/state-machine/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -581,9 +581,9 @@
         {
           "upstreamPath": "skills/state-machine/switcher.md",
           "classification": "verbatim",
-          "sourceSha256": "32f0f1c82362557bfc7f83554359883b0c3d931d578ec8a7a390529699973c6d",
+          "sourceSha256": "d6603f2512bc544f86c2d585399791d7f0e6dde50c6b32ad795d899df55a4377",
           "carriedPath": "references/states/switcher.md",
-          "carriedSha256": "32f0f1c82362557bfc7f83554359883b0c3d931d578ec8a7a390529699973c6d"
+          "carriedSha256": "d6603f2512bc544f86c2d585399791d7f0e6dde50c6b32ad795d899df55a4377"
         }
       ],
       "notices": [],
@@ -594,7 +594,7 @@
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "adaptation": "Route stress testing and interface review to their existing Atlas owners. Clarify that production styling belongs to the component while switcher chrome stays isolated; keep fixture refreshes and mutations separate from live data. Preserve existing-state discovery, the real-component workbench, explicit seam approval and user-requested cleanup.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "craft-states-workbench"
       ],
@@ -670,7 +670,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "6bc4b03664613e4d42fe8eb0ba9002c50505825cb47a554f52ba1d603cb3d169",
+    "SKILL.md": "b7815acbbea3244bec5ca578d46b8354cbf06a7e51ee8cac4f4c82ca5e1fefb3",
     "agents/openai.yaml": "48c44e6c74b77a96b543cf5b33bb169e577033fdadb3867d2a9540f79782d4d9",
     "references/motion-ownership.md": "096f4cb355d060c1dc241d244ae991a908fb0830920c30d51bf32969cf0a684e",
     "references/color/index.md": "a19738d2312c97fe40ea4a05000387085528eac9ddf994345687df72ed16a0f7",
@@ -712,7 +712,7 @@
     "references/copy/index.md": "84179138a0816a54f89364b98ea9c1daf9405e65d20f858944ca3de4d5585fda",
     "licenses/better-writing.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
     "references/copy/patterns.md": "bb7b6bb17fbdf9e249eeb5d2ada2bcc9863f67dd6659489b4f25a59587a0c324",
-    "references/animate/animate.md": "04ab6945affd2ba49582cce234dbf893baf994bf5d0a9ddc71bcf89db5600070",
+    "references/animate/animate.md": "7ad0a8ebb3864c33013fc4bb83cbb33408c151c743bead70ef71d8cf10570b73",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
     "references/fluid/apple-design.md": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
@@ -721,7 +721,7 @@
     "licenses/mobile-native.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/states/state-machine.md": "a551306b0e1bf0cc46400d1327c8188b298c89f48f4cbcdff89d6cac1b4b43a9",
     "licenses/state-machine.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/states/switcher.md": "32f0f1c82362557bfc7f83554359883b0c3d931d578ec8a7a390529699973c6d",
+    "references/states/switcher.md": "d6603f2512bc544f86c2d585399791d7f0e6dde50c6b32ad795d899df55a4377",
     "references/ownership.md": "ec025ecc463b5304bcfb628ce028789720cc3d828c73d5c436742a668e2b1e32"
   }
 }

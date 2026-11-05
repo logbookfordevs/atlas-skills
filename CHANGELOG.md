@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.3.0
+
+- Add requested visual HTML and interactive explanation guidance directly to Atlas Explain, usable alone or with its methods. Adapt Big Pics Little Words with source attribution and the Effective HTML MIT license link in the README, without registering another watched source.
+
+- Rename bundled `SKILL.md` references to ordinary Markdown filenames so hosts expose only public Atlas entrypoints. Update local links and source receipts, preserve original upstream snapshots, and reject nested skill entry filenames during package validation.
+
+- Adopt ten reviewed upstream updates: fresh-context reviewers and research agents, cross-family Arena judging, version-aware Motion 14.2 acceleration guidance, the States switcher styling fix and a corrected Source-Driven citation. Retain the current Adversarial method after reviewing Interrogate’s incompatible executable-only rewrite; record declined revisions so the watcher reports the decision without reopening the same update.
+
+- Consolidate ISO-GLOW and Colorfigures under their existing pristine source snapshots and Atlas Figures methods; remove duplicate standalone packages and install listings while preserving author credits and licenses.
+
+- Let Atlas Explain select and combine methods from the conversation. Teach guides learning using How and Why; show options when requested and clarify only when ambiguity materially changes the work.
+
+- Let Atlas Figures proceed directly with an explicitly chosen treatment; show the menu and recommendation only while the choice is open.
+
+- Add April Zhu’s Playable as an optional, manually invoked standalone creative skill from her download with complete assets, MIT license, source fingerprints and prominent author credits. Keep the workflow and assets verbatim, record the manual-invocation metadata patch, and leave it outside the shared stack and Figures chooser.
+
+- Sharpen automatic skill descriptions around concrete task and decision triggers.
+- Make cross-family review and subject preferences the default in Team Up and its shared selection policy. Add Council as shorthand for three independent model families when available.
+- Rename Atlas Verify’s Run method to Behavior so “run QA” reads as a general verification request.
+- Rename Atlas Review’s Code mode to Standards & Spec, preserving its two independent axes and open-ended selection of other review methods.
+- Add Catch Up to Atlas Explain using Pstack Ketchup and bundled Bro voice guidance. Replace standalone Recap in the shared stack.
+- Add the manually invoked Atlas Verifiers chooser with Create, Maintain, Formal Create and Formal Maintain. Move reusable-verifier authoring out of Atlas Verify, which offers Behavior, UI Stress and Performance.
+- Add Atlas Debug with Matt Pocock’s diagnosis workflow and requested expected-versus-actual explanations rendered with Pele. Recommend Statechart independently from Pstack in the shared stack, including as Formal Create’s conditional TLA+ dependency.
+- Refresh Atlas Mode, Setup, the shared stack and website documentation for the current skill and method selection.
+
 ## 1.2.0
 
 - Add an interactive Anatomy workflow figure with five selectable stations, stage inputs and outputs, copyable requests, and a review feedback route. Preserve the upstream renderer and MIT license.

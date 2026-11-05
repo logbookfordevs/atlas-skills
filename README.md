@@ -10,7 +10,7 @@ Atlas maintains what it authors, patches or bundles. Complementary independent s
 
 ## Skills V2
 
-Collection releases use Git tags and GitHub releases. **v1.2.0** identifies this skill set; see the [release notes](CHANGELOG.md). Upstream revisions remain recorded separately in each package’s source receipt.
+Collection releases use Git tags and GitHub releases. **v1.3.0** identifies this skill set. See the [release notes](CHANGELOG.md). Upstream revisions remain recorded separately in each package’s source receipt.
 
 Install the packages below, or import the Logbook Atlas Core to include the recommended independent skills. Original-name upstream packages retain their authorship and methods.
 
@@ -20,17 +20,19 @@ Install the packages below, or import the Logbook Atlas Core to include the reco
 | [HTML UI](skills/html-ui/SKILL.md) | Wireframe and polished Model modes |
 | [Atlas Grill](skills/atlas-grill/SKILL.md) | Grilling by default; Domain Modeling and documentation on explicit request |
 | [Atlas Wayfinder](skills/atlas-wayfinder/SKILL.md) | Manually invoked decision maps with shared Grilling and Domain Modeling methods |
-| [Atlas Explain](skills/atlas-explain/SKILL.md) | How, Why, conversational Teach and requested Interface explanations; asks when the mode is unspecified |
+| [Atlas Explain](skills/atlas-explain/SKILL.md) | Selects and combines How, Why, conversational Teach, Interface and Catch Up; creates visual HTML explanations when requested |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
+| [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose bugs with Matt’s reproduction loop; explain expected versus actual behavior with Pele diagrams on request |
 | [Atlas Implement](skills/atlas-implement/SKILL.md) | Architect, TDD and Source-Driven methods, selected independently or together |
-| [Atlas Review](skills/atlas-review/SKILL.md) | Code, Adversarial, Impact, Static, Interface, Motion and Motion Audit review |
-| [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, stress-test UI data, maintain project verifiers and assess performance evidence |
+| [Atlas Review](skills/atlas-review/SKILL.md) | Standards & Spec, Adversarial, Impact, Static, Interface, Motion and Motion Audit review |
+| [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, stress-test UI data and assess performance evidence |
+| [Atlas Verifiers](skills/atlas-verifiers/SKILL.md) | Manual guidance for creating or maintaining app-driving and formal checks |
 | [Atlas Craft](skills/atlas-craft/SKILL.md) | Six refinement domains plus an explicitly requested States workbench; conditional Mobile Web guidance |
 | [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid, Performance diagnosis and read-only Opportunities |
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Implementation state and evidence alongside any executor, with optional Audit Trail |
 | [Animated-Driven Frontend](skills/animated-driven-frontend/SKILL.md) | Manually invoked ZERO engineering knowledge |
-| [Team Up](skills/team-up/SKILL.md) | Role/model/effort selection, Arena candidate synthesis, Swarm coverage or races; optional shared subject preferences |
+| [Team Up](skills/team-up/SKILL.md) | Role/model/effort selection, Arena candidate synthesis and Swarm coverage or races; cross-family review and subject preferences by default, with Council team selection |
 | [Writing for Humans](skills/writing-for-humans/SKILL.md) | Author voice and reader experience, technical documentation, and shared Unslop guidance |
 | [Atlas Retro](skills/atlas-retro/SKILL.md) | Diagnose session friction or explicitly enforce recurring-mistake prevention |
 | [Atlas Setup](skills/atlas-setup/SKILL.md) | Manual dependency and stack check, with explicitly approved cleanup |
@@ -65,7 +67,19 @@ To use the app, run `npx @logbookfordevs/afk` and choose **Import pack in Kit �
 
 ## Creative skills
 
-[ISO-GLOW and Colorfigures](creative-skills/README.md) by [April Zhu (@Aprilzz423)](https://x.com/Aprilzz423) are preserved from their downloadable distributions under `creative-skills/`. Both retain their MIT licenses and credit [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill), the underlying project. Install either optionally with Skills CLI using the commands in their README; neither is included in the Logbook Atlas Core. The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition bundles these alongside Hairline, Anatomy, Engraved Figures and Teardown. It presents all six treatments and leaves selection to you. Creative packages remain outside the Logbook Atlas Core.
+The figure engines, visual styles, examples and creative methods come from the authors below. **Atlas supplies packaging and the Figures chooser; the creative work is theirs.** Visit their original projects for demos and distributions.
+
+| Author | Creative work carried in Atlas |
+| --- | --- |
+| **[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** | **[ISO-GLOW](https://isoglow.dev/)** — glowing isometric illustrations and interactive 3D; **[Colorfigures](https://april-zhu.com/colorfigures)** — hand-inked objects with working mechanisms and see-through views; **[Playable](https://april-zhu.com/playable)** — rigged models and original robots you can drive in the browser |
+| **[Lucas Marques](https://github.com/lucasmarkes/hairline)** | **Hairline** — responsive isometric line figures |
+| **[Ryan](https://github.com/wheresryan22/anatomy)** | **Anatomy** — detailed interactive mechanisms and technical illustrations |
+| **[Brooklyn Nicholson](https://github.com/OutThisLife/brooklyn-skills)** | **Engraved Figures** — scientific plates and monochrome technical drawings |
+| **[Jakub Krehel](https://github.com/jakubkrehel/skills)** | **Teardown** — coherent technical views and exploded assemblies |
+
+April’s ISO-GLOW builds on **[Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill)**; Colorfigures continues that lineage. Original licenses and copyright notices are preserved.
+
+The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition follows your chosen treatment directly, or presents all six options when you have not chosen. ISO-GLOW and Colorfigures are bundled treatments; their pristine download sources are retained under `sources/upstream/`. Playable is separately installable from Atlas. Playable keeps its original name and is independent of the Figures treatment chooser. See [Creative skills](creative-skills/README.md) for installation, source credits and license details. Creative packages remain outside the Logbook Atlas Core.
 
 ## Utility skills
 
@@ -82,6 +96,8 @@ For examples of combining the current skills, see [Work with Atlas](docs/workflo
 ## Source maintenance
 
 A single [composition manifest](sources/composition.json) tracks carried sources, immutable revisions, licenses, supporting files, patches and consumers. Preserved upstream frontmatter stays with each source. Installable packages include source receipts and required notices.
+
+Atlas Explain’s visual-artifact guidance adapts [Big Pics Little Words](https://github.com/plannotator/effective-html/blob/975b047f6da6874e176db54f048c0c31c30e9f65/skills/big-pics-little-words/SKILL.md), originally from [backnotprop’s Bro](https://github.com/backnotprop/bro) and distributed by Plannotator under the [MIT license](https://github.com/plannotator/effective-html/blob/975b047f6da6874e176db54f048c0c31c30e9f65/LICENSE), copyright © 2026 Plannotator. This small adaptation is maintained directly, without upstream tracking.
 
 The [upstream update workflow](docs/authoring/upstream-updates.md) detects changes, replays patches in isolation and opens or updates review issues. Reviewed adoption prepares complete packages locally; it never auto-merges an update. The daily workflow runs from the default branch.
 

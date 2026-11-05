@@ -5,13 +5,13 @@
   "managedFiles": [
     "references/arena/arena.md",
     "licenses/pstack-arena.txt",
-    "references/principles/principle-separate-before-serializing-shared-state/SKILL.md",
+    "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md",
     "licenses/pstack-principle-separate-before-serializing-shared-state.txt",
-    "references/principles/principle-laziness-protocol/SKILL.md",
+    "references/principles/principle-laziness-protocol/principle-laziness-protocol.md",
     "licenses/pstack-principle-laziness-protocol.txt",
-    "references/principles/principle-redesign-from-first-principles/SKILL.md",
+    "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md",
     "licenses/pstack-principle-redesign-from-first-principles.txt",
-    "references/principles/principle-prove-it-works/SKILL.md",
+    "references/principles/principle-prove-it-works/principle-prove-it-works.md",
     "licenses/pstack-principle-prove-it-works.txt",
     "references/swarm/swarm.md",
     "licenses/pstack-swarm.txt"
@@ -27,13 +27,13 @@
       "input": "skills/team-up/references/selection.md",
       "target": "references/selection.md",
       "classification": "atlas-authored",
-      "carriedSha256": "9b48da7990c5a2bd0e0a3120baf651d26b19263957a6150465b13c2507834b26"
+      "carriedSha256": "0adb58bd6ff69435747dd138c9ac90bba0fde73042ace15e0701c08ab07f34e4"
     },
     {
       "input": "skills/team-up/references/model-preferences.md",
       "target": "references/model-preferences.md",
       "classification": "atlas-authored",
-      "carriedSha256": "7dc403c401f941e1a4e6b72503862b169931e598d2fbc6cd90ba203803dfc770"
+      "carriedSha256": "87eea498c6e602a01d0c2376c7ea2e34dbe6f5838dd44f4498efc334e8989b01"
     }
   ],
   "dependencies": [],
@@ -44,21 +44,21 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "d9ba4883b0fde1c73238f6a58a0666d667606a74b23c38e9c4de0d84d8e8f4d2",
+      "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
       "carriedPath": "references/arena/arena.md",
-      "carriedSha256": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
+      "carriedSha256": "d49758f50aedf1cf1dee06e84f0783668ffff5d39aebfffd78d00bd32b2c0d03",
       "licensePath": "licenses/pstack-arena.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference without re-entering mode routing; adapt bounded scheduling, output isolation and sequential fallback with honest independence gaps. Carry the complete contextual principle closure.",
+      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -67,7 +67,7 @@
         "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-arena.patch",
-      "patchSha256": "ab13831375e8ac1abad5d054a080b09b1d77d55e477c209c82997f132ce9f969"
+      "patchSha256": "30ea4ce7f33a57dd46709688a980e90f16592ad0391603bdd791e58695bf5509"
     },
     {
       "id": "pstack-principle-separate-before-serializing-shared-state",
@@ -83,7 +83,7 @@
       "supportingFiles": [],
       "notices": [],
       "sourceSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
-      "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/SKILL.md",
+      "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md",
       "carriedSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
       "licensePath": "licenses/pstack-principle-separate-before-serializing-shared-state.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
@@ -109,7 +109,7 @@
       "supportingFiles": [],
       "notices": [],
       "sourceSha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
-      "carriedPath": "references/principles/principle-laziness-protocol/SKILL.md",
+      "carriedPath": "references/principles/principle-laziness-protocol/principle-laziness-protocol.md",
       "carriedSha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
       "licensePath": "licenses/pstack-principle-laziness-protocol.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
@@ -134,7 +134,7 @@
       "supportingFiles": [],
       "notices": [],
       "sourceSha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
-      "carriedPath": "references/principles/principle-redesign-from-first-principles/SKILL.md",
+      "carriedPath": "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md",
       "carriedSha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
       "licensePath": "licenses/pstack-principle-redesign-from-first-principles.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
@@ -159,7 +159,7 @@
       "supportingFiles": [],
       "notices": [],
       "sourceSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
-      "carriedPath": "references/principles/principle-prove-it-works/SKILL.md",
+      "carriedPath": "references/principles/principle-prove-it-works/principle-prove-it-works.md",
       "carriedSha256": "66a9ae716dc1e6a8df742d835ed10c8ae3b81946f2bc15e4a9334afcd6269853",
       "licensePath": "licenses/pstack-principle-prove-it-works.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
@@ -240,19 +240,19 @@
     }
   ],
   "files": {
-    "SKILL.md": "82fbbd473b1d4f608fc95423d853d3f744f7961555d66f6f4db4a13e370f19f6",
+    "SKILL.md": "a9907687ac8ca19262e60ec1f7d5174c0b424a6da4c72d65df701681941964fb",
     "agents/openai.yaml": "cc2307960ff67687217ee0f6252390a54ce17a4f2b00df3ddb1805c22374e2ae",
-    "references/selection.md": "9b48da7990c5a2bd0e0a3120baf651d26b19263957a6150465b13c2507834b26",
-    "references/model-preferences.md": "7dc403c401f941e1a4e6b72503862b169931e598d2fbc6cd90ba203803dfc770",
-    "references/arena/arena.md": "540188a9423718efb6d85694ab4271cf667856def0254a70d580c178d9385165",
+    "references/selection.md": "0adb58bd6ff69435747dd138c9ac90bba0fde73042ace15e0701c08ab07f34e4",
+    "references/model-preferences.md": "87eea498c6e602a01d0c2376c7ea2e34dbe6f5838dd44f4498efc334e8989b01",
+    "references/arena/arena.md": "d49758f50aedf1cf1dee06e84f0783668ffff5d39aebfffd78d00bd32b2c0d03",
     "licenses/pstack-arena.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-separate-before-serializing-shared-state/SKILL.md": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+    "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
     "licenses/pstack-principle-separate-before-serializing-shared-state.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-laziness-protocol/SKILL.md": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
+    "references/principles/principle-laziness-protocol/principle-laziness-protocol.md": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
     "licenses/pstack-principle-laziness-protocol.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-redesign-from-first-principles/SKILL.md": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
+    "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
     "licenses/pstack-principle-redesign-from-first-principles.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-prove-it-works/SKILL.md": "66a9ae716dc1e6a8df742d835ed10c8ae3b81946f2bc15e4a9334afcd6269853",
+    "references/principles/principle-prove-it-works/principle-prove-it-works.md": "66a9ae716dc1e6a8df742d835ed10c8ae3b81946f2bc15e4a9334afcd6269853",
     "licenses/pstack-principle-prove-it-works.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/swarm/swarm.md": "91e8602356fd5c53fb13a83422edb59955e85214fd07be994686ea316540a97c",
     "licenses/pstack-swarm.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"

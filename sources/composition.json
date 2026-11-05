@@ -75,13 +75,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/animate/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/animate/source.md",
-      "sourceSha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "sourceSha256": "39138996033e0dbe53e73217514116eaeca774bae84a0687c80d445a4e0cc3a6",
       "license": "sources/upstream/animate/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/animate/animate.md",
@@ -92,14 +92,14 @@
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-11-03",
       "carriedPath": "references/animate/animate.md",
       "supportingFiles": [
         {
+          "snapshot": "sources/upstream/animate/supporting/RECIPES.md",
+          "relativePath": "RECIPES.md",
           "upstreamPath": "skills/animate/RECIPES.md",
-          "snapshot": "sources/upstream/animate/support/RECIPES.md",
-          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
-          "relativePath": "RECIPES.md"
+          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2"
         }
       ],
       "rulings": [
@@ -445,17 +445,17 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+        "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
         "path": "skills/engineering/code-review/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/code-review/source.md",
-      "sourceSha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357",
+      "sourceSha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
       "license": "sources/upstream/code-review/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "skills/atlas-review/references/code/code-review.md",
-      "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources. Standards review explicitly checks added or changed comments against the repository comment policy.",
+      "adaptation": "Leonardo\u2019s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources. Standards review explicitly checks added or changed comments against the repository comment policy.",
       "consumers": [
         "atlas-review"
       ],
@@ -464,7 +464,7 @@
       ],
       "carriedPath": "references/code/code-review.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-11-03",
       "patch": "sources/patches/code-review.patch",
       "supportingFiles": [
         {
@@ -481,13 +481,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/review-animations/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/review-animations/source.md",
-      "sourceSha256": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+      "sourceSha256": "5f9fb98b69cace7107af8b393a4196fd42fa42d98bce0e5afc1f866ff3b8a41c",
       "license": "sources/upstream/review-animations/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "sources/upstream/review-animations/source.md",
@@ -498,13 +498,13 @@
       "rulings": [],
       "carriedPath": "references/motion/review-animations.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-06",
+      "adoptedAt": "2026-11-03",
       "supportingFiles": [
         {
+          "snapshot": "sources/upstream/review-animations/supporting/STANDARDS.md",
           "relativePath": "STANDARDS.md",
           "upstreamPath": "skills/review-animations/STANDARDS.md",
-          "snapshot": "sources/upstream/review-animations/supporting/STANDARDS.md",
-          "sourceSha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07"
+          "sourceSha256": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657"
         }
       ]
     },
@@ -524,7 +524,7 @@
       "license": "sources/upstream/show-me/LICENSE",
       "licenseSha256": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
       "method": "sources/upstream/show-me/source.md",
-      "adaptation": "Complete Show Me source preserved verbatim, including manual invocation frontmatter and examples. Tracking loads its method when creating or updating the Implementation Record, to govern artifact presentation throughout the work. Required state, evidence and acceptance remain governed by Tracking. The independent Show Me skill remains unchanged; host-specific artifact opening uses the caller’s supported mechanism.",
+      "adaptation": "Complete Show Me source preserved verbatim, including manual invocation frontmatter and examples. Tracking loads its method when creating or updating the Implementation Record, to govern artifact presentation throughout the work. Required state, evidence and acceptance remain governed by Tracking. The independent Show Me skill remains unchanged; host-specific artifact opening uses the caller\u2019s supported mechanism.",
       "consumers": [
         "tracking-implementation"
       ],
@@ -849,7 +849,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/improve-animations/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -868,14 +868,14 @@
       ],
       "carriedPath": "references/motion-audit/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-11-03",
       "patch": "sources/patches/improve-animations.patch",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/improve-animations/supporting/AUDIT.md",
           "relativePath": "AUDIT.md",
           "upstreamPath": "skills/improve-animations/AUDIT.md",
-          "sourceSha256": "551c8473e20e5f4774680bc24d45e1c68e50992582720905c6b077756b7b5a55"
+          "sourceSha256": "63fa8fcf7e7b3a3e252938e55c60e1f399f607e73553163e8dacf9df40f3ebed"
         },
         {
           "snapshot": "sources/upstream/improve-animations/supporting/PLAN-TEMPLATE.md",
@@ -931,10 +931,10 @@
       "sourceSha256": "18a7611a2dfa5a977000eb4223cb3e917b98c8ead0b8b9dce9fe2baba26379aa",
       "license": "sources/upstream/pe-verify/LICENSE",
       "licenseSha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
-      "method": "skills/atlas-verify/references/run.md",
-      "carriedPath": "references/run.md",
+      "method": "skills/atlas-verify/references/behavior.md",
+      "carriedPath": "references/behavior.md",
       "patch": "sources/patches/pe-verify.patch",
-      "adaptation": "Carry PE Verify as the Run method behind the Atlas Verify selector. Preserve the complete report engine and root support paths. Adapt executor/review handoffs, QA-list discovery, browser-driver choice, report naming and project-verifier use. Run remains read-only toward product code; Create, Maintain and Performance have separate selected contracts.",
+      "adaptation": "Carry PE Verify as the Behavior method behind the Atlas Verify selector. Preserve the complete report engine and root support paths. Adapt executor/review handoffs, QA-list discovery, browser-driver choice, report naming and project-verifier use. Behavior keeps product code read-only and owns the structured report.",
       "consumers": [
         "atlas-verify"
       ],
@@ -1135,13 +1135,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/addyosmani/agent-skills",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "commit": "301b02b12bff98e4688e6984af6556802322bbde",
         "path": "skills/source-driven-development/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/source-driven-development/source.md",
-      "sourceSha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
+      "sourceSha256": "df38a852658679a67c7a9e4840160570c95094a13a63307e834045ddbf8aa287",
       "license": "sources/upstream/source-driven-development/LICENSE",
       "licenseSha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
       "method": "skills/atlas-implement/references/source-driven/source-driven.md",
@@ -1153,7 +1153,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-14",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "implement-source-receipts",
         "implement-architect-phases"
@@ -1165,13 +1165,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
         "path": "skills/productivity/grilling/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/grilling/source.md",
-      "sourceSha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+      "sourceSha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
       "license": "sources/upstream/grilling/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "sources/upstream/grilling/source.md",
@@ -1183,14 +1183,14 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/productivity/grilling/agents/openai.yaml",
+          "snapshot": "sources/upstream/grilling/supporting/agents/openai.yaml",
           "relativePath": "agents/openai.yaml",
-          "snapshot": "sources/upstream/grilling/support/agents/openai.yaml",
+          "upstreamPath": "skills/productivity/grilling/agents/openai.yaml",
           "sourceSha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-14",
+      "adoptedAt": "2026-11-03",
       "rulings": []
     },
     {
@@ -1313,13 +1313,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
-        "commit": "49dd158d1076134a641b33efb035946536778336",
+        "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
         "path": "skills/engineering/wayfinder/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/wayfinder/source.md",
-      "sourceSha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7",
+      "sourceSha256": "0c9fa96791aebf3b7d654cf35c6aadde97d81f57c17b07d13b27c14d9c46561f",
       "license": "sources/upstream/wayfinder/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "method": "skills/atlas-wayfinder/references/wayfinder/wayfinder.md",
@@ -1337,7 +1337,7 @@
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-14",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "wayfinder-local-routing"
       ],
@@ -1345,7 +1345,7 @@
     },
     {
       "id": "pstack-create-verification-skill",
-      "owner": "atlas-verify",
+      "owner": "atlas-verifiers",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1358,12 +1358,12 @@
       "sourceSha256": "bba612e8b81a02df0f49e6f6911f3b543c8c7d9f1f3c13ae6c0e2d58cc8c3ad3",
       "license": "sources/upstream/pstack-create-verification-skill/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-verify/references/create/create-verification-skill.md",
+      "method": "skills/atlas-verifiers/references/create/create-verification-skill.md",
       "carriedPath": "references/create/create-verification-skill.md",
       "patch": "sources/patches/pstack-create-verification-skill.patch",
       "adaptation": "Bound generator writes to the project verifier directory, report product startup failures instead of repairing them, distinguish unmet prerequisites from verified regressions, and route maintenance to the bundled method. Preserve self-proof, cleanup and the complete feature-map examples.",
       "consumers": [
-        "atlas-verify"
+        "atlas-verifiers"
       ],
       "supportingFiles": [
         {
@@ -1394,7 +1394,7 @@
     },
     {
       "id": "pstack-maintain-verification-skill",
-      "owner": "atlas-verify",
+      "owner": "atlas-verifiers",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1407,12 +1407,12 @@
       "sourceSha256": "5943f7747da6aafcf5c1063c988e725c97e415866f5c7746279012f35cb49815",
       "license": "sources/upstream/pstack-maintain-verification-skill/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-verify/references/maintain/maintain-verification-skill.md",
+      "method": "skills/atlas-verifiers/references/maintain/maintain-verification-skill.md",
       "carriedPath": "references/maintain/maintain-verification-skill.md",
       "patch": "sources/patches/pstack-maintain-verification-skill.patch",
       "adaptation": "Use host-bounded source readers with a sequential fallback, keep one live driver, make changed mean proven local corrections rather than publication, and resolve creation through the bundled method. Preserve all-feature source/live coverage and product-code read-only scope.",
       "consumers": [
-        "atlas-verify"
+        "atlas-verifiers"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -1511,6 +1511,13 @@
         "review-adversarial-owner",
         "review-impact-proof",
         "implement-candidate-ownership"
+      ],
+      "declinedUpdates": [
+        {
+          "revision": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
+          "reviewedAt": "2026-11-03",
+          "reason": "Replaces independent adversarial judgment with executable-reproduction-only findings and removes its review support references. Atlas retains supported design and maintainability risks with explicit evidence gaps; adopting this rewrite would narrow that contract and add Arena and in-your-own-words dependencies."
+        }
       ]
     },
     {
@@ -1713,7 +1720,7 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-explain/references/teach/teach.md",
       "carriedPath": "references/teach/teach.md",
-      "adaptation": "Load How, Why and Unslop directly from bundled references, without nested mode choosers. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
+      "adaptation": "Load How, Why and Unslop directly from bundled references, within the selected explanation. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
       "consumers": [
         "atlas-explain"
       ],
@@ -1776,7 +1783,7 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/architect/architect.md",
       "carriedPath": "references/architect/architect.md",
-      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena, Interrogate and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating.",
+      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena, Interrogate and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "atlas-implement"
       ],
@@ -1821,25 +1828,25 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-arena/source.md",
-      "sourceSha256": "d9ba4883b0fde1c73238f6a58a0666d667606a74b23c38e9c4de0d84d8e8f4d2",
+      "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
       "license": "sources/upstream/pstack-arena/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/arena/arena.md",
       "carriedPath": "references/arena/arena.md",
-      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference without re-entering mode routing; adapt bounded scheduling, output isolation and sequential fallback with honest independence gaps. Carry the complete contextual principle closure.",
+      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "atlas-implement",
         "team-up"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -1864,8 +1871,8 @@
       "sourceSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
       "license": "sources/upstream/pstack-principle-boundary-discipline/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-boundary-discipline/SKILL.md",
-      "carriedPath": "references/principles/principle-boundary-discipline/SKILL.md",
+      "method": "skills/atlas-implement/references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
+      "carriedPath": "references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
       "adaptation": "Qualify internal trust by established, preserved invariants rather than unconditional trust; retain boundary validation and pure-core guidance.",
       "consumers": [
         "atlas-implement"
@@ -1894,7 +1901,7 @@
       "license": "sources/upstream/pstack-principle-encode-lessons-in-structure/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-encode-lessons-in-structure/source.md",
-      "carriedPath": "references/principles/principle-encode-lessons-in-structure/SKILL.md",
+      "carriedPath": "references/principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena and Audit Trail evidence reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement",
@@ -1921,7 +1928,7 @@
       "license": "sources/upstream/pstack-principle-exhaust-the-design-space/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-exhaust-the-design-space/source.md",
-      "carriedPath": "references/principles/principle-exhaust-the-design-space/SKILL.md",
+      "carriedPath": "references/principles/principle-exhaust-the-design-space/principle-exhaust-the-design-space.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -1948,8 +1955,8 @@
       "sourceSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
       "license": "sources/upstream/pstack-principle-fix-root-causes/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-fix-root-causes/SKILL.md",
-      "carriedPath": "references/principles/principle-fix-root-causes/SKILL.md",
+      "method": "skills/atlas-implement/references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
+      "carriedPath": "references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
       "adaptation": "Preserve justified safety guards and enduring invariant comments, and keep repeated-pattern repair within authorized scope; retain reproduction and root-cause investigation.",
       "consumers": [
         "atlas-implement"
@@ -1978,7 +1985,7 @@
       "license": "sources/upstream/pstack-principle-foundational-thinking/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-foundational-thinking/source.md",
-      "carriedPath": "references/principles/principle-foundational-thinking/SKILL.md",
+      "carriedPath": "references/principles/principle-foundational-thinking/principle-foundational-thinking.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2006,7 +2013,7 @@
       "license": "sources/upstream/pstack-principle-guard-the-context-window/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-guard-the-context-window/source.md",
-      "carriedPath": "references/principles/principle-guard-the-context-window/SKILL.md",
+      "carriedPath": "references/principles/principle-guard-the-context-window/principle-guard-the-context-window.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2032,7 +2039,7 @@
       "license": "sources/upstream/pstack-principle-laziness-protocol/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-laziness-protocol/source.md",
-      "carriedPath": "references/principles/principle-laziness-protocol/SKILL.md",
+      "carriedPath": "references/principles/principle-laziness-protocol/principle-laziness-protocol.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement",
@@ -2061,7 +2068,7 @@
       "license": "sources/upstream/pstack-principle-make-operations-idempotent/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-make-operations-idempotent/source.md",
-      "carriedPath": "references/principles/principle-make-operations-idempotent/SKILL.md",
+      "carriedPath": "references/principles/principle-make-operations-idempotent/principle-make-operations-idempotent.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2074,7 +2081,7 @@
     {
       "id": "pstack-principle-minimize-reader-load",
       "owner": "atlas-implement",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
         "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
@@ -2086,16 +2093,17 @@
       "sourceSha256": "1ea2b7fef2391cae5844c4efdbd59031f775e8a52d06b7495d707229a200dcca",
       "license": "sources/upstream/pstack-principle-minimize-reader-load/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "sources/upstream/pstack-principle-minimize-reader-load/source.md",
-      "carriedPath": "references/principles/principle-minimize-reader-load/SKILL.md",
-      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
+      "method": "skills/atlas-implement/references/principles/principle-minimize-reader-load/principle-minimize-reader-load.md",
+      "carriedPath": "references/principles/principle-minimize-reader-load/principle-minimize-reader-load.md",
+      "adaptation": "Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "atlas-implement"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
-      "rulings": []
+      "rulings": [],
+      "patch": "sources/patches/pstack-principle-minimize-reader-load.patch"
     },
     {
       "id": "pstack-principle-outcome-oriented-execution",
@@ -2113,7 +2121,7 @@
       "license": "sources/upstream/pstack-principle-outcome-oriented-execution/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-outcome-oriented-execution/source.md",
-      "carriedPath": "references/principles/principle-outcome-oriented-execution/SKILL.md",
+      "carriedPath": "references/principles/principle-outcome-oriented-execution/principle-outcome-oriented-execution.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2140,8 +2148,8 @@
       "sourceSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
       "license": "sources/upstream/pstack-principle-prove-it-works/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-prove-it-works/SKILL.md",
-      "carriedPath": "references/principles/principle-prove-it-works/SKILL.md",
+      "method": "skills/atlas-implement/references/principles/principle-prove-it-works/principle-prove-it-works.md",
+      "carriedPath": "references/principles/principle-prove-it-works/principle-prove-it-works.md",
       "adaptation": "Preserve direct outcome proof while using the agreed artifact/delivery scope; remove the optional external Show Me Your Work audit dependency, whose adoption remains a separate decision.",
       "consumers": [
         "atlas-implement",
@@ -2172,7 +2180,7 @@
       "license": "sources/upstream/pstack-principle-redesign-from-first-principles/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-redesign-from-first-principles/source.md",
-      "carriedPath": "references/principles/principle-redesign-from-first-principles/SKILL.md",
+      "carriedPath": "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement",
@@ -2201,7 +2209,7 @@
       "license": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/source.md",
-      "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/SKILL.md",
+      "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement",
@@ -2231,7 +2239,7 @@
       "license": "sources/upstream/pstack-principle-subtract-before-you-add/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-subtract-before-you-add/source.md",
-      "carriedPath": "references/principles/principle-subtract-before-you-add/SKILL.md",
+      "carriedPath": "references/principles/principle-subtract-before-you-add/principle-subtract-before-you-add.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "atlas-implement"
@@ -2289,7 +2297,7 @@
       "method": "skills/writing-for-humans/references/technical/technical-writing.md",
       "carriedPath": "references/technical/technical-writing.md",
       "patch": "sources/patches/pstack-technical-writing.patch",
-      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Load the shared bundled Unslop catalog without an additional editorial pass; remove PR/commit scope and catalog-maintenance output. Resolve strict Diátaxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
+      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Load the shared bundled Unslop catalog without an additional editorial pass; remove PR/commit scope and catalog-maintenance output. Resolve strict Di\u00e1taxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
       "consumers": [
         "writing-for-humans"
       ],
@@ -2318,7 +2326,7 @@
       "method": "skills/tracking-implementation/references/audit-trail/audit-trail.md",
       "carriedPath": "references/audit-trail/audit-trail.md",
       "patch": "sources/patches/pstack-show-me-your-work.patch",
-      "adaptation": "Select Audit Trail explicitly within Tracking, keeping one canonical state home and a linked append-only TSV. Preserve the full format, run ownership and helper/template. Use bundled Unslop and the evidence principle. Resolve transcript discovery and cross-family review against actual host capabilities with explicit gaps; Attention appears at checkpoint handoffs instead of every progress reply. Tracking retains commit, code-review and acceptance policy.",
+      "adaptation": "Select Audit Trail explicitly within Tracking, keeping one canonical state home and a linked append-only TSV. Preserve the full format, run ownership and helper/template. Use bundled Unslop and the evidence principle. Resolve transcript discovery and cross-family review against actual host capabilities with explicit gaps; Attention appears at checkpoint handoffs instead of every progress reply. Tracking retains commit, code-review and acceptance policy. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
         "tracking-implementation"
       ],
@@ -2414,25 +2422,25 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
         "path": "skills/animation-performance/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/animation-performance/source.md",
-      "sourceSha256": "ceb9dd3fe912615830f725a0120ccf8d012d15a6218001a5cd6c15d38e39a957",
+      "sourceSha256": "6c60f45ab416ff3f7d7765a5427beead77fab0d82487fe610d2a298397558d0a",
       "license": "sources/upstream/animation-performance/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/performance/animation-performance.md",
       "carriedPath": "references/performance/animation-performance.md",
       "patch": "sources/patches/animation-performance.patch",
-      "adaptation": "Remove canned readiness text, route Animate locally and motion review to Atlas Review. Qualify compositor and library-driver claims, preserve layout semantics in property swaps, and retain diagnosis-first evidence and request-only repairs.",
+      "adaptation": "Remove canned readiness text, route Animate locally and motion review to Atlas Review. Preserve layout semantics in property swaps and browser/driver evidence limits while adopting version-specific Motion 14.2 acceleration and exceptions; repairs remain request-only.",
       "consumers": [
         "atlas-motion"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-20",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "motion-local-routing"
       ]
@@ -2575,7 +2583,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "60bf140e43c98b248e6594487384ec967e89d98a",
         "path": "skills/state-machine/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -2593,20 +2601,20 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/state-machine/switcher.md",
-          "relativePath": "switcher.md",
-          "snapshot": "sources/upstream/state-machine/support/switcher.md",
-          "sourceSha256": "32f0f1c82362557bfc7f83554359883b0c3d931d578ec8a7a390529699973c6d"
+          "snapshot": "sources/upstream/state-machine/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/state-machine/agents/openai.yaml",
+          "sourceSha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff"
         },
         {
-          "upstreamPath": "skills/state-machine/agents/openai.yaml",
-          "relativePath": "agents/openai.yaml",
-          "snapshot": "sources/upstream/state-machine/support/agents/openai.yaml",
-          "sourceSha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff"
+          "snapshot": "sources/upstream/state-machine/supporting/switcher.md",
+          "relativePath": "switcher.md",
+          "upstreamPath": "skills/state-machine/switcher.md",
+          "sourceSha256": "d6603f2512bc544f86c2d585399791d7f0e6dde50c6b32ad795d899df55a4377"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-03",
       "rulings": [
         "craft-states-workbench"
       ]
@@ -2614,7 +2622,7 @@
     {
       "id": "hairline-create",
       "owner": "Atlas Figures",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/lucasmarkes/hairline",
         "commit": "37d2e78dcb333ab30c3338e28ed4a690364ea014",
@@ -2632,8 +2640,8 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
       "method": "sources/upstream/hairline-create/source.md",
-      "carriedPath": "references/hairline-create/SKILL.md",
-      "adaptation": "Original method and complete selected supporting tree carried verbatim.",
+      "carriedPath": "references/hairline-create/hairline-create.md",
+      "adaptation": "Original method and complete selected supporting tree carried verbatim. Update bundled reference links for ordinary Markdown filenames.",
       "supportingFiles": [
         {
           "relativePath": "bench.html",
@@ -2699,7 +2707,9 @@
           "relativePath": "source.md",
           "upstreamPath": "skills/hairline-create/source.md",
           "snapshot": "sources/upstream/hairline-create/support/source.md",
-          "sourceSha256": "edbc8ec2ce1a04a70cdcb46de9cbc19d6db52541c8dc9b90e5d721924974b8f7"
+          "sourceSha256": "edbc8ec2ce1a04a70cdcb46de9cbc19d6db52541c8dc9b90e5d721924974b8f7",
+          "method": "creative-skills/atlas-figures/references/hairline-create/source.md",
+          "patch": "sources/patches/hairline-create/source.md.patch"
         },
         {
           "relativePath": "validate.mjs",
@@ -2740,9 +2750,9 @@
       "licenseSha256": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
-      "method": "creative-skills/atlas-figures/references/hairline-adopt/SKILL.md",
-      "carriedPath": "references/hairline-adopt/SKILL.md",
-      "adaptation": "Replace the independent Hairline Create invocation with a direct bundled reference. Remaining instructions are verbatim.",
+      "method": "creative-skills/atlas-figures/references/hairline-adopt/hairline-adopt.md",
+      "carriedPath": "references/hairline-adopt/hairline-adopt.md",
+      "adaptation": "Replace the independent Hairline Create invocation with a direct bundled reference. Remaining instructions are verbatim. Update bundled reference links for ordinary Markdown filenames.",
       "supportingFiles": [],
       "consumers": [
         "atlas-figures"
@@ -2760,7 +2770,7 @@
     {
       "id": "anatomy",
       "owner": "Atlas Figures",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/wheresryan22/anatomy",
         "commit": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
@@ -2783,8 +2793,8 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
       "method": "sources/upstream/anatomy/source.md",
-      "carriedPath": "references/anatomy/SKILL.md",
-      "adaptation": "Original method and complete selected supporting tree carried verbatim.",
+      "carriedPath": "references/anatomy/anatomy.md",
+      "adaptation": "Original method and complete selected supporting tree carried verbatim. Update bundled reference links for ordinary Markdown filenames.",
       "supportingFiles": [
         {
           "relativePath": "agents/openai.yaml",
@@ -3312,7 +3322,9 @@
           "relativePath": "references/verify.md",
           "upstreamPath": "references/verify.md",
           "snapshot": "sources/upstream/anatomy/support/references/verify.md",
-          "sourceSha256": "fb81437fc5d75094a34432eb6f545644aa228e15173a27d08b3cace912033561"
+          "sourceSha256": "fb81437fc5d75094a34432eb6f545644aa228e15173a27d08b3cace912033561",
+          "method": "creative-skills/atlas-figures/references/anatomy/references/verify.md",
+          "patch": "sources/patches/anatomy/references/verify.md.patch"
         },
         {
           "relativePath": "references/walkthrough.md",
@@ -3714,7 +3726,7 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
       "method": "sources/upstream/engraved-figures/source.md",
-      "carriedPath": "references/engraved-figures/SKILL.md",
+      "carriedPath": "references/engraved-figures/engraved-figures.md",
       "adaptation": "Original method and complete selected supporting tree carried verbatim.",
       "supportingFiles": [
         {
@@ -3804,9 +3816,9 @@
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
-      "method": "creative-skills/atlas-figures/references/teardown/SKILL.md",
-      "carriedPath": "references/teardown/SKILL.md",
-      "adaptation": "Resolve upstream sibling design-domain skills through the corresponding references in installed Atlas Craft. Load domains conditionally without activating Craft’s broader workflow. Drawing procedure, assets and supporting files remain verbatim.",
+      "method": "creative-skills/atlas-figures/references/teardown/teardown.md",
+      "carriedPath": "references/teardown/teardown.md",
+      "adaptation": "Resolve upstream sibling design-domain skills through the corresponding references in installed Atlas Craft. Load domains conditionally without activating Craft\u2019s broader workflow. Drawing procedure, assets and supporting files remain verbatim.",
       "supportingFiles": [
         {
           "relativePath": "agents/openai.yaml",
@@ -4013,8 +4025,8 @@
       "licenseSha256": "1a1281a84e233c0501448f641943d1a3e6c07aa7dfcfd07ea59f212f0608426a",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
-      "method": "creative-skills/atlas-figures/references/iso-glow/SKILL.md",
-      "carriedPath": "references/iso-glow/SKILL.md",
+      "method": "creative-skills/atlas-figures/references/iso-glow/iso-glow.md",
+      "carriedPath": "references/iso-glow/iso-glow.md",
       "patch": "sources/patches/iso-glow.patch",
       "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI. All other downloaded files remain verbatim.",
       "supportingFiles": [
@@ -4121,16 +4133,18 @@
       "licenseSha256": "bc54cadb579906c051d7aad84f41f88c0df6c50089e052134226fe0b76fd5280",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
-      "method": "creative-skills/atlas-figures/references/colorfigures/SKILL.md",
-      "carriedPath": "references/colorfigures/SKILL.md",
+      "method": "creative-skills/atlas-figures/references/colorfigures/colorfigures.md",
+      "carriedPath": "references/colorfigures/colorfigures.md",
       "patch": "sources/patches/colorfigures.patch",
-      "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI. All other downloaded files remain verbatim.",
+      "adaptation": "Encode the unchanged description as a YAML folded scalar so embedded colons parse in Skills CLI; update the README pointer to the bundled Markdown reference. All engine and example files remain verbatim.",
       "supportingFiles": [
         {
           "relativePath": "README.md",
           "upstreamPath": "README.md",
           "snapshot": "sources/upstream/colorfigures/support/README.md",
-          "sourceSha256": "2818f4aa0c3bb3dd59865522a1d375fbe29101d95c492fc579ba94c5e9be342d"
+          "sourceSha256": "2818f4aa0c3bb3dd59865522a1d375fbe29101d95c492fc579ba94c5e9be342d",
+          "method": "creative-skills/atlas-figures/references/colorfigures/README.md",
+          "patch": "sources/patches/colorfigures/README.md.patch"
         },
         {
           "relativePath": "assets/core.js",
@@ -4174,6 +4188,152 @@
           "sha256": "bc54cadb579906c051d7aad84f41f88c0df6c50089e052134226fe0b76fd5280"
         }
       ]
+    },
+    {
+      "id": "pstack-ketchup",
+      "owner": "atlas-explain",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/ketchup/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-ketchup/source.md",
+      "sourceSha256": "94d04bd4f4dd5d77229f2a349796b1863143edac7551a6c2068e1d80f73228b9",
+      "license": "sources/upstream/pstack-ketchup/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-explain/references/catch-up/ketchup.md",
+      "carriedPath": "references/catch-up/ketchup.md",
+      "adaptation": "Resolve Bro voice through a bundled reference and anchor the catch-up window to the current request rather than slash-command spelling.",
+      "consumers": [
+        "atlas-explain"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": [],
+      "patch": "sources/patches/pstack-ketchup.patch"
+    },
+    {
+      "id": "pstack-bro",
+      "owner": "atlas-explain",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/bro/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-bro/source.md",
+      "sourceSha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+      "license": "sources/upstream/pstack-bro/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "sources/upstream/pstack-bro/source.md",
+      "carriedPath": "references/bro/bro.md",
+      "adaptation": "Unchanged Pstack Bro reference, consumed only for its voice by Catch Up.",
+      "consumers": [
+        "atlas-explain"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": []
+    },
+    {
+      "id": "pstack-create-formal-verification-skill",
+      "owner": "atlas-verifiers",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/create-formal-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-create-formal-verification-skill/source.md",
+      "sourceSha256": "30ef0ac27612ecd16fdc081112113221d673053cef3f8603db11932193861211",
+      "license": "sources/upstream/pstack-create-formal-verification-skill/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-verifiers/references/formal-create/formal-create.md",
+      "carriedPath": "references/formal-create/formal-create.md",
+      "adaptation": "Resolve Formal Maintain through its bundled method. Keep Statechart an independently installed conditional dependency for TLA+ results and generated verifier instructions; report missing availability before dependent work. Update bundled reference links for ordinary Markdown filenames.",
+      "consumers": [
+        "atlas-verifiers"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": [],
+      "patch": "sources/patches/pstack-create-formal-verification-skill.patch"
+    },
+    {
+      "id": "pstack-maintain-formal-verification-skill",
+      "owner": "atlas-verifiers",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/maintain-formal-verification-skill/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-maintain-formal-verification-skill/source.md",
+      "sourceSha256": "0c96f54293542d3818b68754562b338073958781a9684454611dca37592e2d2c",
+      "license": "sources/upstream/pstack-maintain-formal-verification-skill/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "skills/atlas-verifiers/references/formal-maintain/formal-maintain.md",
+      "carriedPath": "references/formal-maintain/formal-maintain.md",
+      "adaptation": "Resolve lifecycle and Statechart calls through bundled methods, including reusable generated instructions, without requiring standalone upstream installations. Update bundled reference links for ordinary Markdown filenames.",
+      "consumers": [
+        "atlas-verifiers"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": [],
+      "patch": "sources/patches/pstack-maintain-formal-verification-skill.patch"
+    },
+    {
+      "id": "diagnosing-bugs",
+      "owner": "atlas-debug",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
+        "path": "skills/engineering/diagnosing-bugs/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/diagnosing-bugs/source.md",
+      "sourceSha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+      "license": "sources/upstream/diagnosing-bugs/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "sources/upstream/diagnosing-bugs/source.md",
+      "carriedPath": "references/diagnosis/diagnosing-bugs.md",
+      "adaptation": "Carry the diagnosis loop and human-in-the-loop reproduction helper unchanged. Atlas Debug conditionally adds the shared Statechart method without modifying the diagnosis procedure.",
+      "consumers": [
+        "atlas-debug"
+      ],
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
+          "relativePath": "scripts/hitl-loop.template.sh",
+          "snapshot": "sources/upstream/diagnosing-bugs/support/scripts/hitl-loop.template.sh",
+          "sourceSha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
+        },
+        {
+          "upstreamPath": "skills/engineering/diagnosing-bugs/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "snapshot": "sources/upstream/diagnosing-bugs/support/agents/openai.yaml",
+          "sourceSha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": []
     }
   ],
   "workflows": [
@@ -4311,7 +4471,7 @@
           "id": "atlas-review",
           "relationship": "behavioral",
           "required": true,
-          "condition": "For checkpoint Code review and applicable specialist methods selected from the change; reuse adequate evidence for the same checkpoint and question."
+          "condition": "For checkpoint Standards & Spec review and applicable specialist methods selected from the change; reuse adequate evidence for the same checkpoint and question."
         },
         {
           "id": "plannotator",
@@ -4450,8 +4610,6 @@
       "agent": "skills/atlas-verify/agents/openai.yaml",
       "methods": [
         "pe-verify",
-        "pstack-create-verification-skill",
-        "pstack-maintain-verification-skill",
         "pstack-benchmark-checklist",
         "break-ui"
       ],
@@ -4461,6 +4619,12 @@
           "relationship": "behavioral",
           "required": false,
           "condition": "When verification needs product, interface or fidelity judgment rather than behavior proof."
+        }
+      ],
+      "authoredReferences": [
+        {
+          "input": "skills/atlas-verifiers/references/project-verifiers.md",
+          "target": "references/project-verifiers.md"
         }
       ]
     },
@@ -4561,7 +4725,9 @@
         "pstack-why",
         "pstack-teach",
         "pstack-unslop",
-        "explain-interface"
+        "explain-interface",
+        "pstack-ketchup",
+        "pstack-bro"
       ],
       "dependencies": []
     },
@@ -4640,7 +4806,7 @@
           "id": "atlas-figures",
           "relationship": "behavioral",
           "required": false,
-          "condition": "When a figure or technical illustration needs a visual treatment; preserve Figures’ menu and user-owned treatment selection."
+          "condition": "When a figure or technical illustration needs a visual treatment; preserve Figures\u2019 menu and user-owned treatment selection."
         },
         {
           "id": "atlas-review",
@@ -4717,9 +4883,37 @@
           "id": "atlas-craft",
           "relationship": "behavioral",
           "required": true,
-          "condition": "Teardown’s typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Craft."
+          "condition": "Teardown\u2019s typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Craft."
         }
       ]
+    },
+    {
+      "id": "atlas-verifiers",
+      "entry": "skills/atlas-verifiers/SKILL.md",
+      "agent": "skills/atlas-verifiers/agents/openai.yaml",
+      "methods": [
+        "pstack-create-verification-skill",
+        "pstack-maintain-verification-skill",
+        "pstack-create-formal-verification-skill",
+        "pstack-maintain-formal-verification-skill"
+      ],
+      "dependencies": [
+        {
+          "id": "statechart",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "When Formal Create selects a TLA+ model, use independently installed Statechart to read model-checking results. If unavailable, report the gap and offer targeted installation before dependent work."
+        }
+      ]
+    },
+    {
+      "id": "atlas-debug",
+      "entry": "skills/atlas-debug/SKILL.md",
+      "agent": "skills/atlas-debug/agents/openai.yaml",
+      "methods": [
+        "diagnosing-bugs"
+      ],
+      "dependencies": []
     }
   ],
   "rulings": [
@@ -4817,7 +5011,7 @@
     {
       "id": "verify-executor-handoff",
       "owner": "atlas-verify",
-      "document": "skills/atlas-verify/references/run.md",
+      "document": "skills/atlas-verify/references/behavior.md",
       "section": "Handoffs",
       "sources": [
         "pe-verify"
@@ -4896,17 +5090,15 @@
       "section": "Atlas Verify",
       "sources": [
         "pe-verify",
-        "pstack-create-verification-skill",
-        "pstack-maintain-verification-skill",
         "pstack-benchmark-checklist",
         "break-ui"
       ],
-      "decision": "Select Run, Create, Maintain or Performance from the requested outcome. Product fixes remain outside verification. Run owns PE reporting; Create/Maintain own selected verifier assets, and standalone Performance owns measurement evidence. Missing local verifier assets do not add generator/maintenance work to a Run. UI Stress exercises worst-case data in isolated temporary fixtures and returns repairs to the executor; it retains its own report unless contributing to Run."
+      "decision": "Behavior, UI Stress and Performance execute requested QA. Product fixes remain outside verification. Behavior owns the structured report; other methods retain their deliverables and reuse evidence when contributing to a Behavior report. A missing project verifier does not select asset creation or maintenance, which belongs to Atlas Verifiers."
     },
     {
       "id": "verify-project-verifier-bridge",
-      "owner": "atlas-verify",
-      "document": "skills/atlas-verify/references/project-verifiers.md",
+      "owner": "atlas-verifiers",
+      "document": "skills/atlas-verifiers/references/project-verifiers.md",
       "section": "Coverage and reporting",
       "sources": [
         "pe-verify",
@@ -4924,7 +5116,7 @@
         "pe-verify",
         "pstack-benchmark-checklist"
       ],
-      "decision": "Vet actual measured claims with raw work/error/repetition/limiter evidence. Adapt host tools, keep optimization outside verification, and use existing schema fields when contributing to a Run; standalone benchmarks do not require a rendered PE report or external perf playbook."
+      "decision": "Vet actual measured claims with raw work/error/repetition/limiter evidence. Adapt host tools, keep optimization outside verification, and use existing schema fields when contributing to a Behavior report; standalone benchmarks do not require a rendered PE report or external perf playbook."
     },
     {
       "id": "review-adversarial-owner",
@@ -4935,7 +5127,7 @@
         "code-review",
         "pstack-interrogate"
       ],
-      "decision": "Select Interrogate for independent same-intent challenge without automatically adding it to Code review. Keep lead-filtered findings separate from Standards/Spec axes. Honor actual host reviewers and disclose diversity/context gaps; quality blockers require concrete consequences, not a line-count or finding-count heuristic. Review remains read-only."
+      "decision": "Select Interrogate for independent same-intent challenge without automatically adding it to Standards & Spec review. Keep lead-filtered findings separate from Standards/Spec axes. Honor actual host reviewers and disclose diversity/context gaps; quality blockers require concrete consequences, not a line-count or finding-count heuristic. Review remains read-only."
     },
     {
       "id": "review-impact-proof",
@@ -4956,9 +5148,11 @@
       "sources": [
         "pstack-how",
         "pstack-why",
-        "pstack-teach"
+        "pstack-teach",
+        "explain-interface",
+        "pstack-ketchup"
       ],
-      "decision": "An omitted mode requires a brief How/Why/Teach chooser and a user answer before method loading or investigation. Honor explicit mode choices and reuse them for follow-ups. Teach calls bundled methods directly so internal dispatch does not repeat the chooser."
+      "decision": "Select and combine methods from the request and conversation. Ask only when ambiguity materially changes the investigation or deliverable; offer options with a recommendation when the user asks to explore them. Teach supplies conversational pacing and coordinates How and Why. Catch Up is selected for requests about recent chat work and pending decisions. Reuse evidence across methods and adapt to follow-up questions."
     },
     {
       "id": "explain-why-scope",
@@ -5083,7 +5277,7 @@
         "pstack-technical-writing",
         "pstack-unslop"
       ],
-      "decision": "Technical documentation uses the four writing layers within the existing author, reader and factual contracts. Section-level Diátaxis permits useful mixed READMEs/RFCs; evidence qualifications survive certainty rules; length rules are heuristics and code formatting follows the repository. Reuse the already loaded Unslop catalog without an additional mandatory pass. PR writing is removed from this package."
+      "decision": "Technical documentation uses the four writing layers within the existing author, reader and factual contracts. Section-level Di\u00e1taxis permits useful mixed READMEs/RFCs; evidence qualifications survive certainty rules; length rules are heuristics and code formatting follows the repository. Reuse the already loaded Unslop catalog without an additional mandatory pass. PR writing is removed from this package."
     },
     {
       "id": "human-writing-editorial-contract",
@@ -5174,7 +5368,7 @@
       "sources": [
         "state-machine"
       ],
-      "decision": "States is an explicitly requested workbench, not automatic setup for ordinary refinement or a review. Preserve the real component and its production styling; isolate fixture reads, refreshes and mutations and use separate inspection chrome. Setup hands over before visual edits; cleanup requires the user’s request."
+      "decision": "States is an explicitly requested workbench, not automatic setup for ordinary refinement or a review. Preserve the real component and its production styling; isolate fixture reads, refreshes and mutations and use separate inspection chrome. Setup hands over before visual edits; cleanup requires the user\u2019s request."
     }
   ]
 }

@@ -3,6 +3,7 @@
   "packages": [
     "animated-driven-frontend",
     "atlas-craft",
+    "atlas-debug",
     "atlas-explain",
     "atlas-figures",
     "atlas-grill",
@@ -13,6 +14,7 @@
     "atlas-review",
     "atlas-to-spec",
     "atlas-to-tickets",
+    "atlas-verifiers",
     "atlas-verify",
     "atlas-wayfinder",
     "html-ui",
@@ -83,6 +85,19 @@
           "skill": "atlas-wayfinder",
           "required": true,
           "condition": "When resolving an autonomous Research ticket or charting research work."
+        }
+      ]
+    },
+    {
+      "id": "statechart",
+      "source": "https://github.com/backnotprop/pstack",
+      "skill": "statechart",
+      "command": "npx skills add https://github.com/backnotprop/pstack --skill statechart",
+      "consumers": [
+        {
+          "skill": "atlas-verifiers",
+          "required": true,
+          "condition": "When Formal Create selects a TLA+ model, use independently installed Statechart to read model-checking results. If unavailable, report the gap and offer targeted installation before dependent work."
         }
       ]
     },

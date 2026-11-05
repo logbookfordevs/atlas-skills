@@ -82,8 +82,9 @@ export function inspectSource(source, revision, root = repositoryRoot) {
     } catch { conflict = 'The maintained patch does not apply to the candidate. Reconcile it before adoption.'; }
   }
   const licenseChanged = sha256(license) !== source.licenseSha256;
-  const status = !changed.length ? 'unchanged' : conflict ? 'conflict' : licenseChanged ? 'license-review' : source.classification === 'derived' ? 'derivation-review' : revision.commit === source.upstream.commit ? 'baseline-review' : 'ready-for-review';
-  return { id: source.id, status, pinned: source.upstream.commit, candidate: revision.commit, changed, licenseChanged, ...(conflict ? { conflict } : {}), consumers: source.consumers, rulings: source.rulings ?? [], snapshot, method, license, files };
+  const declined = source.declinedUpdates?.find(update => update.revision === revision.commit && update.reason?.trim());
+  const status = !changed.length ? 'unchanged' : declined ? 'declined' : conflict ? 'conflict' : licenseChanged ? 'license-review' : source.classification === 'derived' ? 'derivation-review' : revision.commit === source.upstream.commit ? 'baseline-review' : 'ready-for-review';
+  return { id: source.id, status, pinned: source.upstream.commit, candidate: revision.commit, changed, licenseChanged, ...(declined ? { decision: declined.reason } : {}), ...(conflict ? { conflict } : {}), consumers: source.consumers, rulings: source.rulings ?? [], snapshot, method, license, files };
 }
 
 function reportOf(result, source) {
@@ -98,6 +99,7 @@ export function issueBody(report) {
 }
 
 export function publishIssue(report, gh, temporary) {
+  if (report.status === 'declined') return 'declined';
   const title = `chore(upstream): review ${report.id} update`;
   const marker = `<!-- atlas-upstream:${report.id} -->`;
   const issues = JSON.parse(gh(['issue', 'list', '--state', 'open', '--limit', '1000', '--json', 'number,body']));

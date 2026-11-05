@@ -9,7 +9,7 @@ Two-axis review of the requested branch, PR, commit, or working-tree changes:
 - **Standards** - does the code conform to this repo's documented coding standards?
 - **Spec** - does the code faithfully implement the originating issue, spec, or implementation ticket?
 
-Both axes should run in parallel sub-agents or fresh contexts so they do not pollute each other's context, then this skill aggregates their findings.
+Both axes run in parallel, each in a sub-agent with a fresh context window, then this skill aggregates their findings.
 
 ## Process
 

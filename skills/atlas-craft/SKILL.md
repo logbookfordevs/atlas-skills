@@ -1,6 +1,6 @@
 ---
 name: atlas-craft
-description: "Refine production interfaces: color, typography, layout, accessibility, UI polish and copy while preserving project identity. On request, build a workbench for a component’s existing states."
+description: "Use when refining an existing interface’s color, typography, layout, accessibility, polish or copy, or when the user requests a workbench for a component’s existing states."
 disable-model-invocation: false
 ---
 

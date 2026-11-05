@@ -1,6 +1,6 @@
 ---
 name: html-ui
-description: "Create HTML wireframes or polished, interactive product models."
+description: "Use when the user wants an HTML wireframe or interactive product model to explore, explain or compare an interface."
 disable-model-invocation: false
 ---
 

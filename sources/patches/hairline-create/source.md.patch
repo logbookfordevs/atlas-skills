@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index cdcb308..03844ee 100644
+--- a/source.md
++++ b/source.md
+@@ -10,7 +10,7 @@
+ 4. **What is decoration?** Shadows, glows, double outlines, the small shapes the card counted, anything that is there for colour. It stays out. A figure has one stroke in four weights (rule 04): what the SVG said with colour, the figure says with one bright mark.
+ 5. **What does the object answer?** If the request named the gesture, it is fixed: the concepts keep it and differ in the form the object takes and in what the read-out says. If it did not, ask what a hand would do with this object. The table "Six answers already proven" in `concepts.md` is the menu, and each concept takes a different answer from it.
+ 
+-Then write the concepts as step 1 of `SKILL.md` says, all with the same object and the same parts.
++Then write the concepts as step 1 of `hairline-create.md` says, all with the same object and the same parts.
+ 
+ ## What the card cannot say
+ 

@@ -30,7 +30,11 @@
     "references/interface/from-an-image.md",
     "references/interface/read-the-system.md",
     "references/interface/no-browser.md",
-    "references/interface/find-the-effect.md"
+    "references/interface/find-the-effect.md",
+    "references/catch-up/ketchup.md",
+    "licenses/pstack-ketchup.txt",
+    "references/bro/bro.md",
+    "licenses/pstack-bro.txt"
   ],
   "authoredInputs": [
     "skills/atlas-explain/SKILL.md",
@@ -216,10 +220,10 @@
       "notices": [],
       "sourceSha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
       "carriedPath": "references/teach/teach.md",
-      "carriedSha256": "045227ddee108efd6cb385df9ee4de786a827c2f55bb7a97c86e011c224b7220",
+      "carriedSha256": "b7cf3f55f03d9e7823a3288110ed2c93b2c137795745692c095d681f2a143c46",
       "licensePath": "licenses/pstack-teach.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Load How, Why and Unslop directly from bundled references, without nested mode choosers. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
+      "adaptation": "Load How, Why and Unslop directly from bundled references, within the selected explanation. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [
@@ -228,7 +232,7 @@
         "explain-evidence-editing"
       ],
       "patch": "sources/patches/pstack-teach.patch",
-      "patchSha256": "0ba3d2af4c290e80485c1b5b617972c6ad7b0b703486716b5bbb2433495b1bc4"
+      "patchSha256": "e295163c202d95c4f31ca091d648c1f48de963d3c52c76da48596ca3aadc6db4"
     },
     {
       "id": "pstack-unslop",
@@ -319,6 +323,54 @@
       ],
       "patch": "sources/patches/explain-interface.patch",
       "patchSha256": "7bdd4b94b1665e17708b107707be7a65f0ebedfbf3294e53804ec3e84b90202b"
+    },
+    {
+      "id": "pstack-ketchup",
+      "owner": "atlas-explain",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/ketchup/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "94d04bd4f4dd5d77229f2a349796b1863143edac7551a6c2068e1d80f73228b9",
+      "carriedPath": "references/catch-up/ketchup.md",
+      "carriedSha256": "96c44a877ce57e6874ea3bd8550eee5776a2351d21e1620a6bbc82a23bd114d3",
+      "licensePath": "licenses/pstack-ketchup.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Resolve Bro voice through a bundled reference and anchor the catch-up window to the current request rather than slash-command spelling.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": [],
+      "patch": "sources/patches/pstack-ketchup.patch",
+      "patchSha256": "b061e80b70688167b3bdd5b4c81e9f6fec116ba824fb776d315be52c936c0e9d"
+    },
+    {
+      "id": "pstack-bro",
+      "owner": "atlas-explain",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "25abb38559ddbabec563646224d09eff9a250eca",
+        "path": "skills/bro/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+      "carriedPath": "references/bro/bro.md",
+      "carriedSha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+      "licensePath": "licenses/pstack-bro.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Unchanged Pstack Bro reference, consumed only for its voice by Catch Up.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-10-30",
+      "rulings": []
     }
   ],
   "rulings": [
@@ -330,9 +382,11 @@
       "sources": [
         "pstack-how",
         "pstack-why",
-        "pstack-teach"
+        "pstack-teach",
+        "explain-interface",
+        "pstack-ketchup"
       ],
-      "decision": "An omitted mode requires a brief How/Why/Teach chooser and a user answer before method loading or investigation. Honor explicit mode choices and reuse them for follow-ups. Teach calls bundled methods directly so internal dispatch does not repeat the chooser."
+      "decision": "Select and combine methods from the request and conversation. Ask only when ambiguity materially changes the investigation or deliverable; offer options with a recommendation when the user asks to explore them. Teach supplies conversational pacing and coordinates How and Why. Catch Up is selected for requests about recent chat work and pending decisions. Reuse evidence across methods and adapt to follow-up questions."
     },
     {
       "id": "explain-why-scope",
@@ -380,8 +434,8 @@
     }
   ],
   "files": {
-    "SKILL.md": "a2a8213b48915b4be29f990805d3f990389d5f9721e15104173780d2e6e3517e",
-    "agents/openai.yaml": "d00f6654cec3faa2dc505aa73854e4b8c48a1cf2abc79848601f2077e5313f39",
+    "SKILL.md": "2d166e18abf8c4b48362f3ba00e0b807759b3abc25add1b1bee5921152132196",
+    "agents/openai.yaml": "1913a5c562840fa920f320cd31043b5ccc415d19302a63a6cc583689f25eaf27",
     "references/how/how.md": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
     "licenses/pstack-how.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/how/references/explainer-prompt.md": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
@@ -400,7 +454,7 @@
     "references/why/references/sources/sentry.md": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702",
     "references/why/references/sources/slack.md": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
     "references/why/references/synthesizer-prompt.md": "efd1a207836e90e61db0a312d475d0f7343cbe4f286089e48aa7d248973d1eba",
-    "references/teach/teach.md": "045227ddee108efd6cb385df9ee4de786a827c2f55bb7a97c86e011c224b7220",
+    "references/teach/teach.md": "b7cf3f55f03d9e7823a3288110ed2c93b2c137795745692c095d681f2a143c46",
     "licenses/pstack-teach.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/unslop/unslop.md": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
     "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
@@ -409,6 +463,10 @@
     "references/interface/from-an-image.md": "c918493497596830c13dbd752781ddd1268090b244e5ded028d3569480a25fde",
     "references/interface/read-the-system.md": "ff6d988ea7e5c45a15c5efe0f94e13e3df3e95f03e8fd163a119266844f29a67",
     "references/interface/no-browser.md": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
-    "references/interface/find-the-effect.md": "06786fd18303b1b931ef16ede258d01a78210ef1f5759e143dbcb188610a9627"
+    "references/interface/find-the-effect.md": "06786fd18303b1b931ef16ede258d01a78210ef1f5759e143dbcb188610a9627",
+    "references/catch-up/ketchup.md": "96c44a877ce57e6874ea3bd8550eee5776a2351d21e1620a6bbc82a23bd114d3",
+    "licenses/pstack-ketchup.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/bro/bro.md": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+    "licenses/pstack-bro.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }

@@ -9,7 +9,7 @@ An adversarial skill. It does ONE thing: take a piece of UI that looks right wit
 
 ## Verification scope
 
-Use an owned temporary harness with fixtures at the real component’s data boundary. Import the real component through existing test or preview tooling; preserve product source and live data. A standalone recreation demonstrates only that recreation. If the actual component cannot be exercised faithfully in isolation, record the coverage gap. Keep fixtures and the toggle in that harness; retaining them as project assets requires a user request. When contributing to Run, return this method’s evidence to its report rather than repeat the checks.
+Use an owned temporary harness with fixtures at the real component’s data boundary. Import the real component through existing test or preview tooling; preserve product source and live data. A standalone recreation demonstrates only that recreation. If the actual component cannot be exercised faithfully in isolation, record the coverage gap. Keep fixtures and the toggle in that harness; retaining them as project assets requires a user request. When contributing to a Behavior report, include this method’s evidence there rather than repeat the checks.
 
 ## Operating Posture
 

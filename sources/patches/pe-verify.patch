@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index f5bd8b1..afa86ed 100644
+index f5bd8b1..91b8276 100644
 --- a/source.md
 +++ b/source.md
 @@ -1,22 +1,24 @@
@@ -15,7 +15,7 @@ index f5bd8b1..afa86ed 100644
  ---
  
 -# Verify
-+# Run verification
++# Behavior verification
  
 -Proof that behavior works. This spine routes; the report contract, the QA-list
 -conventions, and the capture method live in `references/` — load what the run needs.
