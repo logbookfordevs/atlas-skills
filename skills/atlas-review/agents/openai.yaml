@@ -1,6 +1,6 @@
 interface:
   display_name: "Atlas Review"
-  short_description: "Review code, challenge blind spots, trace impact, and assess interfaces or motion."
-  default_prompt: "Use $atlas-review for the requested review work."
+  short_description: "Review code, trace impact, and assess UI or motion."
+  default_prompt: "Use $atlas-review to select and run the methods that fit the requested review."
 policy:
   allow_implicit_invocation: true

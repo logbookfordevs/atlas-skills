@@ -1,26 +1,33 @@
 ---
 name: atlas-review
-description: "Use when reviewing code, interfaces or motion; investigating downstream effects of a change; or stress-testing a proposed change for hidden risks."
+description: "Use when reviewing code changes, screens or animation; or tracing downstream breakage."
 disable-model-invocation: false
 ---
 
 # Atlas Review
 
-Select methods from the requested outcome and the change's material risks. Combine methods when they answer distinct review questions. An explicitly bounded request such as “Standards & Spec only” limits selection; an open-ended code review leaves method selection to you. Ask only when ambiguity changes the method. Read [Scope and ownership](references/ownership.md) and the selected methods.
+Select methods from the requested outcome and the actual change. An explicitly bounded request such as “Standards & Spec only” limits selection. Ask only when ambiguity materially changes the review. Read [Scope and ownership](references/ownership.md) and the selected methods.
 
-| Mode | Need | Read and follow |
+## Code-review baseline
+
+Start a code-change review (branch, PR, commit or working tree) with [Standards & Spec](references/code/code-review.md) to judge repository standards and originating intent, unless the user explicitly bounds method selection.
+
+## Add methods for concrete questions
+
+Add each applicable method below to the code-review baseline without waiting for the user to name it. For a focused interface or motion request, select the relevant methods within that scope.
+
+| Method | Select when | Read and follow |
 | --- | --- | --- |
-| Standards & Spec | Assess changes against standards and originating intent | [Standards & Spec](references/code/code-review.md) |
-| Adversarial | Interrogate changes, challenge blind spots or request multimodel review | [Interrogate](references/adversarial/interrogate.md) |
-| Impact | Ask what a change could break beyond the diff and prove the facts its safety depends on | [Blast Radius](references/impact/blast-radius.md) |
-| Static | Run scoped lint/typecheck checks and judge findings | [Static](references/static/static-review.md) |
-| Interface | Assess a screen/flow, or interface problems introduced by a change | Select the interface scope below |
-| Motion | Review animation against specialist standards | [Motion](references/motion/review-animations.md) |
-| Motion Audit | Survey existing motion and prepare prioritized improvement plans | [Motion Audit](references/motion-audit/index.md) |
+| Impact | Shared behavior, contracts or saved data change: what could break for downstream consumers, and which safety facts need proof? | [Blast Radius](references/impact/blast-radius.md) |
+| Interface | A screen or flow changes, or an existing one needs assessment: can users understand and use it across devices and access needs? | Select the interface scope below |
+| Motion | Transitions or gestures change, or a specific interaction feels slow, jumpy or hard to interrupt. Check feedback, timing, performance and reduced motion. | [Motion Review](references/motion/review-animations.md) |
+| Motion Audit | A screen, flow or app needs a survey of existing motion problems and prioritized improvements, rather than review of a particular change or interaction. | [Motion Audit](references/motion-audit/index.md) |
+
+A component edit with unchanged motion does not select Motion; a diff review does not expand into an app-wide audit.
 
 For Interface, use [Interface Changes](references/interface/changes/index.md) when the request names a branch, PR, commit range or uncommitted changes. Use [Interface Audit](references/interface/audit/index.md) for a screen, flow or repository audit. Preserve a supplied scope; ask when both interpretations remain materially different. Changes classifies introduced, regressed and pre-existing findings; Audit owns severity, consolidation and coverage. The six interface disciplines are bundled here, independent of a Craft installation.
 
-Keep the Standards and Spec reports distinct from other selected methods' findings.
+Briefly state the selected methods and the questions they address. Keep the Standards and Spec reports distinct from other selected methods' findings.
 
 Reviewing does not authorize fixes. Impact may run existing checks or owned scratch probes in isolated state; product code remains read-only. Motion Audit may write requested plans under the repository's artifact convention. Construction references bundled for motion judgments do not change that authorization. Follow [Motion ownership](references/motion-ownership.md) when UI polish and motion methods disagree.
 

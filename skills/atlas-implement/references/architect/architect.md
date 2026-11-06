@@ -46,7 +46,7 @@ Default: proceed directly to implementation with the synthesized design. No huma
 
 Opt in to a checkpoint when the invoker explicitly asks: "/architect with checkpoint," "stop and show me before implementing," or similar. Then surface the synthesized design and pause for sign-off.
 
-The design may be delivered separately within the agreed commit scope, using the [Foundational Thinking](../principles/principle-foundational-thinking/principle-foundational-thinking.md) guidance. Temporary breakage follows [Outcome-Oriented Execution](../principles/principle-outcome-oriented-execution/principle-outcome-oriented-execution.md) only at declared verification boundaries, subject to the integration rules and project policy. When adversarial pressure is requested or selected, follow the bundled [Interrogate method](../adversarial/interrogate.md) on the synthesized sketch.
+The design may be delivered separately within the agreed commit scope, using the [Foundational Thinking](../principles/principle-foundational-thinking/principle-foundational-thinking.md) guidance. Temporary breakage follows [Outcome-Oriented Execution](../principles/principle-outcome-oriented-execution/principle-outcome-oriented-execution.md) only at declared verification boundaries, subject to the integration rules and project policy.
 
 If the human pushes back on the shape (in a checkpoint or after the fact), treat that as Phase A evidence. Re-ground and re-run Phase B before writing more code.
 

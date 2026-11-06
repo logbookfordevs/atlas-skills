@@ -110,7 +110,7 @@ Commit all implementation-owned changes before opening the automated Review Gate
 History rewrites and remote or public actions still require approval. If local commits are unavailable, ask.
 
 ## Review Gate
-After final validation, read [Review Selection](references/review-selection.md) and record the checkpoint's selected methods and review questions. Run `atlas-review` in Standards & Spec mode plus the applicable selected methods once automatically, using `review_base` for change reviews. Reuse adequate review evidence already provided for the same checkpoint and question. Keep each method's scope and findings distinct in Complete Review Record.
+After final validation, run `atlas-review` once automatically for implementation-owned changes from `review_base`. Supply the checkpoint revision, originating intent, Tracking Home and existing validation/review evidence. Atlas Review owns method selection and execution; reuse adequate evidence for the same checkpoint and question. Record the methods actually selected, their review questions, scopes, findings and coverage gaps in Complete Review Record, keeping each method's output distinct.
 
 If any selected review reports findings, set `changes_requested`; judge each finding against the implementation and its cited evidence, fix warranted findings, record evidence for dismissals, revalidate, and commit. Do not rerun the reviews automatically. Set `awaiting_acceptance` only after every selected review has completed and its findings are resolved, or its unavailable coverage has an explicit recorded gap. The user decides whether fixes or later changes require another review.
 

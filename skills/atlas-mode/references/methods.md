@@ -31,7 +31,7 @@ Select checks from the task and material uncertainty; Tracking does not select v
 
 | Skill | Methods and selection |
 | --- | --- |
-| `atlas-review` | **Standards & Spec:** assess standards and originating intent. **Adversarial:** challenge blind spots with independent reviewers. **Impact:** trace downstream consequences. **Static:** run and judge scoped lint/typechecks. **Interface Changes:** identify introduced or regressed interface problems in a diff. **Interface Audit:** assess an existing screen or flow. **Motion:** review animation. **Motion Audit:** survey existing animation and prepare improvement plans. Select the review question rather than adding every review method. |
+| `atlas-review` | **Code-review baseline:** Standards & Spec. Add **Impact** for downstream breakage, **Interface Changes** for changed screens or flows, and **Motion** for changed transitions, gestures or a specific motion problem. **Interface Audit** and **Motion Audit** survey an existing experience within the requested scope. Follow Review's entry for selection and execution. |
 | `atlas-verify` | **Behavior · Feature:** verify implemented behavior against the change and conversation. **Behavior · QA list:** execute an existing QA list in full or scope it to a named change, with recorded evidence. **UI Stress:** exercise realistic worst-case content and states in an isolated harness. **Performance:** assess a benchmark, speedup or regression. Verification alone does not authorize product fixes or creating reusable assets. |
 
 ## Build and maintain verification

@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index b296cce..0ab6a57 100644
+index b296cce..0018f19 100644
 --- a/source.md
 +++ b/source.md
 @@ -8,7 +8,7 @@ disable-model-invocation: true
@@ -11,7 +11,7 @@ index b296cce..0ab6a57 100644
  
  Listing the callers is not the job. The agent can grep those in a second. The job is the breakage grep won't show you.
  
-@@ -30,12 +30,12 @@ Step 4 is usually one small script that imports the same library the app ships a
+@@ -30,12 +30,11 @@ Step 4 is usually one small script that imports the same library the app ships a
  
  ## Steps
  
@@ -24,11 +24,10 @@ index b296cce..0ab6a57 100644
 -6. For a big or wide change, run it as an `arena`. Ask more than one model the same question and merge the answers. Different models catch different real bugs.
 +4. Be honest about each risk. Give it a supported likelihood and a real cost if it occurs; use qualitative uncertainty when the evidence does not support a probability. Separate confirmed risks, unresolved assumptions and checked/cleared risks. Cite a real `file:line`; a scoped search that finds nothing is still evidence, and never make up a caller or an API.
 +5. Prove the one fact. Run an existing check or an owned scratch script against the real code, and paste what happened. Keep product code read-only; scratch probes use isolated test state and clean up what they create. A blocked or side-effectful probe stays unproved with its prerequisite, rather than authorizing product edits or external actions.
-+6. When a wide change needs independent challenge, select the bundled [Adversarial method](../adversarial/interrogate.md). Keep its reviewer synthesis alongside this impact report; it does not replace executable safety proof. Breadth alone does not require a second review pass.
  
  ## What to hand back
  
-@@ -45,6 +45,6 @@ Step 4 is usually one small script that imports the same library the app ships a
+@@ -45,6 +44,6 @@ Step 4 is usually one small script that imports the same library the app ships a
  - **Cleared.** What you checked and why it's fine.
  - **Before you merge.** The cheapest test or repro that catches the real bug, including the script you wrote.
  

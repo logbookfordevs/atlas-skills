@@ -459,9 +459,7 @@
       "consumers": [
         "atlas-review"
       ],
-      "rulings": [
-        "review-adversarial-owner"
-      ],
+      "rulings": [],
       "carriedPath": "references/code/code-review.md",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-11-03",
@@ -1453,74 +1451,6 @@
       ]
     },
     {
-      "id": "pstack-interrogate",
-      "owner": "atlas-review",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
-        "path": "skills/interrogate/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/pstack-interrogate/source.md",
-      "sourceSha256": "a6680059321f614ba65b91a4b5a98dcf18d1d1b9c3ad7f7d437d06ae094ba2bd",
-      "license": "sources/upstream/pstack-interrogate/LICENSE",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-review/references/adversarial/interrogate.md",
-      "carriedPath": "references/adversarial/interrogate.md",
-      "patch": "sources/patches/pstack-interrogate.patch",
-      "adaptation": "Use available host reviewers and disclose actual model diversity instead of fixed provider defaults or automatic model-table PRs. Preserve independent same-intent review, attribution and lead judgment; treat quality heuristics as contextual findings and keep review read-only.",
-      "consumers": [
-        "atlas-review",
-        "atlas-implement"
-      ],
-      "supportingFiles": [
-        {
-          "snapshot": "sources/upstream/pstack-interrogate/support/references/code-quality-review.md",
-          "relativePath": "references/code-quality-review.md",
-          "upstreamPath": "skills/interrogate/references/code-quality-review.md",
-          "sourceSha256": "79162fda183eafd40d51661fbb5e151c7ba250f89e506ba17f5bd135dcbd50a8",
-          "method": "skills/atlas-review/references/adversarial/references/code-quality-review.md",
-          "patch": "sources/patches/pstack-interrogate-code-quality-review.patch"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-interrogate/support/references/lead-judgment.md",
-          "relativePath": "references/lead-judgment.md",
-          "upstreamPath": "skills/interrogate/references/lead-judgment.md",
-          "sourceSha256": "355f5195a76bc75a655125292369f2a8231a2b61fabe5188d8f1386060922b87"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-interrogate/support/references/reviewer-prompt.md",
-          "relativePath": "references/reviewer-prompt.md",
-          "upstreamPath": "skills/interrogate/references/reviewer-prompt.md",
-          "sourceSha256": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-interrogate/support/references/rubric.md",
-          "relativePath": "references/rubric.md",
-          "upstreamPath": "skills/interrogate/references/rubric.md",
-          "sourceSha256": "0f9c6bdb0b96e26dbde5f6407f417e0c02f54080e7a1268d8994f3c3ec6c5ac0",
-          "method": "skills/atlas-review/references/adversarial/references/rubric.md",
-          "patch": "sources/patches/pstack-interrogate-rubric.patch"
-        }
-      ],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
-      "rulings": [
-        "review-adversarial-owner",
-        "review-impact-proof",
-        "implement-candidate-ownership"
-      ],
-      "declinedUpdates": [
-        {
-          "revision": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
-          "reviewedAt": "2026-11-03",
-          "reason": "Replaces independent adversarial judgment with executable-reproduction-only findings and removes its review support references. Atlas retains supported design and maintainability risks with explicit evidence gaps; adopting this rewrite would narrow that contract and add Arena and in-your-own-words dependencies."
-        }
-      ]
-    },
-    {
       "id": "pstack-blast-radius",
       "owner": "atlas-review",
       "classification": "patched",
@@ -1538,7 +1468,7 @@
       "method": "skills/atlas-review/references/impact/blast-radius.md",
       "carriedPath": "references/impact/blast-radius.md",
       "patch": "sources/patches/pstack-blast-radius.patch",
-      "adaptation": "Keep risk tracing and executable safety proof within read-only Review using owned scratch probes. Replace external How/Why/Arena/Unslop calls with scoped history/source evidence, optional bundled Adversarial review and concise cited output; no external skill installation is required.",
+      "adaptation": "Keep risk tracing and executable safety proof within read-only Review using owned scratch probes. Replace external How/Why/Arena/Unslop calls with scoped history/source evidence and concise cited output; remove the retired Interrogate handoff. No external skill installation is required.",
       "consumers": [
         "atlas-review"
       ],
@@ -1783,7 +1713,7 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-implement/references/architect/architect.md",
       "carriedPath": "references/architect/architect.md",
-      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena, Interrogate and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating. Update bundled reference links for ordinary Markdown filenames.",
+      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating. Update bundled reference links for ordinary Markdown filenames. Remove the retired Interrogate handoff.",
       "consumers": [
         "atlas-implement"
       ],
@@ -4355,18 +4285,9 @@
         "animate",
         "apple-design",
         "improve-animations",
-        "pstack-interrogate",
         "pstack-blast-radius"
       ],
       "authoredReferences": [
-        {
-          "input": "skills/atlas-review/references/static/static-review.md",
-          "target": "references/static/static-review.md"
-        },
-        {
-          "input": "skills/atlas-review/references/static/scripts/changed-files.sh",
-          "target": "references/static/scripts/changed-files.sh"
-        },
         {
           "input": "skills/atlas-motion/references/motion-ownership.md",
           "target": "references/motion-ownership.md"
@@ -4471,7 +4392,7 @@
           "id": "atlas-review",
           "relationship": "behavioral",
           "required": true,
-          "condition": "For checkpoint Standards & Spec review and applicable specialist methods selected from the change; reuse adequate evidence for the same checkpoint and question."
+          "condition": "For automatic checkpoint review; Atlas Review owns method selection and execution, reusing adequate evidence for the same checkpoint and question."
         },
         {
           "id": "plannotator",
@@ -4669,8 +4590,7 @@
         "pstack-principle-separate-before-serializing-shared-state",
         "pstack-principle-subtract-before-you-add",
         "pstack-how",
-        "pstack-why",
-        "pstack-interrogate"
+        "pstack-why"
       ],
       "dependencies": [
         {
@@ -5142,26 +5062,14 @@
       "decision": "Vet actual measured claims with raw work/error/repetition/limiter evidence. Adapt host tools, keep optimization outside verification, and use existing schema fields when contributing to a Behavior report; standalone benchmarks do not require a rendered PE report or external perf playbook."
     },
     {
-      "id": "review-adversarial-owner",
-      "owner": "atlas-review",
-      "document": "skills/atlas-review/SKILL.md",
-      "section": "Atlas Review",
-      "sources": [
-        "code-review",
-        "pstack-interrogate"
-      ],
-      "decision": "Select Interrogate for independent same-intent challenge without automatically adding it to Standards & Spec review. Keep lead-filtered findings separate from Standards/Spec axes. Honor actual host reviewers and disclose diversity/context gaps; quality blockers require concrete consequences, not a line-count or finding-count heuristic. Review remains read-only."
-    },
-    {
       "id": "review-impact-proof",
       "owner": "atlas-review",
       "document": "skills/atlas-review/references/impact/blast-radius.md",
       "section": "Steps",
       "sources": [
-        "pstack-blast-radius",
-        "pstack-interrogate"
+        "pstack-blast-radius"
       ],
-      "decision": "Impact traces downstream contracts and proves safety facts through existing checks or owned isolated scratch probes. Product edits and external effects require separate authority. Use source/history evidence directly and select bundled Adversarial only when independent challenge is needed; external How/Why/Arena/Unslop installations are not required."
+      "decision": "Impact traces downstream contracts and proves safety facts through existing checks or owned isolated scratch probes. Product edits and external effects require separate authority. Use source/history evidence directly; external How/Why/Arena/Unslop installations are not required."
     },
     {
       "id": "explain-mode-choice",
@@ -5236,11 +5144,10 @@
         "pstack-arena",
         "pstack-how",
         "pstack-why",
-        "pstack-interrogate",
         "pstack-principle-exhaust-the-design-space",
         "pstack-principle-separate-before-serializing-shared-state"
       ],
-      "decision": "Architect requires two structurally distinct candidates before synthesis even if generic Arena allows dropout or convergence. Candidate runners execute only their isolated sketch assignment, never recursively launch the workflow. Shared grounding/review sources load directly without the Explain chooser. Host limitations and actual reviewer independence are disclosed; Interrogate is selected rather than automatic."
+      "decision": "Architect requires two structurally distinct candidates before synthesis even if generic Arena allows dropout or convergence. Candidate runners execute only their isolated sketch assignment, never recursively launch the workflow. Shared grounding sources load directly without the Explain chooser. Host limitations and actual reviewer independence are disclosed."
     },
     {
       "id": "implement-principle-scope",

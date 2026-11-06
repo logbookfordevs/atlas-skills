@@ -40,7 +40,6 @@ const titles = {
   "pstack-create-formal-verification-skill": "Create Formal Verification Skill",
   "pstack-maintain-formal-verification-skill": "Maintain Formal Verification Skill",
   "pstack-benchmark-checklist": "Benchmark Checklist",
-  "pstack-interrogate": "Interrogate",
   "pstack-blast-radius": "Blast Radius",
   "pstack-ketchup": "Ketchup",
   "pstack-bro": "Bro (voice)",

@@ -35,7 +35,6 @@ Step 4 is usually one small script that imports the same library the app ships a
 3. Look where grep stops. Read the source of the library you call, and check its pinned version and any local patch. Work out when things run: microtasks, unmount and teardown, Solid versus React. Follow what a symbol search misses: the JSON an API returns, a DB column, a wire format, another language reading the same bytes, a feature flag, code three hops downstream.
 4. Be honest about each risk. Give it a supported likelihood and a real cost if it occurs; use qualitative uncertainty when the evidence does not support a probability. Separate confirmed risks, unresolved assumptions and checked/cleared risks. Cite a real `file:line`; a scoped search that finds nothing is still evidence, and never make up a caller or an API.
 5. Prove the one fact. Run an existing check or an owned scratch script against the real code, and paste what happened. Keep product code read-only; scratch probes use isolated test state and clean up what they create. A blocked or side-effectful probe stays unproved with its prerequisite, rather than authorizing product edits or external actions.
-6. When a wide change needs independent challenge, select the bundled [Adversarial method](../adversarial/interrogate.md). Keep its reviewer synthesis alongside this impact report; it does not replace executable safety proof. Breadth alone does not require a second review pass.
 
 ## What to hand back
 

@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index eaff1d9..2f47478 100644
+index eaff1d9..46f4c1a 100644
 --- a/source.md
 +++ b/source.md
 @@ -8,29 +8,31 @@ disable-model-invocation: true
@@ -46,7 +46,7 @@ index eaff1d9..2f47478 100644
  Opt in to a checkpoint when the invoker explicitly asks: "/architect with checkpoint," "stop and show me before implementing," or similar. Then surface the synthesized design and pause for sign-off.
  
 -The synthesis can ship as its own commit either way, as the "scaffold first" mode of the **foundational-thinking** principle skill. Planned and scoped breakage during fill-in is fine, per the **outcome-oriented-execution** principle skill. For adversarial pressure on the design before implementing, run the **interrogate** skill on the synthesized sketch.
-+The design may be delivered separately within the agreed commit scope, using the [Foundational Thinking](../principles/principle-foundational-thinking/principle-foundational-thinking.md) guidance. Temporary breakage follows [Outcome-Oriented Execution](../principles/principle-outcome-oriented-execution/principle-outcome-oriented-execution.md) only at declared verification boundaries, subject to the integration rules and project policy. When adversarial pressure is requested or selected, follow the bundled [Interrogate method](../adversarial/interrogate.md) on the synthesized sketch.
++The design may be delivered separately within the agreed commit scope, using the [Foundational Thinking](../principles/principle-foundational-thinking/principle-foundational-thinking.md) guidance. Temporary breakage follows [Outcome-Oriented Execution](../principles/principle-outcome-oriented-execution/principle-outcome-oriented-execution.md) only at declared verification boundaries, subject to the integration rules and project policy.
  
  If the human pushes back on the shape (in a checkpoint or after the fact), treat that as Phase A evidence. Re-ground and re-run Phase B before writing more code.
  

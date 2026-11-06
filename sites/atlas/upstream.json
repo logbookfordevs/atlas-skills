@@ -235,13 +235,6 @@
         "author": "Lauren Tan / Pstack mirror",
         "url": "https://github.com/backnotprop/pstack/blob/f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37/skills/why/SKILL.md",
         "classification": "patched"
-      },
-      {
-        "id": "pstack-interrogate",
-        "title": "Interrogate",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37/skills/interrogate/SKILL.md",
-        "classification": "patched"
       }
     ],
     "collections": []
@@ -396,13 +389,6 @@
         "title": "Improve Animations",
         "author": "Emil Kowalski",
         "url": "https://github.com/emilkowalski/skills/blob/f1090bec277140d02ed202440185ad9d02ac1490/skills/improve-animations/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "pstack-interrogate",
-        "title": "Interrogate",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37/skills/interrogate/SKILL.md",
         "classification": "patched"
       },
       {
@@ -678,6 +664,10 @@
         "classification": "patched"
       }
     ],
+    "collections": []
+  },
+  "reality-check": {
+    "references": [],
     "collections": []
   },
   "tracking-implementation": {

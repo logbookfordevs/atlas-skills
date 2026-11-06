@@ -61,13 +61,7 @@
     "references/why/references/sources/notion.md",
     "references/why/references/sources/sentry.md",
     "references/why/references/sources/slack.md",
-    "references/why/references/synthesizer-prompt.md",
-    "references/adversarial/interrogate.md",
-    "licenses/pstack-interrogate.txt",
-    "references/adversarial/references/code-quality-review.md",
-    "references/adversarial/references/lead-judgment.md",
-    "references/adversarial/references/reviewer-prompt.md",
-    "references/adversarial/references/rubric.md"
+    "references/why/references/synthesizer-prompt.md"
   ],
   "authoredInputs": [
     "skills/atlas-implement/SKILL.md",
@@ -218,10 +212,10 @@
       "notices": [],
       "sourceSha256": "8b06915a5e728c4f78b6a685fec0213b5cb1a89b9476fae680d4cc3f67d4e79e",
       "carriedPath": "references/architect/architect.md",
-      "carriedSha256": "ad15a77d5f806acad27ad21135b02c8e4ea0a5ec3eb0228ce037751e0494b45a",
+      "carriedSha256": "477c2bb380fbe3fade71f6504472aad5ee6ed05ab028ae605070c2c9d0d59b5a",
       "licensePath": "licenses/pstack-architect.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena, Interrogate and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating. Update bundled reference links for ordinary Markdown filenames.",
+      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating. Update bundled reference links for ordinary Markdown filenames. Remove the retired Interrogate handoff.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
       "rulings": [
@@ -230,7 +224,7 @@
         "implement-principle-scope"
       ],
       "patch": "sources/patches/pstack-architect.patch",
-      "patchSha256": "abad6df19f3b9930b5a6ed37d8cbca254b90f96ff293e4618140e2fa8567fe8e"
+      "patchSha256": "1fc0c9688bb2187b044e50204cf237ee08a15152e98c42033c5dcdef3e7819c1"
     },
     {
       "id": "pstack-arena",
@@ -774,68 +768,6 @@
       ],
       "patch": "sources/patches/pstack-why.patch",
       "patchSha256": "a3ee8a2f7dda19425eacbc4e1a6b39a7993cbe5d16b16df8064d85e78223c772"
-    },
-    {
-      "id": "pstack-interrogate",
-      "owner": "atlas-review",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
-        "path": "skills/interrogate/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/interrogate/references/code-quality-review.md",
-          "classification": "patched",
-          "sourceSha256": "79162fda183eafd40d51661fbb5e151c7ba250f89e506ba17f5bd135dcbd50a8",
-          "carriedPath": "references/adversarial/references/code-quality-review.md",
-          "carriedSha256": "4f6c4bedc9cb0321a1ebacb8a7dabf70cb0089aaf31fa75072cdde9d56101985",
-          "patch": "sources/patches/pstack-interrogate-code-quality-review.patch",
-          "patchSha256": "f0a4211b0f0c519ec2b50ba65d9dd571e85da8ad02bab0be48a282d955df1559"
-        },
-        {
-          "upstreamPath": "skills/interrogate/references/lead-judgment.md",
-          "classification": "verbatim",
-          "sourceSha256": "355f5195a76bc75a655125292369f2a8231a2b61fabe5188d8f1386060922b87",
-          "carriedPath": "references/adversarial/references/lead-judgment.md",
-          "carriedSha256": "355f5195a76bc75a655125292369f2a8231a2b61fabe5188d8f1386060922b87"
-        },
-        {
-          "upstreamPath": "skills/interrogate/references/reviewer-prompt.md",
-          "classification": "verbatim",
-          "sourceSha256": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25",
-          "carriedPath": "references/adversarial/references/reviewer-prompt.md",
-          "carriedSha256": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25"
-        },
-        {
-          "upstreamPath": "skills/interrogate/references/rubric.md",
-          "classification": "patched",
-          "sourceSha256": "0f9c6bdb0b96e26dbde5f6407f417e0c02f54080e7a1268d8994f3c3ec6c5ac0",
-          "carriedPath": "references/adversarial/references/rubric.md",
-          "carriedSha256": "bf4e0f9b620cd54823cbf606aaef16a4aad62e9a46af1c3f288c80a5aaada869",
-          "patch": "sources/patches/pstack-interrogate-rubric.patch",
-          "patchSha256": "476ed4eea17371a2a4e0e394ed4ce70c32260b722c431af294b287ae64c20ed0"
-        }
-      ],
-      "notices": [],
-      "sourceSha256": "a6680059321f614ba65b91a4b5a98dcf18d1d1b9c3ad7f7d437d06ae094ba2bd",
-      "carriedPath": "references/adversarial/interrogate.md",
-      "carriedSha256": "4606413b795c358c5e9b95b55c7a780ed66e3da8ae5db3f260956a972584fafa",
-      "licensePath": "licenses/pstack-interrogate.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Use available host reviewers and disclose actual model diversity instead of fixed provider defaults or automatic model-table PRs. Preserve independent same-intent review, attribution and lead judgment; treat quality heuristics as contextual findings and keep review read-only.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
-      "rulings": [
-        "review-adversarial-owner",
-        "review-impact-proof",
-        "implement-candidate-ownership"
-      ],
-      "patch": "sources/patches/pstack-interrogate.patch",
-      "patchSha256": "56f37ba93a3fe321731eed41db904769ee936888d232d2f41d87ddb138dcb3d1"
     }
   ],
   "rulings": [
@@ -884,11 +816,10 @@
         "pstack-arena",
         "pstack-how",
         "pstack-why",
-        "pstack-interrogate",
         "pstack-principle-exhaust-the-design-space",
         "pstack-principle-separate-before-serializing-shared-state"
       ],
-      "decision": "Architect requires two structurally distinct candidates before synthesis even if generic Arena allows dropout or convergence. Candidate runners execute only their isolated sketch assignment, never recursively launch the workflow. Shared grounding/review sources load directly without the Explain chooser. Host limitations and actual reviewer independence are disclosed; Interrogate is selected rather than automatic."
+      "decision": "Architect requires two structurally distinct candidates before synthesis even if generic Arena allows dropout or convergence. Candidate runners execute only their isolated sketch assignment, never recursively launch the workflow. Shared grounding sources load directly without the Explain chooser. Host limitations and actual reviewer independence are disclosed."
     },
     {
       "id": "implement-principle-scope",
@@ -916,7 +847,7 @@
     "references/tdd/tests.md": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
     "references/source-driven/source-driven.md": "a4d0e2ece64ce4a58e3ed56351b1f6e0eacd2a298fa683e80360effc6a949a59",
     "licenses/source-driven-development.txt": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
-    "references/architect/architect.md": "ad15a77d5f806acad27ad21135b02c8e4ea0a5ec3eb0228ce037751e0494b45a",
+    "references/architect/architect.md": "477c2bb380fbe3fade71f6504472aad5ee6ed05ab028ae605070c2c9d0d59b5a",
     "licenses/pstack-architect.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/architect/references/design-red-flags.md": "8e87fa13355b2df71fb4cac9c8f6ae0e8ec2d606ee7514c3a3bd611c5958cccc",
     "references/architect/references/rationale-template.md": "a2b7d4f2ccbfedd1ab3898deb87dced19327fc512888d6de2b8f89d07280acd2",
@@ -969,12 +900,6 @@
     "references/why/references/sources/sentry.md": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702",
     "references/why/references/sources/slack.md": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
     "references/why/references/synthesizer-prompt.md": "efd1a207836e90e61db0a312d475d0f7343cbe4f286089e48aa7d248973d1eba",
-    "references/adversarial/interrogate.md": "4606413b795c358c5e9b95b55c7a780ed66e3da8ae5db3f260956a972584fafa",
-    "licenses/pstack-interrogate.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/adversarial/references/code-quality-review.md": "4f6c4bedc9cb0321a1ebacb8a7dabf70cb0089aaf31fa75072cdde9d56101985",
-    "references/adversarial/references/lead-judgment.md": "355f5195a76bc75a655125292369f2a8231a2b61fabe5188d8f1386060922b87",
-    "references/adversarial/references/reviewer-prompt.md": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25",
-    "references/adversarial/references/rubric.md": "bf4e0f9b620cd54823cbf606aaef16a4aad62e9a46af1c3f288c80a5aaada869",
-    "references/architect/integration.md": "1cfcfaaa608db833bb36bf0f50e49d14a53b3ebb815f49817ae516818e8623a8"
+    "references/architect/integration.md": "48e01b856565fad9fd1c4957a784094e47eb75f1595a6ce9550dcfee003b541d"
   }
 }
