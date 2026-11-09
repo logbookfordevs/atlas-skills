@@ -1,6 +1,6 @@
 ---
 name: atlas-figures
-description: "Build explanatory figures, interactive objects or technical illustrations in a chosen treatment, or explore six treatments to choose one."
+description: "Build explanatory figures, interactive objects or illustrated charts in a chosen treatment, or explore seven options."
 disable-model-invocation: true
 ---
 
@@ -16,5 +16,6 @@ When the request or conversation already selects a treatment, read its method an
 | Teardown | Evidence-led technical illustrations, coherent views and exploded assemblies of objects or conceptual layers. | [Teardown](references/teardown/teardown.md) |
 | ISO-GLOW | Glowing isometric line art, interactive 3D objects, or solid-lit Lumen illustrations. | [ISO-GLOW](references/iso-glow/iso-glow.md) |
 | Colorfigures | Colourful, hand-inked objects with working mechanisms, rotation and see-through views. | [Colorfigures](references/colorfigures/colorfigures.md) |
+| Minicharts | Hand-drawn charts where subject objects carry the data, with values drawn to scale and touchable parts. | [Minicharts](references/minicharts/minicharts.md) |
 
 Follow the selected method and its conditional references. Its folder is the method's base directory for assets, scripts and examples; resolve `<skill folder>` there. Keep its visual grammar and engine together. Selecting several treatments means separate variants, unless the user requests a blend. A recommendation alone does not select a treatment.

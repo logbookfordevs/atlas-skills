@@ -99,3 +99,7 @@ Two download-based creative sources remain outside automatic Git detection. Thei
 - Include Atlas Debug and Atlas Verifiers explicitly in the Core CLI catalog, rather than leaving their discoverable entries under General.
 
 Validation and final PR status are recorded in the PR; this report captures source-review decisions rather than claiming that a branch has been merged or the website deployed.
+
+## Follow-up: Minicharts import
+
+After the scan above, the user supplied Minicharts and selected it as Figures’ seventh treatment. All 12 extracted files matched the supplied `minicharts.zip`, whose SHA-256 is `918430f0faf76713046beefc07dc9f982fd56cd0c3bc214c84931ba3aa03bc53`. Register it as a third manual-download source, bringing the active registry to 78 sources. Preserve its method, engine, examples, builder, checker and runtime references verbatim; patch only the README entry-filename pointer. A source-specific checker run reports `manual-download` as intended. The earlier 75 Git-source results and the two unrefreshed creative distributions above are unchanged by this import.

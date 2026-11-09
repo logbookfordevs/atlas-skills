@@ -765,6 +765,13 @@
         "author": "April Zhu (based on Tolga Cohce’s iso-figure)",
         "url": "https://april-zhu.com/colorfigures",
         "classification": "patched"
+      },
+      {
+        "id": "minicharts",
+        "title": "Minicharts",
+        "author": "April Zhu (exploded-view conventions adapted from Cathryn Lavery)",
+        "url": "https://april-zhu.com/minicharts",
+        "classification": "patched"
       }
     ],
     "collections": []

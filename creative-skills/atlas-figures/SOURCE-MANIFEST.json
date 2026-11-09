@@ -237,7 +237,20 @@
     "references/colorfigures/assets/examples/lamp.html",
     "references/colorfigures/assets/examples/toaster.html",
     "references/colorfigures/scripts/build.py",
-    "references/colorfigures/LICENSE"
+    "references/colorfigures/LICENSE",
+    "references/minicharts/minicharts.md",
+    "licenses/minicharts.txt",
+    "references/minicharts/NOTICE.md",
+    "references/minicharts/README.md",
+    "references/minicharts/assets/build.py",
+    "references/minicharts/assets/check.py",
+    "references/minicharts/assets/engine.js",
+    "references/minicharts/assets/examples.js",
+    "references/minicharts/assets/page.html",
+    "references/minicharts/assets/run.js",
+    "references/minicharts/references/kit.md",
+    "references/minicharts/references/types.md",
+    "references/minicharts/LICENSE"
   ],
   "authoredInputs": [
     "creative-skills/atlas-figures/SKILL.md",
@@ -1987,12 +2000,114 @@
       "rulings": [],
       "patch": "sources/patches/colorfigures.patch",
       "patchSha256": "b2e8fdbfd2b698277ca3585b39997029e25daf11b830460755dd224f1e829641"
+    },
+    {
+      "id": "minicharts",
+      "owner": "Atlas Figures",
+      "classification": "patched",
+      "upstream": {
+        "type": "download",
+        "page": "https://april-zhu.com/minicharts",
+        "archive": "minicharts.zip",
+        "archiveSha256": "918430f0faf76713046beefc07dc9f982fd56cd0c3bc214c84931ba3aa03bc53",
+        "path": "SKILL.md",
+        "url": "https://april-zhu.com/minicharts/minicharts.zip"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "NOTICE.md",
+          "classification": "verbatim",
+          "sourceSha256": "1921d213c7359fffc0f40b55aa6497fb5bbe8e3210f818e22d9892e80698be87",
+          "carriedPath": "references/minicharts/NOTICE.md",
+          "carriedSha256": "1921d213c7359fffc0f40b55aa6497fb5bbe8e3210f818e22d9892e80698be87"
+        },
+        {
+          "upstreamPath": "README.md",
+          "classification": "patched",
+          "sourceSha256": "add754ffaa296ca62651d1c54ed42069157dc0e26e86d0d93a5e6935f72069de",
+          "carriedPath": "references/minicharts/README.md",
+          "carriedSha256": "65fcc0d52fbc51c273178b4c4f3a3ffee2f0df2241a3c1a4585ecc2dc8afe360",
+          "patch": "sources/patches/minicharts/README.md.patch",
+          "patchSha256": "18e22394fa592d60e1fdb6308ec63e95133f8091603e4876da47f2820523182d"
+        },
+        {
+          "upstreamPath": "assets/build.py",
+          "classification": "verbatim",
+          "sourceSha256": "a3ceb7817007fbb8e576ced418f6b126e1e2df941c15ffe460c941185e95c71d",
+          "carriedPath": "references/minicharts/assets/build.py",
+          "carriedSha256": "a3ceb7817007fbb8e576ced418f6b126e1e2df941c15ffe460c941185e95c71d"
+        },
+        {
+          "upstreamPath": "assets/check.py",
+          "classification": "verbatim",
+          "sourceSha256": "a16664405627446b268510243691f7adb862178ee46b2186b28f58436b7fa3dd",
+          "carriedPath": "references/minicharts/assets/check.py",
+          "carriedSha256": "a16664405627446b268510243691f7adb862178ee46b2186b28f58436b7fa3dd"
+        },
+        {
+          "upstreamPath": "assets/engine.js",
+          "classification": "verbatim",
+          "sourceSha256": "08378e741d37f8ddc96076432546686cb66f7be73b3fd34f13e8b70507e070f4",
+          "carriedPath": "references/minicharts/assets/engine.js",
+          "carriedSha256": "08378e741d37f8ddc96076432546686cb66f7be73b3fd34f13e8b70507e070f4"
+        },
+        {
+          "upstreamPath": "assets/examples.js",
+          "classification": "verbatim",
+          "sourceSha256": "12081baa8e7b8ef8dbb195662e490feb897f316f035f8ed07455913a30282015",
+          "carriedPath": "references/minicharts/assets/examples.js",
+          "carriedSha256": "12081baa8e7b8ef8dbb195662e490feb897f316f035f8ed07455913a30282015"
+        },
+        {
+          "upstreamPath": "assets/page.html",
+          "classification": "verbatim",
+          "sourceSha256": "3e990acefae581684cd72ffc39eeac80440c2dac9aaa55981af33fd3cadad903",
+          "carriedPath": "references/minicharts/assets/page.html",
+          "carriedSha256": "3e990acefae581684cd72ffc39eeac80440c2dac9aaa55981af33fd3cadad903"
+        },
+        {
+          "upstreamPath": "assets/run.js",
+          "classification": "verbatim",
+          "sourceSha256": "a0d50b6b49a3ac0fc44f0db32b08255d1ea29bf628a8a06037ee1624eb852022",
+          "carriedPath": "references/minicharts/assets/run.js",
+          "carriedSha256": "a0d50b6b49a3ac0fc44f0db32b08255d1ea29bf628a8a06037ee1624eb852022"
+        },
+        {
+          "upstreamPath": "references/kit.md",
+          "classification": "verbatim",
+          "sourceSha256": "780258dba601290c79693bb1a2e503484d51a14d76cfab417b83abdd9d90e36e",
+          "carriedPath": "references/minicharts/references/kit.md",
+          "carriedSha256": "780258dba601290c79693bb1a2e503484d51a14d76cfab417b83abdd9d90e36e"
+        },
+        {
+          "upstreamPath": "references/types.md",
+          "classification": "verbatim",
+          "sourceSha256": "ca34a1e0044131fa8e89f31a3102ce582767eef76c0bb77b59dc7faf29cfb40a",
+          "carriedPath": "references/minicharts/references/types.md",
+          "carriedSha256": "ca34a1e0044131fa8e89f31a3102ce582767eef76c0bb77b59dc7faf29cfb40a"
+        }
+      ],
+      "notices": [
+        {
+          "carriedPath": "references/minicharts/LICENSE",
+          "carriedSha256": "0c96c4ad865df96c508fa445521104c1104fe48bfa8856d76cbfc15c9f0564de"
+        }
+      ],
+      "sourceSha256": "45adadd3eb193b72786d3e4f309608a9c80fa10455b826319467b796133de98b",
+      "carriedPath": "references/minicharts/minicharts.md",
+      "carriedSha256": "45adadd3eb193b72786d3e4f309608a9c80fa10455b826319467b796133de98b",
+      "licensePath": "licenses/minicharts.txt",
+      "licenseSha256": "0c96c4ad865df96c508fa445521104c1104fe48bfa8856d76cbfc15c9f0564de",
+      "adaptation": "Carry the original method, engine, examples, scripts and runtime references verbatim. Update only the README entry-filename pointer for the bundled ordinary Markdown method. Preserve April Zhu’s license, attribution and NOTICE.md; updates require manual download review.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-09",
+      "rulings": []
     }
   ],
   "rulings": [],
   "files": {
-    "SKILL.md": "51eb549d91823063b758195d4363f3394d994a2f80fb33a5359896ee98e71170",
-    "agents/openai.yaml": "fdd00c04f746dc84f2e8796604f0f06cbaabe0e3bc77ddaed191758f599bf8c9",
+    "SKILL.md": "8a35061df7df6dabba2b2ae5e999ef830dec43a4eb0a54ced25f8f92e74fd30c",
+    "agents/openai.yaml": "36e88d59022cea59480f7c3565ee0b20d0d2406b3459d8a41ef3ccecb53ffe7e",
     "references/hairline-create/hairline-create.md": "8675ceec106ec227aec00cd6a4ec883333e1acc16da5cc96e8e10a3c758ea841",
     "licenses/hairline-create.txt": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
     "references/hairline-create/bench.html": "0870fd54e137be0f7635cd309b48a4703a791cfca5915bf22d46b941ebc33278",
@@ -2227,6 +2342,19 @@
     "references/colorfigures/assets/examples/lamp.html": "8db118ca548e79f2aeab94b6601ca4dc1c83b9b89c1810232bcaea4fda0b281b",
     "references/colorfigures/assets/examples/toaster.html": "685e9e297fdc8f7104d2d3f04325bbbc567b76941934a8c37c6e127ab1cd9950",
     "references/colorfigures/scripts/build.py": "364b3028aed6980811ad49ac3c39725c4b901ef85dc0aa6b778fe612ae104ee4",
-    "references/colorfigures/LICENSE": "bc54cadb579906c051d7aad84f41f88c0df6c50089e052134226fe0b76fd5280"
+    "references/colorfigures/LICENSE": "bc54cadb579906c051d7aad84f41f88c0df6c50089e052134226fe0b76fd5280",
+    "references/minicharts/minicharts.md": "45adadd3eb193b72786d3e4f309608a9c80fa10455b826319467b796133de98b",
+    "licenses/minicharts.txt": "0c96c4ad865df96c508fa445521104c1104fe48bfa8856d76cbfc15c9f0564de",
+    "references/minicharts/NOTICE.md": "1921d213c7359fffc0f40b55aa6497fb5bbe8e3210f818e22d9892e80698be87",
+    "references/minicharts/README.md": "65fcc0d52fbc51c273178b4c4f3a3ffee2f0df2241a3c1a4585ecc2dc8afe360",
+    "references/minicharts/assets/build.py": "a3ceb7817007fbb8e576ced418f6b126e1e2df941c15ffe460c941185e95c71d",
+    "references/minicharts/assets/check.py": "a16664405627446b268510243691f7adb862178ee46b2186b28f58436b7fa3dd",
+    "references/minicharts/assets/engine.js": "08378e741d37f8ddc96076432546686cb66f7be73b3fd34f13e8b70507e070f4",
+    "references/minicharts/assets/examples.js": "12081baa8e7b8ef8dbb195662e490feb897f316f035f8ed07455913a30282015",
+    "references/minicharts/assets/page.html": "3e990acefae581684cd72ffc39eeac80440c2dac9aaa55981af33fd3cadad903",
+    "references/minicharts/assets/run.js": "a0d50b6b49a3ac0fc44f0db32b08255d1ea29bf628a8a06037ee1624eb852022",
+    "references/minicharts/references/kit.md": "780258dba601290c79693bb1a2e503484d51a14d76cfab417b83abdd9d90e36e",
+    "references/minicharts/references/types.md": "ca34a1e0044131fa8e89f31a3102ce582767eef76c0bb77b59dc7faf29cfb40a",
+    "references/minicharts/LICENSE": "0c96c4ad865df96c508fa445521104c1104fe48bfa8856d76cbfc15c9f0564de"
   }
 }

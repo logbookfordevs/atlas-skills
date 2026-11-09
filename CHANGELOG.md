@@ -2,6 +2,7 @@
 
 ## 1.4.0
 
+- Add Minicharts as Atlas Figures’ seventh treatment, preserving April Zhu’s chart workflow, engine, 54 examples and build/check tools. Keep the MIT license and notices, fingerprint the supplied ZIP, patch only the README filename pointer, and track future downloads as manual review.
 - Retire Static and the old code-only Adversarial method from Atlas Review. Let Review own method selection while Tracking records the review gate and evidence. Challenge provides the separate broader assessment workflow.
 - Rename Atlas Implement to Engineering Principles and import Leonardo’s Implement workflow with an All Tickets coordination mode. Preserve the supplied task-delivery instructions apart from the renamed methods reference and the new coordinator handoff. Redirect the old website reference to Engineering Principles.
 - Add the manually invoked Challenge composition from Pstack Interrogate, Theo Browne’s Council and Addy Osmani’s Doubt-Driven Development. Use selected Team Up Arena phases, scope-based reviewer counts, runnable evidence where possible and explicit supported objections and unknowns.

@@ -4387,6 +4387,103 @@
       "rulings": [
         "challenge-composition"
       ]
+    },
+    {
+      "id": "minicharts",
+      "owner": "Atlas Figures",
+      "classification": "patched",
+      "upstream": {
+        "type": "download",
+        "page": "https://april-zhu.com/minicharts",
+        "archive": "minicharts.zip",
+        "archiveSha256": "918430f0faf76713046beefc07dc9f982fd56cd0c3bc214c84931ba3aa03bc53",
+        "path": "SKILL.md",
+        "url": "https://april-zhu.com/minicharts/minicharts.zip"
+      },
+      "snapshot": "sources/upstream/minicharts/source.md",
+      "sourceSha256": "45adadd3eb193b72786d3e4f309608a9c80fa10455b826319467b796133de98b",
+      "license": "sources/upstream/minicharts/LICENSE",
+      "licenseSha256": "0c96c4ad865df96c508fa445521104c1104fe48bfa8856d76cbfc15c9f0564de",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-09",
+      "method": "sources/upstream/minicharts/source.md",
+      "carriedPath": "references/minicharts/minicharts.md",
+      "adaptation": "Carry the original method, engine, examples, scripts and runtime references verbatim. Update only the README entry-filename pointer for the bundled ordinary Markdown method. Preserve April Zhu\u2019s license, attribution and NOTICE.md; updates require manual download review.",
+      "supportingFiles": [
+        {
+          "relativePath": "NOTICE.md",
+          "upstreamPath": "NOTICE.md",
+          "snapshot": "sources/upstream/minicharts/support/NOTICE.md",
+          "sourceSha256": "1921d213c7359fffc0f40b55aa6497fb5bbe8e3210f818e22d9892e80698be87"
+        },
+        {
+          "relativePath": "README.md",
+          "upstreamPath": "README.md",
+          "snapshot": "sources/upstream/minicharts/support/README.md",
+          "sourceSha256": "add754ffaa296ca62651d1c54ed42069157dc0e26e86d0d93a5e6935f72069de",
+          "method": "creative-skills/atlas-figures/references/minicharts/README.md",
+          "patch": "sources/patches/minicharts/README.md.patch"
+        },
+        {
+          "relativePath": "assets/build.py",
+          "upstreamPath": "assets/build.py",
+          "snapshot": "sources/upstream/minicharts/support/assets/build.py",
+          "sourceSha256": "a3ceb7817007fbb8e576ced418f6b126e1e2df941c15ffe460c941185e95c71d"
+        },
+        {
+          "relativePath": "assets/check.py",
+          "upstreamPath": "assets/check.py",
+          "snapshot": "sources/upstream/minicharts/support/assets/check.py",
+          "sourceSha256": "a16664405627446b268510243691f7adb862178ee46b2186b28f58436b7fa3dd"
+        },
+        {
+          "relativePath": "assets/engine.js",
+          "upstreamPath": "assets/engine.js",
+          "snapshot": "sources/upstream/minicharts/support/assets/engine.js",
+          "sourceSha256": "08378e741d37f8ddc96076432546686cb66f7be73b3fd34f13e8b70507e070f4"
+        },
+        {
+          "relativePath": "assets/examples.js",
+          "upstreamPath": "assets/examples.js",
+          "snapshot": "sources/upstream/minicharts/support/assets/examples.js",
+          "sourceSha256": "12081baa8e7b8ef8dbb195662e490feb897f316f035f8ed07455913a30282015"
+        },
+        {
+          "relativePath": "assets/page.html",
+          "upstreamPath": "assets/page.html",
+          "snapshot": "sources/upstream/minicharts/support/assets/page.html",
+          "sourceSha256": "3e990acefae581684cd72ffc39eeac80440c2dac9aaa55981af33fd3cadad903"
+        },
+        {
+          "relativePath": "assets/run.js",
+          "upstreamPath": "assets/run.js",
+          "snapshot": "sources/upstream/minicharts/support/assets/run.js",
+          "sourceSha256": "a0d50b6b49a3ac0fc44f0db32b08255d1ea29bf628a8a06037ee1624eb852022"
+        },
+        {
+          "relativePath": "references/kit.md",
+          "upstreamPath": "references/kit.md",
+          "snapshot": "sources/upstream/minicharts/support/references/kit.md",
+          "sourceSha256": "780258dba601290c79693bb1a2e503484d51a14d76cfab417b83abdd9d90e36e"
+        },
+        {
+          "relativePath": "references/types.md",
+          "upstreamPath": "references/types.md",
+          "snapshot": "sources/upstream/minicharts/support/references/types.md",
+          "sourceSha256": "ca34a1e0044131fa8e89f31a3102ce582767eef76c0bb77b59dc7faf29cfb40a"
+        }
+      ],
+      "consumers": [
+        "atlas-figures"
+      ],
+      "rulings": [],
+      "notices": [
+        {
+          "input": "sources/upstream/minicharts/LICENSE",
+          "target": "references/minicharts/LICENSE",
+          "sha256": "0c96c4ad865df96c508fa445521104c1104fe48bfa8856d76cbfc15c9f0564de"
+        }
+      ]
     }
   ],
   "workflows": [
@@ -4984,7 +5081,8 @@
         "engraved-figures",
         "teardown",
         "iso-glow",
-        "colorfigures"
+        "colorfigures",
+        "minicharts"
       ],
       "dependencies": [
         {
