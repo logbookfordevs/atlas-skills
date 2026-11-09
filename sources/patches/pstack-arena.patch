@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index e4aaa2d..5d0296c 100644
+index e4aaa2d..50b36fd 100644
 --- a/source.md
 +++ b/source.md
 @@ -6,7 +6,7 @@ disable-model-invocation: true
@@ -7,7 +7,7 @@ index e4aaa2d..5d0296c 100644
  # Arena
  
 -Open a todolist with one entry per phase (Frame, Fan out, Cross-judge, Pick, Graft, Verify) before launching anything.
-+Track Frame, Fan out, Cross-judge, Pick, Graft and Verify with the host's available planning mechanism. Honor the caller's minimum candidate requirements and artifact validation criteria.
++For a full Arena run, track Frame, Fan out, Cross-judge, Pick, Graft and Verify with the host's available planning mechanism. When a caller explicitly selects phases, run and track only those phases under its brief and evidence contract. Honor the caller's minimum candidate requirements and artifact validation criteria.
  
  ## Phase A: Frame
  

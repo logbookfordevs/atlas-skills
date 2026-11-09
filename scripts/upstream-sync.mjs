@@ -117,7 +117,7 @@ export function prepareUpdate(root, source, candidate, manifest) {
   buildSkills(root, { check: true });
   const stage = mkdtempSync(join(tmpdir(), 'atlas-candidate-'));
   try {
-    for (const directory of ['sources', 'skills', 'creative-skills', 'stacks']) {
+    for (const directory of ['sources', 'skills', 'creative-skills', 'utility-skills', 'stacks']) {
       if (existsSync(join(root, directory))) cpSync(join(root, directory), join(stage, directory), { recursive: true });
     }
     const next = structuredClone(manifest);

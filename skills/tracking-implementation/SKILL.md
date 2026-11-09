@@ -85,9 +85,9 @@ Keep the implementation status `review` until the review gate is accepted. Prese
 Use `blocked_by` for record dependencies, human decisions, missing context, or external blockers.
 
 ## Execution Evidence
-Record the selected execution bundle before implementation begins: TDD or Source-Driven Development through Atlas Implement, independent `doubt-driven-development`, normal project validation, or a combination.
+Record the selected execution bundle before implementation begins: TDD or Source-Driven Development through Engineering Principles, independent `doubt-driven-development`, normal project validation, or a combination.
 
-Use Atlas Implement's TDD method when the implementation has a meaningful public Test Seam. Treat a seam approved in the source as pre-agreed. If the seam is missing, ambiguous, or invalidated by codebase evidence, agree on it with the user before writing tests. Use normal validation with an explicit skip reason when no meaningful executable seam exists.
+Use Engineering Principles's TDD method when the implementation has a meaningful public Test Seam. Treat a seam approved in the source as pre-agreed. If the seam is missing, ambiguous, or invalidated by codebase evidence, agree on it with the user before writing tests. Use normal validation with an explicit skip reason when no meaningful executable seam exists.
 
 Before moving an implementation to `review`, record evidence for each selected discipline:
 

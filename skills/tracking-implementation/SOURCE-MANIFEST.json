@@ -48,7 +48,7 @@
       "condition": "When available for interactive checkpoint diff review and local implementation-record annotation."
     },
     {
-      "id": "atlas-implement",
+      "id": "engineering-principles",
       "relationship": "behavioral",
       "required": false,
       "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence."
@@ -159,7 +159,7 @@
     },
     {
       "id": "pstack-principle-encode-lessons-in-structure",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -217,7 +217,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "2c81a7ca800dfbd4aa071fb6b91c80c0085368453aa148c2d39951919d2871b5",
+    "SKILL.md": "57964a7481efa2f3b4744eecb345ee80bcca531cea40e2ca9c4445205523986b",
     "agents/openai.yaml": "6ab2c66fa97ccfb10c7149239063fa3abe88d32179ff987192a451d14aec45ce",
     "references/resume.md": "3c8fb60dd8e8dc3b6fc5375096e82d810f368c3d59f6f41d0d0c7ab4e4873bab",
     "references/review-guides.md": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f",

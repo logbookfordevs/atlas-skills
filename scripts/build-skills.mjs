@@ -11,7 +11,7 @@ export const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), '
 export const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 export const packageDirectory = workflow => {
   const directory = workflow.directory ?? `skills/${workflow.id}`;
-  if (!['skills', 'creative-skills'].some(base => directory === `${base}/${workflow.id}`)) throw new Error(`Invalid package directory: ${directory}`);
+  if (!['skills', 'creative-skills', 'utility-skills'].some(base => directory === `${base}/${workflow.id}`)) throw new Error(`Invalid package directory: ${directory}`);
   return directory;
 };
 

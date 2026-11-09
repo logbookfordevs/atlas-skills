@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const skills = JSON.parse(await readFile(new URL('../content.json', import.meta.url), 'utf8'));
+const redirects = JSON.parse(await readFile(new URL('../skill-redirects.json', import.meta.url), 'utf8'));
 const site = JSON.parse(await readFile(new URL('../site.json', import.meta.url), 'utf8'));
 const entry = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 const escape = (value) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
@@ -9,12 +10,17 @@ const pages = [
   { path: '/tools/', ...site.tools, usesSiteImage: true },
   { path: '/workflow/', ...site.workflow, usesSiteImage: true },
   ...skills.map((skill) => ({ path: `/skills/${skill.id}/`, title: skill.name, description: skill.summary, usesSiteImage: false })),
+  ...Object.entries(redirects).map(([from, to]) => {
+    const target = skills.find((skill) => skill.id === to);
+    if (!target) throw new Error(`Skill redirect target "${to}" does not exist in content.json.`);
+    return { path: `/skills/${from}/`, canonicalPath: `/skills/${to}/`, title: target.name, description: target.summary, usesSiteImage: false };
+  }),
   { path: '/stack/', ...site.stack, usesSiteImage: true },
 ];
 
 function socialMetadata(page) {
   const title = page.path === '/' ? site.siteName : `${page.title} · ${site.name}`;
-  const url = new URL(page.path, site.origin).href;
+  const url = new URL(page.canonicalPath ?? page.path, site.origin).href;
   const image = new URL(site.socialImage.path, site.origin).href;
   const properties = {
     'og:type': 'website',

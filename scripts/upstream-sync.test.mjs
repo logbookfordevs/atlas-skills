@@ -219,24 +219,25 @@ test('supporting patches survive adoption into all consumers and detect changed 
 });
 
 
-test('reviewed adoption updates an optional creative consumer in place and preserves authored files', t => {
-  const { root, source, revision } = fixture(t);
-  const write = (name, value) => { mkdirSync(join(root, name, '..'), { recursive: true }); writeFileSync(join(root, name), value); };
-  write(source.snapshot, 'before\n'); write(source.license, 'license\n');
-  const directory = 'creative-skills/fixture-skill';
-  write(`${directory}/SKILL.md`, '---\nname: fixture-skill\ndescription: Fixture\n---\n');
-  write(`${directory}/agents/openai.yaml`, 'policy: {}\n');
-  write(`${directory}/references/owned.md`, 'owned selection\n');
-  const manifest = { version: 1, sources: [source], workflows: [{ id: 'fixture-skill', directory, entry: `${directory}/SKILL.md`, agent: `${directory}/agents/openai.yaml`, methods: ['fixture'], dependencies: [] }], rulings: [] };
-  write('sources/composition.json', JSON.stringify(manifest));
-  buildSkills(root);
-  prepareUpdate(root, source, inspectSource(source, revision, root), manifest);
-  assert.equal(readFileSync(join(root, directory, 'references/fixture.md'), 'utf8'), 'after\n');
-  assert.equal(readFileSync(join(root, directory, 'references/owned.md'), 'utf8'), 'owned selection\n');
-  assert.ok(!existsSync(join(root, 'skills/fixture-skill')));
-  buildSkills(root, { check: true });
-});
-
+for (const base of ['creative-skills', 'utility-skills']) {
+  test(`reviewed adoption updates an optional ${base} consumer in place and preserves authored files`, t => {
+    const { root, source, revision } = fixture(t);
+    const write = (name, value) => { mkdirSync(join(root, name, '..'), { recursive: true }); writeFileSync(join(root, name), value); };
+    write(source.snapshot, 'before\n'); write(source.license, 'license\n');
+    const directory = `${base}/fixture-skill`;
+    write(`${directory}/SKILL.md`, '---\nname: fixture-skill\ndescription: Fixture\n---\n');
+    write(`${directory}/agents/openai.yaml`, 'policy: {}\n');
+    write(`${directory}/references/owned.md`, 'owned selection\n');
+    const manifest = { version: 1, sources: [source], workflows: [{ id: 'fixture-skill', directory, entry: `${directory}/SKILL.md`, agent: `${directory}/agents/openai.yaml`, methods: ['fixture'], dependencies: [] }], rulings: [] };
+    write('sources/composition.json', JSON.stringify(manifest));
+    buildSkills(root);
+    prepareUpdate(root, source, inspectSource(source, revision, root), manifest);
+    assert.equal(readFileSync(join(root, directory, 'references/fixture.md'), 'utf8'), 'after\n');
+    assert.equal(readFileSync(join(root, directory, 'references/owned.md'), 'utf8'), 'owned selection\n');
+    assert.ok(!existsSync(join(root, 'skills/fixture-skill')));
+    buildSkills(root, { check: true });
+  });
+}
 
 test('download sources produce a manual-update report without attempting Git fetch', () => {
   const output = execFileSync(process.execPath, ['scripts/upstream-sync.mjs', '--source', 'iso-glow'], { encoding: 'utf8' });

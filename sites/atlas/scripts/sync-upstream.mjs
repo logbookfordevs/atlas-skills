@@ -16,6 +16,7 @@ const authors = {
   'https://github.com/addyosmani/agent-skills': 'Addy Osmani',
   'https://github.com/backnotprop/product-engineering': 'Product Engineering',
   'https://github.com/backnotprop/pstack': 'Lauren Tan / Pstack mirror',
+  'https://github.com/t3dotgg/tstack': 'Theo Browne',
 };
 const titles = {
   "diagnosing-bugs": "Diagnosing Bugs",
@@ -29,6 +30,7 @@ const titles = {
   "break-ui": "Break UI",
   "pe-verify": "PE Verify",
   "tdd": "TDD",
+  "implement-spec": "Implement Spec",
   "source-driven-development": "Source-Driven Development",
   "grilling": "Grilling",
   "domain-modeling": "Domain Modeling",
@@ -48,6 +50,9 @@ const titles = {
   "pstack-teach": "Teach",
   "pstack-architect": "Architect",
   "pstack-arena": "Arena",
+  "pstack-interrogate": "Interrogate",
+  "tstack-council": "Council",
+  "doubt-driven-development": "Doubt-Driven Development",
   "pstack-principle-boundary-discipline": "Boundary Discipline",
   "pstack-principle-exhaust-the-design-space": "Exhaust The Design Space",
   "pstack-principle-fix-root-causes": "Fix Root Causes",

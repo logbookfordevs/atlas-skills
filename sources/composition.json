@@ -71,7 +71,7 @@
     },
     {
       "id": "animate",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
@@ -111,7 +111,7 @@
     },
     {
       "id": "apple-design",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
@@ -142,7 +142,7 @@
     },
     {
       "id": "better-layout",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
@@ -205,7 +205,7 @@
     },
     {
       "id": "better-typography",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
@@ -288,7 +288,7 @@
     },
     {
       "id": "better-colors",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
@@ -1080,7 +1080,7 @@
     },
     {
       "id": "tdd",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/mattpocock/skills",
@@ -1093,12 +1093,12 @@
       "sourceSha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
       "license": "sources/upstream/tdd/LICENSE",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "skills/atlas-implement/references/tdd/tdd.md",
+      "method": "skills/engineering-principles/references/tdd/tdd.md",
       "carriedPath": "references/tdd/tdd.md",
       "patch": "sources/patches/tdd.patch",
       "adaptation": "Keep the TDD method and all supporting examples. Preserve upstream invocation metadata in source snapshots only. Resolve helper skill loading through the active harness, route review ownership to Atlas Review, and honor Test Seams already approved in the source artifact. The red-green loop, public-interface test discipline and seam coverage notes remain intact.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [
         {
@@ -1129,7 +1129,7 @@
     },
     {
       "id": "source-driven-development",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/addyosmani/agent-skills",
@@ -1142,12 +1142,12 @@
       "sourceSha256": "df38a852658679a67c7a9e4840160570c95094a13a63307e834045ddbf8aa287",
       "license": "sources/upstream/source-driven-development/LICENSE",
       "licenseSha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
-      "method": "skills/atlas-implement/references/source-driven/source-driven.md",
+      "method": "skills/engineering-principles/references/source-driven/source-driven.md",
       "carriedPath": "references/source-driven/source-driven.md",
       "patch": "sources/patches/source-driven-development.patch",
       "adaptation": "Keep the version detection, official-documentation retrieval, documented implementation and citation method. Make retrieval safety self-contained rather than requiring the separate security-and-hardening skill. Place source receipts in execution evidence and handoff, with code comments reserved for enduring non-obvious contracts.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -1499,7 +1499,7 @@
       "adaptation": "Replace fixed Cursor/provider dispatch with available host roles and models, bounded concurrency and sequential fallback. Preserve the exploration/explanation split and complete templates; link the companion Why method locally.",
       "consumers": [
         "atlas-explain",
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [
         {
@@ -1544,7 +1544,7 @@
       "adaptation": "Adapt host dispatch and history/tool availability without inventing access; keep investigation read-only. Standalone Why retains full evidence-category coverage, while explicit caller scope permits bounded Teach investigations with documented exclusions. Preserve epistemics and all source playbooks.",
       "consumers": [
         "atlas-explain",
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [
         {
@@ -1679,7 +1679,7 @@
       "sourceSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
       "license": "sources/upstream/pstack-unslop/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/writing-for-humans/references/unslop/unslop.md",
+      "method": "utility-skills/writing-for-humans/references/unslop/unslop.md",
       "carriedPath": "references/unslop/unslop.md",
       "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
       "consumers": [
@@ -1698,7 +1698,7 @@
     },
     {
       "id": "pstack-architect",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1711,11 +1711,11 @@
       "sourceSha256": "8b06915a5e728c4f78b6a685fec0213b5cb1a89b9476fae680d4cc3f67d4e79e",
       "license": "sources/upstream/pstack-architect/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/architect/architect.md",
+      "method": "skills/engineering-principles/references/architect/architect.md",
       "carriedPath": "references/architect/architect.md",
       "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating. Update bundled reference links for ordinary Markdown filenames. Remove the retired Interrogate handoff.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [
         {
@@ -1723,7 +1723,7 @@
           "relativePath": "references/design-red-flags.md",
           "upstreamPath": "skills/architect/references/design-red-flags.md",
           "sourceSha256": "d0e639e4cc588ec865f930d3a4111faad60987ae36925917e319d7ceca7c69ce",
-          "method": "skills/atlas-implement/references/architect/references/design-red-flags.md",
+          "method": "skills/engineering-principles/references/architect/references/design-red-flags.md",
           "patch": "sources/patches/pstack-architect-design-red-flags.patch"
         },
         {
@@ -1731,7 +1731,7 @@
           "relativePath": "references/rationale-template.md",
           "upstreamPath": "skills/architect/references/rationale-template.md",
           "sourceSha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
-          "method": "skills/atlas-implement/references/architect/references/rationale-template.md",
+          "method": "skills/engineering-principles/references/architect/references/rationale-template.md",
           "patch": "sources/patches/pstack-architect-rationale-template.patch"
         },
         {
@@ -1739,7 +1739,7 @@
           "relativePath": "references/runner-prompt.md",
           "upstreamPath": "skills/architect/references/runner-prompt.md",
           "sourceSha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
-          "method": "skills/atlas-implement/references/architect/references/runner-prompt.md",
+          "method": "skills/engineering-principles/references/architect/references/runner-prompt.md",
           "patch": "sources/patches/pstack-architect-runner-prompt.patch"
         }
       ],
@@ -1754,7 +1754,7 @@
     },
     {
       "id": "pstack-arena",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1767,11 +1767,11 @@
       "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
       "license": "sources/upstream/pstack-arena/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/arena/arena.md",
+      "method": "skills/engineering-principles/references/arena/arena.md",
       "carriedPath": "references/arena/arena.md",
-      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames.",
+      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames. Permit callers to execute only explicitly selected phases with their own brief and evidence contract.",
       "consumers": [
-        "atlas-implement",
+        "engineering-principles",
         "team-up"
       ],
       "supportingFiles": [],
@@ -1788,7 +1788,7 @@
     },
     {
       "id": "pstack-principle-boundary-discipline",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1801,11 +1801,11 @@
       "sourceSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
       "license": "sources/upstream/pstack-principle-boundary-discipline/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
+      "method": "skills/engineering-principles/references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
       "carriedPath": "references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
       "adaptation": "Qualify internal trust by established, preserved invariants rather than unconditional trust; retain boundary validation and pure-core guidance.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -1817,7 +1817,7 @@
     },
     {
       "id": "pstack-principle-encode-lessons-in-structure",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1834,7 +1834,7 @@
       "carriedPath": "references/principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena and Audit Trail evidence reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement",
+        "engineering-principles",
         "tracking-implementation"
       ],
       "supportingFiles": [],
@@ -1844,7 +1844,7 @@
     },
     {
       "id": "pstack-principle-exhaust-the-design-space",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1861,7 +1861,7 @@
       "carriedPath": "references/principles/principle-exhaust-the-design-space/principle-exhaust-the-design-space.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -1872,7 +1872,7 @@
     },
     {
       "id": "pstack-principle-fix-root-causes",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1885,11 +1885,11 @@
       "sourceSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
       "license": "sources/upstream/pstack-principle-fix-root-causes/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
+      "method": "skills/engineering-principles/references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
       "carriedPath": "references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
       "adaptation": "Preserve justified safety guards and enduring invariant comments, and keep repeated-pattern repair within authorized scope; retain reproduction and root-cause investigation.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -1901,7 +1901,7 @@
     },
     {
       "id": "pstack-principle-foundational-thinking",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1918,7 +1918,7 @@
       "carriedPath": "references/principles/principle-foundational-thinking/principle-foundational-thinking.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -1929,7 +1929,7 @@
     },
     {
       "id": "pstack-principle-guard-the-context-window",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1946,7 +1946,7 @@
       "carriedPath": "references/principles/principle-guard-the-context-window/principle-guard-the-context-window.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -1955,7 +1955,7 @@
     },
     {
       "id": "pstack-principle-laziness-protocol",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1972,7 +1972,7 @@
       "carriedPath": "references/principles/principle-laziness-protocol/principle-laziness-protocol.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement",
+        "engineering-principles",
         "team-up"
       ],
       "supportingFiles": [],
@@ -1984,7 +1984,7 @@
     },
     {
       "id": "pstack-principle-make-operations-idempotent",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -2001,7 +2001,7 @@
       "carriedPath": "references/principles/principle-make-operations-idempotent/principle-make-operations-idempotent.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2010,7 +2010,7 @@
     },
     {
       "id": "pstack-principle-minimize-reader-load",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -2023,11 +2023,11 @@
       "sourceSha256": "1ea2b7fef2391cae5844c4efdbd59031f775e8a52d06b7495d707229a200dcca",
       "license": "sources/upstream/pstack-principle-minimize-reader-load/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-minimize-reader-load/principle-minimize-reader-load.md",
+      "method": "skills/engineering-principles/references/principles/principle-minimize-reader-load/principle-minimize-reader-load.md",
       "carriedPath": "references/principles/principle-minimize-reader-load/principle-minimize-reader-load.md",
       "adaptation": "Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection. Update bundled reference links for ordinary Markdown filenames.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2037,7 +2037,7 @@
     },
     {
       "id": "pstack-principle-outcome-oriented-execution",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -2054,7 +2054,7 @@
       "carriedPath": "references/principles/principle-outcome-oriented-execution/principle-outcome-oriented-execution.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2065,7 +2065,7 @@
     },
     {
       "id": "pstack-principle-prove-it-works",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -2078,11 +2078,11 @@
       "sourceSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
       "license": "sources/upstream/pstack-principle-prove-it-works/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-implement/references/principles/principle-prove-it-works/principle-prove-it-works.md",
+      "method": "skills/engineering-principles/references/principles/principle-prove-it-works/principle-prove-it-works.md",
       "carriedPath": "references/principles/principle-prove-it-works/principle-prove-it-works.md",
       "adaptation": "Preserve direct outcome proof while using the agreed artifact/delivery scope; remove the optional external Show Me Your Work audit dependency, whose adoption remains a separate decision.",
       "consumers": [
-        "atlas-implement",
+        "engineering-principles",
         "team-up"
       ],
       "supportingFiles": [],
@@ -2096,7 +2096,7 @@
     },
     {
       "id": "pstack-principle-redesign-from-first-principles",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -2113,7 +2113,7 @@
       "carriedPath": "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement",
+        "engineering-principles",
         "team-up"
       ],
       "supportingFiles": [],
@@ -2125,7 +2125,7 @@
     },
     {
       "id": "pstack-principle-separate-before-serializing-shared-state",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -2142,7 +2142,7 @@
       "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement",
+        "engineering-principles",
         "team-up"
       ],
       "supportingFiles": [],
@@ -2155,7 +2155,7 @@
     },
     {
       "id": "pstack-principle-subtract-before-you-add",
-      "owner": "atlas-implement",
+      "owner": "engineering-principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -2172,7 +2172,7 @@
       "carriedPath": "references/principles/principle-subtract-before-you-add/principle-subtract-before-you-add.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "atlas-implement"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2224,7 +2224,7 @@
       "sourceSha256": "61fe9c424a798ebf36ad94941f87be049cb8827bdf86d21474a0dde37b513c43",
       "license": "sources/upstream/pstack-technical-writing/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/writing-for-humans/references/technical/technical-writing.md",
+      "method": "utility-skills/writing-for-humans/references/technical/technical-writing.md",
       "carriedPath": "references/technical/technical-writing.md",
       "patch": "sources/patches/pstack-technical-writing.patch",
       "adaptation": "Load conditionally for technical documentation under Writing for Humans. Load the shared bundled Unslop catalog without an additional editorial pass; remove PR/commit scope and catalog-maintenance output. Resolve strict Di\u00e1taxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
@@ -4264,6 +4264,129 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-30",
       "rulings": []
+    },
+    {
+      "id": "implement-spec",
+      "owner": "implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+        "path": "skills/engineering/implement-spec/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/implement-spec/source.md",
+      "sourceSha256": "1993a473cec40ac85d081c112cdffdc63ec3267c2e412055ad09e013a2f623d1",
+      "license": "sources/upstream/implement-spec/LICENSE",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "method": "skills/implement/references/all-tickets.md",
+      "carriedPath": "references/all-tickets.md",
+      "patch": "sources/patches/implement-spec.patch",
+      "adaptation": "Bundle dependency-linked ticket coordination as Implement\u2019s All Tickets mode, selected by orchestration needs rather than the presence of a spec document. Support local tickets and configured trackers without Matt setup; use Engineering Principles and Team Up through the host. Preserve fresh contexts, context pointers, isolated ticket worktrees, merger ownership and frontier scheduling. Replace destructive base resets with safe reconciliation, require validated integration before unblocking dependents, and share Implement\u2019s review/PR/CI delivery once at the coordinator. Preserve tracker closure semantics and unresolved work during cleanup. The coordinator resolves missing test seams and consequential trade-offs; early draft PRs are provisional and final readiness follows shared delivery. Cleanup verifies preservation on the integration branch. Mark the draft integration PR ready for review after shared delivery validation and CI succeed, without merging.",
+      "consumers": [
+        "implement"
+      ],
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/implement-spec/support/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/engineering/implement-spec/agents/openai.yaml",
+          "sourceSha256": "fd41efb42c60c96320d6531be7e4bf15cbf5518cd652d57dff27ccffa46988e9"
+        }
+      ],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-05",
+      "rulings": [
+        "implement-spec-coordination"
+      ]
+    },
+    {
+      "id": "pstack-interrogate",
+      "owner": "challenge",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "4161d4ef5051574e825ffe70e2f43a2e49e4b3db",
+        "path": "skills/interrogate/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/pstack-interrogate/source.md",
+      "sourceSha256": "ce9d4c1390657924f58daa8174abdc605d07cd134a736cd86e392a0309a405fb",
+      "license": "sources/upstream/pstack-interrogate/LICENSE",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "method": "utility-skills/challenge/references/interrogate.md",
+      "carriedPath": "references/interrogate.md",
+      "patch": "sources/patches/pstack-interrogate.patch",
+      "adaptation": "Preserve independent adversaries, selected Arena phases and lead verification. Route Arena through Team Up, broaden scope and evidence beyond runnable code, make reviewer count scope-dependent and apply Council synthesis and bounded Doubt discipline.",
+      "consumers": [
+        "challenge"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-09",
+      "rulings": [
+        "challenge-composition"
+      ]
+    },
+    {
+      "id": "tstack-council",
+      "owner": "challenge",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/t3dotgg/tstack",
+        "commit": "1085050f3baed1ac724caa4a8166145fb2ac88af",
+        "path": "skills/council/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/tstack-council/source.md",
+      "sourceSha256": "598fb2c7cdd48ddd9643cb22999e1b624c357aa6579aa0af0e7268ae16a8a164",
+      "license": "sources/upstream/tstack-council/LICENSE",
+      "licenseSha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851",
+      "method": "utility-skills/challenge/references/council.md",
+      "carriedPath": "references/council.md",
+      "patch": "sources/patches/tstack-council.patch",
+      "adaptation": "Retain broad independent feedback and synthesis of disagreements. Replace fixed three-provider roster with scope-based Arena selection; replace scores, automatic repairs, PR publication and unanimous-satisfaction loop with advisory evidence states and bounded reconciliation.",
+      "consumers": [
+        "challenge"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-09",
+      "rulings": [
+        "challenge-composition"
+      ]
+    },
+    {
+      "id": "doubt-driven-development",
+      "owner": "challenge",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "301b02b12bff98e4688e6984af6556802322bbde",
+        "path": "skills/doubt-driven-development/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/doubt-driven-development/source.md",
+      "sourceSha256": "7a7d53d9d2b93ca7af8d882718753dc7887716f143e7937ecbc381f26416bda7",
+      "license": "sources/upstream/doubt-driven-development/LICENSE",
+      "licenseSha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "method": "utility-skills/challenge/references/doubt.md",
+      "carriedPath": "references/doubt.md",
+      "patch": "sources/patches/doubt-driven-development.patch",
+      "adaptation": "Extract fresh reviewer context, reconcile findings against constraints and bound review cycles. Apply only to the selected challenge; preserve the claim when it is the assessment under review. Use Team Up instead of persona/CLI orchestration and mandatory repeated cross-model permission flows.",
+      "consumers": [
+        "challenge"
+      ],
+      "supportingFiles": [],
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-09",
+      "rulings": [
+        "challenge-composition"
+      ]
     }
   ],
   "workflows": [
@@ -4341,31 +4464,32 @@
     },
     {
       "id": "writing-for-humans",
-      "entry": "skills/writing-for-humans/SKILL.md",
-      "agent": "skills/writing-for-humans/agents/openai.yaml",
+      "entry": "utility-skills/writing-for-humans/SKILL.md",
+      "agent": "utility-skills/writing-for-humans/agents/openai.yaml",
       "methods": [
         "pstack-unslop",
         "pstack-technical-writing"
       ],
       "authoredReferences": [
         {
-          "input": "skills/writing-for-humans/references/articles-and-newsletters.md",
+          "input": "utility-skills/writing-for-humans/references/articles-and-newsletters.md",
           "target": "references/articles-and-newsletters.md"
         },
         {
-          "input": "skills/writing-for-humans/references/fresh-reader-pass.md",
+          "input": "utility-skills/writing-for-humans/references/fresh-reader-pass.md",
           "target": "references/fresh-reader-pass.md"
         },
         {
-          "input": "skills/writing-for-humans/references/reader-progression.md",
+          "input": "utility-skills/writing-for-humans/references/reader-progression.md",
           "target": "references/reader-progression.md"
         },
         {
-          "input": "skills/writing-for-humans/references/visual-explanations.md",
+          "input": "utility-skills/writing-for-humans/references/visual-explanations.md",
           "target": "references/visual-explanations.md"
         }
       ],
-      "dependencies": []
+      "dependencies": [],
+      "directory": "utility-skills/writing-for-humans"
     },
     {
       "id": "tracking-implementation",
@@ -4401,7 +4525,7 @@
           "condition": "When available for interactive checkpoint diff review and local implementation-record annotation."
         },
         {
-          "id": "atlas-implement",
+          "id": "engineering-principles",
           "relationship": "behavioral",
           "required": false,
           "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence."
@@ -4460,9 +4584,9 @@
       "dependencies": []
     },
     {
-      "id": "reality-check",
-      "entry": "skills/reality-check/SKILL.md",
-      "agent": "skills/reality-check/agents/openai.yaml",
+      "id": "snap-out-of-it",
+      "entry": "utility-skills/snap-out-of-it/SKILL.md",
+      "agent": "utility-skills/snap-out-of-it/agents/openai.yaml",
       "methods": [],
       "authoredReferences": [
         {
@@ -4474,7 +4598,8 @@
           "target": "references/model-preferences.md"
         }
       ],
-      "dependencies": []
+      "dependencies": [],
+      "directory": "utility-skills/snap-out-of-it"
     },
     {
       "id": "atlas-setup",
@@ -4567,9 +4692,9 @@
       ]
     },
     {
-      "id": "atlas-implement",
-      "entry": "skills/atlas-implement/SKILL.md",
-      "agent": "skills/atlas-implement/agents/openai.yaml",
+      "id": "engineering-principles",
+      "entry": "skills/engineering-principles/SKILL.md",
+      "agent": "skills/engineering-principles/agents/openai.yaml",
       "methods": [
         "tdd",
         "source-driven-development",
@@ -4614,6 +4739,34 @@
         {
           "input": "skills/team-up/references/model-preferences.md",
           "target": "references/model-preferences.md"
+        }
+      ]
+    },
+    {
+      "id": "implement",
+      "entry": "skills/implement/SKILL.md",
+      "agent": "skills/implement/agents/openai.yaml",
+      "methods": [
+        "implement-spec"
+      ],
+      "dependencies": [
+        {
+          "id": "engineering-principles",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For implementation methods, including TDD at agreed test seams and source-backed or design-first work when applicable."
+        },
+        {
+          "id": "atlas-review",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For the complete change\u2019s final review unless the user explicitly skips it; reuse adequate same-checkpoint evidence."
+        },
+        {
+          "id": "team-up",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "When All Tickets mode coordinates fresh ticket implementers, exploration or merger subagents."
         }
       ]
     },
@@ -4710,7 +4863,7 @@
           "condition": "When a plan or specification needs executable slices."
         },
         {
-          "id": "atlas-implement",
+          "id": "engineering-principles",
           "relationship": "behavioral",
           "required": false,
           "condition": "When architecture, test-first behavior or version-sensitive implementation needs a selected method."
@@ -4800,10 +4953,22 @@
           "condition": "When authoring agent instructions, skills or agent-facing policies."
         },
         {
-          "id": "reality-check",
+          "id": "snap-out-of-it",
           "relationship": "behavioral",
           "required": false,
           "condition": "When the user requests a fresh second opinion on overthinking, overengineering or the simplest sufficient approach."
+        },
+        {
+          "id": "implement",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When the user selects end-to-end task or All Tickets delivery through a reviewed PR with CI readiness."
+        },
+        {
+          "id": "challenge",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When the user requests an independent challenge of an assessment, diagnosis, estimate or proposal; install this optional utility when selected."
         }
       ]
     },
@@ -4857,6 +5022,25 @@
         "diagnosing-bugs"
       ],
       "dependencies": []
+    },
+    {
+      "id": "challenge",
+      "directory": "utility-skills/challenge",
+      "entry": "utility-skills/challenge/SKILL.md",
+      "agent": "utility-skills/challenge/agents/openai.yaml",
+      "methods": [
+        "pstack-interrogate",
+        "tstack-council",
+        "doubt-driven-development"
+      ],
+      "dependencies": [
+        {
+          "id": "team-up",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For Arena Phase A steps 3\u20134, Phase B and Phase F, using Challenge\u2019s review brief, scope-based reviewer count and evidence rules."
+        }
+      ]
     }
   ],
   "rulings": [
@@ -4983,8 +5167,8 @@
     },
     {
       "id": "implement-tdd-seam-and-review",
-      "owner": "atlas-implement",
-      "document": "skills/atlas-implement/references/tdd/tdd.md",
+      "owner": "engineering-principles",
+      "document": "skills/engineering-principles/references/tdd/tdd.md",
       "section": "Seams: where tests go",
       "sources": [
         "tdd"
@@ -4993,8 +5177,8 @@
     },
     {
       "id": "implement-source-receipts",
-      "owner": "atlas-implement",
-      "document": "skills/atlas-implement/references/source-driven/source-driven.md",
+      "owner": "engineering-principles",
+      "document": "skills/engineering-principles/references/source-driven/source-driven.md",
       "section": "Step 4: Cite Your Sources",
       "sources": [
         "source-driven-development"
@@ -5121,8 +5305,8 @@
     },
     {
       "id": "implement-architect-phases",
-      "owner": "atlas-implement",
-      "document": "skills/atlas-implement/references/architect/integration.md",
+      "owner": "engineering-principles",
+      "document": "skills/engineering-principles/references/architect/integration.md",
       "section": "Sketches and TDD",
       "sources": [
         "pstack-architect",
@@ -5136,8 +5320,8 @@
     },
     {
       "id": "implement-candidate-ownership",
-      "owner": "atlas-implement",
-      "document": "skills/atlas-implement/references/architect/integration.md",
+      "owner": "engineering-principles",
+      "document": "skills/engineering-principles/references/architect/integration.md",
       "section": "Candidate comparison and evidence",
       "sources": [
         "pstack-architect",
@@ -5151,8 +5335,8 @@
     },
     {
       "id": "implement-principle-scope",
-      "owner": "atlas-implement",
-      "document": "skills/atlas-implement/references/architect/integration.md",
+      "owner": "engineering-principles",
+      "document": "skills/engineering-principles/references/architect/integration.md",
       "section": "Candidate comparison and evidence",
       "sources": [
         "pstack-architect",
@@ -5201,7 +5385,7 @@
     {
       "id": "human-writing-technical-contract",
       "owner": "writing-for-humans",
-      "document": "skills/writing-for-humans/references/technical/technical-writing.md",
+      "document": "utility-skills/writing-for-humans/references/technical/technical-writing.md",
       "section": "Technical writing",
       "sources": [
         "pstack-technical-writing",
@@ -5212,7 +5396,7 @@
     {
       "id": "human-writing-editorial-contract",
       "owner": "writing-for-humans",
-      "document": "skills/writing-for-humans/references/unslop/unslop.md",
+      "document": "utility-skills/writing-for-humans/references/unslop/unslop.md",
       "section": "Unslop",
       "sources": [
         "pstack-unslop"
@@ -5299,6 +5483,27 @@
         "state-machine"
       ],
       "decision": "States is an explicitly requested workbench, not automatic setup for ordinary refinement or a review. Preserve the real component and its production styling; isolate fixture reads, refreshes and mutations and use separate inspection chrome. Setup hands over before visual edits; cleanup requires the user\u2019s request."
+    },
+    {
+      "id": "implement-spec-coordination",
+      "owner": "implement",
+      "document": "skills/implement/references/all-tickets.md",
+      "section": "Coordinate the graph",
+      "sources": [
+        "implement-spec"
+      ],
+      "decision": "All Tickets owns dependency scheduling, fresh isolated workers and serialized integration; Implement owns the shared final review, PR and CI cycle. Engineering Principles supplies implementation methods. Local tickets need no external tracker setup. Workers start from the integration tip without destructive resets; validated integration advances the frontier. Tracker closure follows its actual mechanism, and cleanup preserves unresolved work. The coordinator owns user decisions, including missing test seams. Early draft PRs expose progress; final readiness follows the shared delivery workflow."
+    },
+    {
+      "id": "challenge-composition",
+      "owner": "challenge",
+      "document": "utility-skills/challenge/SKILL.md",
+      "sources": [
+        "pstack-interrogate",
+        "tstack-council",
+        "doubt-driven-development"
+      ],
+      "decision": "Interrogate owns independent challenge and verification; Council broadens subjects and retains supported objections and unknowns; Doubt discipline owns context extraction, reconciliation and a three-cycle stop bound. Team Up supplies selected Arena phases and available model selection. Reviewer count follows scope. Review is advisory, not authorization for fixes or publication."
     }
   ]
 }

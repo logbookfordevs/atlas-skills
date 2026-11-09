@@ -2,6 +2,7 @@ import content from '../content.json';
 import stack from '../stack.json';
 import upstream from '../upstream.json';
 import site from '../site.json';
+import redirects from '../skill-redirects.json';
 
 export interface Skill {
   id: string;
@@ -14,6 +15,7 @@ export interface Skill {
   note: string;
   origin?: string;
   optional?: boolean;
+  sourceDirectory?: string;
 }
 
 export interface UpstreamCredit {
@@ -24,6 +26,7 @@ export interface UpstreamCredit {
 export const skills: Skill[] = content;
 export const skillGroups = [...new Set(skills.map((skill) => skill.group))];
 export const upstreamCredits: Record<string, UpstreamCredit> = upstream;
+export const skillRedirects: Record<string, string> = redirects;
 export { site, stack };
 export const repository = 'https://github.com/logbookfordevs/atlas-skills';
 export const skillPath = (id: string) => `/skills/${id}/`;

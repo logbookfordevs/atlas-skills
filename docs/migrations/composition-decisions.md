@@ -107,3 +107,13 @@ The unchanged Matt Teach, Diagnosing Bugs and Addy Osmani Code Simplification me
 ## Interrogate retirement
 
 Interrogate/Adversarial is retired from Atlas Review and Implement’s Architect workflow. Its active handoffs, bundled references, source registration and exclusive source inputs are removed. Existing Standards & Spec, Impact and Arena workflows retain their scopes. No replacement dialogue protocol is introduced; that decision remains open.
+
+## Implementation methods and delivery
+
+`atlas-implement` is renamed to `engineering-principles`; Architect, TDD and Source-Driven remain its implementation methods with their source records intact. The Core adds the manually invoked `implement`, imported from Leonardo’s supplied authored workflow, for review/PR/CI delivery. Matt Pocock’s Implement Spec is pinned and patched into its All Tickets mode rather than selected as a separate external skill. Ticket-graph coordination retains fresh workers, isolated worktrees, dependency-frontier scheduling and one integration branch; the coordinator runs delivery once for the complete result. Local tickets need no tracker bootstrap, worktree reconciliation preserves existing work, and closure follows the actual tracker mechanism. Existing personal installations are not changed by this repository migration. The old website reference URL redirects to Engineering Principles.
+
+## Challenge and optional utilities
+
+Challenge composes pinned, patched Pstack Interrogate, tstack Council and Addy Osmani Doubt-Driven Development. Interrogate owns independent attempts to disprove the assessment and lead verification; Council extends the subjects and preserves evidence-backed objections and unknowns; Doubt supplies context extraction, reconciliation and bounded review. Team Up’s existing adapted Arena supplies Phase A steps 3–4, Phase B and Phase F, under Challenge’s brief and evidence contract. Reviewer count follows scope rather than a fixed three-provider council. Product changes and publication remain outside review authority.
+
+Reality Check becomes Snap Out of It with its advisory reviewer brief preserved. Snap Out of It and Writing for Humans move into `utility-skills/` with Challenge, outside the shared Core selection. The package builder and reviewed adoption now support registered utility directories, preserving receipts and update coverage rather than treating directory grouping as source retirement. Existing personal installations and retained legacy baselines are unchanged.

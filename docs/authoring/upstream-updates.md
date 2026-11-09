@@ -37,4 +37,4 @@ This first implementation creates review issues, not automatic update PRs. The p
 
 The watcher maintains carried sources; independent skills in the recommended stack follow their original installation sources.
 
-Preparation stages `skills/`, `sources/` and `stacks/`, preserves Atlas-owned files and refuses upstream additions that conflict with them.
+Preparation stages `skills/`, `creative-skills/`, `utility-skills/`, `sources/` and `stacks/`, preserves Atlas-owned files and refuses upstream additions that conflict with them.

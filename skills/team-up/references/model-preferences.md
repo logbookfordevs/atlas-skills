@@ -1,38 +1,26 @@
 # Model preferences
 
-Use these default model-and-effort preferences for configurable teammates. After selecting a family through the [selection policy](selection.md), use its column even when both families are available. Use the mixed column when no family is favored. The families describe models, not their hosting or orchestration tool.
-
-## Selection preferences
-
-These defaults apply across Delegation, Arena and Swarm; they are not a model-capability ranking.
-
-**Cross-family review:** for reviews, audits and second opinions involving teammates, prefer including a suitable model from a different family than the leading agent, for example GPT in a Claude-led session. Use available suitable models and disclose when cross-family participation is unavailable. This preference does not increase the team size by itself.
-
-**Subject preferences:**
-
-| Subject | Meaning | Preferred family |
-| --- | --- | --- |
-| Correctness and robustness | Security, regressions, resilience and failure handling | GPT |
-| Experience design | UI, UX, visual design, animation and interaction | Claude |
-| Architecture | System structure, major technical planning and consequential design choices | Claude |
-
-Use these preferences for specialist evaluation and design/planning assignments. Leave ordinary implementation, research, debugging, documentation and mechanical work to normal selection judgment. Evaluation includes reviews, audits and second opinions; weigh independence from the leading agent's family alongside the subject preference. Prefer a suitable available alternative when the favored family is unavailable, and briefly explain departures. Explicit model requests and fixed custom-agent settings retain precedence.
+- **Family fit:** GPT for correctness and robustness; Claude for experience design and architecture. Apply subject preferences to specialist evaluation and design/planning; ordinary execution uses task fit.
+- **Independence:** for reviews, audits and second opinions, prefer a suitable reviewer from another family than the lead. This does not add a seat by itself.
+- **Cost frontier:** within the chosen family, prefer the least expensive suitable pair from the table; use Mixed when no family is favored. These are model families, independent of harness.
+- **Other options:** for an unlisted family or an empty supported ladder, assess the lowest-cost reliable available alternative.
 
 ## Model and effort ladders
 
-Each row is a distinct pair. Read the selected column from top to bottom, skipping unavailable models and unsupported effort levels. An empty cell ends that column.
+Ordered by coding-benchmark cost per task along the cost/intelligence Pareto frontier, limited to low, medium and high effort. Pick a suitable starting point; the rows are choices, not mandatory review rounds.
 
 | Order | GPT family | Claude family | Mixed |
 | --- | --- | --- | --- |
 | 1 | GPT-6 Luna / low | Haiku 5.5 / low | GPT-6 Luna / low |
 | 2 | GPT-6 Luna / medium | Haiku 5.5 / medium | GPT-6 Luna / medium |
-| 3 | GPT-6 Luna / high | Haiku 5.5 / high | GPT-6 Luna / high |
-| 4 | GPT-6.1 Sol / low | Sonnet 5.5 / medium | Haiku 5.5 / medium |
-| 5 | GPT-6.1 Sol / medium | Opus 5.5 / low | Haiku 5.5 / high |
-| 6 | GPT-6.1 Sol / high | Sonnet 5.5 / high | GPT-6.1 Sol / low |
-| 7 | | Opus 5.5 / medium | GPT-6.1 Sol / medium |
-| 8 | | Opus 5.5 / high | GPT-6.1 Sol / high |
-| 9 | | | Opus 5.5 / medium |
-| 10 | | | Opus 5.6 / high |
+| 3 | GPT-6 Luna / high | Haiku 5.5 / high | Haiku 5.5 / low |
+| 4 | GPT-6.1 Terra / low | Sonnet 5.5 / high | GPT-6 Luna / high |
+| 5 | GPT-6.1 Terra / medium | Opus 5.5 / medium | GPT-6.1 Terra / low |
+| 6 | GPT-6.1 Terra / high | Opus 5.5 / high | Haiku 5.5 / high |
+| 7 | GPT-6.1 Sol / high |  | GPT-6.1 Terra / medium |
+| 8 | GPT-6 Astra / high |  | GPT-6.1 Terra / high |
+| 9 |  |  | GPT-6.1 Sol / high |
+| 10 |  |  | Opus 5.5 / high |
+| 11 |  |  | GPT-6 Astra / high |
 
-Treat the orders as selection heuristics. Effort labels are provider-specific controls; the table supplies neither equivalent reasoning budgets nor measured cost, latency or task-success guarantees. Prefer task-specific results when they conflict with a default ordering.
+This is the Code only cost/intelligence frontier; non-reasoning, max and xhigh are excluded. The benchmark is a selection heuristic, not a task-success guarantee. Claude Sonnet and Opus variants were benchmarked “with fallback”; do not assume the host reproduces that configuration or equate unsupported effort labels.

@@ -229,7 +229,7 @@
     },
     {
       "id": "better-colors",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
@@ -311,7 +311,7 @@
     },
     {
       "id": "better-typography",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
@@ -391,7 +391,7 @@
     },
     {
       "id": "better-layout",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
@@ -637,7 +637,7 @@
     },
     {
       "id": "animate",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
@@ -674,7 +674,7 @@
     },
     {
       "id": "apple-design",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",

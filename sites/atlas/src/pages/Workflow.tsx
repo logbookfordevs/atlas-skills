@@ -72,13 +72,13 @@ export function Workflow() {
         <li id="stage-build">
           <h3>Build one ticket in a fresh chat</h3>
           <p>Give the new chat the ticket and spec paths. Ask for tracking and QA explicitly so both outcomes are part of the assignment. Replace the paths below with the ones your agent created.</p>
-          <CopyCommand variant="prompt" label="implementation prompt" command="Implement ticket 1 from docs/tickets/saved-filters/ and its linked spec. Work test-first and track the implementation. When it is ready, do a proper QA with atlas-verify and give me a report." />
+          <CopyCommand variant="prompt" label="implementation prompt" command="/implement Implement ticket 1 from docs/tickets/saved-filters/ and its linked spec. Work test-first and track the implementation. When it is ready, do a proper QA with atlas-verify, give me a report, and leave the PR ready for me to merge." />
           <details className="workflow-mode-example">
             <summary>With Atlas Mode</summary>
-            <CopyCommand variant="prompt" label="Atlas Mode implementation prompt" command="/atlas-mode Implement ticket 1 from docs/tickets/saved-filters/ and its linked spec. Work test-first and track the implementation. When it is ready, do a proper QA and give me a report." />
+            <CopyCommand variant="prompt" label="Atlas Mode implementation prompt" command="/atlas-mode Use implement for ticket 1 from docs/tickets/saved-filters/ and its linked spec. Work test-first and track the implementation. When it is ready, do a proper QA, give me a report, and leave the PR ready for me to merge." />
           </details>
-          <p><AtlasLink to={skillPath('atlas-implement')}>Atlas Implement</AtlasLink> supplies the test-first method. <AtlasLink to={skillPath('tracking-implementation')}>Tracking Implementation</AtlasLink> maintains the record and opens it when the host supports that. <AtlasLink to={skillPath('atlas-verify')}>Atlas Verify</AtlasLink> supplies the requested QA and report.</p>
-          <p className="workflow-result"><strong>You leave with:</strong> working code, a tracking record, QA evidence and clearly identified checks that could not run.</p>
+          <p><AtlasLink to={skillPath('engineering-principles')}>Engineering Principles</AtlasLink> offers Architect, TDD and Source-Driven implementation methods. <AtlasLink to={skillPath('implement')}>Implement</AtlasLink> coordinates delivery through review and CI to a PR ready for you to merge. <AtlasLink to={skillPath('tracking-implementation')}>Tracking Implementation</AtlasLink> maintains the explicitly requested record and opens it when the host supports that. <AtlasLink to={skillPath('atlas-verify')}>Atlas Verify</AtlasLink> supplies the requested QA and report.</p>
+          <p className="workflow-result"><strong>You leave with:</strong> working code, a tracking record, QA evidence, a PR ready to merge and clearly identified checks that could not run.</p>
         </li>
         <li id="stage-accept">
           <h3>Review the checkpoint yourself</h3>
