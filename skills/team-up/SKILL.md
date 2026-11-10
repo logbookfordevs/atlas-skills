@@ -13,6 +13,6 @@ Default to Delegation for ordinary assignments and role/model selection. Select 
 | Arena | Compare complete candidates against a rubric, select a base, graft useful strengths and verify the synthesized artifact. | [Arena](references/arena/arena.md) |
 | Swarm | Partition coverage, race the same brief or mix both, then return one evidenced report with gaps and a declared race rule. | [Swarm](references/swarm/swarm.md) |
 
-Requests for `arena` or `swarm` select that bundled method. A caller requesting only role/model selection uses the selection policy and returns to its existing workflow; policy use does not launch another mode. The selected task determines permitted writes, evidence and delivery scope.
+Requests for `arena` or `swarm` select that bundled method. A caller requesting only role/model selection uses the selection policy and returns to its existing workflow; policy use does not launch another mode. A caller selecting specific Arena phases uses the bundled Arena reference for only those phases under its own task contract. The selected task determines permitted writes, evidence and delivery scope.
 
 A `council` request selects three independently run model families when available, for example GPT, Claude and Gemini. Use the selection policy for assignments and disclose any shortfall. Council specifies the team composition; the requested outcome determines the method.

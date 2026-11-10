@@ -11,7 +11,7 @@ export function SkillReference() {
   const isTransitioning = useViewTransitionState(skillPath(id));
   const skill = skills.find((entry) => entry.id === id);
   if (!skill) return <NotFound />;
-  const sourceDirectory = skill.optional ? 'creative-skills' : 'skills';
+  const sourceDirectory = skill.sourceDirectory ?? (skill.optional ? 'creative-skills' : 'skills');
 
   return <article className="article" key={skill.id}>
     <header className="article-header">

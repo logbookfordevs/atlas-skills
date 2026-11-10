@@ -295,7 +295,7 @@ test('Atlas Verify validates and renders from a portable package without the sou
 test('workflow packages build identically without the legacy archive', t => {
   const root = mkdtempSync(join(tmpdir(), 'atlas-without-legacy-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
-  for (const directory of ['sources', 'skills', 'creative-skills']) {
+  for (const directory of ['sources', 'skills', 'creative-skills', 'utility-skills']) {
     cpSync(join(repositoryRoot, directory), join(root, directory), { recursive: true });
   }
   mkdirSync(join(root, 'stacks'), { recursive: true });
@@ -305,7 +305,7 @@ test('workflow packages build identically without the legacy archive', t => {
   assert.deepEqual(actual, expected);
   for (const [, files] of actual) {
     const receipt = JSON.parse(files.get('SOURCE-MANIFEST.json'));
-    assert.ok(receipt.authoredInputs.every(input => input.startsWith('skills/') || input.startsWith('creative-skills/')));
+    assert.ok(receipt.authoredInputs.every(input => ['skills/', 'creative-skills/', 'utility-skills/'].some(prefix => input.startsWith(prefix))));
     assert.ok(receipt.authoredReferences.every(reference => reference.classification === 'atlas-authored'));
   }
 });
@@ -418,20 +418,29 @@ test('supporting-only patches replay, carry receipts and reject unrecorded edits
 });
 
 
-test('optional creative packages build in their registered directory and reject escaping destinations', t => {
-  const root = fixture(t);
-  const manifestPath = join(root, 'sources/composition.json');
-  const manifest = JSON.parse(readFileSync(manifestPath));
-  manifest.workflows[0].directory = 'creative-skills/logbook-fixture';
-  writeFileSync(manifestPath, JSON.stringify(manifest));
-  buildSkills(root);
-  assert.ok(existsSync(join(root, 'creative-skills/logbook-fixture/references/fixture-source.md')));
-  assert.ok(!existsSync(join(root, 'skills/logbook-fixture/SOURCE-MANIFEST.json')));
-  buildSkills(root, { check: true });
-  manifest.workflows[0].directory = '../escaped';
-  writeFileSync(manifestPath, JSON.stringify(manifest));
-  assert.throws(() => buildSkills(root), /Invalid package directory/);
-});
+for (const base of ['creative-skills', 'utility-skills']) {
+  test(`optional ${base} packages build in their registered directory and reject unsafe destinations`, t => {
+    const root = fixture(t);
+    const manifestPath = join(root, 'sources/composition.json');
+    const manifest = JSON.parse(readFileSync(manifestPath));
+    const directory = `${base}/logbook-fixture`;
+    manifest.workflows[0].directory = directory;
+    writeFileSync(manifestPath, JSON.stringify(manifest));
+    mkdirSync(join(root, directory, 'references'), { recursive: true });
+    writeFileSync(join(root, directory, 'references/owned.md'), 'local guidance\n');
+    buildSkills(root);
+    assert.equal(readFileSync(join(root, directory, 'references/fixture-source.md'), 'utf8'), 'fixture source\n');
+    assert.equal(readFileSync(join(root, directory, 'references/owned.md'), 'utf8'), 'local guidance\n');
+    assert.ok(!existsSync(join(root, 'skills/logbook-fixture/SOURCE-MANIFEST.json')));
+    buildSkills(root, { check: true });
+    for (const unsafe of ['../escaped', `${base}/different-id`, `${base}/../logbook-fixture`, `${base}/logbook-fixture/nested`]) {
+      manifest.workflows[0].directory = unsafe;
+      writeFileSync(manifestPath, JSON.stringify(manifest));
+      assert.throws(() => buildSkills(root), /Invalid package directory/, unsafe);
+    }
+  });
+}
+
 
 test('download sources retain archive identity and enforce snapshot integrity without a Git commit', t => {
   const root = fixture(t);

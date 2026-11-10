@@ -14,9 +14,9 @@
       "skills": [
         "./skills/animated-driven-frontend",
         "./skills/atlas-craft",
+        "./skills/atlas-debug",
         "./skills/atlas-explain",
         "./skills/atlas-grill",
-        "./skills/atlas-implement",
         "./skills/atlas-mode",
         "./skills/atlas-motion",
         "./skills/atlas-retro",
@@ -24,13 +24,14 @@
         "./skills/atlas-setup",
         "./skills/atlas-to-spec",
         "./skills/atlas-to-tickets",
+        "./skills/atlas-verifiers",
         "./skills/atlas-verify",
         "./skills/atlas-wayfinder",
+        "./skills/engineering-principles",
         "./skills/html-ui",
-        "./skills/reality-check",
+        "./skills/implement",
         "./skills/team-up",
-        "./skills/tracking-implementation",
-        "./skills/writing-for-humans"
+        "./skills/tracking-implementation"
       ]
     },
     {
@@ -49,7 +50,10 @@
       "description": "Optional standalone utilities for use beyond Atlas\u2019s core workflows.",
       "strict": false,
       "skills": [
-        "./utility-skills/skill-source-composition"
+        "./utility-skills/challenge",
+        "./utility-skills/skill-source-composition",
+        "./utility-skills/snap-out-of-it",
+        "./utility-skills/writing-for-humans"
       ]
     }
   ]

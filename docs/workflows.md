@@ -8,7 +8,7 @@ Choose the next method from what remains unresolved. A small change can go strai
 
 ## Skills and bundled methods
 
-Atlas packages group related methods while preserving their source records and concrete ownership rules. For example, Atlas Implement offers Architect, TDD and Source-Driven Development; choosing TDD does not require running Architect too.
+Atlas packages group related methods while preserving their source records and concrete ownership rules. Engineering Principles offers Architect, TDD and Source-Driven Development; choosing TDD does not require running Architect too. Implement owns end-to-end delivery, using Task for one unit of work or All Tickets for dependency-linked tickets.
 
 Required source methods and supporting files ship inside the consuming package. Some independent companions, such as Research and Prototype for Wayfinder ticket types, still require their own installation. Atlas Setup checks declared dependencies when requested. The [composition manifest](../sources/composition.json) records package contents; the [stack manifest](../stacks/atlas.json) selects packages to install. Neither is a runtime execution schedule.
 
@@ -23,7 +23,8 @@ Suppose users need to save a dashboard filter, return later and restore it, but 
 | Behavior and trade-offs | Atlas Grill; With Docs when documentation is requested | Decisions and constraints to build against |
 | A settled conversation needs a contract | Atlas To Spec | A local specification with behavior, exclusions and test seams |
 | The work needs executable slices | Atlas To Tickets | Vertical implementation tickets with explicit blockers |
-| Implementation shape, tests or version-specific APIs | Atlas Implement: Architect, TDD or Source-Driven as applicable | Working code with the selected method's evidence |
+| Implementation shape, tests or version-specific APIs | Engineering Principles: Architect, TDD or Source-Driven as applicable | Working code with the selected method's evidence |
+| Agreed work should reach a reviewed PR with CI readiness | Implement: Task or All Tickets | One task PR or a selected ticket graph integrated into one PR, ready for the user to merge |
 | Progress must survive handoffs | Tracking Implementation, when requested | One durable Implementation Record alongside the executor |
 | An interface needs realistic edge-case data | Atlas Verify: UI Stress | An isolated data-switching harness and findings, with fixes handed to implementation |
 | Animation drops frames | Atlas Motion: Performance | A cause-based diagnosis with code evidence and available profiling results |
@@ -37,7 +38,7 @@ These are choices, not required phases. Once scope is settled, a request might b
 
 > Build saved filters test-first. Track the implementation in a local HTML record, then run a verification of the completed behavior in my logged-in browser session.
 
-Tracking records execution state; Atlas Implement supplies selected implementation methods. Tracking's gate runs Standards & Spec review plus applicable specialist reviews, each with a concrete question and scope. Existing same-checkpoint evidence can be reused. At acceptance, Tracking launches Plannotator's interactive diff review when available, then offers annotation of the local implementation record. For delegated work, the parent able to host the interactive session owns its launch, records feedback and delegates requested implementation changes back. Final checkpoint acceptance remains the user's decision. Tracking does not automatically select Atlas Verify.
+Tracking records execution state; Engineering Principles supplies selected implementation methods, and Implement owns review/PR/CI delivery when requested. Tracking hands the checkpoint and evidence to Atlas Review, which selects its methods. Existing same-checkpoint evidence can be reused. At acceptance, Tracking launches Plannotator's interactive diff review when available, then offers annotation of the local implementation record. For delegated work, the parent able to host the interactive session owns its launch, records feedback and delegates requested implementation changes back. Final checkpoint acceptance remains the user's decision. Tracking does not automatically select Atlas Verify.
 
 For a tiny edit, ordinary project validation may be enough. A local test run, a review, a commit, a push and user acceptance are distinct outcomes.
 
@@ -68,7 +69,6 @@ Use Animated-Driven Frontend for synchronized progress, scroll sequences, render
 | Something is broken, failing or unexpectedly slow | Atlas Debug | Follow the reproduction-first diagnosis loop and verify fixes against the original symptom. On request, explain expected versus actual behavior with Pele diagrams. |
 | You need to understand code, an interface or recent work | Atlas Explain: How, Why, Teach, Interface or Catch Up | Describe what you need to understand; the agent selects and combines methods. Teach guides learning, Interface explains a live page or screenshot, and Catch Up covers recent chat work and pending decisions. |
 | A shared contract could affect other consumers | Atlas Review: Impact | Trace downstream assumptions and preserve evidence for the risks. |
-| A consequential assumption needs challenge | Atlas Review: Adversarial | Independent review supplies evidence for judgment, not automatic authority. |
 | Work benefits from teammates | Team Up: Delegation, Arena or Swarm | Choose the smallest capable team; use Arena for competing candidates, Swarm for structured coverage or races. |
 | You want a fresh opinion on possible overengineering | Reality Check (manual) | One reviewer from another model family questions the framing and recommends the simplest sufficient approach; advice stays advisory. |
 | A session exposes recurring workflow friction | Atlas Retro: Diagnose | Propose improvements. Enforce requires authorization to implement prevention. |
@@ -95,7 +95,7 @@ The previous composition, skills/profile and cinematic maps described retired wo
 
 ## Choose a figure treatment
 
-The optional `atlas-figures` skill presents Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW and Colorfigures. It recommends fits from the subject and intended medium; you select before construction. Ask, for example, “Help me choose a treatment to explain our cache for a blog post.” If you already chose, say “Make this coffee machine in Colorfigures.” Figure methods are bundled; Teardown reuses installed Atlas Craft for its design-domain guidance. See [Creative skills](../creative-skills/README.md) for installation and source credits.
+The optional `atlas-figures` skill presents Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW, Colorfigures and Minicharts. It recommends fits from the subject and intended medium; you select before construction. Ask, for example, “Help me choose a treatment to explain our cache for a blog post.” If you already chose, say “Make this coffee machine in Colorfigures.” For illustrated data, ask “Use Figures with Minicharts to draw these café expenses as a pie of coins.” Figure methods are bundled; Teardown reuses installed Atlas Craft for its design-domain guidance. See [Creative skills](../creative-skills/README.md) for installation and source credits.
 
 ## Companion tools and agent instructions
 
@@ -104,3 +104,9 @@ The website’s [Recommended Tools](https://atlas.logbookfordevs.com/tools/) pag
 ## Explore the workflow visually
 
 The website’s [interactive workflow figure](https://atlas.logbookfordevs.com/workflow/#explore-workflow) uses Anatomy’s isometric renderer for a five-station document press. Select a stage to inspect its inputs, outputs and request, then follow the link to the detailed step. Acceptance can return to implementation. This is an explanatory model, not a live implementation record. The renderer’s pinned source and MIT license are retained beside the website component.
+
+## Challenge an assessment
+
+Use the optional `challenge` utility before acting on a diagnosis, estimate, explanation or proposal: “We think the cause is known and this is a one-day fix. Challenge that assessment.” It composes Interrogate’s independent adversaries and proof attempts, Council’s broad feedback and disagreement synthesis, and Doubt-Driven Development’s context extraction and bounded reconciliation. Team Up supplies selected Arena phases. Reproduced failures, supported objections and consequential unknowns remain distinct; the outcome is advisory.
+
+Use `snap-out-of-it` for a different need: “Am I overthinking this? Give me the simplest sufficient approach.” It keeps the candid, playful second opinion previously named Reality Check. Both utilities, and Writing for Humans, install separately from Core. See [Utility skills](../utility-skills/README.md).

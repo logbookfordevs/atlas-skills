@@ -16,12 +16,13 @@ const authors = {
   'https://github.com/addyosmani/agent-skills': 'Addy Osmani',
   'https://github.com/backnotprop/product-engineering': 'Product Engineering',
   'https://github.com/backnotprop/pstack': 'Lauren Tan / Pstack mirror',
+  'https://github.com/t3dotgg/tstack': 'Theo Browne',
 };
 const titles = {
   "diagnosing-bugs": "Diagnosing Bugs",
   'hairline-create': 'Hairline Create', 'hairline-adopt': 'Hairline Adopt',
   anatomy: 'Anatomy', 'engraved-figures': 'Engraved Figures', teardown: 'Teardown',
-  'iso-glow': 'ISO-GLOW', colorfigures: 'Colorfigures',
+  'iso-glow': 'ISO-GLOW', colorfigures: 'Colorfigures', minicharts: 'Minicharts',
   "explain-interface": "Explain Interface",
   "state-machine": "State Machine",
   "mobile-native": "Mobile Native",
@@ -29,6 +30,7 @@ const titles = {
   "break-ui": "Break UI",
   "pe-verify": "PE Verify",
   "tdd": "TDD",
+  "implement-spec": "Implement Spec",
   "source-driven-development": "Source-Driven Development",
   "grilling": "Grilling",
   "domain-modeling": "Domain Modeling",
@@ -48,6 +50,9 @@ const titles = {
   "pstack-teach": "Teach",
   "pstack-architect": "Architect",
   "pstack-arena": "Arena",
+  "pstack-interrogate": "Interrogate",
+  "tstack-council": "Council",
+  "doubt-driven-development": "Doubt-Driven Development",
   "pstack-principle-boundary-discipline": "Boundary Discipline",
   "pstack-principle-exhaust-the-design-space": "Exhaust The Design Space",
   "pstack-principle-fix-root-causes": "Fix Root Causes",
@@ -83,7 +88,7 @@ const directories = new Map(composition.workflows.map(workflow => [workflow.id, 
 for (const skill of skills) {
   const receipt = JSON.parse(await readFile(resolve(atlasRoot, directories.get(skill.id), 'SOURCE-MANIFEST.json'), 'utf8'));
   const references = receipt.sources.map((source) => {
-    if (source.upstream.type === 'download') return { id: source.id, title: titles[source.id], author: 'April Zhu (based on Tolga Cohce’s iso-figure)', url: source.upstream.page, classification: source.classification };
+    if (source.upstream.type === 'download') return { id: source.id, title: titles[source.id], author: source.id === 'minicharts' ? 'April Zhu (exploded-view conventions adapted from Cathryn Lavery)' : 'April Zhu (based on Tolga Cohce’s iso-figure)', url: source.upstream.page, classification: source.classification };
     const { repository, commit, path } = source.upstream;
     const author = authors[repository];
     const title = titles[source.id];

@@ -7,7 +7,6 @@
     "atlas-explain",
     "atlas-figures",
     "atlas-grill",
-    "atlas-implement",
     "atlas-mode",
     "atlas-motion",
     "atlas-retro",
@@ -17,13 +16,215 @@
     "atlas-verifiers",
     "atlas-verify",
     "atlas-wayfinder",
+    "challenge",
+    "engineering-principles",
     "html-ui",
-    "reality-check",
+    "implement",
+    "snap-out-of-it",
     "team-up",
     "tracking-implementation",
     "writing-for-humans"
   ],
   "dependencies": [
+    {
+      "id": "animated-driven-frontend",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "animated-driven-frontend",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill animated-driven-frontend",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When synchronized interaction or rendering engineering needs the relevant technical references."
+        }
+      ]
+    },
+    {
+      "id": "atlas-craft",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-craft",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-craft",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When refining an established interface or explicitly requesting a component-state workbench; mobile browser behavior loads its conditional reference."
+        },
+        {
+          "skill": "atlas-figures",
+          "required": true,
+          "condition": "Teardown’s typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Craft."
+        }
+      ]
+    },
+    {
+      "id": "atlas-explain",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-explain",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-explain",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When the requested outcome is code mechanics, historical rationale, conversational learning or explaining how an interface was built."
+        }
+      ]
+    },
+    {
+      "id": "atlas-figures",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-figures",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-figures",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When a figure or technical illustration needs a visual treatment; preserve Figures’ menu and user-owned treatment selection."
+        }
+      ]
+    },
+    {
+      "id": "atlas-grill",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-grill",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-grill",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When the task is to challenge a plan or resolve unclear choices."
+        }
+      ]
+    },
+    {
+      "id": "atlas-motion",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-motion",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-motion",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When building animation or gestures, diagnosing rendering performance, or assessing worthwhile motion opportunities."
+        }
+      ]
+    },
+    {
+      "id": "atlas-retro",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-retro",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-retro",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When session friction warrants Diagnose, or the user explicitly authorizes Enforce."
+        }
+      ]
+    },
+    {
+      "id": "atlas-review",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-review",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-review",
+      "consumers": [
+        {
+          "skill": "tracking-implementation",
+          "required": true,
+          "condition": "For automatic checkpoint review; Atlas Review owns method selection and execution, reusing adequate evidence for the same checkpoint and question."
+        },
+        {
+          "skill": "atlas-verify",
+          "required": false,
+          "condition": "When verification needs product, interface or fidelity judgment rather than behavior proof."
+        },
+        {
+          "skill": "engineering-principles",
+          "required": false,
+          "condition": "When implementation or refactoring needs a review; Tracking retains its own review gate."
+        },
+        {
+          "skill": "implement",
+          "required": true,
+          "condition": "For the complete change’s final review unless the user explicitly skips it; reuse adequate same-checkpoint evidence."
+        },
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When review findings are requested or the selected workflow requires review."
+        }
+      ]
+    },
+    {
+      "id": "atlas-to-spec",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-to-spec",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-to-spec",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When settled requirements need an agreed specification."
+        }
+      ]
+    },
+    {
+      "id": "atlas-to-tickets",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-to-tickets",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-to-tickets",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When a plan or specification needs executable slices."
+        }
+      ]
+    },
+    {
+      "id": "atlas-verify",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-verify",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-verify",
+      "consumers": [
+        {
+          "skill": "atlas-review",
+          "required": false,
+          "condition": "When review needs behavior checks or recorded QA evidence."
+        },
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When the conversation calls for behavior QA, UI stress testing, reusable project verification assets or measured performance evidence."
+        }
+      ]
+    },
+    {
+      "id": "atlas-wayfinder",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-wayfinder",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-wayfinder",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When unresolved decisions need a cross-session map or an existing decision map needs continuation."
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "challenge",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill challenge",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When the user requests an independent challenge of an assessment, diagnosis, estimate or proposal; install this optional utility when selected."
+        }
+      ]
+    },
     {
       "id": "code-simplification",
       "source": "https://github.com/addyosmani/agent-skills",
@@ -44,7 +245,7 @@
       "command": "npx skills add https://github.com/mattpocock/skills --skill codebase-design",
       "consumers": [
         {
-          "skill": "atlas-implement",
+          "skill": "engineering-principles",
           "required": false,
           "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
         }
@@ -60,6 +261,55 @@
           "skill": "html-ui",
           "required": false,
           "condition": "When the selected HTML method needs visual composition guidance."
+        }
+      ]
+    },
+    {
+      "id": "engineering-principles",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "engineering-principles",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill engineering-principles",
+      "consumers": [
+        {
+          "skill": "tracking-implementation",
+          "required": false,
+          "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence."
+        },
+        {
+          "skill": "implement",
+          "required": true,
+          "condition": "For implementation methods, including TDD at agreed test seams and source-backed or design-first work when applicable."
+        },
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When architecture, test-first behavior or version-sensitive implementation needs a selected method."
+        }
+      ]
+    },
+    {
+      "id": "html-ui",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "html-ui",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill html-ui",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When a wireframe or interactive model will answer an interface question."
+        }
+      ]
+    },
+    {
+      "id": "implement",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "implement",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill implement",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When the user selects end-to-end task or All Tickets delivery through a reviewed PR with CI readiness."
         }
       ]
     },
@@ -90,6 +340,19 @@
       ]
     },
     {
+      "id": "snap-out-of-it",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "snap-out-of-it",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill snap-out-of-it",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When the user requests a fresh second opinion on overthinking, overengineering or the simplest sufficient approach."
+        }
+      ]
+    },
+    {
       "id": "statechart",
       "source": "https://github.com/backnotprop/pstack",
       "skill": "statechart",
@@ -99,6 +362,42 @@
           "skill": "atlas-verifiers",
           "required": true,
           "condition": "When Formal Create selects a TLA+ model, use independently installed Statechart to read model-checking results. If unavailable, report the gap and offer targeted installation before dependent work."
+        }
+      ]
+    },
+    {
+      "id": "team-up",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "team-up",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill team-up",
+      "consumers": [
+        {
+          "skill": "implement",
+          "required": true,
+          "condition": "When All Tickets mode coordinates fresh ticket implementers, exploration or merger subagents."
+        },
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When delegation is authorized and useful."
+        },
+        {
+          "skill": "challenge",
+          "required": true,
+          "condition": "For Arena Phase A steps 3–4, Phase B and Phase F, using Challenge’s review brief, scope-based reviewer count and evidence rules."
+        }
+      ]
+    },
+    {
+      "id": "tracking-implementation",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "tracking-implementation",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill tracking-implementation",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When tracking or resuming tracked implementation is requested."
         }
       ]
     },
@@ -117,6 +416,19 @@
           "skill": "atlas-mode",
           "required": false,
           "condition": "When authoring agent instructions, skills or agent-facing policies."
+        }
+      ]
+    },
+    {
+      "id": "writing-for-humans",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "writing-for-humans",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill writing-for-humans",
+      "consumers": [
+        {
+          "skill": "atlas-mode",
+          "required": false,
+          "condition": "When authoring substantial human-facing prose or technical documentation."
         }
       ]
     }

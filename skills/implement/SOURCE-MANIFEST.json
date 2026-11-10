@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "workflow": "implement",
+  "generated": true,
+  "managedFiles": [
+    "references/all-tickets.md",
+    "licenses/implement-spec.txt"
+  ],
+  "authoredInputs": [
+    "skills/implement/SKILL.md",
+    "skills/implement/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "engineering-principles",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For implementation methods, including TDD at agreed test seams and source-backed or design-first work when applicable."
+    },
+    {
+      "id": "atlas-review",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For the complete change’s final review unless the user explicitly skips it; reuse adequate same-checkpoint evidence."
+    },
+    {
+      "id": "team-up",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "When All Tickets mode coordinates fresh ticket implementers, exploration or merger subagents."
+    }
+  ],
+  "sources": [
+    {
+      "id": "implement-spec",
+      "owner": "implement",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/mattpocock/skills",
+        "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+        "path": "skills/engineering/implement-spec/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "1993a473cec40ac85d081c112cdffdc63ec3267c2e412055ad09e013a2f623d1",
+      "carriedPath": "references/all-tickets.md",
+      "carriedSha256": "d1f3be6eec7d353c3c8ee328e16d426eb9c28b910f644d821e705a8dfd0a08ab",
+      "licensePath": "licenses/implement-spec.txt",
+      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "adaptation": "Bundle dependency-linked ticket coordination as Implement’s All Tickets mode, selected by orchestration needs rather than the presence of a spec document. Support local tickets and configured trackers without Matt setup; use Engineering Principles and Team Up through the host. Preserve fresh contexts, context pointers, isolated ticket worktrees, merger ownership and frontier scheduling. Replace destructive base resets with safe reconciliation, require validated integration before unblocking dependents, and share Implement’s review/PR/CI delivery once at the coordinator. Preserve tracker closure semantics and unresolved work during cleanup. The coordinator resolves missing test seams and consequential trade-offs; early draft PRs are provisional and final readiness follows shared delivery. Cleanup verifies preservation on the integration branch. Mark the draft integration PR ready for review after shared delivery validation and CI succeed, without merging.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-05",
+      "rulings": [
+        "implement-spec-coordination"
+      ],
+      "patch": "sources/patches/implement-spec.patch",
+      "patchSha256": "b27f2c00ab1cb0f0b5f513209299574376d211724711a5fa9a0ba10bbb941d68"
+    }
+  ],
+  "rulings": [
+    {
+      "id": "implement-spec-coordination",
+      "owner": "implement",
+      "document": "skills/implement/references/all-tickets.md",
+      "section": "Coordinate the graph",
+      "sources": [
+        "implement-spec"
+      ],
+      "decision": "All Tickets owns dependency scheduling, fresh isolated workers and serialized integration; Implement owns the shared final review, PR and CI cycle. Engineering Principles supplies implementation methods. Local tickets need no external tracker setup. Workers start from the integration tip without destructive resets; validated integration advances the frontier. Tracker closure follows its actual mechanism, and cleanup preserves unresolved work. The coordinator owns user decisions, including missing test seams. Early draft PRs expose progress; final readiness follows the shared delivery workflow."
+    }
+  ],
+  "files": {
+    "SKILL.md": "6d9abaab6bbd8afbbe214bbcbb6272d6f26be9a5474b9cfccef823f31d51e3b7",
+    "agents/openai.yaml": "d001ea644c007ffadb65ecb249c180008ed044e883516111377e735a33a11e0c",
+    "references/all-tickets.md": "d1f3be6eec7d353c3c8ee328e16d426eb9c28b910f644d821e705a8dfd0a08ab",
+    "licenses/implement-spec.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

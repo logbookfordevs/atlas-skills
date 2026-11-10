@@ -28,7 +28,7 @@
       "condition": "When a plan or specification needs executable slices."
     },
     {
-      "id": "atlas-implement",
+      "id": "engineering-principles",
       "relationship": "behavioral",
       "required": false,
       "condition": "When architecture, test-first behavior or version-sensitive implementation needs a selected method."
@@ -118,10 +118,22 @@
       "condition": "When authoring agent instructions, skills or agent-facing policies."
     },
     {
-      "id": "reality-check",
+      "id": "snap-out-of-it",
       "relationship": "behavioral",
       "required": false,
       "condition": "When the user requests a fresh second opinion on overthinking, overengineering or the simplest sufficient approach."
+    },
+    {
+      "id": "implement",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When the user selects end-to-end task or All Tickets delivery through a reviewed PR with CI readiness."
+    },
+    {
+      "id": "challenge",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When the user requests an independent challenge of an assessment, diagnosis, estimate or proposal; install this optional utility when selected."
     }
   ],
   "sources": [],
@@ -129,6 +141,6 @@
   "files": {
     "SKILL.md": "7bfaf5891083a2cd03ba0fc8ffb4f1efd3720989739d7b00492ab23457f7fd64",
     "agents/openai.yaml": "a702cacd9b54e4c83fd63333bc69967a5e03a04c2454f717143ab8fd57575081",
-    "references/methods.md": "c2073198f14c326c2ca34885098c4652b3f4eaa869f3b04447389ee79afc4248"
+    "references/methods.md": "8aaf9c51202b63d10b2e9f5d30b1c553a1a023e9b2554d0596e5cd5a62340873"
   }
 }

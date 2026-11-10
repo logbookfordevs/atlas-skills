@@ -1,6 +1,0 @@
-interface:
-  display_name: "Reality Check"
-  short_description: "A fresh opinion and a friendly slap at overengineering."
-  default_prompt: "Use $reality-check for a casual, plain-language second opinion from a fresh reviewer in another model family. Am I making this harder than it needs to be?"
-policy:
-  allow_implicit_invocation: false

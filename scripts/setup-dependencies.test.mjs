@@ -18,12 +18,16 @@ function fixture() {
   };
 }
 
-test('setup resolves stack sources, combines consumers and excludes owned packages and tools', () => {
+test('setup resolves stack sources, combines consumers and includes owned packages but excludes tools', () => {
   const { composition, stack } = fixture();
   const output = setupDependencies(composition, stack);
-  assert.equal(output.dependencies.length, 1);
-  assert.equal(output.dependencies[0].consumers.length, 2);
-  assert.equal(output.dependencies[0].command, 'npx skills add https://github.com/upstream/skills --skill external');
+  assert.equal(output.dependencies.length, 2);
+  const external = output.dependencies.find(dependency => dependency.id === 'external');
+  assert.equal(external.consumers.length, 2);
+  assert.equal(external.command, 'npx skills add https://github.com/upstream/skills --skill external');
+  const owned = output.dependencies.find(dependency => dependency.id === 'atlas-owned');
+  assert.equal(owned.command, 'npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-owned');
+  assert.deepEqual(owned.consumers, [{ skill: 'atlas-fixture', required: true, condition: 'Owned path.' }]);
 });
 
 test('setup rejects missing, ambiguous and unsafe stack selections', () => {
@@ -34,6 +38,33 @@ test('setup rejects missing, ambiguous and unsafe stack selections', () => {
   stack.sources.pop();
   stack.sources[0].source += ';echo';
   assert.throws(() => setupDependencies(composition, stack), /Unsupported setup source/);
+});
+
+test('independently installed optional packages expose owned dependencies with their loading conditions', () => {
+  for (const base of ['utility-skills', 'creative-skills']) {
+    const { composition, stack } = fixture();
+    composition.workflows[0].directory = `${base}/atlas-fixture`;
+    const output = setupDependencies(composition, stack);
+    const owned = output.dependencies.find(dependency => dependency.id === 'atlas-owned');
+    assert.equal(owned.command, 'npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-owned');
+    assert.deepEqual(owned.consumers, [{ skill: 'atlas-fixture', required: true, condition: 'Owned path.' }]);
+    assert.equal(output.dependencies.length, 2);
+    stack.sources.push({ name: 'Atlas', source: 'https://github.com/logbookfordevs/atlas-skills#reviewed', skills: ['atlas-owned'] });
+    const selected = setupDependencies(composition, stack).dependencies.find(dependency => dependency.id === 'atlas-owned');
+    assert.equal(selected.source, stack.sources[1].source);
+    composition.workflows[0].dependencies = [];
+    assert.ok(!setupDependencies(composition, stack).dependencies.some(dependency => dependency.id === 'atlas-owned'));
+  }
+});
+
+test('core packages expose optional utility dependencies even when Core is the selected stack', () => {
+  const { composition, stack } = fixture();
+  composition.workflows[1].directory = 'utility-skills/atlas-owned';
+  composition.workflows[0].dependencies[1].required = false;
+  stack.sources.push({ name: 'Atlas Core', source: 'https://github.com/logbookfordevs/atlas-skills', skills: ['atlas-fixture'] });
+  const owned = setupDependencies(composition, stack).dependencies.find(dependency => dependency.id === 'atlas-owned');
+  assert.equal(owned.command, 'npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-owned');
+  assert.deepEqual(owned.consumers, [{ skill: 'atlas-fixture', required: false, condition: 'Owned path.' }]);
 });
 
 test('setup regenerates when its stack source or required dependencies change without an AFK catalog', t => {
@@ -60,7 +91,7 @@ test('setup regenerates when its stack source or required dependencies change wi
   buildSkills(root);
   assert.deepEqual(JSON.parse(readFileSync(bundledStack)), stack);
   const output = JSON.parse(readFileSync(join(root, 'skills/atlas-setup/references/dependencies.json')));
-  assert.equal(output.dependencies[0].source, stack.sources[0].source);
+  assert.equal(output.dependencies.find(dependency => dependency.id === 'external').source, stack.sources[0].source);
   composition.workflows[0].dependencies = [];
   composition.workflows[1].dependencies = [];
   save(); buildSkills(root);

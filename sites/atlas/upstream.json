@@ -94,7 +94,7 @@
     ],
     "collections": []
   },
-  "atlas-implement": {
+  "engineering-principles": {
     "references": [
       {
         "id": "tdd",
@@ -234,6 +234,18 @@
         "title": "Why",
         "author": "Lauren Tan / Pstack mirror",
         "url": "https://github.com/backnotprop/pstack/blob/f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37/skills/why/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "implement": {
+    "references": [
+      {
+        "id": "implement-spec",
+        "title": "Implement Spec",
+        "author": "Matt Pocock",
+        "url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/implement-spec/SKILL.md",
         "classification": "patched"
       }
     ],
@@ -600,25 +612,6 @@
     "references": [],
     "collections": []
   },
-  "writing-for-humans": {
-    "references": [
-      {
-        "id": "pstack-unslop",
-        "title": "Unslop",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/unslop/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "pstack-technical-writing",
-        "title": "Technical Writing",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/technical-writing/SKILL.md",
-        "classification": "patched"
-      }
-    ],
-    "collections": []
-  },
   "team-up": {
     "references": [
       {
@@ -664,10 +657,6 @@
         "classification": "patched"
       }
     ],
-    "collections": []
-  },
-  "reality-check": {
-    "references": [],
     "collections": []
   },
   "tracking-implementation": {
@@ -775,6 +764,62 @@
         "title": "Colorfigures",
         "author": "April Zhu (based on Tolga Cohce’s iso-figure)",
         "url": "https://april-zhu.com/colorfigures",
+        "classification": "patched"
+      },
+      {
+        "id": "minicharts",
+        "title": "Minicharts",
+        "author": "April Zhu (exploded-view conventions adapted from Cathryn Lavery)",
+        "url": "https://april-zhu.com/minicharts",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "writing-for-humans": {
+    "references": [
+      {
+        "id": "pstack-unslop",
+        "title": "Unslop",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/unslop/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "pstack-technical-writing",
+        "title": "Technical Writing",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/technical-writing/SKILL.md",
+        "classification": "patched"
+      }
+    ],
+    "collections": []
+  },
+  "snap-out-of-it": {
+    "references": [],
+    "collections": []
+  },
+  "challenge": {
+    "references": [
+      {
+        "id": "pstack-interrogate",
+        "title": "Interrogate",
+        "author": "Lauren Tan / Pstack mirror",
+        "url": "https://github.com/backnotprop/pstack/blob/4161d4ef5051574e825ffe70e2f43a2e49e4b3db/skills/interrogate/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "tstack-council",
+        "title": "Council",
+        "author": "Theo Browne",
+        "url": "https://github.com/t3dotgg/tstack/blob/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/council/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "doubt-driven-development",
+        "title": "Doubt-Driven Development",
+        "author": "Addy Osmani",
+        "url": "https://github.com/addyosmani/agent-skills/blob/301b02b12bff98e4688e6984af6556802322bbde/skills/doubt-driven-development/SKILL.md",
         "classification": "patched"
       }
     ],

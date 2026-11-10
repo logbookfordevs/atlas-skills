@@ -5,6 +5,7 @@ import { JSDOM } from 'jsdom';
 
 const site = JSON.parse(await readFile(new URL('../site.json', import.meta.url), 'utf8'));
 const skills = JSON.parse(await readFile(new URL('../content.json', import.meta.url), 'utf8'));
+const redirects = JSON.parse(await readFile(new URL('../skill-redirects.json', import.meta.url), 'utf8'));
 const pages = [
   { path: '/', ...site.overview, hasImage: true },
   { path: '/tools/', ...site.tools, hasImage: true },
@@ -54,6 +55,27 @@ for (const page of pages) {
 
     assert.equal(head.querySelector('meta[name="robots"]'), null);
     assert.equal(dom.window.document.getElementById('root').childElementCount, 0);
+    dom.window.close();
+  });
+}
+
+for (const [from, to] of Object.entries(redirects)) {
+  test(`the published ${from} entry canonicalizes to ${to}`, async () => {
+    const target = skills.find((skill) => skill.id === to);
+    assert.ok(target, `redirect target ${to} should exist in content.json`);
+    const html = await readFile(new URL(`../dist/skills/${from}/index.html`, import.meta.url), 'utf8');
+    const dom = new JSDOM(html);
+    const head = dom.window.document.head;
+    const meta = (attribute, key) => head.querySelector(`meta[${attribute}="${key}"]`)?.getAttribute('content');
+
+    assert.equal(dom.window.document.title, `${target.name} · Atlas`);
+    assert.equal(meta('name', 'description'), target.summary);
+    assert.equal(meta('property', 'og:title'), `${target.name} · Atlas`);
+    assert.equal(meta('property', 'og:description'), target.summary);
+    assert.equal(meta('property', 'og:url'), `https://atlas.logbookfordevs.com/skills/${to}/`);
+    assert.equal(head.querySelector('link[rel="canonical"]')?.getAttribute('href'), `https://atlas.logbookfordevs.com/skills/${to}/`);
+    assert.equal(meta('name', 'twitter:title'), `${target.name} · Atlas`);
+    assert.equal(meta('name', 'twitter:description'), target.summary);
     dom.window.close();
   });
 }

@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Arena
 
-Track Frame, Fan out, Cross-judge, Pick, Graft and Verify with the host's available planning mechanism. Honor the caller's minimum candidate requirements and artifact validation criteria.
+For a full Arena run, track Frame, Fan out, Cross-judge, Pick, Graft and Verify with the host's available planning mechanism. When a caller explicitly selects phases, run and track only those phases under its brief and evidence contract. Honor the caller's minimum candidate requirements and artifact validation criteria.
 
 ## Phase A: Frame
 

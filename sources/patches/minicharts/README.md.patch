@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index 5663a3c..f42f85b 100644
+--- a/source.md
++++ b/source.md
+@@ -22,7 +22,7 @@ You get one HTML file. Open it in any browser and touch the slices, bars and dot
+ 
+ ## What is inside
+ 
+-- `SKILL.md`: what Claude follows.
++- `minicharts.md`: what Claude follows.
+ - `references/types.md`: the 54 types and what each is for.
+ - `references/kit.md`: the drawing kit.
+ - `assets/`: the engine, the 54 example drawings and the page builder (`python3 assets/build.py --examples all -o all.html` shows every example).

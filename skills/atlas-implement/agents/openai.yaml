@@ -1,6 +1,0 @@
-interface:
-  display_name: "Atlas Implement"
-  short_description: "Design first with Architect, implement test-first, or follow official documentation."
-  default_prompt: "Use $atlas-implement with the methods appropriate to this implementation."
-policy:
-  allow_implicit_invocation: true

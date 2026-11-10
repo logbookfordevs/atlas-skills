@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "workflow": "snap-out-of-it",
+  "generated": true,
+  "managedFiles": [],
+  "authoredInputs": [
+    "utility-skills/snap-out-of-it/SKILL.md",
+    "utility-skills/snap-out-of-it/agents/openai.yaml",
+    "skills/team-up/references/selection.md",
+    "skills/team-up/references/model-preferences.md"
+  ],
+  "authoredReferences": [
+    {
+      "input": "skills/team-up/references/selection.md",
+      "target": "references/selection.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "7912765ff9680104470cf0b7e4a7e15cab28fdd3182f14887dbbf52b56b05abc"
+    },
+    {
+      "input": "skills/team-up/references/model-preferences.md",
+      "target": "references/model-preferences.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "8ca1a36f741ed528f46a754188742c43c0bd9b15a6ddf390ef2d2003abbc0fc6"
+    }
+  ],
+  "dependencies": [],
+  "sources": [],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "447d09e638b5ea702a3866916211c65316795e0265c4903934d014c4e00a42f0",
+    "agents/openai.yaml": "34b83efedde87e4940de53bd3eaaadc97ea5490f43cbf190a2ade7445e3e87db",
+    "references/selection.md": "7912765ff9680104470cf0b7e4a7e15cab28fdd3182f14887dbbf52b56b05abc",
+    "references/model-preferences.md": "8ca1a36f741ed528f46a754188742c43c0bd9b15a6ddf390ef2d2003abbc0fc6"
+  }
+}

@@ -10,7 +10,7 @@ Atlas maintains what it authors, patches or bundles. Complementary independent s
 
 ## Skills V2
 
-Collection releases use Git tags and GitHub releases. **v1.3.0** identifies this skill set. See the [release notes](CHANGELOG.md). Upstream revisions remain recorded separately in each package’s source receipt.
+Collection releases use Git tags and GitHub releases. **v1.4.0** identifies this skill set. See the [release notes](CHANGELOG.md). Upstream revisions remain recorded separately in each package’s source receipt.
 
 Install the packages below, or import the Logbook Atlas Core to include the recommended independent skills. Original-name upstream packages retain their authorship and methods.
 
@@ -24,7 +24,8 @@ Install the packages below, or import the Logbook Atlas Core to include the reco
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
 | [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose bugs with Matt’s reproduction loop; explain expected versus actual behavior with Pele diagrams on request |
-| [Atlas Implement](skills/atlas-implement/SKILL.md) | Architect, TDD and Source-Driven methods, selected independently or together |
+| [Engineering Principles](skills/engineering-principles/SKILL.md) | Architect, TDD and Source-Driven implementation methods, selected independently or together |
+| [Implement](skills/implement/SKILL.md) | Deliver agreed work or coordinate dependency-linked tickets through review and CI to a PR ready for the user to merge |
 | [Atlas Review](skills/atlas-review/SKILL.md) | Standards & Spec, Impact, Interface, Motion and Motion Audit review |
 | [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, stress-test UI data and assess performance evidence |
 | [Atlas Verifiers](skills/atlas-verifiers/SKILL.md) | Manual guidance for creating or maintaining app-driving and formal checks |
@@ -33,8 +34,6 @@ Install the packages below, or import the Logbook Atlas Core to include the reco
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Implementation state and evidence alongside any executor, with optional Audit Trail |
 | [Animated-Driven Frontend](skills/animated-driven-frontend/SKILL.md) | Manually invoked ZERO engineering knowledge |
 | [Team Up](skills/team-up/SKILL.md) | Role/model/effort selection, Arena candidate synthesis and Swarm coverage or races; cross-family review and subject preferences by default, with Council team selection |
-| [Reality Check](skills/reality-check/SKILL.md) | Manually request a fresh opinion from another model family on overthinking, inherited assumptions and the simplest sufficient solution |
-| [Writing for Humans](skills/writing-for-humans/SKILL.md) | Author voice and reader experience, technical documentation, and shared Unslop guidance |
 | [Atlas Retro](skills/atlas-retro/SKILL.md) | Diagnose session friction or explicitly enforce recurring-mistake prevention |
 | [Atlas Setup](skills/atlas-setup/SKILL.md) | Manual dependency and stack check, with explicitly approved cleanup |
 
@@ -72,7 +71,7 @@ The figure engines, visual styles, examples and creative methods come from the a
 
 | Author | Creative work carried in Atlas |
 | --- | --- |
-| **[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** | **[ISO-GLOW](https://isoglow.dev/)** — glowing isometric illustrations and interactive 3D; **[Colorfigures](https://april-zhu.com/colorfigures)** — hand-inked objects with working mechanisms and see-through views; **[Playable](https://april-zhu.com/playable)** — rigged models and original robots you can drive in the browser |
+| **[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** | **[ISO-GLOW](https://isoglow.dev/)** — glowing isometric illustrations and interactive 3D; **[Colorfigures](https://april-zhu.com/colorfigures)** — hand-inked objects with working mechanisms and see-through views; **[Minicharts](https://april-zhu.com/minicharts)** — illustrated data charts drawn to scale; **[Playable](https://april-zhu.com/playable)** — rigged models and original robots you can drive in the browser |
 | **[Lucas Marques](https://github.com/lucasmarkes/hairline)** | **Hairline** — responsive isometric line figures |
 | **[Ryan](https://github.com/wheresryan22/anatomy)** | **Anatomy** — detailed interactive mechanisms and technical illustrations |
 | **[Brooklyn Nicholson](https://github.com/OutThisLife/brooklyn-skills)** | **Engraved Figures** — scientific plates and monochrome technical drawings |
@@ -80,15 +79,22 @@ The figure engines, visual styles, examples and creative methods come from the a
 
 April’s ISO-GLOW builds on **[Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill)**; Colorfigures continues that lineage. Original licenses and copyright notices are preserved.
 
-The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition follows your chosen treatment directly, or presents all six options when you have not chosen. ISO-GLOW and Colorfigures are bundled treatments; their pristine download sources are retained under `sources/upstream/`. Playable is separately installable from Atlas. Playable keeps its original name and is independent of the Figures treatment chooser. See [Creative skills](creative-skills/README.md) for installation, source credits and license details. Creative packages remain outside the Logbook Atlas Core.
+The optional [Atlas Figures](creative-skills/atlas-figures/SKILL.md) composition follows your chosen treatment directly, or presents all seven options when you have not chosen. ISO-GLOW, Colorfigures and Minicharts are bundled treatments; their pristine download sources are retained under `sources/upstream/`. Playable is separately installable from Atlas. Playable keeps its original name and is independent of the Figures treatment chooser. See [Creative skills](creative-skills/README.md) for installation, source credits and license details. Creative packages remain outside the Logbook Atlas Core.
 
 ## Utility skills
 
-[Source Composition](utility-skills/README.md) is an optional, manually invoked skill for applying Atlas’s provenance, verbatim and patched-source contracts, composition rulings and reviewed update strategy in other projects. Utility skills live in `utility-skills/` and install individually with Skills CLI; they are outside the Logbook Atlas Core.
+Optional tools live in [`utility-skills/`](utility-skills/README.md), install individually with Skills CLI and stay outside the Logbook Atlas Core:
+
+| Package | Purpose |
+| --- | --- |
+| [Challenge](utility-skills/challenge/SKILL.md) | Independently challenge an analysis, diagnosis, estimate or proposal before acting; compose Interrogate, Council and Doubt-Driven Development with selected Team Up Arena phases |
+| [Snap Out of It](utility-skills/snap-out-of-it/SKILL.md) | A candid second opinion and friendly wake-up call when overthinking or overengineering |
+| [Writing for Humans](utility-skills/writing-for-humans/SKILL.md) | Author voice, reader experience, technical documentation and shared Unslop guidance |
+| [Skill Source Composition](utility-skills/skill-source-composition/SKILL.md) | Apply provenance, patched-source contracts and reviewed upstream updates in another project |
 
 ## Recommended independent skills
 
-The stack manifest lists the unchanged skills used alongside Atlas, including Research, Prototype, Doubt-Driven Development, Writing for Agents, and library-specific tools. TDD and Source-Driven Development ship inside Atlas Implement; Teach and Diagnosing Bugs install directly from Matt Pocock; Code Simplification installs directly from Addy Osmani. Atlas Grill and Atlas Wayfinder share bundled Grilling and Domain Modeling references. These packages retain pinned source receipts. Independent authors own upstream updates; Atlas maintains its carried adaptations. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the original disposition.
+The stack manifest lists the unchanged skills used alongside Atlas, including Research, Prototype, Doubt-Driven Development, Writing for Agents, and library-specific tools. TDD and Source-Driven Development ship inside Engineering Principles; Implement bundles the adapted Implement Spec coordinator. Teach and Diagnosing Bugs install directly from Matt Pocock; Code Simplification installs directly from Addy Osmani. Atlas Grill and Atlas Wayfinder share bundled Grilling and Domain Modeling references. These packages retain pinned source receipts. Independent authors own upstream updates; Atlas maintains its carried adaptations. See [the fresh-start decisions](docs/specs/atlas-fresh-start.md) for the original disposition.
 
 AFK’s CLI guidance is owned by the AFK project, not Atlas. Compass is excluded for now. The website publishes the stack manifest; terminal stack installation is provided by AFK. Atlas Setup currently checks dependencies rather than installing the entire recommended stack.
 

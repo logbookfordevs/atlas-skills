@@ -1,0 +1,6 @@
+interface:
+  display_name: "Snap Out of It"
+  short_description: "A fresh opinion and a friendly slap at overengineering."
+  default_prompt: "Use $snap-out-of-it for a casual, plain-language second opinion from a fresh reviewer in another model family. Am I making this harder than it needs to be?"
+policy:
+  allow_implicit_invocation: false

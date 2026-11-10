@@ -88,6 +88,13 @@ describe('Atlas navigation', () => {
     expect(router.state.location.hash).toBe('#skills');
   });
 
+  it('redirects the published Atlas Implement URL to Engineering Principles', async () => {
+    const router = open('/skills/atlas-implement/');
+    await screen.findByRole('heading', { level: 1, name: 'Engineering Principles' });
+    expect(router.state.location.pathname).toBe('/skills/engineering-principles/');
+    expect(document.head.querySelector('link[rel="canonical"]')?.getAttribute('href')).toBe(`${site.origin}/skills/engineering-principles/`);
+  });
+
   it('uses the saved first-paint appearance and supports keyboard navigation without motion', async () => {
     const user = userEvent.setup();
     document.documentElement.dataset.theme = 'dark';
@@ -152,11 +159,16 @@ describe('Atlas navigation', () => {
 });
 
 
-it('links optional creative references to their actual source directory', async () => {
-  open('/skills/atlas-figures/');
-  await screen.findByRole('heading', { level: 1, name: 'Atlas Figures' });
-  expect(screen.getByRole('link', { name: /Read the complete skill/ }).getAttribute('href')).toBe('https://github.com/logbookfordevs/atlas-skills/blob/main/creative-skills/atlas-figures/SKILL.md');
-  expect(screen.getByRole('link', { name: /Source receipt/ }).getAttribute('href')).toBe('https://github.com/logbookfordevs/atlas-skills/blob/main/creative-skills/atlas-figures/SOURCE-MANIFEST.json');
+it.each([
+  { id: 'atlas-figures', name: 'Atlas Figures', directory: 'creative-skills' },
+  { id: 'writing-for-humans', name: 'Writing for Humans', directory: 'utility-skills' },
+  { id: 'snap-out-of-it', name: 'Snap Out of It', directory: 'utility-skills' },
+  { id: 'challenge', name: 'Challenge', directory: 'utility-skills' },
+])('links $name to its actual source and receipt directory', async ({ id, name, directory }) => {
+  open(`/skills/${id}/`);
+  await screen.findByRole('heading', { level: 1, name });
+  expect(screen.getByRole('link', { name: /Read the complete skill/ }).getAttribute('href')).toBe(`https://github.com/logbookfordevs/atlas-skills/blob/main/${directory}/${id}/SKILL.md`);
+  expect(screen.getByRole('link', { name: /Source receipt/ }).getAttribute('href')).toBe(`https://github.com/logbookfordevs/atlas-skills/blob/main/${directory}/${id}/SOURCE-MANIFEST.json`);
 });
 
 
@@ -185,9 +197,11 @@ it('opens the workflow from the overview and copies a usable implementation prom
   await user.click(screen.getByRole('button', { name: 'Copy implementation prompt' }));
   const prompt = await navigator.clipboard.readText();
   expect(prompt).toContain('docs/tickets/saved-filters/');
+  expect(prompt).toContain('/implement');
   expect(prompt).toContain('track the implementation');
   expect(prompt).toContain('QA with atlas-verify');
   expect(prompt).toContain('give me a report');
+  expect(prompt).toContain('leave the PR ready for me to merge');
   await user.click(screen.getByRole('link', { name: 'With the full Core ↓' }));
   expect(router.state.location.hash).toBe('#full-stack');
 });

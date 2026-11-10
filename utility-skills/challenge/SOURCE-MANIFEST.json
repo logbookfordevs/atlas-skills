@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "workflow": "challenge",
+  "generated": true,
+  "managedFiles": [
+    "references/interrogate.md",
+    "licenses/pstack-interrogate.txt",
+    "references/council.md",
+    "licenses/tstack-council.txt",
+    "references/doubt.md",
+    "licenses/doubt-driven-development.txt"
+  ],
+  "authoredInputs": [
+    "utility-skills/challenge/SKILL.md",
+    "utility-skills/challenge/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "team-up",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For Arena Phase A steps 3–4, Phase B and Phase F, using Challenge’s review brief, scope-based reviewer count and evidence rules."
+    }
+  ],
+  "sources": [
+    {
+      "id": "pstack-interrogate",
+      "owner": "challenge",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/backnotprop/pstack",
+        "commit": "4161d4ef5051574e825ffe70e2f43a2e49e4b3db",
+        "path": "skills/interrogate/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "ce9d4c1390657924f58daa8174abdc605d07cd134a736cd86e392a0309a405fb",
+      "carriedPath": "references/interrogate.md",
+      "carriedSha256": "ccdca9cabf3024274c09a324931bcdbce8ac2fa525349b5eaa1507c8676c97e2",
+      "licensePath": "licenses/pstack-interrogate.txt",
+      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "adaptation": "Preserve independent adversaries, selected Arena phases and lead verification. Route Arena through Team Up, broaden scope and evidence beyond runnable code, make reviewer count scope-dependent and apply Council synthesis and bounded Doubt discipline.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-09",
+      "rulings": [
+        "challenge-composition"
+      ],
+      "patch": "sources/patches/pstack-interrogate.patch",
+      "patchSha256": "e086caef39f4102ed22cc97adc77c5c260cda61aa818d797e3fa246d8a57b2aa"
+    },
+    {
+      "id": "tstack-council",
+      "owner": "challenge",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/t3dotgg/tstack",
+        "commit": "1085050f3baed1ac724caa4a8166145fb2ac88af",
+        "path": "skills/council/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "598fb2c7cdd48ddd9643cb22999e1b624c357aa6579aa0af0e7268ae16a8a164",
+      "carriedPath": "references/council.md",
+      "carriedSha256": "e6ad4ad8f0c356ffffcd8f2c70c55214f4a30113ec76fe6837f3213873de1cb3",
+      "licensePath": "licenses/tstack-council.txt",
+      "licenseSha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851",
+      "adaptation": "Retain broad independent feedback and synthesis of disagreements. Replace fixed three-provider roster with scope-based Arena selection; replace scores, automatic repairs, PR publication and unanimous-satisfaction loop with advisory evidence states and bounded reconciliation.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-09",
+      "rulings": [
+        "challenge-composition"
+      ],
+      "patch": "sources/patches/tstack-council.patch",
+      "patchSha256": "0b573dcc84212d8a92a30aa35bb3c7228fe9b1335633653379fdb1aeeb612752"
+    },
+    {
+      "id": "doubt-driven-development",
+      "owner": "challenge",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "301b02b12bff98e4688e6984af6556802322bbde",
+        "path": "skills/doubt-driven-development/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [],
+      "notices": [],
+      "sourceSha256": "7a7d53d9d2b93ca7af8d882718753dc7887716f143e7937ecbc381f26416bda7",
+      "carriedPath": "references/doubt.md",
+      "carriedSha256": "414f077aae9ccdfdd58c28eb8397d511d9181f0bd43bc58a4be95e51cc8190ff",
+      "licensePath": "licenses/doubt-driven-development.txt",
+      "licenseSha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "adaptation": "Extract fresh reviewer context, reconcile findings against constraints and bound review cycles. Apply only to the selected challenge; preserve the claim when it is the assessment under review. Use Team Up instead of persona/CLI orchestration and mandatory repeated cross-model permission flows.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-09",
+      "rulings": [
+        "challenge-composition"
+      ],
+      "patch": "sources/patches/doubt-driven-development.patch",
+      "patchSha256": "812b19847198993e2b467cf8dbb31962ae7ad0747c89ae847e76315ec3ce69ef"
+    }
+  ],
+  "rulings": [
+    {
+      "id": "challenge-composition",
+      "owner": "challenge",
+      "document": "utility-skills/challenge/SKILL.md",
+      "sources": [
+        "pstack-interrogate",
+        "tstack-council",
+        "doubt-driven-development"
+      ],
+      "decision": "Interrogate owns independent challenge and verification; Council broadens subjects and retains supported objections and unknowns; Doubt discipline owns context extraction, reconciliation and a three-cycle stop bound. Team Up supplies selected Arena phases and available model selection. Reviewer count follows scope. Review is advisory, not authorization for fixes or publication."
+    }
+  ],
+  "files": {
+    "SKILL.md": "9b5aee13fe00a5203e71caae11bb77bfc4ea4aac55dc42c62f7fe9c5f673ecab",
+    "agents/openai.yaml": "0e30e865c6ec2675a88dc0ef78dbc8c669caf02b0b342d31f9c0ef14fbc0478b",
+    "references/interrogate.md": "ccdca9cabf3024274c09a324931bcdbce8ac2fa525349b5eaa1507c8676c97e2",
+    "licenses/pstack-interrogate.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+    "references/council.md": "e6ad4ad8f0c356ffffcd8f2c70c55214f4a30113ec76fe6837f3213873de1cb3",
+    "licenses/tstack-council.txt": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851",
+    "references/doubt.md": "414f077aae9ccdfdd58c28eb8397d511d9181f0bd43bc58a4be95e51cc8190ff",
+    "licenses/doubt-driven-development.txt": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+  }
+}

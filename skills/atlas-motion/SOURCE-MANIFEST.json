@@ -22,7 +22,7 @@
   "sources": [
     {
       "id": "animate",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
@@ -59,7 +59,7 @@
     },
     {
       "id": "apple-design",
-      "owner": "Atlas Implement",
+      "owner": "Engineering Principles",
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",

@@ -12,8 +12,11 @@ export function setupDependencies(composition, stack) {
   const dependencies = new Map();
   for (const workflow of composition.workflows) {
     for (const dependency of workflow.dependencies ?? []) {
-      if (dependency.relationship !== 'behavioral' || packages.has(dependency.id)) continue;
-      const item = items.get(dependency.id);
+      if (dependency.relationship !== 'behavioral') continue;
+      const ownedDependency = packages.has(dependency.id);
+      const item = items.get(dependency.id) ?? (ownedDependency
+        ? { source: 'https://github.com/logbookfordevs/atlas-skills', skill: dependency.id }
+        : undefined);
       if (!item) throw new Error(`Missing dependency stack selection: ${workflow.id}/${dependency.id}`);
       if (!identifier.test(dependency.id) || typeof dependency.required !== 'boolean' || !dependency.condition?.trim()) {
         throw new Error(`Invalid setup dependency: ${workflow.id}/${dependency.id}`);
