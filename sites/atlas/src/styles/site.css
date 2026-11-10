@@ -83,9 +83,8 @@ code { font-family: var(--mono); font-size: .875em; }
 .theme-toggle:hover { background: var(--surface); }
 .theme-toggle:active { background: var(--selected-bg); color: var(--selected-fg); }
 .reading-layout { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 64px; margin-top: 64px; }
-.contents { align-self: start; position: sticky; top: 36px; max-height: calc(100dvh - 72px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; padding-right: 8px; }
-.contents::-webkit-scrollbar { display: none; }
-.contents-nav { display: grid; position: sticky; top: 0; z-index: 1; background: var(--bg); padding-left: 17px; }
+.contents { display: flex; flex-direction: column; align-self: start; position: sticky; top: 36px; max-height: var(--contents-height, calc(100dvh - 72px)); min-height: 0; }
+.contents-nav { display: grid; position: relative; flex-shrink: 0; padding-left: 17px; }
 .contents-nav a { display: flex; min-height: 44px; align-items: center; font: 400 13px/1.45 var(--sans); text-decoration: none; color: var(--muted); }
 .contents-nav a[aria-current] { color: var(--link-hover); font-weight: 600; }
 .reading-mark { position: absolute; top: 10px; left: 0; height: 24px; width: 1px; background: var(--focus); transform: translateY(var(--mark-y, 0px)); transition: transform var(--route-duration) var(--ease-out); }
@@ -115,7 +114,9 @@ main { min-width: 0; max-width: 720px; }
 .footer p { margin: 0; font-size: 11px; line-height: 1.9; }
 .footer .tagline { color: var(--muted); font-size: 11px; }
 .footer > a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font: 400 11px/1.5 var(--sans); }
-.reference-nav { display: grid; margin-top: 26px; padding: 22px 0 0 17px; border-top: 1px solid var(--border); }
+.reference-directory { display: flex; flex-direction: column; min-height: 0; margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--border); }
+.reference-directory-title { flex-shrink: 0; margin: 0 0 14px; padding-left: 17px; color: var(--ink); font: 600 12px/1.6 var(--sans); }
+.reference-nav { display: grid; overflow-y: auto; overscroll-behavior: contain; min-height: 0; padding: 0 8px 8px 25px; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
 .reference-nav a { display: flex; align-items: center; min-height: 44px; padding: 8px 0; font: 400 12px/1.6 var(--sans); color: var(--muted); text-decoration: none; }
 .reference-nav a[aria-current] { color: var(--link-hover); font-weight: 600; }
 .reference-nav a:hover { color: var(--link-hover); text-decoration: underline; }
@@ -241,7 +242,7 @@ main { view-transition-name: atlas-page; }
   .wordmark-family { display: none; }
   .header-actions { gap: 17px; }
   .reading-layout { display: block; margin-top: 23px; }
-  .contents { position: static; max-height: none; overflow: visible; padding: 0; margin-bottom: 34px; }
+  .contents { display: block; position: static; max-height: none; margin-bottom: 34px; }
   .contents-nav { position: static; display: flex; flex-wrap: wrap; padding: 0; gap: 4px 18px; width: auto; }
   .contents-nav a { min-height: 44px; font-size: 12px; }
   .reading-mark { display: none; }
@@ -263,7 +264,9 @@ main { view-transition-name: atlas-page; }
   .footer .tagline { font-size: 11px; max-width: 29ch; }
   .footer > a { font-size: 11px; }
   .reference-toggle { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 44px; margin-top: 12px; padding: 10px 0; background: transparent; border: 0; border-block: 1px solid var(--border); color: var(--ink); font: 400 12px/1.6 var(--sans); }
-  .reference-nav { display: none; margin-top: 0; padding: 20px 0; border-top: 0; }
+  .reference-directory { display: block; margin: 0; padding: 0; border: 0; }
+  .reference-directory-title { display: none; }
+  .reference-nav { display: none; overflow: visible; padding: 20px 0; }
   .reference-nav[data-expanded='true'] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; }
   .reference-group + .reference-group { margin-top: 0; }
   .reference-nav a { font-size: 12px; overflow-wrap: anywhere; }

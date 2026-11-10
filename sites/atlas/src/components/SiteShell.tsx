@@ -11,6 +11,7 @@ function Contents() {
   const showsReference = location.pathname.startsWith('/skills/');
   const [directoryOpen, setDirectoryOpen] = useState(false);
   const [readingSection, setReadingSection] = useState('overview');
+  const contents = useRef<HTMLElement>(null);
   const currentKind = showsOverview ? 'location' : 'page';
   let active = '';
   if (showsOverview) active = readingSection;
@@ -18,6 +19,28 @@ function Contents() {
   else if (location.pathname.replace(/\/$/, '') === '/workflow') active = 'workflow';
   else if (location.pathname.replace(/\/$/, '') === '/tools') active = 'tools';
   else if (location.pathname.replace(/\/$/, '') === '/stack') active = 'stack';
+
+  useLayoutEffect(() => {
+    let frame = 0;
+    function fitDirectory() {
+      const rail = contents.current;
+      if (!rail) return;
+      const top = Math.max(36, rail.getBoundingClientRect().top);
+      rail.style.setProperty('--contents-height', `${Math.max(0, window.innerHeight - top - 36)}px`);
+    }
+    function scheduleFit() {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(fitDirectory);
+    }
+    fitDirectory();
+    window.addEventListener('scroll', scheduleFit, { passive: true });
+    window.addEventListener('resize', scheduleFit);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', scheduleFit);
+      window.removeEventListener('resize', scheduleFit);
+    };
+  }, []);
 
   useEffect(() => {
     if (!showsOverview) return;
@@ -38,7 +61,7 @@ function Contents() {
     { id: 'tools', label: 'Recommended tools', to: '/tools/' },
   ];
 
-  return <aside className="contents">
+  return <aside className="contents" ref={contents}>
     <nav className="contents-nav" aria-label="Contents" data-active={active}>
       <span className="reading-mark" aria-hidden="true" hidden={!active} />
       {links.map((link) => <AtlasLink key={link.id} to={link.to} onClick={() => setDirectoryOpen(false)} aria-current={link.id === active ? currentKind : undefined}>{link.label}</AtlasLink>)}
@@ -46,12 +69,15 @@ function Contents() {
     <button className="reference-toggle" type="button" aria-controls="skill-reference" aria-expanded={directoryOpen} onClick={() => setDirectoryOpen(!directoryOpen)}>
       <span>Browse skills</span><span aria-hidden="true">{directoryOpen ? '−' : '+'}</span>
     </button>
-    <nav id="skill-reference" className="reference-nav" aria-label="Skill reference" data-expanded={directoryOpen}>
-      {skillGroups.map((group, index) => <div className="reference-group" role="group" aria-labelledby={`skill-group-${index}`} key={group}>
-        <p className="reference-group-title" id={`skill-group-${index}`}>{group}</p>
-        {skills.filter((skill) => skill.group === group).map((skill) => <AtlasLink key={skill.id} to={skillPath(skill.id)} onClick={() => setDirectoryOpen(false)} aria-current={location.pathname.replace(/\/$/, '') === skillPath(skill.id).replace(/\/$/, '') ? 'page' : undefined}>{skill.name}</AtlasLink>)}
-      </div>)}
-    </nav>
+    <div className="reference-directory">
+      <p className="reference-directory-title">Skill directory</p>
+      <nav id="skill-reference" className="reference-nav" aria-label="Skill reference" data-expanded={directoryOpen} tabIndex={0}>
+        {skillGroups.map((group, index) => <div className="reference-group" role="group" aria-labelledby={`skill-group-${index}`} key={group}>
+          <p className="reference-group-title" id={`skill-group-${index}`}>{group}</p>
+          {skills.filter((skill) => skill.group === group).map((skill) => <AtlasLink key={skill.id} to={skillPath(skill.id)} onClick={() => setDirectoryOpen(false)} aria-current={location.pathname.replace(/\/$/, '') === skillPath(skill.id).replace(/\/$/, '') ? 'page' : undefined}>{skill.name}</AtlasLink>)}
+        </div>)}
+      </nav>
+    </div>
   </aside>;
 }
 
