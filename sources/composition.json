@@ -17,7 +17,7 @@
       "license": "sources/upstream/html-wireframe/LICENSE",
       "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
       "method": "skills/html-ui/references/wireframe/html-wireframe.md",
-      "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
+      "adaptation": "Relocates the upstream sibling link to Design Artifact, bundled in HTML UI as references/design/design-artifact.md, and drops its availability condition because the reference always ships with the package. Frontmatter and the low-fidelity method remain unchanged; patch replay is verified.",
       "consumers": [
         "html-ui"
       ],
@@ -32,7 +32,9 @@
           "sourceSha256": "37e5a68fe60467559528ea8096b698f8be562c7e497813df02883dcc71dd3629"
         }
       ],
-      "rulings": [],
+      "rulings": [
+        "html-ui-design-artifact"
+      ],
       "patch": "sources/patches/html-wireframe.patch"
     },
     {
@@ -51,7 +53,7 @@
       "license": "sources/upstream/html-prototype/LICENSE",
       "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
       "method": "skills/html-ui/references/model/html-prototype.md",
-      "adaptation": "Only replaces an upstream sibling-path link with named independent Design Artifact resolution. The original relative link cannot locate a host-installed skill inside Atlas. Frontmatter and method behavior remain unchanged; patch replay is verified.",
+      "adaptation": "Relocates the upstream sibling link to Design Artifact, bundled in HTML UI as references/design/design-artifact.md, and drops its availability condition because the reference always ships with the package. Frontmatter and method behavior remain unchanged; patch replay is verified.",
       "consumers": [
         "html-ui"
       ],
@@ -66,8 +68,45 @@
           "sourceSha256": "d102a3bddbde9ec6456f543453f9fcdd3db2ca73997457c8de81af18a3328318"
         }
       ],
-      "rulings": [],
+      "rulings": [
+        "html-ui-design-artifact"
+      ],
       "patch": "sources/patches/html-prototype.patch"
+    },
+    {
+      "id": "design-artifact",
+      "owner": "Atlas Design",
+      "classification": "verbatim",
+      "upstream": {
+        "repository": "https://github.com/plannotator/effective-html",
+        "commit": "5ce160a3e76dc1c0f9301f8a1903704ec607636a",
+        "path": "skills/design-artifact/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/design-artifact/source.md",
+      "sourceSha256": "c8314b66fb907a5acd3aa10efe4b5adb86d352808f5b84824cadfa6e6c9d38bb",
+      "license": "sources/upstream/design-artifact/LICENSE",
+      "licenseSha256": "7ac10b31d49a69e45db579c2cc747d91fc169f560ef968c8068732cfe5f8455d",
+      "method": "sources/upstream/design-artifact/source.md",
+      "adaptation": "Complete Design Artifact method and frontmatter preserved byte-for-byte as HTML UI's Artifact mode. Wireframe and Model reach it through relocated relative links in their own patches.",
+      "consumers": [
+        "html-ui"
+      ],
+      "rulings": [
+        "html-ui-design-artifact"
+      ],
+      "carriedPath": "references/design/design-artifact.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-12",
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/design-artifact/supporting/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/design-artifact/agents/openai.yaml",
+          "sourceSha256": "c174292aa7485778c04f498ce2a6697b65c66dd0bfe014332053eda43e95ff4a"
+        }
+      ]
     },
     {
       "id": "animate",
@@ -4752,17 +4791,11 @@
       "agent": "skills/html-ui/agents/openai.yaml",
       "methods": [
         "html-wireframe",
-        "html-prototype"
+        "html-prototype",
+        "design-artifact"
       ],
       "authoredReferences": [],
-      "dependencies": [
-        {
-          "id": "design-artifact",
-          "relationship": "behavioral",
-          "required": false,
-          "condition": "When the selected HTML method needs visual composition guidance."
-        }
-      ]
+      "dependencies": []
     },
     {
       "id": "atlas-verify",
@@ -5602,6 +5635,17 @@
         "doubt-driven-development"
       ],
       "decision": "Interrogate owns independent challenge and verification; Council broadens subjects and retains supported objections and unknowns; Doubt discipline owns context extraction, reconciliation and a three-cycle stop bound. Team Up supplies selected Arena phases and available model selection. Reviewer count follows scope. Review is advisory, not authorization for fixes or publication."
+    },
+    {
+      "id": "html-ui-design-artifact",
+      "owner": "html-ui",
+      "document": "skills/html-ui/SKILL.md",
+      "sources": [
+        "design-artifact",
+        "html-wireframe",
+        "html-prototype"
+      ],
+      "decision": "Design Artifact is HTML UI's Artifact mode for standalone visual HTML deliverables and the shared visual-direction reference for Wireframe and Model. Wireframe's low-fidelity contract and Model's fidelity, state and interaction rules stay authoritative when they read it. Its publish offer applies only when Artifact is the selected mode."
     }
   ]
 }

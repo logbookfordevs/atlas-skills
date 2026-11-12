@@ -487,6 +487,13 @@
         "author": "Plannotator",
         "url": "https://github.com/plannotator/effective-html/blob/2ac1dfecb0f2474e75260cb6d3c9b9d6d9b5062e/skills/html-prototype/SKILL.md",
         "classification": "patched"
+      },
+      {
+        "id": "design-artifact",
+        "title": "Design Artifact",
+        "author": "Plannotator",
+        "url": "https://github.com/plannotator/effective-html/blob/5ce160a3e76dc1c0f9301f8a1903704ec607636a/skills/design-artifact/SKILL.md",
+        "classification": "verbatim"
       }
     ],
     "collections": []

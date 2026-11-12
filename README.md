@@ -17,7 +17,7 @@ Install the packages below, or import the Logbook Atlas Core to include the reco
 | Package | Purpose |
 | --- | --- |
 | [Atlas Mode](skills/atlas-mode/SKILL.md) | Manual working mode that applies Atlas skills and inner methods throughout a task |
-| [HTML UI](skills/html-ui/SKILL.md) | Wireframe and polished Model modes |
+| [HTML UI](skills/html-ui/SKILL.md) | Artifact, Wireframe and polished Model modes, with bundled Design Artifact direction |
 | [Atlas Grill](skills/atlas-grill/SKILL.md) | Grilling by default; Domain Modeling and documentation on explicit request |
 | [Atlas Wayfinder](skills/atlas-wayfinder/SKILL.md) | Manually invoked decision maps with shared Grilling and Domain Modeling methods |
 | [Atlas Explain](skills/atlas-explain/SKILL.md) | Selects and combines How, Why, conversational Teach, Interface and Catch Up; creates visual HTML explanations when requested |

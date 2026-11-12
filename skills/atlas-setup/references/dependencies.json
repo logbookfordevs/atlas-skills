@@ -252,19 +252,6 @@
       ]
     },
     {
-      "id": "design-artifact",
-      "source": "https://github.com/plannotator/effective-html",
-      "skill": "design-artifact",
-      "command": "npx skills add https://github.com/plannotator/effective-html --skill design-artifact",
-      "consumers": [
-        {
-          "skill": "html-ui",
-          "required": false,
-          "condition": "When the selected HTML method needs visual composition guidance."
-        }
-      ]
-    },
-    {
       "id": "engineering-principles",
       "source": "https://github.com/logbookfordevs/atlas-skills",
       "skill": "engineering-principles",

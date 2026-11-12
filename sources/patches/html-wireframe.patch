@@ -1,11 +1,13 @@
+diff --git a/source.md b/source.md
+index cac4842..b1960ba 100644
 --- a/source.md
 +++ b/source.md
-@@ -30,7 +30,7 @@
+@@ -30,7 +30,7 @@ Use real labels and representative content. Low fidelity is not permission to us
  
  ## Explore structure before style
  
 -When [`design-artifact`](../design-artifact/SKILL.md) is available, read it for
-+When the independently installed `design-artifact` skill is available, read it for
++Read [Design Artifact](../design/design-artifact.md) for
  subject-specific composition and hierarchy guidance without importing editorial
  polish. This skill's low-fidelity contract remains authoritative.
  
