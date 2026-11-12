@@ -459,6 +459,13 @@
         "classification": "patched"
       },
       {
+        "id": "choreograph",
+        "title": "Choreograph",
+        "author": "Emil Kowalski",
+        "url": "https://github.com/emilkowalski/skills/blob/f7ce8c02d6e3c8f0d980a44c57bcc41a40254349/skills/choreograph/SKILL.md",
+        "classification": "patched"
+      },
+      {
         "id": "apple-design",
         "title": "Apple Design",
         "author": "Emil Kowalski",
