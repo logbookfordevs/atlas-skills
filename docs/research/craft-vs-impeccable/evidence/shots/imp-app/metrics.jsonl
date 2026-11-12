@@ -1,0 +1,11 @@
+{"shot":"ready-1440","metrics":"{\"scrollW\":1440,\"clientW\":1440,\"hOverflow\":false,\"infiniteAnims\":0,\"runningAnims\":0,\"rmQueries\":2}"}
+{"shot":"empty-1440","metrics":"{\"scrollW\":1440,\"clientW\":1440,\"hOverflow\":false,\"infiniteAnims\":0,\"runningAnims\":0,\"rmQueries\":2}"}
+{"shot":"loading-1440","metrics":"{\"scrollW\":1440,\"clientW\":1440,\"hOverflow\":false,\"infiniteAnims\":15,\"runningAnims\":15,\"rmQueries\":2}"}
+{"shot":"error-1440","metrics":"{\"scrollW\":1440,\"clientW\":1440,\"hOverflow\":false,\"infiniteAnims\":0,\"runningAnims\":0,\"rmQueries\":2}"}
+{"shot":"ready-390","metrics":"{\"scrollW\":390,\"clientW\":390,\"hOverflow\":false,\"infiniteAnims\":0,\"runningAnims\":0,\"rmQueries\":2}"}
+{"shot":"error-390","metrics":"{\"scrollW\":390,\"clientW\":390,\"hOverflow\":false,\"infiniteAnims\":0,\"runningAnims\":0,\"rmQueries\":2}"}
+{"axe":"ready","violations":"[{\"id\":\"region\",\"impact\":\"moderate\",\"n\":1,\"help\":\"All page content should be contained by landmarks\"}]"}
+{"axe":"empty","violations":"[{\"id\":\"region\",\"impact\":\"moderate\",\"n\":1,\"help\":\"All page content should be contained by landmarks\"}]"}
+{"axe":"loading","violations":"[{\"id\":\"page-has-heading-one\",\"impact\":\"moderate\",\"n\":1,\"help\":\"Page should contain a level-one heading\"},{\"id\":\"region\",\"impact\":\"moderate\",\"n\":1,\"help\":\"All page content should be contained by landmarks\"}]"}
+{"axe":"error","violations":"[{\"id\":\"region\",\"impact\":\"moderate\",\"n\":1,\"help\":\"All page content should be contained by landmarks\"}]"}
+{"reducedMotion":true,"metrics":"{\"scrollW\":1440,\"clientW\":1440,\"hOverflow\":false,\"infiniteAnims\":0,\"runningAnims\":0,\"rmQueries\":2}"}

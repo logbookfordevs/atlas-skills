@@ -1,0 +1,584 @@
+{
+  "pillars": {
+    "color": {
+      "landing": {
+        "winner": "tie",
+        "agreement": "G-only"
+      },
+      "app": {
+        "winner": "tie",
+        "agreement": "G-only"
+      },
+      "combined": "tie",
+      "confidence": "medium",
+      "why": "G finds both landing palettes and text contrast restored, while M awards impeccable atmospheric light-spill credit; G also identifies impeccable’s static brass numeral (landing verdict G:13,29). On the app G measures both text palettes as compliant and Craft’s stronger input boundary, whereas M again favors impeccable’s light spill (app verdict G:26–28). Both instruction sets explicitly require measured contrast and semantic roles, so retain G’s ties rather than convert atmosphere into a new score.",
+      "craftRules": [
+        {
+          "rule": "Reuse project tokens and notation.",
+          "cite": "skills/atlas-craft/references/color/index.md:19",
+          "effect": "helped"
+        },
+        {
+          "rule": "Measure the actual rendered foreground/background pair; change only when asked.",
+          "cite": "skills/atlas-craft/references/color/index.md:55",
+          "effect": "helped"
+        },
+        {
+          "rule": "Input boundaries need 3:1 non-text contrast.",
+          "cite": "skills/atlas-craft/references/ui/index.md:33",
+          "effect": "helped"
+        }
+      ],
+      "impRules": [
+        {
+          "rule": "Use semantic tokens and verify text, control and focus contrast in every state.",
+          "cite": "reference/polish.md:66",
+          "effect": "helped"
+        },
+        {
+          "rule": "Color needs a stable role or world-specific atmospheric purpose.",
+          "cite": "reference/colorize.md:69",
+          "effect": "helped"
+        }
+      ],
+      "instructionDepth": {
+        "craft": 5,
+        "imp": 4,
+        "note": "Craft is deeper on numeric ramps, semantic token grammar and measured-pair discipline; impeccable adds stronger atmosphere and page-scale color strategy."
+      },
+      "variance": "The shared identity supplied the palette; differences in light spill and input boundaries plausibly reflect execution and emphasis rather than missing contrast instructions."
+    },
+    "typography": {
+      "landing": {
+        "winner": "tie",
+        "agreement": "G-only"
+      },
+      "app": {
+        "winner": "tie",
+        "agreement": "G-only"
+      },
+      "combined": "tie",
+      "confidence": "medium",
+      "why": "G calls both surfaces ties: both restore Geist roles, hierarchy and readable wrapping, with Craft’s app counts and file paths slightly better handled (landing verdict G:14; app verdict G:30–32). M favors impeccable on both surfaces, citing landing fact spacing and app casing, but its app claim of rigorous mono use conflicts with G’s specific sans counts/durations citations. Craft’s measured type rules and impeccable’s typeset guidance both cover the deciding mechanics; no blind winner survives the required margin under G.",
+      "craftRules": [
+        {
+          "rule": "Load every face and weight the design uses.",
+          "cite": "skills/atlas-craft/references/type/index.md:29",
+          "effect": "helped"
+        },
+        {
+          "rule": "Pair each type role’s size, line-height and weight.",
+          "cite": "skills/atlas-craft/references/type/index.md:39",
+          "effect": "helped"
+        },
+        {
+          "rule": "Balance headings, pretty-wrap prose and break escaping IDs.",
+          "cite": "skills/atlas-craft/references/type/index.md:65",
+          "effect": "helped"
+        }
+      ],
+      "impRules": [
+        {
+          "rule": "Run real copy at every breakpoint; maintain clear scale, weight and measure.",
+          "cite": "reference/craft-floor.md:12",
+          "effect": "helped"
+        },
+        {
+          "rule": "Use numeric, tabular, code and label features when content benefits.",
+          "cite": "reference/typeset.md:51",
+          "effect": "helped"
+        }
+      ],
+      "instructionDepth": {
+        "craft": 5,
+        "imp": 4,
+        "note": "Craft has more explicit rendering, loading, punctuation, OpenType and input recipes; impeccable is deeper in assessing expressive role contrast and delivery as a whole."
+      },
+      "variance": "Both provide adequate instructions; small wrapping, casing and role differences are more plausibly single-run execution than a demonstrated instructional advantage."
+    },
+    "layout": {
+      "landing": {
+        "winner": "imp",
+        "agreement": "both"
+      },
+      "app": {
+        "winner": "craft",
+        "agreement": "G-only"
+      },
+      "combined": "tie",
+      "confidence": "low",
+      "why": "Both judges favor impeccable’s landing composition; G specifically cites captioned samples in the first viewport and exposed mobile navigation (landing verdict G:15). App judges split: G favors Craft’s compact four-file list, current-room navigation and stacked mobile form, while M prefers impeccable’s featured render and compact band (app verdict G:34–36; M:65–68). Retain G’s source-supported app result, making equal-weight surface wins cancel.",
+      "craftRules": [
+        {
+          "rule": "Important content sits near the top; identifying content leads metadata/actions.",
+          "cite": "skills/atlas-craft/references/layout/index.md:35",
+          "effect": "helped"
+        },
+        {
+          "rule": "Keep expanded structure until content stops fitting, then collapse.",
+          "cite": "skills/atlas-craft/references/layout/index.md:63",
+          "effect": "helped"
+        },
+        {
+          "rule": "Hidden content needs a visible cue.",
+          "cite": "skills/atlas-craft/references/layout/index.md:43",
+          "effect": "helped"
+        }
+      ],
+      "impRules": [
+        {
+          "rule": "Reject identical icon-heading-text cards as page structure.",
+          "cite": "reference/craft-floor.md:25",
+          "effect": "helped"
+        },
+        {
+          "rule": "Verify every supported viewport.",
+          "cite": "reference/polish.md:62",
+          "effect": "helped"
+        },
+        {
+          "rule": "Make responsiveness structural.",
+          "cite": "reference/operate.md:28",
+          "effect": "helped"
+        }
+      ],
+      "instructionDepth": {
+        "craft": 4,
+        "imp": 4,
+        "note": "Craft is deeper on alignment, grouping, overflow and adaptation mechanics; impeccable is deeper on page composition, hierarchy and refusing generic scaffolds."
+      },
+      "variance": "The landing scaffold difference fits impeccable’s explicit refusal rule; the app reversal exposes a composition-versus-scanability trade-off and substantial single-run variance."
+    },
+    "accessibility": {
+      "landing": {
+        "winner": "tie",
+        "agreement": "both"
+      },
+      "app": {
+        "winner": "craft",
+        "agreement": "G-only"
+      },
+      "combined": "craft",
+      "confidence": "medium",
+      "why": "Both judges tie landing accessibility; G records clipped Craft nav focus and impeccable’s hidden comparison polarity, despite zero supplied axe violations (landing verdict G:16,46–53). On the app G favors Craft for preserved mobile names, a stronger field boundary, skip link, native modal and loading announcement; M’s generic tie misses named mobile controls disappearing with display:none (app verdict G:38–40,85–86). Craft’s detailed name, contrast and focus rules map directly to its app advantage, though impeccable also explicitly requires those checks.",
+      "craftRules": [
+        {
+          "rule": "Icon-only controls need descriptive names retaining visible text.",
+          "cite": "skills/atlas-craft/references/accessibility/index.md:69",
+          "effect": "helped"
+        },
+        {
+          "rule": "Prefer native dialog, move focus inside and restore the trigger.",
+          "cite": "skills/atlas-craft/references/accessibility/index.md:45",
+          "effect": "helped"
+        },
+        {
+          "rule": "UI boundaries require 3:1.",
+          "cite": "skills/atlas-craft/references/accessibility/index.md:81",
+          "effect": "helped"
+        }
+      ],
+      "impRules": [
+        {
+          "rule": "Preserve visible focus, logical tab order, labels and appropriate targets.",
+          "cite": "reference/polish.md:74",
+          "effect": "helped"
+        },
+        {
+          "rule": "Check screen-reader names, focus and semantics.",
+          "cite": "reference/polish.md:91",
+          "effect": "helped"
+        },
+        {
+          "rule": "Icon-only controls need accessible names.",
+          "cite": "reference/clarify.md:65",
+          "effect": "helped"
+        }
+      ],
+      "instructionDepth": {
+        "craft": 5,
+        "imp": 4,
+        "note": "Craft gives more implementation-level rules for names, focus, live regions, native semantics and exact WCAG distinctions; impeccable has broad audit and hardening coverage but less detail in its main polish route."
+      },
+      "variance": "Craft’s depth is consistent with its app success, but impeccable’s missing names violate rules it already has, so this remains partly execution variance."
+    },
+    "states": {
+      "landing": {
+        "winner": "imp",
+        "agreement": "both"
+      },
+      "app": {
+        "winner": "imp",
+        "agreement": "both"
+      },
+      "combined": "imp",
+      "confidence": "high",
+      "why": "Both judges favor impeccable on both surfaces: landing has more visible clipboard status and intact focus, and app retry settles back to an error rather than remaining in loading (landing verdict G:17; app verdict G:42–44). Craft has a stronger native delete modal but its recovery deadlock, fixed four-render deletion count and incomplete loading geometry outweigh that local strength. Impeccable’s whole-path triage and connected recovery rule directly describe the advantage; Craft also forbids polishing over broken interactions, so the failure is not licensed by its rules.",
+      "craftRules": [
+        {
+          "rule": "Polish applies after interaction is sound and never outranks a broken interaction.",
+          "cite": "skills/atlas-craft/references/ui/index.md:13",
+          "effect": "helped"
+        },
+        {
+          "rule": "Inspect every defined state and disclose unrun checks.",
+          "cite": "skills/atlas-craft/references/ui/index.md:74",
+          "effect": "helped"
+        },
+        {
+          "rule": "Confirmation names consequence and counts where applicable.",
+          "cite": "skills/atlas-craft/references/copy/index.md:97",
+          "effect": "helped"
+        }
+      ],
+      "impRules": [
+        {
+          "rule": "Fix blocked tasks and misleading state before missing states and visual polish.",
+          "cite": "reference/polish.md:41",
+          "effect": "helped"
+        },
+        {
+          "rule": "Arrival, transition, empty and recovery paths must connect.",
+          "cite": "reference/polish.md:55",
+          "effect": "helped"
+        },
+        {
+          "rule": "Every control needs appropriate state behavior.",
+          "cite": "reference/polish.md:73",
+          "effect": "helped"
+        }
+      ],
+      "instructionDepth": {
+        "craft": 4,
+        "imp": 5,
+        "note": "Craft is detailed on surfaces and the explicitly requested state workbench; impeccable more deeply integrates product-state lifecycles, recovery, triage and resilience across a complete path."
+      },
+      "variance": "The repeated win fits impeccable’s whole-path emphasis, but Craft’s retry deadlock is an execution failure despite applicable recovery and verification rules."
+    },
+    "copy": {
+      "landing": {
+        "winner": "tie",
+        "agreement": "G-only"
+      },
+      "app": {
+        "winner": "tie",
+        "agreement": "both"
+      },
+      "combined": "tie",
+      "confidence": "medium",
+      "why": "G ties landing copy and both judges tie app copy: both replace false AI/pipeline claims with documented code-rendering and agent-ask facts (landing verdict G:18; app verdict G:46–48). M’s landing preference for impeccable’s dry humor is a voice judgment, not evidence Craft lacks writing instructions: Craft’s Copy mode IS upstream better-writing, verified in SOURCE-MANIFEST.json:442–469 and the copy entry’s name. Both prescribe product vocabulary, action-specific labels and recovery; both app outputs still claim saves/deletions without persistence, so this outcome does not establish a meaningful instruction difference.",
+      "craftRules": [
+        {
+          "rule": "A deliberate brand voice is not a defect; taste alone is not a finding.",
+          "cite": "skills/atlas-craft/references/copy/index.md:13",
+          "effect": "helped"
+        },
+        {
+          "rule": "Keep the product’s existing voice and vocabulary.",
+          "cite": "skills/atlas-craft/references/copy/index.md:29",
+          "effect": "helped"
+        },
+        {
+          "rule": "Buttons name actions and links name destinations.",
+          "cite": "skills/atlas-craft/references/copy/index.md:58",
+          "effect": "helped"
+        },
+        {
+          "rule": "Check labels against actual invoked actions.",
+          "cite": "skills/atlas-craft/references/copy/index.md:145",
+          "effect": "helped"
+        }
+      ],
+      "impRules": [
+        {
+          "rule": "Preserve factual meaning, terminology and brand voice.",
+          "cite": "reference/clarify.md:3",
+          "effect": "helped"
+        },
+        {
+          "rule": "Action labels describe the actual outcome.",
+          "cite": "reference/clarify.md:35",
+          "effect": "helped"
+        },
+        {
+          "rule": "Success confirms a completed outcome.",
+          "cite": "reference/clarify.md:61",
+          "effect": "helped"
+        }
+      ],
+      "instructionDepth": {
+        "craft": 5,
+        "imp": 4,
+        "note": "Craft’s better-writing is a full interface-copy method with inventory, voice, terminology, localization, confirmation and reporting detail; impeccable’s clarify is similarly capable but more compact."
+      },
+      "variance": "The common factual recovery and blind ties support execution/voice variance, not a claim that one contestant had a writing skill and the other did not."
+    },
+    "motion": {
+      "landing": {
+        "winner": "imp",
+        "agreement": "both"
+      },
+      "app": {
+        "winner": "imp",
+        "agreement": "G-only"
+      },
+      "combined": "imp",
+      "confidence": "medium",
+      "why": "Both judges favor impeccable landing motion; G cites Craft’s 500ms stagger and press scale under reduced motion versus impeccable’s restrained light/fades (landing verdict G:19,39). G favors impeccable app motion because its reduced-motion path stops skeleton sweeps and supplies continuity, while Craft’s spinner continues and views swap instantly; M calls that app margin a tie (app verdict G:50–52). Crucially, Craft explicitly keeps loading spinners under reduced motion and brief functional press feedback, so these are partly instruction-policy differences, not proof the contestant ignored atlas-motion; M’s retained fill-mode animation count is also not proof of perpetual visual movement.",
+      "craftRules": [
+        {
+          "rule": "Gate motion by frequency and named purpose.",
+          "cite": "skills/atlas-motion/references/animate/animate.md:34",
+          "effect": "helped"
+        },
+        {
+          "rule": "Reduced motion keeps opacity/color and removes movement.",
+          "cite": "skills/atlas-motion/references/animate/animate.md:164",
+          "effect": "helped"
+        },
+        {
+          "rule": "Reduced-motion guidance explicitly keeps loading spinners and brief functional press feedback.",
+          "cite": "skills/atlas-craft/references/accessibility/motion-and-zoom.md:32",
+          "effect": "hurt"
+        },
+        {
+          "rule": "Bundled UI fallback keeps opacity and gates movement, scale and blur.",
+          "cite": "skills/atlas-craft/references/ui/animations.md:155",
+          "effect": "helped"
+        },
+        {
+          "rule": "Shared Animate owner overrides UI recipe presets.",
+          "cite": "skills/atlas-craft/references/motion-ownership.md:7",
+          "effect": "helped"
+        }
+      ],
+      "impRules": [
+        {
+          "rule": "A generic fade-and-rise is not a product-specific motion thesis.",
+          "cite": "reference/animate.md:34",
+          "effect": "helped"
+        },
+        {
+          "rule": "Every animation needs an intentional reduced-motion path.",
+          "cite": "reference/animate.md:77",
+          "effect": "helped"
+        },
+        {
+          "rule": "One authored moment from an already-visible default.",
+          "cite": "reference/craft-floor.md:13",
+          "effect": "helped"
+        },
+        {
+          "rule": "Do not add animation just to make polish visible.",
+          "cite": "reference/polish.md:75",
+          "effect": "helped"
+        }
+      ],
+      "instructionDepth": {
+        "craft": 5,
+        "imp": 4,
+        "note": "Team Craft means atlas-motion plus bundled Craft refs: it is deeper on frequency gates, timing, interruption, gesture physics and performance; impeccable is more flexible and explicit on authored material and continuity."
+      },
+      "variance": "Impeccable’s landing advantage fits its product-specific thesis; the app spinner difference is partly traceable to Craft’s permissive exception, while choreography choices remain single-run execution."
+    },
+    "ux": {
+      "landing": {
+        "winner": "imp",
+        "agreement": "both"
+      },
+      "app": {
+        "winner": "tie",
+        "agreement": "G-only"
+      },
+      "combined": "imp",
+      "confidence": "medium",
+      "why": "Both judges favor impeccable landing UX: captioned work appears earlier and the command action is literal, whereas Craft’s Start the Desk only scrolls (landing verdict G:20). G ties the app: impeccable leads with the latest render and Craft keeps scanability, current-room navigation and a general ask action, each with material defects (app verdict G:54–56). Impeccable explicitly distinguishes Persuade from Operate and requires a working opening action; Craft preserves identity and prioritizes content but has no comparable end-to-end direction method.",
+      "craftRules": [
+        {
+          "rule": "Preserve accepted identity; a new direction needs its own decision.",
+          "cite": "skills/atlas-craft/SKILL.md:23",
+          "effect": "helped"
+        },
+        {
+          "rule": "Give each view one primary action.",
+          "cite": "skills/atlas-craft/references/layout/index.md:39",
+          "effect": "helped"
+        },
+        {
+          "rule": "Put important content near the top.",
+          "cite": "skills/atlas-craft/references/layout/index.md:35",
+          "effect": "helped"
+        }
+      ],
+      "impRules": [
+        {
+          "rule": "Persuade opening makes the offer clear, shows a working action and product-specific proof.",
+          "cite": "reference/mode-persuade.md:9",
+          "effect": "helped"
+        },
+        {
+          "rule": "Operate prioritizes task scanability and consistency.",
+          "cite": "SKILL.md:37",
+          "effect": "helped"
+        },
+        {
+          "rule": "Make primary task and current state obvious.",
+          "cite": "reference/polish.md:54",
+          "effect": "helped"
+        }
+      ],
+      "instructionDepth": {
+        "craft": 3,
+        "imp": 5,
+        "note": "Craft gives strong local refinement and identity boundaries; impeccable is substantially deeper on surface purpose, product truth, concept generation, visitor path, direction contracts and finishing."
+      },
+      "variance": "The landing win is plausibly instruction-led through Persuade’s real-action requirement, but the app tie prevents generalizing this run into universal UX superiority."
+    }
+  },
+  "direction": {
+    "craft": {
+      "behavior": "Declined new-direction construction, also declined an unwanted tidy-up, and left index.html byte-identical to seeds/landing.orig/index.html (cmp verified). The supplied 390px metrics retain 1180px scroll width and the original accessibility/motion defects.",
+      "contractAdherence": "Consistent with its narrow refinement contract and absence of a direction-selection method. SKILL.md:23 reserves a separate direction decision; it does not literally say never redesign or refuse a user who has already requested one, so the all-stop is a conservative benchmark interpretation reinforced by the ban on substituting general design knowledge, not a universal hard prohibition. Notes cite stale line 22; current verified line is 23.",
+      "cite": [
+        "skills/atlas-craft/SKILL.md:3",
+        "skills/atlas-craft/SKILL.md:23",
+        "skills/atlas-craft/references/ownership.md:7",
+        "judging/rules/notes/craft-direction-NOTES.md:25",
+        "judging/rules/notes/craft-direction-NOTES.md:31",
+        "shots/craft-direction/metrics.jsonl:2"
+      ]
+    },
+    "imp": {
+      "behavior": "Built a replacement Three-Drum Riso Zine: full blue opening, pink/yellow ink vocabulary, Bricolage display, misregistration, textured floods, live deterministic canvas, Play/Pause, frame scrubber and drum toggles. Added inferred PRODUCT.md, six-block surface contract, token-bearing landing DESIGN.md and JSON sidecar.",
+      "quality": "Clear direction capability win: supplied desktop/mobile views show a distinctive, legible code-rendering demonstration and a visible command action. Source verifies multiply compositing, seeded dropout, frame controls, paused reduced-motion default and offscreen/hidden drawing guard; supplied metrics have no page overflow at 1440/390 and zero axe findings. This is screenshot/source judgment, not fresh runtime interaction or a claim of production readiness.",
+      "contractAdherence": "Substantially follows replacement-world, concept seed, contract and documentation instructions, but not fully: NOTES:54 says decision wait exited 3 and the build proceeded, whereas new-work.md:51 requires repeating exit 3 and reserves the unanswered fallback for exit 4. NOTES:25–27 describe inferred PRODUCT.md before the later decision-page attempt; init.md:31 requires probing an available decision page before inference. Review remains self-reported fix with one partial item, honestly disclosed rather than passed; scoped landing documentation preserves the Desk’s separate root system.",
+      "risks": "The supplied full-page screenshot still shows paper in the intended yellow creations and pink Desk regions, consistent with the reported open print-in issue; source’s awaiting cover depends on IntersectionObserver firing. Product audience and CTA remain inferred; pnpm desk:start precedes prerequisites. Clipboard failure only says Press ⌘C and has no live status region; the reduced-motion preference is read at startup rather than updated. A conventional copy-left/canvas-right hero limits how radical the composition is, even though the material and live mechanism are specific.",
+      "cite": [
+        "reference/new-work.md:11",
+        "reference/new-work.md:48",
+        "reference/new-work.md:51",
+        "reference/init.md:31",
+        "reference/new-work.md:75",
+        "reference/new-work.md:126",
+        "reference/new-work.md:146",
+        "runs/imp-direction/PRODUCT.md:5",
+        "runs/imp-direction/.impeccable/surfaces/index-html.md:17",
+        "runs/imp-direction/index.html:760",
+        "runs/imp-direction/index.html:798",
+        "runs/imp-direction/index.html:838",
+        "runs/imp-direction/index.html:852",
+        "judging/rules/notes/imp-direction-NOTES.md:117",
+        "shots/imp-direction/metrics.jsonl:1"
+      ]
+    },
+    "verdict": "Impeccable wins direction task completion and demonstrated direction quality; Craft is out of scope / no submission, not a poor redesign. For an end-to-end direction-capability score count Craft as unfulfilled (zero completion), while any quality-only comparison marks Craft N/A and reports impeccable alone; report Craft’s scope adherence separately. Do not average this asymmetric scope test into the eight refinement pillars or excuse impeccable’s process deviations and open fix disposition."
+  },
+  "refusals": [
+    {
+      "skill": "craft",
+      "what": "New visual direction needs a separate decision; no direction-creation method is supplied.",
+      "cite": "skills/atlas-craft/SKILL.md:23"
+    },
+    {
+      "skill": "craft",
+      "what": "Whole-interface audits/change reviews route to Atlas Review; substantial prose routes to Writing for Humans.",
+      "cite": "skills/atlas-craft/SKILL.md:25"
+    },
+    {
+      "skill": "craft",
+      "what": "Domain handoffs do not require cross-discipline orchestration for ordinary refinement.",
+      "cite": "skills/atlas-craft/references/ownership.md:5"
+    },
+    {
+      "skill": "craft",
+      "what": "States creates a workbench only on explicit request; ordinary state polish does not authorize rebuilding the Bench or removing it.",
+      "cite": "skills/atlas-craft/SKILL.md:21"
+    },
+    {
+      "skill": "craft",
+      "what": "Contrast or palette changes require authorization; the refinement briefs already authorize these fixes.",
+      "cite": "skills/atlas-craft/references/color/index.md:55"
+    },
+    {
+      "skill": "craft",
+      "what": "Do not introduce a new face unless asked for a type change.",
+      "cite": "skills/atlas-craft/references/type/index.md:19"
+    },
+    {
+      "skill": "craft",
+      "what": "Ask between the two visually different iOS 16px input fixes; app contestant chose sizing up under non-interactive constraints.",
+      "cite": "skills/atlas-craft/references/type/index.md:96"
+    },
+    {
+      "skill": "craft",
+      "what": "Reject animation failing frequency or purpose gates; this is a successful refusal, not a missing effect.",
+      "cite": "skills/atlas-motion/references/animate/animate.md:45"
+    },
+    {
+      "skill": "craft",
+      "what": "Motion Opportunities is read-only, Performance diagnoses first, audits/reviews route to Atlas Review; React Native/Expo is excluded.",
+      "cite": "skills/atlas-motion/SKILL.md:18"
+    },
+    {
+      "skill": "imp",
+      "what": "Refinement preserves identity/behavior; redesign replaces the world but preserves product truth.",
+      "cite": "SKILL.md:28"
+    },
+    {
+      "skill": "imp",
+      "what": "Ask before replacing factual copy or adding claims; supplied refinement facts and non-interactive constraints explain the disclosed substitutions.",
+      "cite": "SKILL.md:28"
+    },
+    {
+      "skill": "imp",
+      "what": "Polish must not conceal redesign; if the concept is wrong route to redesign or bolder.",
+      "cite": "reference/polish.md:3"
+    },
+    {
+      "skill": "imp",
+      "what": "Audit reports and does not fix; web audit routes native platforms elsewhere.",
+      "cite": "reference/audit.md:1"
+    },
+    {
+      "skill": "imp",
+      "what": "A new identity found during colorizing or typesetting routes through new-work rather than local refinement.",
+      "cite": "reference/colorize.md:23"
+    },
+    {
+      "skill": "imp",
+      "what": "Missing PRODUCT blocks new/replacement work through init, but narrow existing refinements may proceed and offer init afterward.",
+      "cite": "SKILL.md:77"
+    },
+    {
+      "skill": "imp",
+      "what": "Local extensions inherit identity and need approval before durable DESIGN.md changes.",
+      "cite": "reference/new-work.md:33"
+    },
+    {
+      "skill": "imp",
+      "what": "Direction selection must run concept-seed and follow the decision-page answer/fallback contract; no silent skip.",
+      "cite": "reference/new-work.md:48"
+    },
+    {
+      "skill": "imp",
+      "what": "No image generation means code-led, not a refused build; code-led skips comp round by contract.",
+      "cite": "reference/new-work.md:55"
+    },
+    {
+      "skill": "imp",
+      "what": "Do not fabricate factual/commercial claims or unsupported capabilities.",
+      "cite": "reference/new-work.md:59"
+    },
+    {
+      "skill": "imp",
+      "what": "Do not repair context drift as a design-task side effect.",
+      "cite": "SKILL.md:88"
+    },
+    {
+      "skill": "imp",
+      "what": "Default scaffolds are refused; eyebrows are an absolute ban, while most other defaults can be earned by the brief.",
+      "cite": "reference/craft-floor.md:21"
+    }
+  ],
+  "overall": "On equal-weight refinement surfaces, color, typography, layout and copy tie; Craft wins accessibility, and impeccable wins states, motion and UX. G is preferred on disagreements because its evidence is more discriminating, while M marks every plant fixed and sometimes contradicts its own defects. Craft’s deeper mechanical instructions do not guarantee cleaner execution, and its Copy mode is better-writing. Impeccable alone demonstrates replacement-direction capability, with an open fix disposition and documented process deviations. These single runs establish observed outcomes and plausible rule links, not causal proof or a population-level ranking."
+}

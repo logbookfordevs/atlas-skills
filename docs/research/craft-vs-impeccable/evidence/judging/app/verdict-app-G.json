@@ -1,0 +1,125 @@
+{
+  "surface": "app",
+  "judge": "G",
+  "pillars": {
+    "color": {
+      "X": 8,
+      "Y": 8.5,
+      "winner": "tie",
+      "why": "Both restore the exact warm neutrals, screen-white primary and restrained brass. Calculated dim/panel is 7.08:1, faint/panel 5.34:1 and brass/panel 7.64:1. Y improves the input boundary to faint/wall 5.65:1; X uses seam/wall 1.40:1 (X:179-186, Y:510-524). Neither supplied axe report contains a text contrast failure."
+    },
+    "typography": {
+      "X": 8,
+      "Y": 8.5,
+      "winner": "tie",
+      "why": "Both use a coherent Geist display/body hierarchy with correct weight, tracking and line height. Y consistently sets counts and durations in mono and wraps file paths deliberately (Y:759-768,873-878); X leaves room counts/durations in sans (X:309-312,379). X also crowds the mobile ask placeholder, while Y stacks the form."
+    },
+    "layout": {
+      "X": 7,
+      "Y": 8,
+      "winner": "Y",
+      "why": "Both eliminate the measured 996px mobile overflow. Y retains a compact, scannable four-file list, exposes current-room navigation, and stacks the ask input/button at 390px (Y:509-511,677-703; ready-390-full.png). X gives the latest render a dominant frame but puts older files below the desktop fold and squeezes its mobile input beside Send ask (X:178-180,403-409; ready-1440-full.png)."
+    },
+    "accessibility": {
+      "X": 5.5,
+      "Y": 8,
+      "winner": "Y",
+      "why": "Both provide native room links, labelled inputs, landmarks, visible brass focus and error alerts. X hides the only Jump to and Tablet names with display:none on mobile (X:288-289,246-249), lacks a loading live region (443-454), and has a low-contrast input boundary. Y preserves the hidden Jump to text, labels Tablet, supplies a skip link, exposes individual stages, uses a native modal and announces loading (Y:697,707,812,820-835,940). Both supplied axe reports still flag a missing loading h1; the region finding lacks node detail and may concern excluded Bench scaffolding."
+    },
+    "states": {
+      "X": 7,
+      "Y": 6,
+      "winner": "X",
+      "why": "Both replace the empty/error dead ends and add confirmation before deletion. X retry returns from loading to the error after 900ms, offers a Board recovery route and has a detailed skeleton/fade (X:457-474,517-520). Y has the better native modal and form validation, but retry only sets loading and never settles (Y:1008), its modal falsely states 4 renders in the empty state (724), and its loading skeleton omits the separate ask panel (936-939)."
+    },
+    "copy": {
+      "X": 7,
+      "Y": 7,
+      "winner": "tie",
+      "why": "Both replace pipeline/Submit jargon with agent asks, explain optional rooms/chat, and give human missing-file messages. X correctly limits the error to the board and explains that Desk records do not break the piece (X:460-463); Y more clearly says the next agent you run picks up the ask (Y:855). Both falsely claim successful saving/deletion without persistence; Y additionally claims Finder opened (Y:1006), overstates a board-file failure as the whole piece failing (948), and miscounts deletion contents in empty state (724)."
+    },
+    "motion": {
+      "X": 7.5,
+      "Y": 4.5,
+      "winner": "X",
+      "why": "Both remove transition:all, 1.1 hover scaling and long staggered entrances. X provides a 220ms opacity arrival, 450ms projector image lighting and explicitly stops shimmer under reduced motion (X:148,234-260). Its loading view still has 15 indefinite sweeps, excessive for a quiet studio (metrics line 3). Y keeps motion mainly on opacity/transform but its 1s infinite spinner is outside its no-preference guard and has no reduce override (Y:575-583,654-675); its ready-state reduced-motion metrics do not test that spinner. Y also swaps whole views without a continuity transition (976-980)."
+    },
+    "ux": {
+      "X": 7.5,
+      "Y": 7.5,
+      "winner": "tie",
+      "why": "Both restore the quiet screening-room identity and route render intent to an agent rather than running a model. X makes the work visually lead and offers an explicit Ask for a render primary, though it over-prioritizes rendering in an empty optional workspace. Y is a restrained refinement of the original overview, with current-room navigation including the documented Cast room, and a general Send ask primary; tiny thumbnails reduce the work-led character. Y recovery deadlock and X mobile control names remain material ship fixes."
+    }
+  },
+  "plants": {
+    "A1": {
+      "X": "partial",
+      "Y": "partial"
+    },
+    "A2": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "A3": {
+      "X": "fixed",
+      "Y": "partial"
+    },
+    "A4": {
+      "X": "partial",
+      "Y": "fixed"
+    },
+    "A5": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "A6": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "A7": {
+      "X": "partial",
+      "Y": "fixed"
+    },
+    "A8": {
+      "X": "partial",
+      "Y": "fixed"
+    },
+    "A9": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "A10": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "A11": {
+      "X": "partial",
+      "Y": "partial"
+    },
+    "A12": {
+      "X": "fixed",
+      "Y": "fixed"
+    }
+  },
+  "newDefects": {
+    "X": [
+      "Mobile Jump to and Tablet become unnamed icon-only controls: display:none removes all their name text and neither button has aria-label (X/index.html:246-249,288-289).",
+      "Ask field boundary is seam/wall, calculated 1.40:1, insufficient to distinguish the empty input; mobile form keeps a narrow inline field instead of stacking (X/index.html:178-186; X/shots/ready-390-full.png).",
+      "Ask submission clears user input and says Saved without writing or retaining it; deletion similarly claims removal from the workspace with only innerHTML changes (X/index.html:505-506,527-540). Static-demo limitation, but success copy is misleading.",
+      "Fifteen perpetual skeleton sweeps add unnecessary loading motion (X/index.html:198; X/shots/metrics.jsonl:3). Loading has busy text but no live announcement (443-454).",
+      "Retry timer is not cancelled by Bench switching: selecting ready during the 900ms retry can be overwritten back to error, leaving URL/Bench choice out of sync (X/index.html:517-520,554-556)."
+    ],
+    "Y": [
+      "Try again enters loading forever: the click handler invokes setState(\"loading\") with no completion or failure path (Y/index.html:1008,923-940).",
+      "Loading spinner runs under prefers-reduced-motion: animation is unconditional at Y/index.html:581 and no reduce override exists; the no-preference block at 654-675 only gates other effects.",
+      "Empty-state deletion dialog still says the piece has 4 renders although the empty screen says there is nothing in it (Y/index.html:724,907-920).",
+      "Finder says Opened without invoking Finder, ask submission discards input and claims saved without persistence, and deletion only changes the view (Y/index.html:1006,1029-1032,1043-1046). Static-demo limitation, but the success claims are false.",
+      "Removed the existing Settings band control visible in before-shots/ready-1440.png; Y/index.html:805-813 supplies only Jump to and Tablet without an alternate settings affordance.",
+      "Rendering replaces the focused Retry button with no focus handoff, and full state swaps have no arrival continuity (Y/index.html:976-980,1008)."
+    ]
+  },
+  "overall": {
+    "ship": "X",
+    "why": "I would ship X because its work-led presentation, board-specific recovery and effective reduced-motion handling better preserve the Desk\u2019s screening-room identity across all four states. Y has stronger mobile forms, navigation semantics and a native confirmation dialog, but its retry never settles and its loading spinner ignores reduced motion. X still needs mobile control names, a clearer input boundary, truthful static-demo feedback and fewer loading animations before an unqualified release."
+  }
+}

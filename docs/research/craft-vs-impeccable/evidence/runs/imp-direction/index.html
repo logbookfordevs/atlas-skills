@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Room</title>
+<meta name="description" content="A workshop for films, music videos, explainers and posts, rendered entirely from code.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f3f2ee;
+    --pink: #ff48b0;
+    --blue: #3255a4;
+    --yellow: #ffe800;
+    --ink: #1e1240;
+    --ink-soft: #463c72;
+    --on-blue-soft: #dfe4f3;
+
+    --reg-pink: 3px, -2px;
+    --reg-yellow: -2px, 3px;
+
+    --gutter: clamp(16px, 4vw, 56px);
+    --col-gap: clamp(16px, 2vw, 28px);
+    --section-y: clamp(72px, 10vw, 152px);
+
+    --display: "Bricolage Grotesque", ui-sans-serif, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.6 -0.55'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  * { box-sizing: border-box; }
+
+  [hidden] { display: none !important; }
+
+  html {
+    color-scheme: light;
+    scrollbar-color: var(--blue) var(--paper);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--display);
+    font-optical-sizing: auto;
+    font-size: 17px;
+    line-height: 1.55;
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--pink); color: var(--ink); }
+
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+  .flood-blue :focus-visible { outline-color: var(--yellow); }
+
+  .flood-blue .contents ul :focus-visible { outline-color: var(--ink); outline-offset: -3px; }
+
+  a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 0.22em; }
+
+  a:hover { text-decoration-color: var(--pink); }
+
+  code, kbd, .mono { font-family: var(--mono); font-size: 0.88em; }
+
+  input, button { caret-color: var(--pink); font: inherit; }
+
+  .skip {
+    position: absolute; left: var(--gutter); top: -60px; z-index: 10;
+    background: var(--yellow); color: var(--ink); padding: 10px 14px; font-weight: 650;
+  }
+
+  .skip:focus { top: 12px; }
+
+  /* Ink floods: every flood carries the same grain, so ink always reads as printed. */
+  .flood { position: relative; isolation: isolate; }
+
+  .flood::after {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background-image: var(--grain); opacity: 0.32; mix-blend-mode: screen;
+  }
+
+  .flood-blue { background: var(--blue); color: var(--paper); }
+
+  .flood-pink { background: var(--pink); color: var(--ink); }
+
+  .flood-yellow { background: var(--yellow); color: var(--ink); }
+
+  .grid {
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--col-gap); padding-inline: var(--gutter);
+    max-width: 1680px; margin-inline: auto;
+  }
+
+  /* Two-pass type: the pink drum sits at its fixed misregistration under the top pass. */
+  .twopass { position: relative; display: inline-block; }
+
+  .twopass::before {
+    content: attr(data-text); position: absolute; inset: 0; color: var(--pink);
+    transform: translate(var(--reg-pink)); mix-blend-mode: multiply; z-index: -1;
+    white-space: inherit;
+  }
+
+  .flood-blue .twopass::before { mix-blend-mode: normal; }
+
+  h1, h2, h3 { margin: 0; font-weight: 780; letter-spacing: -0.035em; line-height: 0.95; text-wrap: balance; }
+
+  h2 { font-size: clamp(2.6rem, 6.2vw, 5.75rem); }
+
+  h3 { font-size: clamp(1.25rem, 1.6vw, 1.5rem); letter-spacing: -0.02em; line-height: 1.1; font-weight: 720; }
+
+  p { margin: 0; max-width: 62ch; text-wrap: pretty; }
+
+  .lede { font-size: clamp(1.15rem, 1.5vw, 1.4rem); line-height: 1.4; font-weight: 450; }
+
+  /* Masthead */
+  .masthead {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    padding: 18px var(--gutter); max-width: 1680px; margin-inline: auto;
+  }
+
+  .wordmark { font-weight: 780; font-size: 1.15rem; letter-spacing: -0.02em; text-decoration: none; }
+
+  .nav { display: flex; gap: clamp(16px, 2.2vw, 32px); }
+
+  .nav a { text-decoration: none; font-weight: 560; padding-block: 6px; border-bottom: 2px solid transparent; }
+
+  .nav a:hover { border-bottom-color: var(--yellow); }
+
+  .contents { display: none; position: relative; }
+
+  .contents summary {
+    list-style: none; cursor: pointer; font-weight: 650; padding: 8px 14px;
+    background: var(--yellow); color: var(--ink);
+  }
+
+  .contents summary::-webkit-details-marker { display: none; }
+
+  .contents ul {
+    position: absolute; right: 0; top: calc(100% + 8px); z-index: 5; margin: 0; padding: 8px 0;
+    list-style: none; min-width: 220px; background: var(--paper); color: var(--ink);
+    border: 2px solid var(--ink);
+  }
+
+  .contents li a { display: block; padding: 12px 18px; text-decoration: none; font-weight: 600; }
+
+  .contents li a:hover { background: var(--yellow); }
+
+  /* Cover */
+  .cover { padding-bottom: clamp(48px, 7vw, 96px); }
+
+  .cover .grid { align-items: end; row-gap: 40px; padding-top: clamp(16px, 2vw, 28px); }
+
+  .cover-copy { grid-column: 1 / span 7; display: grid; gap: clamp(22px, 2.6vw, 34px); }
+
+  .title {
+    font-size: clamp(4.2rem, 9vw, 8.5rem); line-height: 0.82; letter-spacing: -0.045em;
+    font-weight: 800; color: var(--paper);
+  }
+
+  .title .twopass { display: block; }
+
+  .title .twopass::before { animation: settle 1100ms var(--ease-out) 200ms both; }
+
+  @keyframes settle {
+    from { transform: translate(18px, -12px); }
+    to { transform: translate(var(--reg-pink)); }
+  }
+
+  .offer { font-size: clamp(1.2rem, 1.7vw, 1.55rem); line-height: 1.35; font-weight: 500; max-width: 30ch; }
+
+  .offer em { font-style: normal; color: var(--yellow); }
+
+  .start { display: flex; flex-wrap: wrap; align-items: stretch; gap: 14px 22px; }
+
+  .slip {
+    display: flex; align-items: center; gap: 0; background: var(--paper); color: var(--ink);
+    min-height: 56px;
+  }
+
+  .slip-label { padding: 0 6px 0 18px; font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); }
+
+  .slip code { padding: 0 18px 0 6px; font-size: 1.05rem; font-weight: 600; white-space: nowrap; }
+
+  .stamp {
+    display: inline-flex; align-items: center; gap: 8px; align-self: stretch;
+    border: 0; padding: 0 18px; cursor: pointer; font-weight: 700; font-size: 0.95rem;
+    background: var(--pink); color: var(--ink);
+    transition: background-color 180ms var(--ease-out);
+  }
+
+  .stamp:hover { background: #ff69c0; }
+
+  .stamp:active { transform: translate(1px, 1px); }
+
+  .stamp svg { width: 18px; height: 18px; flex: none; }
+
+  .stamp[data-state="done"] { background: var(--yellow); }
+
+  .see-work { align-self: center; font-weight: 600; color: var(--paper); }
+
+  .cover-plate { grid-column: 8 / span 5; display: grid; gap: 14px; justify-items: end; }
+
+  .cover-plate .press { width: min(100%, calc(clamp(360px, 58svh, 620px) * 0.8)); }
+
+  .proof { position: relative; background: var(--paper); aspect-ratio: 4 / 5; height: clamp(360px, 58svh, 620px); width: auto; max-width: 100%; justify-self: end; }
+
+  .proof canvas { display: block; width: 100%; height: 100%; }
+
+  .press {
+    display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 10px 14px;
+    color: var(--paper); font-size: 0.95rem;
+  }
+
+  .press-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; grid-column: 1 / -1; }
+
+  .press button {
+    display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px;
+    border: 2px solid var(--paper); background: transparent; color: var(--paper);
+    cursor: pointer; font-weight: 650; font-size: 0.9rem;
+  }
+
+  .press button:hover { background: rgba(243, 242, 238, 0.12); }
+
+  .press button svg { width: 16px; height: 16px; }
+
+  .drum .swatch { width: 14px; height: 14px; display: inline-block; box-shadow: inset 0 0 0 2px var(--paper); }
+
+  .drum[aria-pressed="true"] { background: var(--paper); color: var(--ink); }
+
+  .drum[aria-pressed="true"] .swatch { box-shadow: none; }
+
+  .drum[aria-pressed="false"] .swatch { background: transparent !important; }
+
+  .frame-out { font-family: var(--mono); font-weight: 600; font-size: 0.95rem; min-width: 9ch; }
+
+  .scrub { width: 100%; accent-color: var(--yellow); height: 28px; }
+
+  .press-note { grid-column: 1 / -1; color: var(--on-blue-soft); font-size: 0.92rem; max-width: 46ch; }
+
+  /* Work */
+  .work { padding-block: var(--section-y); }
+
+  .work-head { grid-column: 1 / span 8; display: grid; gap: 22px; margin-bottom: clamp(40px, 5vw, 72px); }
+
+  .plates { row-gap: clamp(48px, 6vw, 88px); align-items: start; }
+
+  .plate { margin: 0; display: grid; gap: 14px; }
+
+  .plate .frame { position: relative; }
+
+  .plate img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #e6e4dd; }
+
+  .plate figcaption { display: grid; gap: 2px; font-size: 0.95rem; color: var(--ink-soft); max-width: 48ch; }
+
+  .plate figcaption strong { color: var(--ink); font-weight: 680; font-size: 1.05rem; }
+
+  .mark { position: absolute; width: 16px; height: 16px; border-color: var(--blue); border-style: solid; border-width: 0; }
+
+  .mark.tl { left: -12px; top: -12px; border-left-width: 1.5px; border-top-width: 1.5px; }
+
+  .mark.tr { right: -12px; top: -12px; border-right-width: 1.5px; border-top-width: 1.5px; }
+
+  .mark.bl { left: -12px; bottom: -12px; border-left-width: 1.5px; border-bottom-width: 1.5px; }
+
+  .mark.br { right: -12px; bottom: -12px; border-right-width: 1.5px; border-bottom-width: 1.5px; }
+
+  .p1 { grid-column: 1 / span 8; }
+
+  .p2 { grid-column: 9 / span 4; align-self: end; }
+
+  .p3 { grid-column: 2 / span 5; }
+
+  .p4 { grid-column: 7 / span 6; margin-top: clamp(40px, 8vw, 140px); }
+
+  .p5 { grid-column: 4 / span 7; }
+
+  .p2 img { aspect-ratio: 840 / 496; object-fit: contain; background: #fff; mix-blend-mode: multiply; }
+
+  /* Creations */
+  .creations { padding-block: var(--section-y); }
+
+  .creations-head { grid-column: 1 / span 5; display: grid; gap: 22px; align-content: start; }
+
+  .creations-list { grid-column: 7 / span 6; margin: 0; padding: 0; list-style: none; }
+
+  .creations-list li {
+    display: grid; grid-template-columns: minmax(0, 15ch) minmax(0, 1fr); gap: 4px 24px;
+    padding: 18px 0; border-top: 2px solid var(--ink);
+  }
+
+  .creations-list li:last-child { border-bottom: 2px solid var(--ink); }
+
+  .creations-list b { font-weight: 760; font-size: 1.15rem; letter-spacing: -0.015em; line-height: 1.2; }
+
+  .experiments { grid-column: 7 / -1; margin-top: 28px; font-size: 0.98rem; }
+
+  /* Process */
+  .process { padding-block: var(--section-y); }
+
+  .process-head { grid-column: 1 / span 7; margin-bottom: clamp(36px, 5vw, 64px); display: grid; gap: 22px; }
+
+  .stops { grid-column: 1 / -1; margin: 0; padding: 0; list-style: none; counter-reset: stop; }
+
+  .stops li {
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap);
+    align-items: baseline; padding: 20px 0; border-top: 2px solid var(--blue);
+  }
+
+  .stops li:last-child { border-bottom: 2px solid var(--blue); }
+
+  .stops .n {
+    grid-column: 1 / span 2; font-weight: 800; font-size: clamp(2.4rem, 4vw, 3.6rem); line-height: 0.9;
+    color: var(--blue); letter-spacing: -0.04em;
+  }
+
+  .stops h3 { grid-column: 3 / span 3; }
+
+  .stops p { grid-column: 6 / span 7; }
+
+  .shape { margin-top: clamp(56px, 7vw, 96px); align-items: start; row-gap: 28px; }
+
+  .shape-copy { grid-column: 1 / span 5; display: grid; gap: 16px; }
+
+  .tree {
+    grid-column: 7 / span 6; margin: 0; padding: clamp(20px, 3vw, 36px);
+    font-family: var(--mono); font-size: clamp(0.82rem, 1.05vw, 0.95rem); line-height: 1.75;
+  }
+
+  .tree ul { list-style: none; margin: 0; padding: 0; }
+
+  .tree li { display: grid; grid-template-columns: 15ch 1fr; gap: 0 12px; }
+
+  .tree .p { white-space: pre; }
+
+  .tree b { font-weight: 600; }
+
+  /* Desk */
+  .desk { padding-block: var(--section-y); }
+
+  .desk-head { grid-column: 1 / span 6; display: grid; gap: 22px; align-content: start; }
+
+  .rooms { grid-column: 7 / span 6; margin: 0; display: grid; }
+
+  .rooms div { display: grid; grid-template-columns: 9ch 1fr; gap: 16px; padding: 16px 0; border-top: 2px solid var(--ink); }
+
+  .rooms div:last-child { border-bottom: 2px solid var(--ink); }
+
+  .rooms dt { font-weight: 760; }
+
+  .rooms dd { margin: 0; }
+
+  .rule-quote {
+    grid-column: 1 / span 9; margin: clamp(48px, 6vw, 88px) 0 0; font-weight: 720;
+    font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1.12; letter-spacing: -0.025em; max-width: 30ch;
+  }
+
+  .cmds { grid-column: 1 / -1; margin-top: 40px; display: grid; gap: 10px; }
+
+  .cmd { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; background: var(--paper); padding: 14px 18px; }
+
+  .cmd code { font-weight: 600; font-size: 1rem; min-width: 18ch; }
+
+  .cmd span { color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Rules */
+  .rules { padding-block: var(--section-y); overflow-x: clip; }
+
+  .rules::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: clamp(20px, 2.4vw, 36px);
+    background: var(--pink); mix-blend-mode: multiply; transform: translate(var(--reg-pink));
+  }
+
+  /* Print-in: ink floods roll on once, left to right; the paper cover retreats under the content. */
+  .awaiting::before, .printing::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; background: var(--paper);
+    transform-origin: right;
+  }
+
+  .printing::before { animation: roll 900ms var(--ease-out) forwards; }
+
+  @keyframes roll { to { transform: scaleX(0); } }
+
+  @media print { .awaiting::before { display: none; } }
+
+  .rules-head { grid-column: 1 / span 6; display: grid; gap: 22px; align-content: start; }
+
+  .rules-head p { color: var(--on-blue-soft); }
+
+  .rule-list { grid-column: 1 / -1; margin: clamp(36px, 5vw, 64px) 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--col-gap); }
+
+  .rule-list li {
+    display: grid; grid-template-columns: 3ch 1fr; gap: 4px 16px; padding: 22px 0; align-content: start;
+    border-top: 2px solid rgba(243, 242, 238, 0.55);
+  }
+
+  .rule-list .k { font-weight: 800; font-size: 1.12rem; color: var(--yellow); grid-row: span 2; }
+
+  .rule-list b { font-weight: 720; font-size: 1.12rem; line-height: 1.25; }
+
+  .rule-list span { color: var(--on-blue-soft); }
+
+  .freestyle {
+    grid-column: 1 / span 7; margin-top: clamp(40px, 5vw, 64px); padding: 22px 24px;
+    background: var(--yellow); color: var(--ink); font-size: 1.05rem;
+    transform: translate(var(--reg-yellow));
+  }
+
+  .coworkers { grid-column: 8 / span 5; margin-top: clamp(40px, 5vw, 64px); display: grid; gap: 12px; color: var(--on-blue-soft); }
+
+  .coworkers h3 { color: var(--paper); }
+
+  /* Close */
+  .close { padding-block: var(--section-y) clamp(40px, 5vw, 64px); }
+
+  .close-head { grid-column: 1 / span 7; display: grid; gap: 22px; }
+
+  .close .cmds .cmd { background: transparent; border-top: 2px solid var(--ink); padding-inline: 0; }
+
+  .worktree { grid-column: 1 / span 7; margin-top: 28px; }
+
+  .colophon {
+    grid-column: 1 / -1; margin-top: clamp(72px, 9vw, 128px); padding-top: 22px; border-top: 2px solid var(--blue);
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; font-size: 0.95rem; color: var(--ink-soft);
+  }
+
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  @media (max-width: 1080px) {
+    .cover-copy, .cover-plate { grid-column: 1 / -1; }
+    .cover-plate { max-width: 560px; justify-items: stretch; }
+    .cover-plate .press { width: 100%; }
+    .proof { justify-self: start; height: auto; width: 100%; }
+    .work-head, .process-head, .close-head, .worktree, .freestyle { grid-column: 1 / -1; }
+    .p1, .p4, .p5 { grid-column: 1 / -1; margin-top: 0; }
+    .p2, .p3 { grid-column: span 6; }
+    .experiments, .creations-head, .creations-list, .desk-head, .rooms, .rule-quote, .shape-copy, .tree, .rules-head, .coworkers { grid-column: 1 / -1; }
+    .creations-list, .rooms { margin-top: 36px; }
+    .stops h3 { grid-column: 3 / span 10; }
+    .stops p { grid-column: 3 / span 10; margin-top: 8px; }
+  }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .nav { display: none; }
+    .contents { display: block; }
+    .p2, .p3 { grid-column: 1 / -1; }
+    .rule-list { grid-template-columns: 1fr; }
+    .creations-list li { grid-template-columns: 1fr; }
+    .slip { flex: 1 1 100%; }
+    .slip code { padding-right: 8px; }
+    .slip-label { display: none; }
+    .slip .stamp { margin-left: auto; }
+    .stops .n { grid-column: 1 / span 3; }
+    .stops h3, .stops p { grid-column: 4 / -1; }
+    .rooms div { grid-template-columns: 1fr; gap: 4px; }
+    .mark { display: none; }
+    .tree { font-size: 0.85rem; padding: 18px 16px; }
+    .tree li { grid-template-columns: 1fr; margin-bottom: 6px; }
+    .tree .c { padding-left: 4ch; line-height: 1.4; }
+    .cmd { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .title .twopass::before { animation: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="flood flood-blue cover">
+  <div class="masthead">
+    <a class="wordmark" href="#top" id="top">Creative Room</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">The work</a>
+      <a href="#process">How a piece is born</a>
+      <a href="#desk">The Desk</a>
+      <a href="#rules">House rules</a>
+      <a href="#start">Get started</a>
+    </nav>
+    <details class="contents">
+      <summary>Contents</summary>
+      <ul>
+        <li><a href="#work">The work</a></li>
+        <li><a href="#process">How a piece is born</a></li>
+        <li><a href="#desk">The Desk</a></li>
+        <li><a href="#rules">House rules</a></li>
+        <li><a href="#start">Get started</a></li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="grid">
+    <div class="cover-copy">
+      <h1 class="title">
+        <span class="twopass" data-text="Creative">Creative</span>
+        <span class="twopass" data-text="Room">Room</span>
+      </h1>
+      <p class="offer">A workshop for films, music videos, explainers and posts, rendered entirely from code. <em>Every frame is a function.</em></p>
+      <div class="start">
+        <div class="slip">
+          <span class="slip-label">Say hello to the Desk</span>
+          <code id="cmd-start">pnpm desk:start</code>
+          <button class="stamp" type="button" data-copy="pnpm desk:start" aria-describedby="cmd-start">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="8" y="8" width="12" height="12"/><path d="M16 8V4H4v12h4"/></svg>
+            <span class="stamp-label">Copy</span>
+          </button>
+        </div>
+        <a class="see-work" href="#work">See the work</a>
+      </div>
+    </div>
+
+    <div class="cover-plate">
+      <div class="proof">
+        <canvas id="proof" width="800" height="1000" role="img" aria-label="A three-colour print drawn live by code: a pink circle travels over a blue halftone field crossed by yellow bands, its last positions left as faint rings."></canvas>
+      </div>
+      <div class="press" aria-label="Cover controls">
+        <div class="press-row">
+          <button type="button" id="play" aria-pressed="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="i-pause"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="i-play" hidden><path d="M7 4l13 8-13 8z"/></svg>
+            <span id="play-label">Pause</span>
+          </button>
+          <button type="button" class="drum" data-drum="pink" aria-pressed="true"><span class="swatch" style="background:var(--pink)"></span>Pink</button>
+          <button type="button" class="drum" data-drum="blue" aria-pressed="true"><span class="swatch" style="background:var(--blue)"></span>Blue</button>
+          <button type="button" class="drum" data-drum="yellow" aria-pressed="true"><span class="swatch" style="background:var(--yellow)"></span>Yellow</button>
+        </div>
+        <output class="frame-out" id="frame-out" for="scrub">i = 137</output>
+        <label class="visually-hidden" for="scrub">Frame</label>
+        <input class="scrub" id="scrub" type="range" min="0" max="239" step="1" value="0">
+        <p class="press-note">This cover is <code>drawFrame(ctx, i)</code> running in your browser, three ink passes per frame. Same <code>i</code>, same pixels.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="work" id="work" aria-labelledby="work-h">
+    <div class="grid">
+      <div class="work-head">
+        <h2 id="work-h"><span class="twopass" data-text="Not a place with a camera.">Not a place with a camera.</span><br>We checked. Twice.</h2>
+        <p class="lede">Short films, music videos, explainers, carousels and the occasional poster, made out of Canvas, shaders, Three.js, ffmpeg and one headless Chrome that has seen things. Five stills from the studio's tools:</p>
+      </div>
+    </div>
+    <div class="grid plates">
+      <figure class="plate p1">
+        <div class="frame"><img src="img/reel-1.webp" alt="The word PLAN in huge orange letters over rows of outlined PLAN, with the line 'plan the beats.' in white script, labelled scene 03 of 05." width="1280" height="720"><span class="mark tl"></span><span class="mark tr"></span><span class="mark bl"></span><span class="mark br"></span></div>
+        <figcaption><strong>Kinetic type</strong>PLAN, scene 03 of 05, at 00:03:09.</figcaption>
+      </figure>
+      <figure class="plate p2">
+        <div class="frame"><img src="img/reel-2.webp" alt="An isometric line drawing of a square grid of keys, a few raised into columns." width="840" height="496"><span class="mark tl"></span><span class="mark tr"></span><span class="mark bl"></span><span class="mark br"></span></div>
+        <figcaption><strong>Line study</strong>An isometric grid with a few keys raised.</figcaption>
+      </figure>
+      <figure class="plate p3">
+        <div class="frame"><img src="img/reel-3.webp" alt="A red sphere, a navy cube, a yellow cone and a silver torus on a cream disc against a dusk gradient." width="1280" height="720"><span class="mark tl"></span><span class="mark tr"></span><span class="mark bl"></span><span class="mark br"></span></div>
+        <figcaption><strong>One slow orbit</strong><span><code>@remotion/three</code>, four primitives on a turntable.</span></figcaption>
+      </figure>
+      <figure class="plate p4">
+        <div class="frame"><img src="img/reel-4.webp" alt="A painterly scene of a child in a white hat on a green footbridge over a lily pond, captioned 1899." width="640" height="360"><span class="mark tl"></span><span class="mark tr"></span><span class="mark bl"></span><span class="mark br"></span></div>
+        <figcaption><strong>The bridge, 1899</strong>A small visitor on a painted footbridge over the lilies.</figcaption>
+      </figure>
+      <figure class="plate p5">
+        <div class="frame"><img src="img/reel-5.webp" alt="A bar chart titled Shots per scene: seven scenes, 58 shots, the climax highlighted at 15 against an average of 8.3." width="1280" height="720"><span class="mark tl"></span><span class="mark tr"></span><span class="mark bl"></span><span class="mark br"></span></div>
+        <figcaption><strong>Shots per scene</strong>Seven scenes, 58 shots, the climax doing the heavy lifting.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="flood flood-yellow creations" aria-labelledby="creations-h">
+    <div class="grid">
+      <div class="creations-head">
+        <h2 id="creations-h">Nine creations, one workspace</h2>
+        <p>Everything lives as editable source under <code>creations/</code>, where Leonardo's work stays apart from the engine. "Finished" is a spectrum.</p>
+      </div>
+      <ul class="creations-list">
+        <li><b>Benjamin</b><span>A series of short films made while waiting for a very small human. Every film picks its own medium.</span></li>
+        <li><b>Claude Pop</b><span>A music video where all the visuals are Three.js and Canvas 2D.</span></li>
+        <li><b lang="pt">A festa que deu ruim</b><span>Nicolas Fouquet throws the party of the century. The king takes notes.</span></li>
+        <li><b>Fruit Dreams</b><span>A tiny cat sails a banana. A lemon balloon offers a lift.</span></li>
+        <li><b>Seed</b><span>A coral seed travels through a GPU server in three-ink riso.</span></li>
+        <li><b lang="pt">Feliz Halloween</b><span>We drive through Cidade de Outubro until the cars turn into pumpkins.</span></li>
+        <li><b>Release 17</b><span>A paper-coated clerk, a rock gig and a very tidy release announcement.</span></li>
+        <li><b lang="pt">Um voto. Muitos caminhos.</b><span>One vote travels through candidates and becomes chairs.</span></li>
+        <li><b>Logbook · EP1</b><span><span lang="pt">O Dev Orquestrador</span> conducts a very busy orchestra.</span></li>
+      </ul>
+      <p class="experiments">Side quests in <code>experiments/</code> each ask one question and then go home: <code>cctv-memphis</code>, <code>figure-seek-test</code>, <code>hyperframes-engine-test</code> and <code>desk-teaser</code>.</p>
+    </div>
+  </section>
+
+  <section class="process" id="process" aria-labelledby="process-h">
+    <div class="grid">
+      <div class="process-head">
+        <h2 id="process-h"><span class="twopass" data-text="How a piece">How a piece</span> is born</h2>
+        <p class="lede">Seven stops from a shower thought to an approved final. Every room on the way is optional.</p>
+      </div>
+      <ol class="stops">
+        <li><span class="n">1</span><h3>Shower thought</h3><p>Ask in chat, or say "open the desk" and let it interview you.</p></li>
+        <li><span class="n">2</span><h3><code>brief.md</code></h3><p>Every piece has one, and its first heading is the piece's title. <code>pnpm lint</code> cries if it's missing.</p></li>
+        <li><span class="n">3</span><h3>The Desk</h3><p>Pick a vibe, gather references, plan beats against a track.</p></li>
+        <li><span class="n">4</span><h3>Skill time</h3><p>The right skill takes over and runs its own process: <code>creative-studio</code> for production pieces, <code>social-studio</code> for still posts.</p></li>
+        <li><span class="n">5</span><h3>Render</h3><p>Frames come out of code into <code>renders/</code>, which can always be rebuilt. What code can't recreate, like a generated voice or still, goes to <code>source/</code>.</p></li>
+        <li><span class="n">6</span><h3>QA</h3><p>Evidence goes in <code>qa/</code>. At checkpoints Leonardo judges an interactive page, and his notes come back in a format agents can read.</p></li>
+        <li><span class="n">7</span><h3>Ship it?</h3><p>Only if Leonardo says so. Approved finals live in <code>final/</code> with a checksum manifest.</p></li>
+      </ol>
+    </div>
+    <div class="grid shape">
+      <div class="shape-copy">
+        <h3>Every piece has the same shape</h3>
+        <p>A creation, a film in a series or a study: the folders never change, so any agent can walk in and find the brief.</p>
+      </div>
+      <div class="tree flood flood-pink" role="group" aria-label="Piece folder layout"><b>&lt;piece&gt;/</b><ul><li><span class="p">├── brief.md</span><span class="c">what this is; the title lives here</span></li><li><span class="p">├── README.md</span><span class="c">how to run, rebuild and verify it</span></li><li><span class="p">├── src/</span><span class="c">editable source</span></li><li><span class="p">├── source/</span><span class="c">what code can't recreate</span></li><li><span class="p">├── final/</span><span class="c">approved deliveries</span></li><li><span class="p">├── renders/</span><span class="c">previews, frames, drafts</span></li><li><span class="p">├── qa/</span><span class="c">checkpoint pages, feedback, evidence</span></li><li><span class="p">└── desk/</span><span class="c">the Desk's records, as plain files</span></li></ul></div>
+    </div>
+  </section>
+
+  <section class="flood flood-pink desk" id="desk" aria-labelledby="desk-h">
+    <div class="grid">
+      <div class="desk-head">
+        <h2 id="desk-h">The Desk</h2>
+        <p class="lede">A live local studio in your browser: an interview, a Lobby of pieces, a catalog of every look the installed skills can actually make, and five rooms per piece.</p>
+      </div>
+      <dl class="rooms">
+        <div><dt>Overview</dt><dd>The piece at a glance: hand-off, renders, checkpoint feedback, files.</dd></div>
+        <div><dt>Board</dt><dd>A reference canvas for looks, stills and tablet sketches.</dd></div>
+        <div><dt>Beats</dt><dd>A timing strip with the song, the beats and a sheet agents can read.</dd></div>
+        <div><dt>Asks</dt><dd>Requests to agents, and their answers. They wait as files until someone is listening.</dd></div>
+        <div><dt>Review</dt><dd>A render, frame-accurate, with notes and measured facts.</dd></div>
+      </dl>
+      <p class="rule-quote">It never runs a skill or a model itself. It writes plain files beside the piece, and agents do the work.</p>
+      <div class="cmds">
+        <div class="cmd"><code>pnpm desk:start</code><span>find or start this checkout's Desk and print its URL</span></div>
+        <div class="cmd"><code>pnpm studio help</code><span>the same files from the terminal: pieces, asks, beats, skills</span></div>
+        <div class="cmd"><code>pnpm desk:agent</code><span>how an agent listens for asks filed in the rooms</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flood flood-blue rules" id="rules" aria-labelledby="rules-h">
+    <div class="grid">
+      <div class="rules-head">
+        <h2 id="rules-h"><span class="twopass" data-text="House rules">House rules</span></h2>
+        <p class="lede">Seven rules apply to every piece. They are the only things that don't bend.</p>
+      </div>
+      <ol class="rule-list">
+        <li><span class="k">1</span><b>Video is rendered from code</b><span>No text-to-video and no generated presenters. The GPUs have been told.</span></li>
+        <li><span class="k">2</span><b>Stills may be generated with Codex</b><span>Each one gets Leonardo's thumbs-up first, and its prompt is written down.</span></li>
+        <li><span class="k">3</span><b>Leonardo's brief beats a skill's defaults</b><span>Duration, palette, loudness, watermark: his call. Skills advise, they don't boss.</span></li>
+        <li><span class="k">4</span><b>Work lives in the workspace</b><span><code>experiments/&lt;study&gt;/</code> by default, <code>creations/&lt;slug&gt;/</code> for the real thing.</span></li>
+        <li><span class="k">5</span><b>Publishing needs an explicit go</b><span>Uploads, posts and gallery submissions are approved per piece, and approval doesn't roll over.</span></li>
+        <li><span class="k">6</span><b>Voices are cloned only on request</b><span>And only a voice Leonardo owns. We're not that kind of studio.</span></li>
+        <li><span class="k">7</span><b>Picking a manual-only skill is its manual step</b><span>The agent reads its <code>SKILL.md</code> and does it. Nobody gets asked to type a slash command.</span></li>
+      </ol>
+      <p class="freestyle"><b>Say "freestyle"</b> and the Desk, the intake and the rulings all go home early. You invent the process, the plan and the way it gets reviewed. Only the house rules stay.</p>
+      <div class="coworkers">
+        <h3>46 coworkers who never take lunch</h3>
+        <p>The skills live in <code>.agents/skills/</code> in their upstream form: we don't edit other people's coworkers. Routing and glue live in <code>AGENTS.md</code> and the two house skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="close" id="start" aria-labelledby="start-h">
+    <div class="grid">
+      <div class="close-head">
+        <h2 id="start-h"><span class="twopass" data-text="Get started">Get started</span></h2>
+        <p class="lede">Node 22.12 or newer and pnpm 11. Arriving as an agent? Read <code>AGENTS.md</code> first: it has the real rules.</p>
+      </div>
+      <div class="cmds">
+        <div class="cmd"><code>pnpm install</code><span>let pnpm manage the links</span></div>
+        <div class="cmd"><code>pnpm desk:start</code><span>say hello to the Desk</span></div>
+        <div class="cmd"><code>pnpm studio:doctor</code><span>checks your tools (ffmpeg-full, anyone?)</span></div>
+        <div class="cmd"><code>pnpm lint</code><span>the bouncer: briefs, media and studio checks</span></div>
+      </div>
+      <p class="worktree">Working in a Git worktree? Run <code>pnpm install</code>, then <code>pnpm worktree:link</code>, so the main checkout's <code>workspace/</code> follows you.</p>
+      <footer class="colophon">
+        <span>Private repo. This is a mood, not a license.</span>
+        <span>Run <code>pnpm lint</code> before you leave.</span>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<script>
+(() => {
+  const canvas = document.getElementById('proof');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height, FRAMES = 240, FPS = 24;
+  const INK = { yellow: '#ffe800', pink: '#ff48b0', blue: '#3255a4' };
+  const REG = { yellow: [-4, 6], pink: [6, -4], blue: [0, 0] };
+  const ORDER = ['yellow', 'pink', 'blue'];
+  const on = { yellow: true, pink: true, blue: true };
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const layer = () => { const c = document.createElement('canvas'); c.width = W; c.height = H; return c; };
+  const drums = { yellow: layer(), pink: layer(), blue: layer() };
+
+  function rng(seed) {
+    return () => { seed |= 0; seed = seed + 0x6d2b79f5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  }
+
+  const dropout = {};
+  ORDER.forEach((name, k) => {
+    const c = layer(), g = c.getContext('2d'), r = rng(1907 + k * 31);
+    g.fillStyle = '#000';
+    for (let n = 0; n < 9000; n++) { const s = r() * 2.4 + 0.4; g.globalAlpha = r() * 0.7; g.fillRect(r() * W, r() * H, s, s); }
+    dropout[name] = c;
+  });
+
+  const seedAt = i => {
+    const t = (i / FRAMES) * Math.PI * 2;
+    return { x: W / 2 + 230 * Math.sin(t), y: H * 0.42 + 150 * Math.sin(2 * t) };
+  };
+
+  function drawYellow(g, i) {
+    const t = (i / FRAMES) * Math.PI * 2;
+    g.save();
+    g.translate(W / 2, H / 2);
+    g.rotate(-0.36 + 0.12 * Math.sin(t));
+    g.fillStyle = INK.yellow;
+    for (let k = -4; k <= 4; k++) g.fillRect(-W, k * 150 - 40 + 40 * Math.sin(t + k), W * 2, 70);
+    g.restore();
+  }
+
+  function drawPink(g, i) {
+    g.fillStyle = INK.pink; g.strokeStyle = INK.pink;
+    for (let k = 4; k >= 1; k--) {
+      const p = seedAt((i - k * 7 + FRAMES) % FRAMES);
+      g.globalAlpha = 0.9; g.lineWidth = 5;
+      g.beginPath(); g.arc(p.x, p.y, 120 - k * 6, 0, Math.PI * 2); g.stroke();
+    }
+    g.globalAlpha = 1;
+    const p = seedAt(i);
+    g.beginPath(); g.arc(p.x, p.y, 132, 0, Math.PI * 2); g.fill();
+  }
+
+  function drawBlue(g, i) {
+    const t = (i / FRAMES) * Math.PI * 2, p = seedAt(i), step = 26;
+    g.fillStyle = INK.blue;
+    for (let y = step / 2; y < H - 270; y += step) {
+      for (let x = step / 2; x < W; x += step) {
+        const d = Math.hypot(x - p.x, y - p.y);
+        const r = 2 + 9.5 * (0.5 + 0.5 * Math.sin(d / 46 - t * 3));
+        g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill();
+      }
+    }
+    g.font = '800 132px "Bricolage Grotesque", sans-serif';
+    g.textBaseline = 'alphabetic';
+    g.fillText('i = ' + String(i).padStart(3, '0'), 40, H - 60);
+    g.font = '600 30px "JetBrains Mono", monospace';
+    g.fillText('drawFrame(ctx, i)', 44, H - 210);
+  }
+
+  const painters = { yellow: drawYellow, pink: drawPink, blue: drawBlue };
+
+  function drawFrame(i, visible = on) {
+    ORDER.forEach(name => {
+      const c = drums[name], g = c.getContext('2d');
+      g.globalCompositeOperation = 'source-over';
+      g.clearRect(0, 0, W, H);
+      painters[name](g, i);
+      g.globalCompositeOperation = 'destination-out';
+      g.drawImage(dropout[name], 0, 0);
+    });
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.fillStyle = '#f3f2ee';
+    ctx.fillRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'multiply';
+    ORDER.forEach(name => { if (visible[name]) ctx.drawImage(drums[name], REG[name][0], REG[name][1]); });
+    ctx.globalCompositeOperation = 'source-over';
+  }
+
+  const scrub = document.getElementById('scrub');
+  const out = document.getElementById('frame-out');
+  const play = document.getElementById('play');
+  const playLabel = document.getElementById('play-label');
+  let frame = 137, playing = !reduce, inView = true, last = 0, acc = 0;
+
+  function show(i) {
+    frame = i;
+    scrub.value = i;
+    out.textContent = 'i = ' + String(i).padStart(3, '0');
+    drawFrame(i);
+  }
+
+  function setPlaying(next) {
+    playing = next;
+    play.setAttribute('aria-pressed', String(next));
+    playLabel.textContent = next ? 'Pause' : 'Play';
+    play.querySelector('.i-pause').toggleAttribute('hidden', !next);
+    play.querySelector('.i-play').toggleAttribute('hidden', next);
+  }
+
+  function tick(now) {
+    if (playing && inView && !document.hidden) {
+      acc += Math.min(now - last, 100);
+      if (acc >= 1000 / FPS) { acc %= 1000 / FPS; show((frame + 1) % FRAMES); }
+    }
+    last = now;
+    requestAnimationFrame(tick);
+  }
+
+  play.addEventListener('click', () => setPlaying(!playing));
+  scrub.addEventListener('input', () => { setPlaying(false); show(Number(scrub.value)); });
+
+  document.querySelectorAll('.drum').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.dataset.drum;
+      const enabledCount = Object.values(on).filter(Boolean).length;
+      if (on[name] && enabledCount === 1) return;
+      on[name] = !on[name];
+      btn.setAttribute('aria-pressed', String(on[name]));
+      drawFrame(frame);
+    });
+  });
+
+  new IntersectionObserver(([e]) => { inView = e.isIntersecting; }).observe(canvas);
+
+  function printIn() {
+    setPlaying(playing);
+    if (reduce) { show(frame); return; }
+    const steps = [{ yellow: true, pink: false, blue: false }, { yellow: true, pink: true, blue: false }, on];
+    steps.forEach((v, k) => setTimeout(() => drawFrame(frame, v), k * 380));
+    setTimeout(() => { show(frame); last = performance.now(); requestAnimationFrame(tick); }, 2 * 380 + 300);
+  }
+
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
+    out.textContent = 'i = ' + String(frame).padStart(3, '0');
+    scrub.value = frame;
+    printIn();
+    if (reduce) requestAnimationFrame(tick);
+  });
+
+  if (!reduce && 'IntersectionObserver' in window) {
+    const floods = document.querySelectorAll('main .flood-yellow, main .flood-pink:not(.tree)');
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.replace('awaiting', 'printing');
+      io.unobserve(e.target);
+    }), { threshold: 0, rootMargin: '0px 0px 8% 0px' });
+    floods.forEach(el => {
+      if (el.getBoundingClientRect().top < innerHeight * 1.08) return;
+      el.classList.add('awaiting');
+      io.observe(el);
+    });
+  }
+
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    const label = btn.querySelector('.stamp-label');
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy);
+        btn.dataset.state = 'done';
+        label.textContent = 'Copied';
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(document.getElementById('cmd-start'));
+        const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range);
+        label.textContent = 'Press ⌘C';
+      }
+      setTimeout(() => { delete btn.dataset.state; label.textContent = 'Copy'; }, 1800);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#2a1418">
+<title>Creative Room · Films, music videos and posts rendered from code</title>
+<meta name="description" content="Creative Room is a private studio where Leonardo and a cast of agents make films, music videos, explainers and posts entirely from code.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brass: #caa565;
+    --brass-soft: #8c7244;
+    --velvet: #2a1418;
+    --velvet-line: #4b252c;
+    --wall: #14120f;
+    --panel: #1b1815;
+    --raised: #25211d;
+    --seam: #342e28;
+    --screen: #efe9de;
+    --dim: #aba397;
+    --faint: #958c80;
+
+    --color-bg-page: var(--wall);
+    --color-bg-surface: var(--panel);
+    --color-bg-raised: var(--raised);
+    --color-bg-well: var(--wall);
+    --color-bg-band: rgb(42 20 24 / 0.95);
+    --color-text-primary: var(--screen);
+    --color-text-secondary: var(--dim);
+    --color-text-inverse: var(--wall);
+    --color-border: var(--seam);
+    --color-border-hover: var(--brass-soft);
+    --color-separator: var(--seam);
+    --color-focus-ring: var(--brass);
+    --color-accent-text: var(--brass);
+    --color-selection: color-mix(in srgb, var(--brass) 38%, transparent);
+
+    --font-sans: "Geist", "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "Geist Mono", "Geist Mono Variable", ui-monospace, monospace;
+
+    --text-label: 0.75rem;
+    --text-small: 0.8125rem;
+    --text-body: 0.9375rem;
+    --text-title: 1rem;
+    --text-lead: 1.125rem;
+    --text-display: clamp(2.125rem, 1.6rem + 1.4vw, 2.875rem);
+    --text-hero: clamp(2.5rem, 1.4rem + 3.6vw, 4.25rem);
+
+    --radius-sm: 6px;
+    --radius-frame: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+
+    --page-x: 20px;
+    --band-height: 64px;
+    --space-section: 112px;
+
+    --ease-projector: cubic-bezier(0.16, 1, 0.3, 1);
+    --shadow-band: inset 0 -1px 0 var(--velvet-line), 0 14px 30px -18px rgb(0 0 0 / 0.7);
+  }
+
+  @media (min-width: 64em) {
+    :root { --page-x: 40px; --space-section: 144px; }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-padding-block-start: calc(var(--band-height) + 16px);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-bg-page);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.625;
+    font-feature-settings: "ss01" 1, "cv11" 1;
+    caret-color: var(--brass);
+  }
+
+  ::selection { background: var(--color-selection); color: var(--color-text-primary); }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+  }
+
+  h1, h2, h3, p, ol, ul, dl, dd, figure, blockquote { margin: 0; }
+
+  ol, ul { padding: 0; list-style: none; }
+
+  img { display: block; max-width: 100%; }
+
+  a { color: inherit; }
+
+  code, .mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: normal;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skip-link {
+    position: absolute;
+    inset-block-start: 12px;
+    inset-inline-start: -999px;
+    z-index: 20;
+    padding: 10px 16px;
+    border-radius: var(--radius-full);
+    background: var(--screen);
+    color: var(--wall);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .skip-link:focus { inset-inline-start: 16px; }
+
+  .shell {
+    width: 100%;
+    max-width: calc(1180px + 2 * var(--page-x));
+    margin-inline: auto;
+    padding-inline: var(--page-x);
+  }
+
+  /* Velvet band */
+
+  .band {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 10;
+    background: var(--color-bg-band);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-band);
+  }
+
+  .band .shell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: var(--band-height);
+  }
+
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    flex: none;
+    font-weight: 560;
+    letter-spacing: -0.005em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav {
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar { display: none; }
+
+  .nav ul { display: flex; gap: 8px; }
+
+  .nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding-inline: 10px;
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 150ms ease, background-color 150ms ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .nav a:hover { color: var(--color-text-primary); background: var(--color-bg-raised); }
+  }
+
+  @media (max-width: 40em) {
+    .nav {
+      mask-image: linear-gradient(to left, transparent 0, #000 28px);
+      -webkit-mask-image: linear-gradient(to left, transparent 0, #000 28px);
+    }
+
+    .nav ul { padding-inline-end: 24px; gap: 0; }
+  }
+
+  /* Buttons */
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-full);
+    font: inherit;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+      transform 160ms var(--ease-projector),
+      opacity 150ms ease,
+      border-color 150ms ease,
+      color 150ms ease;
+  }
+
+  .button:active { transform: scale(0.97); }
+
+  .button svg { width: 16px; height: 16px; flex: none; }
+
+  .button-primary {
+    background: var(--screen);
+    color: var(--color-text-inverse);
+    padding-inline-end: 18px;
+  }
+
+  .button-secondary {
+    background: transparent;
+    border-color: var(--color-border);
+    color: rgb(239 233 222 / 0.9);
+    padding-inline: 16px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .button-primary:hover { opacity: 0.9; }
+    .button-secondary:hover { border-color: var(--color-border-hover); color: var(--color-text-primary); }
+  }
+
+  /* Hero */
+
+  .hero {
+    padding-block: 96px 80px;
+    text-align: center;
+  }
+
+  @media (min-width: 64em) {
+    .hero { padding-block: 152px 112px; }
+  }
+
+  .hero h1 {
+    max-width: 18ch;
+    margin-inline: auto;
+    font-size: var(--text-hero);
+    font-weight: 520;
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  .hero .lead {
+    max-width: 58ch;
+    margin: 24px auto 0;
+    color: var(--color-text-secondary);
+    font-size: var(--text-lead);
+    line-height: 1.55;
+    text-wrap: pretty;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-block-start: 36px;
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 28px;
+    margin-block-start: 40px;
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+  }
+
+  .facts .mono { color: var(--color-text-primary); margin-inline-end: 6px; }
+
+  /* Sections */
+
+  .section { padding-block-start: var(--space-section); }
+
+  .section-head { max-width: 40rem; margin-block-end: 48px; }
+
+  .section-head h2,
+  .section-title {
+    font-size: var(--text-display);
+    font-weight: 520;
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  .section-head p {
+    margin-block-start: 16px;
+    color: var(--color-text-secondary);
+    text-wrap: pretty;
+  }
+
+  h3 {
+    font-size: var(--text-title);
+    font-weight: 560;
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+  }
+
+  /* Reel of sample frames */
+
+  .reel {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .frame {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: var(--radius-frame);
+    background: var(--panel);
+    box-shadow: 0 0 0 1px var(--color-border);
+  }
+
+  .frame-lead { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+
+  .frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.74) saturate(0.85);
+    transition: filter 450ms var(--ease-projector);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .frame:hover img { filter: none; }
+  }
+
+  @media (hover: none) {
+    .frame img { filter: none; }
+  }
+
+  @media (max-width: 48em) {
+    .reel { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .frame-lead { grid-row: auto; aspect-ratio: 16 / 10; }
+  }
+
+  @media (max-width: 30em) {
+    .reel { grid-template-columns: minmax(0, 1fr); }
+    .frame-lead { grid-column: auto; }
+  }
+
+  /* Principles */
+
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    gap: 24px;
+  }
+
+  .principle {
+    padding: 24px;
+    border-radius: var(--radius-xl);
+    background: var(--color-bg-surface);
+  }
+
+  .principle svg {
+    width: 20px;
+    height: 20px;
+    margin-block-end: 20px;
+    color: var(--color-text-secondary);
+  }
+
+  .principle p {
+    margin-block-start: 8px;
+    color: var(--color-text-secondary);
+    text-wrap: pretty;
+  }
+
+  /* Process */
+
+  .process {
+    display: grid;
+    gap: 48px;
+  }
+
+  @media (min-width: 64em) {
+    .process { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; }
+    .process .section-head { position: sticky; inset-block-start: calc(var(--band-height) + 48px); align-self: start; margin-block-end: 0; }
+  }
+
+  .steps { display: grid; gap: 28px; }
+
+  .step {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0 12px;
+  }
+
+  .step-number {
+    grid-row: span 2;
+    padding-block-start: 1px;
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    line-height: 1.6;
+  }
+
+  .step p {
+    max-width: 60ch;
+    color: var(--color-text-secondary);
+    text-wrap: pretty;
+  }
+
+  .step code, .room code, .principle code, .section-head code {
+    color: var(--color-text-primary);
+    font-size: 0.875em;
+    white-space: nowrap;
+  }
+
+  /* The Desk */
+
+  .desk-quote { margin-block-end: 64px; }
+
+  .desk-quote p {
+    max-width: 24ch;
+    font-size: var(--text-display);
+    font-weight: 520;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  .desk-quote figcaption {
+    margin-block-start: 20px;
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+  }
+
+  .rooms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: 32px 24px;
+  }
+
+  .room dt { font-weight: 560; letter-spacing: -0.005em; }
+
+  .room dd {
+    margin-block-start: 4px;
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+
+  /* Get started */
+
+  .start {
+    padding: 24px;
+    border-radius: var(--radius-xl);
+    background: var(--color-bg-surface);
+  }
+
+  @media (min-width: 48em) {
+    .start { padding: 40px; }
+  }
+
+  .commands { display: grid; gap: 12px; }
+
+  .command {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px 16px;
+    padding: 12px 12px 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-well);
+  }
+
+  .command code {
+    display: block;
+    overflow-x: auto;
+    font-size: var(--text-small);
+    white-space: nowrap;
+  }
+
+  .command .note {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    line-height: 1.4;
+  }
+
+  .copy {
+    min-height: 40px;
+    padding: 8px 14px;
+    font-size: var(--text-small);
+  }
+
+  .copy svg { width: 14px; height: 14px; }
+
+  .copy .icon-done { display: none; }
+  .copy[data-state="copied"] .icon-copy { display: none; }
+  .copy[data-state="copied"] .icon-done { display: block; }
+  .copy[data-state="copied"] { border-color: var(--color-border-hover); color: var(--color-text-primary); }
+
+  .start-aside {
+    margin-block-start: 24px;
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    line-height: 1.5;
+  }
+
+  .start-aside code { color: var(--color-text-primary); }
+
+  /* Footer */
+
+  .foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+    margin-block-start: var(--space-section);
+    padding-block: 28px 40px;
+    border-block-start: 1px solid var(--color-separator);
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+  }
+
+  /* Entrance: hidden state lives in the from-keyframe, so content stays visible if the animation never runs. */
+
+  .enter {
+    animation: enter-fade 500ms var(--ease-projector) both;
+    animation-delay: calc(var(--i, 0) * 80ms);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .enter { animation-name: enter-rise; }
+  }
+
+  @keyframes enter-fade {
+    from { opacity: 0; }
+  }
+
+  @keyframes enter-rise {
+    from { opacity: 0; transform: translateY(12px); }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="band">
+  <div class="shell">
+    <a class="wordmark" href="#">Creative Room</a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#desk">The Desk</a></li>
+        <li><a href="#start">Get started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero shell" aria-labelledby="hero-title">
+    <h1 id="hero-title" class="enter" style="--i: 0">A workshop where every frame is a function</h1>
+    <p class="lead enter" style="--i: 1">Creative Room makes films, music videos, explainers and posts from Canvas, shaders, Three.js, ffmpeg and one headless Chrome that has seen things. There is no camera, and no text-to-video.</p>
+    <div class="actions enter" style="--i: 2">
+      <a class="button button-primary" href="#start">
+        Start the Desk
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a class="button button-secondary" href="#work">See the work</a>
+    </div>
+    <ul class="facts enter" style="--i: 3" aria-label="Studio at a glance">
+      <li><span class="mono">46</span>skills</li>
+      <li><span class="mono">1</span>Desk</li>
+      <li><span class="mono">0</span>cameras</li>
+    </ul>
+  </section>
+
+  <section class="section shell" id="work" aria-labelledby="work-title">
+    <div class="section-head">
+      <h2 id="work-title">From the workspace</h2>
+      <p>Frames from pieces made in the room.</p>
+    </div>
+    <ul class="reel">
+      <li class="frame frame-lead"><img src="img/reel-1.webp" width="1280" height="720" alt="Kinetic type: the word PLAN repeated in red over black, captioned “plan the beats”."></li>
+      <li class="frame"><img src="img/reel-3.webp" width="1280" height="720" loading="lazy" alt="A 3D still life of a red sphere, a blue cube, a yellow cone and a ring on a pale disc, against a dusk gradient."></li>
+      <li class="frame"><img src="img/reel-4.webp" width="640" height="360" loading="lazy" alt="A pixel-art figure in a white hat crossing a green footbridge over a lily pond."></li>
+      <li class="frame"><img src="img/reel-2.webp" width="840" height="496" loading="lazy" alt="An isometric line drawing of a tray of square blocks, two of them raised into towers."></li>
+      <li class="frame"><img src="img/reel-5.webp" width="1280" height="720" loading="lazy" alt="An explainer chart, Shots per scene: seven scenes and 58 shots, with the climax the busiest at 15."></li>
+    </ul>
+  </section>
+
+  <section class="section shell" aria-labelledby="principles-title">
+    <div class="section-head">
+      <h2 id="principles-title">How the room works</h2>
+    </div>
+    <ul class="principles">
+      <li class="principle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        <h3>Rendered from code</h3>
+        <p><code>drawFrame(ctx, i)</code> is the camera. Every frame comes out of code, so a render can always be rebuilt.</p>
+      </li>
+      <li class="principle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        <h3>A Desk, if you want one</h3>
+        <p>Pick a vibe, gather references and plan beats against a track. Every room is optional, and chat is always a complete alternative.</p>
+      </li>
+      <li class="principle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h3><span class="mono">46</span> skills on call</h3>
+        <p>Coworkers who never take lunch, kept in their upstream form. Once a piece has a brief, the right one takes over.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section shell process" id="process" aria-labelledby="process-title">
+    <div class="section-head">
+      <h2 id="process-title">How a piece is born</h2>
+      <p>Seven stops from a shower thought to a final. Leonardo’s brief beats every skill’s defaults along the way.</p>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-number mono" aria-hidden="true">01</span>
+        <h3>Shower thought</h3>
+        <p>Ask in chat, or say “open the desk” and let it interview you.</p>
+      </li>
+      <li class="step">
+        <span class="step-number mono" aria-hidden="true">02</span>
+        <h3><code>brief.md</code></h3>
+        <p>Every piece has one, and its first heading is the piece’s title.</p>
+      </li>
+      <li class="step">
+        <span class="step-number mono" aria-hidden="true">03</span>
+        <h3>The Desk</h3>
+        <p>Pick a vibe, gather references and plan beats against a track.</p>
+      </li>
+      <li class="step">
+        <span class="step-number mono" aria-hidden="true">04</span>
+        <h3>Skill time</h3>
+        <p>The right skill takes over and runs its own process.</p>
+      </li>
+      <li class="step">
+        <span class="step-number mono" aria-hidden="true">05</span>
+        <h3>Render</h3>
+        <p>Frames come out of code into <code>renders/</code>, which can always be rebuilt.</p>
+      </li>
+      <li class="step">
+        <span class="step-number mono" aria-hidden="true">06</span>
+        <h3>QA</h3>
+        <p>Evidence goes in <code>qa/</code>. At checkpoints, Leonardo judges an interactive review page.</p>
+      </li>
+      <li class="step">
+        <span class="step-number mono" aria-hidden="true">07</span>
+        <h3>Ship it?</h3>
+        <p>Only if Leonardo says so. Approved finals live in the piece’s <code>final/</code> folder.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section shell" id="desk" aria-labelledby="desk-title">
+    <div class="section-head">
+      <h2 id="desk-title">The Desk</h2>
+      <p>A live local studio in your browser: an interview, a Lobby of pieces and five rooms per piece.</p>
+    </div>
+    <figure class="desk-quote">
+      <blockquote>
+        <p>“It never runs a skill or a model itself. It writes plain files beside the piece, and agents do the work.”</p>
+      </blockquote>
+      <figcaption>From the Creative Room README</figcaption>
+    </figure>
+    <dl class="rooms">
+      <div class="room"><dt>Overview</dt><dd>The piece at a glance: hand-off, renders, checkpoint feedback and files.</dd></div>
+      <div class="room"><dt>Board</dt><dd>A reference canvas for looks, stills and tablet sketches.</dd></div>
+      <div class="room"><dt>Beats</dt><dd>A timing strip with the song, the beats and a sheet agents can read.</dd></div>
+      <div class="room"><dt>Asks</dt><dd>Requests to agents and their answers, waiting as files until someone listens.</dd></div>
+      <div class="room"><dt>Review</dt><dd>A frame-accurate render with notes and measured facts.</dd></div>
+    </dl>
+  </section>
+
+  <section class="section shell" id="start" aria-labelledby="start-title">
+    <div class="start">
+      <div class="section-head">
+        <h2 id="start-title">Say hello to the Desk</h2>
+        <p>Needs Node 22.12 or later and pnpm 11. Run these from the repository root.</p>
+      </div>
+      <ol class="commands">
+        <li class="command">
+          <code id="cmd-install">pnpm install</code>
+          <button class="button button-secondary copy" type="button" data-copy="cmd-install">
+            <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <svg class="icon-done" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="copy-label">Copy</span><span class="sr-only"> pnpm install</span>
+          </button>
+          <span class="note">Installs every dependency. Let pnpm manage the links.</span>
+        </li>
+        <li class="command">
+          <code id="cmd-desk">pnpm desk:start</code>
+          <button class="button button-secondary copy" type="button" data-copy="cmd-desk">
+            <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <svg class="icon-done" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="copy-label">Copy</span><span class="sr-only"> pnpm desk:start</span>
+          </button>
+          <span class="note">Finds or starts this checkout’s Desk and prints its URL.</span>
+        </li>
+        <li class="command">
+          <code id="cmd-doctor">pnpm studio:doctor</code>
+          <button class="button button-secondary copy" type="button" data-copy="cmd-doctor">
+            <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <svg class="icon-done" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="copy-label">Copy</span><span class="sr-only"> pnpm studio:doctor</span>
+          </button>
+          <span class="note">Checks your tools. ffmpeg-full, anyone?</span>
+        </li>
+      </ol>
+      <p class="start-aside">In Claude Code, <code>/desk</code> does the same and opens it. Run <code>pnpm lint</code> before you leave.</p>
+      <p class="sr-only" role="status" id="copy-status"></p>
+    </div>
+  </section>
+</main>
+
+<footer class="shell">
+  <div class="foot">
+    <p>Creative Room</p>
+    <p>Private repo. This is a mood, not a license.</p>
+  </div>
+</footer>
+
+<script>
+  const status = document.getElementById('copy-status');
+  const resetTimers = new WeakMap();
+
+  function selectText(node) {
+    const range = document.createRange();
+    range.selectNodeContents(node);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+
+  document.querySelectorAll('[data-copy]').forEach((button) => {
+    const source = document.getElementById(button.dataset.copy);
+    const label = button.querySelector('.copy-label');
+
+    button.addEventListener('click', async () => {
+      const command = source.textContent.trim();
+      clearTimeout(resetTimers.get(button));
+
+      try {
+        await navigator.clipboard.writeText(command);
+        button.dataset.state = 'copied';
+        label.textContent = 'Copied';
+        status.textContent = `Copied ${command}`;
+      } catch {
+        selectText(source);
+        label.textContent = 'Selected';
+        status.textContent = `Couldn’t copy. ${command} is selected, so copy it with your keyboard.`;
+      }
+
+      resetTimers.set(button, setTimeout(() => {
+        delete button.dataset.state;
+        label.textContent = 'Copy';
+      }, 2000));
+    });
+  });
+</script>
+</body>
+</html>

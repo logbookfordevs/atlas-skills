@@ -1,0 +1,83 @@
+{
+  "surface": "app",
+  "judge": "M",
+  "pillars": {
+    "color": {
+      "X": 9.5,
+      "Y": 8.5,
+      "winner": "X",
+      "why": "X fully honors the warm graphite palette with strict brass discipline and implements the signature Projected Light Rule behind the featured render frame; Y removes the off-palette colors and passes contrast but completely omits the projected light spill cue."
+    },
+    "typography": {
+      "X": 9.5,
+      "Y": 8.5,
+      "winner": "X",
+      "why": "X achieves flawless typographical hierarchy adhering strictly to DESIGN.md tokens (520-weight display title, 560-weight 15px section titles, Geist Mono strictly for data) and enforces clean sentence case; Y maintains good font roles but defaults to Title Case and lacks the subtle display polish of X."
+    },
+    "layout": {
+      "X": 9.5,
+      "Y": 7.5,
+      "winner": "X",
+      "why": "X establishes a clear visual hierarchy with one prominent primary action, a featured latest render frame, and a steady 52px velvet band; Y lacks any primary button in the header, duplicates room navigation between the sticky band and the body, and inflates the band to 100px on mobile viewports."
+    },
+    "accessibility": {
+      "X": 9.0,
+      "Y": 9.0,
+      "winner": "tie",
+      "why": "Both contestants drastically improve accessibility to zero critical or serious axe violations, provide brass focus-visible rings, replace emoji divs with semantic interactive elements, and provide proper form labels and error handling."
+    },
+    "states": {
+      "X": 9.5,
+      "Y": 7.5,
+      "winner": "X",
+      "why": "X delivers flawless layout continuity across ready, empty, and loading states, with an interactive Try Again simulation and calm inline delete confirmation; Y's Try Again button permanently traps the user in an infinite loading skeleton with no resolution, and its empty state discards the room cards grid."
+    },
+    "copy": {
+      "X": 9.5,
+      "Y": 9.0,
+      "winner": "tie",
+      "why": "Both outputs faithfully align with PRODUCT.md by eliminating the pipeline render button in favor of agent asks, correcting Finder casing, and explaining that Desk files are optional; X has a slight edge on sentence case and stage line clarity but under the 1.0 margin threshold."
+    },
+    "motion": {
+      "X": 9.0,
+      "Y": 8.5,
+      "winner": "tie",
+      "why": "Both remove the 1.5s staggered overshoot and scale(1.1) hovers in favor of projector-eased transitions with prefers-reduced-motion considerations; X uses compositor-friendly skeleton sweeps while Y guards transforms with no-preference media queries."
+    },
+    "ux": {
+      "X": 9.5,
+      "Y": 7.5,
+      "winner": "X",
+      "why": "X captures the true soul of Creative Room Desk as a dark screening room where the samples carry the light, providing an immediate visual hero in the latest render and a clear primary action ('Ask for a render') that routes work to agents; Y feels like a generic administrative list without a visual focal point or clear header CTA."
+    }
+  },
+  "plants": {
+    "A1": { "X": "fixed", "Y": "fixed" },
+    "A2": { "X": "fixed", "Y": "fixed" },
+    "A3": { "X": "fixed", "Y": "fixed" },
+    "A4": { "X": "fixed", "Y": "fixed" },
+    "A5": { "X": "fixed", "Y": "fixed" },
+    "A6": { "X": "fixed", "Y": "fixed" },
+    "A7": { "X": "fixed", "Y": "fixed" },
+    "A8": { "X": "fixed", "Y": "fixed" },
+    "A9": { "X": "fixed", "Y": "fixed" },
+    "A10": { "X": "fixed", "Y": "fixed" },
+    "A11": { "X": "fixed", "Y": "fixed" },
+    "A12": { "X": "fixed", "Y": "fixed" }
+  },
+  "newDefects": {
+    "X": [
+      "Loading skeleton sweep animation runs on 15 elements concurrently when reduced motion is not active (X/index.html:208, X/shots/metrics.jsonl:3)."
+    ],
+    "Y": [
+      "Error state recovery is broken: clicking 'Try again' triggers setState('loading') which permanently hangs on the loading skeleton with no timer or return mechanism (Y/index.html:1007).",
+      "Header actions row has no primary action button, showing only secondary 'Open in Finder' and ghost 'Delete piece' (Y/index.html:840-843).",
+      "Sticky velvet band height expands to 100px on viewports under 1024px due to wrapping room tabs onto a second row, consuming excessive vertical viewport space on mobile (Y/index.html:678-687).",
+      "Redundant room navigation renders room links twice consecutively (once as sticky band tabs, and immediately again as card links in the main content) (Y/index.html:796-805, 860-865)."
+    ]
+  },
+  "overall": {
+    "ship": "X",
+    "why": "X captures the authentic screening-room identity of Creative Room Desk by showcasing the latest render with the signature Projected Light Rule and providing a clear primary action that connects directly to the agent workflow. Its state transitions and layout continuity are rock-solid, maintaining a compact 52px band and flawless responsive balance on mobile. In contrast, Y lacks a primary header CTA, breaks error recovery with a permanent loading freeze, and clutters narrow viewports with a 100px double-height sticky band."
+  }
+}

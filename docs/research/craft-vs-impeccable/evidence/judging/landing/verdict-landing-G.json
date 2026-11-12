@@ -1,0 +1,124 @@
+{
+  "surface": "landing",
+  "judge": "G",
+  "pillars": {
+    "color": {
+      "X": 8.5,
+      "Y": 8.5,
+      "winner": "tie",
+      "why": "Both restore the warm palette and excellent measured text contrast; Y has a small non-state brass step numeral (Y:285), but neither dilutes the accent materially."
+    },
+    "typography": {
+      "X": 8.5,
+      "Y": 8.5,
+      "winner": "tie",
+      "why": "Both use Geist language/mono data, balanced display wrapping and bounded readable copy. Y has a crisper shorter hero; X has a more restrained display scale (X:271\u2013287; Y:140\u2013147)."
+    },
+    "layout": {
+      "X": 6.5,
+      "Y": 8.5,
+      "winner": "Y",
+      "why": "Y shows captioned work in the opening viewport and exposes all mobile navigation labels; X spends the entire opening viewport before any sample and clips the mobile final nav label (page-1440.png and page-390.png in each shots directory)."
+    },
+    "accessibility": {
+      "X": 7.5,
+      "Y": 8,
+      "winner": "tie",
+      "why": "Both have zero supplied axe violations, landmarks, alt, real controls and live copy status. X focus outline is visibly clipped by nav overflow; Y focus is intact, but its comparison ledger hides the column meaning from assistive technology (X:178\u2013184; Y:443\u2013456)."
+    },
+    "states": {
+      "X": 7.5,
+      "Y": 8.5,
+      "winner": "Y",
+      "why": "Both provide actionable copy fallback and copied feedback. Y adds visible inline failure/status feedback and a complete focus outline; X announces failure only in hidden status and clips nav focus (X:753,790\u2013793; Y:529\u2013548; focus screenshots)."
+    },
+    "copy": {
+      "X": 8,
+      "Y": 8.5,
+      "winner": "tie",
+      "why": "Both replace false AI-platform claims with accurate code-rendering facts and the source voice. Y supplies sample captions and more complete Desk/QA/final facts; its hero copy command still lacks immediate setup context (X:601\u2013752; Y:390\u2013503)."
+    },
+    "motion": {
+      "X": 7,
+      "Y": 9,
+      "winner": "Y",
+      "why": "Neither has infinite motion or layout-property animation. X retains an unsolicited staggered 500ms entrance and button scale under reduced motion; Y uses restrained hover light/fade and reduces the long transitions and smooth scroll (X:238,561\u2013577; Y:362\u2013366; both metrics)."
+    },
+    "ux": {
+      "X": 6.5,
+      "Y": 8,
+      "winner": "Y",
+      "why": "Both make the studio credible and preserve identity. Y better demonstrates the work and offers a literal command action; X still hides all work below the first screen and retains a generic three-card structure, while its Start the Desk link merely scrolls (X:603\u2013607,634\u2013650)."
+    }
+  },
+  "plants": {
+    "L1": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L2": {
+      "X": "fixed",
+      "Y": "partial"
+    },
+    "L3": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L4": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L5": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L6": {
+      "X": "partial",
+      "Y": "fixed"
+    },
+    "L7": {
+      "X": "partial",
+      "Y": "fixed"
+    },
+    "L8": {
+      "X": "partial",
+      "Y": "fixed"
+    },
+    "L9": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L10": {
+      "X": "partial",
+      "Y": "fixed"
+    },
+    "L11": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L12": {
+      "X": "partial",
+      "Y": "fixed"
+    },
+    "L13": {
+      "X": "partial",
+      "Y": "fixed"
+    }
+  },
+  "newDefects": {
+    "X": [
+      "Navigation overflow clips the brass keyboard outline at its top/bottom, visible in X/shots/focus-tab3-1440.png; X/index.html:178\u2013184,188\u2013193. At 390px the last navigation label is also concealed behind the fade (X/shots/page-390.png).",
+      "The primary label Start the Desk implies execution but only navigates to instructions, X/index.html:603\u2013604. Prefer a label describing setup or a literal copy action.",
+      "Mobile command wells horizontally scroll their code at the narrow width rather than making the complete command immediately readable, X/index.html:499\u2013515 and X/shots/page-390-full.png; pnpm studio:doctor is visibly clipped."
+    ],
+    "Y": [
+      "Hero offers pnpm desk:start before installation/prerequisites, with no direct setup CTA beside it; Y/index.html:393\u2013397 versus prerequisites at 491\u2013500. A fresh checkout user can copy the wrong first command.",
+      "The This is / This is not comparison header is aria-hidden and the desktop descriptions contain no explicit negation; definition-list semantics present an opposite as the definition. Y/index.html:443\u2013456; the Not prefix is mobile-only CSS at 262\u2013265.",
+      "The final process step numeral is permanently brass without being current, selected or waiting for a real approval, Y/index.html:285; minor One Brass Rule deviation (DESIGN.md:163)."
+    ]
+  },
+  "overall": {
+    "ship": "Y",
+    "why": "I would ship Y because its captioned samples enter the first viewport, its mobile navigation stays legible, and the page explains the code-rendered studio with a concrete action. It preserves the dark screening-room identity while offering more complete visible feedback and quieter reduced-motion behavior. Before release, connect the hero command to setup prerequisites and make the comparison ledger\u2019s negative meaning explicit to assistive technology."
+  }
+}

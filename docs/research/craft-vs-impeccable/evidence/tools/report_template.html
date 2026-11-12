@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Craft vs impeccable · Design Skill Arena</title>
+<meta name="description" content="Head-to-head benchmark of atlas-craft (+atlas-motion) and impeccable on Creative Room briefs: blind judges, planted defects, rule-cited rulings.">
+<style>
+@font-face { font-family: "Bungee"; src: url({{FONT_BUNGEE}}) format("woff2"); font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url({{FONT_ATK400}}) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url({{FONT_ATK700}}) format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "JB Mono"; src: url({{FONT_JB400}}) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "JB Mono"; src: url({{FONT_JB700}}) format("woff2"); font-weight: 700; font-display: swap; }
+
+/* Single theme on purpose: an arcade cabinet screen. */
+:root {
+  --cab: #120e1a;
+  --bezel: #1c1628;
+  --bezel-2: #251d35;
+  --rule: #3a3150;
+  --ink: #f3eefc;
+  --dust: #b7adcc;
+  --p1: #f2a541;
+  --p1-deep: #8a5a17;
+  --p2: #4cc6ff;
+  --p2-deep: #17607f;
+  --ko: #ff5470;
+  --draw: #c9c1dc;
+  --display: "Bungee", Impact, sans-serif;
+  --body: "Atkinson", ui-sans-serif, system-ui, sans-serif;
+  --mono: "JB Mono", ui-monospace, monospace;
+  --gap: clamp(16px, 2.5vw, 28px);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--cab); }
+body { margin: 0; background: var(--cab); color: var(--ink); font: 16px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 50;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 1px, transparent 1px 3px); mix-blend-mode: multiply; }
+a { color: var(--p2); text-underline-offset: 3px; }
+code, .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+code { font-size: .82em; color: var(--dust); background: var(--bezel-2); padding: 1px 5px; border-radius: 3px; overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid var(--p2); outline-offset: 3px; }
+h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
+p { margin: 0; text-wrap: pretty; }
+.p1 { color: var(--p1); } .p2 { color: var(--p2); } .dim { color: var(--dust); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--ink); color: var(--cab); padding: 8px 14px; z-index: 100; font-weight: 700; }
+.skip:focus { top: 12px; }
+.wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
+
+/* HUD */
+.hud { position: sticky; top: 0; z-index: 40; background: linear-gradient(var(--cab) 70%, transparent); padding: 12px 0 18px; }
+.hud-inner { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: center; }
+.fighter-bar { display: grid; gap: 4px; }
+.fighter-bar .name { font: 14px/1 var(--display); letter-spacing: .04em; display: flex; justify-content: space-between; gap: 8px; }
+.fighter-bar.right .name { flex-direction: row-reverse; }
+.bar { position: relative; height: 18px; background: #000; border: 2px solid var(--ink); transform: skewX(-14deg); overflow: hidden; }
+.right .bar { transform: skewX(14deg); }
+.bar i { position: absolute; inset: 0; transform-origin: left; }
+.right .bar i { transform-origin: right; }
+.bar .trail { background: var(--ko); }
+.bar .fill { background: linear-gradient(180deg, color-mix(in oklab, var(--c) 70%, white), var(--c) 55%, color-mix(in oklab, var(--c) 70%, black)); }
+.left .bar { --c: var(--p1); } .right .bar { --c: var(--p2); }
+.bar i { transform: scaleX(var(--hp, 1)); transition: transform 600ms cubic-bezier(.2,.8,.2,1); }
+.bar .trail { transition-delay: 450ms; transition-duration: 900ms; }
+.hp-num { font: 700 13px/1 var(--mono); color: var(--dust); }
+.timer { font: 22px/1 var(--display); min-width: 92px; text-align: center; padding: 8px 10px; border: 2px solid var(--rule); background: var(--bezel); }
+.timer small { display: block; font: 700 10px/1.2 var(--mono); color: var(--dust); letter-spacing: .12em; margin-top: 4px; }
+
+/* Title */
+.title { padding: clamp(28px, 6vw, 72px) 0 var(--gap); display: grid; gap: var(--gap); }
+.eyebrow-free { font: 700 13px/1.4 var(--mono); color: var(--dust); letter-spacing: .08em; text-transform: uppercase; }
+.versus { font: clamp(40px, 8.5vw, 112px)/.92 var(--display); letter-spacing: -.01em; display: flex; flex-wrap: wrap; align-items: baseline; gap: .15em .3em; }
+.versus .x { font-size: .5em; color: var(--ko); }
+.versus .p1 { text-shadow: 4px 4px 0 var(--p1-deep); } .versus .p2 { text-shadow: 4px 4px 0 var(--p2-deep); }
+.lede { max-width: 64ch; font-size: 18px; color: var(--dust); }
+.lede b { color: var(--ink); }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--gap); }
+.card { background: var(--bezel); border: 2px solid var(--rule); padding: 20px; display: grid; gap: 10px; align-content: start; }
+.card.c1 { border-color: var(--p1-deep); } .card.c2 { border-color: var(--p2-deep); }
+.card h2 { font: 24px/1.1 var(--display); }
+.card dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0; font-size: 15px; }
+.card dt { color: var(--dust); font-family: var(--mono); font-size: 13px; padding-top: 2px; }
+.card dd { margin: 0; }
+
+/* Verdict up front */
+.upfront { border: 2px solid var(--ink); background: var(--bezel); padding: clamp(18px, 3vw, 32px); display: grid; gap: 16px; }
+.upfront h2 { font: clamp(22px, 3vw, 32px)/1.1 var(--display); }
+.tally { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.tally div { background: var(--cab); border: 1px solid var(--rule); padding: 14px; display: grid; gap: 4px; }
+.tally b { font: 34px/1 var(--display); }
+.tally span { font-size: 14px; color: var(--dust); }
+.upfront ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; max-width: 80ch; }
+
+/* Sections */
+section.block { padding: clamp(36px, 6vw, 72px) 0 0; display: grid; gap: 18px; }
+.block > h2, .round-head h2 { font: clamp(26px, 4vw, 44px)/1.05 var(--display); }
+.block > p { max-width: 70ch; color: var(--dust); }
+.pipeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; counter-reset: step; }
+.pipeline li { list-style: none; background: var(--bezel); border-top: 3px solid var(--p2); padding: 14px; font-size: 15px; display: grid; gap: 6px; }
+.pipeline li b { font: 12px/1.2 var(--mono); color: var(--dust); letter-spacing: .06em; text-transform: uppercase; }
+.pipeline { padding: 0; margin: 0; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--gap); }
+.panel { background: var(--bezel); border: 1px solid var(--rule); padding: 18px; display: grid; gap: 10px; align-content: start; }
+.panel h3 { font: 18px/1.2 var(--display); }
+.panel ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15px; }
+.stage-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+
+/* Rounds */
+.round { margin-top: clamp(40px, 7vw, 88px); border: 2px solid var(--rule); background: var(--bezel); scroll-margin-top: 90px; }
+.round-head { padding: 18px 22px; border-bottom: 2px solid var(--rule); display: grid; gap: 4px; background: linear-gradient(90deg, color-mix(in oklab, var(--p1) 12%, var(--bezel)), var(--bezel) 40% 60%, color-mix(in oklab, var(--p2) 12%, var(--bezel))); }
+.round-no { font: 700 13px/1 var(--mono); color: var(--ko); letter-spacing: .14em; text-transform: uppercase; }
+.round-sub { color: var(--dust); font-size: 15px; }
+.round-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+.col { padding: 20px 22px; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.col + .col { border-left: 2px solid var(--rule); }
+.col h3 { font: 700 12px/1 var(--mono); color: var(--dust); letter-spacing: .14em; text-transform: uppercase; }
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.shot { margin: 0; display: grid; gap: 6px; }
+.shot img { width: 100%; height: auto; display: block; border: 2px solid var(--rule); background: #000; }
+.shot.p1b img { border-color: var(--p1-deep); } .shot.p2b img { border-color: var(--p2-deep); }
+.shot figcaption { font: 12px/1.3 var(--mono); color: var(--dust); }
+.shot a { display: block; }
+.facts { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+thead th { font: 700 12px/1.2 var(--mono); color: var(--dust); text-transform: uppercase; letter-spacing: .06em; }
+td.num { text-align: right; font-weight: 700; }
+.scores { max-width: 420px; }
+.scores tbody th { font-weight: 400; }
+.why { font-size: 16px; }
+.rulecols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.rulecols h4 { font: 700 13px/1.2 var(--body); margin-bottom: 6px; }
+.rules { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 14px; }
+.rules li { padding-left: 10px; border-left: 3px solid var(--rule); }
+.rules.p1 li { border-color: var(--p1-deep); } .rules.p2 li { border-color: var(--p2-deep); }
+.rules code { display: block; margin-top: 3px; width: fit-content; max-width: 100%; }
+.eff { font: 700 10px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; padding: 2px 5px; border: 1px solid var(--rule); color: var(--dust); }
+.eff-hurt .eff { color: var(--ko); border-color: var(--ko); }
+.depth, .variance { font-size: 14px; color: var(--dust); }
+.tag { font: 700 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink); margin-right: 6px; }
+.verdict { display: flex; gap: 22px; align-items: center; padding: 18px 22px; border-top: 2px solid var(--rule); background: var(--cab); flex-wrap: wrap; }
+.stamp { font: clamp(34px, 5vw, 56px)/1 var(--display); padding: 6px 14px; border: 4px solid currentColor; transform: rotate(-6deg); }
+.stamp.p1s { color: var(--p1); } .stamp.p2s { color: var(--p2); } .stamp.draw { color: var(--draw); }
+.verdict-text { display: grid; gap: 4px; flex: 1 1 280px; }
+.winner { font-size: 18px; } .winner strong { font-family: var(--display); font-weight: 400; letter-spacing: .02em; }
+.conf { font: 700 12px/1 var(--mono); color: var(--dust); margin-left: 8px; text-transform: uppercase; }
+.ko-line { font: 15px/1.3 var(--display); color: var(--ko); letter-spacing: .02em; }
+.dmg { font: 12px/1.4 var(--mono); }
+
+.js .round .stamp { opacity: 0; transform: rotate(-6deg) scale(1.8); }
+.js .round.seen .stamp { opacity: 1; transform: rotate(-6deg) scale(1); transition: transform 380ms cubic-bezier(.3,1.6,.5,1), opacity 160ms linear; }
+
+/* Bonus */
+.bonus { margin-top: clamp(40px, 7vw, 88px); border: 2px dashed var(--ko); background: var(--bezel); }
+.bonus .round-head { background: var(--bezel); }
+.forfeit { display: grid; place-items: center; text-align: center; gap: 10px; padding: 26px 14px; border: 2px solid var(--rule); background: var(--cab); }
+.forfeit b { font: clamp(26px, 4vw, 40px)/1 var(--display); color: var(--p1); }
+blockquote { margin: 0; padding-left: 14px; border-left: 3px solid var(--p1-deep); color: var(--dust); font-size: 15px; }
+
+/* Scorecard */
+.final { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--gap); align-items: stretch; }
+.final .big { font: clamp(44px, 7vw, 80px)/1 var(--display); }
+.final .panel { gap: 6px; }
+
+.zoom { all: unset; display: block; cursor: zoom-in; }
+.zoom:focus-visible { outline: 3px solid var(--p2); outline-offset: 3px; }
+dialog.viewer { padding: 0; border: 2px solid var(--ink); background: var(--cab); color: var(--ink); max-width: min(1400px, 96vw); max-height: 94vh; }
+dialog.viewer::backdrop { background: rgba(8, 6, 12, .86); }
+dialog.viewer img { display: block; max-width: 100%; max-height: calc(94vh - 52px); width: auto; margin: 0 auto; }
+dialog.viewer .bar2 { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 12px; font: 13px/1.3 var(--mono); color: var(--dust); }
+dialog.viewer button { font: 700 13px/1 var(--mono); background: var(--ink); color: var(--cab); border: 0; padding: 8px 12px; cursor: pointer; }
+footer.end { padding: 64px 0 80px; color: var(--dust); font-size: 14px; }
+
+@media (max-width: 820px) {
+  .round-grid { grid-template-columns: 1fr; }
+  .col + .col { border-left: 0; border-top: 2px solid var(--rule); }
+  .rulecols { grid-template-columns: 1fr; }
+  .hud-inner { grid-template-columns: 1fr auto 1fr; gap: 8px; }
+  .fighter-bar .name { font-size: 11px; }
+  .timer { min-width: 64px; font-size: 16px; padding: 6px; }
+}
+@media (max-width: 480px) { .shots { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .bar i, .js .round.seen .stamp { transition: none !important; }
+  .js .round .stamp { opacity: 1; transform: rotate(-6deg); }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#rounds">Skip to the rounds</a>
+
+<div class="hud" role="region" aria-label="Scoreboard">
+  <div class="wrap hud-inner">
+    <div class="fighter-bar left">
+      <div class="name"><span class="p1">Team Craft</span><span class="hp-num" id="hp-craft-num">100</span></div>
+      <div class="bar" aria-hidden="true"><i class="trail" id="trail-craft"></i><i class="fill" id="fill-craft"></i></div>
+    </div>
+    <div class="timer" id="timer" aria-live="polite">READY<small>8 rounds</small></div>
+    <div class="fighter-bar right">
+      <div class="name"><span class="p2">impeccable</span><span class="hp-num" id="hp-imp-num">100</span></div>
+      <div class="bar" aria-hidden="true"><i class="trail" id="trail-imp"></i><i class="fill" id="fill-imp"></i></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <header class="title">
+    <p class="eyebrow-free">Design Skill Arena · Creative Room · 11 Nov 2026</p>
+    <h1 class="versus"><span class="p1">Craft</span><span class="x">vs</span><span class="p2">impeccable</span></h1>
+    <p class="lede">Two design skills, the same model, identical briefs from <b>Creative Room</b>. Six contestant runs, four blind verdicts from two non-Claude judges, 25 planted defects and a rule judge that checked each cited line against the skill files. Health bars drain by each fighter's blind score, round by round.</p>
+    <div class="cards">
+      <article class="card c1">
+        <h2 class="p1">P1 · Team Craft</h2>
+        <dl>
+          <dt>Main</dt><dd><code>atlas-craft</code>: refines color, type, layout, a11y, UI polish, copy and a states workbench</dd>
+          <dt>Sidekick</dt><dd><code>atlas-motion</code>: Animate, Fluid, Performance, Opportunities. Fights the Motion round.</dd>
+          <dt>Lineage</dt><dd>Source-composed from Jakub Krehel's better-* skills. <b>Copy mode is better-writing</b> (<code>SOURCE-MANIFEST.json:442</code>).</dd>
+          <dt>Style</dt><dd>Refiner. A new direction "needs its own decision" (<code>SKILL.md:23</code>).</dd>
+        </dl>
+      </article>
+      <article class="card c2">
+        <h2 class="p2">P2 · impeccable</h2>
+        <dl>
+          <dt>Version</dt><dd>4.8.0, engine 0.1.18</dd>
+          <dt>Moves</dt><dd>24 commands (polish, clarify, animate, harden, typeset, colorize…), new-work, critique, audit, live, a design detector binary</dd>
+          <dt>Modes</dt><dd>Persuade · Operate · Read · Experience, chosen per surface</dd>
+          <dt>Style</dt><dd>Director. "Refinement preserves; redesign replaces" (<code>SKILL.md:28</code>).</dd>
+        </dl>
+      </article>
+    </div>
+
+    <section class="upfront" aria-labelledby="h-upfront">
+      <h2 id="h-upfront">Result up front</h2>
+      <div class="tally">
+        <div><b class="p2">3</b><span>rounds to impeccable: States, Motion, UX</span></div>
+        <div><b class="p1">1</b><span>round to Craft: Accessibility</span></div>
+        <div><b>4</b><span>draws: Color, Type, Layout, Copy</span></div>
+        <div><b class="p2">4/4</b><span>blind ship picks went to impeccable</span></div>
+      </div>
+      <ul>
+        <li><b>Landing page:</b> impeccable won clearly. Both judges gave it Layout, States, Motion and UX, and G counted 12 of 13 planted defects fixed against Craft's 7.</li>
+        <li><b>In-app screen:</b> close. G gave Craft Layout and Accessibility and counted 9 of 12 fixes for Craft against impeccable's 7, yet both judges still chose to ship impeccable.</li>
+        <li><b>Copy is a draw.</b> Craft's Copy mode is better-writing, and the blind judges found no instruction gap.</li>
+        <li><b>Direction:</b> Craft refuses to fight, by design. impeccable built a whole new riso-zine direction unopposed.</li>
+        <li>Each cell is a single run, so read these as observed outcomes, not a ranking. See <a href="#caveats">caveats</a>.</li>
+      </ul>
+    </section>
+  </header>
+
+  <section class="block" id="method" aria-labelledby="h-method">
+    <h2 id="h-method">Tale of the tape</h2>
+    <p>Run as a Team Up Arena. Each skill was the only variable: both sides ran on Claude Opus 5.5, saw the same seed file and context, and wrote to isolated folders. Contestants were told to follow their skill's own loading rules and cite the rules they applied.</p>
+    <ol class="pipeline">
+      <li><b>1 · Audit</b>Six shards read every instruction file of both skills, checking line ranges, and built rule inventories with line citations. The first two codex auditors truncated their reads, so their work was discarded and redone.</li>
+      <li><b>2 · Seeds</b>Two flawed pages based on Creative Room, plus a hidden list of 25 skill-neutral planted defects, written before any run.</li>
+      <li><b>3 · Fight</b>Six runs: landing refine, in-app refine and new direction, once per skill. Non-interactive: no run could ask the user.</li>
+      <li><b>4 · Capture</b>agent-browser screenshots at 1440 and 390, a Tab-focus shot, axe-core WCAG 2.1 AA, overflow, infinite-animation count and a reduced-motion pass.</li>
+      <li><b>5 · Blind judges</b>G (GPT-6.1 Sol, high) and M (Gemini 3.8 Flash, high) scored anonymised X/Y outputs per pillar against a written rubric. The mapping was sealed.</li>
+      <li><b>6 · Rule judge</b>Unblinded GPT-6.1 Sol combined the verdicts, preferring G's line-cited evidence, and tied each win to rules it checked in both skills' files. Six citations were then spot-checked by hand.</li>
+    </ol>
+    <div class="two">
+      <div class="panel">
+        <h3>Why these tasks</h3>
+        <ul>
+          <li><b>Refine, don't build.</b> atlas-craft only refines existing interfaces. A from-scratch build would score its refusal, not its craft. A shared flawed seed is where both skills actually overlap.</li>
+          <li><b>Landing vs in-app.</b> impeccable treats them as different modes (Persuade vs Operate), and craft doesn't. The real Desk screen also tests empty, loading, error and destructive states that a landing page never shows.</li>
+          <li><b>A third, deliberately unfair task:</b> "new visual direction". It exposes refusal behaviour instead of assuming it.</li>
+          <li><b>Real material:</b> Creative Room's README, the Desk's real PRODUCT.md and DESIGN.md, and gallery stills made by the studio's own tools. Creative Room's code was never touched.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>The two stages</h3>
+        <div class="stage-shots">
+          <figure class="shot"><img src="{{IMG_SEED_LANDING}}" alt="Seed landing page: purple gradient AI-video headline, pulsing CTA, gradient badge"><figcaption>Stage 1 · Landing seed: 13 planted defects</figcaption></figure>
+          <figure class="shot"><img src="{{IMG_SEED_APP_READY}}" alt="Seed in-app Piece Overview: monospace everywhere, green and red status chips, red Delete button"><figcaption>Stage 2 · Desk Piece Overview seed: 12 planted defects, 4 states</figcaption></figure>
+          <figure class="shot"><img src="{{IMG_SEED_APP_LOADING}}" alt="Seed loading state: full-screen spinner covering the band"><figcaption>Seed loading: full-screen spinner at 0.3s</figcaption></figure>
+          <figure class="shot"><img src="{{IMG_SEED_APP_ERROR}}" alt="Seed error state: raw red ENOENT path dump"><figcaption>Seed error: raw ENOENT dump in #ff0000</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="rounds">
+  {{ROUNDS}}
+  </div>
+
+  <section class="round bonus" id="r-direction" aria-labelledby="h-direction">
+    <header class="round-head">
+      <p class="round-no">Bonus stage · not counted in the 8 rounds</p>
+      <h2 id="h-direction">New visual direction</h2>
+      <p class="round-sub">"The landing page feels generic. I want a new visual direction, not a tidy-up. Make it."</p>
+    </header>
+    <div class="round-grid">
+      <div class="col">
+        <h3>Team Craft</h3>
+        <div class="forfeit"><b>DOES NOT ENTER</b><span class="dim">index.html is byte-identical to the seed (cmp-verified)</span></div>
+        <blockquote>"Declined to build. Atlas Craft refines an existing interface. It has no method for creating a new visual direction, and it says that a new direction needs its own decision." — contestant NOTES</blockquote>
+        <p>{{DIR_CRAFT_BEHAVIOR}}</p>
+        <p class="variance"><span class="tag">Contract</span>{{DIR_CRAFT_CONTRACT}}</p>
+      </div>
+      <div class="col">
+        <h3>impeccable</h3>
+        <div class="shots">
+          <figure class="shot p2b"><img loading="lazy" src="{{IMG_IMP_DIRECTION}}" alt="impeccable's riso zine landing: blue flood, pink-outlined Creative Room title, live drawFrame canvas cover with ink toggles"><figcaption>Three-Drum Riso Zine · 1440</figcaption></figure>
+          <figure class="shot p2b"><img loading="lazy" src="{{IMG_IMP_DIRECTION_390}}" alt="impeccable's riso zine landing at phone width"><figcaption>· 390</figcaption></figure>
+        </div>
+        <p>{{DIR_IMP_BEHAVIOR}}</p>
+        <p><span class="tag">Quality</span>{{DIR_IMP_QUALITY}}</p>
+        <p class="variance"><span class="tag">Contract</span>{{DIR_IMP_CONTRACT}}</p>
+        <p class="variance"><span class="tag">Risks</span>{{DIR_IMP_RISKS}}</p>
+      </div>
+    </div>
+    <footer class="verdict">
+      <div class="stamp p2s" aria-hidden="true">W/O</div>
+      <div class="verdict-text">
+        <p class="winner">Walkover: <strong>IMPECCABLE</strong></p>
+        <p class="dim">{{DIR_VERDICT}}</p>
+      </div>
+    </footer>
+  </section>
+
+  <section class="block" id="scorecard" aria-labelledby="h-score">
+    <h2 id="h-score">Final scorecard</h2>
+    <div class="final">
+      <div class="panel"><span class="dim">Team Craft · health left</span><span class="big p1">{{FINAL_CRAFT}}</span><span class="dim">1 win · 4 draws · 3 losses</span></div>
+      <div class="panel"><span class="dim">impeccable · health left</span><span class="big p2">{{FINAL_IMP}}</span><span class="dim">3 wins · 4 draws · 1 loss · walkover in the bonus</span></div>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">Pillar</th><th scope="col">Landing</th><th scope="col">In-app</th><th scope="col">Combined</th><th scope="col">Confidence</th><th scope="col">Instruction depth (Craft / imp.)</th></tr></thead>
+        <tbody>{{SCORE_ROWS}}</tbody>
+      </table>
+    </div>
+    <p class="dim">Health is cosmetic but grounded in the data: each round deals (10 − the fighter's mean blind score across 4 judge×surface cells) × 3 damage. Instruction depth is the rule judge's read of each skill's files, separate from how this run turned out. Craft's instructions rated deeper on 5 pillars, impeccable's on 2. Deeper rules did not guarantee cleaner execution.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">Planted defects fixed</th><th scope="col" class="p1">Craft</th><th scope="col" class="p2">impeccable</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Landing · judge G</th><td class="num">7 / 13</td><td class="num">12 / 13</td></tr>
+          <tr><th scope="row">Landing · judge M</th><td class="num">13 / 13</td><td class="num">13 / 13</td></tr>
+          <tr><th scope="row">In-app · judge G</th><td class="num">9 / 12</td><td class="num">7 / 12</td></tr>
+          <tr><th scope="row">In-app · judge M</th><td class="num">12 / 12</td><td class="num">12 / 12</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block" id="split" aria-labelledby="h-split">
+    <h2 id="h-split">Landing vs in-app</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>Landing (Persuade)</h3>
+        <ul>
+          <li>impeccable 4 wins, 0 losses, 4 draws. Both judges gave it Layout, States, Motion and UX.</li>
+          <li>Decisive rule: Persuade's opening must "expose a clear action… in its working form" (<code>mode-persuade.md:9</code>). impeccable shipped a copyable <code>pnpm desk:start</code>, while Craft's "Start the Desk" scrolled.</li>
+          <li>Craft kept a three-card scaffold, which impeccable's craft-floor bans as page structure (<code>craft-floor.md:25</code>). Craft has no equivalent rule.</li>
+          <li>Color, type, a11y and copy were all near-identical: both reached 0 axe violations and identical contrast.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>In-app (Operate)</h3>
+        <ul>
+          <li>Even on pillars: Craft won Layout and Accessibility, impeccable won States and Motion, four draws.</li>
+          <li>Craft's mechanical depth showed here: preserved accessible names, a 3:1 input boundary, a native dialog, and more planted defects fixed (9 vs 7 per G).</li>
+          <li>impeccable still won both ship picks: its states connect (retry settles), its error copy is product-true, and its loading respects reduced motion.</li>
+          <li>Craft's single biggest loss is an execution bug, not a missing rule: its retry deadlock goes against its own <code>ui/index.md:13</code>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="refusals" aria-labelledby="h-ref">
+    <h2 id="h-ref">Where each one refuses to fight</h2>
+    <p>Scope limits, routing to other skills and things to ask first, each cited to the line in the skill files.</p>
+    <div class="two">
+      <div class="panel"><h3 class="p1">Team Craft</h3><ul>{{REF_CRAFT}}</ul></div>
+      <div class="panel"><h3 class="p2">impeccable</h3><ul>{{REF_IMP}}</ul></div>
+    </div>
+    <p>In short: <b>Craft won't pick a direction</b>, and won't audit a whole interface or write long prose, which go to Atlas Review and Writing for Humans. <b>impeccable won't polish over a wrong concept</b>, and asks before replacing factual copy. It has no direction it refuses.</p>
+  </section>
+
+  <section class="block" id="caveats" aria-labelledby="h-cav">
+    <h2 id="h-cav">Honest caveats</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>Sample and setup</h3>
+        <ul>
+          <li><b>n = 1 per cell.</b> One run per skill per task. G's own notes show single bugs swinging whole pillars (the retry deadlock, the hidden mobile names).</li>
+          <li><b>I wrote the seeds and the defect list.</b> I wrote them skill-neutral and before any run, but a different seed would test different rules.</li>
+          <li><b>Home advantage.</b> The Desk's real PRODUCT.md and DESIGN.md were originally made with impeccable's schema. A schema comment was stripped from the judges' copy, but impeccable's context script reads exactly this format.</li>
+          <li><b>Non-interactive.</b> Neither skill could ask the user. That penalises Craft's "needs its own decision" path most, and it also pushed impeccable off its decision-page contract (<code>new-work.md:51</code>).</li>
+          <li><b>Static stand-ins.</b> These are single-file HTML pages, not the React Desk, so there's no real persistence. Both outputs claim saves they can't perform.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Judging</h3>
+        <ul>
+          <li><b>Judge M was lenient:</b> it marked all 25 plants fixed for both skills. Where the judges split, the combined result favours G's line-cited evidence. With M alone, impeccable would win more pillars.</li>
+          <li><b>Model families:</b> contestants were Claude, blind judges GPT and Gemini (to avoid self-preference), and the rule judge GPT. Some audit shards were Claude Sonnet after the codex reads truncated.</li>
+          <li><b>Blinding is partial.</b> Judges didn't know the methods, but the two outputs differ in style. The direction round can't be blinded, because one side submitted nothing.</li>
+          <li><b>Equal weights</b> for pillars and surfaces is a choice. The bonus round is reported separately, not averaged in.</li>
+          <li><b>No human judge,</b> no screen reader, and no real-device test. Runtime checks were automated (axe, metrics, screenshots).</li>
+        </ul>
+      </div>
+    </div>
+    <p><b>Rule judge's summary:</b> {{OVERALL}}</p>
+  </section>
+
+  <section class="block" id="evidence" aria-labelledby="h-ev">
+    <h2 id="h-ev">Evidence locker</h2>
+    <p>Everything sits next to this file. Open the outputs themselves to check hover, focus and motion.</p>
+    <div class="two">
+      <div class="panel"><h3>Outputs</h3><ul>
+        <li><a href="evidence/runs/craft-landing/index.html">Craft · landing</a> · <a href="evidence/runs/imp-landing/index.html">impeccable · landing</a></li>
+        <li><a href="evidence/runs/craft-app/index.html?state=ready">Craft · in-app</a> · <a href="evidence/runs/imp-app/index.html?state=ready">impeccable · in-app</a></li>
+        <li><a href="evidence/runs/imp-direction/index.html">impeccable · new direction</a> · <a href="evidence/runs/craft-direction/NOTES.md">Craft · direction notes</a></li>
+        <li><a href="evidence/seeds/landing/index.html">Seed landing</a> · <a href="evidence/seeds/app/index.html">Seed in-app</a> · <a href="evidence/PLANTS.md">Planted defects</a></li>
+      </ul></div>
+      <div class="panel"><h3>Judging and audit</h3><ul>
+        <li>Blind verdicts: <a href="evidence/judging/landing/verdict-landing-G.md">landing G</a> · <a href="evidence/judging/landing/verdict-landing-M.md">landing M</a> · <a href="evidence/judging/app/verdict-app-G.md">in-app G</a> · <a href="evidence/judging/app/verdict-app-M.md">in-app M</a></li>
+        <li><a href="evidence/judging/RUBRIC.md">Rubric</a> · <a href="evidence/judging/rules/RULINGS.md">Rule rulings</a> · <a href="evidence/judging/rules/blind-map.json">Sealed X/Y map</a></li>
+        <li>Inventories: <a href="evidence/audit/craft-inventory.md">Team Craft</a> · <a href="evidence/audit/impeccable-inventory.md">impeccable</a></li>
+        <li>Contestant notes: each run folder's <code>NOTES.md</code>. Screenshots and metrics in <code>evidence/shots/</code></li>
+      </ul></div>
+    </div>
+  </section>
+</main>
+
+<footer class="end wrap">
+  <p>Out of scope by request: whether atlas-craft should compose from impeccable. This report doesn't recommend either way.</p>
+</footer>
+
+<dialog class="viewer" id="viewer" aria-label="Screenshot viewer"><div class="bar2"><span id="viewer-cap"></span><button type="button" id="viewer-close">Close</button></div><img id="viewer-img" alt=""></dialog>
+<script>
+document.documentElement.classList.add("js");
+(() => {
+  const set = (who, hp) => {
+    const v = Math.max(0, hp) / 100;
+    document.getElementById("fill-" + who).style.setProperty("--hp", v);
+    document.getElementById("trail-" + who).style.setProperty("--hp", v);
+    document.getElementById("hp-" + who + "-num").textContent = Math.round(hp);
+  };
+  const timer = document.getElementById("timer");
+  const rounds = [...document.querySelectorAll(".round[data-round]")];
+  let current = 0;
+  const show = (n) => {
+    if (n === current) return;
+    current = n;
+    if (n === 0) { set("craft", 100); set("imp", 100); timer.innerHTML = "READY<small>8 rounds</small>"; return; }
+    const r = rounds[n - 1];
+    set("craft", +r.dataset.hpCraft); set("imp", +r.dataset.hpImp);
+    timer.innerHTML = (n === rounds.length ? "FINAL" : "R" + n) + "<small>" + r.querySelector("h2").textContent + "</small>";
+  };
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => { if (en.isIntersecting) en.target.classList.add("seen"); });
+    let n = 0;
+    rounds.forEach((r, i) => { if (r.getBoundingClientRect().top < window.innerHeight * 0.55) n = i + 1; });
+    show(n);
+  }, { threshold: [0, 0.25, 0.5] });
+  rounds.forEach((r) => io.observe(r));
+  addEventListener("scroll", () => {
+    let n = 0;
+    rounds.forEach((r, i) => { if (r.getBoundingClientRect().top < window.innerHeight * 0.55) n = i + 1; });
+    show(n);
+  }, { passive: true });
+})();
+(() => {
+  const dlg = document.getElementById("viewer"), im = document.getElementById("viewer-img"), cap = document.getElementById("viewer-cap");
+  document.querySelectorAll(".shot img").forEach((img) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "zoom";
+    b.setAttribute("aria-label", "Enlarge: " + img.alt);
+    img.replaceWith(b); b.append(img);
+    b.addEventListener("click", () => { im.src = img.src; im.alt = img.alt; cap.textContent = img.closest("figure").querySelector("figcaption")?.textContent || ""; dlg.showModal(); });
+  });
+  document.getElementById("viewer-close").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", (ev) => { if (ev.target === dlg) dlg.close(); });
+})();
+</script>
+</body>
+</html>

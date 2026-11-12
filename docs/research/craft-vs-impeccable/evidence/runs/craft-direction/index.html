@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Creative Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #14120f; color: #efe9de; font-family: Geist, sans-serif; font-size: 15px; line-height: 1.3; }
+  *:focus { outline: none; }
+  .wrap { width: 1180px; margin: 0 auto; padding: 0 13px; }
+  .top { display: flex; justify-content: space-between; align-items: center; padding: 22px 13px; background: #2a1418; }
+  .logo { font-weight: 800; letter-spacing: 0.12em; color: #caa565; font-size: 17px; text-transform: uppercase; }
+  .links span { margin-left: 37px; color: #caa565; font-size: 13px; cursor: pointer; }
+  .hero { padding: 120px 0 40px; text-align: center; }
+  .hero h1 { font-size: 72px; line-height: 1.5; letter-spacing: 0.04em; font-weight: 800; margin: 0; color: #caa565;
+    background: linear-gradient(90deg, #caa565, #9b5cff, #ff4fd8); -webkit-background-clip: text; color: transparent; }
+  .hero p { color: #6b645a; font-size: 21px; max-width: none; margin: 18px auto 0; }
+  .badge { display: inline-block; background: #9b5cff; color: #fff; font-size: 10px; padding: 3px 7px; border-radius: 3px; margin-bottom: 22px; }
+  .cta-row { margin-top: 31px; }
+  .cta { display: inline-block; background: #caa565; color: #14120f; padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer;
+    animation: pulse 0.9s infinite alternate; box-shadow: 0 10px 40px rgba(0,0,0,.9), 0 0 0 4px #9b5cff; }
+  .cta.ghost { background: transparent; color: #caa565; border: 1px solid #caa565; animation: none; box-shadow: none; margin-left: 9px; }
+  @keyframes pulse { from { transform: scale(1); } to { transform: scale(1.12); } }
+  h4 { font-size: 19px; text-transform: uppercase; color: #caa565; margin: 0 0 14px; }
+  .reel { margin-top: 64px; display: flex; gap: 11px; overflow: hidden; }
+  .reel img { width: 280px; height: 170px; object-fit: cover; border-radius: 12px; border: 3px solid #000; }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 90px; }
+  .card { background: #000; padding: 13px; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,.8); transition: all 1.2s cubic-bezier(.68,-0.55,.27,1.55); position: relative; top: 0; }
+  .card:hover { top: -14px; width: 105%; }
+  .card .icon { width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(135deg,#9b5cff,#ff4fd8); display: grid; place-items: center; font-size: 22px; margin-bottom: 8px; }
+  .card p { color: #6b645a; font-size: 14px; }
+  .how { margin-top: 110px; }
+  .how ol { padding-left: 18px; color: #8a8278; font-size: 13px; line-height: 1.3; max-width: none; }
+  .how li { margin: 3px 0; }
+  .quote { margin: 80px 0; padding: 37px; border-left: 4px solid #caa565; font-size: 19px; color: #8a8278; font-style: italic; }
+  .signup { display: flex; gap: 9px; margin-top: 18px; }
+  .signup input { background: #1b1815; border: 1px solid #342e28; color: #efe9de; padding: 6px 8px; border-radius: 12px; font-size: 13px; width: 260px; }
+  .foot { margin-top: 100px; padding: 22px 13px; color: #4a443d; font-size: 11px; border-top: 1px solid #342e28; }
+  .fade { opacity: 0; transform: translateY(80px); transition: all 1.2s cubic-bezier(.68,-0.55,.27,1.55); }
+  .fade.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo">Creative Room</div>
+  <div class="links"><span onclick="location.hash='work'">Work</span><span onclick="location.hash='how'">Process</span><span onclick="location.hash='desk'">The Desk</span><span onclick="location.hash='join'">Contact</span></div>
+</div>
+
+<div class="wrap">
+  <div class="hero fade">
+    <div class="badge">NEW!!</div>
+    <h1>Unleash Your Creativity With AI-Powered Video</h1>
+    <p>Creative Room is a revolutionary, cutting-edge platform that empowers creators to seamlessly generate stunning videos, music videos, explainers and posts with the power of artificial intelligence and next-generation rendering technology...</p>
+    <div class="cta-row">
+      <div class="cta" onclick="alert('Coming soon!')">Get Started</div>
+      <div class="cta ghost" onclick="location.hash='work'">Learn More</div>
+    </div>
+  </div>
+
+  <div class="reel fade" id="work">
+    <img src="img/reel-1.webp">
+    <img src="img/reel-2.webp">
+    <img src="img/reel-3.webp">
+    <img src="img/reel-4.webp">
+    <img src="img/reel-5.webp">
+  </div>
+
+  <div class="features fade">
+    <div class="card"><div class="icon">🚀</div><h4>Blazing Fast</h4><p>Render videos at lightning speed with our powerful engine. Click here to learn more about performance.</p></div>
+    <div class="card"><div class="icon">✨</div><h4>AI Magic</h4><p>Let our AI handle the hard parts so you can focus on what matters most: your vision!</p></div>
+    <div class="card"><div class="icon">🎨</div><h4>Beautiful Templates</h4><p>Choose from hundreds of stunning templates designed by professionals.</p></div>
+  </div>
+
+  <div class="how fade" id="how">
+    <h4>How It Works</h4>
+    <ol>
+      <li>Shower thought. Ask in chat, or say "open the desk" and let it interview you. Every room in the Desk is optional and nothing is written by visiting, which means you can always just tell the agent in chat what you want and skip the whole interface if you prefer that.</li>
+      <li>brief.md. Every piece has one, and its first heading is the piece's title.</li>
+      <li>The Desk. Pick a vibe, gather references, plan beats against a track.</li>
+      <li>Skill time. The right skill takes over and runs its own process.</li>
+      <li>Render. Frames come out of code into renders/.</li>
+      <li>QA. Evidence goes in qa/.</li>
+      <li>Ship it? Only if Leonardo says so.</li>
+    </ol>
+  </div>
+
+  <div class="quote fade" id="desk">"The Desk never runs a skill or a model itself. It writes plain files beside the piece, and agents do the work."</div>
+
+  <div class="fade" id="join">
+    <h4>Stay In The Loop!</h4>
+    <div class="signup"><input placeholder="Email"><div class="cta" onclick="alert('Thanks!')">Submit</div></div>
+  </div>
+</div>
+
+<div class="foot">© Creative Room. All rights reserved. Made with ❤️ and AI.</div>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('in')));
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

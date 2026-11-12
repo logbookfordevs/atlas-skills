@@ -1,7 +1,7 @@
 # Model preferences
 
 - **Family fit:** GPT for correctness and robustness; Claude for experience design and architecture. Apply subject preferences to specialist evaluation and design/planning; ordinary execution uses task fit.
-- **Independence:** for reviews, audits and second opinions, prefer a suitable reviewer from another family than the lead. This does not add a seat by itself.
+- **Independence:** for reviews, audits and second opinions, prefer a suitable reviewer from another family than the lead. This does not add a seat by itself. A lower-tier family outside the ladders, such as Gemini Flash, can fill an added independence seat (a second judge or council member) beside a capable reviewer; disclose its tier.
 - **Cost frontier:** within the chosen family, prefer the least expensive suitable pair from the table; use Mixed when no family is favored. These are model families, independent of harness.
 - **Other options:** for an unlisted family or an empty supported ladder, assess the lowest-cost reliable available alternative.
 

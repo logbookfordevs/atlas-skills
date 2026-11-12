@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fruit dreams · Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --wall: #14120f; --panel: #1b1815; --raised: #25211d; --seam: #342e28;
+    --screen: #efe9de; --dim: #aba397; --faint: #958c80;
+    --brass: #caa565; --brass-soft: #8c7244; --velvet: #2a1418; --velvet-line: #4b252c;
+
+    --sans: "Geist", "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+    --mono: "Geist Mono", "Geist Mono Variable", ui-monospace, monospace;
+
+    --r-sm: 6px; --r-md: 8px; --r-frame: 10px; --r-lg: 12px; --r-xl: 16px; --r-full: 9999px;
+    --page-x: 20px; --stage-top: 48px; --section: 32px; --stage-foot: 56px;
+
+    --projector: cubic-bezier(0.16, 1, 0.3, 1);
+    --quick: 160ms;
+
+    color-scheme: dark;
+  }
+  @media (min-width: 1024px) { :root { --page-x: 40px; --stage-top: 64px; } }
+
+  * { box-sizing: border-box; }
+  html { background: var(--wall); }
+  body {
+    margin: 0; background: var(--wall); color: var(--screen);
+    font: 400 15px/1.625 var(--sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    caret-color: var(--brass);
+  }
+  ::selection { background: color-mix(in srgb, var(--brass) 38%, transparent); color: var(--screen); }
+  :focus { outline: none; }
+  :focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+  button { font: inherit; color: inherit; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  h1, h2, h3, p { margin: 0; }
+  .mono { font-family: var(--mono); font-feature-settings: "tnum"; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  svg.i { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Bench switcher: not part of the product. Lets reviewers flip states. */
+  .bench { position: fixed; bottom: 12px; right: 12px; z-index: 99; background: #0b0a09; border: 1px dashed #8fb7c9; padding: 6px; border-radius: 8px; font: 11px/1 system-ui; color: #8fb7c9; display: flex; gap: 4px; align-items: center; }
+  .bench button { background: none; border: 1px solid #8fb7c9; color: #8fb7c9; border-radius: 4px; padding: 3px 6px; cursor: pointer; }
+  .bench button[aria-pressed=true] { background: #8fb7c9; color: #0b0a09; }
+
+  /* Velvet band */
+  .band {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--velvet) 95%, transparent);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    box-shadow: inset 0 -1px 0 var(--velvet-line), 0 14px 30px -18px rgba(0,0,0,0.7);
+  }
+  .band-in { max-width: 1520px; margin: 0 auto; height: 52px; padding: 0 var(--page-x); display: flex; align-items: center; gap: 16px; }
+  .brand { font-size: 14px; font-weight: 560; letter-spacing: -0.005em; white-space: nowrap; border-radius: var(--r-sm); }
+  .brand span { color: var(--dim); font-weight: 400; }
+  .crumb { display: flex; align-items: center; gap: 8px; min-width: 0; color: var(--dim); font-size: 13px; }
+  .crumb .sep { color: var(--seam); }
+  .crumb .here { color: var(--screen); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .band-tools { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+  .tool {
+    display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px;
+    background: transparent; border: 1px solid transparent; border-radius: var(--r-full);
+    color: var(--dim); font-size: 13px; cursor: pointer;
+    transition: color var(--quick) ease-out, background-color var(--quick) ease-out, border-color var(--quick) ease-out;
+  }
+  .tool:hover { color: var(--screen); background: rgba(239,233,222,0.06); }
+  .tool.icon { width: 32px; padding: 0; justify-content: center; }
+  .tool.k { border-color: var(--velvet-line); }
+  .tool.k:hover { border-color: var(--brass-soft); }
+  .tool kbd { font: 12px var(--mono); color: var(--faint); }
+
+  /* Stage */
+  main { max-width: 1520px; margin: 0 auto; padding: var(--stage-top) var(--page-x) calc(var(--stage-foot) + 48px); }
+
+  .head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 40px; align-items: start; }
+  .head h1 {
+    font-size: clamp(34px, 3.1vw, 46px); font-weight: 520; line-height: 1.06; letter-spacing: -0.025em;
+    text-wrap: balance; max-width: 64ch;
+  }
+  .lede { margin-top: 12px; color: var(--dim); max-width: 64ch; text-wrap: pretty; }
+
+  .stageline { margin-top: 20px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .stageline ol { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+  .stageline li { width: 28px; height: 0; border-top: 2px solid var(--screen); }
+  .stageline li.open { border-top: 1px dashed var(--faint); margin-top: 1px; }
+  .stageline p { font-size: 13px; color: var(--dim); }
+  .stageline p b { color: var(--screen); font-weight: 500; }
+
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; padding-top: 6px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 10px 16px;
+    border-radius: var(--r-full); border: 1px solid var(--seam); background: transparent;
+    color: rgba(239,233,222,0.9); font-size: 14px; font-weight: 500; line-height: 1; cursor: pointer; white-space: nowrap;
+    transition: border-color var(--quick) ease-out, background-color var(--quick) ease-out, opacity var(--quick) ease-out, color var(--quick) ease-out;
+  }
+  .btn:hover { border-color: var(--brass-soft); }
+  .btn.primary { background: var(--screen); color: var(--wall); border-color: var(--screen); padding: 10px 20px; }
+  .btn.primary svg.i { stroke-width: 2; }
+  .btn.primary:hover { opacity: 0.9; }
+  .btn.ghost { border-color: transparent; color: var(--dim); padding: 10px 12px; }
+  .btn.ghost:hover { background: var(--raised); color: var(--screen); }
+  .btn:disabled { opacity: 0.4; cursor: default; }
+  .btn:active:not(:disabled) { transform: translateY(1px); }
+
+  /* Rooms */
+  .rooms { margin-top: var(--section); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .room {
+    display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; min-height: 76px;
+    border: 1px solid var(--seam); border-radius: var(--r-lg); background: transparent;
+    transition: background-color var(--quick) ease-out, border-color var(--quick) ease-out;
+  }
+  .room:hover { background: var(--panel); border-color: #4a423a; }
+  .room-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .room-name { font-weight: 560; letter-spacing: -0.005em; }
+  .room-top svg.i { width: 14px; height: 14px; color: var(--faint); transition: color var(--quick) ease-out, transform var(--quick) ease-out; }
+  .room:hover .room-top svg.i { color: var(--screen); transform: translate(1px, -1px); }
+  .room-meta { font-size: 13px; color: var(--dim); }
+  .room-meta .wait { color: var(--brass); }
+  .room-meta .wait::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 7px; border-radius: 50%; background: var(--brass); vertical-align: 1px; }
+  .room.empty { border-style: dashed; }
+
+  /* Work columns */
+  .cols { margin-top: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+  .sec + .sec { margin-top: 40px; }
+  .sec-h { display: flex; align-items: baseline; gap: 8px; padding-bottom: 12px; border-bottom: 1px solid var(--seam); }
+  .sec-h h2 { font-size: 15px; font-weight: 560; letter-spacing: -0.005em; }
+  .sec-h .count { font-size: 12.5px; color: var(--dim); }
+  .sec-h .aside { margin-left: auto; font-size: 13px; color: var(--dim); }
+
+  .frame { position: relative; display: block; border-radius: var(--r-frame); isolation: isolate; }
+  .frame .spill {
+    position: absolute; inset: 14px; z-index: -1; border-radius: var(--r-frame);
+    background-size: cover; background-position: center;
+    filter: blur(30px) saturate(1.5); opacity: 0.38; pointer-events: none;
+  }
+  .frame img {
+    display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
+    border-radius: var(--r-frame); box-shadow: 0 0 0 1px var(--seam);
+    filter: brightness(0.74) saturate(0.85);
+    transition: filter 450ms var(--projector);
+  }
+  .latest { margin-top: 20px; }
+  .latest:hover img, .latest:focus-visible img { filter: none; }
+  .latest-cap { display: flex; align-items: baseline; gap: 12px; margin-top: 12px; }
+  .latest-cap .t { font-weight: 560; }
+  .latest-cap .meta { margin-left: auto; color: var(--dim); font-size: 13px; }
+
+  .rows li + li { border-top: 1px solid var(--seam); }
+  .row {
+    display: flex; align-items: center; gap: 14px; padding: 10px 8px; margin: 0 -8px;
+    border-radius: var(--r-md); transition: background-color var(--quick) ease-out;
+  }
+  a.row:hover { background: var(--panel); }
+  .row .thumb { width: 64px; height: 36px; flex: none; object-fit: cover; border-radius: var(--r-sm); box-shadow: 0 0 0 1px var(--seam); filter: brightness(0.74) saturate(0.85); transition: filter 450ms var(--projector); }
+  a.row:hover .thumb { filter: none; }
+  .row .path { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+  .row .size { margin-left: auto; color: var(--dim); font-size: 12.5px; white-space: nowrap; }
+  .rows.renders { margin-top: 12px; }
+
+  .fb { display: flex; align-items: center; gap: 12px; padding: 12px 0; }
+  .fb .t { min-width: 0; }
+  .status { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; white-space: nowrap; color: var(--dim); }
+  .status::before { content: ""; width: 14px; border-top: 2px solid currentColor; }
+  .status.review { color: var(--brass); }
+  .status.review::before { border-top: 1px dashed currentColor; }
+
+  .ask { margin-top: 40px; padding: 24px; background: var(--panel); border-radius: var(--r-xl); }
+  .ask label { display: block; font-weight: 560; letter-spacing: -0.005em; }
+  .ask .hint { margin-top: 2px; font-size: 13px; line-height: 1.375; color: var(--dim); }
+  .ask-row { margin-top: 14px; display: flex; gap: 8px; }
+  .ask input {
+    flex: 1; min-width: 0; height: 44px; padding: 10px 16px;
+    background: var(--wall); border: 1px solid var(--seam); border-radius: var(--r-lg);
+    color: var(--screen); font: 400 15px/1.4 var(--sans);
+    transition: border-color var(--quick) ease-out;
+  }
+  .ask input::placeholder { color: var(--faint); }
+  .ask input:focus { border-color: var(--brass-soft); }
+  .ask input[aria-invalid=true] { border-color: var(--brass-soft); }
+  .ask .note { margin-top: 10px; font-size: 13px; color: var(--dim); min-height: 1.375em; }
+
+  /* Empty shapes */
+  .dashed { border: 1px dashed var(--seam); border-radius: var(--r-frame); padding: 28px 20px; text-align: center; color: var(--dim); font-size: 13px; line-height: 1.375; }
+  .dashed.tall { margin-top: 20px; padding: 56px 20px; display: grid; place-content: center; gap: 4px; }
+  .dashed b { color: var(--screen); font-weight: 500; font-size: 15px; }
+  .muted-note { margin-top: 12px; color: var(--dim); font-size: 13px; }
+
+  /* Loading skeleton */
+  .sk { background: var(--panel); border-radius: var(--r-sm); position: relative; overflow: hidden; }
+  .sk::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(239,233,222,0.035), transparent); transform: translateX(-100%); animation: sweep 1.6s ease-in-out infinite; }
+  @keyframes sweep { to { transform: translateX(100%); } }
+  .sk-title { height: 44px; width: min(360px, 70%); border-radius: var(--r-md); }
+  .sk-line { height: 14px; margin-top: 14px; width: min(560px, 90%); }
+  .sk-line.short { width: min(380px, 60%); margin-top: 10px; }
+  .sk-room { height: 76px; border-radius: var(--r-lg); background: transparent; border: 1px solid var(--seam); }
+  .sk-frame { margin-top: 20px; aspect-ratio: 16 / 9; border-radius: var(--r-frame); }
+  .sk-row { height: 36px; margin-top: 14px; }
+  .sk-ask { margin-top: 40px; height: 150px; border-radius: var(--r-xl); }
+  .loading-label { margin-top: 20px; font-size: 13px; color: var(--dim); }
+
+  /* Error */
+  .problem { margin-top: var(--section); max-width: 640px; padding: 24px; background: var(--panel); border-radius: var(--r-xl); }
+  .problem h2 { font-size: 15px; font-weight: 560; display: flex; align-items: center; gap: 10px; }
+  .problem h2 svg.i { color: var(--brass); }
+  .problem p { margin-top: 8px; color: var(--dim); max-width: 64ch; }
+  .problem code { font: 12.5px var(--mono); color: var(--screen); overflow-wrap: anywhere; }
+  .problem .actions { justify-content: flex-start; margin-top: 20px; padding-top: 0; }
+  .problem details { margin-top: 20px; border-top: 1px solid var(--seam); padding-top: 14px; font-size: 13px; color: var(--dim); }
+  .problem summary { cursor: pointer; width: fit-content; border-radius: var(--r-sm); }
+  .problem summary:hover { color: var(--screen); }
+  .problem pre { margin: 10px 0 0; padding: 12px 14px; background: var(--wall); border-radius: var(--r-md); font: 12.5px/1.5 var(--mono); color: var(--dim); white-space: pre-wrap; overflow-wrap: anywhere; }
+
+  /* Delete confirmation */
+  .confirm { margin-top: 16px; display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; justify-content: flex-end; font-size: 13px; color: var(--dim); }
+  .confirm p { max-width: 46ch; text-align: right; }
+  .confirm[hidden] { display: none; }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 8px); z-index: 50;
+    padding: 10px 16px; border-radius: var(--r-full); background: var(--raised); color: var(--screen); font-size: 13px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.45); opacity: 0; pointer-events: none;
+    transition: opacity 200ms ease-out, transform 300ms var(--projector);
+  }
+  .toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+  .view { animation: arrive 220ms var(--projector); }
+  @keyframes arrive { from { opacity: 0.4; } to { opacity: 1; } }
+
+  @media (max-width: 1023px) {
+    .cols { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  }
+  @media (max-width: 760px) {
+    .head { grid-template-columns: minmax(0, 1fr); }
+    .actions { justify-content: flex-start; padding-top: 0; }
+    .confirm { justify-content: flex-start; }
+    .confirm p { text-align: left; }
+    .crumb .path, .crumb .sep { display: none; }
+    .tool .label { display: none; }
+    .tool.k, .tool.tab { width: 32px; padding: 0; justify-content: center; border-color: transparent; }
+    .tool.k kbd { display: none; }
+    .tool.k .label { display: none; }
+    .rooms { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 420px) {
+    .brand span { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sk::after { animation: none; }
+    .view { animation: none; }
+    .frame img, .row .thumb, .room-top svg.i, .toast { transition-duration: 0ms; }
+    .btn:active:not(:disabled) { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-tablet" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M3 7.5h4M3 12h18M3 16.5h4M17 3v18M17 7.5h4M17 16.5h4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10M7 17 17 7"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+  <symbol id="i-retry" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></symbol>
+</svg>
+
+<header class="band">
+  <div class="band-in">
+    <a class="brand" href="#/">Creative Room <span>Desk</span></a>
+    <nav class="crumb" aria-label="Breadcrumb">
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="path">creations</span>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here" aria-current="page">fruit dreams</span>
+    </nav>
+    <div class="band-tools">
+      <button class="tool k" type="button" data-say="Jump to… opens here (⌘K)" aria-keyshortcuts="Meta+K"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><span class="label">Jump to</span><kbd>⌘K</kbd></button>
+      <button class="tool tab" type="button" data-say="Tablet pairing code opens here"><svg class="i" aria-hidden="true"><use href="#i-tablet"/></svg><span class="label">Tablet</span></button>
+      <button class="tool icon" type="button" aria-label="Settings" data-say="Settings open here"><svg class="i" aria-hidden="true"><use href="#i-settings"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+<div class="toast" role="status" aria-live="polite" id="toast"></div>
+<div class="bench" role="group" aria-label="Bench state switcher">Bench:
+  <button data-s="ready">ready</button><button data-s="empty">empty</button><button data-s="loading">loading</button><button data-s="error">error</button>
+</div>
+
+<script>
+const PIECE = {
+  title: "Fruit dreams",
+  slug: "fruit-dreams",
+  folder: "creations/fruit-dreams",
+  blurb: "A tiny cat sails a banana. A lemon balloon offers a lift. 30-second loop for Instagram, riso three-ink palette, lullaby track at 72 BPM.",
+  claims: [["Planned", true], ["Rendered", true], ["Checked", false], ["Reviewed", false], ["Approved", false]],
+  rooms: [
+    { name: "Board", meta: "24 cards", href: "#/piece/fruit-dreams/board" },
+    { name: "Beats", meta: "18 beats · 30 s", href: "#/piece/fruit-dreams/beats" },
+    { name: "Asks", meta: "2 need you", wait: true, href: "#/piece/fruit-dreams/asks" },
+    { name: "Review", meta: "3 renders", href: "#/piece/fruit-dreams/review" }
+  ],
+  renders: [
+    ["renders/draft-03.mp4", "18.4 MB", 1],
+    ["renders/draft-02.mp4", "17.9 MB", 2],
+    ["renders/frames/f0120.png", "1.2 MB", 3],
+    ["renders/poster.png", "844 KB", 4]
+  ],
+  feedback: [["Checkpoint 2 · motion pass", "In review"], ["Checkpoint 1 · look", "Done"]]
+};
+const EMPTY_ROOMS = [
+  { name: "Board", meta: "No cards yet", href: "#/piece/fruit-dreams/board" },
+  { name: "Beats", meta: "No beats yet", href: "#/piece/fruit-dreams/beats" },
+  { name: "Asks", meta: "No asks yet", href: "#/piece/fruit-dreams/asks" },
+  { name: "Review", meta: "No renders yet", href: "#/piece/fruit-dreams/review" }
+];
+const STATES = ["ready", "empty", "loading", "error"];
+const icon = (id) => `<svg class="i" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+const app = document.getElementById("app");
+let toastTimer;
+
+function say(message) {
+  const t = document.getElementById("toast");
+  t.textContent = message;
+  t.classList.add("on");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("on"), 2400);
+}
+
+function stageLine(claims) {
+  const reached = claims.filter(([, done]) => done);
+  const furthest = reached.length ? reached[reached.length - 1][0] : null;
+  const label = furthest ? `<b>${furthest}</b> · ${reached.length} of ${claims.length} stages on file` : `<b>Not started</b> · no stage on file yet`;
+  return `<div class="stageline">
+    <ol aria-hidden="true">${claims.map(([, done]) => `<li class="${done ? "" : "open"}"></li>`).join("")}</ol>
+    <p><span class="sr-only">Stage: </span>${label}</p>
+  </div>`;
+}
+
+function header(claims, withActions) {
+  const actions = withActions ? `
+    <div>
+      <div class="actions">
+        <button class="btn" type="button" data-say="Opening ${PIECE.folder} in Finder">${icon("folder")}Open in Finder</button>
+        <button class="btn primary" type="button" data-focus-ask>${icon("film")}Ask for a render</button>
+        <button class="btn ghost" type="button" aria-expanded="false" aria-controls="confirm-delete" data-delete>${icon("trash")}Delete</button>
+      </div>
+      <div class="confirm" id="confirm-delete" hidden>
+        <p>Delete <b style="color:var(--screen);font-weight:500">${PIECE.title}</b>? This removes <span class="mono">${PIECE.folder}/</span> from the workspace.</p>
+        <button class="btn ghost" type="button" data-keep>Keep piece</button>
+        <button class="btn" type="button" data-confirm-delete>Delete piece</button>
+      </div>
+    </div>` : "";
+  return `<div class="head">
+    <div>
+      <h1>${PIECE.title}</h1>
+      <p class="lede">${PIECE.blurb}</p>
+      ${stageLine(claims)}
+    </div>
+    ${actions}
+  </div>`;
+}
+
+function rooms(list, empty) {
+  return `<nav aria-label="Rooms"><ul class="rooms">${list.map((r) => `
+    <li><a class="room${empty ? " empty" : ""}" href="${r.href}" data-name="${r.name}">
+      <span class="room-top"><span class="room-name">${r.name}</span>${icon("arrow")}</span>
+      <span class="room-meta">${r.wait ? `<span class="wait">${r.meta}</span>` : r.meta}</span>
+    </a></li>`).join("")}</ul></nav>`;
+}
+
+function askPanel() {
+  return `<form class="ask" novalidate>
+    <label for="ask-input">Ask an agent</label>
+    <p class="hint" id="ask-hint">Saved to this piece's <span class="mono">desk/</span> folder. The agent answers there, and the chat still works too.</p>
+    <div class="ask-row">
+      <input id="ask-input" name="ask" autocomplete="off" aria-describedby="ask-hint ask-note" placeholder="e.g. Three stills of the lemon balloon at dusk">
+      <button class="btn" type="submit">Send ask</button>
+    </div>
+    <p class="note" id="ask-note" aria-live="polite"></p>
+  </form>`;
+}
+
+function renderReady() {
+  const [latest, ...older] = PIECE.renders;
+  const pending = PIECE.feedback.filter(([, s]) => s === "In review").length;
+  return `${header(PIECE.claims, true)}
+  ${rooms(PIECE.rooms)}
+  <div class="cols">
+    <section class="sec" aria-labelledby="h-renders">
+      <div class="sec-h"><h2 id="h-renders">Renders</h2><span class="count mono">${PIECE.renders.length}</span><span class="aside">Newest first</span></div>
+      <a class="frame latest" href="#/piece/fruit-dreams/review">
+        <span class="spill" style="background-image:url(img/render-${latest[2]}.webp)" aria-hidden="true"></span>
+        <img src="img/render-${latest[2]}.webp" width="1280" height="720" alt="Latest render, draft 03: the word PLAN in orange over an outlined type pattern">
+      </a>
+      <div class="latest-cap"><span class="t">Latest</span><span class="mono" style="font-size:13px">${latest[0]}</span><span class="meta mono">${latest[1]}</span></div>
+      <ul class="rows renders">${older.map(([p, sz, i]) => `
+        <li><a class="row" href="#/piece/fruit-dreams/review"><img class="thumb" src="img/render-${i}.webp" width="64" height="36" alt="" loading="lazy"><span class="path mono">${p}</span><span class="size mono">${sz}</span></a></li>`).join("")}
+      </ul>
+    </section>
+    <div>
+      <section class="sec" aria-labelledby="h-fb">
+        <div class="sec-h"><h2 id="h-fb">Checkpoint feedback</h2><span class="count mono">${PIECE.feedback.length}</span>${pending ? `<span class="aside">${pending} in review</span>` : ""}</div>
+        <ul class="rows">${PIECE.feedback.map(([t, s]) => `
+          <li class="fb"><span class="t">${t}</span><span class="status ${s === "In review" ? "review" : ""}">${s}</span></li>`).join("")}
+        </ul>
+      </section>
+      ${askPanel()}
+    </div>
+  </div>`;
+}
+
+function renderEmpty() {
+  return `${header(PIECE.claims.map(([k]) => [k, false]), true)}
+  <p class="muted-note" style="margin-top:28px;max-width:64ch">Nothing on the Desk for this piece yet. Every room is optional: open one when you want it, or keep working in the chat.</p>
+  ${rooms(EMPTY_ROOMS, true)}
+  <div class="cols">
+    <section class="sec" aria-labelledby="h-renders">
+      <div class="sec-h"><h2 id="h-renders">Renders</h2><span class="count mono">0</span></div>
+      <div class="dashed tall"><b>No renders yet</b><span>Ask for one below; finished renders show up here.</span></div>
+    </section>
+    <div>
+      <section class="sec" aria-labelledby="h-fb">
+        <div class="sec-h"><h2 id="h-fb">Checkpoint feedback</h2><span class="count mono">0</span></div>
+        <div class="dashed" style="margin-top:16px">No checkpoint pages for this piece yet.</div>
+      </section>
+      ${askPanel()}
+    </div>
+  </div>`;
+}
+
+function renderLoading() {
+  return `<div aria-busy="true">
+    <span class="sr-only">Loading ${PIECE.title}</span>
+    <div class="sk sk-title"></div>
+    <div class="sk sk-line"></div><div class="sk sk-line short"></div>
+    <p class="loading-label" aria-hidden="true">Reading <span class="mono">${PIECE.folder}/desk/</span>…</p>
+    <div class="rooms" aria-hidden="true">${"<div class='sk sk-room'></div>".repeat(4)}</div>
+    <div class="cols" aria-hidden="true">
+      <div><div class="sk" style="height:20px;width:120px"></div><div class="sk sk-frame"></div><div class="sk sk-row"></div><div class="sk sk-row"></div></div>
+      <div><div class="sk" style="height:20px;width:180px"></div><div class="sk sk-row"></div><div class="sk sk-row"></div><div class="sk sk-ask"></div></div>
+    </div>
+  </div>`;
+}
+
+function renderError() {
+  const file = `${PIECE.folder}/desk/board.json`;
+  return `<div class="head"><div><h1>${PIECE.title}</h1></div></div>
+  <section class="problem" role="alert" aria-labelledby="h-err">
+    <h2 id="h-err">${icon("alert")}The Desk couldn't read this piece's board</h2>
+    <p><code>desk/board.json</code> is missing from <code>${PIECE.folder}/</code>. The rest of the piece is unaffected: Desk records are optional, and a missing <code>desk/</code> file never breaks a piece.</p>
+    <p>If you moved or renamed the file, put it back and try again. Or open the Board room to start a new one.</p>
+    <div class="actions">
+      <button class="btn primary" type="button" data-retry>${icon("retry")}Try again</button>
+      <a class="btn" href="#/piece/fruit-dreams/board">Open the Board</a>
+      <button class="btn ghost" type="button" data-say="Opening ${PIECE.folder} in Finder">${icon("folder")}Open in Finder</button>
+    </div>
+    <details>
+      <summary>Technical details</summary>
+      <pre>ENOENT: no such file or directory, open
+'…/workspace/${file}'</pre>
+    </details>
+  </section>`;
+}
+
+const VIEWS = { ready: renderReady, empty: renderEmpty, loading: renderLoading, error: renderError };
+
+function render(s) {
+  if (!VIEWS[s]) s = "ready";
+  document.querySelectorAll(".bench button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.s === s)));
+  app.innerHTML = `<div class="view">${VIEWS[s]()}</div>`;
+  app.dataset.state = s;
+}
+
+app.addEventListener("click", (e) => {
+  const t = e.target.closest("button, a");
+  if (!t) return;
+
+  if (t.matches("[data-delete]")) {
+    const box = document.getElementById("confirm-delete");
+    const open = box.hidden;
+    box.hidden = !open;
+    t.setAttribute("aria-expanded", String(open));
+    if (open) box.querySelector("[data-keep]").focus();
+    return;
+  }
+  if (t.matches("[data-keep]")) {
+    const del = app.querySelector("[data-delete]");
+    document.getElementById("confirm-delete").hidden = true;
+    del.setAttribute("aria-expanded", "false");
+    del.focus();
+    return;
+  }
+  if (t.matches("[data-confirm-delete]")) {
+    app.innerHTML = `<div class="view"><div class="head"><div><h1>${PIECE.title} was deleted</h1><p class="lede"><span class="mono">${PIECE.folder}/</span> is no longer in the workspace.</p><div class="actions" style="justify-content:flex-start;margin-top:24px"><a class="btn primary" href="#/">Back to the Lobby</a></div></div></div></div>`;
+    app.querySelector("a").focus();
+    return;
+  }
+  if (t.matches("[data-focus-ask]")) {
+    const input = document.getElementById("ask-input");
+    if (!input.value) input.value = "Render a new draft of the full loop";
+    input.focus();
+    input.select();
+    return;
+  }
+  if (t.matches("[data-retry]")) {
+    const back = app.dataset.state;
+    render("loading");
+    setTimeout(() => render(back), 900);
+    return;
+  }
+  if (t.dataset.say) { say(t.dataset.say); return; }
+  if (t.matches("a[href^='#/']")) { e.preventDefault(); say(`${t.dataset.name || t.textContent.trim()} opens here`); }
+});
+
+app.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const input = e.target.querySelector("input");
+  const note = e.target.querySelector(".note");
+  const text = input.value.trim();
+  if (!text) {
+    input.setAttribute("aria-invalid", "true");
+    note.textContent = "Write what you need first, for example a still, a beat or a render.";
+    input.focus();
+    return;
+  }
+  input.removeAttribute("aria-invalid");
+  note.textContent = `Saved to desk/. The agent will answer in Asks.`;
+  input.value = "";
+});
+
+document.querySelector(".band").addEventListener("click", (e) => {
+  const t = e.target.closest("[data-say], a[href^='#/']");
+  if (!t) return;
+  e.preventDefault();
+  say(t.dataset.say || "The Lobby opens here");
+});
+
+document.addEventListener("keydown", (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); say("Jump to… opens here (⌘K)"); }
+});
+
+document.querySelectorAll(".bench button").forEach((b) => b.onclick = () => {
+  history.replaceState(null, "", "?state=" + b.dataset.s);
+  render(b.dataset.s);
+});
+
+const initial = new URLSearchParams(location.search).get("state");
+render(STATES.includes(initial) ? initial : "ready");
+</script>
+</body>
+</html>

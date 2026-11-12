@@ -1,0 +1,123 @@
+{
+  "surface": "landing",
+  "judge": "M",
+  "pillars": {
+    "color": {
+      "X": 9.0,
+      "Y": 10.0,
+      "winner": "Y",
+      "why": "Both fix all contrast failures and eliminate off-system purple/pink gradients, adhering strictly to the warm graphite palette (#14120f, #1b1815, #25211d). Y earns the win by fully implementing DESIGN.md's Projected Light Rule—lighting the dark screening room with the lead sample's 13% ambient wash and 38% contained spills on hover—while maintaining impeccable brass discipline."
+    },
+    "typography": {
+      "X": 8.5,
+      "Y": 9.5,
+      "winner": "Y",
+      "why": "Both contestants correctly adopt the Geist font family, 520 display / 560 title weights, proper measure constraints, and curly punctuation. Y wins because X introduces a typographic defect in the hero facts list (omitting spaces between numbers and nouns: '46skills', '1Desk', '0cameras'), whereas Y formats tabular numerals cleanly and uses decimal-leading-zero monospace counters in the production steps."
+    },
+    "layout": {
+      "X": 8.5,
+      "Y": 9.5,
+      "winner": "Y",
+      "why": "Both eliminate horizontal overflow at 390px and structure the content logically. Y wins by providing superior visual hierarchy: an immediate actionable CLI command in the hero ($ pnpm desk:start with 1-click copy), visible captions for every sample frame, and an engaging 2-column 'This is / This is not' ledger table adapted directly from the studio's identity."
+    },
+    "accessibility": {
+      "X": 9.0,
+      "Y": 9.5,
+      "winner": "tie",
+      "why": "Both achieve zero axe-core violations, full landmark coverage, robust skip links, descriptive alt text, high-contrast brass focus rings, and live regions for copy feedback. Y has visible captions and semantic description lists, but the score margin (0.5) is below the required 1.0 threshold, resulting in a tie."
+    },
+    "states": {
+      "X": 7.5,
+      "Y": 9.5,
+      "winner": "Y",
+      "why": "Y delivers exceptional state polish: an active nav scrollspy with brass underlines, contained frame light spills on hover, active/hover primary button opacity matching DESIGN.md, and reliable clipboard states. X restricts frame hover to fine-pointer media queries and lacks sample spill states entirely."
+    },
+    "copy": {
+      "X": 8.5,
+      "Y": 9.5,
+      "winner": "Y",
+      "why": "Both completely remove planted AI marketing slop. Y wins by embodying the genuine studio voice from CONTEXT.md with dry wit ('A place with a camera. We checked. Twice.', 'pnpm lint cries if it's missing') and precise CLI onboarding, while maintaining clean sentence case throughout."
+    },
+    "motion": {
+      "X": 7.0,
+      "Y": 9.5,
+      "winner": "Y",
+      "why": "Both eliminate the infinite pulsing CTA and 1.2s overshoot easing. Y achieves 0 infinite animations and 0 running animations, implementing the authentic 450ms/600ms/900ms projector ease on compositor-friendly properties with explicit reduced-motion duration clamps. X leaves 4 persistent running entrance animations due to animation-fill-mode: both."
+    },
+    "ux": {
+      "X": 8.0,
+      "Y": 9.5,
+      "winner": "Y",
+      "why": "Y provides a direct, developer-focused onboarding experience where users can immediately copy the run command, inspect verified work samples with captions, understand house rules, and follow the 7-step pipeline. Y fulfills the 'screening-room mood with brass' identity with uncompromising fidelity."
+    }
+  },
+  "plants": {
+    "L1": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L2": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L3": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L4": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L5": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L6": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L7": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L8": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L9": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L10": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L11": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L12": {
+      "X": "fixed",
+      "Y": "fixed"
+    },
+    "L13": {
+      "X": "fixed",
+      "Y": "fixed"
+    }
+  },
+  "newDefects": {
+    "X": [
+      "Missing whitespace between numeric values and nouns in hero facts list (X/index.html:612-614: '46skills', '1Desk', '0cameras') causing run-on text in accessibility tree announcements and text selection.",
+      "Entrance animation keyframes (.enter in X/index.html:527) retain active status permanently due to animation-fill-mode: both, resulting in 4 constantly running animations in metrics.jsonl.",
+      "Frame hover transitions are restricted to @media (hover: hover) and (pointer: fine) in X/index.html:314, preventing hover activation in environments reporting coarse or emulated pointers."
+    ],
+    "Y": [
+      "The section heading for the sample reel is hidden from sighted users via class 'sr-only' (Y/index.html:440: <h2 class=\"sr-only\" id=\"work-title\">Stills from the room</h2>), leaving the reel without an explicit visual section heading.",
+      "Mobile navigation stacks into a two-row column layout below 640px (Y/index.html:110-120), increasing the sticky header's vertical height on small screens."
+    ]
+  },
+  "overall": {
+    "ship": "Y",
+    "why": "Candidate Y captures the authentic screening-room soul of Creative Room by implementing the signature Projected Light Rule—where the room is the dark canvas and samples supply the light through ambient washes and contained hover spills. Its copy brilliantly weaves the studio's irreverent voice and non-negotiable rules directly from CONTEXT.md into a high-utility developer layout with an instant hero copy command. While Candidate X delivers a clean and highly accessible refinement, Y achieves a much higher level of atmospheric polish, motion restraint (0 running animations), and design system fidelity without overreaching."
+  }
+}

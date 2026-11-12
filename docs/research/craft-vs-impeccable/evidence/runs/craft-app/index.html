@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview · Fruit Dreams · Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+<style>
+  /* Product tokens come from DESIGN.md. */
+  :root {
+    --wall: #14120f;
+    --panel: #1b1815;
+    --raised: #25211d;
+    --seam: #342e28;
+    --screen: #efe9de;
+    --dim: #aba397;
+    --faint: #958c80;
+    --brass: #caa565;
+    --brass-soft: #8c7244;
+    --velvet: #2a1418;
+    --velvet-line: #4b252c;
+
+    --focus-ring: var(--brass);
+    --field-edge: var(--faint);
+    --image-outline: oklch(1 0 0 / 0.1);
+
+    --font-sans: "Geist", "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "Geist Mono", "Geist Mono Variable", ui-monospace, monospace;
+
+    --text-display: clamp(2.125rem, 3.1vw, 2.875rem);
+    --text-body: 0.9375rem;
+    --text-small: 0.8125rem;
+    --text-label: 0.75rem;
+    --text-mono: 0.78125rem;
+
+    --radius-sm: 6px;
+    --radius-frame: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+
+    --page-x: 20px;
+    --stage-top: 48px;
+    --section: 32px;
+    --band-height: 56px;
+
+    --ease-projector: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @media (min-width: 1024px) {
+    :root { --page-x: 40px; --stage-top: 64px; }
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-padding-block-start: calc(var(--band-height) + 16px);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    background: var(--wall);
+    color: var(--screen);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.625;
+    font-feature-settings: "ss01" 1, "cv11" 1;
+  }
+
+  ::selection { background: color-mix(in oklab, var(--brass) 38%, transparent); }
+
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  button, input { font: inherit; color: inherit; }
+  a { color: inherit; text-decoration: none; }
+  ul, ol { list-style: none; padding: 0; margin: 0; }
+  h1, h2, p { margin: 0; }
+
+  .mono {
+    font-family: var(--font-mono);
+    font-size: var(--text-mono);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.4;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* Bench switcher: NOT part of the product. Lets reviewers flip states. Keep it working. */
+  .bench { position: fixed; bottom: 12px; right: 12px; z-index: 99; background: #0b0a09; border: 1px dashed #8fb7c9; padding: 6px; border-radius: 8px; font: 11px/1 system-ui; color: #8fb7c9; display: flex; gap: 4px; align-items: center; }
+  .bench button { background: none; border: 1px solid #8fb7c9; color: #8fb7c9; border-radius: 4px; padding: 3px 6px; cursor: pointer; }
+  .bench button[aria-pressed=true] { background: #8fb7c9; color: #0b0a09; }
+  .bench button:focus-visible { outline: 2px solid #8fb7c9; outline-offset: 2px; }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    inset-inline-start: -999px;
+    inset-block-start: 8px;
+    z-index: 30;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background: var(--screen);
+    color: var(--wall);
+    font-weight: 500;
+  }
+  .skip-link:focus { inset-inline-start: 16px; }
+
+  /* Velvet band */
+  .band {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 24px;
+    min-height: var(--band-height);
+    padding-inline: var(--page-x);
+    background: color-mix(in srgb, var(--velvet) 95%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: inset 0 -1px 0 var(--velvet-line), 0 14px 30px -18px rgba(0, 0, 0, 0.7);
+  }
+
+  .brand {
+    display: inline-flex;
+    gap: 0.35em;
+    font-weight: 560;
+    letter-spacing: -0.005em;
+    white-space: nowrap;
+    border-radius: var(--radius-sm);
+  }
+  .brand span { color: var(--dim); font-weight: 400; }
+
+  .rooms-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+  }
+
+  .rooms-nav .piece-name {
+    flex: none;
+    color: var(--dim);
+    white-space: nowrap;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 4px;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-block: 6px;
+    padding-inline: 2px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+
+  .tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex: none;
+    min-height: 36px;
+    padding-inline: 10px;
+    color: var(--dim);
+    font-size: var(--text-small);
+    white-space: nowrap;
+    border-radius: var(--radius-sm);
+    position: relative;
+    transition: color 150ms ease;
+  }
+  .tab::after {
+    content: "";
+    position: absolute;
+    inset-inline: 10px;
+    bottom: 2px;
+    height: 2px;
+    background: transparent;
+  }
+  .tab[aria-current="page"] { color: var(--screen); }
+  .tab[aria-current="page"]::after { background: var(--brass); }
+  .tab .count { color: var(--dim); }
+  .tab .count.needs-you { color: var(--brass); }
+
+  .band-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .jump {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 0 8px 0 12px;
+    background: transparent;
+    border: 1px solid var(--seam);
+    border-radius: 9999px;
+    color: var(--dim);
+    font-size: var(--text-small);
+    cursor: pointer;
+    transition: border-color 150ms ease, color 150ms ease;
+  }
+  .jump kbd {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    padding: 2px 6px;
+    border-radius: 9999px;
+    background: var(--raised);
+    color: var(--dim);
+  }
+
+  .icon-button {
+    display: inline-grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 0;
+    border-radius: 9999px;
+    color: var(--dim);
+    cursor: pointer;
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  /* Page shell */
+  .shell {
+    max-width: 1520px;
+    margin-inline: auto;
+    padding: var(--stage-top) var(--page-x) 120px;
+  }
+  main:focus { outline: none; }
+
+  .piece-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px 40px;
+  }
+
+  .piece-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+    max-width: 64ch;
+  }
+
+  h1 {
+    font-size: var(--text-display);
+    font-weight: 520;
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  .blurb {
+    color: var(--dim);
+    text-wrap: pretty;
+  }
+  .blurb.is-missing { font-style: normal; }
+
+  .piece-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
+    color: var(--dim);
+    font-size: var(--text-small);
+    line-height: 1.375;
+  }
+
+  .path { color: var(--dim); overflow-wrap: anywhere; }
+
+  /* Stage line: solid where a file shows the claim, dashed where nothing does */
+  .stage {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .stage ol { display: flex; gap: 4px; }
+  .stage li {
+    width: 22px;
+    height: 0;
+    border-top: 2px solid var(--screen);
+  }
+  .stage li.is-open { border-top: 1px dashed var(--faint); }
+  .stage-label { color: var(--screen); white-space: nowrap; }
+  .stage-label .of { color: var(--dim); }
+
+  .piece-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .action-status {
+    flex-basis: 100%;
+    min-height: 1.375em;
+    color: var(--dim);
+    font-size: var(--text-small);
+    line-height: 1.375;
+    text-align: end;
+  }
+
+  /* Buttons */
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 10px 16px;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: opacity 150ms ease, background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+  }
+  .button.has-icon { padding-inline-start: 14px; }
+
+  .button-primary {
+    background: var(--screen);
+    color: var(--wall);
+    padding-inline: 20px;
+  }
+  .button-primary.has-icon { padding-inline-start: 18px; }
+  .button-primary .icon { stroke-width: 2; }
+
+  .button-secondary {
+    background: transparent;
+    border-color: var(--seam);
+    color: color-mix(in srgb, var(--screen) 90%, transparent);
+  }
+
+  .button-ghost {
+    background: transparent;
+    color: var(--dim);
+  }
+
+  .button[aria-disabled="true"] { opacity: 0.4; cursor: default; }
+
+  /* Sections */
+  .rooms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    gap: 16px;
+    margin-top: var(--section);
+  }
+
+  .room-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-height: 88px;
+    padding: 16px 20px;
+    background: var(--panel);
+    border: 1px solid var(--seam);
+    border-radius: var(--radius-xl);
+    transition: background-color 150ms ease, border-color 150ms ease;
+  }
+  .room-card .room-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-weight: 560;
+    letter-spacing: -0.005em;
+  }
+  .room-card .room-title .icon { color: var(--dim); }
+  .room-card .room-fact { color: var(--dim); font-size: var(--text-small); line-height: 1.375; }
+  .room-card .room-fact .mono { color: var(--screen); font-size: inherit; }
+  .room-card.needs-you .room-fact { color: var(--brass); }
+  .room-card.needs-you .room-fact .mono { color: var(--brass); }
+  .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-inline-end: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    vertical-align: middle;
+  }
+
+  .room-card.is-empty {
+    background: transparent;
+    border-style: dashed;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--section);
+    margin-top: var(--section);
+  }
+  @media (min-width: 960px) {
+    .columns { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px; align-items: start; }
+  }
+
+  .stack { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+
+  .panel {
+    padding: 24px;
+    background: var(--panel);
+    border: 1px solid var(--seam);
+    border-radius: var(--radius-xl);
+    min-width: 0;
+  }
+
+  .panel-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: var(--text-body);
+    font-weight: 560;
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+  }
+
+  .panel-note { color: var(--dim); font-size: var(--text-small); line-height: 1.375; }
+
+  /* Rows: inset by the row padding so text aligns with the panel heading */
+  .rows { margin-inline: -12px; display: flex; flex-direction: column; gap: 2px; }
+
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: var(--radius-lg);
+    transition: background-color 150ms ease;
+  }
+
+  .thumb {
+    flex: none;
+    width: 80px;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    outline: 1px solid var(--image-outline);
+    outline-offset: -1px;
+    filter: brightness(0.74) saturate(0.85);
+    transition: filter 450ms var(--ease-projector);
+  }
+
+  .row .file { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .row .file .mono { color: var(--screen); overflow-wrap: break-word; }
+  .row .file .kind { color: var(--dim); font-size: var(--text-label); line-height: 1.4; }
+  .row .size { flex: none; color: var(--dim); text-align: end; }
+
+  .row .checkpoint { flex: 1; min-width: 0; }
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex: none;
+    font-size: var(--text-small);
+    line-height: 1.375;
+    white-space: nowrap;
+    color: var(--dim);
+  }
+  .status.needs-you { color: var(--brass); }
+  .status .icon { width: 14px; height: 14px; }
+
+  /* Ask form */
+  .ask-form { display: flex; flex-direction: column; gap: 8px; }
+  .ask-form label { font-weight: 560; letter-spacing: -0.005em; }
+  .ask-hint { color: var(--dim); font-size: var(--text-small); line-height: 1.375; }
+  .ask-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+  .ask-row input {
+    flex: 1 1 220px;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 16px;
+    background: var(--wall);
+    border: 1px solid var(--field-edge);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-body);
+    caret-color: var(--brass);
+    transition: border-color 150ms ease;
+  }
+  .ask-row input::placeholder { color: var(--faint); }
+  .ask-row input:focus { border-color: var(--brass-soft); }
+  .ask-row input[aria-invalid="true"] { border-color: var(--screen); }
+  .ask-suggest { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 4px 12px;
+    background: transparent;
+    border: 1px solid var(--seam);
+    border-radius: 9999px;
+    color: var(--screen);
+    font-size: var(--text-label);
+    line-height: 1.4;
+    cursor: pointer;
+    transition: border-color 150ms ease;
+  }
+  .field-message { min-height: 1.375em; color: var(--dim); font-size: var(--text-small); line-height: 1.375; }
+  .field-message.is-error { color: var(--screen); display: flex; gap: 6px; align-items: center; }
+
+  /* Empty: dashed shapes stand in for what will be there */
+  .empty-panel {
+    margin-top: var(--section);
+    padding: 32px;
+    border: 1px dashed var(--seam);
+    border-radius: var(--radius-xl);
+    display: grid;
+    gap: 32px;
+  }
+  @media (min-width: 960px) {
+    .empty-panel { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: start; }
+  }
+  .empty-copy { display: flex; flex-direction: column; gap: 8px; max-width: 52ch; }
+  .empty-copy p { color: var(--dim); text-wrap: pretty; }
+  .empty-rooms { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 12px; font-size: var(--text-small); }
+  .text-link {
+    color: var(--screen);
+    text-decoration: underline;
+    text-decoration-color: var(--faint);
+    text-underline-offset: 3px;
+    text-decoration-thickness: from-font;
+    transition: text-decoration-color 150ms ease;
+  }
+
+  /* Loading: the room's shape, held still */
+  .skeleton { display: block; background: var(--raised); border-radius: var(--radius-sm); }
+  .sk-title { width: min(360px, 70%); height: 40px; }
+  .sk-line { height: 12px; width: 100%; max-width: 56ch; }
+  .sk-line.short { width: 60%; }
+  .sk-card { min-height: 88px; border-radius: var(--radius-xl); background: var(--panel); border: 1px solid var(--seam); }
+  .sk-panel { min-height: 260px; border-radius: var(--radius-xl); background: var(--panel); border: 1px solid var(--seam); }
+  .loading-note { display: inline-flex; align-items: center; gap: 10px; color: var(--dim); font-size: var(--text-small); line-height: 1.375; }
+  .spinner {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1.5px solid var(--seam);
+    border-top-color: var(--dim);
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Error */
+  .error-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 64ch;
+  }
+  .error-panel .error-mark { color: var(--dim); width: 24px; height: 24px; }
+  .error-panel p { color: var(--dim); text-wrap: pretty; }
+  .error-panel p .mono { color: var(--screen); }
+  .error-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 24px; }
+  .error-actions .action-status { flex-basis: auto; text-align: start; }
+  details.error-details { margin-top: 16px; color: var(--dim); font-size: var(--text-small); }
+  details.error-details summary { cursor: pointer; width: max-content; border-radius: var(--radius-sm); }
+  details.error-details pre {
+    margin: 12px 0 0;
+    padding: 12px 16px;
+    background: var(--panel);
+    border: 1px solid var(--seam);
+    border-radius: var(--radius-lg);
+    color: var(--screen);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  /* Delete confirmation */
+  dialog.confirm {
+    width: min(440px, calc(100% - 32px));
+    padding: 24px;
+    background: var(--panel);
+    color: var(--screen);
+    border: 1px solid var(--seam);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+    opacity: 1;
+    transition: opacity 250ms var(--ease-projector), overlay 250ms allow-discrete, display 250ms allow-discrete;
+  }
+  dialog.confirm::backdrop {
+    background: rgb(0 0 0 / 0.7);
+    backdrop-filter: blur(2px);
+    opacity: 1;
+    transition: opacity 250ms var(--ease-projector), overlay 250ms allow-discrete, display 250ms allow-discrete;
+  }
+  @starting-style {
+    dialog.confirm[open] { opacity: 0; }
+    dialog.confirm[open]::backdrop { opacity: 0; }
+  }
+  dialog.confirm:not([open]) { opacity: 0; }
+  dialog.confirm h2 { font-size: 1.125rem; line-height: 1.3; margin-bottom: 8px; }
+  dialog.confirm p { color: var(--dim); text-wrap: pretty; }
+  dialog.confirm .mono { color: var(--screen); }
+  dialog.confirm .dialog-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px; margin-top: 24px; }
+
+  @media (hover: hover) and (pointer: fine) {
+    .tab:hover { color: var(--screen); }
+    .jump:hover { border-color: var(--brass-soft); color: var(--screen); }
+    .icon-button:hover { background: var(--raised); color: var(--screen); }
+    .button-primary:not([aria-disabled="true"]):hover { opacity: 0.9; }
+    .button-secondary:hover { border-color: var(--brass-soft); }
+    .button-ghost:hover { background: var(--raised); color: var(--screen); }
+    .room-card:hover { background: var(--raised); }
+    .room-card.is-empty:hover { border-color: var(--faint); background: transparent; }
+    .row:hover { background: var(--raised); }
+    .row:hover .thumb { filter: none; }
+    .chip:hover { border-color: var(--brass-soft); }
+    .text-link:hover { text-decoration-color: var(--screen); }
+  }
+  .row:focus-visible .thumb { filter: none; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .button, .chip, .jump, .icon-button {
+      transition-property: opacity, background-color, border-color, color, transform;
+    }
+    .button:not([aria-disabled="true"]):active,
+    .chip:active,
+    .jump:active,
+    .icon-button:active {
+      transform: scale(0.97);
+      transition-duration: 160ms;
+      transition-timing-function: var(--ease-projector);
+    }
+
+    dialog.confirm {
+      transform: none;
+      transition: opacity 250ms var(--ease-projector), transform 250ms var(--ease-projector), overlay 250ms allow-discrete, display 250ms allow-discrete;
+    }
+    @starting-style {
+      dialog.confirm[open] { transform: scale(0.96); }
+    }
+    dialog.confirm:not([open]) { transform: scale(0.96); }
+  }
+
+  @media (max-width: 1023px) {
+    .band {
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-areas: "brand tools" "nav nav";
+      row-gap: 0;
+      padding-block-start: 8px;
+    }
+    .brand { grid-area: brand; }
+    .band-tools { grid-area: tools; }
+    .rooms-nav { grid-area: nav; margin-inline: -2px; }
+    .rooms-nav .piece-name { display: none; }
+    .tabs {
+      -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+      mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+    }
+    :root { --band-height: 100px; }
+    .action-status { text-align: start; }
+  }
+
+  @media (max-width: 639px) {
+    .jump .jump-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .jump { padding-inline: 10px; }
+    .ask-row input { font-size: 1rem; }
+    .panel { padding: 20px; }
+    .empty-panel { padding: 24px; }
+    .row .thumb { width: 64px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="band" id="band"></header>
+
+<div class="shell">
+  <main id="main" tabindex="-1"></main>
+</div>
+
+<div role="status" class="sr-only" id="announcer"></div>
+
+<div class="bench" role="group" aria-label="Bench state switcher">Bench:
+  <button data-s="ready">ready</button><button data-s="empty">empty</button><button data-s="loading">loading</button><button data-s="error">error</button>
+</div>
+
+<dialog class="confirm" id="confirm-delete" aria-labelledby="confirm-title" aria-describedby="confirm-body">
+  <form method="dialog">
+    <h2 id="confirm-title">Delete Fruit Dreams?</h2>
+    <p id="confirm-body">This permanently deletes <span class="mono">creations/fruit-dreams</span> with its 4 renders, Desk records and checkpoint feedback. You can’t undo this from the Desk.</p>
+    <div class="dialog-actions">
+      <button class="button button-secondary" value="cancel" autofocus>Cancel</button>
+      <button class="button button-primary has-icon" value="delete">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
+        Delete piece
+      </button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+const ICONS = {
+  search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+  tablet: '<rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><line x1="12" x2="12.01" y1="18" y2="18"/>',
+  folder: '<path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/>',
+  trash: '<path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>',
+  alert: '<circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  retry: '<path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/>',
+  chevron: '<path d="m9 18 6-6-6-6"/>',
+  send: '<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>'
+};
+const icon = (name, cls = "icon") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
+
+const PIECE = { slug: "fruit-dreams", path: "creations/fruit-dreams", title: "Fruit Dreams" };
+const STAGES = ["Planned", "Rendered", "Checked", "Reviewed", "Approved"];
+const ROOM_TABS = ["Overview", "Board", "Cast", "Beats", "Asks", "Review"];
+
+const DATA = {
+  ready: {
+    blurb: "A tiny cat sails a banana. A lemon balloon offers a lift. 30-second loop for Instagram, riso three-ink palette, lullaby track at 72 BPM.",
+    claims: { Planned: true, Rendered: true, Checked: false, Reviewed: false, Approved: false },
+    asksWaiting: 2,
+    rooms: [
+      { name: "Board", fact: '<span class="mono">24</span> cards' },
+      { name: "Beats", fact: '<span class="mono">18</span> beats · <span class="mono">30 s</span>' },
+      { name: "Asks", fact: '<span class="dot" aria-hidden="true"></span><span class="mono">2</span> need you', needsYou: true },
+      { name: "Review", fact: '<span class="mono">3</span> renders' }
+    ],
+    renders: [
+      { path: "renders/draft-03.mp4", kind: "Draft video", size: "18.4 MB", img: 1 },
+      { path: "renders/draft-02.mp4", kind: "Draft video", size: "17.9 MB", img: 2 },
+      { path: "renders/frames/f0120.png", kind: "Frame 120", size: "1.2 MB", img: 3 },
+      { path: "renders/poster.png", kind: "Poster still", size: "844 KB", img: 4 }
+    ],
+    feedback: [
+      { title: "Checkpoint 2 · motion pass", status: "in-review" },
+      { title: "Checkpoint 1 · look", status: "done" }
+    ]
+  }
+};
+
+const app = document.getElementById("main");
+const band = document.getElementById("band");
+const announcer = document.getElementById("announcer");
+const confirmDialog = document.getElementById("confirm-delete");
+let current = "ready";
+
+function announce(message) {
+  announcer.textContent = "";
+  requestAnimationFrame(() => { announcer.textContent = message; });
+}
+
+function renderBand(s) {
+  const showCounts = s === "ready";
+  const pieceLabel = s === "error"
+    ? `<span class="piece-name mono">${PIECE.slug}</span>`
+    : `<span class="piece-name">${PIECE.title}</span>`;
+  const isGone = s === "deleted";
+
+  const tabs = ROOM_TABS.map(name => {
+    const isCurrent = name === "Overview";
+    const href = isCurrent ? `#/${PIECE.slug}` : `#/${PIECE.slug}/${name.toLowerCase()}`;
+    const hasWaitingAsks = name === "Asks" && showCounts;
+    const count = hasWaitingAsks
+      ? ` <span class="count needs-you mono">${DATA.ready.asksWaiting}<span class="sr-only"> need you</span></span>`
+      : "";
+    return `<a class="tab" href="${href}"${isCurrent ? ' aria-current="page"' : ""}>${name}${count}</a>`;
+  }).join("");
+
+  band.innerHTML = `
+    <a class="brand" href="#/">Creative Room <span>Desk</span></a>
+    ${isGone ? "<span></span>" : `<nav class="rooms-nav" aria-label="${PIECE.title} rooms">${pieceLabel}<div class="tabs">${tabs}</div></nav>`}
+    <div class="band-tools">
+      <button class="jump" type="button" aria-keyshortcuts="Meta+K" data-action="jump">
+        ${icon("search")}<span class="jump-label">Jump to</span><kbd>⌘K</kbd>
+      </button>
+      <button class="icon-button" type="button" aria-label="Pair a tablet" data-action="tablet">${icon("tablet")}</button>
+    </div>`;
+}
+
+function renderHead(d) {
+  const claims = STAGES.map(stage => ({ stage, shown: d ? d.claims[stage] : false }));
+  const shown = claims.filter(c => c.shown);
+  const furthest = shown.length ? shown[shown.length - 1].stage : "Not started";
+  const segments = claims.map(c =>
+    `<li class="${c.shown ? "is-shown" : "is-open"}"><span class="sr-only">${c.stage}: ${c.shown ? "on file" : "nothing yet"}</span></li>`
+  ).join("");
+  const blurb = d
+    ? `<p class="blurb">${d.blurb}</p>`
+    : `<p class="blurb">No hand-off yet. It appears here once the interview or an agent writes one.</p>`;
+
+  return `
+    <div class="piece-head">
+      <div class="piece-intro">
+        <h1 id="piece-title">${PIECE.title}</h1>
+        ${blurb}
+        <div class="piece-meta">
+          <div class="stage">
+            <ol aria-label="Stage">${segments}</ol>
+            <span class="stage-label">${furthest} <span class="of mono">${shown.length}/5</span></span>
+          </div>
+          <span class="path mono">${PIECE.path}</span>
+        </div>
+      </div>
+      <div class="piece-actions">
+        <button class="button button-secondary has-icon" type="button" data-action="finder">${icon("folder")}Open in Finder</button>
+        <button class="button button-ghost has-icon" type="button" data-action="delete">${icon("trash")}Delete piece</button>
+        <p class="action-status" role="status" id="action-status"></p>
+      </div>
+    </div>`;
+}
+
+function renderAskForm(withSuggestion) {
+  const suggestion = withSuggestion
+    ? `<div class="ask-suggest"><button class="chip" type="button" data-fill="Render a new draft from the current beats">Ask for a new render</button></div>`
+    : "";
+  return `
+    <form class="ask-form" id="ask-form" novalidate>
+      <label for="ask-input">Ask an agent</label>
+      <p class="ask-hint" id="ask-hint">Saved to <span class="mono">desk/asks/</span>. The next agent you run picks it up, and its answer lands in Asks.</p>
+      <div class="ask-row">
+        <input id="ask-input" name="ask" type="text" autocomplete="off" placeholder="Find three references for the balloon’s lift" aria-describedby="ask-hint ask-message">
+        <button class="button button-primary has-icon" type="submit">${icon("send")}Send ask</button>
+      </div>
+      ${suggestion}
+      <p class="field-message" id="ask-message" role="status"></p>
+    </form>`;
+}
+
+function renderReady() {
+  const d = DATA.ready;
+  const rooms = d.rooms.map(r => `
+    <a class="room-card${r.needsYou ? " needs-you" : ""}" href="#/${PIECE.slug}/${r.name.toLowerCase()}">
+      <span class="room-title">${r.name}${icon("chevron")}</span>
+      <span class="room-fact">${r.fact}</span>
+    </a>`).join("");
+
+  const renders = d.renders.map(r => `
+    <li><a class="row" href="#/${PIECE.slug}/review?file=${encodeURIComponent(r.path)}">
+      <img class="thumb" src="img/render-${r.img}.webp" alt="" width="80" height="50">
+      <span class="file"><span class="mono">${r.path.replace(/\//g, "/<wbr>")}</span><span class="kind">${r.kind}</span></span>
+      <span class="size mono">${r.size}</span>
+    </a></li>`).join("");
+
+  const feedback = d.feedback.map(f => {
+    const isInReview = f.status === "in-review";
+    const status = isInReview
+      ? `<span class="status needs-you"><span class="dot" aria-hidden="true"></span>In review</span>`
+      : `<span class="status">${icon("check")}Done</span>`;
+    return `<li><a class="row" href="#/in-progress"><span class="checkpoint">${f.title}</span>${status}</a></li>`;
+  }).join("");
+
+  app.removeAttribute("aria-busy");
+  app.innerHTML = `
+    ${renderHead(d)}
+    <section aria-label="Rooms"><div class="rooms">${rooms}</div></section>
+    <div class="columns">
+      <section class="panel" aria-labelledby="renders-title">
+        <div class="panel-head"><h2 id="renders-title">Renders</h2><span class="panel-note"><span class="mono">4</span> files in <span class="mono">renders/</span></span></div>
+        <ul class="rows">${renders}</ul>
+      </section>
+      <div class="stack">
+        <section class="panel" aria-labelledby="feedback-title">
+          <div class="panel-head"><h2 id="feedback-title">Checkpoint feedback</h2></div>
+          <ul class="rows">${feedback}</ul>
+        </section>
+        <section class="panel" aria-label="Ask an agent">${renderAskForm(true)}</section>
+      </div>
+    </div>`;
+}
+
+function renderEmpty() {
+  const rooms = ["Board", "Cast", "Beats", "Asks"].map(name =>
+    `<a class="text-link" href="#/${PIECE.slug}/${name.toLowerCase()}">Open ${name}</a>`).join("");
+  app.removeAttribute("aria-busy");
+  app.innerHTML = `
+    ${renderHead(null)}
+    <div class="empty-panel">
+      <div class="empty-copy">
+        <h2>Nothing in this piece yet</h2>
+        <p>Renders, checkpoint feedback and Desk records show up here as soon as their files are in the piece’s folder. Every room is optional, and the chat works just as well.</p>
+        <div class="empty-rooms">${rooms}</div>
+      </div>
+      ${renderAskForm(false)}
+    </div>`;
+}
+
+function renderLoading() {
+  const cards = Array.from({ length: 4 }, () => `<span class="sk-card"></span>`).join("");
+  app.setAttribute("aria-busy", "true");
+  app.innerHTML = `
+    <div class="piece-head" aria-hidden="true">
+      <div class="piece-intro" style="width:100%">
+        <span class="skeleton sk-title"></span>
+        <span class="skeleton sk-line"></span>
+        <span class="skeleton sk-line short"></span>
+      </div>
+    </div>
+    <p class="loading-note" style="margin-top:24px"><span class="spinner" aria-hidden="true"></span>Loading ${PIECE.title}…</p>
+    <div class="rooms" aria-hidden="true">${cards}</div>
+    <div class="columns" aria-hidden="true">
+      <span class="sk-panel"></span>
+      <span class="sk-panel"></span>
+    </div>`;
+  announce(`Loading ${PIECE.title}…`);
+}
+
+function renderError() {
+  app.removeAttribute("aria-busy");
+  app.innerHTML = `
+    <div class="error-panel" role="alert">
+      ${icon("alert", "icon error-mark")}
+      <h1>This piece couldn’t load</h1>
+      <p>The Desk couldn’t read <span class="mono">desk/board.json</span> in <span class="mono">${PIECE.path}</span> because the file is missing. Nothing in the piece was changed.</p>
+      <p>Check that the file is in place, then try again.</p>
+    </div>
+    <div class="error-actions">
+      <button class="button button-primary has-icon" type="button" data-action="retry">${icon("retry")}Try again</button>
+      <button class="button button-secondary has-icon" type="button" data-action="finder">${icon("folder")}Open in Finder</button>
+      <p class="action-status" role="status" id="action-status"></p>
+    </div>
+    <details class="error-details">
+      <summary>Error details</summary>
+      <pre class="mono">ENOENT: no such file or directory, open '/Users/leonardo/Creative Room/workspace/creations/fruit-dreams/desk/board.json'</pre>
+    </details>`;
+}
+
+function renderDeleted() {
+  app.removeAttribute("aria-busy");
+  app.innerHTML = `
+    <div class="error-panel">
+      <h1>${PIECE.title} deleted</h1>
+      <p><span class="mono">${PIECE.path}</span> is no longer in the workspace.</p>
+      <p><a class="text-link" href="#/">Back to the Lobby</a></p>
+    </div>`;
+  announce(`${PIECE.title} deleted`);
+}
+
+const VIEWS = { ready: renderReady, empty: renderEmpty, loading: renderLoading, error: renderError, deleted: renderDeleted };
+
+function render(s) {
+  current = VIEWS[s] ? s : "ready";
+  document.querySelectorAll(".bench button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.s === current)));
+  renderBand(current);
+  VIEWS[current]();
+}
+
+function setState(s) {
+  history.replaceState(null, "", "?state=" + s);
+  render(s);
+}
+
+function setActionStatus(message) {
+  const status = document.getElementById("action-status");
+  if (status) status.textContent = message;
+  else announce(message);
+}
+
+document.addEventListener("click", event => {
+  const trigger = event.target.closest("[data-action], [data-fill]");
+  if (!trigger) return;
+
+  if (trigger.dataset.fill) {
+    const input = document.getElementById("ask-input");
+    input.value = trigger.dataset.fill;
+    input.focus();
+    return;
+  }
+
+  const action = trigger.dataset.action;
+  if (action === "finder") setActionStatus(`Opened ${PIECE.path} in Finder.`);
+  if (action === "delete") { confirmDialog.returnValue = ""; confirmDialog.showModal(); }
+  if (action === "retry") setState("loading");
+  if (action === "jump") announce("Jump to opens with ⌘K.");
+  if (action === "tablet") announce("Tablet pairing opens from here.");
+});
+
+document.addEventListener("submit", event => {
+  if (event.target.id !== "ask-form") return;
+  event.preventDefault();
+
+  const input = document.getElementById("ask-input");
+  const message = document.getElementById("ask-message");
+  const text = input.value.trim();
+
+  if (!text) {
+    input.setAttribute("aria-invalid", "true");
+    message.className = "field-message is-error";
+    message.innerHTML = `${icon("alert")}Write what you need, then send it.`;
+    input.focus();
+    return;
+  }
+
+  input.removeAttribute("aria-invalid");
+  input.value = "";
+  message.className = "field-message";
+  message.textContent = "Ask saved to desk/asks/. Its answer will show in Asks.";
+});
+
+document.addEventListener("input", event => {
+  if (event.target.id !== "ask-input" || !event.target.hasAttribute("aria-invalid")) return;
+  event.target.removeAttribute("aria-invalid");
+  const message = document.getElementById("ask-message");
+  message.className = "field-message";
+  message.textContent = "";
+});
+
+confirmDialog.addEventListener("close", () => {
+  if (confirmDialog.returnValue === "delete") {
+    render("deleted");
+    app.focus();
+    return;
+  }
+  document.querySelector('[data-action="delete"]')?.focus();
+});
+
+document.querySelectorAll(".bench button").forEach(b => b.onclick = () => setState(b.dataset.s));
+render(new URLSearchParams(location.search).get("state") || "ready");
+</script>
+</body>
+</html>
