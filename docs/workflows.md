@@ -111,6 +111,6 @@ Use the optional `challenge` utility before acting on a diagnosis, estimate, exp
 
 ## Benchmark contenders
 
-Use the optional `showdown` utility to compare skills, prompts or agent setups on the same work: “Benchmark these two design skills on our landing page and an in-app screen.” It audits every contender's instruction files, runs identical briefs on the same model, scores outputs with blind judges from other model families, explains each round with rules cited from the contenders' files and delivers a fighting-game HTML report. Team Up supplies Arena Phases A–C.
+Use the optional `showdown` utility to compare skills, prompts or agent setups on the same work: “Benchmark these two design skills on our landing page and an in-app screen.” It audits every contender's instruction files, runs identical briefs on the same model, scores outputs with blind judges from other model families, explains each round with rules cited from the contenders' files and delivers a fighting-game HTML report. Team Up supplies Swarm for the audit and contender runs and Arena for the rubric and cross-family judging.
 
 Use `snap-out-of-it` for a different need: “Am I overthinking this? Give me the simplest sufficient approach.” It keeps the candid, playful second opinion previously named Reality Check. Both utilities, and Writing for Humans, install separately from Core. See [Utility skills](../utility-skills/README.md).

@@ -49,7 +49,7 @@
       "id": "team-up",
       "relationship": "behavioral",
       "required": true,
-      "condition": "For Arena Phase A, Phase B and Phase C, using Showdown's rounds, seeds, blind judging and rule-judge contract."
+      "condition": "For Swarm coverage (contender audit) and race with rank all (contender runs), and Arena Phase A (rubric) and Phase C (cross-family judging), using Showdown's rounds, seeds, blind judging and rule-judge contract."
     },
     {
       "id": "agent-browser",
@@ -61,7 +61,7 @@
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "3f5062711273e53685728c6638a9d502a121a673456307b0396e63bfce94dc65",
+    "SKILL.md": "915a94f785630b11faf5b74bf02d593cd95ea6956e7cb86d01b6d8151d02010d",
     "agents/openai.yaml": "462603e801e64aa3a0b0a67b414089c01f099e50016f3574f4133db0110a19f6",
     "references/judging.md": "329727f168b4378330b05a54e9010a6230743a92dbb7e6b9fdb4ae7167c0babe",
     "references/report.md": "93f56cea3e2a7fab0ba8e67cc084f1aec6a26e994f1f1c72aa8af6a672a5af6c",

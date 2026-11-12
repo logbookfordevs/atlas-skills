@@ -377,7 +377,7 @@
         {
           "skill": "showdown",
           "required": true,
-          "condition": "For Arena Phase A, Phase B and Phase C, using Showdown's rounds, seeds, blind judging and rule-judge contract."
+          "condition": "For Swarm coverage (contender audit) and race with rank all (contender runs), and Arena Phase A (rubric) and Phase C (cross-family judging), using Showdown's rounds, seeds, blind judging and rule-judge contract."
         }
       ]
     },
