@@ -10,9 +10,7 @@
     "references/audit-trail/references/decision-log-template.tsv",
     "references/audit-trail/scripts/log.sh",
     "references/unslop/unslop.md",
-    "licenses/pstack-unslop.txt",
-    "references/principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md",
-    "licenses/pstack-principle-encode-lessons-in-structure.txt"
+    "licenses/pstack-unslop.txt"
   ],
   "authoredInputs": [
     "skills/tracking-implementation/SKILL.md",
@@ -51,7 +49,7 @@
       "id": "engineering-principles",
       "relationship": "behavioral",
       "required": false,
-      "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence."
+      "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence; the Audit Trail's evidence preference cites its Encode Lessons in Structure principle."
     },
     {
       "id": "code-simplification",
@@ -116,7 +114,7 @@
       "notices": [],
       "sourceSha256": "63a79b3d849af1d3e0b76cf7c1dcba0a0d1ff2823edad60675d25623804d3058",
       "carriedPath": "references/audit-trail/audit-trail.md",
-      "carriedSha256": "f8b4bc731b3a2e8e6a685bb00dd7c7a0c01d5221e2dcd0f17f25709adb6963de",
+      "carriedSha256": "52f63cb4ee69d770de00df8a7a0dcf99c0648cbd26ba9ab7632f7fc1d34fc5a0",
       "licensePath": "licenses/pstack-show-me-your-work.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Select Audit Trail explicitly within Tracking, keeping one canonical state home and a linked append-only TSV. Preserve the full format, run ownership and helper/template. Use bundled Unslop and the evidence principle. Resolve transcript discovery and cross-family review against actual host capabilities with explicit gaps; Attention appears at checkpoint handoffs instead of every progress reply. Tracking retains commit, code-review and acceptance policy. Update bundled reference links for ordinary Markdown filenames.",
@@ -127,7 +125,7 @@
         "tracking-audit-trail-coverage"
       ],
       "patch": "sources/patches/pstack-show-me-your-work.patch",
-      "patchSha256": "cf09fec4a829aa5d7ab41ada7ca17ef3f522dff51c04824644d360afee477982"
+      "patchSha256": "49d7e38cc903291e2b5ffd3e1a733c5626f44911be1a4774ae3d354708a2c4b0"
     },
     {
       "id": "pstack-unslop",
@@ -156,29 +154,6 @@
       ],
       "patch": "sources/patches/pstack-unslop.patch",
       "patchSha256": "d2655d54a3c5a1d1910308d94808f97a2d2e3438c32c31ae2b3cc3b152f3ed71"
-    },
-    {
-      "id": "pstack-principle-encode-lessons-in-structure",
-      "owner": "engineering-principles",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
-        "path": "skills/principle-encode-lessons-in-structure/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [],
-      "notices": [],
-      "sourceSha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
-      "carriedPath": "references/principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md",
-      "carriedSha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
-      "licensePath": "licenses/pstack-principle-encode-lessons-in-structure.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena and Audit Trail evidence reference, not a global rule or public skill selection.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": []
     }
   ],
   "rulings": [
@@ -223,13 +198,11 @@
     "references/review-guides.md": "cd6fe084bc97924163dcecc670c17fea5bb08a4704aa63c6519e39f54da1909f",
     "references/show-me.md": "434a2346cc95e313b0d367d477dda2e23ba642dd2181757415a09500664af100",
     "licenses/show-me.txt": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
-    "references/audit-trail/audit-trail.md": "f8b4bc731b3a2e8e6a685bb00dd7c7a0c01d5221e2dcd0f17f25709adb6963de",
+    "references/audit-trail/audit-trail.md": "52f63cb4ee69d770de00df8a7a0dcf99c0648cbd26ba9ab7632f7fc1d34fc5a0",
     "licenses/pstack-show-me-your-work.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/audit-trail/references/decision-log-template.tsv": "6779378006a2f5225e8c06deb84f1d913fb532041ebbb6e50d94600bfe3f4b76",
     "references/audit-trail/scripts/log.sh": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e",
     "references/unslop/unslop.md": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
-    "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
-    "licenses/pstack-principle-encode-lessons-in-structure.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }

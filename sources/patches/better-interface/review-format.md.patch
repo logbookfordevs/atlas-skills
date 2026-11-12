@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 345dc43..6e6dfeb 100644
+index 345dc43..4e5a8fa 100644
 --- a/source.md
 +++ b/source.md
 @@ -1,6 +1,6 @@
@@ -15,7 +15,7 @@ index 345dc43..6e6dfeb 100644
  
  - **Severity** comes from **Rank by user impact**.
 -- **Domain** is the owning skill without the `better-` prefix.
-+- **Domain** is the owning bundled method: Accessibility, Layout, Copy, Type, Color or UI Polish.
++- **Domain** is the owning Atlas Craft method: Accessibility, Layout, Copy, Type, Color or UI Polish.
  - **Location** is `path/to/file:line`, or the exact screen and component when the artifact has no source files.
  - **Before** and **After** show the current implementation and an actionable replacement, each in its own cell.
  - **Why** names the violated principle and its user impact.

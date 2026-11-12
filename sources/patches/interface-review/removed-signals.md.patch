@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 5295ca3..3ff4f42 100644
+index 5295ca3..cc25bf3 100644
 --- a/source.md
 +++ b/source.md
 @@ -4,17 +4,17 @@ What to look for on the `-` side of a hunk and which skill owns the judgement.
@@ -17,17 +17,17 @@ index 5295ca3..3ff4f42 100644
 -| `text-wrap`, `line-clamp`, `overflow-wrap`, `tabular-nums`, `font-feature-settings` | `better-typography` | Text rendering, wrapping or numeral alignment silently changed |
 -| A color token swapped for a literal, or a token swapped for a lighter one | `better-colors` | The rendered contrast pair may now fail; measure it |
 -| A user-facing string deleted or shortened | `better-writing` | A label, error or empty state lost the information it carried |
-+| `aria-label`, `aria-labelledby`, `aria-describedby`, `aria-live`, `role=` | [Accessibility](../../accessibility/index.md) | The control or region lost its accessible name, description or announcement |
-+| `alt=`, `<label`, `for=`, `htmlFor`, `scope=` | [Accessibility](../../accessibility/index.md) | Image, field or table cell lost its programmatic association |
-+| `<button>`, `<a>`, `<nav>`, `<main>`, `<ul>` replaced by `div` or `span` | [Accessibility](../../accessibility/index.md) | Keyboard and assistive-technology behavior was traded for styling |
-+| `:focus-visible`, `:focus`, `outline`, `tabindex` | [Accessibility](../../accessibility/index.md) | Keyboard users lost the focus indicator or the element left the tab order |
-+| `prefers-reduced-motion` | [Accessibility](../../accessibility/index.md) | Motion now ignores the user's system preference |
-+| `prefers-contrast` | [Color](../../color/index.md) | Colors now ignore the user's contrast preference |
-+| Logical properties swapped for `left` / `right` | [Layout](../../layout/index.md) | Direction-aware layout was dropped |
-+| `lang=`, `dir=` | [Type](../../type/index.md) | Language metadata or text direction was dropped |
-+| `text-wrap`, `line-clamp`, `overflow-wrap`, `tabular-nums`, `font-feature-settings` | [Type](../../type/index.md) | Text rendering, wrapping or numeral alignment silently changed |
-+| A color token swapped for a literal, or a token swapped for a lighter one | [Color](../../color/index.md) | The rendered contrast pair may now fail; measure it |
-+| A user-facing string deleted or shortened | [Copy](../../copy/index.md) | A label, error or empty state lost the information it carried |
++| `aria-label`, `aria-labelledby`, `aria-describedby`, `aria-live`, `role=` | Atlas Craft's Accessibility | The control or region lost its accessible name, description or announcement |
++| `alt=`, `<label`, `for=`, `htmlFor`, `scope=` | Atlas Craft's Accessibility | Image, field or table cell lost its programmatic association |
++| `<button>`, `<a>`, `<nav>`, `<main>`, `<ul>` replaced by `div` or `span` | Atlas Craft's Accessibility | Keyboard and assistive-technology behavior was traded for styling |
++| `:focus-visible`, `:focus`, `outline`, `tabindex` | Atlas Craft's Accessibility | Keyboard users lost the focus indicator or the element left the tab order |
++| `prefers-reduced-motion` | Atlas Craft's Accessibility | Motion now ignores the user's system preference |
++| `prefers-contrast` | Atlas Craft's Color | Colors now ignore the user's contrast preference |
++| Logical properties swapped for `left` / `right` | Atlas Craft's Layout | Direction-aware layout was dropped |
++| `lang=`, `dir=` | Atlas Craft's Type | Language metadata or text direction was dropped |
++| `text-wrap`, `line-clamp`, `overflow-wrap`, `tabular-nums`, `font-feature-settings` | Atlas Craft's Type | Text rendering, wrapping or numeral alignment silently changed |
++| A color token swapped for a literal, or a token swapped for a lighter one | Atlas Craft's Color | The rendered contrast pair may now fail; measure it |
++| A user-facing string deleted or shortened | Atlas Craft's Copy | A label, error or empty state lost the information it carried |
  
  ## Equivalent replacements
  

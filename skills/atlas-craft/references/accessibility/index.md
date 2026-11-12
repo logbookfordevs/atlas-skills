@@ -6,7 +6,7 @@ description: Reviews and fixes keyboard and focus behavior, ARIA, accessible nam
 # Accessibility
 
 ## Atlas integration
-Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 
 This skill reviews and fixes semantics, keyboard and focus behavior, accessible names, forms, announcements, motion and zoom. It reports each failure against the WCAG criterion it breaks and writes the fix in the project's styling system.
 

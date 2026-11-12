@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Snap Out of It
 
-**Leading agent:** Use the [selection policy](references/selection.md) to select one reviewer from a different model family in a fresh context. If another family is unavailable, disclose that and resolve an alternative with the user before dispatch. Supply the problem and constraints first, then the proposed approach, using only necessary context. Send the reviewer the brief below. Present the recommendation in the same casual voice, keeping material caveats; implementation stays with you and requires the task's existing authority.
+**Leading agent:** Use Team Up's selection policy to select one reviewer from a different model family in a fresh context. If another family is unavailable, disclose that and resolve an alternative with the user before dispatch. Supply the problem and constraints first, then the proposed approach, using only necessary context. Send the reviewer the brief below. Present the recommendation in the same casual voice, keeping material caveats; implementation stays with you and requires the task's existing authority.
 
 **Reviewer brief:**
 

@@ -6,11 +6,11 @@ description: Reviews a branch, pull request or uncommitted change for the interf
 # Interface review
 
 ## Atlas integration
-Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../../motion-ownership.md).
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 
 This skill reviews a change rather than a screen. It resolves the scope, expands the changed files to the surfaces they affect, reads both sides of the diff and classifies every finding.
 
-It owns the scope, the classification and the change-scoped report. Domain rules belong to the bundled interface domain methods. Severity, consolidation, coverage, the cap and the verdict belong to [Interface Audit](../audit/index.md), which this skill hands the review to.
+It owns the scope, the classification and the change-scoped report. Domain rules belong to Atlas Craft's domain methods. Severity, consolidation, coverage, the cap and the verdict belong to [Interface Audit](../audit/index.md), which this skill hands the review to.
 
 Correctness, tests, security and performance belong to the project's general code review. Name such a concern once, point at that review and drop it.
 

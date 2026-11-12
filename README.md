@@ -4,7 +4,7 @@
 
 The Logbook Atlas Core is the skill selection I keep on every machine in my AFK kit: core workflows with Atlas invocations, authored utilities, intentional upstream adaptations and a few focused compositions. Complementary skills remain independently available from their original sources.
 
-Keep methods independently maintained; bundle what Atlas needs to deliver its core workflows without relying on AFK.
+Atlas skills rely on each other, the way Pstack's do: a skill names the Atlas skill that owns a method rather than carrying a copy. Copies are the exception, kept for a method whose owner is manual-only and for outside upstreams Atlas composes.
 
 Atlas maintains what it authors, patches or bundles. Complementary independent skills are recommended from their original sources in [the stack manifest](stacks/atlas.json). [AFK](https://ai-field-kit.logbookfordevs.com/) is optional tooling for managing installed skills and activation. Install Atlas packages directly with Skills CLI; AFK is not a workflow requirement.
 

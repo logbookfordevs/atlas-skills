@@ -17,7 +17,7 @@ Consult the relevant bundled method rather than establish competing defaults:
 | Input modes, autocomplete, zoom and accessible activation | [Accessibility](../accessibility/index.md) |
 | Safe areas, responsive sizing and native scrolling layouts | [Layout](../layout/index.md) |
 | Scroll containment and control surfaces | [UI Polish](../ui/index.md) |
-| Hover gating, press feedback and custom gesture physics | [Motion ownership](../motion-ownership.md) |
+| Hover gating, press feedback and custom gesture physics | Atlas Motion's Motion ownership ruling |
 
 Keep content selectable. Suppress selection or the native long-press callout only where it demonstrably interferes with a custom gesture; copying a button label is not by itself a defect. A review request remains read-only toward product code.
 

@@ -35,20 +35,6 @@
         "classification": "patched"
       },
       {
-        "id": "grilling",
-        "title": "Grilling",
-        "author": "Matt Pocock",
-        "url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/grilling/SKILL.md",
-        "classification": "verbatim"
-      },
-      {
-        "id": "domain-modeling",
-        "title": "Domain Modeling",
-        "author": "Matt Pocock",
-        "url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/domain-modeling/SKILL.md",
-        "classification": "verbatim"
-      },
-      {
         "id": "wayfinder-local-tracker",
         "title": "Wayfinder local tracker",
         "author": "Matt Pocock",
@@ -115,13 +101,6 @@
         "title": "Architect",
         "author": "Lauren Tan / Pstack mirror",
         "url": "https://github.com/backnotprop/pstack/blob/f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37/skills/architect/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "pstack-arena",
-        "title": "Arena",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/6c75f4e67546c2ddbf9634734c1e3ebbea34861a/skills/arena/SKILL.md",
         "classification": "patched"
       },
       {
@@ -221,20 +200,6 @@
         "author": "Lauren Tan / Pstack mirror",
         "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-subtract-before-you-add/SKILL.md",
         "classification": "verbatim"
-      },
-      {
-        "id": "pstack-how",
-        "title": "How",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37/skills/how/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "pstack-why",
-        "title": "Why",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37/skills/why/SKILL.md",
-        "classification": "patched"
       }
     ],
     "collections": []
@@ -339,62 +304,6 @@
         "author": "Jakub Krehel",
         "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/interface-review/SKILL.md",
         "classification": "patched"
-      },
-      {
-        "id": "better-colors",
-        "title": "Better Colors",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-colors/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-typography",
-        "title": "Better Typography",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-typography/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-layout",
-        "title": "Better Layout",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-layout/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-accessibility",
-        "title": "Better Accessibility",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-accessibility/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-ui",
-        "title": "Better UI",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-ui/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-writing",
-        "title": "Better Writing",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-writing/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "animate",
-        "title": "Animate",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/f1090bec277140d02ed202440185ad9d02ac1490/skills/animate/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "apple-design",
-        "title": "Apple Design",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/apple-design/SKILL.md",
-        "classification": "verbatim"
       },
       {
         "id": "improve-animations",
@@ -543,20 +452,6 @@
         "classification": "patched"
       },
       {
-        "id": "animate",
-        "title": "Animate",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/f1090bec277140d02ed202440185ad9d02ac1490/skills/animate/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "apple-design",
-        "title": "Apple Design",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/apple-design/SKILL.md",
-        "classification": "verbatim"
-      },
-      {
         "id": "mobile-native",
         "title": "Mobile Native",
         "author": "Emil Kowalski",
@@ -629,34 +524,6 @@
         "classification": "patched"
       },
       {
-        "id": "pstack-principle-separate-before-serializing-shared-state",
-        "title": "Separate Before Serializing Shared State",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-separate-before-serializing-shared-state/SKILL.md",
-        "classification": "verbatim"
-      },
-      {
-        "id": "pstack-principle-laziness-protocol",
-        "title": "Laziness Protocol",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-laziness-protocol/SKILL.md",
-        "classification": "verbatim"
-      },
-      {
-        "id": "pstack-principle-redesign-from-first-principles",
-        "title": "Redesign From First Principles",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-redesign-from-first-principles/SKILL.md",
-        "classification": "verbatim"
-      },
-      {
-        "id": "pstack-principle-prove-it-works",
-        "title": "Prove It Works",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-prove-it-works/SKILL.md",
-        "classification": "patched"
-      },
-      {
         "id": "pstack-swarm",
         "title": "Swarm",
         "author": "Lauren Tan / Pstack mirror",
@@ -688,13 +555,6 @@
         "author": "Lauren Tan / Pstack mirror",
         "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/unslop/SKILL.md",
         "classification": "patched"
-      },
-      {
-        "id": "pstack-principle-encode-lessons-in-structure",
-        "title": "Encode Lessons in Structure",
-        "author": "Lauren Tan / Pstack mirror",
-        "url": "https://github.com/backnotprop/pstack/blob/1f0f9c3bac03c4297f6fc8f7644fa412eda57085/skills/principle-encode-lessons-in-structure/SKILL.md",
-        "classification": "verbatim"
       }
     ],
     "collections": []

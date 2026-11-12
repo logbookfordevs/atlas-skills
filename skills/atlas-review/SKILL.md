@@ -29,6 +29,6 @@ For Interface, use [Interface Changes](references/interface/changes/index.md) wh
 
 Briefly state the selected methods and the questions they address. Keep the Standards and Spec reports distinct from other selected methods' findings.
 
-Reviewing does not authorize fixes. Impact may run existing checks or owned scratch probes in isolated state; product code remains read-only. Motion Audit may write requested plans under the repository's artifact convention. Construction references bundled for motion judgments do not change that authorization. Follow [Motion ownership](references/motion-ownership.md) when UI polish and motion methods disagree.
+Reviewing does not authorize fixes. Impact may run existing checks or owned scratch probes in isolated state; product code remains read-only. Motion Audit may write requested plans under the repository's artifact convention. Loading Atlas Craft or Atlas Motion for judgments does not change that authorization. Follow Atlas Motion's Motion ownership ruling when UI polish and motion methods disagree.
 
 Follow each method's evidence limits and independent-context requirements. After an authorized fix, use focused re-check when material uncertainty remains; stop with adequate evidence. Report checks and domains that could not be inspected without implying complete coverage. Atlas Verify is an optional follow-up when behavior checks or recorded QA are requested, or when existing evidence leaves a material behavior uncertainty.

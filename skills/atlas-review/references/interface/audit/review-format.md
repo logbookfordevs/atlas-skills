@@ -21,7 +21,7 @@ One table, ordered by severity, then by reach:
 | HIGH | Accessibility | `src/Dialog.tsx:42` | `<button><XIcon /></button>` | Add `aria-label="Close"` and hide the icon from the accessibility tree | The icon-only control has no accessible name |
 
 - **Severity** comes from **Rank by user impact**.
-- **Domain** is the owning bundled method: Accessibility, Layout, Copy, Type, Color or UI Polish.
+- **Domain** is the owning Atlas Craft method: Accessibility, Layout, Copy, Type, Color or UI Polish.
 - **Location** is `path/to/file:line`, or the exact screen and component when the artifact has no source files.
 - **Before** and **After** show the current implementation and an actionable replacement, each in its own cell.
 - **Why** names the violated principle and its user impact.

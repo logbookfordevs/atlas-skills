@@ -1,6 +1,6 @@
 # Skill maintenance
 
-Use [Atlas's distribution premise](../../README.md) when choosing what to bundle. Core workflow methods and their required supporting files belong in the consuming packages, with independent source records and provenance. Declare complementary external skills and their loading conditions explicitly. Check package dependencies without assuming the AFK stack has been installed; document any remaining core dependency gap until it is bundled.
+Use [Atlas's distribution premise](../../README.md) when choosing what to bundle. Atlas packages rely on each other. When another Atlas package owns a method, name that package at the point of use and record a `behavioral` dependency instead of carrying a copy. Carry a copy only when the owner is manual-only, because other skills cannot fire it. Outside upstream methods are carried into the package that composes them, with independent source records and provenance. Declare complementary external skills and their loading conditions explicitly; Atlas Setup reports missing dependencies.
 
 ## Ownership
 

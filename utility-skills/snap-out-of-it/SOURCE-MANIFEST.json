@@ -5,31 +5,21 @@
   "managedFiles": [],
   "authoredInputs": [
     "utility-skills/snap-out-of-it/SKILL.md",
-    "utility-skills/snap-out-of-it/agents/openai.yaml",
-    "skills/team-up/references/selection.md",
-    "skills/team-up/references/model-preferences.md"
+    "utility-skills/snap-out-of-it/agents/openai.yaml"
   ],
-  "authoredReferences": [
+  "authoredReferences": [],
+  "dependencies": [
     {
-      "input": "skills/team-up/references/selection.md",
-      "target": "references/selection.md",
-      "classification": "atlas-authored",
-      "carriedSha256": "7912765ff9680104470cf0b7e4a7e15cab28fdd3182f14887dbbf52b56b05abc"
-    },
-    {
-      "input": "skills/team-up/references/model-preferences.md",
-      "target": "references/model-preferences.md",
-      "classification": "atlas-authored",
-      "carriedSha256": "8ca1a36f741ed528f46a754188742c43c0bd9b15a6ddf390ef2d2003abbc0fc6"
+      "id": "team-up",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For choosing the cross-family reviewer through Team Up's selection policy."
     }
   ],
-  "dependencies": [],
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "447d09e638b5ea702a3866916211c65316795e0265c4903934d014c4e00a42f0",
-    "agents/openai.yaml": "34b83efedde87e4940de53bd3eaaadc97ea5490f43cbf190a2ade7445e3e87db",
-    "references/selection.md": "7912765ff9680104470cf0b7e4a7e15cab28fdd3182f14887dbbf52b56b05abc",
-    "references/model-preferences.md": "8ca1a36f741ed528f46a754188742c43c0bd9b15a6ddf390ef2d2003abbc0fc6"
+    "SKILL.md": "0bf05b3d220bfbb7daa49f7eb08d6318858d7010b46637006419d143e9439090",
+    "agents/openai.yaml": "34b83efedde87e4940de53bd3eaaadc97ea5490f43cbf190a2ade7445e3e87db"
   }
 }

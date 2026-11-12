@@ -14,8 +14,6 @@
     "references/architect/references/design-red-flags.md",
     "references/architect/references/rationale-template.md",
     "references/architect/references/runner-prompt.md",
-    "references/arena/arena.md",
-    "licenses/pstack-arena.txt",
     "references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
     "licenses/pstack-principle-boundary-discipline.txt",
     "references/principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md",
@@ -43,46 +41,13 @@
     "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md",
     "licenses/pstack-principle-separate-before-serializing-shared-state.txt",
     "references/principles/principle-subtract-before-you-add/principle-subtract-before-you-add.md",
-    "licenses/pstack-principle-subtract-before-you-add.txt",
-    "references/how/how.md",
-    "licenses/pstack-how.txt",
-    "references/how/references/explainer-prompt.md",
-    "references/how/references/explorer-prompt.md",
-    "references/why/why.md",
-    "licenses/pstack-why.txt",
-    "references/why/references/epistemics.md",
-    "references/why/references/investigator-prompt.md",
-    "references/why/references/source-playbook.md",
-    "references/why/references/sources/code-archaeology.md",
-    "references/why/references/sources/databricks.md",
-    "references/why/references/sources/datadog.md",
-    "references/why/references/sources/incident-postmortem.md",
-    "references/why/references/sources/linear.md",
-    "references/why/references/sources/notion.md",
-    "references/why/references/sources/sentry.md",
-    "references/why/references/sources/slack.md",
-    "references/why/references/synthesizer-prompt.md"
+    "licenses/pstack-principle-subtract-before-you-add.txt"
   ],
   "authoredInputs": [
     "skills/engineering-principles/SKILL.md",
-    "skills/engineering-principles/agents/openai.yaml",
-    "skills/team-up/references/selection.md",
-    "skills/team-up/references/model-preferences.md"
+    "skills/engineering-principles/agents/openai.yaml"
   ],
-  "authoredReferences": [
-    {
-      "input": "skills/team-up/references/selection.md",
-      "target": "references/selection.md",
-      "classification": "atlas-authored",
-      "carriedSha256": "7912765ff9680104470cf0b7e4a7e15cab28fdd3182f14887dbbf52b56b05abc"
-    },
-    {
-      "input": "skills/team-up/references/model-preferences.md",
-      "target": "references/model-preferences.md",
-      "classification": "atlas-authored",
-      "carriedSha256": "8ca1a36f741ed528f46a754188742c43c0bd9b15a6ddf390ef2d2003abbc0fc6"
-    }
-  ],
+  "authoredReferences": [],
   "dependencies": [
     {
       "id": "atlas-review",
@@ -95,6 +60,18 @@
       "relationship": "behavioral",
       "required": false,
       "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
+    },
+    {
+      "id": "team-up",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For Architect: Team Up's Arena runs the competing design sketches, choosing runners through its selection policy."
+    },
+    {
+      "id": "atlas-explain",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For Architect: Atlas Explain's How method builds the mental model of touched systems."
     }
   ],
   "sources": [
@@ -195,9 +172,9 @@
           "classification": "patched",
           "sourceSha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
           "carriedPath": "references/architect/references/rationale-template.md",
-          "carriedSha256": "a2b7d4f2ccbfedd1ab3898deb87dced19327fc512888d6de2b8f89d07280acd2",
+          "carriedSha256": "09ae423f016c05f9109bbd12c2b8703f68cd098f520dbb578ce88712480cfde0",
           "patch": "sources/patches/pstack-architect-rationale-template.patch",
-          "patchSha256": "102461aecd85def1c6e1595daaff2bd6047cd2d390b9fb0ad40292fbae408628"
+          "patchSha256": "85b1d83e8b02d1e1f0c8fceee38da61839517ed1069216eb9c67f452cf1265f0"
         },
         {
           "upstreamPath": "skills/architect/references/runner-prompt.md",
@@ -212,7 +189,7 @@
       "notices": [],
       "sourceSha256": "8b06915a5e728c4f78b6a685fec0213b5cb1a89b9476fae680d4cc3f67d4e79e",
       "carriedPath": "references/architect/architect.md",
-      "carriedSha256": "477c2bb380fbe3fade71f6504472aad5ee6ed05ab028ae605070c2c9d0d59b5a",
+      "carriedSha256": "e6baf69781f1a01b21b882649082ce177b0cacab7a71f8d56aef917cbaacb641",
       "licensePath": "licenses/pstack-architect.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating. Update bundled reference links for ordinary Markdown filenames. Remove the retired Interrogate handoff.",
@@ -224,38 +201,7 @@
         "implement-principle-scope"
       ],
       "patch": "sources/patches/pstack-architect.patch",
-      "patchSha256": "1fc0c9688bb2187b044e50204cf237ee08a15152e98c42033c5dcdef3e7819c1"
-    },
-    {
-      "id": "pstack-arena",
-      "owner": "engineering-principles",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
-        "path": "skills/arena/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [],
-      "notices": [],
-      "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
-      "carriedPath": "references/arena/arena.md",
-      "carriedSha256": "f469d7f3d1c46abb98f7523eddb06653d80a182af93da3a5a0c373fd76946270",
-      "licensePath": "licenses/pstack-arena.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames. Permit callers to execute only explicitly selected phases with their own brief and evidence contract.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
-      "rulings": [
-        "implement-architect-phases",
-        "implement-candidate-ownership",
-        "implement-principle-scope",
-        "team-up-method-selection",
-        "team-up-arena-policy"
-      ],
-      "patch": "sources/patches/pstack-arena.patch",
-      "patchSha256": "8debc932e625bc9de66067f29a5b336216bed4197c4d9f9bc98d24452b44e659"
+      "patchSha256": "6d15e8429e9bc8da95a899b3e5c21d2f87dbf6d2a972a2b3280ad4476a7560d8"
     },
     {
       "id": "pstack-principle-boundary-discipline",
@@ -606,168 +552,6 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": []
-    },
-    {
-      "id": "pstack-how",
-      "owner": "atlas-explain",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
-        "path": "skills/how/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/how/references/explainer-prompt.md",
-          "classification": "verbatim",
-          "sourceSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
-          "carriedPath": "references/how/references/explainer-prompt.md",
-          "carriedSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff"
-        },
-        {
-          "upstreamPath": "skills/how/references/explorer-prompt.md",
-          "classification": "verbatim",
-          "sourceSha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1",
-          "carriedPath": "references/how/references/explorer-prompt.md",
-          "carriedSha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1"
-        }
-      ],
-      "notices": [],
-      "sourceSha256": "a63ac90597960cfdc4d51ec88960b3bf0a05d44a7dff1d5a2b8639981c25ca54",
-      "carriedPath": "references/how/how.md",
-      "carriedSha256": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
-      "licensePath": "licenses/pstack-how.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Replace fixed Cursor/provider dispatch with available host roles and models, bounded concurrency and sequential fallback. Preserve the exploration/explanation split and complete templates; link the companion Why method locally.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
-      "rulings": [
-        "explain-mode-choice",
-        "explain-host-capabilities",
-        "implement-candidate-ownership"
-      ],
-      "patch": "sources/patches/pstack-how.patch",
-      "patchSha256": "0456950bd44ed3cd470e4dd7f385751a8ab45fc00acc6606ac7762ac2927f24c"
-    },
-    {
-      "id": "pstack-why",
-      "owner": "atlas-explain",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
-        "path": "skills/why/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/why/references/epistemics.md",
-          "classification": "verbatim",
-          "sourceSha256": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758",
-          "carriedPath": "references/why/references/epistemics.md",
-          "carriedSha256": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758"
-        },
-        {
-          "upstreamPath": "skills/why/references/investigator-prompt.md",
-          "classification": "verbatim",
-          "sourceSha256": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3",
-          "carriedPath": "references/why/references/investigator-prompt.md",
-          "carriedSha256": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3"
-        },
-        {
-          "upstreamPath": "skills/why/references/source-playbook.md",
-          "classification": "verbatim",
-          "sourceSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a",
-          "carriedPath": "references/why/references/source-playbook.md",
-          "carriedSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/code-archaeology.md",
-          "classification": "verbatim",
-          "sourceSha256": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7",
-          "carriedPath": "references/why/references/sources/code-archaeology.md",
-          "carriedSha256": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/databricks.md",
-          "classification": "verbatim",
-          "sourceSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6",
-          "carriedPath": "references/why/references/sources/databricks.md",
-          "carriedSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/datadog.md",
-          "classification": "verbatim",
-          "sourceSha256": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd",
-          "carriedPath": "references/why/references/sources/datadog.md",
-          "carriedSha256": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/incident-postmortem.md",
-          "classification": "verbatim",
-          "sourceSha256": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839",
-          "carriedPath": "references/why/references/sources/incident-postmortem.md",
-          "carriedSha256": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/linear.md",
-          "classification": "verbatim",
-          "sourceSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c",
-          "carriedPath": "references/why/references/sources/linear.md",
-          "carriedSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/notion.md",
-          "classification": "verbatim",
-          "sourceSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997",
-          "carriedPath": "references/why/references/sources/notion.md",
-          "carriedSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/sentry.md",
-          "classification": "verbatim",
-          "sourceSha256": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702",
-          "carriedPath": "references/why/references/sources/sentry.md",
-          "carriedSha256": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/slack.md",
-          "classification": "verbatim",
-          "sourceSha256": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
-          "carriedPath": "references/why/references/sources/slack.md",
-          "carriedSha256": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c"
-        },
-        {
-          "upstreamPath": "skills/why/references/synthesizer-prompt.md",
-          "classification": "patched",
-          "sourceSha256": "11c62671aa7b7a6e3d36929ffe2b59bf95e6ca664eee4d93e6ee527dd3390ddb",
-          "carriedPath": "references/why/references/synthesizer-prompt.md",
-          "carriedSha256": "efd1a207836e90e61db0a312d475d0f7343cbe4f286089e48aa7d248973d1eba",
-          "patch": "sources/patches/pstack-why-synthesizer.patch",
-          "patchSha256": "cc36e5fe50d4af5fdbcd4a9f720454713d51ab860694fe4f58b72f65439c91ed"
-        }
-      ],
-      "notices": [],
-      "sourceSha256": "b12ea2757ff1d1d111c7b4e74e3e764d337c6a08458b8d6240d3f01c4be490ec",
-      "carriedPath": "references/why/why.md",
-      "carriedSha256": "2fe47d81670fcf84122ddee3358ee08cc50a2126b30fdd6f5586ffaa36310837",
-      "licensePath": "licenses/pstack-why.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Adapt host dispatch and history/tool availability without inventing access; keep investigation read-only. Standalone Why retains full evidence-category coverage, while explicit caller scope permits bounded Teach investigations with documented exclusions. Preserve epistemics and all source playbooks.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
-      "rulings": [
-        "explain-mode-choice",
-        "explain-why-scope",
-        "explain-evidence-editing",
-        "explain-host-capabilities",
-        "implement-candidate-ownership"
-      ],
-      "patch": "sources/patches/pstack-why.patch",
-      "patchSha256": "a3ee8a2f7dda19425eacbc4e1a6b39a7993cbe5d16b16df8064d85e78223c772"
     }
   ],
   "rulings": [
@@ -837,23 +621,19 @@
     }
   ],
   "files": {
-    "SKILL.md": "b6a776f9a0d32cbfe0d8f724d151921c6a57ce7644d49300b83868863696328f",
+    "SKILL.md": "d562b40cd36d0b86416f62adc96b1bc2cf64b7a794dacb0690a81d3db8e9a8d1",
     "agents/openai.yaml": "d630294f262a5b68160c3eb861e0242f568b98696021a87f1317f770b998ed87",
-    "references/selection.md": "7912765ff9680104470cf0b7e4a7e15cab28fdd3182f14887dbbf52b56b05abc",
-    "references/model-preferences.md": "8ca1a36f741ed528f46a754188742c43c0bd9b15a6ddf390ef2d2003abbc0fc6",
     "references/tdd/tdd.md": "ce62a1a96ae6df6033be485d7ad5fc0089dbb2bf341331d9cd683b266ed3a93e",
     "licenses/tdd.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
     "references/tdd/mocking.md": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
     "references/tdd/tests.md": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
     "references/source-driven/source-driven.md": "a4d0e2ece64ce4a58e3ed56351b1f6e0eacd2a298fa683e80360effc6a949a59",
     "licenses/source-driven-development.txt": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
-    "references/architect/architect.md": "477c2bb380fbe3fade71f6504472aad5ee6ed05ab028ae605070c2c9d0d59b5a",
+    "references/architect/architect.md": "e6baf69781f1a01b21b882649082ce177b0cacab7a71f8d56aef917cbaacb641",
     "licenses/pstack-architect.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/architect/references/design-red-flags.md": "8e87fa13355b2df71fb4cac9c8f6ae0e8ec2d606ee7514c3a3bd611c5958cccc",
-    "references/architect/references/rationale-template.md": "a2b7d4f2ccbfedd1ab3898deb87dced19327fc512888d6de2b8f89d07280acd2",
+    "references/architect/references/rationale-template.md": "09ae423f016c05f9109bbd12c2b8703f68cd098f520dbb578ce88712480cfde0",
     "references/architect/references/runner-prompt.md": "047b7f147e982ffb2b5e2bbae4427528c448b8817a970800bf8740a777504b51",
-    "references/arena/arena.md": "f469d7f3d1c46abb98f7523eddb06653d80a182af93da3a5a0c373fd76946270",
-    "licenses/pstack-arena.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-boundary-discipline/principle-boundary-discipline.md": "13911681c8cc3ee9f8cc47e3e80c0730f1d9e17ef9070382a4bc2d1640d42314",
     "licenses/pstack-principle-boundary-discipline.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
@@ -882,24 +662,6 @@
     "licenses/pstack-principle-separate-before-serializing-shared-state.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/principles/principle-subtract-before-you-add/principle-subtract-before-you-add.md": "8c93bb9d1a7f38e2ef37655d93f0e790fa59903105af3d500cc8a663ebe45f3f",
     "licenses/pstack-principle-subtract-before-you-add.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/how/how.md": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
-    "licenses/pstack-how.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/how/references/explainer-prompt.md": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
-    "references/how/references/explorer-prompt.md": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1",
-    "references/why/why.md": "2fe47d81670fcf84122ddee3358ee08cc50a2126b30fdd6f5586ffaa36310837",
-    "licenses/pstack-why.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/why/references/epistemics.md": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758",
-    "references/why/references/investigator-prompt.md": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3",
-    "references/why/references/source-playbook.md": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a",
-    "references/why/references/sources/code-archaeology.md": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7",
-    "references/why/references/sources/databricks.md": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6",
-    "references/why/references/sources/datadog.md": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd",
-    "references/why/references/sources/incident-postmortem.md": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839",
-    "references/why/references/sources/linear.md": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c",
-    "references/why/references/sources/notion.md": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997",
-    "references/why/references/sources/sentry.md": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702",
-    "references/why/references/sources/slack.md": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
-    "references/why/references/synthesizer-prompt.md": "efd1a207836e90e61db0a312d475d0f7343cbe4f286089e48aa7d248973d1eba",
-    "references/architect/integration.md": "48e01b856565fad9fd1c4957a784094e47eb75f1595a6ce9550dcfee003b541d"
+    "references/architect/integration.md": "691fdfc10d203d702d259fff4db859be38c00e76597b4fe3e2fd4bcb5dd44e68"
   }
 }

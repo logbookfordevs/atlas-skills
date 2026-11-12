@@ -153,7 +153,7 @@ describe('Atlas navigation', () => {
     const origins = screen.getByRole('region', { name: 'Built on' });
     expect(within(origins).getAllByText('Jakub Krehel').length).toBeGreaterThan(0);
     expect(within(origins).getAllByText('Emil Kowalski').length).toBeGreaterThan(0);
-    for (const title of ['Better Accessibility', 'Better UI', 'Better Writing', 'Animate', 'Apple Design', 'Mobile Native']) {
+    for (const title of ['Better Accessibility', 'Better UI', 'Better Writing', 'Mobile Native']) {
       expect(within(origins).getByRole('link', { name: title }).getAttribute('href')).toMatch(/\/blob\/[a-f0-9]{40}\//);
     }
     expect(within(origins).getByRole('link', { name: 'Product Engineering' }).getAttribute('href')).toBe('https://github.com/backnotprop/product-engineering');

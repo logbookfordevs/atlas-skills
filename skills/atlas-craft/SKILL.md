@@ -22,7 +22,7 @@ States requires a request for that workbench or `state-machine`; ordinary refine
 
 Preserve accepted identity and project foundations; a new design direction needs its own decision. Load related domains only when the selected method needs their rules. A request to review is read-only; apply fixes when the user asks for refinement or implementation.
 
-When polish includes animation or gestures, follow [Motion ownership](references/motion-ownership.md). Motion references are bundled for those decisions. Whole-interface audits and change reviews belong to Atlas Review; substantial prose belongs to Writing for Humans.
+When polish includes animation or gestures, load Atlas Motion and follow its Motion ownership ruling; its Animate and Fluid methods decide those values. Whole-interface audits and change reviews belong to Atlas Review; substantial prose belongs to Writing for Humans.
 
 When the task involves mobile browser behavior—keyboard overlap, browser chrome, tap feedback or scroll gestures—read [Mobile Web](references/mobile-web/mobile-native.md).
 

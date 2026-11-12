@@ -22,13 +22,13 @@ Track the applicable phases with the host's available planning mechanism before 
 
 ## Phase A: Ground the problem
 
-Build a real mental model of every system the new code touches. Follow the bundled [How method](../how/how.md) over the relevant subsystems. Naming a file isn't grounding. Produce the architectural explanation `how` prescribes. If the design redefines ownership or layering, also follow the bundled [Why method](../why/why.md) on the existing shape so the rationale becomes a constraint, not a guess.
+Build a real mental model of every system the new code touches. Follow Atlas Explain's How method over the relevant subsystems. Naming a file isn't grounding. Produce the architectural explanation `how` prescribes. If the design redefines ownership or layering, also follow Atlas Explain's Why method on the existing shape so the rationale becomes a constraint, not a guess.
 
 Skip Phase A only when the work is genuinely greenfield with no surrounding system to integrate.
 
 ## Phase B: Sketch
 
-Follow the bundled [Arena method](../arena/arena.md) with the design-sketch task and the Phase A grounding artifacts. Pass `references/runner-prompt.md` as each runner's prompt.
+Follow Team Up's Arena method with the design-sketch task and the Phase A grounding artifacts. Pass `references/runner-prompt.md` as each runner's prompt.
 
 Choose candidate runners from the host's available roles and models, honoring user choices and project policy. Prefer distinct model perspectives when available; disclose same-model or sequential exploration. Use Arena's isolation and bounded scheduling. Candidate runners execute only the design-sketch assignment, not the full Architect workflow.
 
@@ -71,10 +71,10 @@ Use judgment. A few edge cases don't condemn an architecture. Some problems are 
 
 When you scrap:
 
-1. Re-run the bundled [How method](../how/how.md) over what's been built.
+1. Re-run Atlas Explain's How method over what's been built.
 2. Redesign as if the new constraints had been day-one assumptions, per [Redesign From First Principles](../principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md).
 3. Subtract before adding, per the [Subtract Before You Add](../principles/principle-subtract-before-you-add/principle-subtract-before-you-add.md) reference. The new sketch should be smaller than the old one before it grows.
-4. Return to Phase B and re-run the bundled Arena method.
+4. Return to Phase B and re-run Team Up's Arena method.
 
 ## Outputs
 
