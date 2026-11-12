@@ -13,18 +13,18 @@ Invoke `/playable` explicitly. It is a separate character-playground workflow, r
 
 ## Atlas Figures
 
-Invoke `atlas-figures` with a treatment to start directly, or with your subject to see all seven treatments and a recommendation. When the treatment is undecided, you choose before the agent loads its method or builds anything. A choice already made in the conversation carries forward. Its figure engines, examples and method references are bundled. Teardown uses installed Atlas Craft for design-domain guidance; the other treatments do not require Craft. Separate installations of the original figure skills are unnecessary.
+Invoke `atlas-figures` with a treatment to start directly, or with your subject to see all seven treatments and a recommendation. When the treatment is undecided, you choose before the agent loads its method or builds anything. A choice already made in the conversation carries forward. Its figure engines, examples and method references are bundled. Teardown uses installed Impeccable for design-domain guidance; the other treatments do not require it. Separate installations of the original figure skills are unnecessary.
 
 | Treatment | Upstream author and source | Packaging |
 | --- | --- | --- |
 | Hairline Create / Adopt | [Lucas Marques](https://github.com/lucasmarkes/hairline) | Create entry verbatim; supporting filename pointer patched. Adopt links to bundled Create. |
 | Anatomy | [Ryan](https://github.com/wheresryan22/anatomy) | Entry, kit and examples verbatim; verification reference updates its method filename. |
 | Engraved Figures | [Brooklyn Nicholson](https://github.com/OutThisLife/brooklyn-skills/tree/main/skills/engraved-figures) | Verbatim |
-| Teardown | [Jakub Krehel](https://github.com/jakubkrehel/skills/tree/main/skills/teardown) | Method resolves sibling design guidance through installed Atlas Craft; drawing assets unchanged |
+| Teardown | [Jakub Krehel](https://github.com/jakubkrehel/skills/tree/main/skills/teardown) | Method resolves sibling design guidance through installed Impeccable; drawing assets unchanged |
 | ISO-GLOW / Colorfigures | [April Zhu](https://x.com/Aprilzz423), with [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill) lineage | Description-format compatibility patches; Colorfigures README points to its renamed method. Engines and examples verbatim. |
 | Minicharts | [April Zhu](https://april-zhu.com/minicharts), with exploded-view conventions adapted from [Cathryn Lavery](https://github.com/cathrynlavery/diagram-design) | Method, engine, 54 examples, builder, checker and runtime references verbatim; README filename pointer patched |
 
-All sources retain their MIT licenses. The chooser is Atlas-authored. [Its source receipt](atlas-figures/SOURCE-MANIFEST.json) identifies exact revisions, download fingerprints, source classifications, carried files and patches. Teardown reuses Atlas Craft’s maintained Typography, Colors, Accessibility, Layout, Writing and UI references instead of duplicating them. It reads the relevant domain guidance within Teardown’s scope; it does not launch Craft’s broader workflow. Each treatment retains its own visual grammar.
+All sources retain their MIT licenses. The chooser is Atlas-authored. [Its source receipt](atlas-figures/SOURCE-MANIFEST.json) identifies exact revisions, download fingerprints, source classifications, carried files and patches. Teardown uses Impeccable’s Typography, Colors, Accessibility, Layout, Writing and UI Polish guidance rather than carrying its own copy. It reads the relevant domain guidance within Teardown’s scope; it does not launch Impeccable’s broader workflow. Each treatment retains its own visual grammar.
 
 The Git-based sources use Atlas’s [reviewed upstream-update pipeline](../docs/authoring/upstream-updates.md). April’s sources retain their actual download identities and require manual review of a new distribution, including Minicharts. ISO-GLOW, Colorfigures and Minicharts retain complete pristine extracted downloads under `sources/upstream/iso-glow/`, `sources/upstream/colorfigures/` and `sources/upstream/minicharts/`, with provenance in `sources/composition.json`. Update those sources, replay their patches and rebuild Figures together; no archive files or standalone package copies are kept. Playable has no bundled copy. The composition builder validates the bundled snapshots rather than silently adopting updates; independent packages retain the file fingerprints in `provenance.json`.
 
@@ -45,10 +45,10 @@ npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-figu
 npx skills add https://github.com/logbookfordevs/atlas-skills/tree/main/creative-skills/playable
 ```
 
-Choose the destination agent when prompted. Add `-g` for a global installation. For Teardown’s design guidance, also install Atlas Craft if it is missing:
+Choose the destination agent when prompted. Add `-g` for a global installation. For Teardown’s design guidance, also install Impeccable if it is missing:
 
 ```sh
-npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-craft
+npx skills add https://github.com/pbakaus/impeccable --skill impeccable
 ```
 
 These packages live separately from Atlas’s composed workflows in `skills/` and are optional: they are excluded from `stacks/atlas.json`. April’s sources retain download provenance because she distributes them as downloads rather than Git repositories.

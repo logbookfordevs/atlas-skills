@@ -11,7 +11,7 @@ The result explains and presents. It is not a manufacturing drawing: nothing is 
 
 Treat geometry and annotation correspondence as exact. Treat sheet proportions and line weights as starting recipes, adjusted to the reference and output size.
 
-For design-domain guidance, read the corresponding reference in the installed `atlas-craft` package when that domain applies: Typography (`references/type/index.md`), Colors (`references/color/index.md`), Accessibility (`references/accessibility/index.md`), Layout (`references/layout/index.md`), Writing (`references/copy/index.md`) or UI Polish (`references/ui/index.md`). These resolve the named sibling skills in the supporting guides. Use those references within Teardown’s scope; reading them does not select a broader Craft workflow. If Craft is unavailable, report the dependency and ask for installation or an agreed fallback before proceeding with the affected design work.
+For design-domain guidance, read the matching reference of the installed `impeccable` skill when that domain applies: Typography (`typeset`), Colors (`colorize`), Accessibility (`audit`), Layout (`layout`), Writing (`clarify`) or UI Polish (`polish`). These resolve the named `better-*` sibling skills in the supporting guides. Use those references within Teardown’s scope; reading them does not select a broader Impeccable workflow. If Impeccable is unavailable, report the dependency and ask for installation or an agreed fallback before proceeding with the affected design work.
 
 ## 1. Read the object and the reference separately
 

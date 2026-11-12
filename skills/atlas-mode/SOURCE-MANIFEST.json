@@ -46,12 +46,6 @@
       "condition": "When a wireframe or interactive model will answer an interface question."
     },
     {
-      "id": "atlas-craft",
-      "relationship": "behavioral",
-      "required": false,
-      "condition": "When refining an established interface or explicitly requesting a component-state workbench; mobile browser behavior loads its conditional reference."
-    },
-    {
       "id": "atlas-motion",
       "relationship": "behavioral",
       "required": false,
@@ -141,6 +135,6 @@
   "files": {
     "SKILL.md": "7bfaf5891083a2cd03ba0fc8ffb4f1efd3720989739d7b00492ab23457f7fd64",
     "agents/openai.yaml": "a702cacd9b54e4c83fd63333bc69967a5e03a04c2454f717143ab8fd57575081",
-    "references/methods.md": "e53c6abd77b3a790f47665cfeec36d1f905a2842fbff9d3069c0bdeb632f131f"
+    "references/methods.md": "bed7e620828aedf621a4a3dead38cd400f61a141e291a761140348a2c8fb883c"
   }
 }

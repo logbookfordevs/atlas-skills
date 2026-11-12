@@ -2,7 +2,6 @@
   "version": 1,
   "packages": [
     "animated-driven-frontend",
-    "atlas-craft",
     "atlas-debug",
     "atlas-explain",
     "atlas-figures",
@@ -37,29 +36,6 @@
           "skill": "atlas-mode",
           "required": false,
           "condition": "When synchronized interaction or rendering engineering needs the relevant technical references."
-        }
-      ]
-    },
-    {
-      "id": "atlas-craft",
-      "source": "https://github.com/logbookfordevs/atlas-skills",
-      "skill": "atlas-craft",
-      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-craft",
-      "consumers": [
-        {
-          "skill": "atlas-review",
-          "required": true,
-          "condition": "For Interface Audit and Interface Changes: the six domain methods (Accessibility, Layout, Copy, Type, Color, UI Polish) supply review criteria; Review stays read-only."
-        },
-        {
-          "skill": "atlas-mode",
-          "required": false,
-          "condition": "When refining an established interface or explicitly requesting a component-state workbench; mobile browser behavior loads its conditional reference."
-        },
-        {
-          "skill": "atlas-figures",
-          "required": true,
-          "condition": "Teardown’s typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Craft."
         }
       ]
     },
@@ -122,11 +98,6 @@
           "skill": "atlas-review",
           "required": true,
           "condition": "For motion judgments: Motion ownership, Animate and Fluid supply criteria; Review stays read-only."
-        },
-        {
-          "skill": "atlas-craft",
-          "required": true,
-          "condition": "When polish includes animation or gestures: Motion ownership, Animate and Fluid decide motion values."
         },
         {
           "skill": "atlas-mode",
@@ -315,6 +286,19 @@
           "skill": "atlas-mode",
           "required": false,
           "condition": "When a wireframe or interactive model will answer an interface question."
+        }
+      ]
+    },
+    {
+      "id": "impeccable",
+      "source": "https://github.com/pbakaus/impeccable",
+      "skill": "impeccable",
+      "command": "npx skills add https://github.com/pbakaus/impeccable --skill impeccable",
+      "consumers": [
+        {
+          "skill": "atlas-figures",
+          "required": true,
+          "condition": "Teardown's typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Impeccable."
         }
       ]
     },

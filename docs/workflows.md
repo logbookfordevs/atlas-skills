@@ -49,7 +49,7 @@ Choose the artifact or judgment that answers the current question:
 - **Hierarchy and navigation:** HTML UI's Wireframe method keeps fidelity low while you judge structure.
 - **An interactive visual commitment:** HTML UI's Model method makes the agreed flow concrete, reading its bundled Design Artifact guidance for visual direction.
 - **An uncertain state model or behavior:** the independent Prototype skill can build a bounded experiment.
-- **An established interface needs refinement:** Atlas Craft supplies Color, Type, Layout, Accessibility, UI Polish and Copy methods while preserving accepted identity. Ask for States to inspect one real component’s existing states with fixtures and a switcher before requesting visual changes.
+- **An established interface needs refinement:** use Impeccable to refine or build it; Atlas Review's Interface mode reviews the result against its six bundled domains.
 - **A changed interface needs review:** Atlas Review's Interface Changes distinguishes introduced, regressed and pre-existing problems. Interface Audit assesses an existing screen or flow more broadly.
 
 Carry approved references, viewport expectations, states and permitted adaptations into the spec or ticket. Reopen direction only when a material choice remains unresolved.
@@ -95,7 +95,7 @@ The previous composition, skills/profile and cinematic maps described retired wo
 
 ## Choose a figure treatment
 
-The optional `atlas-figures` skill presents Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW, Colorfigures and Minicharts. It recommends fits from the subject and intended medium; you select before construction. Ask, for example, “Help me choose a treatment to explain our cache for a blog post.” If you already chose, say “Make this coffee machine in Colorfigures.” For illustrated data, ask “Use Figures with Minicharts to draw these café expenses as a pie of coins.” Figure methods are bundled; Teardown reuses installed Atlas Craft for its design-domain guidance. See [Creative skills](../creative-skills/README.md) for installation and source credits.
+The optional `atlas-figures` skill presents Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW, Colorfigures and Minicharts. It recommends fits from the subject and intended medium; you select before construction. Ask, for example, “Help me choose a treatment to explain our cache for a blog post.” If you already chose, say “Make this coffee machine in Colorfigures.” For illustrated data, ask “Use Figures with Minicharts to draw these café expenses as a pie of coins.” Figure methods are bundled; Teardown uses installed Impeccable for its design-domain guidance. See [Creative skills](../creative-skills/README.md) for installation and source credits.
 
 ## Companion tools and agent instructions
 

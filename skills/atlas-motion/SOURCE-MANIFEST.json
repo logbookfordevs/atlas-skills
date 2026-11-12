@@ -50,7 +50,6 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-11-03",
       "rulings": [
-        "craft-motion-owner",
         "review-motion-owner",
         "motion-local-routing"
       ],
@@ -79,7 +78,6 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-05",
       "rulings": [
-        "craft-motion-owner",
         "review-motion-owner"
       ]
     },
@@ -164,7 +162,7 @@
     "licenses/find-animation-opportunities.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/performance/animation-performance.md": "e66129c02e597a95bcb9f6ed2fffc23742523058d9a45de45a4a3014074154d9",
     "licenses/animation-performance.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/motion-ownership.md": "89a5d3c7e950730760dcc2cef0ef077e1a0310ad9cb891637824cf6401fce68c",
+    "references/motion-ownership.md": "6c69b25fbfe44d00c5f697305bba7a52af49dca8ad1620fcb1b60550a51a04c4",
     "references/ownership.md": "166cf8437712cb30e2cc2306a029dd47c824089bee86677a8d12bc944307d91a"
   }
 }

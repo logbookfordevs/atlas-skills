@@ -13,7 +13,6 @@
       "strict": false,
       "skills": [
         "./skills/animated-driven-frontend",
-        "./skills/atlas-craft",
         "./skills/atlas-debug",
         "./skills/atlas-explain",
         "./skills/atlas-grill",

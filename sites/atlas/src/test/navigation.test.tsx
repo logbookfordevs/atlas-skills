@@ -79,8 +79,8 @@ describe('Atlas navigation', () => {
     const user = userEvent.setup();
     const router = open('/skills/animated-driven-frontend/');
     await screen.findByRole('heading', { level: 1, name: 'Animated-Driven Frontend' });
-    await user.click(screen.getByRole('link', { name: 'Atlas Craft' }));
-    await screen.findByRole('heading', { level: 1, name: 'Atlas Craft' });
+    await user.click(screen.getByRole('link', { name: 'Atlas Motion' }));
+    await screen.findByRole('heading', { level: 1, name: 'Atlas Motion' });
     expect(document.activeElement?.id).toBe('main');
     await user.click(screen.getByRole('link', { name: 'Back to all skills' }));
     await screen.findByRole('heading', { name: 'The skill reference' });
@@ -148,12 +148,18 @@ describe('Atlas navigation', () => {
     }
   });
 
-  it('shows both original authors and the collection that selected Craft references', () => {
-    open('/skills/atlas-craft/');
+  it('redirects the retired Atlas Craft URL to Atlas Review', async () => {
+    const router = open('/skills/atlas-craft/');
+    await screen.findByRole('heading', { level: 1, name: 'Atlas Review' });
+    expect(router.state.location.pathname).toBe('/skills/atlas-review/');
+  });
+
+  it('shows both original authors and the collection behind Review’s interface domains', () => {
+    open('/skills/atlas-review/');
     const origins = screen.getByRole('region', { name: 'Built on' });
     expect(within(origins).getAllByText('Jakub Krehel').length).toBeGreaterThan(0);
     expect(within(origins).getAllByText('Emil Kowalski').length).toBeGreaterThan(0);
-    for (const title of ['Better Accessibility', 'Better UI', 'Better Writing', 'Mobile Native']) {
+    for (const title of ['Better Accessibility', 'Better UI', 'Better Writing']) {
       expect(within(origins).getByRole('link', { name: title }).getAttribute('href')).toMatch(/\/blob\/[a-f0-9]{40}\//);
     }
     expect(within(origins).getByRole('link', { name: 'Product Engineering' }).getAttribute('href')).toBe('https://github.com/backnotprop/product-engineering');

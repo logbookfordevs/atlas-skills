@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 11a7567..25264dc 100644
+index 11a7567..c322bc9 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,11 +5,14 @@ description: Reviews a screen, flow or whole interface across accessibility, lay
@@ -11,10 +11,10 @@ index 11a7567..25264dc 100644
 +Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
  
 -Orchestration is all it owns. Accessibility rules belong to `better-accessibility`, structure to `better-layout`, copy to `better-writing`, type to `better-typography`, color to `better-colors`, visual polish and motion to `better-ui`.
-+This skill runs a cross-discipline review. It routes the interface to each Atlas Craft domain method, collects their evidence and consolidates one ranked verdict.
++This skill runs a cross-discipline review. It routes the interface to each bundled interface domain method, collects their evidence and consolidates one ranked verdict.
  
 -Change-scoped review of uncommitted work, branches and pull requests belongs to `interface-review`.
-+Orchestration is all it owns. Accessibility rules belong to Atlas Craft's Accessibility, structure to Atlas Craft's Layout, copy to Atlas Craft's Copy, type to Atlas Craft's Type, color to Atlas Craft's Color, visual polish and motion to Atlas Craft's UI Polish.
++Orchestration is all it owns. Accessibility rules belong to [Accessibility](../../accessibility/index.md), structure to [Layout](../../layout/index.md), copy to [Copy](../../copy/index.md), type to [Type](../../type/index.md), color to [Color](../../color/index.md), visual polish and motion to [UI Polish](../../ui/index.md).
 +
 +Change-scoped review of uncommitted work, branches and pull requests belongs to [Interface Changes](../changes/index.md).
  
@@ -45,12 +45,12 @@ index 11a7567..25264dc 100644
 -4. `better-typography`
 -5. `better-colors`
 -6. `better-ui`
-+1. Atlas Craft's Accessibility
-+2. Atlas Craft's Layout
-+3. Atlas Craft's Copy
-+4. Atlas Craft's Type
-+5. Atlas Craft's Color
-+6. Atlas Craft's UI Polish
++1. [Accessibility](../../accessibility/index.md)
++2. [Layout](../../layout/index.md)
++3. [Copy](../../copy/index.md)
++4. [Type](../../type/index.md)
++5. [Color](../../color/index.md)
++6. [UI Polish](../../ui/index.md)
  
  From each, take its principles, its references and its verification checks. Its severity ladder and its format are for standalone use; the ones in this file replace them.
  

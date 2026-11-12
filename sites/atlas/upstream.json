@@ -278,6 +278,48 @@
   "atlas-review": {
     "references": [
       {
+        "id": "better-colors",
+        "title": "Better Colors",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-colors/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-typography",
+        "title": "Better Typography",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-typography/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-layout",
+        "title": "Better Layout",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-layout/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-accessibility",
+        "title": "Better Accessibility",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-accessibility/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-ui",
+        "title": "Better UI",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-ui/SKILL.md",
+        "classification": "patched"
+      },
+      {
+        "id": "better-writing",
+        "title": "Better Writing",
+        "author": "Jakub Krehel",
+        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-writing/SKILL.md",
+        "classification": "patched"
+      },
+      {
         "id": "code-review",
         "title": "Code Review",
         "author": "Matt Pocock",
@@ -406,72 +448,6 @@
       }
     ],
     "collections": []
-  },
-  "atlas-craft": {
-    "references": [
-      {
-        "id": "better-colors",
-        "title": "Better Colors",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-colors/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-typography",
-        "title": "Better Typography",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-typography/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-layout",
-        "title": "Better Layout",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-layout/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-accessibility",
-        "title": "Better Accessibility",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-accessibility/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-ui",
-        "title": "Better UI",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-ui/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "better-writing",
-        "title": "Better Writing",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/better-writing/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "mobile-native",
-        "title": "Mobile Native",
-        "author": "Emil Kowalski",
-        "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/mobile-native/SKILL.md",
-        "classification": "patched"
-      },
-      {
-        "id": "state-machine",
-        "title": "State Machine",
-        "author": "Jakub Krehel",
-        "url": "https://github.com/jakubkrehel/skills/blob/60bf140e43c98b248e6594487384ec967e89d98a/skills/state-machine/SKILL.md",
-        "classification": "patched"
-      }
-    ],
-    "collections": [
-      {
-        "title": "Product Engineering",
-        "url": "https://github.com/backnotprop/product-engineering"
-      }
-    ]
   },
   "atlas-motion": {
     "references": [

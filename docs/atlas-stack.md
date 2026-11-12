@@ -54,7 +54,7 @@ The manifest publishes Leonardo’s Core as an installable collection. Your impo
 
 The carried-source manifest in `sources/composition.json` is separate: it preserves pinned snapshots and adaptations inside Atlas’s own packages. Its scheduled update issues do not update external installations or this stack’s source selection.
 
-Statechart installs independently from Pstack as `statechart` for checking TLA+ models and presenting state transitions and counterexamples. Formal Create depends on it when a TLA+ check is selected; Debug does not bundle or select it. It remains distinct from Craft’s visual States workbench.
+Statechart installs independently from Pstack as `statechart` for checking TLA+ models and presenting state transitions and counterexamples. Formal Create depends on it when a TLA+ check is selected; Debug does not bundle or select it.
 
 Engineering Principles (`engineering-principles`, formerly `atlas-implement`) carries Architect, TDD and Source-Driven Development as directly loaded methods. Implement (`implement`) imports Leonardo’s authored delivery workflow and selects Task or All Tickets from the requested execution shape. All Tickets adapts Matt Pocock’s Implement Spec for local or remote ticket graphs, isolated workers and one integration branch; the coordinator owns the shared review, PR and CI workflow. The Core selects both packages and no longer selects standalone `implement-spec` from Matt’s source. Updating the Core does not remove private or standalone installations from a user's machine.
 
@@ -92,7 +92,7 @@ Cleanup is proposed from previous selections or installation provenance, not sim
 
 Atlas Motion also carries Emil Kowalski’s Animation Performance as Performance: diagnose dropped frames and rendering costs, then apply repairs only when requested. Atlas Verify carries Break UI as UI Stress, including its worst-case data catalog. UI Stress exercises the real component through isolated temporary fixtures, reports observed and inferred failures separately, and hands repairs to the implementation executor. UI Stress has its own findings and supplies evidence to the Behavior report when the methods are combined. Neither method needs a separate installation.
 
-Atlas Craft conditionally loads a Mobile Web reference adapted from Emil Kowalski’s Mobile Native for browser chrome, keyboard overlap, tap feedback and scroll ownership. It preserves the six Craft modes and their domain ownership. Dynamic viewport units address browser chrome; software-keyboard clearance needs separate verification. The corrected shared Layout guidance also ships in Atlas Review.
+Atlas Craft is retired. Its six interface domains live in Atlas Review as review criteria; interface refinement and construction use Impeccable, which Atlas Figures' Teardown depends on for design-domain guidance. Jakub Krehel's State Machine and Emil Kowalski's Mobile Native install independently from their own repositories.
 
 The shared selection publishes Leonardo’s AFK Core: it includes standalone Domain Modeling, Bro’s Big Pics Little Words and Kami. Orchestrator, Plannotator Guide and Hand Drawn Canvas Animation are no longer selected. Plannotator itself remains a separately configured tool.
 
