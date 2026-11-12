@@ -27,7 +27,7 @@
         "sources/composition.json",
         "stacks/atlas.json"
       ],
-      "carriedSha256": "9d8b7f27f260ef79f332a636620ffb2741ac8f8d5305dea807fae2965ac86ee0"
+      "carriedSha256": "d00f123ab5188ea78d792921b2fc63956c71e823e0af6268bda6c396ad3144c0"
     },
     {
       "generator": "stack-manifest",
@@ -45,7 +45,7 @@
     "SKILL.md": "d4c951cb74327f5ebc64479780d8a9a381718323372687df5fa6f17fd6d7662c",
     "agents/openai.yaml": "caf11b5bc46d0b1181c27f69da4135b287be82ebfcfe9dfff4d2048dda6812f7",
     "references/cleanup.md": "0fd0efee090c394d5cade57c44180b5fce9f40e1e7b8bc5ef3b644b07eac93de",
-    "references/dependencies.json": "9d8b7f27f260ef79f332a636620ffb2741ac8f8d5305dea807fae2965ac86ee0",
+    "references/dependencies.json": "d00f123ab5188ea78d792921b2fc63956c71e823e0af6268bda6c396ad3144c0",
     "references/stack.json": "7db5f2c032bdaff5cac56c1d7692b2710d2359a10a6a11adc071dcd0f6a4065b"
   }
 }

@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 A showdown pits **contenders** (skills, prompts, agent setups) against identical briefs and lets blind judges score them round by round. The contender is the only variable: model, effort, seed, context, tools and time stay equal. The result is an observed outcome for this sample, never a ranking.
 
-Run it on Team Up under Showdown's rounds, seeds and judging contract: Swarm's coverage shape for the audit, Arena's Phase A (Frame) for the rubric, Swarm's race shape with a declared `rank all` rule for the fight, and Arena's Phase C (Cross-judge) for blind judging. A showdown reports; it never picks a base or grafts contenders together, so Arena Phases D–F and Swarm's in-chat report stay out. Team Up owns roles, models, effort and dispatch; Showdown owns the card, the evidence and the verdict.
+Run it on Team Up's Swarm: its coverage shape for the audit and its race shape with a declared `rank all` rule for the fight, where Showdown's blind judges produce the ranking. Choose judges through Team Up's selection policy. Showdown's own rubric, judging contract and report replace Swarm's aggregation and in-chat report. Team Up owns roles, models, effort and dispatch; Showdown owns the card, the evidence and the verdict.
 
 Work in a scratch folder. The subject project stays untouched: contenders refine copies. Recommendations the user put out of scope stay out of every brief and the report.
 
