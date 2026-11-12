@@ -47,7 +47,7 @@ For a tiny edit, ordinary project validation may be enough. A local test run, a 
 Choose the artifact or judgment that answers the current question:
 
 - **Hierarchy and navigation:** HTML UI's Wireframe method keeps fidelity low while you judge structure.
-- **An interactive visual commitment:** HTML UI's Model method makes the agreed flow concrete. It uses the independently available Design Artifact guidance.
+- **An interactive visual commitment:** HTML UI's Model method makes the agreed flow concrete, reading its bundled Design Artifact guidance for visual direction.
 - **An uncertain state model or behavior:** the independent Prototype skill can build a bounded experiment.
 - **An established interface needs refinement:** Atlas Craft supplies Color, Type, Layout, Accessibility, UI Polish and Copy methods while preserving accepted identity. Ask for States to inspect one real component’s existing states with fixtures and a switcher before requesting visual changes.
 - **A changed interface needs review:** Atlas Review's Interface Changes distinguishes introduced, regressed and pre-existing problems. Interface Audit assesses an existing screen or flow more broadly.

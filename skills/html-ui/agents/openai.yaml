@@ -1,6 +1,6 @@
 interface:
   display_name: "HTML UI"
-  short_description: "HTML UI"
-  default_prompt: "Use $html-ui for the requested task."
+  short_description: "Design HTML artifacts, wireframes and interactive product models"
+  default_prompt: "Use $html-ui to design this HTML deliverable, wireframe or product model."
 policy:
   allow_implicit_invocation: true

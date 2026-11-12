@@ -25,10 +25,10 @@ describe('Atlas navigation', () => {
     expect(name('twitter:card')).toBe('summary_large_image');
     expect(canonical()).toBe(`${site.origin}/`);
 
-    await user.click(screen.getByRole('link', { name: /^HTML UI\s*Make/ }));
+    await user.click(screen.getByRole('link', { name: /^HTML UI\s*Design/ }));
     await screen.findByRole('heading', { level: 1, name: 'HTML UI' });
     expect(property('og:title')).toBe('HTML UI · Atlas');
-    expect(property('og:description')).toBe('Make an interface idea concrete before committing to it.');
+    expect(property('og:description')).toBe('Design HTML deliverables, or make an interface idea concrete before committing to it.');
     expect(property('og:url')).toBe(`${site.origin}/skills/html-ui/`);
     expect(canonical()).toBe(`${site.origin}/skills/html-ui/`);
     expect(property('og:image')).toBeUndefined();
@@ -122,7 +122,9 @@ describe('Atlas navigation', () => {
     const prototype = within(origins).getByRole('link', { name: 'HTML Prototype' });
     expect(wireframe.getAttribute('href')).toMatch(/^https:\/\/github.com\/plannotator\/effective-html\/blob\/[a-f0-9]{40}\/skills\/html-wireframe\/SKILL.md$/);
     expect(prototype.getAttribute('href')).toMatch(/\/skills\/html-prototype\/SKILL.md$/);
-    expect(within(origins).getAllByText('Plannotator')).toHaveLength(2);
+    const artifact = within(origins).getByRole('link', { name: 'Design Artifact' });
+    expect(artifact.getAttribute('href')).toMatch(/^https:\/\/github.com\/plannotator\/effective-html\/blob\/[a-f0-9]{40}\/skills\/design-artifact\/SKILL.md$/);
+    expect(within(origins).getAllByText('Plannotator')).toHaveLength(3);
     await user.click(screen.getByRole('link', { name: 'Animated-Driven Frontend' }));
     await screen.findByRole('heading', { level: 1, name: 'Animated-Driven Frontend' });
     expect(screen.queryByRole('region', { name: 'Built on' })).toBeNull();
