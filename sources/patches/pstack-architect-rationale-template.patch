@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index a10f77f..581e81a 100644
+index a10f77f..1c85ad2 100644
 --- a/source.md
 +++ b/source.md
 @@ -4,7 +4,7 @@ The prose that ships alongside the type sketch. One page. Sentence-case headings
@@ -16,7 +16,7 @@ index a10f77f..581e81a 100644
  ## Synthesis decision
  
 -*Filled in by [arena](../../arena/SKILL.md). Records which candidate became the base and why, what was adapted from each of the others, and what was rejected and why.*
-+*Filled in by [arena](../../arena/arena.md). Records which candidate became the base and why, what was adapted from each of the others, and what was rejected and why.*
++*Filled in by Team Up's Arena. Records which candidate became the base and why, what was adapted from each of the others, and what was rejected and why.*
  
  ## Tradeoffs accepted
  

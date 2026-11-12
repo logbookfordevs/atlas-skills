@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Make Atlas skills rely on each other instead of carrying copies: each method has one owning package, and consumers name it and declare a dependency. Copies remain only where the owner is manual-only. State the rule in the README and maintenance guide.
+- Retire Atlas Craft. Atlas Review owns the six better-* interface domains as review criteria; interface refinement and construction use Impeccable, which joins the stack and supplies Atlas Figures' Teardown design guidance. Jakub Krehel's State Machine and Emil Kowalski's Mobile Native install independently. Redirect the old website reference to Atlas Review.
+
 ## 1.4.0
 
 - Add Minicharts as Atlas Figures’ seventh treatment, preserving April Zhu’s chart workflow, engine, 54 examples and build/check tools. Keep the MIT license and notices, fingerprint the supplied ZIP, patch only the README filename pointer, and track future downloads as manual review.

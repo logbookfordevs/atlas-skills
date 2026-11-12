@@ -5,14 +5,6 @@
   "managedFiles": [
     "references/arena/arena.md",
     "licenses/pstack-arena.txt",
-    "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md",
-    "licenses/pstack-principle-separate-before-serializing-shared-state.txt",
-    "references/principles/principle-laziness-protocol/principle-laziness-protocol.md",
-    "licenses/pstack-principle-laziness-protocol.txt",
-    "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md",
-    "licenses/pstack-principle-redesign-from-first-principles.txt",
-    "references/principles/principle-prove-it-works/principle-prove-it-works.md",
-    "licenses/pstack-principle-prove-it-works.txt",
     "references/swarm/swarm.md",
     "licenses/pstack-swarm.txt"
   ],
@@ -36,11 +28,18 @@
       "carriedSha256": "8ca1a36f741ed528f46a754188742c43c0bd9b15a6ddf390ef2d2003abbc0fc6"
     }
   ],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "engineering-principles",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For Arena: its Laziness Protocol, Prove It Works, Redesign From First Principles and Separate Before Serializing Shared State principles."
+    }
+  ],
   "sources": [
     {
       "id": "pstack-arena",
-      "owner": "engineering-principles",
+      "owner": "team-up",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -53,7 +52,7 @@
       "notices": [],
       "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
       "carriedPath": "references/arena/arena.md",
-      "carriedSha256": "f469d7f3d1c46abb98f7523eddb06653d80a182af93da3a5a0c373fd76946270",
+      "carriedSha256": "11b266fb3581b3e71f1e634c48daa39d8d1f8170dbe918cdcef50bb1b9534f09",
       "licensePath": "licenses/pstack-arena.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames. Permit callers to execute only explicitly selected phases with their own brief and evidence contract.",
@@ -67,111 +66,7 @@
         "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-arena.patch",
-      "patchSha256": "8debc932e625bc9de66067f29a5b336216bed4197c4d9f9bc98d24452b44e659"
-    },
-    {
-      "id": "pstack-principle-separate-before-serializing-shared-state",
-      "owner": "engineering-principles",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
-        "path": "skills/principle-separate-before-serializing-shared-state/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [],
-      "notices": [],
-      "sourceSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
-      "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md",
-      "carriedSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
-      "licensePath": "licenses/pstack-principle-separate-before-serializing-shared-state.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": [
-        "implement-candidate-ownership",
-        "team-up-arena-policy"
-      ]
-    },
-    {
-      "id": "pstack-principle-laziness-protocol",
-      "owner": "engineering-principles",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
-        "path": "skills/principle-laziness-protocol/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [],
-      "notices": [],
-      "sourceSha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
-      "carriedPath": "references/principles/principle-laziness-protocol/principle-laziness-protocol.md",
-      "carriedSha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
-      "licensePath": "licenses/pstack-principle-laziness-protocol.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": [
-        "team-up-arena-policy"
-      ]
-    },
-    {
-      "id": "pstack-principle-redesign-from-first-principles",
-      "owner": "engineering-principles",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
-        "path": "skills/principle-redesign-from-first-principles/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [],
-      "notices": [],
-      "sourceSha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
-      "carriedPath": "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md",
-      "carriedSha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
-      "licensePath": "licenses/pstack-principle-redesign-from-first-principles.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": [
-        "team-up-arena-policy"
-      ]
-    },
-    {
-      "id": "pstack-principle-prove-it-works",
-      "owner": "engineering-principles",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
-        "path": "skills/principle-prove-it-works/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "supportingFiles": [],
-      "notices": [],
-      "sourceSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
-      "carriedPath": "references/principles/principle-prove-it-works/principle-prove-it-works.md",
-      "carriedSha256": "66a9ae716dc1e6a8df742d835ed10c8ae3b81946f2bc15e4a9334afcd6269853",
-      "licensePath": "licenses/pstack-principle-prove-it-works.txt",
-      "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Preserve direct outcome proof while using the agreed artifact/delivery scope; remove the optional external Show Me Your Work audit dependency, whose adoption remains a separate decision.",
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": [
-        "implement-principle-scope",
-        "team-up-arena-policy"
-      ],
-      "patch": "sources/patches/pstack-principle-prove-it-works.patch",
-      "patchSha256": "b012e43feec228e8899ceb01468fcd83b6c460ec3e3b4407afa8344814875c84"
+      "patchSha256": "618516256e3e0f17539bc51ca79fa5610a4a2b011405a5de339b10269bdefc06"
     },
     {
       "id": "pstack-swarm",
@@ -236,7 +131,7 @@
         "pstack-principle-redesign-from-first-principles",
         "pstack-principle-prove-it-works"
       ],
-      "decision": "Share the maintained Arena method and complete four-principle closure with Architect while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported. No external audit workflow is activated."
+      "decision": "Team Up owns the maintained Arena method; Architect runs it through Team Up, and its four principles resolve through Engineering Principles, while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported. No external audit workflow is activated."
     }
   ],
   "files": {
@@ -244,16 +139,8 @@
     "agents/openai.yaml": "cc2307960ff67687217ee0f6252390a54ce17a4f2b00df3ddb1805c22374e2ae",
     "references/selection.md": "7912765ff9680104470cf0b7e4a7e15cab28fdd3182f14887dbbf52b56b05abc",
     "references/model-preferences.md": "8ca1a36f741ed528f46a754188742c43c0bd9b15a6ddf390ef2d2003abbc0fc6",
-    "references/arena/arena.md": "f469d7f3d1c46abb98f7523eddb06653d80a182af93da3a5a0c373fd76946270",
+    "references/arena/arena.md": "11b266fb3581b3e71f1e634c48daa39d8d1f8170dbe918cdcef50bb1b9534f09",
     "licenses/pstack-arena.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
-    "licenses/pstack-principle-separate-before-serializing-shared-state.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-laziness-protocol/principle-laziness-protocol.md": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
-    "licenses/pstack-principle-laziness-protocol.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
-    "licenses/pstack-principle-redesign-from-first-principles.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/principles/principle-prove-it-works/principle-prove-it-works.md": "66a9ae716dc1e6a8df742d835ed10c8ae3b81946f2bc15e4a9334afcd6269853",
-    "licenses/pstack-principle-prove-it-works.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/swarm/swarm.md": "91e8602356fd5c53fb13a83422edb59955e85214fd07be994686ea316540a97c",
     "licenses/pstack-swarm.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }

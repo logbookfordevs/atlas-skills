@@ -26,7 +26,6 @@
       "source": "https://github.com/logbookfordevs/atlas-skills",
       "skills": [
         "animated-driven-frontend",
-        "atlas-craft",
         "atlas-debug",
         "atlas-explain",
         "atlas-grill",
@@ -98,6 +97,13 @@
       "source": "https://github.com/backnotprop/pstack",
       "skills": [
         "statechart"
+      ]
+    },
+    {
+      "name": "Impeccable",
+      "source": "https://github.com/pbakaus/impeccable",
+      "skills": [
+        "impeccable"
       ]
     }
   ]

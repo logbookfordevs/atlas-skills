@@ -6,7 +6,7 @@ description: Sets and reviews how text renders, from the type scale and spacing 
 # Typography
 
 ## Atlas integration
-Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 
 This skill sets and reviews how text renders, from the type scale and spacing to font loading, wrapping and punctuation. It writes every fix in the project's styling system, and the [cheat sheet](css-cheat-sheet.md) maps each declaration to its Tailwind utility.
 

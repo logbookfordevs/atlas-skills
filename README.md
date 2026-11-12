@@ -4,7 +4,7 @@
 
 The Logbook Atlas Core is the skill selection I keep on every machine in my AFK kit: core workflows with Atlas invocations, authored utilities, intentional upstream adaptations and a few focused compositions. Complementary skills remain independently available from their original sources.
 
-Keep methods independently maintained; bundle what Atlas needs to deliver its core workflows without relying on AFK.
+Atlas skills rely on each other, the way Pstack's do: a skill names the Atlas skill that owns a method rather than carrying a copy. Copies are the exception, kept for a method whose owner is manual-only and for outside upstreams Atlas composes.
 
 Atlas maintains what it authors, patches or bundles. Complementary independent skills are recommended from their original sources in [the stack manifest](stacks/atlas.json). [AFK](https://ai-field-kit.logbookfordevs.com/) is optional tooling for managing installed skills and activation. Install Atlas packages directly with Skills CLI; AFK is not a workflow requirement.
 
@@ -29,7 +29,6 @@ Install the packages below, or import the Logbook Atlas Core to include the reco
 | [Atlas Review](skills/atlas-review/SKILL.md) | Standards & Spec, Impact, Interface, Motion and Motion Audit review |
 | [Atlas Verify](skills/atlas-verify/SKILL.md) | Run behavior/QA checks, stress-test UI data and assess performance evidence |
 | [Atlas Verifiers](skills/atlas-verifiers/SKILL.md) | Manual guidance for creating or maintaining app-driving and formal checks |
-| [Atlas Craft](skills/atlas-craft/SKILL.md) | Six refinement domains plus an explicitly requested States workbench; conditional Mobile Web guidance |
 | [Atlas Motion](skills/atlas-motion/SKILL.md) | Animate, Fluid, Performance diagnosis and read-only Opportunities |
 | [Tracking Implementation](skills/tracking-implementation/SKILL.md) | Implementation state and evidence alongside any executor, with optional Audit Trail |
 | [Animated-Driven Frontend](skills/animated-driven-frontend/SKILL.md) | Manually invoked ZERO engineering knowledge |

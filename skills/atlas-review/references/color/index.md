@@ -6,7 +6,7 @@ description: Builds and checks color systems by generating palettes, naming sema
 # Colors
 
 ## Atlas integration
-Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 
 This skill builds and audits color systems. It generates ramps, maps their steps to roles and token names, converts notation and measures rendered contrast pairs.
 

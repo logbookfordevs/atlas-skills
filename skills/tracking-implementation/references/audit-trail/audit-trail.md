@@ -50,7 +50,7 @@ Commit the trail only when the user or repository convention opts it in, followi
 ## Rules
 
 - Append-only. A wrong call gets a new row that supersedes it. Never edit or delete history.
-- Prefer evidence produced by committed scripts over hand-made one-offs (the bundled [Encode Lessons in Structure](../principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md) principle; this evidence preference does not authorize unrelated tooling changes).
+- Prefer evidence produced by committed scripts over hand-made one-offs (Engineering Principles' Encode Lessons in Structure principle; this evidence preference does not authorize unrelated tooling changes).
 
 ## Audit the log against the transcript
 

@@ -6,8 +6,8 @@ A screen or flow uses Interface Audit. A branch, PR, commit range or working-tre
 
 Domain entries and supporting examples may describe fixes. During review, treat those as proposed changes: product code remains read-only. Motion Audit may produce plans under repository artifact conventions; its execution variant hands off to an explicitly authorized executor instead of implementing within Review. Find Animation Opportunities is a separate Atlas Motion request when available.
 
-Follow [Motion ownership](motion-ownership.md) for conflicts between UI polish and motion, including supporting examples. Load construction methods only for the rules needed to judge a finding. Whole-interface severity consolidation does not merge the separate Standards and Spec reports.
+Follow Atlas Motion's Motion ownership ruling for conflicts between UI polish and motion, including supporting examples. Load construction methods only for the rules needed to judge a finding. Whole-interface severity consolidation does not merge the separate Standards and Spec reports.
 
 Impact owns downstream-risk investigation and executable safety facts. Its output stays separate from the Standards and Spec axes. Impact's scratch proofs do not authorize repairs. Reuse adequate existing proof; a broader QA report is a separately selected Atlas Verify task.
 
-Atlas Verify proves requested behavior with recorded evidence. A review verdict does not establish QA completion. Native/Expo motion is outside these bundled construction methods.
+Atlas Verify proves requested behavior with recorded evidence. A review verdict does not establish QA completion. Native/Expo motion is outside Atlas Motion's construction methods.

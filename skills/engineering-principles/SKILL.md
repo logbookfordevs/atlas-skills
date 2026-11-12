@@ -18,4 +18,6 @@ Select from the requested outcome and implementation context, honoring an explic
 | TDD | Test-first feature or bug work, red-green-refactor, integration tests, or behavior with an agreed public Test Seam | [TDD](references/tdd/tdd.md) |
 | Source-Driven Development | Implementation whose correctness depends on framework, library or API versions and their official documentation | [Source-Driven](references/source-driven/source-driven.md) |
 
+Shared principles live under `references/principles/`, one folder per principle. Load one when a method here or a caller such as Team Up's Arena names it.
+
 Architect is selective; routine implementation does not require design exploration. For combined work, use Source-Driven to establish version-specific constraints, Architect to choose the implementation shape, and TDD to prove behavior through the agreed seam. Mechanical edits and version-independent work use normal project validation when no selected method applies.

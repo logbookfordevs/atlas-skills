@@ -6,9 +6,9 @@ description: Polishes surfaces, icons and motion with exact values for border ra
 # UI polish
 
 ## Atlas integration
-Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 
-For animation values, springs, interruption and gesture physics, read [Motion ownership](../motion-ownership.md). That ruling governs conflicting motion examples and checklists in this source tree.
+For animation values, springs, interruption and gesture physics, read Atlas Motion's Motion ownership ruling. That ruling governs conflicting motion examples and checklists in this source tree.
 
 This skill holds the visual polish for surfaces, icons and motion, with the exact value each detail takes. It applies once the underlying interaction is sound, and a polish finding never outranks a broken interaction.
 

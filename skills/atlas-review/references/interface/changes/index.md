@@ -6,7 +6,7 @@ description: Reviews a branch, pull request or uncommitted change for the interf
 # Interface review
 
 ## Atlas integration
-Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../../motion-ownership.md).
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 
 This skill reviews a change rather than a screen. It resolves the scope, expands the changed files to the surfaces they affect, reads both sides of the diff and classifies every finding.
 

@@ -6,7 +6,7 @@ description: Writes and reviews interface copy, from labels and errors to empty 
 # Writing
 
 ## Atlas integration
-Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 
 This skill writes and reviews interface copy such as labels, errors, empty states and confirmations, along with the terms that run through them. It matches the product's existing voice and flags copy that misleads people or leaves them without a way forward.
 

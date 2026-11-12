@@ -6,7 +6,7 @@ description: Sets grouping, alignment, reading order, responsive structure and r
 # Layout
 
 ## Atlas integration
-Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 
 This skill sets grouping, alignment, spacing and responsive structure. It then stress-tests that structure by resizing it, translating it and mirroring it for RTL.
 

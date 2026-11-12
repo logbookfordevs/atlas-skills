@@ -126,9 +126,7 @@
       "method": "skills/atlas-motion/references/animate/animate.md",
       "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. Supporting files remain verbatim.",
       "consumers": [
-        "atlas-motion",
-        "atlas-craft",
-        "atlas-review"
+        "atlas-motion"
       ],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-11-03",
@@ -142,7 +140,6 @@
         }
       ],
       "rulings": [
-        "craft-motion-owner",
         "review-motion-owner",
         "motion-local-routing"
       ],
@@ -166,16 +163,13 @@
       "method": "sources/upstream/apple-design/source.md",
       "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
       "consumers": [
-        "atlas-motion",
-        "atlas-craft",
-        "atlas-review"
+        "atlas-motion"
       ],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-05",
       "carriedPath": "references/fluid/apple-design.md",
       "supportingFiles": [],
       "rulings": [
-        "craft-motion-owner",
         "review-motion-owner"
       ]
     },
@@ -194,10 +188,9 @@
       "sourceSha256": "4e7fd6880f41a87a21bb3be8e0b2bd7e7b8c561af5fb706ec0bb3e58877d60ec",
       "license": "sources/upstream/better-layout/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "skills/atlas-craft/references/layout/index.md",
+      "method": "skills/atlas-review/references/layout/index.md",
       "carriedPath": "references/layout/index.md",
       "consumers": [
-        "atlas-craft",
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
@@ -214,7 +207,7 @@
           "relativePath": "grouping-and-alignment.md",
           "upstreamPath": "skills/better-layout/grouping-and-alignment.md",
           "sourceSha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
-          "method": "skills/atlas-craft/references/layout/grouping-and-alignment.md",
+          "method": "skills/atlas-review/references/layout/grouping-and-alignment.md",
           "patch": "sources/patches/better-layout/grouping-and-alignment.md.patch"
         },
         {
@@ -222,13 +215,12 @@
           "relativePath": "spacing-and-adaptivity.md",
           "upstreamPath": "skills/better-layout/spacing-and-adaptivity.md",
           "sourceSha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
-          "method": "skills/atlas-craft/references/layout/spacing-and-adaptivity.md",
+          "method": "skills/atlas-review/references/layout/spacing-and-adaptivity.md",
           "patch": "sources/patches/better-layout/spacing-and-adaptivity.md.patch"
         }
       ],
       "rulings": [
         "craft-local-names",
-        "interface-local-routing",
         "review-interface-routing"
       ],
       "selection": {
@@ -257,10 +249,9 @@
       "sourceSha256": "8f00a576f6c8d2f8d72dfbffe765ce569982509d01533ea5881de6e1918d3a68",
       "license": "sources/upstream/better-typography/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "skills/atlas-craft/references/type/index.md",
+      "method": "skills/atlas-review/references/type/index.md",
       "carriedPath": "references/type/index.md",
       "consumers": [
-        "atlas-craft",
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
@@ -311,7 +302,6 @@
       ],
       "rulings": [
         "craft-local-names",
-        "interface-local-routing",
         "review-interface-routing"
       ],
       "selection": {
@@ -340,10 +330,9 @@
       "sourceSha256": "2fc5964fe9adae02e8ba4d80d40ad85d23da227f3eab3b55e06c7df0ac7e7652",
       "license": "sources/upstream/better-colors/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "skills/atlas-craft/references/color/index.md",
+      "method": "skills/atlas-review/references/color/index.md",
       "carriedPath": "references/color/index.md",
       "consumers": [
-        "atlas-craft",
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
@@ -372,7 +361,7 @@
           "relativePath": "contrast.md",
           "upstreamPath": "skills/better-colors/contrast.md",
           "sourceSha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
-          "method": "skills/atlas-craft/references/color/contrast.md",
+          "method": "skills/atlas-review/references/color/contrast.md",
           "patch": "sources/patches/better-colors/contrast.md.patch"
         },
         {
@@ -396,7 +385,6 @@
       ],
       "rulings": [
         "craft-local-names",
-        "interface-local-routing",
         "review-interface-routing"
       ],
       "selection": {
@@ -595,14 +583,12 @@
       "sourceSha256": "f3f9dc26c947dbdfc64be80d3c0d278d5d8bb070c7826b2dae6bf8c380e81586",
       "license": "sources/upstream/better-accessibility/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "skills/atlas-craft/references/accessibility/index.md",
+      "method": "skills/atlas-review/references/accessibility/index.md",
       "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "consumers": [
-        "atlas-craft",
         "atlas-review"
       ],
       "rulings": [
-        "interface-local-routing",
         "review-interface-routing"
       ],
       "carriedPath": "references/accessibility/index.md",
@@ -621,7 +607,7 @@
           "relativePath": "focus-and-keyboard.md",
           "upstreamPath": "skills/better-accessibility/focus-and-keyboard.md",
           "sourceSha256": "47857a860f25f3159ace5b3e06e4961e9c47bd0f9c30f35d1aab22e97e3f0b5c",
-          "method": "skills/atlas-craft/references/accessibility/focus-and-keyboard.md",
+          "method": "skills/atlas-review/references/accessibility/focus-and-keyboard.md",
           "patch": "sources/patches/better-accessibility-focus-and-keyboard.patch"
         },
         {
@@ -641,7 +627,7 @@
           "relativePath": "motion-and-zoom.md",
           "upstreamPath": "skills/better-accessibility/motion-and-zoom.md",
           "sourceSha256": "16c0c3daeab2f01ed04ee0189998b5711d3c4c9a4ff10604a757577af9bb5896",
-          "method": "skills/atlas-craft/references/accessibility/motion-and-zoom.md",
+          "method": "skills/atlas-review/references/accessibility/motion-and-zoom.md",
           "patch": "sources/patches/better-accessibility/motion-and-zoom.md.patch"
         },
         {
@@ -655,7 +641,7 @@
           "relativePath": "semantics-and-aria.md",
           "upstreamPath": "skills/better-accessibility/semantics-and-aria.md",
           "sourceSha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
-          "method": "skills/atlas-craft/references/accessibility/semantics-and-aria.md",
+          "method": "skills/atlas-review/references/accessibility/semantics-and-aria.md",
           "patch": "sources/patches/better-accessibility/semantics-and-aria.md.patch"
         }
       ]
@@ -675,16 +661,13 @@
       "sourceSha256": "2d5f9fa4f3bbf045da914349b6e5fde559c947e5323968350b65bb2cdc6b3e4f",
       "license": "sources/upstream/better-ui/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "skills/atlas-craft/references/ui/index.md",
+      "method": "skills/atlas-review/references/ui/index.md",
       "adaptation": "Replace sibling calls with direct bundled-method links. Atlas motion ownership overrides conflicting numeric presets; surfaces and icons remain UI Polish responsibilities. Pristine snapshots and unadapted supporting files remain verbatim.",
       "consumers": [
-        "atlas-craft",
         "atlas-review"
       ],
       "rulings": [
-        "interface-local-routing",
         "review-interface-routing",
-        "craft-motion-owner",
         "review-motion-owner"
       ],
       "carriedPath": "references/ui/index.md",
@@ -721,7 +704,7 @@
           "relativePath": "icons.md",
           "upstreamPath": "skills/better-ui/icons.md",
           "sourceSha256": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
-          "method": "skills/atlas-craft/references/ui/icons.md",
+          "method": "skills/atlas-review/references/ui/icons.md",
           "patch": "sources/patches/better-ui/icons.md.patch"
         },
         {
@@ -753,14 +736,12 @@
       "sourceSha256": "109e4337da3621410c225b137d4683d8c246ca06071990a22882376ad60ec6e3",
       "license": "sources/upstream/better-writing/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "skills/atlas-craft/references/copy/index.md",
+      "method": "skills/atlas-review/references/copy/index.md",
       "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
       "consumers": [
-        "atlas-craft",
         "atlas-review"
       ],
       "rulings": [
-        "interface-local-routing",
         "review-interface-routing"
       ],
       "carriedPath": "references/copy/index.md",
@@ -779,7 +760,7 @@
           "relativePath": "patterns.md",
           "upstreamPath": "skills/better-writing/patterns.md",
           "sourceSha256": "93ed5285d2009213b600e6f5af53ae3f7e3ff0114014146779aeda1c1ab42077",
-          "method": "skills/atlas-craft/references/copy/patterns.md",
+          "method": "skills/atlas-review/references/copy/patterns.md",
           "patch": "sources/patches/better-writing/patterns.md.patch"
         }
       ]
@@ -1215,8 +1196,7 @@
       "carriedPath": "references/grilling/grilling.md",
       "adaptation": "Carry Grilling verbatim in both packages. Each Atlas package owns its invocation metadata; upstream metadata remains in source snapshots.",
       "consumers": [
-        "atlas-grill",
-        "atlas-wayfinder"
+        "atlas-grill"
       ],
       "supportingFiles": [
         {
@@ -1249,8 +1229,7 @@
       "carriedPath": "references/domain-modeling/domain-modeling.md",
       "adaptation": "Carry Domain Modeling and both format references verbatim from one registered source into both packages. Upstream invocation metadata remains in source snapshots.",
       "consumers": [
-        "atlas-grill",
-        "atlas-wayfinder"
+        "atlas-grill"
       ],
       "supportingFiles": [
         {
@@ -1537,8 +1516,7 @@
       "carriedPath": "references/how/how.md",
       "adaptation": "Replace fixed Cursor/provider dispatch with available host roles and models, bounded concurrency and sequential fallback. Preserve the exploration/explanation split and complete templates; link the companion Why method locally.",
       "consumers": [
-        "atlas-explain",
-        "engineering-principles"
+        "atlas-explain"
       ],
       "supportingFiles": [
         {
@@ -1582,8 +1560,7 @@
       "carriedPath": "references/why/why.md",
       "adaptation": "Adapt host dispatch and history/tool availability without inventing access; keep investigation read-only. Standalone Why retains full evidence-category coverage, while explicit caller scope permits bounded Teach investigations with documented exclusions. Preserve epistemics and all source playbooks.",
       "consumers": [
-        "atlas-explain",
-        "engineering-principles"
+        "atlas-explain"
       ],
       "supportingFiles": [
         {
@@ -1793,7 +1770,7 @@
     },
     {
       "id": "pstack-arena",
-      "owner": "engineering-principles",
+      "owner": "team-up",
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
@@ -1806,11 +1783,10 @@
       "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
       "license": "sources/upstream/pstack-arena/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/engineering-principles/references/arena/arena.md",
+      "method": "skills/team-up/references/arena/arena.md",
       "carriedPath": "references/arena/arena.md",
       "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames. Permit callers to execute only explicitly selected phases with their own brief and evidence contract.",
       "consumers": [
-        "engineering-principles",
         "team-up"
       ],
       "supportingFiles": [],
@@ -1873,8 +1849,7 @@
       "carriedPath": "references/principles/principle-encode-lessons-in-structure/principle-encode-lessons-in-structure.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena and Audit Trail evidence reference, not a global rule or public skill selection.",
       "consumers": [
-        "engineering-principles",
-        "tracking-implementation"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2011,8 +1986,7 @@
       "carriedPath": "references/principles/principle-laziness-protocol/principle-laziness-protocol.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "engineering-principles",
-        "team-up"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2121,8 +2095,7 @@
       "carriedPath": "references/principles/principle-prove-it-works/principle-prove-it-works.md",
       "adaptation": "Preserve direct outcome proof while using the agreed artifact/delivery scope; remove the optional external Show Me Your Work audit dependency, whose adoption remains a separate decision.",
       "consumers": [
-        "engineering-principles",
-        "team-up"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2152,8 +2125,7 @@
       "carriedPath": "references/principles/principle-redesign-from-first-principles/principle-redesign-from-first-principles.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "engineering-principles",
-        "team-up"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2181,8 +2153,7 @@
       "carriedPath": "references/principles/principle-separate-before-serializing-shared-state/principle-separate-before-serializing-shared-state.md",
       "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
-        "engineering-principles",
-        "team-up"
+        "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
@@ -2452,35 +2423,6 @@
       ]
     },
     {
-      "id": "mobile-native",
-      "owner": "Emil Kowalski",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/emilkowalski/skills",
-        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
-        "path": "skills/mobile-native/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/mobile-native/source.md",
-      "sourceSha256": "888b7651d66d66dbac4e72b7c554638eb19bd971d686d6cbdf030a5ef3788f55",
-      "license": "sources/upstream/mobile-native/LICENSE",
-      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "method": "skills/atlas-craft/references/mobile-web/mobile-native.md",
-      "carriedPath": "references/mobile-web/mobile-native.md",
-      "patch": "sources/patches/mobile-native.patch",
-      "adaptation": "Condense Mobile Native into a conditional mobile-web reference. Link overlapping rules to bundled Craft owners; scope platform resets to demonstrated needs, preserve selectable text and accessible activation, and qualify keyboard viewport and PWA metadata behavior. Retain device evidence limits.",
-      "consumers": [
-        "atlas-craft"
-      ],
-      "supportingFiles": [],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-21",
-      "rulings": [
-        "craft-mobile-web-ownership"
-      ]
-    },
-    {
       "id": "explain-interface",
       "owner": "Atlas Explain",
       "classification": "patched",
@@ -2544,48 +2486,6 @@
       "adoptedAt": "2026-10-26",
       "rulings": [
         "explain-interface-evidence"
-      ]
-    },
-    {
-      "id": "state-machine",
-      "owner": "Atlas Craft",
-      "classification": "patched",
-      "upstream": {
-        "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "60bf140e43c98b248e6594487384ec967e89d98a",
-        "path": "skills/state-machine/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/state-machine/source.md",
-      "sourceSha256": "a94d55cf0a6b71bb8e374e66da9fd66fc8095141e7ff9859ab7c23e6f704f5cf",
-      "license": "sources/upstream/state-machine/LICENSE",
-      "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "method": "skills/atlas-craft/references/states/state-machine.md",
-      "carriedPath": "references/states/state-machine.md",
-      "patch": "sources/patches/state-machine.patch",
-      "adaptation": "Route stress testing and interface review to their existing Atlas owners. Clarify that production styling belongs to the component while switcher chrome stays isolated; keep fixture refreshes and mutations separate from live data. Preserve existing-state discovery, the real-component workbench, explicit seam approval and user-requested cleanup.",
-      "consumers": [
-        "atlas-craft"
-      ],
-      "supportingFiles": [
-        {
-          "snapshot": "sources/upstream/state-machine/supporting/agents/openai.yaml",
-          "relativePath": "agents/openai.yaml",
-          "upstreamPath": "skills/state-machine/agents/openai.yaml",
-          "sourceSha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff"
-        },
-        {
-          "snapshot": "sources/upstream/state-machine/supporting/switcher.md",
-          "relativePath": "switcher.md",
-          "upstreamPath": "skills/state-machine/switcher.md",
-          "sourceSha256": "d6603f2512bc544f86c2d585399791d7f0e6dde50c6b32ad795d899df55a4377"
-        }
-      ],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
-      "rulings": [
-        "craft-states-workbench"
       ]
     },
     {
@@ -4531,59 +4431,34 @@
       "entry": "skills/atlas-review/SKILL.md",
       "agent": "skills/atlas-review/agents/openai.yaml",
       "methods": [
-        "code-review",
-        "review-animations",
-        "better-interface",
-        "interface-review",
-        "better-colors",
-        "better-typography",
-        "better-layout",
         "better-accessibility",
+        "better-colors",
+        "better-layout",
+        "better-typography",
         "better-ui",
         "better-writing",
-        "animate",
-        "apple-design",
+        "better-interface",
+        "code-review",
         "improve-animations",
-        "pstack-blast-radius"
+        "interface-review",
+        "pstack-blast-radius",
+        "review-animations"
       ],
-      "authoredReferences": [
-        {
-          "input": "skills/atlas-motion/references/motion-ownership.md",
-          "target": "references/motion-ownership.md"
-        }
-      ],
+      "authoredReferences": [],
       "dependencies": [
         {
           "id": "atlas-verify",
           "relationship": "behavioral",
           "required": false,
           "condition": "When review needs behavior checks or recorded QA evidence."
+        },
+        {
+          "id": "atlas-motion",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For motion judgments: Motion ownership, Animate and Fluid supply criteria; Review stays read-only."
         }
       ]
-    },
-    {
-      "id": "atlas-craft",
-      "entry": "skills/atlas-craft/SKILL.md",
-      "agent": "skills/atlas-craft/agents/openai.yaml",
-      "methods": [
-        "better-colors",
-        "better-typography",
-        "better-layout",
-        "better-accessibility",
-        "better-ui",
-        "better-writing",
-        "animate",
-        "apple-design",
-        "mobile-native",
-        "state-machine"
-      ],
-      "authoredReferences": [
-        {
-          "input": "skills/atlas-motion/references/motion-ownership.md",
-          "target": "references/motion-ownership.md"
-        }
-      ],
-      "dependencies": []
     },
     {
       "id": "atlas-motion",
@@ -4634,8 +4509,7 @@
       "methods": [
         "show-me",
         "pstack-show-me-your-work",
-        "pstack-unslop",
-        "pstack-principle-encode-lessons-in-structure"
+        "pstack-unslop"
       ],
       "authoredReferences": [
         {
@@ -4664,7 +4538,7 @@
           "id": "engineering-principles",
           "relationship": "behavioral",
           "required": false,
-          "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence."
+          "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence; the Audit Trail's evidence preference cites its Encode Lessons in Structure principle."
         },
         {
           "id": "code-simplification",
@@ -4701,10 +4575,6 @@
       "agent": "skills/team-up/agents/openai.yaml",
       "methods": [
         "pstack-arena",
-        "pstack-principle-separate-before-serializing-shared-state",
-        "pstack-principle-laziness-protocol",
-        "pstack-principle-redesign-from-first-principles",
-        "pstack-principle-prove-it-works",
         "pstack-swarm"
       ],
       "authoredReferences": [
@@ -4717,24 +4587,29 @@
           "target": "references/model-preferences.md"
         }
       ],
-      "dependencies": []
+      "dependencies": [
+        {
+          "id": "engineering-principles",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For Arena: its Laziness Protocol, Prove It Works, Redesign From First Principles and Separate Before Serializing Shared State principles."
+        }
+      ]
     },
     {
       "id": "snap-out-of-it",
       "entry": "utility-skills/snap-out-of-it/SKILL.md",
       "agent": "utility-skills/snap-out-of-it/agents/openai.yaml",
       "methods": [],
-      "authoredReferences": [
+      "authoredReferences": [],
+      "dependencies": [
         {
-          "input": "skills/team-up/references/selection.md",
-          "target": "references/selection.md"
-        },
-        {
-          "input": "skills/team-up/references/model-preferences.md",
-          "target": "references/model-preferences.md"
+          "id": "team-up",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For choosing the cross-family reviewer through Team Up's selection policy."
         }
       ],
-      "dependencies": [],
       "directory": "utility-skills/snap-out-of-it"
     },
     {
@@ -4829,7 +4704,6 @@
         "tdd",
         "source-driven-development",
         "pstack-architect",
-        "pstack-arena",
         "pstack-principle-boundary-discipline",
         "pstack-principle-encode-lessons-in-structure",
         "pstack-principle-exhaust-the-design-space",
@@ -4843,9 +4717,7 @@
         "pstack-principle-prove-it-works",
         "pstack-principle-redesign-from-first-principles",
         "pstack-principle-separate-before-serializing-shared-state",
-        "pstack-principle-subtract-before-you-add",
-        "pstack-how",
-        "pstack-why"
+        "pstack-principle-subtract-before-you-add"
       ],
       "dependencies": [
         {
@@ -4859,18 +4731,21 @@
           "relationship": "behavioral",
           "required": false,
           "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
-        }
-      ],
-      "authoredReferences": [
-        {
-          "input": "skills/team-up/references/selection.md",
-          "target": "references/selection.md"
         },
         {
-          "input": "skills/team-up/references/model-preferences.md",
-          "target": "references/model-preferences.md"
+          "id": "team-up",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For Architect: Team Up's Arena runs the competing design sketches, choosing runners through its selection policy."
+        },
+        {
+          "id": "atlas-explain",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For Architect: Atlas Explain's How method builds the mental model of touched systems."
         }
-      ]
+      ],
+      "authoredReferences": []
     },
     {
       "id": "implement",
@@ -4917,8 +4792,6 @@
       "agent": "skills/atlas-wayfinder/agents/openai.yaml",
       "methods": [
         "wayfinder",
-        "grilling",
-        "domain-modeling",
         "wayfinder-local-tracker"
       ],
       "dependencies": [
@@ -4933,6 +4806,12 @@
           "relationship": "behavioral",
           "required": true,
           "condition": "When resolving a human-led Prototype ticket."
+        },
+        {
+          "id": "atlas-grill",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For Grilling tickets and naming the destination: Atlas Grill's With Docs mode (Grilling and Domain Modeling)."
         }
       ]
     },
@@ -5009,12 +4888,6 @@
           "relationship": "behavioral",
           "required": false,
           "condition": "When a wireframe or interactive model will answer an interface question."
-        },
-        {
-          "id": "atlas-craft",
-          "relationship": "behavioral",
-          "required": false,
-          "condition": "When refining an established interface or explicitly requesting a component-state workbench; mobile browser behavior loads its conditional reference."
         },
         {
           "id": "atlas-motion",
@@ -5119,10 +4992,10 @@
       ],
       "dependencies": [
         {
-          "id": "atlas-craft",
+          "id": "impeccable",
           "relationship": "behavioral",
           "required": true,
-          "condition": "Teardown\u2019s typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Craft."
+          "condition": "Teardown's typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Impeccable."
         }
       ]
     },
@@ -5220,8 +5093,8 @@
   "rulings": [
     {
       "id": "craft-local-names",
-      "owner": "atlas-craft",
-      "document": "skills/atlas-craft/SKILL.md",
+      "owner": "atlas-review",
+      "document": "skills/atlas-review/SKILL.md",
       "section": "Modes",
       "sources": [
         "better-colors",
@@ -5241,21 +5114,6 @@
       "decision": "Tracking sets HTML as the default for new local records, allows an explicitly requested alternative, and preserves existing formats unless conversion is requested. Load Show Me before creating or updating the tracking artifact to guide layout and representations within that format, preserving complete evidence, structured state and the existing acceptance contract."
     },
     {
-      "id": "interface-local-routing",
-      "owner": "atlas-craft",
-      "document": "skills/atlas-craft/references/ownership.md",
-      "section": "Scope and ownership",
-      "sources": [
-        "better-colors",
-        "better-typography",
-        "better-layout",
-        "better-accessibility",
-        "better-ui",
-        "better-writing"
-      ],
-      "decision": "References resolve locally; whole-interface review is an optional Atlas Review handoff."
-    },
-    {
       "id": "review-interface-routing",
       "owner": "atlas-review",
       "document": "skills/atlas-review/references/ownership.md",
@@ -5270,19 +5128,7 @@
         "better-ui",
         "better-writing"
       ],
-      "decision": "Review bundles its six domains; choose audit or change scope and preserve read-only authorization."
-    },
-    {
-      "id": "craft-motion-owner",
-      "owner": "atlas-craft",
-      "document": "skills/atlas-craft/references/ownership.md",
-      "section": "Scope and ownership",
-      "sources": [
-        "better-ui",
-        "animate",
-        "apple-design"
-      ],
-      "decision": "Shared motion ownership overrides UI polish presets, including supporting examples."
+      "decision": "Review bundles its six interface domains as review criteria; choose audit or change scope and preserve read-only authorization."
     },
     {
       "id": "review-motion-owner",
@@ -5382,7 +5228,7 @@
         "domain-modeling",
         "wayfinder-local-tracker"
       ],
-      "decision": "Load the shared Grilling and Domain Modeling references directly as required by Wayfinder. Use host-supported loading for independent methods. Honor the configured tracker adapter; without one, use the bundled local fallback under the active artifact convention."
+      "decision": "Load Grilling and Domain Modeling through Atlas Grill's With Docs mode as required by Wayfinder. Use host-supported loading for independent methods. Honor the configured tracker adapter; without one, use the bundled local fallback under the active artifact convention."
     },
     {
       "id": "verify-method-authority",
@@ -5554,7 +5400,7 @@
         "pstack-principle-redesign-from-first-principles",
         "pstack-principle-prove-it-works"
       ],
-      "decision": "Share the maintained Arena method and complete four-principle closure with Architect while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported. No external audit workflow is activated."
+      "decision": "Team Up owns the maintained Arena method; Architect runs it through Team Up, and its four principles resolve through Engineering Principles, while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported. No external audit workflow is activated."
     },
     {
       "id": "human-writing-technical-contract",
@@ -5623,22 +5469,6 @@
       "decision": "Worst-case UI data enters the real component through an isolated temporary harness. Product source and live data stay unchanged; retaining fixtures and implementing fixes are separate authorized work. A recreation is not proof of the original component."
     },
     {
-      "id": "craft-mobile-web-ownership",
-      "owner": "atlas-craft",
-      "document": "skills/atlas-craft/references/mobile-web/mobile-native.md",
-      "section": "Existing domain owners",
-      "sources": [
-        "mobile-native",
-        "better-layout",
-        "better-typography",
-        "better-accessibility",
-        "better-ui",
-        "animate",
-        "apple-design"
-      ],
-      "decision": "Mobile Web is a conditional reference, not a Craft mode. Existing methods own type, accessibility, layout, UI and motion. Platform fixes preserve selectable text, native activation and useful browser behavior; keyboard clearance requires browser-specific evidence rather than a dvh guarantee."
-    },
-    {
       "id": "explain-interface-evidence",
       "owner": "atlas-explain",
       "document": "skills/atlas-explain/references/interface/explain-interface.md",
@@ -5647,16 +5477,6 @@
         "explain-interface"
       ],
       "decision": "Interface explains observed mechanisms without a craft or accessibility verdict. Browser inspection stays read-only; a screenshot supports a qualified reconstruction, not proof of authored CSS, framework identity or accessibility conformance."
-    },
-    {
-      "id": "craft-states-workbench",
-      "owner": "atlas-craft",
-      "document": "skills/atlas-craft/SKILL.md",
-      "section": "Atlas Craft",
-      "sources": [
-        "state-machine"
-      ],
-      "decision": "States is an explicitly requested workbench, not automatic setup for ordinary refinement or a review. Preserve the real component and its production styling; isolate fixture reads, refreshes and mutations and use separate inspection chrome. Setup hands over before visual edits; cleanup requires the user\u2019s request."
     },
     {
       "id": "implement-spec-coordination",

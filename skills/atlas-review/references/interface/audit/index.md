@@ -6,7 +6,7 @@ description: Reviews a screen, flow or whole interface across accessibility, lay
 # Interface
 
 ## Atlas integration
-Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../../motion-ownership.md).
+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 
 This skill runs a cross-discipline review. It routes the interface to each bundled interface domain method, collects their evidence and consolidates one ranked verdict.
 

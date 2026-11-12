@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 11a7567..d3a86d0 100644
+index 11a7567..c322bc9 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,11 +5,14 @@ description: Reviews a screen, flow or whole interface across accessibility, lay
@@ -8,7 +8,7 @@ index 11a7567..d3a86d0 100644
  
 -This skill runs a cross-discipline review. It routes the interface to each `better-*` skill, collects their evidence and consolidates one ranked verdict.
 +## Atlas integration
-+Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../../motion-ownership.md).
++Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
  
 -Orchestration is all it owns. Accessibility rules belong to `better-accessibility`, structure to `better-layout`, copy to `better-writing`, type to `better-typography`, color to `better-colors`, visual polish and motion to `better-ui`.
 +This skill runs a cross-discipline review. It routes the interface to each bundled interface domain method, collects their evidence and consolidates one ranked verdict.

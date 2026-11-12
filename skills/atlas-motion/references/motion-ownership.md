@@ -2,7 +2,7 @@
 
 Load this ruling when UI polish includes motion, or when reviewing conflicting animation guidance.
 
-Craft owns surfaces, icons and optical alignment. [Animate](animate/animate.md) owns the decision to animate, frequency and purpose gates, properties, curves, durations, press feedback, entrances, exits and interruption. [Fluid](fluid/apple-design.md) owns direct manipulation, springs, momentum, velocity handoff and gesture physics. Both methods are bundled alongside this ruling in Craft, Review and Motion.
+UI Polish owns surfaces, icons and optical alignment. [Animate](animate/animate.md) owns the decision to animate, frequency and purpose gates, properties, curves, durations, press feedback, entrances, exits and interruption. [Fluid](fluid/apple-design.md) owns direct manipulation, springs, momentum, velocity handoff and gesture physics. Both methods live in Atlas Motion; Atlas Review loads this ruling and both methods from it.
 
 Use the project's accepted tokens and coherent motion language. Where a method needs a new value, use the relevant Animate or Fluid rule and verify it against the actual interaction. UI Polish's supporting recipes supply examples, not competing numeric requirements. Its `0.96` press scale, fixed stagger/exit presets and blanket zero-bounce checklist yield to the motion owner. Zero bounce can suit an icon cross-fade; it does not prohibit momentum-driven gesture overshoot.
 

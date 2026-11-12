@@ -2,7 +2,6 @@
   "version": 1,
   "packages": [
     "animated-driven-frontend",
-    "atlas-craft",
     "atlas-debug",
     "atlas-explain",
     "atlas-figures",
@@ -41,29 +40,16 @@
       ]
     },
     {
-      "id": "atlas-craft",
-      "source": "https://github.com/logbookfordevs/atlas-skills",
-      "skill": "atlas-craft",
-      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-craft",
-      "consumers": [
-        {
-          "skill": "atlas-mode",
-          "required": false,
-          "condition": "When refining an established interface or explicitly requesting a component-state workbench; mobile browser behavior loads its conditional reference."
-        },
-        {
-          "skill": "atlas-figures",
-          "required": true,
-          "condition": "Teardown’s typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Craft."
-        }
-      ]
-    },
-    {
       "id": "atlas-explain",
       "source": "https://github.com/logbookfordevs/atlas-skills",
       "skill": "atlas-explain",
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-explain",
       "consumers": [
+        {
+          "skill": "engineering-principles",
+          "required": true,
+          "condition": "For Architect: Atlas Explain's How method builds the mental model of touched systems."
+        },
         {
           "skill": "atlas-mode",
           "required": false,
@@ -91,6 +77,11 @@
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-grill",
       "consumers": [
         {
+          "skill": "atlas-wayfinder",
+          "required": true,
+          "condition": "For Grilling tickets and naming the destination: Atlas Grill's With Docs mode (Grilling and Domain Modeling)."
+        },
+        {
           "skill": "atlas-mode",
           "required": false,
           "condition": "When the task is to challenge a plan or resolve unclear choices."
@@ -103,6 +94,11 @@
       "skill": "atlas-motion",
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-motion",
       "consumers": [
+        {
+          "skill": "atlas-review",
+          "required": true,
+          "condition": "For motion judgments: Motion ownership, Animate and Fluid supply criteria; Review stays read-only."
+        },
         {
           "skill": "atlas-mode",
           "required": false,
@@ -261,7 +257,12 @@
         {
           "skill": "tracking-implementation",
           "required": false,
-          "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence."
+          "condition": "When tracked implementation selects TDD or Source-Driven Development; record each selected method and its evidence; the Audit Trail's evidence preference cites its Encode Lessons in Structure principle."
+        },
+        {
+          "skill": "team-up",
+          "required": true,
+          "condition": "For Arena: its Laziness Protocol, Prove It Works, Redesign From First Principles and Separate Before Serializing Shared State principles."
         },
         {
           "skill": "implement",
@@ -285,6 +286,19 @@
           "skill": "atlas-mode",
           "required": false,
           "condition": "When a wireframe or interactive model will answer an interface question."
+        }
+      ]
+    },
+    {
+      "id": "impeccable",
+      "source": "https://github.com/pbakaus/impeccable",
+      "skill": "impeccable",
+      "command": "npx skills add https://github.com/pbakaus/impeccable --skill impeccable",
+      "consumers": [
+        {
+          "skill": "atlas-figures",
+          "required": true,
+          "condition": "Teardown's typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Impeccable."
         }
       ]
     },
@@ -359,6 +373,16 @@
       "skill": "team-up",
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill team-up",
       "consumers": [
+        {
+          "skill": "snap-out-of-it",
+          "required": true,
+          "condition": "For choosing the cross-family reviewer through Team Up's selection policy."
+        },
+        {
+          "skill": "engineering-principles",
+          "required": true,
+          "condition": "For Architect: Team Up's Arena runs the competing design sketches, choosing runners through its selection policy."
+        },
         {
           "skill": "implement",
           "required": true,
