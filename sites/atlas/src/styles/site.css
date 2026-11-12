@@ -106,12 +106,13 @@ main { min-width: 0; max-width: 720px; }
 .skill-row > svg { align-self: start; margin-top: 3px; color: var(--focus); }
 .skill-row:hover .skill-name { color: var(--link-hover); text-decoration: underline; text-underline-offset: 4px; }
 .skill-row:hover .skill-summary { color: var(--ink); }
-.third-party-group-note { margin: -4px 0 18px; max-width: 68ch; }
 .third-party-row { padding: 24px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 36px; }
 .third-party-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 20px; }
-.third-party-heading h4 { margin: 0; font: 400 14px/1.6 var(--sans); color: var(--ink); }
+.third-party-heading h3 { margin: 0; font: 400 14px/1.6 var(--sans); color: var(--ink); }
 .third-party-heading .text-link { min-height: 32px; font-family: var(--mono); font-size: 12px; overflow-wrap: anywhere; }
-.third-party-use { margin: 6px 0 16px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.third-party-recommendation { margin: 6px 0 0; font-size: 15px; line-height: 1.7; max-width: 68ch; }
+.third-party-use { margin: 6px 0 16px; color: var(--muted); font: 400 12px/1.6 var(--sans); }
+.third-party-use a { color: inherit; }
 .third-party-group { padding-top: 20px; border-top: 1px solid var(--border); }
 .companions { margin-top: 28px; }
 .companions h3 { margin-bottom: 8px; }

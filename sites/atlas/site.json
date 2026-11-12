@@ -24,5 +24,8 @@
   "tools": {
     "title": "Recommended tools",
     "description": "Leonardo’s companion tools for Atlas: browser access, Plannotator, Yggtree, T3 Code, AFK and a shareable AGENTS.md example."
+  },
+  "thirdParty": {
+    "impeccable": "Recommended for interface design: visual direction, typography, color, layout, accessibility, motion, polish and copy."
   }
 }
