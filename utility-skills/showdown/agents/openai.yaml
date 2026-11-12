@@ -1,0 +1,6 @@
+interface:
+  display_name: "Showdown"
+  short_description: "Benchmark contenders head-to-head with blind judges and a fighting-game report."
+  default_prompt: "Use $showdown to benchmark these contenders on identical briefs from our project. Read every instruction file first, judge blind, explain each round with cited rules, and deliver the fighting-game report as a local HTML file."
+policy:
+  allow_implicit_invocation: false

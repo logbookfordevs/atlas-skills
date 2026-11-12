@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "workflow": "showdown",
+  "generated": true,
+  "managedFiles": [],
+  "authoredInputs": [
+    "utility-skills/showdown/SKILL.md",
+    "utility-skills/showdown/agents/openai.yaml",
+    "utility-skills/showdown/references/judging.md",
+    "utility-skills/showdown/references/report.md",
+    "utility-skills/showdown/scripts/capture.sh",
+    "utility-skills/showdown/scripts/build-report.py",
+    "utility-skills/showdown/assets/report-template.html"
+  ],
+  "authoredReferences": [
+    {
+      "input": "utility-skills/showdown/references/judging.md",
+      "target": "references/judging.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "329727f168b4378330b05a54e9010a6230743a92dbb7e6b9fdb4ae7167c0babe"
+    },
+    {
+      "input": "utility-skills/showdown/references/report.md",
+      "target": "references/report.md",
+      "classification": "atlas-authored",
+      "carriedSha256": "93f56cea3e2a7fab0ba8e67cc084f1aec6a26e994f1f1c72aa8af6a672a5af6c"
+    },
+    {
+      "input": "utility-skills/showdown/scripts/capture.sh",
+      "target": "scripts/capture.sh",
+      "classification": "atlas-authored",
+      "carriedSha256": "aab35b27f55a3a40e007bd9124865b17b7fee44c5b04db564c6463d05e9fca52"
+    },
+    {
+      "input": "utility-skills/showdown/scripts/build-report.py",
+      "target": "scripts/build-report.py",
+      "classification": "atlas-authored",
+      "carriedSha256": "5674da71b3ed827ebcf43d82b17e2548a904906cd75815b069a57bb259e64bc8"
+    },
+    {
+      "input": "utility-skills/showdown/assets/report-template.html",
+      "target": "assets/report-template.html",
+      "classification": "atlas-authored",
+      "carriedSha256": "ae393ec762b99323722612a92248e73ea56317536f7b720aa4812dbc20ee8bef"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "team-up",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For Arena Phase A, Phase B and Phase C, using Showdown's rounds, seeds, blind judging and rule-judge contract."
+    },
+    {
+      "id": "agent-browser",
+      "relationship": "tool",
+      "required": false,
+      "condition": "When available for evidence capture and report verification."
+    }
+  ],
+  "sources": [],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "3f5062711273e53685728c6638a9d502a121a673456307b0396e63bfce94dc65",
+    "agents/openai.yaml": "462603e801e64aa3a0b0a67b414089c01f099e50016f3574f4133db0110a19f6",
+    "references/judging.md": "329727f168b4378330b05a54e9010a6230743a92dbb7e6b9fdb4ae7167c0babe",
+    "references/report.md": "93f56cea3e2a7fab0ba8e67cc084f1aec6a26e994f1f1c72aa8af6a672a5af6c",
+    "scripts/capture.sh": "aab35b27f55a3a40e007bd9124865b17b7fee44c5b04db564c6463d05e9fca52",
+    "scripts/build-report.py": "5674da71b3ed827ebcf43d82b17e2548a904906cd75815b069a57bb259e64bc8",
+    "assets/report-template.html": "ae393ec762b99323722612a92248e73ea56317536f7b720aa4812dbc20ee8bef",
+    "assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2": "d64ba838ef5472bba248620ec4fd8b5aa7cf0db2908e0bb230600caf279ba7bc",
+    "assets/fonts/atkinson-hyperlegible-latin-700-normal.woff2": "140e2bd25a7315c8a062508391426b0d8c3297400c947b8d847be28f73a199f0",
+    "assets/fonts/bungee-latin-400-normal.woff2": "126eec706b7931682dbcf6c6efc274132c603f181fbf912678e6cfeb341e721b",
+    "assets/fonts/jetbrains-mono-latin-400-normal.woff2": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb",
+    "assets/fonts/jetbrains-mono-latin-700-normal.woff2": "d0d4e818808f2a0ba39b2b09d1989366f63494e295f003c7ef436697378507e8",
+    "licenses/font-atkinson-hyperlegible.txt": "e137caeef2ff7c04fbf87078ad09cf3dcba8a3a58a4aa4e2f399d42c50bc4b18",
+    "licenses/font-bungee.txt": "1256e1025d54b27c033b5a1335a5b99a64ea5e6cdfd5805829128baaf0a47804",
+    "licenses/font-jetbrains-mono.txt": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b"
+  }
+}

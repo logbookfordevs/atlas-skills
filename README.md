@@ -88,6 +88,7 @@ Optional tools live in [`utility-skills/`](utility-skills/README.md), install in
 | Package | Purpose |
 | --- | --- |
 | [Challenge](utility-skills/challenge/SKILL.md) | Independently challenge an analysis, diagnosis, estimate or proposal before acting; compose Interrogate, Council and Doubt-Driven Development with selected Team Up Arena phases |
+| [Showdown](utility-skills/showdown/SKILL.md) | Benchmark skills, prompts or agent setups head-to-head on identical briefs with blind judges, cited-rule rulings and a fighting-game report; uses selected Team Up Arena phases |
 | [Snap Out of It](utility-skills/snap-out-of-it/SKILL.md) | A candid second opinion and friendly wake-up call when overthinking or overengineering |
 | [Writing for Humans](utility-skills/writing-for-humans/SKILL.md) | Author voice, reader experience, technical documentation and shared Unslop guidance |
 | [Skill Source Composition](utility-skills/skill-source-composition/SKILL.md) | Apply provenance, patched-source contracts and reviewed upstream updates in another project |

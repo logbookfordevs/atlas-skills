@@ -166,6 +166,7 @@ it.each([
   { id: 'writing-for-humans', name: 'Writing for Humans', directory: 'utility-skills' },
   { id: 'snap-out-of-it', name: 'Snap Out of It', directory: 'utility-skills' },
   { id: 'challenge', name: 'Challenge', directory: 'utility-skills' },
+  { id: 'showdown', name: 'Showdown', directory: 'utility-skills' },
 ])('links $name to its actual source and receipt directory', async ({ id, name, directory }) => {
   open(`/skills/${id}/`);
   await screen.findByRole('heading', { level: 1, name });
