@@ -109,4 +109,8 @@ The website’s [interactive workflow figure](https://atlas.logbookfordevs.com/w
 
 Use the optional `challenge` utility before acting on a diagnosis, estimate, explanation or proposal: “We think the cause is known and this is a one-day fix. Challenge that assessment.” It composes Interrogate’s independent adversaries and proof attempts, Council’s broad feedback and disagreement synthesis, and Doubt-Driven Development’s context extraction and bounded reconciliation. Team Up supplies selected Arena phases. Reproduced failures, supported objections and consequential unknowns remain distinct; the outcome is advisory.
 
+## Benchmark contenders
+
+Use the optional `showdown` utility to compare skills, prompts or agent setups on the same work: “Benchmark these two design skills on our landing page and an in-app screen.” It audits every contender's instruction files, runs identical briefs on the same model, scores outputs with blind judges from other model families, explains each round with rules cited from the contenders' files and delivers a fighting-game HTML report. Team Up supplies Swarm for the audit and contender runs, and judge selection.
+
 Use `snap-out-of-it` for a different need: “Am I overthinking this? Give me the simplest sufficient approach.” It keeps the candid, playful second opinion previously named Reality Check. Both utilities, and Writing for Humans, install separately from Core. See [Utility skills](../utility-skills/README.md).

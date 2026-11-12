@@ -5172,6 +5172,49 @@
           "condition": "For Arena Phase A steps 3\u20134, Phase B and Phase F, using Challenge\u2019s review brief, scope-based reviewer count and evidence rules."
         }
       ]
+    },
+    {
+      "id": "showdown",
+      "directory": "utility-skills/showdown",
+      "entry": "utility-skills/showdown/SKILL.md",
+      "agent": "utility-skills/showdown/agents/openai.yaml",
+      "methods": [],
+      "authoredReferences": [
+        {
+          "input": "utility-skills/showdown/references/judging.md",
+          "target": "references/judging.md"
+        },
+        {
+          "input": "utility-skills/showdown/references/report.md",
+          "target": "references/report.md"
+        },
+        {
+          "input": "utility-skills/showdown/scripts/capture.sh",
+          "target": "scripts/capture.sh"
+        },
+        {
+          "input": "utility-skills/showdown/scripts/build-report.py",
+          "target": "scripts/build-report.py"
+        },
+        {
+          "input": "utility-skills/showdown/assets/report-template.html",
+          "target": "assets/report-template.html"
+        }
+      ],
+      "dependencies": [
+        {
+          "id": "team-up",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For Swarm coverage (contender audit), a Swarm race with rank all (contender runs) and judge selection, using Showdown's rounds, seeds, blind judging and rule-judge contract."
+        },
+        {
+          "id": "agent-browser",
+          "relationship": "tool",
+          "required": false,
+          "condition": "When available for evidence capture and report verification."
+        }
+      ]
     }
   ],
   "rulings": [
