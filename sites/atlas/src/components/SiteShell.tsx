@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Outlet, ScrollRestoration, useLocation } from 'react-router';
 import { AtlasLink } from '@/components/AtlasLink';
 import { Arrow, Moon } from '@/components/Icons';
-import { repository, skills, skillGroups, skillPath } from '@/data';
+import { repository, skills, skillGroups, skillPath, thirdPartyPath, thirdPartySkills } from '@/data';
 import { updatePageMetadata } from '@/metadata';
 
 function Contents() {
@@ -76,6 +76,10 @@ function Contents() {
           <p className="reference-group-title" id={`skill-group-${index}`}>{group}</p>
           {skills.filter((skill) => skill.group === group).map((skill) => <AtlasLink key={skill.id} to={skillPath(skill.id)} onClick={() => setDirectoryOpen(false)} aria-current={location.pathname.replace(/\/$/, '') === skillPath(skill.id).replace(/\/$/, '') ? 'page' : undefined}>{skill.name}</AtlasLink>)}
         </div>)}
+        <div className="reference-group third-party-group" role="group" aria-labelledby="skill-group-third-party">
+          <p className="reference-group-title" id="skill-group-third-party">Install separately</p>
+          {thirdPartySkills.map((skill) => <AtlasLink key={skill.id} to={thirdPartyPath(skill.id)} onClick={() => setDirectoryOpen(false)}>{skill.name}</AtlasLink>)}
+        </div>
       </nav>
     </div>
   </aside>;

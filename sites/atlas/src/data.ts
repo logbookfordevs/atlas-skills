@@ -3,6 +3,7 @@ import stack from '../stack.json';
 import upstream from '../upstream.json';
 import site from '../site.json';
 import redirects from '../skill-redirects.json';
+import thirdParty from '../third-party.json';
 
 export interface Skill {
   id: string;
@@ -23,7 +24,19 @@ export interface UpstreamCredit {
   collections: { title: string; url: string }[];
 }
 
+export interface ThirdPartySkill {
+  id: string;
+  name: string;
+  source: string;
+  command: string;
+  consumers: { skill: string; required: boolean; condition: string }[];
+}
+
 export const skills: Skill[] = content;
+export const thirdPartySkills: ThirdPartySkill[] = thirdParty;
+export const thirdPartyPath = (id: string) => `/#install-${id}`;
+export const sourceLabel = (source: string) => source.replace(/^https:\/\/github\.com\//, '').replace(/\.git$/, '');
+export const isRequiredSomewhere = (skill: ThirdPartySkill) => skill.consumers.some((consumer) => consumer.required);
 export const skillGroups = [...new Set(skills.map((skill) => skill.group))];
 export const upstreamCredits: Record<string, UpstreamCredit> = upstream;
 export const skillRedirects: Record<string, string> = redirects;

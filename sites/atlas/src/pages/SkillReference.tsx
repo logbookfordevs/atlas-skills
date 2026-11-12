@@ -3,7 +3,7 @@ import { AtlasLink } from '@/components/AtlasLink';
 import { CopyCommand } from '@/components/CopyCommand';
 import { Arrow } from '@/components/Icons';
 import { SkillOrigins } from '@/components/SkillOrigins';
-import { repository, skills, skillPath } from '@/data';
+import { repository, skills, skillPath, sourceLabel, thirdPartyPath, thirdPartySkills } from '@/data';
 import { NotFound } from '@/pages/NotFound';
 
 export function SkillReference() {
@@ -12,6 +12,10 @@ export function SkillReference() {
   const skill = skills.find((entry) => entry.id === id);
   if (!skill) return <NotFound />;
   const sourceDirectory = skill.sourceDirectory ?? (skill.optional ? 'creative-skills' : 'skills');
+  const companions = thirdPartySkills.flatMap((companion) => companion.consumers
+    .filter((consumer) => consumer.skill === skill.id)
+    .map((consumer) => ({ ...companion, required: consumer.required })));
+  const hasCompanions = companions.length > 0;
 
   return <article className="article" key={skill.id}>
     <header className="article-header">
@@ -32,6 +36,13 @@ export function SkillReference() {
     </section>
     <section><h2>Install</h2><CopyCommand command={`npx skills add ${repository} --skill ${skill.id}`} />
       <p className="small-copy">Install this package by name. Then use <AtlasLink to={skillPath('atlas-setup')}>Atlas Setup</AtlasLink> to check any independent dependencies.</p>
+      {hasCompanions && <div className="companions">
+        <h3>Install separately</h3>
+        <ul>{companions.map((companion) => <li key={companion.id}>
+          <AtlasLink to={thirdPartyPath(companion.id)}>{companion.name}</AtlasLink>
+          <span> from {sourceLabel(companion.source)}, {companion.required ? 'required for part of its work' : 'optional'}</span>
+        </li>)}</ul>
+      </div>}
     </section>
     <aside className="reference-note"><p>{skill.note}</p></aside>
     <SkillOrigins skill={skill} />

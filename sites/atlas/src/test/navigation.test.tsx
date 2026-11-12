@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { createMemoryRouter } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
 import { routes } from '@/routes';
-import { site, skills, skillGroups } from '@/data';
+import { site, skills, skillGroups, thirdPartySkills } from '@/data';
 
 function open(path = '/') {
   const router = createMemoryRouter(routes, { initialEntries: [path] });
@@ -186,7 +186,7 @@ it('keeps the complete grouped skill navigation available on overview, workflow 
   for (const path of ['/', '/workflow/', '/stack/']) {
     await router.navigate(path);
     const directory = screen.getByRole('navigation', { name: 'Skill reference' });
-    expect(within(directory).getAllByRole('link')).toHaveLength(skills.length);
+    expect(within(directory).getAllByRole('link')).toHaveLength(skills.length + thirdPartySkills.length);
     for (const group of skillGroups) {
       const section = within(directory).getByRole('group', { name: group });
       for (const skill of skills.filter((entry) => entry.group === group)) {
@@ -259,4 +259,20 @@ it('explores workflow stations, copies the selected request and returns from acc
   expect(within(stations).getByRole('button', { name: 'Build & QA' }).getAttribute('aria-pressed')).toBe('true');
   await user.click(screen.getByRole('link', { name: 'Read this step ↓' }));
   expect(router.state.location.hash).toBe('#stage-build');
+});
+
+it('lists third-party skills apart, with install commands, and links them from the skills that need them', async () => {
+  const user = userEvent.setup();
+  const router = open();
+  const section = screen.getByRole('region', { name: 'Install separately' });
+  await user.click(within(section).getByRole('button', { name: 'Copy Impeccable installation command' }));
+  expect(await navigator.clipboard.readText()).toBe('npx skills add https://github.com/pbakaus/impeccable --skill impeccable');
+  expect(within(section).getByRole('link', { name: 'Atlas Figures' }).getAttribute('href')).toBe('/skills/atlas-figures/');
+
+  await router.navigate('/skills/atlas-wayfinder/');
+  await screen.findByRole('heading', { level: 1, name: 'Atlas Wayfinder' });
+  const main = screen.getByRole('main');
+  await user.click(within(main).getByRole('link', { name: 'Research' }));
+  expect(router.state.location.pathname).toBe('/');
+  expect(router.state.location.hash).toBe('#install-research');
 });

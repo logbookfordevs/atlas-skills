@@ -1,0 +1,98 @@
+[
+  {
+    "id": "code-simplification",
+    "name": "Code Simplification",
+    "source": "https://github.com/addyosmani/agent-skills",
+    "command": "npx skills add https://github.com/addyosmani/agent-skills --skill code-simplification",
+    "consumers": [
+      {
+        "skill": "tracking-implementation",
+        "required": false,
+        "condition": "When the user authorizes a material simplification opportunity identified during tracked work."
+      }
+    ]
+  },
+  {
+    "id": "codebase-design",
+    "name": "Codebase Design",
+    "source": "https://github.com/mattpocock/skills",
+    "command": "npx skills add https://github.com/mattpocock/skills --skill codebase-design",
+    "consumers": [
+      {
+        "skill": "engineering-principles",
+        "required": false,
+        "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
+      }
+    ]
+  },
+  {
+    "id": "impeccable",
+    "name": "Impeccable",
+    "source": "https://github.com/pbakaus/impeccable",
+    "command": "npx skills add https://github.com/pbakaus/impeccable --skill impeccable",
+    "consumers": [
+      {
+        "skill": "atlas-figures",
+        "required": true,
+        "condition": "Teardown's typography, color, accessibility, layout, interface copy or UI-polish guidance is needed; other figure treatments do not require Impeccable."
+      }
+    ]
+  },
+  {
+    "id": "prototype",
+    "name": "Prototype",
+    "source": "https://github.com/mattpocock/skills",
+    "command": "npx skills add https://github.com/mattpocock/skills --skill prototype",
+    "consumers": [
+      {
+        "skill": "atlas-wayfinder",
+        "required": true,
+        "condition": "When resolving a human-led Prototype ticket."
+      }
+    ]
+  },
+  {
+    "id": "research",
+    "name": "Research",
+    "source": "https://github.com/mattpocock/skills",
+    "command": "npx skills add https://github.com/mattpocock/skills --skill research",
+    "consumers": [
+      {
+        "skill": "atlas-wayfinder",
+        "required": true,
+        "condition": "When resolving an autonomous Research ticket or charting research work."
+      }
+    ]
+  },
+  {
+    "id": "statechart",
+    "name": "Statechart",
+    "source": "https://github.com/backnotprop/pstack",
+    "command": "npx skills add https://github.com/backnotprop/pstack --skill statechart",
+    "consumers": [
+      {
+        "skill": "atlas-verifiers",
+        "required": true,
+        "condition": "When Formal Create selects a TLA+ model, use independently installed Statechart to read model-checking results. If unavailable, report the gap and offer targeted installation before dependent work."
+      }
+    ]
+  },
+  {
+    "id": "writing-for-agents",
+    "name": "Writing for Agents",
+    "source": "https://github.com/mattpocock/skills",
+    "command": "npx skills add https://github.com/mattpocock/skills --skill writing-for-agents",
+    "consumers": [
+      {
+        "skill": "atlas-retro",
+        "required": false,
+        "condition": "When Diagnose assesses agent instructions or Enforce authors enduring agent-facing judgment guidance; report unavailable criteria and continue independent work."
+      },
+      {
+        "skill": "atlas-mode",
+        "required": false,
+        "condition": "When authoring agent instructions, skills or agent-facing policies."
+      }
+    ]
+  }
+]
