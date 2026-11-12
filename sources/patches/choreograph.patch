@@ -1,0 +1,23 @@
+diff --git a/source.md b/source.md
+index 9fef004..e7b04c6 100644
+--- a/source.md
++++ b/source.md
+@@ -5,15 +5,10 @@ description: Coordinate several elements that animate together — decide what m
+ 
+ # Choreographing Motion
+ 
+-## Initial Response
++## Atlas integration
++Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow [Motion ownership](../motion-ownership.md).
+ 
+-When this skill is first invoked without a specific question, respond only with:
+-
+-> I'm ready to choreograph your animations, my knowledge comes from Emil Kowalski's animation philosophy.
+-
+-Do not provide any other information until the user asks a question.
+-
+-This skill handles the relationships *between* animations: order, overlap, timing and stillness. A single animation's easing, duration and origin belong to `animate`. Whether something should animate at all is `find-animation-opportunities` or `remove-animations`. Once two or more things move in response to the same event, the decisions here apply.
++This skill handles the relationships *between* animations: order, overlap, timing and stillness. A single animation's easing, duration and origin belong to [Animate](../animate/animate.md). Whether something should animate at all belongs to Atlas Motion's [Opportunities](../opportunities/index.md) method. Once two or more things move in response to the same event, the decisions here apply.
+ 
+ ## Operating Posture
+ 

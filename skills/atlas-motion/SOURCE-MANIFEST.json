@@ -11,7 +11,10 @@
     "references/opportunities/index.md",
     "licenses/find-animation-opportunities.txt",
     "references/performance/animation-performance.md",
-    "licenses/animation-performance.txt"
+    "licenses/animation-performance.txt",
+    "references/choreograph/choreograph.md",
+    "licenses/choreograph.txt",
+    "references/choreograph/RECIPES.md"
   ],
   "authoredInputs": [
     "skills/atlas-motion/SKILL.md",
@@ -50,8 +53,9 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-11-03",
       "rulings": [
-        "review-motion-owner",
-        "motion-local-routing"
+        "motion-choreograph-owner",
+        "motion-local-routing",
+        "review-motion-owner"
       ],
       "patch": "sources/patches/animate.patch",
       "patchSha256": "fcd519cae6f96cafdd36d2b9aecbe8e43c08de2f351f80bf44619dd7b44d92cd"
@@ -103,6 +107,7 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-09",
       "rulings": [
+        "motion-choreograph-owner",
         "motion-local-routing"
       ],
       "patch": "sources/patches/find-animation-opportunities.patch",
@@ -134,6 +139,44 @@
       ],
       "patch": "sources/patches/animation-performance.patch",
       "patchSha256": "f70d3260310d1ffe48c1a73046c33fc7dd25a0ee18dfb3b8f813c004b9158281"
+    },
+    {
+      "id": "choreograph",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349",
+        "path": "skills/choreograph/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/choreograph/RECIPES.md",
+          "classification": "patched",
+          "sourceSha256": "b61f03b5c47398cf71ce9db4157cc919617228981b1d74a72d6a5fa27e4aaad2",
+          "carriedPath": "references/choreograph/RECIPES.md",
+          "carriedSha256": "5d099cb10cf40f21834c6539df103ac946273f30897c11b58a4bf28ee96e799f",
+          "patch": "sources/patches/choreograph/RECIPES.md.patch",
+          "patchSha256": "9f1f817c627552a0276bd022b66108310c2d84664d4cda8dde889f849175e84f"
+        }
+      ],
+      "notices": [],
+      "sourceSha256": "815c7d889230bafc72c03bb0769087aeede310130e8795c7949b3e3a1684e464",
+      "carriedPath": "references/choreograph/choreograph.md",
+      "carriedSha256": "9f2183a530905a46ae4a322a6b5fbf18deb64111ee178030c8e549e4d3bd7da6",
+      "licensePath": "licenses/choreograph.txt",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "adaptation": "Remove the canned initial response, add Atlas Motion's ownership pointer, and route the single-animation and should-it-animate handoffs to Atlas Motion's Animate and Opportunities methods. RECIPES.md only relinks its SKILL.md pointer to the carried choreograph.md. Upstream choreography rules are preserved.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-12",
+      "rulings": [
+        "motion-choreograph-owner",
+        "motion-local-routing"
+      ],
+      "patch": "sources/patches/choreograph.patch",
+      "patchSha256": "eea3c2a58d76a19bed9d2c096bb318908abcddfb4d9d3eca4f18948c55522b72"
     }
   ],
   "rulings": [
@@ -145,14 +188,27 @@
       "sources": [
         "animate",
         "find-animation-opportunities",
-        "animation-performance"
+        "animation-performance",
+        "choreograph"
       ],
       "decision": "Discovery is read-only; implementation follows authorization; review handoffs use Atlas Review and Native remains external. Performance diagnoses frame-budget causes and applies repairs only on request."
+    },
+    {
+      "id": "motion-choreograph-owner",
+      "owner": "atlas-motion",
+      "document": "skills/atlas-motion/references/motion-ownership.md",
+      "section": "Motion ownership",
+      "sources": [
+        "choreograph",
+        "animate",
+        "find-animation-opportunities"
+      ],
+      "decision": "Choreograph owns the relationships between two or more animations triggered by the same event: roles, order, overlap, sequence, carry, group interruption and group reduced motion. Animate owns each single animation's decision, properties, curve, duration and exit. Opportunities owns whether motion is warranted, including removing it."
     }
   ],
   "files": {
-    "SKILL.md": "ab2467f2f82e129db855724d0e6a275ed25d1df2948b7c9a487794bacddd7069",
-    "agents/openai.yaml": "24008d76cda887dae17117fc04ee5497944ae6583cd0435923ac98028e02dc59",
+    "SKILL.md": "418596f410864ea0a52c2f14d5fde65ce1e1529d486269a734d6f14e41f5d927",
+    "agents/openai.yaml": "c5d9b29bc499b99476ced9136a8c01ebed733024d3af8c14361ab140e93bfe10",
     "references/animate/animate.md": "7ad0a8ebb3864c33013fc4bb83cbb33408c151c743bead70ef71d8cf10570b73",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
@@ -162,7 +218,10 @@
     "licenses/find-animation-opportunities.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
     "references/performance/animation-performance.md": "e66129c02e597a95bcb9f6ed2fffc23742523058d9a45de45a4a3014074154d9",
     "licenses/animation-performance.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/motion-ownership.md": "6c69b25fbfe44d00c5f697305bba7a52af49dca8ad1620fcb1b60550a51a04c4",
+    "references/choreograph/choreograph.md": "9f2183a530905a46ae4a322a6b5fbf18deb64111ee178030c8e549e4d3bd7da6",
+    "licenses/choreograph.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+    "references/choreograph/RECIPES.md": "5d099cb10cf40f21834c6539df103ac946273f30897c11b58a4bf28ee96e799f",
+    "references/motion-ownership.md": "6ac76ab63eb8d927988aba18b08da1ea9e046d83b8bd9d3668b7b4dba24fcd28",
     "references/ownership.md": "166cf8437712cb30e2cc2306a029dd47c824089bee86677a8d12bc944307d91a"
   }
 }

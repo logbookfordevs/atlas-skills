@@ -1,0 +1,12 @@
+diff --git a/source.md b/source.md
+index 17936a9..f888a53 100644
+--- a/source.md
++++ b/source.md
+@@ -1,6 +1,6 @@
+ # Choreography Recipes
+ 
+-Copy-ready patterns for the relationships in [SKILL.md](SKILL.md). The values are starting points, so tune them on a recording.
++Copy-ready patterns for the relationships in [Choreograph](choreograph.md). The values are starting points, so tune them on a recording.
+ 
+ ## Overlap: CSS stagger with an index variable
+ 

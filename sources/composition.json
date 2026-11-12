@@ -140,10 +140,50 @@
         }
       ],
       "rulings": [
-        "review-motion-owner",
-        "motion-local-routing"
+        "motion-choreograph-owner",
+        "motion-local-routing",
+        "review-motion-owner"
       ],
       "patch": "sources/patches/animate.patch"
+    },
+    {
+      "id": "choreograph",
+      "owner": "Emil Kowalski",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/emilkowalski/skills",
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349",
+        "path": "skills/choreograph/SKILL.md",
+        "licensePath": "LICENSE",
+        "trackingRef": "main"
+      },
+      "snapshot": "sources/upstream/choreograph/source.md",
+      "sourceSha256": "815c7d889230bafc72c03bb0769087aeede310130e8795c7949b3e3a1684e464",
+      "license": "sources/upstream/choreograph/LICENSE",
+      "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "method": "skills/atlas-motion/references/choreograph/choreograph.md",
+      "adaptation": "Remove the canned initial response, add Atlas Motion's ownership pointer, and route the single-animation and should-it-animate handoffs to Atlas Motion's Animate and Opportunities methods. RECIPES.md only relinks its SKILL.md pointer to the carried choreograph.md. Upstream choreography rules are preserved.",
+      "consumers": [
+        "atlas-motion"
+      ],
+      "rulings": [
+        "motion-choreograph-owner",
+        "motion-local-routing"
+      ],
+      "carriedPath": "references/choreograph/choreograph.md",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-12",
+      "supportingFiles": [
+        {
+          "snapshot": "sources/upstream/choreograph/supporting/RECIPES.md",
+          "relativePath": "RECIPES.md",
+          "upstreamPath": "skills/choreograph/RECIPES.md",
+          "sourceSha256": "b61f03b5c47398cf71ce9db4157cc919617228981b1d74a72d6a5fa27e4aaad2",
+          "method": "skills/atlas-motion/references/choreograph/RECIPES.md",
+          "patch": "sources/patches/choreograph/RECIPES.md.patch"
+        }
+      ],
+      "patch": "sources/patches/choreograph.patch"
     },
     {
       "id": "apple-design",
@@ -926,6 +966,7 @@
         "atlas-motion"
       ],
       "rulings": [
+        "motion-choreograph-owner",
         "motion-local-routing"
       ],
       "carriedPath": "references/opportunities/index.md",
@@ -4468,7 +4509,8 @@
         "animate",
         "apple-design",
         "find-animation-opportunities",
-        "animation-performance"
+        "animation-performance",
+        "choreograph"
       ],
       "authoredReferences": [],
       "dependencies": []
@@ -5151,7 +5193,8 @@
       "sources": [
         "animate",
         "find-animation-opportunities",
-        "animation-performance"
+        "animation-performance",
+        "choreograph"
       ],
       "decision": "Discovery is read-only; implementation follows authorization; review handoffs use Atlas Review and Native remains external. Performance diagnoses frame-budget causes and applies repairs only on request."
     },
@@ -5509,6 +5552,18 @@
         "html-prototype"
       ],
       "decision": "Design Artifact is HTML UI's Artifact mode for standalone visual HTML deliverables and the shared visual-direction reference for Wireframe and Model. Wireframe's low-fidelity contract and Model's fidelity, state and interaction rules stay authoritative when they read it. Its publish offer applies only when Artifact is the selected mode."
+    },
+    {
+      "id": "motion-choreograph-owner",
+      "owner": "atlas-motion",
+      "document": "skills/atlas-motion/references/motion-ownership.md",
+      "section": "Motion ownership",
+      "sources": [
+        "choreograph",
+        "animate",
+        "find-animation-opportunities"
+      ],
+      "decision": "Choreograph owns the relationships between two or more animations triggered by the same event: roles, order, overlap, sequence, carry, group interruption and group reduced motion. Animate owns each single animation's decision, properties, curve, duration and exit. Opportunities owns whether motion is warranted, including removing it."
     }
   ]
 }
