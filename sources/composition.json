@@ -4639,6 +4639,40 @@
       ]
     },
     {
+      "id": "investigate",
+      "entry": "utility-skills/investigate/SKILL.md",
+      "agent": "utility-skills/investigate/agents/openai.yaml",
+      "methods": [],
+      "authoredReferences": [],
+      "dependencies": [
+        {
+          "id": "atlas-debug",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For bug tickets: its Explaining bugs method."
+        },
+        {
+          "id": "atlas-explain",
+          "relationship": "behavioral",
+          "required": true,
+          "condition": "For non-bug tickets: its How method."
+        },
+        {
+          "id": "atlas-review",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When other code or repositories may read what the ticket changes: its Impact method."
+        },
+        {
+          "id": "challenge",
+          "relationship": "behavioral",
+          "required": false,
+          "condition": "When diagnoses conflict and the code cannot settle them, or acting on an unverified cause would be costly."
+        }
+      ],
+      "directory": "utility-skills/investigate"
+    },
+    {
       "id": "snap-out-of-it",
       "entry": "utility-skills/snap-out-of-it/SKILL.md",
       "agent": "utility-skills/snap-out-of-it/agents/openai.yaml",
