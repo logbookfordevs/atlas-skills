@@ -4,17 +4,6 @@ description: "Give a short first analysis of a ticket or issue: what it asks, wh
 disable-model-invocation: true
 ---
 
-# Investigate
+Read the ticket, its comments and linked tickets, then tell me what's going on, checked against the code as it is today. Treat any diagnosis or recommendation already on the ticket as a lead: verify it, and say which parts hold. If it's a bug, explain it the way Atlas Debug's Explaining bugs does, expected versus actual; otherwise trace the area with Atlas Explain's How. If other code or repos read what would change, say so (Atlas Review's Impact).
 
-Build a short first analysis of the ticket, grounded in the code as it is today.
-
-1. Read the ticket, its comments and linked tickets. Reuse any existing diagnosis or recommendation as a lead and verify it rather than repeating it.
-2. Explain the current state:
-   - For a bug, use Atlas Debug's Explaining bugs method: expected versus actual, and where they split.
-   - For other work, use Atlas Explain's How method on the area the ticket touches.
-
-   Check every cited `file:line` against current code; mark each claim as verified or suspected.
-3. When other code or repositories may read what changes, use Atlas Review's Impact method to say whether the change is local or needs consumer changes.
-4. When the ticket carries a recommendation, say which parts hold, which do not apply, and why.
-
-Keep the answer short: the verdict first, then the evidence. Add one visual when it explains faster than prose. When diagnoses conflict and the code cannot settle them, or acting on an unverified cause would be costly, suggest Challenge. Investigation keeps code and external records read-only.
+Keep it short and plain: verdict first, then the evidence, one visual if it helps. Mark what you verified versus what you suspect. Look, don't touch. If diagnoses conflict and the code can't settle it, suggest Challenge.
