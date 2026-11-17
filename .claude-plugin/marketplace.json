@@ -52,6 +52,7 @@
         "./utility-skills/challenge",
         "./utility-skills/showdown",
         "./utility-skills/skill-source-composition",
+        "./utility-skills/investigate",
         "./utility-skills/snap-out-of-it",
         "./utility-skills/writing-for-humans"
       ]

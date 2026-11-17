@@ -6,6 +6,7 @@ Optional authored skills and source compositions for use beyond Atlas’s core w
 | --- | --- | --- |
 | [Challenge](challenge/SKILL.md) | Test an assessment with independent reviewers, executable evidence where possible, supported objections and explicit unknowns | Manual |
 | [Showdown](showdown/SKILL.md) | Benchmark contenders head-to-head on identical briefs with blind judges and a fighting-game report | Manual |
+| [Investigate](investigate/SKILL.md) | A short first analysis of a ticket: what it asks, what the code does today and what a change touches | Manual |
 | [Snap Out of It](snap-out-of-it/SKILL.md) | A candid second opinion and friendly wake-up call for overthinking or overengineering | Manual |
 | [Writing for Humans](writing-for-humans/SKILL.md) | Write, revise or critique prose for meaning, voice and reader experience | Manual |
 | [Skill Source Composition](skill-source-composition/SKILL.md) | Carry, adapt and combine upstream material with provenance, integrity checks and reviewed updates | Manual |

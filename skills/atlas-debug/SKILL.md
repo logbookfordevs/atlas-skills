@@ -1,6 +1,6 @@
 ---
 name: atlas-debug
-description: 'Use when the user asks to diagnose or debug a bug or performance regression, or reports something broken, throwing, failing or unexpectedly slow.'
+description: 'Use when the user asks to diagnose or debug a bug or performance regression, or reports something broken, throwing, failing or unexpectedly slow, or wants a bug ticket or known bug investigated or explained.'
 disable-model-invocation: false
 ---
 

@@ -19,6 +19,7 @@
     "engineering-principles",
     "html-ui",
     "implement",
+    "investigate",
     "showdown",
     "snap-out-of-it",
     "team-up",
@@ -40,11 +41,29 @@
       ]
     },
     {
+      "id": "atlas-debug",
+      "source": "https://github.com/logbookfordevs/atlas-skills",
+      "skill": "atlas-debug",
+      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-debug",
+      "consumers": [
+        {
+          "skill": "investigate",
+          "required": true,
+          "condition": "For bug tickets: its Explaining bugs method."
+        }
+      ]
+    },
+    {
       "id": "atlas-explain",
       "source": "https://github.com/logbookfordevs/atlas-skills",
       "skill": "atlas-explain",
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-explain",
       "consumers": [
+        {
+          "skill": "investigate",
+          "required": true,
+          "condition": "For non-bug tickets: its How method."
+        },
         {
           "skill": "engineering-principles",
           "required": true,
@@ -131,6 +150,11 @@
           "condition": "For automatic checkpoint review; Atlas Review owns method selection and execution, reusing adequate evidence for the same checkpoint and question."
         },
         {
+          "skill": "investigate",
+          "required": false,
+          "condition": "When other code or repositories may read what the ticket changes: its Impact method."
+        },
+        {
           "skill": "atlas-verify",
           "required": false,
           "condition": "When verification needs product, interface or fidelity judgment rather than behavior proof."
@@ -215,6 +239,11 @@
       "skill": "challenge",
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill challenge",
       "consumers": [
+        {
+          "skill": "investigate",
+          "required": false,
+          "condition": "When diagnoses conflict and the code cannot settle them, or acting on an unverified cause would be costly."
+        },
         {
           "skill": "atlas-mode",
           "required": false,

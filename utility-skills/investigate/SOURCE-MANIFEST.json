@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "workflow": "investigate",
+  "generated": true,
+  "managedFiles": [],
+  "authoredInputs": [
+    "utility-skills/investigate/SKILL.md",
+    "utility-skills/investigate/agents/openai.yaml"
+  ],
+  "authoredReferences": [],
+  "dependencies": [
+    {
+      "id": "atlas-debug",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For bug tickets: its Explaining bugs method."
+    },
+    {
+      "id": "atlas-explain",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "For non-bug tickets: its How method."
+    },
+    {
+      "id": "atlas-review",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When other code or repositories may read what the ticket changes: its Impact method."
+    },
+    {
+      "id": "challenge",
+      "relationship": "behavioral",
+      "required": false,
+      "condition": "When diagnoses conflict and the code cannot settle them, or acting on an unverified cause would be costly."
+    }
+  ],
+  "sources": [],
+  "rulings": [],
+  "files": {
+    "SKILL.md": "2bfe7aafc80f80f632711261ee9c7f6b516c4cef13356c70819ee4df0dde3e9b",
+    "agents/openai.yaml": "405dbda8e2ed592df6442a9559c098478c83d6f5250d3410b9cffe5897265dca"
+  }
+}
