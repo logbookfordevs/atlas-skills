@@ -1597,167 +1597,60 @@
     {
       "id": "pstack-how",
       "owner": "atlas-explain",
-      "classification": "patched",
+      "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/how/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-how/source.md",
-      "sourceSha256": "a63ac90597960cfdc4d51ec88960b3bf0a05d44a7dff1d5a2b8639981c25ca54",
+      "sourceSha256": "b911c4eac292e458e6685e445562c3aed98155b2be80b43d6d1ed1aa2b13c154",
       "license": "sources/upstream/pstack-how/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-explain/references/how/how.md",
+      "method": "sources/upstream/pstack-how/source.md",
       "carriedPath": "references/how/how.md",
-      "adaptation": "Replace fixed Cursor/provider dispatch with available host roles and models, bounded concurrency and sequential fallback. Preserve the exploration/explanation split and complete templates; link the companion Why method locally.",
+      "adaptation": "None. Carried as the How method within Atlas Explain.",
       "consumers": [
         "atlas-explain"
       ],
-      "supportingFiles": [
-        {
-          "snapshot": "sources/upstream/pstack-how/support/references/explainer-prompt.md",
-          "relativePath": "references/explainer-prompt.md",
-          "upstreamPath": "skills/how/references/explainer-prompt.md",
-          "sourceSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-how/support/references/explorer-prompt.md",
-          "relativePath": "references/explorer-prompt.md",
-          "upstreamPath": "skills/how/references/explorer-prompt.md",
-          "sourceSha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1"
-        }
-      ],
+      "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-mode-choice",
-        "explain-host-capabilities",
-        "implement-candidate-ownership"
-      ],
-      "patch": "sources/patches/pstack-how.patch",
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "Upstream collapsed How into one subagent pass and deleted the explorer and explainer prompt templates; our adaptation keeps that split and the full templates."
-        }
+        "explain-host-capabilities"
       ]
     },
     {
       "id": "pstack-why",
       "owner": "atlas-explain",
-      "classification": "patched",
+      "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/why/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-why/source.md",
-      "sourceSha256": "b12ea2757ff1d1d111c7b4e74e3e764d337c6a08458b8d6240d3f01c4be490ec",
+      "sourceSha256": "6b65b3180f1f1bd3b696d7933daf900747410c82931d220a3f57a98addb1c0fd",
       "license": "sources/upstream/pstack-why/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/atlas-explain/references/why/why.md",
+      "method": "sources/upstream/pstack-why/source.md",
       "carriedPath": "references/why/why.md",
-      "adaptation": "Adapt host dispatch and history/tool availability without inventing access; keep investigation read-only. Standalone Why retains full evidence-category coverage, while explicit caller scope permits bounded Teach investigations with documented exclusions. Preserve epistemics and all source playbooks.",
+      "adaptation": "None. Carried as the Why method within Atlas Explain.",
       "consumers": [
         "atlas-explain"
       ],
-      "supportingFiles": [
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/epistemics.md",
-          "relativePath": "references/epistemics.md",
-          "upstreamPath": "skills/why/references/epistemics.md",
-          "sourceSha256": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/investigator-prompt.md",
-          "relativePath": "references/investigator-prompt.md",
-          "upstreamPath": "skills/why/references/investigator-prompt.md",
-          "sourceSha256": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/source-playbook.md",
-          "relativePath": "references/source-playbook.md",
-          "upstreamPath": "skills/why/references/source-playbook.md",
-          "sourceSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/sources/code-archaeology.md",
-          "relativePath": "references/sources/code-archaeology.md",
-          "upstreamPath": "skills/why/references/sources/code-archaeology.md",
-          "sourceSha256": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/sources/databricks.md",
-          "relativePath": "references/sources/databricks.md",
-          "upstreamPath": "skills/why/references/sources/databricks.md",
-          "sourceSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/sources/datadog.md",
-          "relativePath": "references/sources/datadog.md",
-          "upstreamPath": "skills/why/references/sources/datadog.md",
-          "sourceSha256": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/sources/incident-postmortem.md",
-          "relativePath": "references/sources/incident-postmortem.md",
-          "upstreamPath": "skills/why/references/sources/incident-postmortem.md",
-          "sourceSha256": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/sources/linear.md",
-          "relativePath": "references/sources/linear.md",
-          "upstreamPath": "skills/why/references/sources/linear.md",
-          "sourceSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/sources/notion.md",
-          "relativePath": "references/sources/notion.md",
-          "upstreamPath": "skills/why/references/sources/notion.md",
-          "sourceSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/sources/sentry.md",
-          "relativePath": "references/sources/sentry.md",
-          "upstreamPath": "skills/why/references/sources/sentry.md",
-          "sourceSha256": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/sources/slack.md",
-          "relativePath": "references/sources/slack.md",
-          "upstreamPath": "skills/why/references/sources/slack.md",
-          "sourceSha256": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-why/support/references/synthesizer-prompt.md",
-          "relativePath": "references/synthesizer-prompt.md",
-          "upstreamPath": "skills/why/references/synthesizer-prompt.md",
-          "sourceSha256": "11c62671aa7b7a6e3d36929ffe2b59bf95e6ca664eee4d93e6ee527dd3390ddb",
-          "method": "skills/atlas-explain/references/why/references/synthesizer-prompt.md",
-          "patch": "sources/patches/pstack-why-synthesizer.patch"
-        }
-      ],
+      "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-mode-choice",
-        "explain-why-scope",
         "explain-evidence-editing",
-        "explain-host-capabilities",
-        "implement-candidate-ownership"
-      ],
-      "patch": "sources/patches/pstack-why.patch",
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "Upstream reduced Why to one paragraph and deleted the epistemics and all source playbooks, which our adaptation and the explain-why-scope ruling keep."
-        }
+        "explain-host-capabilities"
       ]
     },
     {
@@ -1777,7 +1670,7 @@
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-explain/references/teach/teach.md",
       "carriedPath": "references/teach/teach.md",
-      "adaptation": "Load How, Why and Unslop directly from bundled references, within the selected explanation. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
+      "adaptation": "Load How, Why and Unslop directly from bundled references, within the selected explanation. Preserve Why's citations, marked inferences and stated gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
       "consumers": [
         "atlas-explain"
       ],
@@ -1786,7 +1679,6 @@
       "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-mode-choice",
-        "explain-why-scope",
         "explain-evidence-editing"
       ],
       "patch": "sources/patches/pstack-teach.patch"
@@ -1797,18 +1689,18 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/unslop/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-unslop/source.md",
-      "sourceSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+      "sourceSha256": "2b823fd069e031c1420180be8e0d4f5e2fd25bf2c428049e5c835c59a489b5e0",
       "license": "sources/upstream/pstack-unslop/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "utility-skills/writing-for-humans/references/unslop/unslop.md",
       "carriedPath": "references/unslop/unslop.md",
-      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
+      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Apply patterns within the requested genre and author voice; keep factual qualifications, citations, quotations and exact technical strings. Keep stable rule IDs.",
       "consumers": [
         "atlas-explain",
         "writing-for-humans",
@@ -1816,19 +1708,12 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-evidence-editing",
         "human-writing-editorial-contract"
       ],
-      "patch": "sources/patches/pstack-unslop.patch",
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "pstack 0.15.43 compresses the skill into short directives, turning contextual guidance into absolute rules; its one new rule is already covered."
-        }
-      ]
+      "patch": "sources/patches/pstack-unslop.patch"
     },
     {
       "id": "pstack-architect",
@@ -1836,62 +1721,30 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/architect/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-architect/source.md",
-      "sourceSha256": "8b06915a5e728c4f78b6a685fec0213b5cb1a89b9476fae680d4cc3f67d4e79e",
+      "sourceSha256": "aea83d7aa109eb73402182701b14c289844663ad9c8f959fedbef2df66787ce0",
       "license": "sources/upstream/pstack-architect/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/engineering-principles/references/architect/architect.md",
       "carriedPath": "references/architect/architect.md",
-      "adaptation": "Bundle the complete design-first workflow and support. Resolve How, Why, Arena and principles locally; replace fixed provider defaults with host capabilities. Preserve opt-in checkpoints, distinguish disposable sketches from TDD implementation and prevent candidate runners from recursively orchestrating. Update bundled reference links for ordinary Markdown filenames. Remove the retired Interrogate handoff.",
+      "adaptation": "Route large or contested designs through Team Up's Arena method; keep sketches out of product code until one is chosen, with the chosen interface as TDD's proposed seam.",
       "consumers": [
         "engineering-principles"
       ],
-      "supportingFiles": [
-        {
-          "snapshot": "sources/upstream/pstack-architect/support/references/design-red-flags.md",
-          "relativePath": "references/design-red-flags.md",
-          "upstreamPath": "skills/architect/references/design-red-flags.md",
-          "sourceSha256": "d0e639e4cc588ec865f930d3a4111faad60987ae36925917e319d7ceca7c69ce",
-          "method": "skills/engineering-principles/references/architect/references/design-red-flags.md",
-          "patch": "sources/patches/pstack-architect-design-red-flags.patch"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-architect/support/references/rationale-template.md",
-          "relativePath": "references/rationale-template.md",
-          "upstreamPath": "skills/architect/references/rationale-template.md",
-          "sourceSha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
-          "method": "skills/engineering-principles/references/architect/references/rationale-template.md",
-          "patch": "sources/patches/pstack-architect-rationale-template.patch"
-        },
-        {
-          "snapshot": "sources/upstream/pstack-architect/support/references/runner-prompt.md",
-          "relativePath": "references/runner-prompt.md",
-          "upstreamPath": "skills/architect/references/runner-prompt.md",
-          "sourceSha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
-          "method": "skills/engineering-principles/references/architect/references/runner-prompt.md",
-          "patch": "sources/patches/pstack-architect-runner-prompt.patch"
-        }
-      ],
+      "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
         "implement-principle-scope"
       ],
-      "patch": "sources/patches/pstack-architect.patch",
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "Upstream reduced Architect to two paragraphs and deleted the red flags, rationale and runner references that the implement-architect-phases ruling relies on."
-        }
-      ]
+      "patch": "sources/patches/pstack-architect.patch"
     },
     {
       "id": "pstack-arena",
@@ -1929,38 +1782,28 @@
     {
       "id": "pstack-principle-boundary-discipline",
       "owner": "engineering-principles",
-      "classification": "patched",
+      "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/principle-boundary-discipline/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-principle-boundary-discipline/source.md",
-      "sourceSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
+      "sourceSha256": "c02c26cca3906bfd57829535f8fa7ee9e00df037b4dbb24e5f85ec9e12710b48",
       "license": "sources/upstream/pstack-principle-boundary-discipline/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/engineering-principles/references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
+      "method": "sources/upstream/pstack-principle-boundary-discipline/source.md",
       "carriedPath": "references/principles/principle-boundary-discipline/principle-boundary-discipline.md",
-      "adaptation": "Qualify internal trust by established, preserved invariants rather than unconditional trust; retain boundary validation and pure-core guidance.",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": [
-        "implement-principle-scope"
-      ],
-      "patch": "sources/patches/pstack-principle-boundary-discipline.patch",
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping \"mechanism inside, policy at the edge\"."
-        }
-      ]
+      "adoptedAt": "2026-11-18",
+      "rulings": []
     },
     {
       "id": "pstack-principle-encode-lessons-in-structure",
@@ -2022,35 +1865,28 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/principle-fix-root-causes/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-principle-fix-root-causes/source.md",
-      "sourceSha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
+      "sourceSha256": "79afd7e67d8951203231f6f1ccfc7b4a1f30d8d6cdb68e92755c80012414dbeb",
       "license": "sources/upstream/pstack-principle-fix-root-causes/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/engineering-principles/references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
       "carriedPath": "references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
-      "adaptation": "Preserve justified safety guards and enduring invariant comments, and keep repeated-pattern repair within authorized scope; retain reproduction and root-cause investigation.",
+      "adaptation": "Fix repeated faults within the task's scope and report the rest.",
       "consumers": [
         "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "implement-principle-scope"
       ],
-      "patch": "sources/patches/pstack-principle-fix-root-causes.patch",
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping the rationale, the persisted-state-after-restart rule and the paragraph-comment rule."
-        }
-      ]
+      "patch": "sources/patches/pstack-principle-fix-root-causes.patch"
     },
     {
       "id": "pstack-principle-foundational-thinking",
@@ -2058,13 +1894,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/principle-foundational-thinking/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-principle-foundational-thinking/source.md",
-      "sourceSha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
+      "sourceSha256": "5c63eecf4b83ea5a99eda7a95a96cac0929d2dce7393d7089c83917bc12cf820",
       "license": "sources/upstream/pstack-principle-foundational-thinking/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-foundational-thinking/source.md",
@@ -2075,16 +1911,9 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "implement-architect-phases"
-      ],
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping option value, the three-similar-statements rule and coherent increments."
-        }
       ]
     },
     {
@@ -2147,13 +1976,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/principle-make-operations-idempotent/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-principle-make-operations-idempotent/source.md",
-      "sourceSha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019",
+      "sourceSha256": "76ad0a99b6ff2a05a159accfeee48412d62f62774eb8d05bbff26a1f3aa3eab5",
       "license": "sources/upstream/pstack-principle-make-operations-idempotent/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-make-operations-idempotent/source.md",
@@ -2164,49 +1993,34 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
-      "rulings": [],
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping the rationale and part of the staleness guidance."
-        }
-      ]
+      "adoptedAt": "2026-11-18",
+      "rulings": []
     },
     {
       "id": "pstack-principle-minimize-reader-load",
       "owner": "engineering-principles",
-      "classification": "patched",
+      "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/principle-minimize-reader-load/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-principle-minimize-reader-load/source.md",
-      "sourceSha256": "1ea2b7fef2391cae5844c4efdbd59031f775e8a52d06b7495d707229a200dcca",
+      "sourceSha256": "22d27deffb0a3726858d0d4b02d71acd4a3eb4d44e218bc89b66e49dc9823937",
       "license": "sources/upstream/pstack-principle-minimize-reader-load/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/engineering-principles/references/principles/principle-minimize-reader-load/principle-minimize-reader-load.md",
+      "method": "sources/upstream/pstack-principle-minimize-reader-load/source.md",
       "carriedPath": "references/principles/principle-minimize-reader-load/principle-minimize-reader-load.md",
-      "adaptation": "Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection. Update bundled reference links for ordinary Markdown filenames.",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
-      "rulings": [],
-      "patch": "sources/patches/pstack-principle-minimize-reader-load.patch",
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping \"adjacent layers must change the abstraction\" and interface-compression guidance."
-        }
-      ]
+      "adoptedAt": "2026-11-18",
+      "rulings": []
     },
     {
       "id": "pstack-principle-outcome-oriented-execution",
@@ -2239,38 +2053,29 @@
     {
       "id": "pstack-principle-prove-it-works",
       "owner": "engineering-principles",
-      "classification": "patched",
+      "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/principle-prove-it-works/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-principle-prove-it-works/source.md",
-      "sourceSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
+      "sourceSha256": "3d6c482e341974cfcb8d19ebf66fb1d4274d8673af35e36d3c231a6aa9e03f25",
       "license": "sources/upstream/pstack-principle-prove-it-works/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "method": "skills/engineering-principles/references/principles/principle-prove-it-works/principle-prove-it-works.md",
+      "method": "sources/upstream/pstack-principle-prove-it-works/source.md",
       "carriedPath": "references/principles/principle-prove-it-works/principle-prove-it-works.md",
-      "adaptation": "Preserve direct outcome proof while using the agreed artifact/delivery scope; remove the optional external Show Me Your Work audit dependency, whose adoption remains a separate decision.",
+      "adaptation": "None. Complete principle entry carried as a contextual Architect/Arena reference, not a global rule or public skill selection.",
       "consumers": [
         "engineering-principles"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
-        "implement-principle-scope",
         "team-up-arena-policy"
-      ],
-      "patch": "sources/patches/pstack-principle-prove-it-works.patch",
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping process-liveness and artifact guidance for minor new examples."
-        }
       ]
     },
     {
@@ -2307,13 +2112,13 @@
       "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/principle-separate-before-serializing-shared-state/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/source.md",
-      "sourceSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+      "sourceSha256": "2e5625d686b657e0b607c329fd8043bf50261b808239308fe4c6776e2817e95a",
       "license": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "sources/upstream/pstack-principle-separate-before-serializing-shared-state/source.md",
@@ -2324,17 +2129,10 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "implement-candidate-ownership",
         "team-up-arena-policy"
-      ],
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "pstack 0.15.43 compresses the skill into short directives with the same rules, dropping the numbered pattern and rationale without adding behavior."
-        }
       ]
     },
     {
@@ -2369,35 +2167,28 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/swarm/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-swarm/source.md",
-      "sourceSha256": "c94b57907ef23936623da152ae15da2b1e6f2af50917f5368cb41a8e1041933b",
+      "sourceSha256": "75f9aba69b5fc9fa506bc58e3aa37cff3929c697082fff322a06daef52d7bf0e",
       "license": "sources/upstream/pstack-swarm/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/team-up/references/swarm/swarm.md",
       "carriedPath": "references/swarm/swarm.md",
       "patch": "sources/patches/pstack-swarm.patch",
-      "adaptation": "Replace fixed cloud/Cursor/model defaults with shared Team Up selection and host-bounded execution. Preserve partition/race/hybrid shapes, declared winner policy, exact revision/measurement evidence, retry-on-missing-evidence and explicit coverage gaps. Bind worker writes to task scope and account for worker completion and cleanup.",
+      "adaptation": "Select worker models through Team Up's selection policy instead of the pstack settings file; replace Cursor cloud dispatch with each host's subagent tool and per-worker worktrees. Name a patch for uncommitted work under test, and stop remaining workers once a race is decided.",
       "consumers": [
         "team-up"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "team-up-method-selection",
         "team-up-swarm-evidence"
-      ],
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "Only changes provider default models, which our patch replaces with Team Up selection."
-        }
       ]
     },
     {
@@ -2406,34 +2197,27 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/technical-writing/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-technical-writing/source.md",
-      "sourceSha256": "61fe9c424a798ebf36ad94941f87be049cb8827bdf86d21474a0dde37b513c43",
+      "sourceSha256": "0a620885599cdde5a0a31fa39878144c10f61c894b56bf4a9ff779496e718b14",
       "license": "sources/upstream/pstack-technical-writing/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "utility-skills/writing-for-humans/references/technical/technical-writing.md",
       "carriedPath": "references/technical/technical-writing.md",
       "patch": "sources/patches/pstack-technical-writing.patch",
-      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Load the shared bundled Unslop catalog without an additional editorial pass; remove PR/commit scope and catalog-maintenance output. Resolve strict Di\u00e1taxis separation, certainty, sentence-length and formatting rules in favor of reader purpose, author voice, evidence and repository conventions.",
+      "adaptation": "Load conditionally for technical documentation under Writing for Humans. Apply Di\u00e1taxis per document or bounded section; keep evidence qualifications in reference; use the bundled Unslop catalog without a second pass; drop PR/commit scope; format code to repository conventions.",
       "consumers": [
         "writing-for-humans"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "human-writing-technical-contract"
-      ],
-      "declinedUpdates": [
-        {
-          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
-          "reviewedAt": "2026-11-18",
-          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping the worked example and Diataxis detail our adaptation keeps."
-        }
       ]
     },
     {
@@ -5514,17 +5298,6 @@
       "decision": "Select and combine methods from the request and conversation. Ask only when ambiguity materially changes the investigation or deliverable; offer options with a recommendation when the user asks to explore them. Teach supplies conversational pacing and coordinates How and Why. Catch Up is selected for requests about recent chat work and pending decisions. Reuse evidence across methods and adapt to follow-up questions."
     },
     {
-      "id": "explain-why-scope",
-      "owner": "atlas-explain",
-      "document": "skills/atlas-explain/references/teach/teach.md",
-      "section": "Teach",
-      "sources": [
-        "pstack-why",
-        "pstack-teach"
-      ],
-      "decision": "Standalone Why defaults to its full available evidence-category investigation. Teach may bound Why to its stated question and selected sources; exclusions are recorded as outside scope, distinct from unavailable or searched-empty categories, and limit conclusions."
-    },
-    {
       "id": "explain-evidence-editing",
       "owner": "atlas-explain",
       "document": "skills/atlas-explain/references/teach/teach.md",
@@ -5534,7 +5307,7 @@
         "pstack-teach",
         "pstack-unslop"
       ],
-      "decision": "Teach owns pacing and conversational synthesis. Preserve Why confidence, uncertainty, citations, competing hypotheses and evidence gaps through Unslop edits; editorial cleanup cannot upgrade evidence strength. Teach uses the same maintained Unslop catalog as Writing for Humans, bundled locally without invoking the broader writing workflow."
+      "decision": "Teach and Unslop keep Why's citations, marked inferences and stated gaps. Teach uses the same maintained Unslop catalog as Writing for Humans, bundled locally without invoking the broader writing workflow."
     },
     {
       "id": "explain-host-capabilities",
@@ -5545,13 +5318,13 @@
         "pstack-how",
         "pstack-why"
       ],
-      "decision": "Use host-available read capabilities, roles, models and bounded delegation rather than fixed Cursor/provider defaults. Missing history, connectors or delegation are disclosed gaps; investigation remains read-only and never invents availability."
+      "decision": "How and Why use the host's available subagent tools and read access. Why says what it could not reach, and both stay read-only."
     },
     {
       "id": "implement-architect-phases",
       "owner": "engineering-principles",
-      "document": "skills/engineering-principles/references/architect/integration.md",
-      "section": "Sketches and TDD",
+      "document": "skills/engineering-principles/references/architect/architect.md",
+      "section": "Architect",
       "sources": [
         "pstack-architect",
         "pstack-arena",
@@ -5560,36 +5333,32 @@
         "pstack-principle-foundational-thinking",
         "pstack-principle-outcome-oriented-execution"
       ],
-      "decision": "Architect is a selected design-first method, not a mandatory prelude to implementation. Respect design-only scope and opt-in checkpoints. Keep candidate stubs isolated, distinguish design validation from red/green behavior proof, and start selected TDD through the chosen agreed interface. Source-Driven supplies version-specific constraints. Existing verification and commit boundaries remain authoritative."
+      "decision": "Architect is selective; with TDD, sketches stay outside product code and the chosen interface is the proposed seam."
     },
     {
       "id": "implement-candidate-ownership",
       "owner": "engineering-principles",
-      "document": "skills/engineering-principles/references/architect/integration.md",
-      "section": "Candidate comparison and evidence",
+      "document": "skills/engineering-principles/references/architect/architect.md",
+      "section": "Architect",
       "sources": [
         "pstack-architect",
         "pstack-arena",
-        "pstack-how",
-        "pstack-why",
         "pstack-principle-exhaust-the-design-space",
         "pstack-principle-separate-before-serializing-shared-state"
       ],
-      "decision": "Architect requires two structurally distinct candidates before synthesis even if generic Arena allows dropout or convergence. Candidate runners execute only their isolated sketch assignment, never recursively launch the workflow. Shared grounding sources load directly without the Explain chooser. Host limitations and actual reviewer independence are disclosed."
+      "decision": "Architect sketches two distinct shapes; large or contested designs go through Team Up's Arena."
     },
     {
       "id": "implement-principle-scope",
       "owner": "engineering-principles",
-      "document": "skills/engineering-principles/references/architect/integration.md",
-      "section": "Candidate comparison and evidence",
+      "document": "skills/engineering-principles/references/principles/principle-fix-root-causes/principle-fix-root-causes.md",
+      "section": "Fix Root Causes",
       "sources": [
         "pstack-architect",
         "pstack-arena",
-        "pstack-principle-boundary-discipline",
-        "pstack-principle-fix-root-causes",
-        "pstack-principle-prove-it-works"
+        "pstack-principle-fix-root-causes"
       ],
-      "decision": "Required principles are contextual bundled references within authorized scope. Internal trust depends on established invariants; legitimate guards and enduring comments remain. Direct outcome proof uses the agreed artifact and commit policy rather than activating an unselected external Show Me Your Work audit. Global principle-library and public Arena adoption remain independent decisions."
+      "decision": "Principles are contextual references within the authorized scope; fixing a repeated fault stays in task scope and the rest is reported."
     },
     {
       "id": "team-up-method-selection",
@@ -5610,7 +5379,7 @@
       "sources": [
         "pstack-swarm"
       ],
-      "decision": "Preserve declared race/coverage semantics and exact revision/measurement evidence. Bounded waves or sequential fallback do not claim unavailable concurrency. Retry evidence omissions once, keep dropouts and unproved slices as gaps, verify winning artifacts and account for every worker and its cleanup."
+      "decision": "Keep the declared race rule and exact SHA/method evidence; retry a missing record once; gaps are not passes; stop the remaining workers after a race is decided."
     },
     {
       "id": "team-up-arena-policy",
@@ -5624,7 +5393,7 @@
         "pstack-principle-redesign-from-first-principles",
         "pstack-principle-prove-it-works"
       ],
-      "decision": "Team Up owns the maintained Arena method; Architect runs it through Team Up, and its four principles resolve through Engineering Principles, while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported. No external audit workflow is activated."
+      "decision": "Team Up owns the maintained Arena method; Architect runs it through Team Up, and its four principles resolve through Engineering Principles, while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported."
     },
     {
       "id": "human-writing-technical-contract",
@@ -5635,7 +5404,7 @@
         "pstack-technical-writing",
         "pstack-unslop"
       ],
-      "decision": "Technical documentation uses the four writing layers within the existing author, reader and factual contracts. Section-level Di\u00e1taxis permits useful mixed READMEs/RFCs; evidence qualifications survive certainty rules; length rules are heuristics and code formatting follows the repository. Reuse the already loaded Unslop catalog without an additional mandatory pass. PR writing is removed from this package."
+      "decision": "Modes apply per section; reference keeps the qualifications its evidence requires; Unslop is not a second pass; PR writing stays out of scope."
     },
     {
       "id": "human-writing-editorial-contract",
@@ -5645,7 +5414,7 @@
       "sources": [
         "pstack-unslop"
       ],
-      "decision": "Unslop is the single editorial catalog shared by Writing for Humans, Explain and Tracking Audit Trail. Meaning, author voice and evidence qualifications outrank style patterns. Punctuation and domain terminology are contextual; preserve useful general guidance and requested narrative purposes. Each consumer carries the same patched bytes with stable rule IDs."
+      "decision": "One shared Unslop catalog; rules apply within genre and author voice, and never remove evidence qualifications or exact strings."
     },
     {
       "id": "tracking-audit-trail-ownership",

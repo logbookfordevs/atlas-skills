@@ -5,22 +5,8 @@
   "managedFiles": [
     "references/how/how.md",
     "licenses/pstack-how.txt",
-    "references/how/references/explainer-prompt.md",
-    "references/how/references/explorer-prompt.md",
     "references/why/why.md",
     "licenses/pstack-why.txt",
-    "references/why/references/epistemics.md",
-    "references/why/references/investigator-prompt.md",
-    "references/why/references/source-playbook.md",
-    "references/why/references/sources/code-archaeology.md",
-    "references/why/references/sources/databricks.md",
-    "references/why/references/sources/datadog.md",
-    "references/why/references/sources/incident-postmortem.md",
-    "references/why/references/sources/linear.md",
-    "references/why/references/sources/notion.md",
-    "references/why/references/sources/sentry.md",
-    "references/why/references/sources/slack.md",
-    "references/why/references/synthesizer-prompt.md",
     "references/teach/teach.md",
     "licenses/pstack-teach.txt",
     "references/unslop/unslop.md",
@@ -46,164 +32,55 @@
     {
       "id": "pstack-how",
       "owner": "atlas-explain",
-      "classification": "patched",
+      "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/how/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/how/references/explainer-prompt.md",
-          "classification": "verbatim",
-          "sourceSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
-          "carriedPath": "references/how/references/explainer-prompt.md",
-          "carriedSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff"
-        },
-        {
-          "upstreamPath": "skills/how/references/explorer-prompt.md",
-          "classification": "verbatim",
-          "sourceSha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1",
-          "carriedPath": "references/how/references/explorer-prompt.md",
-          "carriedSha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1"
-        }
-      ],
+      "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "a63ac90597960cfdc4d51ec88960b3bf0a05d44a7dff1d5a2b8639981c25ca54",
+      "sourceSha256": "b911c4eac292e458e6685e445562c3aed98155b2be80b43d6d1ed1aa2b13c154",
       "carriedPath": "references/how/how.md",
-      "carriedSha256": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
+      "carriedSha256": "b911c4eac292e458e6685e445562c3aed98155b2be80b43d6d1ed1aa2b13c154",
       "licensePath": "licenses/pstack-how.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Replace fixed Cursor/provider dispatch with available host roles and models, bounded concurrency and sequential fallback. Preserve the exploration/explanation split and complete templates; link the companion Why method locally.",
+      "adaptation": "None. Carried as the How method within Atlas Explain.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-mode-choice",
-        "explain-host-capabilities",
-        "implement-candidate-ownership"
-      ],
-      "patch": "sources/patches/pstack-how.patch",
-      "patchSha256": "0456950bd44ed3cd470e4dd7f385751a8ab45fc00acc6606ac7762ac2927f24c"
+        "explain-host-capabilities"
+      ]
     },
     {
       "id": "pstack-why",
       "owner": "atlas-explain",
-      "classification": "patched",
+      "classification": "verbatim",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/why/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/why/references/epistemics.md",
-          "classification": "verbatim",
-          "sourceSha256": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758",
-          "carriedPath": "references/why/references/epistemics.md",
-          "carriedSha256": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758"
-        },
-        {
-          "upstreamPath": "skills/why/references/investigator-prompt.md",
-          "classification": "verbatim",
-          "sourceSha256": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3",
-          "carriedPath": "references/why/references/investigator-prompt.md",
-          "carriedSha256": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3"
-        },
-        {
-          "upstreamPath": "skills/why/references/source-playbook.md",
-          "classification": "verbatim",
-          "sourceSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a",
-          "carriedPath": "references/why/references/source-playbook.md",
-          "carriedSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/code-archaeology.md",
-          "classification": "verbatim",
-          "sourceSha256": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7",
-          "carriedPath": "references/why/references/sources/code-archaeology.md",
-          "carriedSha256": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/databricks.md",
-          "classification": "verbatim",
-          "sourceSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6",
-          "carriedPath": "references/why/references/sources/databricks.md",
-          "carriedSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/datadog.md",
-          "classification": "verbatim",
-          "sourceSha256": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd",
-          "carriedPath": "references/why/references/sources/datadog.md",
-          "carriedSha256": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/incident-postmortem.md",
-          "classification": "verbatim",
-          "sourceSha256": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839",
-          "carriedPath": "references/why/references/sources/incident-postmortem.md",
-          "carriedSha256": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/linear.md",
-          "classification": "verbatim",
-          "sourceSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c",
-          "carriedPath": "references/why/references/sources/linear.md",
-          "carriedSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/notion.md",
-          "classification": "verbatim",
-          "sourceSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997",
-          "carriedPath": "references/why/references/sources/notion.md",
-          "carriedSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/sentry.md",
-          "classification": "verbatim",
-          "sourceSha256": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702",
-          "carriedPath": "references/why/references/sources/sentry.md",
-          "carriedSha256": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702"
-        },
-        {
-          "upstreamPath": "skills/why/references/sources/slack.md",
-          "classification": "verbatim",
-          "sourceSha256": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
-          "carriedPath": "references/why/references/sources/slack.md",
-          "carriedSha256": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c"
-        },
-        {
-          "upstreamPath": "skills/why/references/synthesizer-prompt.md",
-          "classification": "patched",
-          "sourceSha256": "11c62671aa7b7a6e3d36929ffe2b59bf95e6ca664eee4d93e6ee527dd3390ddb",
-          "carriedPath": "references/why/references/synthesizer-prompt.md",
-          "carriedSha256": "efd1a207836e90e61db0a312d475d0f7343cbe4f286089e48aa7d248973d1eba",
-          "patch": "sources/patches/pstack-why-synthesizer.patch",
-          "patchSha256": "cc36e5fe50d4af5fdbcd4a9f720454713d51ab860694fe4f58b72f65439c91ed"
-        }
-      ],
+      "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "b12ea2757ff1d1d111c7b4e74e3e764d337c6a08458b8d6240d3f01c4be490ec",
+      "sourceSha256": "6b65b3180f1f1bd3b696d7933daf900747410c82931d220a3f57a98addb1c0fd",
       "carriedPath": "references/why/why.md",
-      "carriedSha256": "2fe47d81670fcf84122ddee3358ee08cc50a2126b30fdd6f5586ffaa36310837",
+      "carriedSha256": "6b65b3180f1f1bd3b696d7933daf900747410c82931d220a3f57a98addb1c0fd",
       "licensePath": "licenses/pstack-why.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Adapt host dispatch and history/tool availability without inventing access; keep investigation read-only. Standalone Why retains full evidence-category coverage, while explicit caller scope permits bounded Teach investigations with documented exclusions. Preserve epistemics and all source playbooks.",
+      "adaptation": "None. Carried as the Why method within Atlas Explain.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-mode-choice",
-        "explain-why-scope",
         "explain-evidence-editing",
-        "explain-host-capabilities",
-        "implement-candidate-ownership"
-      ],
-      "patch": "sources/patches/pstack-why.patch",
-      "patchSha256": "a3ee8a2f7dda19425eacbc4e1a6b39a7993cbe5d16b16df8064d85e78223c772"
+        "explain-host-capabilities"
+      ]
     },
     {
       "id": "pstack-teach",
@@ -220,19 +97,18 @@
       "notices": [],
       "sourceSha256": "2c17f3c0a79536ca2fa3c20983def027ffd8abb4063d9bb3c97778b77557600d",
       "carriedPath": "references/teach/teach.md",
-      "carriedSha256": "b7cf3f55f03d9e7823a3288110ed2c93b2c137795745692c095d681f2a143c46",
+      "carriedSha256": "69cd5ca38b91bedafadfe0eb2a67b0ff861f2565b9625beac5f87ddd3f55e1ae",
       "licensePath": "licenses/pstack-teach.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Load How, Why and Unslop directly from bundled references, within the selected explanation. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
+      "adaptation": "Load How, Why and Unslop directly from bundled references, within the selected explanation. Preserve Why's citations, marked inferences and stated gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-mode-choice",
-        "explain-why-scope",
         "explain-evidence-editing"
       ],
       "patch": "sources/patches/pstack-teach.patch",
-      "patchSha256": "3594675b885982df9346dcfe8da46bc4e02fac146837d54505dad6e3780b33d6"
+      "patchSha256": "0529999a27854b5f6fe7297add68fdb0c3d91c1d3771c6d7f1867ed76d22064d"
     },
     {
       "id": "pstack-unslop",
@@ -240,27 +116,27 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/unslop/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+      "sourceSha256": "2b823fd069e031c1420180be8e0d4f5e2fd25bf2c428049e5c835c59a489b5e0",
       "carriedPath": "references/unslop/unslop.md",
-      "carriedSha256": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
+      "carriedSha256": "7f4b21460081e182c935a2a3d41139f7e6571e4e61bd136440e3624c569af2a5",
       "licensePath": "licenses/pstack-unslop.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
+      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Apply patterns within the requested genre and author voice; keep factual qualifications, citations, quotations and exact technical strings. Keep stable rule IDs.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-evidence-editing",
         "human-writing-editorial-contract"
       ],
       "patch": "sources/patches/pstack-unslop.patch",
-      "patchSha256": "d2655d54a3c5a1d1910308d94808f97a2d2e3438c32c31ae2b3cc3b152f3ed71"
+      "patchSha256": "b80f50120f2a44c73cbdb24d96168db9675066334acdca04b4b800e27692ec7f"
     },
     {
       "id": "explain-interface",
@@ -389,17 +265,6 @@
       "decision": "Select and combine methods from the request and conversation. Ask only when ambiguity materially changes the investigation or deliverable; offer options with a recommendation when the user asks to explore them. Teach supplies conversational pacing and coordinates How and Why. Catch Up is selected for requests about recent chat work and pending decisions. Reuse evidence across methods and adapt to follow-up questions."
     },
     {
-      "id": "explain-why-scope",
-      "owner": "atlas-explain",
-      "document": "skills/atlas-explain/references/teach/teach.md",
-      "section": "Teach",
-      "sources": [
-        "pstack-why",
-        "pstack-teach"
-      ],
-      "decision": "Standalone Why defaults to its full available evidence-category investigation. Teach may bound Why to its stated question and selected sources; exclusions are recorded as outside scope, distinct from unavailable or searched-empty categories, and limit conclusions."
-    },
-    {
       "id": "explain-evidence-editing",
       "owner": "atlas-explain",
       "document": "skills/atlas-explain/references/teach/teach.md",
@@ -409,7 +274,7 @@
         "pstack-teach",
         "pstack-unslop"
       ],
-      "decision": "Teach owns pacing and conversational synthesis. Preserve Why confidence, uncertainty, citations, competing hypotheses and evidence gaps through Unslop edits; editorial cleanup cannot upgrade evidence strength. Teach uses the same maintained Unslop catalog as Writing for Humans, bundled locally without invoking the broader writing workflow."
+      "decision": "Teach and Unslop keep Why's citations, marked inferences and stated gaps. Teach uses the same maintained Unslop catalog as Writing for Humans, bundled locally without invoking the broader writing workflow."
     },
     {
       "id": "explain-host-capabilities",
@@ -420,7 +285,7 @@
         "pstack-how",
         "pstack-why"
       ],
-      "decision": "Use host-available read capabilities, roles, models and bounded delegation rather than fixed Cursor/provider defaults. Missing history, connectors or delegation are disclosed gaps; investigation remains read-only and never invents availability."
+      "decision": "How and Why use the host's available subagent tools and read access. Why says what it could not reach, and both stay read-only."
     },
     {
       "id": "explain-interface-evidence",
@@ -436,27 +301,13 @@
   "files": {
     "SKILL.md": "2d166e18abf8c4b48362f3ba00e0b807759b3abc25add1b1bee5921152132196",
     "agents/openai.yaml": "1913a5c562840fa920f320cd31043b5ccc415d19302a63a6cc583689f25eaf27",
-    "references/how/how.md": "2a474c25073c4f0a52c89c4201672e977b7e26bf2fdee043bb762ec1045a5ae8",
+    "references/how/how.md": "b911c4eac292e458e6685e445562c3aed98155b2be80b43d6d1ed1aa2b13c154",
     "licenses/pstack-how.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/how/references/explainer-prompt.md": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
-    "references/how/references/explorer-prompt.md": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1",
-    "references/why/why.md": "2fe47d81670fcf84122ddee3358ee08cc50a2126b30fdd6f5586ffaa36310837",
+    "references/why/why.md": "6b65b3180f1f1bd3b696d7933daf900747410c82931d220a3f57a98addb1c0fd",
     "licenses/pstack-why.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/why/references/epistemics.md": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758",
-    "references/why/references/investigator-prompt.md": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3",
-    "references/why/references/source-playbook.md": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a",
-    "references/why/references/sources/code-archaeology.md": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7",
-    "references/why/references/sources/databricks.md": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6",
-    "references/why/references/sources/datadog.md": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd",
-    "references/why/references/sources/incident-postmortem.md": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839",
-    "references/why/references/sources/linear.md": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c",
-    "references/why/references/sources/notion.md": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997",
-    "references/why/references/sources/sentry.md": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702",
-    "references/why/references/sources/slack.md": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
-    "references/why/references/synthesizer-prompt.md": "efd1a207836e90e61db0a312d475d0f7343cbe4f286089e48aa7d248973d1eba",
-    "references/teach/teach.md": "b7cf3f55f03d9e7823a3288110ed2c93b2c137795745692c095d681f2a143c46",
+    "references/teach/teach.md": "69cd5ca38b91bedafadfe0eb2a67b0ff861f2565b9625beac5f87ddd3f55e1ae",
     "licenses/pstack-teach.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/unslop/unslop.md": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
+    "references/unslop/unslop.md": "7f4b21460081e182c935a2a3d41139f7e6571e4e61bd136440e3624c569af2a5",
     "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/interface/explain-interface.md": "be349f85e8bcf80960910f1ac642487ea77127b71ea8e00113becdcace20ca1d",
     "licenses/explain-interface.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",

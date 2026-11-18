@@ -133,27 +133,27 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/unslop/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+      "sourceSha256": "2b823fd069e031c1420180be8e0d4f5e2fd25bf2c428049e5c835c59a489b5e0",
       "carriedPath": "references/unslop/unslop.md",
-      "carriedSha256": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
+      "carriedSha256": "7f4b21460081e182c935a2a3d41139f7e6571e4e61bd136440e3624c569af2a5",
       "licensePath": "licenses/pstack-unslop.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Preserve author voice, factual qualifications, uncertainty and exact technical strings. Treat punctuation and jargon rules as contextual guidance; retain useful general guidance and narrative purposes rather than deleting by formula. Keep stable rule IDs.",
+      "adaptation": "Share one editorial catalog across Writing for Humans, Explain and Tracking Audit Trail. Apply patterns within the requested genre and author voice; keep factual qualifications, citations, quotations and exact technical strings. Keep stable rule IDs.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-evidence-editing",
         "human-writing-editorial-contract"
       ],
       "patch": "sources/patches/pstack-unslop.patch",
-      "patchSha256": "d2655d54a3c5a1d1910308d94808f97a2d2e3438c32c31ae2b3cc3b152f3ed71"
+      "patchSha256": "b80f50120f2a44c73cbdb24d96168db9675066334acdca04b4b800e27692ec7f"
     }
   ],
   "rulings": [
@@ -202,7 +202,7 @@
     "licenses/pstack-show-me-your-work.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/audit-trail/references/decision-log-template.tsv": "6779378006a2f5225e8c06deb84f1d913fb532041ebbb6e50d94600bfe3f4b76",
     "references/audit-trail/scripts/log.sh": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e",
-    "references/unslop/unslop.md": "3298ef335c19efc555582f5feadf5843c0ffb57f0764dc7a788e05f9b1552b1c",
+    "references/unslop/unslop.md": "7f4b21460081e182c935a2a3d41139f7e6571e4e61bd136440e3624c569af2a5",
     "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }
