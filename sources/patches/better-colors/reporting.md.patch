@@ -1,0 +1,17 @@
+diff --git a/source.md b/source.md
+index 4a09ce6..1edb5c9 100644
+--- a/source.md
++++ b/source.md
+@@ -1,10 +1,10 @@
+ # Reporting
+ 
+-The severity ladder and format for a standalone review. `better-interface` replaces both when it orchestrates.
++The severity ladder and format for a standalone review. [Interface Audit](../interface/audit/index.md) replaces both when it orchestrates.
+ 
+ **Severity.** `HIGH` makes content unreadable or assigns a misleading semantic color. `MEDIUM` is a noticeable theme, token or gamut failure. `LOW` is isolated polish.
+ 
+-Three symptoms are `HIGH` on sight whatever the surface, matching `better-interface`'s escalation triggers. They are body or control text whose rendered pair fails its required ratio, state or meaning carried by color alone and a semantic color used against its meaning.
++Three symptoms are `HIGH` on sight whatever the surface, matching the whole-interface review's escalation triggers. They are body or control text whose rendered pair fails its required ratio, state or meaning carried by color alone and a semantic color used against its meaning.
+ 
+ **Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
+ 

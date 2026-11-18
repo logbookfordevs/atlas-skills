@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 5e9ab11..2547fc3 100644
+index b5293ec..9540136 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,11 +5,14 @@ description: Reviews and fixes keyboard and focus behavior, ARIA, accessible nam
@@ -20,7 +20,7 @@ index 5e9ab11..2547fc3 100644
  
 @@ -29,7 +32,7 @@ Style `:focus-visible`, not bare `:focus`. Keyboard users get a ring and mouse u
  
- A custom ring needs a project focus token or another explicit color. It must reach 3:1 against every adjacent color it crosses, `currentColor` included, under 1.4.11. A `2px` solid perimeter with a 3:1 change of contrast is the 2.4.13 AAA target. Never use `outline: none` without a verified replacement, and preserve system colors in forced-colors mode.
+ A custom ring needs a project focus token or another explicit color. It must reach 3:1 against every adjacent color it crosses under 1.4.11, and a ring drawn in `currentColor` gets the same check. A `2px` solid perimeter with a 3:1 change of contrast is the 2.4.13 AAA target. Never use `outline: none` without a verified replacement, and preserve system colors in forced-colors mode.
  
 -A focused element must never sit fully hidden behind a sticky header, footer or banner (2.4.11). Pad the scroller by the sticky chrome's height, a fix `better-layout` owns. Recipes are in [focus-and-keyboard.md](focus-and-keyboard.md).
 +A focused element must never sit fully hidden behind a sticky header, footer or banner (2.4.11). Pad the scroller by the sticky chrome's height, a fix [Layout](../layout/index.md) owns. Recipes are in [focus-and-keyboard.md](focus-and-keyboard.md).
@@ -44,13 +44,4 @@ index 5e9ab11..2547fc3 100644
 +Text must survive 200% resize (1.4.4), and the page must reflow at 320px width without horizontal scrolling (1.4.10). Text containers take `min-height`, not `height`, and [Layout](../layout/index.md) owns the rest of that fix. Never set `maximum-scale=1` or `user-scalable=no` in the viewport meta. iOS input zoom is fixed with [Type](../type/index.md)'s `16px` rule instead.
  
  ## Before you finish
- 
-@@ -125,7 +128,7 @@ Text must survive 200% resize (1.4.4), and the page must reflow at 320px width w
- 
- ## Reporting
- 
--**Severity.** `HIGH` prevents a task, hides content from assistive technology or creates a systemic failure. `MEDIUM` makes an interaction meaningfully harder. `LOW` is isolated polish. This domain's share of `better-interface`'s escalation triggers is `HIGH` on sight. That is a missing accessible name, a missing focus indicator and a pointer path with no keyboard path. It is also motion ignoring reduced motion, loss at 320px or 200% and meaning carried by color alone.
-+**Severity.** `HIGH` prevents a task, hides content from assistive technology or creates a systemic failure. `MEDIUM` makes an interaction meaningfully harder. `LOW` is isolated polish. This domain's share of the whole-interface review's escalation triggers is `HIGH` on sight. That is a missing accessible name, a missing focus indicator and a pointer path with no keyboard path. It is also motion ignoring reduced motion, loss at 320px or 200% and meaning carried by color alone.
- 
- **Verification.** Without a browser: accessible names on every interactive element, keyboard handlers on non-native controls, focus styles, `prefers-reduced-motion` guards and form labels bound to their inputs. With one: tab the flow in order, read computed names and roles from the accessibility tree, confirm a visible focus indicator at every stop and run an automated audit. Report every check you could not run as `Not verified`.
  

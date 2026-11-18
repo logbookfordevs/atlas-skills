@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index e0b3049..fe729dd 100644
+index 75c7d18..aaa79f5 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,11 +5,14 @@ description: Builds and checks color systems by generating palettes, naming sema
@@ -26,13 +26,4 @@ index e0b3049..fe729dd 100644
 +Use a color for one purpose across the whole interface, treating anything within `15°` of OKLCH hue as the same color ([color-usage.md](color-usage.md)). Never let color be the only carrier of meaning. Pair it with an icon or a label, a requirement [Accessibility](../accessibility/index.md) owns.
  
  ## Fill exactly one action per view
- 
-@@ -81,7 +84,7 @@ The space is a look, not a correctness setting. Default to `in oklab`, and reach
- 
- **Severity.** `HIGH` makes content unreadable or assigns a misleading semantic color. `MEDIUM` is a noticeable theme, token or gamut failure. `LOW` is isolated polish.
- 
--Three symptoms are `HIGH` on sight whatever the surface, matching `better-interface`'s escalation triggers. They are body or control text whose rendered pair fails its required ratio, state or meaning carried by color alone and a semantic color used against its meaning.
-+Three symptoms are `HIGH` on sight whatever the surface, matching the whole-interface review's escalation triggers. They are body or control text whose rendered pair fails its required ratio, state or meaning carried by color alone and a semantic color used against its meaning.
- 
- **Verification.** Without a browser: token values, the gamut of every declared color, both theme blocks present and contrast computed from the declared token pair. With one: the background actually rendered behind the text, including opacity and any image beneath it, measured in both light and dark. Report every check you could not run as `Not verified`.
  

@@ -114,29 +114,31 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/animate/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/animate/source.md",
-      "sourceSha256": "39138996033e0dbe53e73217514116eaeca774bae84a0687c80d445a4e0cc3a6",
+      "sourceSha256": "4ce49ea635ec175b45552bae070ea07b2d6aa5367047994250c1c095b71c8585",
       "license": "sources/upstream/animate/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/animate/animate.md",
-      "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. Supporting files remain verbatim.",
+      "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. RECIPES.md only relinks its choreograph pointer to the carried Choreograph method.",
       "consumers": [
         "atlas-motion"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
+      "adoptedAt": "2026-11-18",
       "carriedPath": "references/animate/animate.md",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/animate/supporting/RECIPES.md",
           "relativePath": "RECIPES.md",
           "upstreamPath": "skills/animate/RECIPES.md",
-          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2"
+          "sourceSha256": "129cddcba35dedacd307ef2de7f2c71e6d23efd9c1756dde44168241207581f9",
+          "method": "skills/atlas-motion/references/animate/RECIPES.md",
+          "patch": "sources/patches/animate/RECIPES.md.patch"
         }
       ],
       "rulings": [
@@ -152,13 +154,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/choreograph/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/choreograph/source.md",
-      "sourceSha256": "815c7d889230bafc72c03bb0769087aeede310130e8795c7949b3e3a1684e464",
+      "sourceSha256": "0a6802bb2fd5a3993842d48332b8ab56ae5bab369ffa8700f85f6fcff56b8478",
       "license": "sources/upstream/choreograph/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/choreograph/choreograph.md",
@@ -172,13 +174,13 @@
       ],
       "carriedPath": "references/choreograph/choreograph.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-12",
+      "adoptedAt": "2026-11-18",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/choreograph/supporting/RECIPES.md",
           "relativePath": "RECIPES.md",
           "upstreamPath": "skills/choreograph/RECIPES.md",
-          "sourceSha256": "b61f03b5c47398cf71ce9db4157cc919617228981b1d74a72d6a5fa27e4aaad2",
+          "sourceSha256": "c256ff760f42d905b19f97becd2c0caaf40a95b41b49770c973281374c9600cf",
           "method": "skills/atlas-motion/references/choreograph/RECIPES.md",
           "patch": "sources/patches/choreograph/RECIPES.md.patch"
         }
@@ -188,30 +190,31 @@
     {
       "id": "apple-design",
       "owner": "Engineering Principles",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/apple-design/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/apple-design/source.md",
-      "sourceSha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+      "sourceSha256": "7fbacf928637e136da6d475358d0639667a3637ba772f03f8e815bb4c0b86946",
       "license": "sources/upstream/apple-design/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "method": "sources/upstream/apple-design/source.md",
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
+      "method": "skills/atlas-motion/references/fluid/apple-design.md",
+      "adaptation": "Relink the sibling animation-performance pointer to the carried Performance method. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
       "consumers": [
         "atlas-motion"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-11-18",
       "carriedPath": "references/fluid/apple-design.md",
       "supportingFiles": [],
       "rulings": [
         "review-motion-owner"
-      ]
+      ],
+      "patch": "sources/patches/apple-design.patch"
     },
     {
       "id": "better-layout",
@@ -219,13 +222,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/better-layout/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-layout/source.md",
-      "sourceSha256": "4e7fd6880f41a87a21bb3be8e0b2bd7e7b8c561af5fb706ec0bb3e58877d60ec",
+      "sourceSha256": "fda25f5dddffd5a7a0aa9252f76269f9602d9384bf0925a356c2431408e308d6",
       "license": "sources/upstream/better-layout/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/layout/index.md",
@@ -234,7 +237,7 @@
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/better-layout/supporting/agents/openai.yaml",
@@ -251,10 +254,18 @@
           "patch": "sources/patches/better-layout/grouping-and-alignment.md.patch"
         },
         {
+          "snapshot": "sources/upstream/better-layout/supporting/reporting.md",
+          "relativePath": "reporting.md",
+          "upstreamPath": "skills/better-layout/reporting.md",
+          "sourceSha256": "57a9bb08903f5005254bf09fe771f72f383934272812c21160041a704121ee3c",
+          "method": "skills/atlas-review/references/layout/reporting.md",
+          "patch": "sources/patches/better-layout/reporting.md.patch"
+        },
+        {
           "snapshot": "sources/upstream/better-layout/supporting/spacing-and-adaptivity.md",
           "relativePath": "spacing-and-adaptivity.md",
           "upstreamPath": "skills/better-layout/spacing-and-adaptivity.md",
-          "sourceSha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+          "sourceSha256": "c823e1c53250497047d809206e4866a3de2ef335612e41d7422bde16cc6c93c0",
           "method": "skills/atlas-review/references/layout/spacing-and-adaptivity.md",
           "patch": "sources/patches/better-layout/spacing-and-adaptivity.md.patch"
         }
@@ -271,7 +282,7 @@
         "sha256": "658f42ba16a656be37ec7b8e337ba94ae50e123815f264e68319d07943e05737",
         "trackingRef": "main"
       },
-      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches. Correct the keyboard-clearance claim: dynamic viewport units handle browser chrome but do not guarantee software-keyboard clearance; preserve explicit browser verification.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches. reporting.md names Interface Audit and the whole-interface review in place of better-interface. Upstream now carries the software-keyboard correction for dynamic viewport units.",
       "patch": "sources/patches/better-layout.patch"
     },
     {
@@ -280,13 +291,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/better-typography/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-typography/source.md",
-      "sourceSha256": "8f00a576f6c8d2f8d72dfbffe765ce569982509d01533ea5881de6e1918d3a68",
+      "sourceSha256": "7fce3adcd4e8429c59eabef8726b06d2211fff8d7370f380e32906df0a6b0c2c",
       "license": "sources/upstream/better-typography/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/type/index.md",
@@ -295,7 +306,7 @@
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/better-typography/supporting/agents/openai.yaml",
@@ -307,13 +318,13 @@
           "snapshot": "sources/upstream/better-typography/supporting/choosing-fonts.md",
           "relativePath": "choosing-fonts.md",
           "upstreamPath": "skills/better-typography/choosing-fonts.md",
-          "sourceSha256": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d"
+          "sourceSha256": "a5c1691ebc68d09f094638ed7133a4cd67d1a58e5d59f8cebce2562540ac1b46"
         },
         {
           "snapshot": "sources/upstream/better-typography/supporting/css-cheat-sheet.md",
           "relativePath": "css-cheat-sheet.md",
           "upstreamPath": "skills/better-typography/css-cheat-sheet.md",
-          "sourceSha256": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9"
+          "sourceSha256": "c8af752864f740583c183d1793bc6049c5e11475f4ddca16d325429f3578e3f8"
         },
         {
           "snapshot": "sources/upstream/better-typography/supporting/details-and-accessibility.md",
@@ -322,22 +333,30 @@
           "sourceSha256": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23"
         },
         {
+          "snapshot": "sources/upstream/better-typography/supporting/reporting.md",
+          "relativePath": "reporting.md",
+          "upstreamPath": "skills/better-typography/reporting.md",
+          "sourceSha256": "f644606a4e399860501c2f106987e7d5d34518e59e427402fcaed75b0eba2991",
+          "method": "skills/atlas-review/references/type/reporting.md",
+          "patch": "sources/patches/better-typography/reporting.md.patch"
+        },
+        {
           "snapshot": "sources/upstream/better-typography/supporting/spacing-and-sizing.md",
           "relativePath": "spacing-and-sizing.md",
           "upstreamPath": "skills/better-typography/spacing-and-sizing.md",
-          "sourceSha256": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f"
+          "sourceSha256": "c82c5951893945c50acdb631fbf73a70bddc855ff56e58ded55012199fb7c183"
         },
         {
           "snapshot": "sources/upstream/better-typography/supporting/variable-fonts-and-opentype.md",
           "relativePath": "variable-fonts-and-opentype.md",
           "upstreamPath": "skills/better-typography/variable-fonts-and-opentype.md",
-          "sourceSha256": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556"
+          "sourceSha256": "bd590fbb10001e69771ddfd0eaec656d72de04eaccba45cae769dcc8c7e4963d"
         },
         {
           "snapshot": "sources/upstream/better-typography/supporting/wrapping-and-punctuation.md",
           "relativePath": "wrapping-and-punctuation.md",
           "upstreamPath": "skills/better-typography/wrapping-and-punctuation.md",
-          "sourceSha256": "44ef7be30b3342c0a81f7b07c2f7138c9743b8df8c8edab518907e8ec0abd68a"
+          "sourceSha256": "db373af9d72884eb5d84cd7ad89a7e62519fe3e6cb03c7aa15f1bae818072e2c"
         }
       ],
       "rulings": [
@@ -352,7 +371,7 @@
         "sha256": "a5d9e3560ee84087f65443aad266e62bfd9c9d4143c48424c5046624ac5b631d",
         "trackingRef": "main"
       },
-      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches. reporting.md names Interface Audit and the whole-interface review in place of better-interface. Its SKILL.md pointer links the carried Typography index.",
       "patch": "sources/patches/better-typography.patch"
     },
     {
@@ -361,13 +380,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/better-colors/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-colors/source.md",
-      "sourceSha256": "2fc5964fe9adae02e8ba4d80d40ad85d23da227f3eab3b55e06c7df0ac7e7652",
+      "sourceSha256": "9337ae0216848e5fde233e6aa101c98286d8e70b967c5bd96bde08a29436b17e",
       "license": "sources/upstream/better-colors/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/color/index.md",
@@ -376,7 +395,7 @@
         "atlas-review"
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/better-colors/supporting/agents/openai.yaml",
@@ -388,19 +407,19 @@
           "snapshot": "sources/upstream/better-colors/supporting/color-formats.md",
           "relativePath": "color-formats.md",
           "upstreamPath": "skills/better-colors/color-formats.md",
-          "sourceSha256": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba"
+          "sourceSha256": "3218f763a4dded7a599eb27482647cb3c500d241e1b67399fe7dbf28decb4007"
         },
         {
           "snapshot": "sources/upstream/better-colors/supporting/color-usage.md",
           "relativePath": "color-usage.md",
           "upstreamPath": "skills/better-colors/color-usage.md",
-          "sourceSha256": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773"
+          "sourceSha256": "2e7d775c85f7168ffb61dcf7be7b04c8928ebebc54b4848dfc49d37618bb14d0"
         },
         {
           "snapshot": "sources/upstream/better-colors/supporting/contrast.md",
           "relativePath": "contrast.md",
           "upstreamPath": "skills/better-colors/contrast.md",
-          "sourceSha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+          "sourceSha256": "25cbbe55c61530d6170ae11f45353c5ab8798e2781a73aea8caaf122151d1919",
           "method": "skills/atlas-review/references/color/contrast.md",
           "patch": "sources/patches/better-colors/contrast.md.patch"
         },
@@ -408,19 +427,27 @@
           "snapshot": "sources/upstream/better-colors/supporting/palette-generation.md",
           "relativePath": "palette-generation.md",
           "upstreamPath": "skills/better-colors/palette-generation.md",
-          "sourceSha256": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5"
+          "sourceSha256": "40c57150775debab7b073549c5e4a2cc8f9ec307e9045842eb57771f0e60c432"
         },
         {
           "snapshot": "sources/upstream/better-colors/supporting/palette-structure.md",
           "relativePath": "palette-structure.md",
           "upstreamPath": "skills/better-colors/palette-structure.md",
-          "sourceSha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62"
+          "sourceSha256": "55b9ff6fa3064ffc3c252c06712b4e4bbd04161b3b18f90b961412a5e420285b"
+        },
+        {
+          "snapshot": "sources/upstream/better-colors/supporting/reporting.md",
+          "relativePath": "reporting.md",
+          "upstreamPath": "skills/better-colors/reporting.md",
+          "sourceSha256": "a1bc3a334d51ae7d48da0fb5807cecd36f4446913240edb3365793527ef16bec",
+          "method": "skills/atlas-review/references/color/reporting.md",
+          "patch": "sources/patches/better-colors/reporting.md.patch"
         },
         {
           "snapshot": "sources/upstream/better-colors/supporting/token-naming.md",
           "relativePath": "token-naming.md",
           "upstreamPath": "skills/better-colors/token-naming.md",
-          "sourceSha256": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a"
+          "sourceSha256": "be879f4ef883f20c16b8aac3505e04c914fef2f230c601c9dec24eb36580c02a"
         }
       ],
       "rulings": [
@@ -435,7 +462,7 @@
         "sha256": "765d1dc6ff9bdd82b130c81c77095df21150f2c3fc8467ae429638a52e995f6d",
         "trackingRef": "main"
       },
-      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches. reporting.md names Interface Audit and the whole-interface review in place of better-interface.",
       "patch": "sources/patches/better-colors.patch"
     },
     {
@@ -543,35 +570,38 @@
     {
       "id": "review-animations",
       "owner": "review-animations",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/review-animations/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/review-animations/source.md",
-      "sourceSha256": "5f9fb98b69cace7107af8b393a4196fd42fa42d98bce0e5afc1f866ff3b8a41c",
+      "sourceSha256": "9ceb5072ce5d5e51b07efa60817c66d06fc6492b7900b44dff5ff0f8f7bcf188",
       "license": "sources/upstream/review-animations/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "method": "sources/upstream/review-animations/source.md",
-      "adaptation": "Complete selected runtime tree and frontmatter preserved byte-for-byte.",
+      "method": "skills/atlas-review/references/motion/review-animations.md",
+      "adaptation": "Name Atlas Motion's Choreograph method in place of the sibling choreograph path in the entry and STANDARDS.md; otherwise the selected runtime tree and frontmatter are preserved.",
       "consumers": [
         "atlas-review"
       ],
       "rulings": [],
       "carriedPath": "references/motion/review-animations.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
+      "adoptedAt": "2026-11-18",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/review-animations/supporting/STANDARDS.md",
           "relativePath": "STANDARDS.md",
           "upstreamPath": "skills/review-animations/STANDARDS.md",
-          "sourceSha256": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657"
+          "sourceSha256": "2d2c28e9fe98dd55a879bafa1684827c812eb31f6b63fe578141d3978ddc664e",
+          "method": "skills/atlas-review/references/motion/STANDARDS.md",
+          "patch": "sources/patches/review-animations/STANDARDS.md.patch"
         }
-      ]
+      ],
+      "patch": "sources/patches/review-animations.patch"
     },
     {
       "id": "show-me",
@@ -614,17 +644,17 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/better-accessibility/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-accessibility/source.md",
-      "sourceSha256": "f3f9dc26c947dbdfc64be80d3c0d278d5d8bb070c7826b2dae6bf8c380e81586",
+      "sourceSha256": "6a6465c044783968bae9896fd9e2e78437b90578fe3309b6dee6ef6a920e45f9",
       "license": "sources/upstream/better-accessibility/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/accessibility/index.md",
-      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches. reporting.md names Interface Audit and the whole-interface review in place of better-interface.",
       "consumers": [
         "atlas-review"
       ],
@@ -633,7 +663,7 @@
       ],
       "carriedPath": "references/accessibility/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "patch": "sources/patches/better-accessibility.patch",
       "supportingFiles": [
         {
@@ -646,7 +676,7 @@
           "snapshot": "sources/upstream/better-accessibility/supporting/focus-and-keyboard.md",
           "relativePath": "focus-and-keyboard.md",
           "upstreamPath": "skills/better-accessibility/focus-and-keyboard.md",
-          "sourceSha256": "47857a860f25f3159ace5b3e06e4961e9c47bd0f9c30f35d1aab22e97e3f0b5c",
+          "sourceSha256": "ace66413242a31df97f1d5101bddc98d871c97716cbc936a439291ea5fda7e54",
           "method": "skills/atlas-review/references/accessibility/focus-and-keyboard.md",
           "patch": "sources/patches/better-accessibility-focus-and-keyboard.patch"
         },
@@ -654,33 +684,41 @@
           "snapshot": "sources/upstream/better-accessibility/supporting/forms.md",
           "relativePath": "forms.md",
           "upstreamPath": "skills/better-accessibility/forms.md",
-          "sourceSha256": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4"
+          "sourceSha256": "ed63f7424eb1d3515e4261504467d77840317dda7c0df86c965ee334b3499589"
         },
         {
           "snapshot": "sources/upstream/better-accessibility/supporting/hit-areas.md",
           "relativePath": "hit-areas.md",
           "upstreamPath": "skills/better-accessibility/hit-areas.md",
-          "sourceSha256": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53"
+          "sourceSha256": "c723a5c5a0935148dbf54dcc1b9fa140251f50a6e953ed79f77af498eae3b615"
         },
         {
           "snapshot": "sources/upstream/better-accessibility/supporting/motion-and-zoom.md",
           "relativePath": "motion-and-zoom.md",
           "upstreamPath": "skills/better-accessibility/motion-and-zoom.md",
-          "sourceSha256": "16c0c3daeab2f01ed04ee0189998b5711d3c4c9a4ff10604a757577af9bb5896",
+          "sourceSha256": "743bae6a93843ff07ebb283d8de31e3ecd184e04f8de639b0e3b0949088fc13a",
           "method": "skills/atlas-review/references/accessibility/motion-and-zoom.md",
           "patch": "sources/patches/better-accessibility/motion-and-zoom.md.patch"
+        },
+        {
+          "snapshot": "sources/upstream/better-accessibility/supporting/reporting.md",
+          "relativePath": "reporting.md",
+          "upstreamPath": "skills/better-accessibility/reporting.md",
+          "sourceSha256": "6203f74162d308d844bd6db8b677502757da922b274ef72cacdba63819073659",
+          "method": "skills/atlas-review/references/accessibility/reporting.md",
+          "patch": "sources/patches/better-accessibility/reporting.md.patch"
         },
         {
           "snapshot": "sources/upstream/better-accessibility/supporting/screen-readers.md",
           "relativePath": "screen-readers.md",
           "upstreamPath": "skills/better-accessibility/screen-readers.md",
-          "sourceSha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a"
+          "sourceSha256": "a65faa6f28ef972b71328d5aaafb1c13fc9796b02bfa0557ae23a02569267c3b"
         },
         {
           "snapshot": "sources/upstream/better-accessibility/supporting/semantics-and-aria.md",
           "relativePath": "semantics-and-aria.md",
           "upstreamPath": "skills/better-accessibility/semantics-and-aria.md",
-          "sourceSha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+          "sourceSha256": "dfbadab983f65cd5f666ee4e1aecdf9a243ea206876a3f575a12f0b1314f6e37",
           "method": "skills/atlas-review/references/accessibility/semantics-and-aria.md",
           "patch": "sources/patches/better-accessibility/semantics-and-aria.md.patch"
         }
@@ -692,17 +730,17 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/better-ui/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-ui/source.md",
-      "sourceSha256": "2d5f9fa4f3bbf045da914349b6e5fde559c947e5323968350b65bb2cdc6b3e4f",
+      "sourceSha256": "faedbe348e34638fa89c839e7473108f6912d7c94810b3205d8f0098da6669ae",
       "license": "sources/upstream/better-ui/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/ui/index.md",
-      "adaptation": "Replace sibling calls with direct bundled-method links. Atlas motion ownership overrides conflicting numeric presets; surfaces and icons remain UI Polish responsibilities. Pristine snapshots and unadapted supporting files remain verbatim.",
+      "adaptation": "Replace sibling calls with direct bundled-method links. Atlas motion ownership overrides conflicting numeric presets; surfaces and icons remain UI Polish responsibilities. Pristine snapshots and unadapted supporting files remain verbatim. reporting.md names Interface Audit and the whole-interface review in place of better-interface.",
       "consumers": [
         "atlas-review"
       ],
@@ -712,7 +750,7 @@
       ],
       "carriedPath": "references/ui/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "patch": "sources/patches/better-ui.patch",
       "supportingFiles": [
         {
@@ -725,19 +763,19 @@
           "snapshot": "sources/upstream/better-ui/supporting/animations.md",
           "relativePath": "animations.md",
           "upstreamPath": "skills/better-ui/animations.md",
-          "sourceSha256": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3"
+          "sourceSha256": "6d05551916736876b64ce708d19557b95d19438577c5fe3e273f30b257355637"
         },
         {
           "snapshot": "sources/upstream/better-ui/supporting/enter-exit.md",
           "relativePath": "enter-exit.md",
           "upstreamPath": "skills/better-ui/enter-exit.md",
-          "sourceSha256": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a"
+          "sourceSha256": "914c0947672d8851bdd1d71656640d411cef268772926540bd273db67ee628cd"
         },
         {
           "snapshot": "sources/upstream/better-ui/supporting/icon-transitions.md",
           "relativePath": "icon-transitions.md",
           "upstreamPath": "skills/better-ui/icon-transitions.md",
-          "sourceSha256": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06"
+          "sourceSha256": "f03eb87eba72ffc447d25b05ee5204c77a90d5eb8568aa443c7067d8eae09f1d"
         },
         {
           "snapshot": "sources/upstream/better-ui/supporting/icons.md",
@@ -754,10 +792,18 @@
           "sourceSha256": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6"
         },
         {
+          "snapshot": "sources/upstream/better-ui/supporting/reporting.md",
+          "relativePath": "reporting.md",
+          "upstreamPath": "skills/better-ui/reporting.md",
+          "sourceSha256": "7030d8d2dc6360478a782e8371ecf0dc798c6c9fb5fe9aa3634b27574272d9fe",
+          "method": "skills/atlas-review/references/ui/reporting.md",
+          "patch": "sources/patches/better-ui/reporting.md.patch"
+        },
+        {
           "snapshot": "sources/upstream/better-ui/supporting/surfaces.md",
           "relativePath": "surfaces.md",
           "upstreamPath": "skills/better-ui/surfaces.md",
-          "sourceSha256": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721"
+          "sourceSha256": "036f4957885754ed93f3256790c8b6d6280d068f5fb2cad7554d99acacd2930e"
         }
       ]
     },
@@ -767,17 +813,17 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/better-writing/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-writing/source.md",
-      "sourceSha256": "109e4337da3621410c225b137d4683d8c246ca06071990a22882376ad60ec6e3",
+      "sourceSha256": "4e7f745ae1f6def19da579cbaa69f19d26ce7c5200d21e7bd14eb4e88fae51ce",
       "license": "sources/upstream/better-writing/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/copy/index.md",
-      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches.",
+      "adaptation": "Replace sibling skill calls with direct links to bundled domain methods in the entry and selected supporting files. Preserve upstream domain rules and pristine snapshots; supporting adaptations have replayable patches. reporting.md names Interface Audit and the whole-interface review in place of better-interface.",
       "consumers": [
         "atlas-review"
       ],
@@ -786,7 +832,7 @@
       ],
       "carriedPath": "references/copy/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "patch": "sources/patches/better-writing.patch",
       "supportingFiles": [
         {
@@ -799,9 +845,17 @@
           "snapshot": "sources/upstream/better-writing/supporting/patterns.md",
           "relativePath": "patterns.md",
           "upstreamPath": "skills/better-writing/patterns.md",
-          "sourceSha256": "93ed5285d2009213b600e6f5af53ae3f7e3ff0114014146779aeda1c1ab42077",
+          "sourceSha256": "7ecc6a7d34f11cb501d31d8d3aff6e59ec211c096d0c8774daa9086a2224b2cf",
           "method": "skills/atlas-review/references/copy/patterns.md",
           "patch": "sources/patches/better-writing/patterns.md.patch"
+        },
+        {
+          "snapshot": "sources/upstream/better-writing/supporting/reporting.md",
+          "relativePath": "reporting.md",
+          "upstreamPath": "skills/better-writing/reporting.md",
+          "sourceSha256": "fc0fd488c6c0ce2e1a9987ed56f4e1eba08d203546884d55d320c127453c7bcf",
+          "method": "skills/atlas-review/references/copy/reporting.md",
+          "patch": "sources/patches/better-writing/reporting.md.patch"
         }
       ]
     },
@@ -811,13 +865,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/better-interface/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/better-interface/source.md",
-      "sourceSha256": "915ed5dc1442d9b78782900ff8b62160133362a2fe23998917814bfb6422869e",
+      "sourceSha256": "6bba6017fe6b0cfd72e4bed9ed7f74926634efa808f1bdff23748ac4fa94bdf1",
       "license": "sources/upstream/better-interface/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/interface/audit/index.md",
@@ -830,7 +884,7 @@
       ],
       "carriedPath": "references/interface/audit/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "patch": "sources/patches/better-interface.patch",
       "supportingFiles": [
         {
@@ -843,7 +897,7 @@
           "snapshot": "sources/upstream/better-interface/supporting/review-format.md",
           "relativePath": "review-format.md",
           "upstreamPath": "skills/better-interface/review-format.md",
-          "sourceSha256": "4bb2715d6cd7c8afbd984cbe71148a214c9d43ffd535ba00789f7709ee743c01",
+          "sourceSha256": "21655c85833395f0a617a54ae4517e365e663aada17d8995f0b4a65cf31d2697",
           "method": "skills/atlas-review/references/interface/audit/review-format.md",
           "patch": "sources/patches/better-interface/review-format.md.patch"
         }
@@ -855,13 +909,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/interface-review/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/interface-review/source.md",
-      "sourceSha256": "976098555c7fe5dc0d082d70fd37b579f7513eb84a653d1abec8e347c80e32c1",
+      "sourceSha256": "3c38b563ec39f709d76480a26952a158a169659449526f6f2c2e2837bf6c8fd2",
       "license": "sources/upstream/interface-review/LICENSE",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "method": "skills/atlas-review/references/interface/changes/index.md",
@@ -874,7 +928,7 @@
       ],
       "carriedPath": "references/interface/changes/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "patch": "sources/patches/interface-review.patch",
       "supportingFiles": [
         {
@@ -887,7 +941,7 @@
           "snapshot": "sources/upstream/interface-review/supporting/removed-signals.md",
           "relativePath": "removed-signals.md",
           "upstreamPath": "skills/interface-review/removed-signals.md",
-          "sourceSha256": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+          "sourceSha256": "85179b4e434cd2d2dbe68c0253e66d7f433a878147bfcdad8b904024c9e583cb",
           "method": "skills/atlas-review/references/interface/changes/removed-signals.md",
           "patch": "sources/patches/interface-review/removed-signals.md.patch"
         },
@@ -895,7 +949,7 @@
           "snapshot": "sources/upstream/interface-review/supporting/scope-resolution.md",
           "relativePath": "scope-resolution.md",
           "upstreamPath": "skills/interface-review/scope-resolution.md",
-          "sourceSha256": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+          "sourceSha256": "7210fb22a51b5b08a2868866c65053dc214c61eb542a000f70464aebc2fba446",
           "method": "skills/atlas-review/references/interface/changes/scope-resolution.md",
           "patch": "sources/patches/interface-review/scope-resolution.md.patch"
         }
@@ -907,17 +961,17 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/improve-animations/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/improve-animations/source.md",
-      "sourceSha256": "73962447464433476343e2c12cd08ab39cc99a9e5f3c118c5fb54ed897574ef6",
+      "sourceSha256": "632be90e04261192112571b05abd5708fbb846808a4a7780717ee206daa6c6f6",
       "license": "sources/upstream/improve-animations/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-review/references/motion-audit/index.md",
-      "adaptation": "Remove the canned initial response, link directly to bundled Motion Review, and name Atlas execution handoffs. Respect repository artifact conventions; supporting plan-template references link to Motion Audit.",
+      "adaptation": "Remove the canned initial response, link directly to bundled Motion Review, and name Atlas execution handoffs. Respect repository artifact conventions; supporting plan-template references link to Motion Audit. AUDIT.md names Atlas Motion's Choreograph method in place of the sibling choreograph path.",
       "consumers": [
         "atlas-review"
       ],
@@ -926,20 +980,22 @@
       ],
       "carriedPath": "references/motion-audit/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
+      "adoptedAt": "2026-11-18",
       "patch": "sources/patches/improve-animations.patch",
       "supportingFiles": [
         {
           "snapshot": "sources/upstream/improve-animations/supporting/AUDIT.md",
           "relativePath": "AUDIT.md",
           "upstreamPath": "skills/improve-animations/AUDIT.md",
-          "sourceSha256": "63fa8fcf7e7b3a3e252938e55c60e1f399f607e73553163e8dacf9df40f3ebed"
+          "sourceSha256": "90312d201cd8ce7dc8add4147570cd47cdb6c901e9980951d9f7b4851b738524",
+          "method": "skills/atlas-review/references/motion-audit/AUDIT.md",
+          "patch": "sources/patches/improve-animations/AUDIT.md.patch"
         },
         {
           "snapshot": "sources/upstream/improve-animations/supporting/PLAN-TEMPLATE.md",
           "relativePath": "PLAN-TEMPLATE.md",
           "upstreamPath": "skills/improve-animations/PLAN-TEMPLATE.md",
-          "sourceSha256": "0a08ac8e23fd2082d7ffb86aeed7b789de77328c3cf874b16f1a755f2ef0a6ad",
+          "sourceSha256": "e25250c49937e183cca5bc42a057d9f5407a0cacd30d0aad1a4b6d59d7b2a844",
           "method": "skills/atlas-review/references/motion-audit/PLAN-TEMPLATE.md",
           "patch": "sources/patches/improve-animations/PLAN-TEMPLATE.md.patch"
         }
@@ -951,17 +1007,17 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/find-animation-opportunities/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/find-animation-opportunities/source.md",
-      "sourceSha256": "d52a377819b84a71930f0c822cfe2849f40301605a2d5c7eccbfa3b257700df2",
+      "sourceSha256": "331479e0d867f90d637ef3ef1bdbbd38498d144ab493442afdfbc138abc751b4",
       "license": "sources/upstream/find-animation-opportunities/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/opportunities/index.md",
-      "adaptation": "Remove the canned initial response and name Atlas Review audit/planning handoffs directly. Preserve upstream discovery rules; Native remains outside the composition.",
+      "adaptation": "Remove the canned initial response and name Atlas Review audit/planning handoffs directly. Preserve upstream discovery rules; Native remains outside the composition. Relink the choreograph pointer to the carried Choreograph method.",
       "consumers": [
         "atlas-motion"
       ],
@@ -971,7 +1027,7 @@
       ],
       "carriedPath": "references/opportunities/index.md",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-11-18",
       "patch": "sources/patches/find-animation-opportunities.patch",
       "supportingFiles": []
     },
@@ -2494,13 +2550,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/animation-performance/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/animation-performance/source.md",
-      "sourceSha256": "6c60f45ab416ff3f7d7765a5427beead77fab0d82487fe610d2a298397558d0a",
+      "sourceSha256": "6481e7a611b54c0d1d229ac3ac516c05648e63aa79de88c0a1bdc5ae2666ab80",
       "license": "sources/upstream/animation-performance/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-motion/references/performance/animation-performance.md",
@@ -2512,7 +2568,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "motion-local-routing"
       ]
@@ -2523,13 +2579,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/break-ui/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/break-ui/source.md",
-      "sourceSha256": "e7eec1d70ac56a04255e9c0dbe98084ea3d544cc04aaad34f32c95d6fa9dff5e",
+      "sourceSha256": "fb126d176f3b6bf7dfe71f2ae6620ab3dd81e6282c672a1801720055addfce18",
       "license": "sources/upstream/break-ui/LICENSE",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "method": "skills/atlas-verify/references/stress/break-ui.md",
@@ -2541,14 +2597,14 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/break-ui/CATALOG.md",
-          "relativePath": "CATALOG.md",
           "snapshot": "sources/upstream/break-ui/support/CATALOG.md",
-          "sourceSha256": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15"
+          "relativePath": "CATALOG.md",
+          "upstreamPath": "skills/break-ui/CATALOG.md",
+          "sourceSha256": "80522dcc81039bf317bce5adcb7b499e9d9da3c98952abb4dfb34ba6c1c32360"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-20",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "verify-method-authority",
         "verify-stress-isolation"
@@ -2560,7 +2616,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/explain-interface/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -2578,44 +2634,44 @@
       ],
       "supportingFiles": [
         {
-          "upstreamPath": "skills/explain-interface/from-an-image.md",
-          "relativePath": "from-an-image.md",
-          "snapshot": "sources/upstream/explain-interface/support/from-an-image.md",
-          "sourceSha256": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
-          "method": "skills/atlas-explain/references/interface/from-an-image.md",
-          "patch": "sources/patches/explain-interface-from-an-image.patch"
+          "snapshot": "sources/upstream/explain-interface/support/agents/openai.yaml",
+          "relativePath": "agents/openai.yaml",
+          "upstreamPath": "skills/explain-interface/agents/openai.yaml",
+          "sourceSha256": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc"
         },
         {
-          "upstreamPath": "skills/explain-interface/read-the-system.md",
-          "relativePath": "read-the-system.md",
-          "snapshot": "sources/upstream/explain-interface/support/read-the-system.md",
-          "sourceSha256": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
-          "method": "skills/atlas-explain/references/interface/read-the-system.md",
-          "patch": "sources/patches/explain-interface-read-the-system.patch"
-        },
-        {
-          "upstreamPath": "skills/explain-interface/no-browser.md",
-          "relativePath": "no-browser.md",
-          "snapshot": "sources/upstream/explain-interface/support/no-browser.md",
-          "sourceSha256": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f"
-        },
-        {
-          "upstreamPath": "skills/explain-interface/find-the-effect.md",
-          "relativePath": "find-the-effect.md",
           "snapshot": "sources/upstream/explain-interface/support/find-the-effect.md",
-          "sourceSha256": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+          "relativePath": "find-the-effect.md",
+          "upstreamPath": "skills/explain-interface/find-the-effect.md",
+          "sourceSha256": "a3c1062ad1c1c46c6a2bb5378c7a6a93484f7d659264d416651c9f0e71838ca6",
           "method": "skills/atlas-explain/references/interface/find-the-effect.md",
           "patch": "sources/patches/explain-interface-find-the-effect.patch"
         },
         {
-          "upstreamPath": "skills/explain-interface/agents/openai.yaml",
-          "relativePath": "agents/openai.yaml",
-          "snapshot": "sources/upstream/explain-interface/support/agents/openai.yaml",
-          "sourceSha256": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc"
+          "snapshot": "sources/upstream/explain-interface/support/from-an-image.md",
+          "relativePath": "from-an-image.md",
+          "upstreamPath": "skills/explain-interface/from-an-image.md",
+          "sourceSha256": "b1a4b003815ad905242dabb099988932f0b5bf9441150758965cba0f073b76cf",
+          "method": "skills/atlas-explain/references/interface/from-an-image.md",
+          "patch": "sources/patches/explain-interface-from-an-image.patch"
+        },
+        {
+          "snapshot": "sources/upstream/explain-interface/support/no-browser.md",
+          "relativePath": "no-browser.md",
+          "upstreamPath": "skills/explain-interface/no-browser.md",
+          "sourceSha256": "8d48861e81ff1c1634a9d0f0ffa5108aef78087b32e3f60a16edd46d864e2b17"
+        },
+        {
+          "snapshot": "sources/upstream/explain-interface/support/read-the-system.md",
+          "relativePath": "read-the-system.md",
+          "upstreamPath": "skills/explain-interface/read-the-system.md",
+          "sourceSha256": "d21bcb5a9a1176a31a19b32f223a719326b9ad813db6f004f9a3e170bede7787",
+          "method": "skills/atlas-explain/references/interface/read-the-system.md",
+          "patch": "sources/patches/explain-interface-read-the-system.patch"
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-interface-evidence"
       ]

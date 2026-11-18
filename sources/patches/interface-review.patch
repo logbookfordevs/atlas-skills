@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 3b14135..05eadff 100644
+index 182ec4f..a6e4776 100644
 --- a/source.md
 +++ b/source.md
 @@ -1,14 +1,16 @@
@@ -46,18 +46,18 @@ index 3b14135..05eadff 100644
 -## 7. Hand the review to `better-interface`
 +## 7. Hand the review to [Interface Audit](../audit/index.md)
  
--Hand `better-interface` the scope block, the affected surfaces and a status on every finding, and report in the format below.
-+Hand [Interface Audit](../audit/index.md) the scope block, the affected surfaces and a status on every finding, and report in the format below.
+-Hand `better-interface` the scope block and the affected surfaces. Give every finding its domain reviews return a status per **Classify every finding**, and report in the format below.
++Hand [Interface Audit](../audit/index.md) the scope block and the affected surfaces. Give every finding its domain reviews return a status per **Classify every finding**, and report in the format below.
  
--If `better-interface` is unavailable, report the resolved scope and the file inventory, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
-+If [Interface Audit](../audit/index.md) is unavailable, report the resolved scope and the file inventory, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
+-If `better-interface` is unavailable, report the scope block and the files in scope, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
++If [Interface Audit](../audit/index.md) is unavailable, report the scope block and the files in scope, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
  
  ## Never mutate the working tree
  
  A change review is read-only, including the checkout. `git fetch` writes only to `.git` and is permitted. `gh pr checkout`, `git checkout`, `git switch` and `git stash` rewrite the files the author has open, so they are never permitted. Fetch pull request refs and read them in place.
  
--Rendered verification is opt-in here, in place of `better-interface`'s **Verify what can be verified**. Mark visual and runtime claims **Not verified** unless the project exposes a cheap preview or the user asks for a rendered review. For `working` and `branch`, the checkout already is the head, so render it in place. For any other target, render an isolated worktree such as `git worktree add /tmp/review-<n> refs/remotes/pr/<n>` and remove it when done.
-+Rendered verification is opt-in here, in place of [Interface Audit](../audit/index.md)'s **Verify what can be verified**. Mark visual and runtime claims **Not verified** unless the project exposes a cheap preview or the user asks for a rendered review. For `working` and `branch`, the checkout already is the head, so render it in place. For any other target, render an isolated worktree such as `git worktree add /tmp/review-<n> refs/remotes/pr/<n>` and remove it when done.
+-Rendered verification is opt-in here, in place of `better-interface`'s **Verify what can be verified**. Mark visual and runtime claims **Not verified** unless the project exposes a cheap preview or the user asks for a rendered review. A removal read off the diff with nothing replacing it is a source finding and needs no render. For `working` and `branch`, the checkout already is the head, so render it in place. For any other target, render an isolated worktree such as `git worktree add /tmp/review-<n> refs/remotes/pr/<n>` and remove it when done.
++Rendered verification is opt-in here, in place of [Interface Audit](../audit/index.md)'s **Verify what can be verified**. Mark visual and runtime claims **Not verified** unless the project exposes a cheap preview or the user asks for a rendered review. A removal read off the diff with nothing replacing it is a source finding and needs no render. For `working` and `branch`, the checkout already is the head, so render it in place. For any other target, render an isolated worktree such as `git worktree add /tmp/review-<n> refs/remotes/pr/<n>` and remove it when done.
  
  ## Before you finish
  

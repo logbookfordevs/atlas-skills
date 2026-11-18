@@ -1,17 +1,17 @@
 diff --git a/source.md b/source.md
-index ea60301..b6c4e37 100644
+index a19cfc9..f25fe0c 100644
 --- a/source.md
 +++ b/source.md
-@@ -84,7 +84,7 @@ The walk recurses into `@layer`, `@media` and `@supports`, since Tailwind v4 wri
+@@ -92,7 +92,7 @@ The walk recurses into `@layer`, `@media` and `@supports`, since Tailwind v4 wri
  }
  ```
  
--Group the result by prefix, since the prefixes are the system's own layer names. A two-tier structure, `--blue-500` feeding `--color-text-primary`, is what `better-colors` calls primitives and semantic tokens.
-+Group the result by prefix, since the prefixes are the system's own layer names. A two-tier structure, `--blue-500` feeding `--color-text-primary`, separates primitives from semantic tokens.
+-Group the result by prefix, since the prefixes are the system's own layer names. `declared` keeps the authored value, often a `var()` chain, and `computed` is what that resolves to on the page right now. A two-tier structure, `--blue-500` feeding `--color-text-primary`, is what `better-colors` calls primitives and semantic tokens.
++Group the result by prefix, since the prefixes are the system's own layer names. `declared` keeps the authored value, often a `var()` chain, and `computed` is what that resolves to on the page right now. A two-tier structure, `--blue-500` feeding `--color-text-primary`, separates primitives from semantic tokens.
  
  ## The type scale
  
-@@ -121,7 +121,7 @@ Sorted by usage, so the body size usually comes first and the one-offs last. Der
+@@ -129,7 +129,7 @@ Sorted by usage, so the body size usually comes first and the one-offs last. Der
  }
  ```
  

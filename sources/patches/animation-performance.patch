@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 74c421e..89037b2 100644
+index c7dd441..52dcc72 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,15 +5,7 @@ description: Keep web animations inside the frame budget — animate composite-o
@@ -23,7 +23,7 @@ index 74c421e..89037b2 100644
  
  | Tier | Properties | Cost |
  | --- | --- | --- |
--| Composite only | `transform`, `opacity`, and in current Chrome/Firefox also `filter`, `clip-path`, `background-color` | Cheapest. Browsers promote these to their own layer. |
+-| Composite only | `transform`, `opacity` | Cheapest. Browsers promote these to their own layer. |
 +| Composite candidates | `transform`, `opacity`; other properties such as `filter`, `clip-path` and `background-color` depend on browser support and context | Prefer `transform` and `opacity`; profile the actual layers and rendering work. |
  | Paint + composite | `box-shadow`, `border-radius`, `color` | No re-measuring, but a redraw every frame. |
  | Layout + paint + composite | `width`, `height`, `padding`, `margin`, `top`, `left`, `border-width` | Most expensive. One growing element can move everything around it. |
@@ -32,7 +32,7 @@ index 74c421e..89037b2 100644
  
  Two things follow:
  
--- **Layout animations don't always drop frames.** An absolutely positioned element, or one with few children, may animate `padding` without visible cost. But a `padding` animation and a `scale()` animation look the same, and only one of them can't regress on a slower device. Pick the one with no downside.
+-- **Layout animations don't always drop frames.** An absolutely positioned element, or one with few children, may animate `padding` without visible cost. But when `scale()` gives the look you want (it scales children too and keeps the layout space), only it can't regress on a slower device. Pick it.
 +- **Layout animations don't always drop frames.** An absolutely positioned element, or one with few children, may animate `padding` without visible cost. A `scale()` replacement also scales text and children and leaves document flow unchanged. Swap only when layout, legibility, hit targets and focus behavior stay correct; compare on the target device.
  - **Layout properties also move the wrong things.** Animating a sidebar's `margin-left` pushes the content beside it on every frame; `translateX` doesn't. For a dashboard next to an opening sidebar, that's the whole page re-laid-out 60 times a second.
  

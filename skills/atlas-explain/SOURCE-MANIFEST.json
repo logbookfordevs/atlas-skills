@@ -27,10 +27,10 @@
     "licenses/pstack-unslop.txt",
     "references/interface/explain-interface.md",
     "licenses/explain-interface.txt",
-    "references/interface/from-an-image.md",
-    "references/interface/read-the-system.md",
-    "references/interface/no-browser.md",
     "references/interface/find-the-effect.md",
+    "references/interface/from-an-image.md",
+    "references/interface/no-browser.md",
+    "references/interface/read-the-system.md",
     "references/catch-up/ketchup.md",
     "licenses/pstack-ketchup.txt",
     "references/bro/bro.md",
@@ -268,45 +268,45 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/jakubkrehel/skills",
-        "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
         "path": "skills/explain-interface/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [
         {
-          "upstreamPath": "skills/explain-interface/from-an-image.md",
+          "upstreamPath": "skills/explain-interface/find-the-effect.md",
           "classification": "patched",
-          "sourceSha256": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
-          "carriedPath": "references/interface/from-an-image.md",
-          "carriedSha256": "c918493497596830c13dbd752781ddd1268090b244e5ded028d3569480a25fde",
-          "patch": "sources/patches/explain-interface-from-an-image.patch",
-          "patchSha256": "f1ed856f2c48fa379b63f999a7e4e92bfffef5cdad4a0eee00cd6d69e26e7e4e"
+          "sourceSha256": "a3c1062ad1c1c46c6a2bb5378c7a6a93484f7d659264d416651c9f0e71838ca6",
+          "carriedPath": "references/interface/find-the-effect.md",
+          "carriedSha256": "b24165b287cb40367ee10659847b62ec705164f20ec85fe18dcfd13a16dc6100",
+          "patch": "sources/patches/explain-interface-find-the-effect.patch",
+          "patchSha256": "a641b18edcdd10173855284a92daf02883bf09c0de8ae0fd5e50f6ce6ce24836"
         },
         {
-          "upstreamPath": "skills/explain-interface/read-the-system.md",
+          "upstreamPath": "skills/explain-interface/from-an-image.md",
           "classification": "patched",
-          "sourceSha256": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
-          "carriedPath": "references/interface/read-the-system.md",
-          "carriedSha256": "ff6d988ea7e5c45a15c5efe0f94e13e3df3e95f03e8fd163a119266844f29a67",
-          "patch": "sources/patches/explain-interface-read-the-system.patch",
-          "patchSha256": "8da9c5b5643fbe552440c7657dcf0cbbfd1f11905fbcfe332ddb22041e12c9f5"
+          "sourceSha256": "b1a4b003815ad905242dabb099988932f0b5bf9441150758965cba0f073b76cf",
+          "carriedPath": "references/interface/from-an-image.md",
+          "carriedSha256": "d441302c61d6d97c723beb617ddddc10ead48fccaa8308f116949fad914e6e59",
+          "patch": "sources/patches/explain-interface-from-an-image.patch",
+          "patchSha256": "060637360e7066a053508697237ed9ebb5c3189ebf5dbe158c7d409eab3abd67"
         },
         {
           "upstreamPath": "skills/explain-interface/no-browser.md",
           "classification": "verbatim",
-          "sourceSha256": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+          "sourceSha256": "8d48861e81ff1c1634a9d0f0ffa5108aef78087b32e3f60a16edd46d864e2b17",
           "carriedPath": "references/interface/no-browser.md",
-          "carriedSha256": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f"
+          "carriedSha256": "8d48861e81ff1c1634a9d0f0ffa5108aef78087b32e3f60a16edd46d864e2b17"
         },
         {
-          "upstreamPath": "skills/explain-interface/find-the-effect.md",
+          "upstreamPath": "skills/explain-interface/read-the-system.md",
           "classification": "patched",
-          "sourceSha256": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
-          "carriedPath": "references/interface/find-the-effect.md",
-          "carriedSha256": "06786fd18303b1b931ef16ede258d01a78210ef1f5759e143dbcb188610a9627",
-          "patch": "sources/patches/explain-interface-find-the-effect.patch",
-          "patchSha256": "964f058b1f3a4df403855669b452a5df0bb99611f85858899ed77ce973123b63"
+          "sourceSha256": "d21bcb5a9a1176a31a19b32f223a719326b9ad813db6f004f9a3e170bede7787",
+          "carriedPath": "references/interface/read-the-system.md",
+          "carriedSha256": "c949382e90c6f88b7f14d3f01aa38dd2727cf7d1e61b76bdea0d350f08ee72c5",
+          "patch": "sources/patches/explain-interface-read-the-system.patch",
+          "patchSha256": "0a7abd476cfff88cf8f8c89a076191c6725749e0a11835c6c65a4587e71ef45d"
         }
       ],
       "notices": [],
@@ -317,7 +317,7 @@
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
       "adaptation": "Replace standalone invocation and sibling skill calls with Atlas handoffs. Use available host browser capabilities, preserve measured/derived/inferred evidence and screenshot uncertainty, keep supporting inspection read-only, and make domain observations explanatory rather than normative audits. Preserve all source files and original metadata.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-interface-evidence"
       ],
@@ -460,10 +460,10 @@
     "licenses/pstack-unslop.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/interface/explain-interface.md": "be349f85e8bcf80960910f1ac642487ea77127b71ea8e00113becdcace20ca1d",
     "licenses/explain-interface.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-    "references/interface/from-an-image.md": "c918493497596830c13dbd752781ddd1268090b244e5ded028d3569480a25fde",
-    "references/interface/read-the-system.md": "ff6d988ea7e5c45a15c5efe0f94e13e3df3e95f03e8fd163a119266844f29a67",
-    "references/interface/no-browser.md": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
-    "references/interface/find-the-effect.md": "06786fd18303b1b931ef16ede258d01a78210ef1f5759e143dbcb188610a9627",
+    "references/interface/find-the-effect.md": "b24165b287cb40367ee10659847b62ec705164f20ec85fe18dcfd13a16dc6100",
+    "references/interface/from-an-image.md": "d441302c61d6d97c723beb617ddddc10ead48fccaa8308f116949fad914e6e59",
+    "references/interface/no-browser.md": "8d48861e81ff1c1634a9d0f0ffa5108aef78087b32e3f60a16edd46d864e2b17",
+    "references/interface/read-the-system.md": "c949382e90c6f88b7f14d3f01aa38dd2727cf7d1e61b76bdea0d350f08ee72c5",
     "references/catch-up/ketchup.md": "96c44a877ce57e6874ea3bd8550eee5776a2351d21e1620a6bbc82a23bd114d3",
     "licenses/pstack-ketchup.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/bro/bro.md": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",

@@ -242,7 +242,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/break-ui/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -251,26 +251,26 @@
         {
           "upstreamPath": "skills/break-ui/CATALOG.md",
           "classification": "verbatim",
-          "sourceSha256": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15",
+          "sourceSha256": "80522dcc81039bf317bce5adcb7b499e9d9da3c98952abb4dfb34ba6c1c32360",
           "carriedPath": "references/stress/CATALOG.md",
-          "carriedSha256": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15"
+          "carriedSha256": "80522dcc81039bf317bce5adcb7b499e9d9da3c98952abb4dfb34ba6c1c32360"
         }
       ],
       "notices": [],
-      "sourceSha256": "e7eec1d70ac56a04255e9c0dbe98084ea3d544cc04aaad34f32c95d6fa9dff5e",
+      "sourceSha256": "fb126d176f3b6bf7dfe71f2ae6620ab3dd81e6282c672a1801720055addfce18",
       "carriedPath": "references/stress/break-ui.md",
-      "carriedSha256": "20fc3a137602d5371ad5a149f99c7e73b11b47f58adcc122b88e9d07212960ad",
+      "carriedSha256": "1c9efa2f3ccd94ee31ac050372d45848bd799574aa1241be1ce4da7b5c13027c",
       "licensePath": "licenses/break-ui.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "adaptation": "Remove canned readiness text and external sibling calls. Confine fixtures and toggle to an owned temporary harness exercising the real component; preserve read-only product verification, explicit retention and executor-owned repairs. Require accessible access to truncated values; preserve the upstream catalog verbatim.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-20",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "verify-method-authority",
         "verify-stress-isolation"
       ],
       "patch": "sources/patches/break-ui.patch",
-      "patchSha256": "d88649a2dfe97e7c1f29567c35968ca27a4f227fbff90e00ab39eea6d1fa3eca"
+      "patchSha256": "65e13848c11ae010fc2d8b8e39e61ee5982404f4f9a9c8a7dd134fd36d2096ca"
     }
   ],
   "rulings": [
@@ -364,8 +364,8 @@
     "licenses/pe-verify-NOTICE.txt": "4e524178c5ecb6cfee373178beea874a664397beb678234ffcca50e5f5cae488",
     "references/performance/benchmark-checklist.md": "296530ba06d6dce78ba7140fd18d4e9cfab603d55d9d03d10c8485384271d394",
     "licenses/pstack-benchmark-checklist.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/stress/break-ui.md": "20fc3a137602d5371ad5a149f99c7e73b11b47f58adcc122b88e9d07212960ad",
+    "references/stress/break-ui.md": "1c9efa2f3ccd94ee31ac050372d45848bd799574aa1241be1ce4da7b5c13027c",
     "licenses/break-ui.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/stress/CATALOG.md": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15"
+    "references/stress/CATALOG.md": "80522dcc81039bf317bce5adcb7b499e9d9da3c98952abb4dfb34ba6c1c32360"
   }
 }

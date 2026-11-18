@@ -1,8 +1,8 @@
 diff --git a/source.md b/source.md
-index bb754ee..4d78fe1 100644
+index 93e51f9..dc54f79 100644
 --- a/source.md
 +++ b/source.md
-@@ -65,7 +65,7 @@ Exclude these and name what you excluded in the scope block. They are machine-au
+@@ -70,7 +70,7 @@ Exclude these and name what you excluded in the scope block. They are machine-au
  | Vendored code | `vendor/`, `third_party/`, `node_modules/` |
  | Binaries and media | `*.png`, `*.jpg`, `*.webp`, `*.avif`, `*.woff2`, `*.mp4`, `*.pdf` |
  
