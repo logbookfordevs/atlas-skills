@@ -8,6 +8,8 @@ disable-model-invocation: true
 
 When the request or conversation already selects a treatment, read its method and proceed directly. When no treatment is selected, present the full menu below with a short description of each option. Recommend suitable treatments from the user's subject, medium and intended use, explaining the fit, then wait for their choice before loading a method or building a figure. Selection belongs to the user.
 
+Show each option's sample from `assets/samples/` beside its description, as an inline image by absolute path when the host displays images; Teardown has none. Where images do not display, point to `assets/gallery.html`. When the user asks to see, compare or demo the treatments, open that gallery.
+
 | Treatment | Character | Read after selection |
 | --- | --- | --- |
 | Hairline | Restrained isometric line art; one geometric idea responds to the pointer. | [Create](references/hairline-create/hairline-create.md); for a supplied SVG, start with [Adopt](references/hairline-adopt/hairline-adopt.md) |

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas Figures treatments</title>
+<style>
+  :root {
+    color-scheme: light;
+    --ground: #f6f5f1; --card: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #e3e1db; --accent: #1d1d1f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #111113; --card: #19191c; --ink: #ececef; --muted: #9a9aa2; --line: #2a2a2f; --accent: #ececef;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #111113; --card: #19191c; --ink: #ececef; --muted: #9a9aa2; --line: #2a2a2f; --accent: #ececef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 1120px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); max-width: 62ch; margin: 0 0 32px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+  article {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  figure { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; background: var(--ground); border-bottom: 1px solid var(--line); }
+  figure img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  figure.empty { display: grid; place-items: center; color: var(--muted); font-size: 13px; padding: 24px; text-align: center; }
+  .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  h2 { font-size: 17px; margin: 0; }
+  .character { margin: 0; }
+  .credit { margin: 0; color: var(--muted); font-size: 13px; }
+  .links { margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Atlas Figures treatments</h1>
+  <p class="lede">One sample per treatment, taken from each author’s own bundled examples. Pick the look that fits your subject and medium, then ask for that treatment by name. Interactive treatments respond to the pointer; a still only shows their look.</p>
+
+  <div class="grid">
+    <article>
+      <figure><img src="samples/hairline.jpg" alt="An isometric line drawing of eight index cards standing in a tray" loading="lazy"></figure>
+      <div class="body">
+        <h2>Hairline</h2>
+        <p class="character">Restrained isometric line art; one geometric idea responds to the pointer.</p>
+        <p class="credit">Lucas Marques · sample: Riffle</p>
+      </div>
+    </article>
+
+    <article>
+      <figure><img src="samples/anatomy.jpg" alt="An isometric push-button circuit with a glowing bulb on a pale board" loading="lazy"></figure>
+      <div class="body">
+        <h2>Anatomy</h2>
+        <p class="character">Detailed physical mechanisms that explain technical ideas through moving parts and a shared model.</p>
+        <p class="credit">Ryan · sample: Push button</p>
+        <p class="links"><a href="../references/anatomy/examples/push-button/push-button-light.html">Open live example</a></p>
+      </div>
+    </article>
+
+    <article>
+      <figure><img src="samples/engraved-figures.jpg" alt="A monochrome engraved plate of wireframe surfaces describing a data pipeline" loading="lazy"></figure>
+      <div class="body">
+        <h2>Engraved Figures</h2>
+        <p class="character">Monochrome scientific plates, wireframes, stippled charts and research posters.</p>
+        <p class="credit">Brooklyn Nicholson · sample: Reference plate</p>
+        <p class="links"><a href="../references/engraved-figures/references/examples/showcase.html">Open showcase</a></p>
+      </div>
+    </article>
+
+    <article>
+      <figure class="empty">No bundled sample: Teardown ships its drawing engine without an example figure.</figure>
+      <div class="body">
+        <h2>Teardown</h2>
+        <p class="character">Evidence-led technical illustrations, coherent views and exploded assemblies of objects or conceptual layers.</p>
+        <p class="credit">Jakub Krehel</p>
+      </div>
+    </article>
+
+    <article>
+      <figure><img src="samples/iso-glow.jpg" alt="Glowing orange line art of a desk lamp lighting a notebook" loading="lazy"></figure>
+      <div class="body">
+        <h2>ISO-GLOW</h2>
+        <p class="character">Glowing isometric line art, interactive 3D objects, or solid-lit Lumen illustrations.</p>
+        <p class="credit">April Zhu · sample: Desk lamp</p>
+        <p class="links"><a href="../references/iso-glow/assets/gallery-3d.html">Open 3D gallery</a></p>
+      </div>
+    </article>
+
+    <article>
+      <figure><img src="samples/colorfigures.jpg" alt="A hand-inked mint-green toaster with two slices of bread and a blue shadow" loading="lazy"></figure>
+      <div class="body">
+        <h2>Colorfigures</h2>
+        <p class="character">Colourful, hand-inked objects with working mechanisms, rotation and see-through views.</p>
+        <p class="credit">April Zhu · sample: Toaster</p>
+      </div>
+    </article>
+
+    <article>
+      <figure><img src="samples/minicharts.jpg" alt="A pie chart drawn as a sliced pie on a plate, labelled with hours of a Sunday" loading="lazy"></figure>
+      <div class="body">
+        <h2>Minicharts</h2>
+        <p class="character">Hand-drawn charts where subject objects carry the data, with values drawn to scale and touchable parts.</p>
+        <p class="credit">April Zhu · sample: Pie chart</p>
+      </div>
+    </article>
+
+    <article>
+      <figure><img src="samples/plotter.jpg" alt="A blueprint switching matrix with the junction between row B and column 02 selected" loading="lazy"></figure>
+      <div class="body">
+        <h2>Plotter</h2>
+        <p class="character">Flat monochrome blueprint drawings where one construction relationship explains a product idea, as editable SVG.</p>
+        <p class="credit">Pasquale Vitiello · sample: SYS-02</p>
+        <p class="links"><a href="../references/plotter/references/catalogue/index.md">Browse the catalogue</a></p>
+      </div>
+    </article>
+  </div>
+</main>
+</body>
+</html>

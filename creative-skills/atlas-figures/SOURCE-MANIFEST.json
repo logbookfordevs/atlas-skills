@@ -3395,7 +3395,7 @@
   ],
   "rulings": [],
   "files": {
-    "SKILL.md": "0b529bac5d28138ee9a30cfe83e1f45bd2cd037bc099f437931167e56f83481a",
+    "SKILL.md": "34c2541aa6dd548d8f91aa9692d56b9ee5dbcd0c8dcaf9db77433a2ee8e2d8f7",
     "agents/openai.yaml": "4defcf175d3a415cd3f67c1893a5cac0f0be95e6467f071056326343f4c654af",
     "references/hairline-create/hairline-create.md": "8675ceec106ec227aec00cd6a4ec883333e1acc16da5cc96e8e10a3c758ea841",
     "licenses/hairline-create.txt": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
@@ -3803,6 +3803,14 @@
     "references/plotter/scripts/check.py": "178e048713f83d6a606764286ee8839cd65b0f4988d61f08f39ae69a3cef9917",
     "references/plotter/scripts/export-svg.py": "3bf1db5e5d1bf5801a9be2a2a45afa8f1bb661bd190877068260976a0417216d",
     "references/plotter/scripts/render.py": "fac39056165eeed8abdfb369680cc52a0c0beef166aba650e58f09ec6ecbadab",
-    "references/plotter/LICENSE": "d0c4291f2f24569cfd386cb6e527d1227671631d083391b74625d81c85bac603"
+    "references/plotter/LICENSE": "d0c4291f2f24569cfd386cb6e527d1227671631d083391b74625d81c85bac603",
+    "assets/gallery.html": "692c834fc225e308ef6e3d198e83b1d12254f213ee361da19151705f5173eb8b",
+    "assets/samples/anatomy.jpg": "90c816c239a027fca3ed45d092c5e681660142e01f6754a1dd365c45850dece2",
+    "assets/samples/colorfigures.jpg": "328b58620b79c0b316452db40d54ace5b1fa294c4a96ae194a1162dde9737729",
+    "assets/samples/engraved-figures.jpg": "745efc5c1c0a913b60b988404ac37c10c039fd5ca416a024154016de08de0b26",
+    "assets/samples/hairline.jpg": "b2d95fb7ca7e5affeb293de26d930b97b85622d102f99393f6168667e815c842",
+    "assets/samples/iso-glow.jpg": "e94a6bf29759495e0a0b0711a82a15caad515595a1cd7b589b2d37515cd07dc0",
+    "assets/samples/minicharts.jpg": "a349ad4adcd5ad9fa375e274a8acbd2792ff00be185daabb5c5ea75851f2b300",
+    "assets/samples/plotter.jpg": "26629a681046b772c1d737d397f86836c7b41ddb82c760b89eec2fd543124aab"
   }
 }
