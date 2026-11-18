@@ -3862,7 +3862,7 @@
         "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/teardown/SKILL.md",
         "licensePath": "LICENSE",
-        "trackingRef": "main",
+        "trackingRef": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "includePaths": [
           "skills/teardown"
         ]
@@ -3875,7 +3875,7 @@
       "adoptedAt": "2026-10-26",
       "method": "creative-skills/atlas-figures/references/teardown/teardown.md",
       "carriedPath": "references/teardown/teardown.md",
-      "adaptation": "Resolve upstream sibling design-domain skills through the corresponding references in installed Atlas Craft. Load domains conditionally without activating Craft\u2019s broader workflow. Drawing procedure, assets and supporting files remain verbatim.",
+      "adaptation": "Resolve upstream sibling design-domain skills through the corresponding references in installed Atlas Craft. Load domains conditionally without activating Craft\u2019s broader workflow. Drawing procedure, assets and supporting files remain verbatim. Upstream removed the skill on 2026-11-12 (jakubkrehel/skills 37744ed); tracking is frozen at the last pin.",
       "supportingFiles": [
         {
           "relativePath": "agents/openai.yaml",

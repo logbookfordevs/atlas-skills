@@ -1589,7 +1589,7 @@
         "commit": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "path": "skills/teardown/SKILL.md",
         "licensePath": "LICENSE",
-        "trackingRef": "main",
+        "trackingRef": "592aedc44d7d5b3e29740984252902f3e5402a1c",
         "includePaths": [
           "skills/teardown"
         ]
@@ -1803,7 +1803,7 @@
       "carriedSha256": "6684d03be6582b91fa8911938c6d73bbfdec366e06002250f41229f76ff2184d",
       "licensePath": "licenses/teardown.txt",
       "licenseSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
-      "adaptation": "Resolve upstream sibling design-domain skills through the corresponding references in installed Atlas Craft. Load domains conditionally without activating Craft’s broader workflow. Drawing procedure, assets and supporting files remain verbatim.",
+      "adaptation": "Resolve upstream sibling design-domain skills through the corresponding references in installed Atlas Craft. Load domains conditionally without activating Craft’s broader workflow. Drawing procedure, assets and supporting files remain verbatim. Upstream removed the skill on 2026-11-12 (jakubkrehel/skills 37744ed); tracking is frozen at the last pin.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
       "rulings": [],
