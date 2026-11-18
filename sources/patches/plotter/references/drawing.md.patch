@@ -1,0 +1,12 @@
+diff --git a/source.md b/source.md
+index 98031f6..4ac117e 100644
+--- a/source.md
++++ b/source.md
+@@ -1,6 +1,6 @@
+ # Drawing workflow
+ 
+-Use for a new static illustration, a visual refinement, or critique. Complete the shared reference loading in [SKILL.md](../SKILL.md#load-the-shared-references). For critique, apply the same criteria to the supplied source/render and return findings; implement corrections only within the requested scope.
++Use for a new static illustration, a visual refinement, or critique. Complete the shared reference loading in [plotter.md](../plotter.md#load-the-shared-references). For critique, apply the same criteria to the supplied source/render and return findings; implement corrections only within the requested scope.
+ 
+ ## Establish the relationship
+ 

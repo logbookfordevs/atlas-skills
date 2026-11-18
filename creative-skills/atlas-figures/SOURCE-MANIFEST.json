@@ -250,7 +250,166 @@
     "references/minicharts/assets/run.js",
     "references/minicharts/references/kit.md",
     "references/minicharts/references/types.md",
-    "references/minicharts/LICENSE"
+    "references/minicharts/LICENSE",
+    "references/plotter/plotter.md",
+    "licenses/plotter.txt",
+    "references/plotter/NOTICE.md",
+    "references/plotter/README.md",
+    "references/plotter/assets/examples/assembly-motion.html",
+    "references/plotter/assets/examples/motion-studies.html",
+    "references/plotter/assets/examples/registration.mjs",
+    "references/plotter/assets/examples/registration.svg",
+    "references/plotter/assets/examples/render-registration.mjs",
+    "references/plotter/assets/fonts/CalSansVF.woff2",
+    "references/plotter/assets/fonts/OFL.txt",
+    "references/plotter/assets/foundation/index.d.mts",
+    "references/plotter/assets/foundation/index.mjs",
+    "references/plotter/assets/foundation/roles.css",
+    "references/plotter/assets/foundation/standard.json",
+    "references/plotter/assets/foundation/standard.mjs",
+    "references/plotter/references/approved-references.md",
+    "references/plotter/references/catalogue/AGT-01.svg",
+    "references/plotter/references/catalogue/AGT-02.svg",
+    "references/plotter/references/catalogue/AGT-03.svg",
+    "references/plotter/references/catalogue/AGT-04.svg",
+    "references/plotter/references/catalogue/AGT-05.svg",
+    "references/plotter/references/catalogue/AGT-06.svg",
+    "references/plotter/references/catalogue/AGT-07.svg",
+    "references/plotter/references/catalogue/AGT-08.svg",
+    "references/plotter/references/catalogue/COS-01.svg",
+    "references/plotter/references/catalogue/COS-02.svg",
+    "references/plotter/references/catalogue/CRF-01.svg",
+    "references/plotter/references/catalogue/CRF-02.svg",
+    "references/plotter/references/catalogue/CRF-03.svg",
+    "references/plotter/references/catalogue/CRF-04.svg",
+    "references/plotter/references/catalogue/CRF-05.svg",
+    "references/plotter/references/catalogue/CRF-06.svg",
+    "references/plotter/references/catalogue/CRF-07.svg",
+    "references/plotter/references/catalogue/CRF-08.svg",
+    "references/plotter/references/catalogue/EMP-01.svg",
+    "references/plotter/references/catalogue/EMP-02.svg",
+    "references/plotter/references/catalogue/EMP-03.svg",
+    "references/plotter/references/catalogue/EMP-04.svg",
+    "references/plotter/references/catalogue/EMP-05.svg",
+    "references/plotter/references/catalogue/EMP-06.svg",
+    "references/plotter/references/catalogue/EMP-07.svg",
+    "references/plotter/references/catalogue/EMP-08.svg",
+    "references/plotter/references/catalogue/EMP-09.svg",
+    "references/plotter/references/catalogue/EMP-10.svg",
+    "references/plotter/references/catalogue/EMP-11.svg",
+    "references/plotter/references/catalogue/EMP-12.svg",
+    "references/plotter/references/catalogue/EMP-13.svg",
+    "references/plotter/references/catalogue/EMP-14.svg",
+    "references/plotter/references/catalogue/EMP-15.svg",
+    "references/plotter/references/catalogue/EMP-16.svg",
+    "references/plotter/references/catalogue/EMP-17.svg",
+    "references/plotter/references/catalogue/GEO-01.svg",
+    "references/plotter/references/catalogue/GEO-02.svg",
+    "references/plotter/references/catalogue/GEO-03.svg",
+    "references/plotter/references/catalogue/GEO-04.svg",
+    "references/plotter/references/catalogue/GEO-05.svg",
+    "references/plotter/references/catalogue/GEO-06.svg",
+    "references/plotter/references/catalogue/GEO-07.svg",
+    "references/plotter/references/catalogue/GEO-08.svg",
+    "references/plotter/references/catalogue/GEO-09.svg",
+    "references/plotter/references/catalogue/GEO-10.svg",
+    "references/plotter/references/catalogue/GEO-11.svg",
+    "references/plotter/references/catalogue/INT-01.svg",
+    "references/plotter/references/catalogue/INT-02.svg",
+    "references/plotter/references/catalogue/INT-03.svg",
+    "references/plotter/references/catalogue/INT-04.svg",
+    "references/plotter/references/catalogue/INT-05.svg",
+    "references/plotter/references/catalogue/INT-06.svg",
+    "references/plotter/references/catalogue/INT-07.svg",
+    "references/plotter/references/catalogue/INT-08.svg",
+    "references/plotter/references/catalogue/INT-09.svg",
+    "references/plotter/references/catalogue/INT-10.svg",
+    "references/plotter/references/catalogue/INT-11.svg",
+    "references/plotter/references/catalogue/INT-12.svg",
+    "references/plotter/references/catalogue/INT-13.svg",
+    "references/plotter/references/catalogue/MEC-01.svg",
+    "references/plotter/references/catalogue/MEC-02.svg",
+    "references/plotter/references/catalogue/MEC-03.svg",
+    "references/plotter/references/catalogue/MEC-04.svg",
+    "references/plotter/references/catalogue/MEC-05.svg",
+    "references/plotter/references/catalogue/MEC-06.svg",
+    "references/plotter/references/catalogue/MEC-07.svg",
+    "references/plotter/references/catalogue/NAT-01.svg",
+    "references/plotter/references/catalogue/NAT-02.svg",
+    "references/plotter/references/catalogue/NAT-03.svg",
+    "references/plotter/references/catalogue/OBJ-01.svg",
+    "references/plotter/references/catalogue/OBJ-02.svg",
+    "references/plotter/references/catalogue/OBJ-03.svg",
+    "references/plotter/references/catalogue/OBJ-04.svg",
+    "references/plotter/references/catalogue/OBJ-05.svg",
+    "references/plotter/references/catalogue/OBJ-06.svg",
+    "references/plotter/references/catalogue/OBJ-07.svg",
+    "references/plotter/references/catalogue/OBJ-08.svg",
+    "references/plotter/references/catalogue/SRV-01.svg",
+    "references/plotter/references/catalogue/SRV-02.svg",
+    "references/plotter/references/catalogue/SRV-03.svg",
+    "references/plotter/references/catalogue/SRV-04.svg",
+    "references/plotter/references/catalogue/SRV-05.svg",
+    "references/plotter/references/catalogue/SRV-06.svg",
+    "references/plotter/references/catalogue/SRV-07.svg",
+    "references/plotter/references/catalogue/SRV-08.svg",
+    "references/plotter/references/catalogue/SRV-09.svg",
+    "references/plotter/references/catalogue/SYS-01.svg",
+    "references/plotter/references/catalogue/SYS-02.svg",
+    "references/plotter/references/catalogue/SYS-03.svg",
+    "references/plotter/references/catalogue/SYS-04.svg",
+    "references/plotter/references/catalogue/SYS-05.svg",
+    "references/plotter/references/catalogue/SYS-06.svg",
+    "references/plotter/references/catalogue/TIM-01.svg",
+    "references/plotter/references/catalogue/TIM-02.svg",
+    "references/plotter/references/catalogue/TIM-03.svg",
+    "references/plotter/references/catalogue/TIM-04.svg",
+    "references/plotter/references/catalogue/TIM-05.svg",
+    "references/plotter/references/catalogue/TIM-06.svg",
+    "references/plotter/references/catalogue/TIM-07.svg",
+    "references/plotter/references/catalogue/TIM-08.svg",
+    "references/plotter/references/catalogue/TYP-01.svg",
+    "references/plotter/references/catalogue/TYP-02.svg",
+    "references/plotter/references/catalogue/TYP-03.svg",
+    "references/plotter/references/catalogue/TYP-04.svg",
+    "references/plotter/references/catalogue/TYP-05.svg",
+    "references/plotter/references/catalogue/TYP-06.svg",
+    "references/plotter/references/catalogue/TYP-07.svg",
+    "references/plotter/references/catalogue/TYP-08.svg",
+    "references/plotter/references/catalogue/TYP-09.svg",
+    "references/plotter/references/catalogue/index.md",
+    "references/plotter/references/direction.md",
+    "references/plotter/references/drafting-standard.md",
+    "references/plotter/references/drawing.md",
+    "references/plotter/references/drawings/EMP-03.svg",
+    "references/plotter/references/drawings/GEO-01.svg",
+    "references/plotter/references/drawings/INT-02.svg",
+    "references/plotter/references/drawings/INT-03.svg",
+    "references/plotter/references/drawings/INT-09.svg",
+    "references/plotter/references/drawings/SRV-04.svg",
+    "references/plotter/references/drawings/TIM-04.svg",
+    "references/plotter/references/drawings/manifest.json",
+    "references/plotter/references/foundation.md",
+    "references/plotter/references/grammar/arrows.svg",
+    "references/plotter/references/grammar/callouts.svg",
+    "references/plotter/references/grammar/centerlines.svg",
+    "references/plotter/references/grammar/dimensions.svg",
+    "references/plotter/references/grammar/grids.svg",
+    "references/plotter/references/grammar/hatching.svg",
+    "references/plotter/references/grammar/highlights.svg",
+    "references/plotter/references/grammar/outlines.svg",
+    "references/plotter/references/grammar/projections.svg",
+    "references/plotter/references/grammar/states.svg",
+    "references/plotter/references/motion-examples.md",
+    "references/plotter/references/motion.md",
+    "references/plotter/references/standards-background.md",
+    "references/plotter/references/verification-prompt.md",
+    "references/plotter/references/visual-grammar.md",
+    "references/plotter/scripts/build-standard.py",
+    "references/plotter/scripts/check.py",
+    "references/plotter/scripts/export-svg.py",
+    "references/plotter/scripts/render.py",
+    "references/plotter/LICENSE"
   ],
   "authoredInputs": [
     "creative-skills/atlas-figures/SKILL.md",
@@ -2102,12 +2261,1142 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-11-09",
       "rulings": []
+    },
+    {
+      "id": "plotter",
+      "owner": "Atlas Figures",
+      "classification": "patched",
+      "upstream": {
+        "repository": "https://github.com/pasqualevitiello/plotter",
+        "commit": "01df092aed163462ca5902c7b21a9c9f7c60e68f",
+        "path": "skills/plotter/SKILL.md",
+        "licensePath": "skills/plotter/LICENSE",
+        "trackingRef": "main",
+        "includePaths": [
+          "skills/plotter"
+        ]
+      },
+      "supportingFiles": [
+        {
+          "upstreamPath": "skills/plotter/NOTICE.md",
+          "classification": "verbatim",
+          "sourceSha256": "fffca2483621bf831ba8dbca4787087563b0f7c4e7e559860f6a35542bfb32ff",
+          "carriedPath": "references/plotter/NOTICE.md",
+          "carriedSha256": "fffca2483621bf831ba8dbca4787087563b0f7c4e7e559860f6a35542bfb32ff"
+        },
+        {
+          "upstreamPath": "skills/plotter/README.md",
+          "classification": "verbatim",
+          "sourceSha256": "cd2f0d76ac3648417e7ce9d24f5c83aae631f77d4c859a34f47c0cadb93daa2e",
+          "carriedPath": "references/plotter/README.md",
+          "carriedSha256": "cd2f0d76ac3648417e7ce9d24f5c83aae631f77d4c859a34f47c0cadb93daa2e"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/examples/assembly-motion.html",
+          "classification": "verbatim",
+          "sourceSha256": "1e44af16473f987eee22385d9912de1abc43e84efe53080ff3ac63f02bcb8d83",
+          "carriedPath": "references/plotter/assets/examples/assembly-motion.html",
+          "carriedSha256": "1e44af16473f987eee22385d9912de1abc43e84efe53080ff3ac63f02bcb8d83"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/examples/motion-studies.html",
+          "classification": "verbatim",
+          "sourceSha256": "a32457be50751e2d5405d383c88e649d5c704f6cb2207674d217fc16272becd2",
+          "carriedPath": "references/plotter/assets/examples/motion-studies.html",
+          "carriedSha256": "a32457be50751e2d5405d383c88e649d5c704f6cb2207674d217fc16272becd2"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/examples/registration.mjs",
+          "classification": "verbatim",
+          "sourceSha256": "8d746c41498854467fbae5df76155f63a89f065ea144a1627baab2da7d249ca2",
+          "carriedPath": "references/plotter/assets/examples/registration.mjs",
+          "carriedSha256": "8d746c41498854467fbae5df76155f63a89f065ea144a1627baab2da7d249ca2"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/examples/registration.svg",
+          "classification": "verbatim",
+          "sourceSha256": "1f3b44b3fdbcc87ce726d4469cdf3f5d859948cadcbb07deb314b28359d8141e",
+          "carriedPath": "references/plotter/assets/examples/registration.svg",
+          "carriedSha256": "1f3b44b3fdbcc87ce726d4469cdf3f5d859948cadcbb07deb314b28359d8141e"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/examples/render-registration.mjs",
+          "classification": "verbatim",
+          "sourceSha256": "94cc8acad070def88ab35deea73beaa1211afca3f15e0112ea53b0a217d2a8a8",
+          "carriedPath": "references/plotter/assets/examples/render-registration.mjs",
+          "carriedSha256": "94cc8acad070def88ab35deea73beaa1211afca3f15e0112ea53b0a217d2a8a8"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/fonts/CalSansVF.woff2",
+          "classification": "verbatim",
+          "sourceSha256": "d4ca0c0ba97097691f045f0cc95b2af91bb65005e1c90e6c19af395a39c0d5e1",
+          "carriedPath": "references/plotter/assets/fonts/CalSansVF.woff2",
+          "carriedSha256": "d4ca0c0ba97097691f045f0cc95b2af91bb65005e1c90e6c19af395a39c0d5e1"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/fonts/OFL.txt",
+          "classification": "verbatim",
+          "sourceSha256": "c6bd569e2bb98d55fcdaeb53918c023741772ea882d470844195f858a41c5551",
+          "carriedPath": "references/plotter/assets/fonts/OFL.txt",
+          "carriedSha256": "c6bd569e2bb98d55fcdaeb53918c023741772ea882d470844195f858a41c5551"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/foundation/index.d.mts",
+          "classification": "verbatim",
+          "sourceSha256": "c1dacda339eac1b9abd4401771c345890eda5bdcf7de01357cdc72b37480a9d9",
+          "carriedPath": "references/plotter/assets/foundation/index.d.mts",
+          "carriedSha256": "c1dacda339eac1b9abd4401771c345890eda5bdcf7de01357cdc72b37480a9d9"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/foundation/index.mjs",
+          "classification": "verbatim",
+          "sourceSha256": "a37e0db67151ee136a3ef5ef847edd85e446fa3c37d91ae175f98c0e4aa9e22a",
+          "carriedPath": "references/plotter/assets/foundation/index.mjs",
+          "carriedSha256": "a37e0db67151ee136a3ef5ef847edd85e446fa3c37d91ae175f98c0e4aa9e22a"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/foundation/roles.css",
+          "classification": "verbatim",
+          "sourceSha256": "67481aef5ed1cf3baff5bec13c00dc7b7152b13d15ce5bb9d47ec5f3f6115da0",
+          "carriedPath": "references/plotter/assets/foundation/roles.css",
+          "carriedSha256": "67481aef5ed1cf3baff5bec13c00dc7b7152b13d15ce5bb9d47ec5f3f6115da0"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/foundation/standard.json",
+          "classification": "verbatim",
+          "sourceSha256": "e2e73960f6e9c1b16cdf83275fe1f5fda9d046f8da843d28c95b60142cea291f",
+          "carriedPath": "references/plotter/assets/foundation/standard.json",
+          "carriedSha256": "e2e73960f6e9c1b16cdf83275fe1f5fda9d046f8da843d28c95b60142cea291f"
+        },
+        {
+          "upstreamPath": "skills/plotter/assets/foundation/standard.mjs",
+          "classification": "verbatim",
+          "sourceSha256": "35991c2d97561b8ed43cd22ffe115222bed8d3d058dbfdc387f595ab25031bf7",
+          "carriedPath": "references/plotter/assets/foundation/standard.mjs",
+          "carriedSha256": "35991c2d97561b8ed43cd22ffe115222bed8d3d058dbfdc387f595ab25031bf7"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/approved-references.md",
+          "classification": "verbatim",
+          "sourceSha256": "e6bbd03aebc0f9da642cf2cffc96ecfabc825db8e526980d8ebd03a4d288c27f",
+          "carriedPath": "references/plotter/references/approved-references.md",
+          "carriedSha256": "e6bbd03aebc0f9da642cf2cffc96ecfabc825db8e526980d8ebd03a4d288c27f"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/AGT-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "de47daf50255d560cc2e22a27eef8dbe21e58ae73f826f087ccb5fd9b0b1894b",
+          "carriedPath": "references/plotter/references/catalogue/AGT-01.svg",
+          "carriedSha256": "de47daf50255d560cc2e22a27eef8dbe21e58ae73f826f087ccb5fd9b0b1894b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/AGT-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "0583934881d9e65471d2bf95ba81828426e6bc693e3cec56856ebfce793bf992",
+          "carriedPath": "references/plotter/references/catalogue/AGT-02.svg",
+          "carriedSha256": "0583934881d9e65471d2bf95ba81828426e6bc693e3cec56856ebfce793bf992"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/AGT-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "3c79595cc3b236ee1493aab818e3f57a1fdbc1bab434226128913fc9311bcba2",
+          "carriedPath": "references/plotter/references/catalogue/AGT-03.svg",
+          "carriedSha256": "3c79595cc3b236ee1493aab818e3f57a1fdbc1bab434226128913fc9311bcba2"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/AGT-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "0eac2120b5ba6818f0c267aabc4e35c1d3cd9e6ad253779127a46710c63ce97b",
+          "carriedPath": "references/plotter/references/catalogue/AGT-04.svg",
+          "carriedSha256": "0eac2120b5ba6818f0c267aabc4e35c1d3cd9e6ad253779127a46710c63ce97b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/AGT-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "414e2ff6006e66bf11d6b431a22e588fa494a765a94f60d8c94529d76de13f46",
+          "carriedPath": "references/plotter/references/catalogue/AGT-05.svg",
+          "carriedSha256": "414e2ff6006e66bf11d6b431a22e588fa494a765a94f60d8c94529d76de13f46"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/AGT-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "0ff48d478d1461fa52948f19319a485591bafb456b8abe8a5dbe5f4adbf23dfa",
+          "carriedPath": "references/plotter/references/catalogue/AGT-06.svg",
+          "carriedSha256": "0ff48d478d1461fa52948f19319a485591bafb456b8abe8a5dbe5f4adbf23dfa"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/AGT-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "a331b4e62e4140188a4f63a81879ba48aa8abdd9b60aaaf5180b53519d4bb1d5",
+          "carriedPath": "references/plotter/references/catalogue/AGT-07.svg",
+          "carriedSha256": "a331b4e62e4140188a4f63a81879ba48aa8abdd9b60aaaf5180b53519d4bb1d5"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/AGT-08.svg",
+          "classification": "verbatim",
+          "sourceSha256": "53721f277aeb6d151b429113f3e956253b5d9870c1b2f008320c3b0cb7cf89cd",
+          "carriedPath": "references/plotter/references/catalogue/AGT-08.svg",
+          "carriedSha256": "53721f277aeb6d151b429113f3e956253b5d9870c1b2f008320c3b0cb7cf89cd"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/COS-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "9b61e012c116186f2dccf38eb06275b79c0f057021a406cc18d4bf1bc2071292",
+          "carriedPath": "references/plotter/references/catalogue/COS-01.svg",
+          "carriedSha256": "9b61e012c116186f2dccf38eb06275b79c0f057021a406cc18d4bf1bc2071292"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/COS-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "b8aed640cea313366af98f6636f4a6b1755f3e13f85015af595c41b88e9a2f9d",
+          "carriedPath": "references/plotter/references/catalogue/COS-02.svg",
+          "carriedSha256": "b8aed640cea313366af98f6636f4a6b1755f3e13f85015af595c41b88e9a2f9d"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/CRF-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "f9564918ee382cf76a323d098a9ef0faffbec39e04b5046736ef6981564e8c87",
+          "carriedPath": "references/plotter/references/catalogue/CRF-01.svg",
+          "carriedSha256": "f9564918ee382cf76a323d098a9ef0faffbec39e04b5046736ef6981564e8c87"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/CRF-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "c2dd911c529be9de253b92b574ed55151a0716b5235bcbdfb862f193d0d27ea2",
+          "carriedPath": "references/plotter/references/catalogue/CRF-02.svg",
+          "carriedSha256": "c2dd911c529be9de253b92b574ed55151a0716b5235bcbdfb862f193d0d27ea2"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/CRF-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "3a423e51f6d45f584e95857bb5d662e5aee7d5a1116dc7c31a0d182a91aaf31d",
+          "carriedPath": "references/plotter/references/catalogue/CRF-03.svg",
+          "carriedSha256": "3a423e51f6d45f584e95857bb5d662e5aee7d5a1116dc7c31a0d182a91aaf31d"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/CRF-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "642e24311de6f2cb18cb9d8a94c05662b9c729c1cb9827231930b71cb6ba2129",
+          "carriedPath": "references/plotter/references/catalogue/CRF-04.svg",
+          "carriedSha256": "642e24311de6f2cb18cb9d8a94c05662b9c729c1cb9827231930b71cb6ba2129"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/CRF-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "bf4a606b30affa9e032d9dbd98b677172306696ed1f79fca06cd212b64187e81",
+          "carriedPath": "references/plotter/references/catalogue/CRF-05.svg",
+          "carriedSha256": "bf4a606b30affa9e032d9dbd98b677172306696ed1f79fca06cd212b64187e81"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/CRF-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "136781d55b65ef064c40b33ec417dd5e95f208f842be92d050fef117b63eaa21",
+          "carriedPath": "references/plotter/references/catalogue/CRF-06.svg",
+          "carriedSha256": "136781d55b65ef064c40b33ec417dd5e95f208f842be92d050fef117b63eaa21"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/CRF-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "860c1ecb5f64d848e4923a3b0fa4e64de5ebc27783e20f4b307736f1811f7496",
+          "carriedPath": "references/plotter/references/catalogue/CRF-07.svg",
+          "carriedSha256": "860c1ecb5f64d848e4923a3b0fa4e64de5ebc27783e20f4b307736f1811f7496"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/CRF-08.svg",
+          "classification": "verbatim",
+          "sourceSha256": "b2fb3608b487cf03c56e6f90d2e554af66bf05fb8a6c24232cdb59018240af41",
+          "carriedPath": "references/plotter/references/catalogue/CRF-08.svg",
+          "carriedSha256": "b2fb3608b487cf03c56e6f90d2e554af66bf05fb8a6c24232cdb59018240af41"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "01dc5022ecd54c728f456414fe279014ea829df4a65797f5d4e9d2437518d749",
+          "carriedPath": "references/plotter/references/catalogue/EMP-01.svg",
+          "carriedSha256": "01dc5022ecd54c728f456414fe279014ea829df4a65797f5d4e9d2437518d749"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "9cefbe75bb42d3cd62949ce9ecf8566a5e66e748d782618f65939527606c2899",
+          "carriedPath": "references/plotter/references/catalogue/EMP-02.svg",
+          "carriedSha256": "9cefbe75bb42d3cd62949ce9ecf8566a5e66e748d782618f65939527606c2899"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "921112cd0e74fa49f901350c12216f5f1e68749b60ce2330eebf0e9bf96cc587",
+          "carriedPath": "references/plotter/references/catalogue/EMP-03.svg",
+          "carriedSha256": "921112cd0e74fa49f901350c12216f5f1e68749b60ce2330eebf0e9bf96cc587"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4a1ed81fc32714e3b652129ed1a533291795d8930309002de464214b1d49f23f",
+          "carriedPath": "references/plotter/references/catalogue/EMP-04.svg",
+          "carriedSha256": "4a1ed81fc32714e3b652129ed1a533291795d8930309002de464214b1d49f23f"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "6ecfd65d176b5d5c9620d9e66f8e2f3123488e8ef0a8109fe87819183d8ea233",
+          "carriedPath": "references/plotter/references/catalogue/EMP-05.svg",
+          "carriedSha256": "6ecfd65d176b5d5c9620d9e66f8e2f3123488e8ef0a8109fe87819183d8ea233"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "734f3ec5feff8a1d03f09f116619cef88a779e1c790fec8caf6f0037d614a4e8",
+          "carriedPath": "references/plotter/references/catalogue/EMP-06.svg",
+          "carriedSha256": "734f3ec5feff8a1d03f09f116619cef88a779e1c790fec8caf6f0037d614a4e8"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "706d8c6ce40e0f80870d4b7e4f8ea5fd75f4b25d25300ad46aa2762062eff20c",
+          "carriedPath": "references/plotter/references/catalogue/EMP-07.svg",
+          "carriedSha256": "706d8c6ce40e0f80870d4b7e4f8ea5fd75f4b25d25300ad46aa2762062eff20c"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-08.svg",
+          "classification": "verbatim",
+          "sourceSha256": "cf30cbdcb5b0210c9d73d7f07670d6f769ff6f7e57ec8dc420c3c6d4c19c6e81",
+          "carriedPath": "references/plotter/references/catalogue/EMP-08.svg",
+          "carriedSha256": "cf30cbdcb5b0210c9d73d7f07670d6f769ff6f7e57ec8dc420c3c6d4c19c6e81"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-09.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4ff411cd07d44be1f09a250f37ca8197fb8adf7c7486a0c10d56a841abd3d692",
+          "carriedPath": "references/plotter/references/catalogue/EMP-09.svg",
+          "carriedSha256": "4ff411cd07d44be1f09a250f37ca8197fb8adf7c7486a0c10d56a841abd3d692"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-10.svg",
+          "classification": "verbatim",
+          "sourceSha256": "10def00fa01b0ebc840b3710f3d2e5afe35d601d772e214e017635a55a4ba5ff",
+          "carriedPath": "references/plotter/references/catalogue/EMP-10.svg",
+          "carriedSha256": "10def00fa01b0ebc840b3710f3d2e5afe35d601d772e214e017635a55a4ba5ff"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-11.svg",
+          "classification": "verbatim",
+          "sourceSha256": "e57fd220629c5fed3f4bc444f2997f6228495f7831e3b4cdd0036f0ea8f0cefe",
+          "carriedPath": "references/plotter/references/catalogue/EMP-11.svg",
+          "carriedSha256": "e57fd220629c5fed3f4bc444f2997f6228495f7831e3b4cdd0036f0ea8f0cefe"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-12.svg",
+          "classification": "verbatim",
+          "sourceSha256": "c63db201e2844eadfbae6b467cee26689912d881239972a87cb944fcf6d02860",
+          "carriedPath": "references/plotter/references/catalogue/EMP-12.svg",
+          "carriedSha256": "c63db201e2844eadfbae6b467cee26689912d881239972a87cb944fcf6d02860"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-13.svg",
+          "classification": "verbatim",
+          "sourceSha256": "ddea1c5594a3a232fe768debe7fa7e2ee5bf78092c66cd49d44b826570cd4b8b",
+          "carriedPath": "references/plotter/references/catalogue/EMP-13.svg",
+          "carriedSha256": "ddea1c5594a3a232fe768debe7fa7e2ee5bf78092c66cd49d44b826570cd4b8b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-14.svg",
+          "classification": "verbatim",
+          "sourceSha256": "34cf33ade847825840916bc1792f1e8535f2db27862e0cb5c60d003240cb4b56",
+          "carriedPath": "references/plotter/references/catalogue/EMP-14.svg",
+          "carriedSha256": "34cf33ade847825840916bc1792f1e8535f2db27862e0cb5c60d003240cb4b56"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-15.svg",
+          "classification": "verbatim",
+          "sourceSha256": "7426a5753e0a937e5290d5c2cc6d914f7920dd63e11b66a4e8a27e07ca95a009",
+          "carriedPath": "references/plotter/references/catalogue/EMP-15.svg",
+          "carriedSha256": "7426a5753e0a937e5290d5c2cc6d914f7920dd63e11b66a4e8a27e07ca95a009"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-16.svg",
+          "classification": "verbatim",
+          "sourceSha256": "a044dd8d81b9a22be03d7ae67e90bb5ab6a763c5a0d92033e080a10b95f6bb13",
+          "carriedPath": "references/plotter/references/catalogue/EMP-16.svg",
+          "carriedSha256": "a044dd8d81b9a22be03d7ae67e90bb5ab6a763c5a0d92033e080a10b95f6bb13"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/EMP-17.svg",
+          "classification": "verbatim",
+          "sourceSha256": "b09c8529a1b7d845275bee4fe31f22a10d02b3a3c29f87fc69b20c0cad7f12f4",
+          "carriedPath": "references/plotter/references/catalogue/EMP-17.svg",
+          "carriedSha256": "b09c8529a1b7d845275bee4fe31f22a10d02b3a3c29f87fc69b20c0cad7f12f4"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "a0069ecc4016a81e48cc7aaed5190b5728efe2f1867f8ff0f4765dad12a32e43",
+          "carriedPath": "references/plotter/references/catalogue/GEO-01.svg",
+          "carriedSha256": "a0069ecc4016a81e48cc7aaed5190b5728efe2f1867f8ff0f4765dad12a32e43"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "723da395ee9660ea4229f3cc42da7acd647fc4361713af9ff201e9b7379b42eb",
+          "carriedPath": "references/plotter/references/catalogue/GEO-02.svg",
+          "carriedSha256": "723da395ee9660ea4229f3cc42da7acd647fc4361713af9ff201e9b7379b42eb"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4913550251a88ee891c5cb70a71a1e5bbefdc7024ed16bda941c909b73a8e4c2",
+          "carriedPath": "references/plotter/references/catalogue/GEO-03.svg",
+          "carriedSha256": "4913550251a88ee891c5cb70a71a1e5bbefdc7024ed16bda941c909b73a8e4c2"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "8f8ed9de4602bca81a4123dd7aed118dc89a6feabd19427d17e9135668edaffe",
+          "carriedPath": "references/plotter/references/catalogue/GEO-04.svg",
+          "carriedSha256": "8f8ed9de4602bca81a4123dd7aed118dc89a6feabd19427d17e9135668edaffe"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4f9d5bfabcebcc4177a005ff865f13f5f5a6f49cac771f0149840e49b0c8506b",
+          "carriedPath": "references/plotter/references/catalogue/GEO-05.svg",
+          "carriedSha256": "4f9d5bfabcebcc4177a005ff865f13f5f5a6f49cac771f0149840e49b0c8506b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "c702fce1ba70e87ef647dfe16b8c428354c9c4105edf64d78a3f6c77146939df",
+          "carriedPath": "references/plotter/references/catalogue/GEO-06.svg",
+          "carriedSha256": "c702fce1ba70e87ef647dfe16b8c428354c9c4105edf64d78a3f6c77146939df"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "7919fd77152963bca88f367b35e59d827468f9be721c24ded7189de7d3b824d1",
+          "carriedPath": "references/plotter/references/catalogue/GEO-07.svg",
+          "carriedSha256": "7919fd77152963bca88f367b35e59d827468f9be721c24ded7189de7d3b824d1"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-08.svg",
+          "classification": "verbatim",
+          "sourceSha256": "e2e9a6aef9e8c0b54551ea9e8b702b6ad08e1ce9e17b747a6f1ad29893fdba21",
+          "carriedPath": "references/plotter/references/catalogue/GEO-08.svg",
+          "carriedSha256": "e2e9a6aef9e8c0b54551ea9e8b702b6ad08e1ce9e17b747a6f1ad29893fdba21"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-09.svg",
+          "classification": "verbatim",
+          "sourceSha256": "54bd2c85137a9240adecb60b5c332ab2b432e1d02b6fe7eb813ada0d322867b3",
+          "carriedPath": "references/plotter/references/catalogue/GEO-09.svg",
+          "carriedSha256": "54bd2c85137a9240adecb60b5c332ab2b432e1d02b6fe7eb813ada0d322867b3"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-10.svg",
+          "classification": "verbatim",
+          "sourceSha256": "db1105c32f249f081553c05d11db0a98f2ff062fd7409682b84a0e5d6661ba63",
+          "carriedPath": "references/plotter/references/catalogue/GEO-10.svg",
+          "carriedSha256": "db1105c32f249f081553c05d11db0a98f2ff062fd7409682b84a0e5d6661ba63"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/GEO-11.svg",
+          "classification": "verbatim",
+          "sourceSha256": "ba5c867e56eeba22e770ca9cc22b4781dd90c7b44ef793bb376d3935b96dd822",
+          "carriedPath": "references/plotter/references/catalogue/GEO-11.svg",
+          "carriedSha256": "ba5c867e56eeba22e770ca9cc22b4781dd90c7b44ef793bb376d3935b96dd822"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "07be3e0dbea1a2dfd3337876f4300d571dd2aa373128298575e52cab3b39866b",
+          "carriedPath": "references/plotter/references/catalogue/INT-01.svg",
+          "carriedSha256": "07be3e0dbea1a2dfd3337876f4300d571dd2aa373128298575e52cab3b39866b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "230f7f31381b1e0bcc6e410c066cd70e4792fb7908a5c8fbd86c31331a9540f9",
+          "carriedPath": "references/plotter/references/catalogue/INT-02.svg",
+          "carriedSha256": "230f7f31381b1e0bcc6e410c066cd70e4792fb7908a5c8fbd86c31331a9540f9"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "00d5f91eceace1eabf2f7603a90d9a87bcd72ca7ca075a48004b97fc9f3503b3",
+          "carriedPath": "references/plotter/references/catalogue/INT-03.svg",
+          "carriedSha256": "00d5f91eceace1eabf2f7603a90d9a87bcd72ca7ca075a48004b97fc9f3503b3"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "c8b4a4d6ab926583f4d2ca8cffbfa1af84c0952832f735e3699276ea823711dc",
+          "carriedPath": "references/plotter/references/catalogue/INT-04.svg",
+          "carriedSha256": "c8b4a4d6ab926583f4d2ca8cffbfa1af84c0952832f735e3699276ea823711dc"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "22198f830206e3861b68f01f0946333bb5b282414dec17c743209e707c904373",
+          "carriedPath": "references/plotter/references/catalogue/INT-05.svg",
+          "carriedSha256": "22198f830206e3861b68f01f0946333bb5b282414dec17c743209e707c904373"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "1810d2bb2229437a5b912b5ad9087c4fd8bae18256cb99d69eaa50030cf0215f",
+          "carriedPath": "references/plotter/references/catalogue/INT-06.svg",
+          "carriedSha256": "1810d2bb2229437a5b912b5ad9087c4fd8bae18256cb99d69eaa50030cf0215f"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "b188b6d8e7750e6704cb8b03185b26dcbbe9215bd5b6561f1117f9fc2d9eacf6",
+          "carriedPath": "references/plotter/references/catalogue/INT-07.svg",
+          "carriedSha256": "b188b6d8e7750e6704cb8b03185b26dcbbe9215bd5b6561f1117f9fc2d9eacf6"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-08.svg",
+          "classification": "verbatim",
+          "sourceSha256": "ba986d97e98cd481e221c0a21d552450d596b79d1e60303401c42ccd9135e919",
+          "carriedPath": "references/plotter/references/catalogue/INT-08.svg",
+          "carriedSha256": "ba986d97e98cd481e221c0a21d552450d596b79d1e60303401c42ccd9135e919"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-09.svg",
+          "classification": "verbatim",
+          "sourceSha256": "945671a6ae13f624cef3ce20f495e9ab944326a894bff891702764384bd0252b",
+          "carriedPath": "references/plotter/references/catalogue/INT-09.svg",
+          "carriedSha256": "945671a6ae13f624cef3ce20f495e9ab944326a894bff891702764384bd0252b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-10.svg",
+          "classification": "verbatim",
+          "sourceSha256": "d6760107aa636d6b5ef8119f4fac6a12f573b7e5fd1e6c6f0c1dd9b9f18ead71",
+          "carriedPath": "references/plotter/references/catalogue/INT-10.svg",
+          "carriedSha256": "d6760107aa636d6b5ef8119f4fac6a12f573b7e5fd1e6c6f0c1dd9b9f18ead71"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-11.svg",
+          "classification": "verbatim",
+          "sourceSha256": "70e6c6579987b59701c395ef440b8fcfe4c5f4216a4376cddbafc57f1bc73b2e",
+          "carriedPath": "references/plotter/references/catalogue/INT-11.svg",
+          "carriedSha256": "70e6c6579987b59701c395ef440b8fcfe4c5f4216a4376cddbafc57f1bc73b2e"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-12.svg",
+          "classification": "verbatim",
+          "sourceSha256": "5c7935ff19d0a990a76f288b076cd71163c58aa31d8db29c42d7c62af62df589",
+          "carriedPath": "references/plotter/references/catalogue/INT-12.svg",
+          "carriedSha256": "5c7935ff19d0a990a76f288b076cd71163c58aa31d8db29c42d7c62af62df589"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/INT-13.svg",
+          "classification": "verbatim",
+          "sourceSha256": "08f7b4a02f635e31b4ae1c610871bfe437271d18e547f08db570ecb12c84fcec",
+          "carriedPath": "references/plotter/references/catalogue/INT-13.svg",
+          "carriedSha256": "08f7b4a02f635e31b4ae1c610871bfe437271d18e547f08db570ecb12c84fcec"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/MEC-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "9dfbd61861e3e0bbfba1496f8c6b309b809e5ee5393dc91e9088197280579841",
+          "carriedPath": "references/plotter/references/catalogue/MEC-01.svg",
+          "carriedSha256": "9dfbd61861e3e0bbfba1496f8c6b309b809e5ee5393dc91e9088197280579841"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/MEC-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "e50554272c5bee1fec4a99726b5e22f5961989f6a09559bc6070ed6030c21a25",
+          "carriedPath": "references/plotter/references/catalogue/MEC-02.svg",
+          "carriedSha256": "e50554272c5bee1fec4a99726b5e22f5961989f6a09559bc6070ed6030c21a25"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/MEC-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "80853ff174ee6746ef33821a47c8bae8a720089f9f093b4efb1ef1c0c252ab9b",
+          "carriedPath": "references/plotter/references/catalogue/MEC-03.svg",
+          "carriedSha256": "80853ff174ee6746ef33821a47c8bae8a720089f9f093b4efb1ef1c0c252ab9b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/MEC-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "d57c9c7150964531559924a9973ce1c2090768622c44fcc1a26b13949a4f1297",
+          "carriedPath": "references/plotter/references/catalogue/MEC-04.svg",
+          "carriedSha256": "d57c9c7150964531559924a9973ce1c2090768622c44fcc1a26b13949a4f1297"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/MEC-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "926547bd716e5a7bf31430cc3f64429ef9b07372913c1d59792891133ecd140a",
+          "carriedPath": "references/plotter/references/catalogue/MEC-05.svg",
+          "carriedSha256": "926547bd716e5a7bf31430cc3f64429ef9b07372913c1d59792891133ecd140a"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/MEC-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "9c2352f06a15bcfe55e74d03f3007b4e21c8209506fee5db7e07a86e5c014bc9",
+          "carriedPath": "references/plotter/references/catalogue/MEC-06.svg",
+          "carriedSha256": "9c2352f06a15bcfe55e74d03f3007b4e21c8209506fee5db7e07a86e5c014bc9"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/MEC-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4ecd31689f38a492270bf8aeeff88f2e1eb806c5c21b4c869c7f3d14cae6648d",
+          "carriedPath": "references/plotter/references/catalogue/MEC-07.svg",
+          "carriedSha256": "4ecd31689f38a492270bf8aeeff88f2e1eb806c5c21b4c869c7f3d14cae6648d"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/NAT-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "d61c6dc2a0949d59a8dfc1bed4e87df502790589943463793e21b538444d0aa4",
+          "carriedPath": "references/plotter/references/catalogue/NAT-01.svg",
+          "carriedSha256": "d61c6dc2a0949d59a8dfc1bed4e87df502790589943463793e21b538444d0aa4"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/NAT-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "257b96156531913edfb95e6c00c46e32b3bf6ff24b8fb2e286050492c43b2514",
+          "carriedPath": "references/plotter/references/catalogue/NAT-02.svg",
+          "carriedSha256": "257b96156531913edfb95e6c00c46e32b3bf6ff24b8fb2e286050492c43b2514"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/NAT-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "e4ae8304e1af753bd3d61a48779721065b549960604619663bff301b84e79596",
+          "carriedPath": "references/plotter/references/catalogue/NAT-03.svg",
+          "carriedSha256": "e4ae8304e1af753bd3d61a48779721065b549960604619663bff301b84e79596"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/OBJ-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "105b7e980434718e3a57bd29cd7641d825c6616e24752fe9945dbd6b0fb77abb",
+          "carriedPath": "references/plotter/references/catalogue/OBJ-01.svg",
+          "carriedSha256": "105b7e980434718e3a57bd29cd7641d825c6616e24752fe9945dbd6b0fb77abb"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/OBJ-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "cdc59daf53e982eebb5881edf75566b3cf9850a316566b3a91aff6f7d3fd82b6",
+          "carriedPath": "references/plotter/references/catalogue/OBJ-02.svg",
+          "carriedSha256": "cdc59daf53e982eebb5881edf75566b3cf9850a316566b3a91aff6f7d3fd82b6"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/OBJ-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "e66a1475d0a4423a7185b5766621fc48f2fe361ea248994fd656391b0742d32f",
+          "carriedPath": "references/plotter/references/catalogue/OBJ-03.svg",
+          "carriedSha256": "e66a1475d0a4423a7185b5766621fc48f2fe361ea248994fd656391b0742d32f"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/OBJ-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "5c23378e79cf22d982784f49b93f346c6cc6574f2c90a567fc67971be7b62d4f",
+          "carriedPath": "references/plotter/references/catalogue/OBJ-04.svg",
+          "carriedSha256": "5c23378e79cf22d982784f49b93f346c6cc6574f2c90a567fc67971be7b62d4f"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/OBJ-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "2b6172dd80b0e257fbfd53e48466fe3868c531cba1a55c5a0ae6c6720270e330",
+          "carriedPath": "references/plotter/references/catalogue/OBJ-05.svg",
+          "carriedSha256": "2b6172dd80b0e257fbfd53e48466fe3868c531cba1a55c5a0ae6c6720270e330"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/OBJ-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "bbb6560be369bb5bde934aa648589fdc78562e84d10646711ea3ba9377a3f3c8",
+          "carriedPath": "references/plotter/references/catalogue/OBJ-06.svg",
+          "carriedSha256": "bbb6560be369bb5bde934aa648589fdc78562e84d10646711ea3ba9377a3f3c8"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/OBJ-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "ebda96c8fab4dfa249631600942a29b4e3327f4294e752eddba874a9d0163e0b",
+          "carriedPath": "references/plotter/references/catalogue/OBJ-07.svg",
+          "carriedSha256": "ebda96c8fab4dfa249631600942a29b4e3327f4294e752eddba874a9d0163e0b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/OBJ-08.svg",
+          "classification": "verbatim",
+          "sourceSha256": "678bd3fd1241ee889e4e9487fd43e46e80f073297bdbec7f60f83aa1ad55baf1",
+          "carriedPath": "references/plotter/references/catalogue/OBJ-08.svg",
+          "carriedSha256": "678bd3fd1241ee889e4e9487fd43e46e80f073297bdbec7f60f83aa1ad55baf1"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SRV-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "f9dcb1ceb46cc67f9a7aaa629cf573fd9af5cc6719d0b4d80dba71bb0ef46512",
+          "carriedPath": "references/plotter/references/catalogue/SRV-01.svg",
+          "carriedSha256": "f9dcb1ceb46cc67f9a7aaa629cf573fd9af5cc6719d0b4d80dba71bb0ef46512"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SRV-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "5cc79da6e5e2ce59406f4770ab669d11750d7da62045f1bcbacb0ca82892235f",
+          "carriedPath": "references/plotter/references/catalogue/SRV-02.svg",
+          "carriedSha256": "5cc79da6e5e2ce59406f4770ab669d11750d7da62045f1bcbacb0ca82892235f"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SRV-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "424a8fe74bb55a1e038cdfc67fbecda5a5612b3a9e6dfd37047274587ddcb0a3",
+          "carriedPath": "references/plotter/references/catalogue/SRV-03.svg",
+          "carriedSha256": "424a8fe74bb55a1e038cdfc67fbecda5a5612b3a9e6dfd37047274587ddcb0a3"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SRV-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "dfe904312b21e4c6cf9ca234243124cd9e82de2e469c12261b07f2024825d295",
+          "carriedPath": "references/plotter/references/catalogue/SRV-04.svg",
+          "carriedSha256": "dfe904312b21e4c6cf9ca234243124cd9e82de2e469c12261b07f2024825d295"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SRV-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "577cfa0e776d9c47b9cc121960c1f25761f1f4def1baedff5f525629f6a7e334",
+          "carriedPath": "references/plotter/references/catalogue/SRV-05.svg",
+          "carriedSha256": "577cfa0e776d9c47b9cc121960c1f25761f1f4def1baedff5f525629f6a7e334"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SRV-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "7cdec97daac6012ec77b367a8a316bd53b972592cf73c5e76b089947ca2ee0b8",
+          "carriedPath": "references/plotter/references/catalogue/SRV-06.svg",
+          "carriedSha256": "7cdec97daac6012ec77b367a8a316bd53b972592cf73c5e76b089947ca2ee0b8"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SRV-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4d22f5d981d88a72cceef7bf599734d4fb97e2e3509993ba2c772252066b61f6",
+          "carriedPath": "references/plotter/references/catalogue/SRV-07.svg",
+          "carriedSha256": "4d22f5d981d88a72cceef7bf599734d4fb97e2e3509993ba2c772252066b61f6"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SRV-08.svg",
+          "classification": "verbatim",
+          "sourceSha256": "9f0b604b787c5e434497e2f8824ec0793738ca1667d658517883241d6ece7e5c",
+          "carriedPath": "references/plotter/references/catalogue/SRV-08.svg",
+          "carriedSha256": "9f0b604b787c5e434497e2f8824ec0793738ca1667d658517883241d6ece7e5c"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SRV-09.svg",
+          "classification": "verbatim",
+          "sourceSha256": "61803617d0c36344936f69248de2a884b6d2869a3aafc38714e9a15a2c588fa4",
+          "carriedPath": "references/plotter/references/catalogue/SRV-09.svg",
+          "carriedSha256": "61803617d0c36344936f69248de2a884b6d2869a3aafc38714e9a15a2c588fa4"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SYS-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "57cc17e8fc3e5fe4d1d38e1f97912f9018b76196140891759ef85879546c0bb1",
+          "carriedPath": "references/plotter/references/catalogue/SYS-01.svg",
+          "carriedSha256": "57cc17e8fc3e5fe4d1d38e1f97912f9018b76196140891759ef85879546c0bb1"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SYS-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "fffe47a90688db9e221d931f6c312ad1415db423e4dc0457d34a3305fa0b9a06",
+          "carriedPath": "references/plotter/references/catalogue/SYS-02.svg",
+          "carriedSha256": "fffe47a90688db9e221d931f6c312ad1415db423e4dc0457d34a3305fa0b9a06"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SYS-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "f92c62b0e4e76a914554ba30d026dee5ff498d4a88faecc3c44dcd022512ee5b",
+          "carriedPath": "references/plotter/references/catalogue/SYS-03.svg",
+          "carriedSha256": "f92c62b0e4e76a914554ba30d026dee5ff498d4a88faecc3c44dcd022512ee5b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SYS-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "a4930ef2c8b333fa1c0145deed22eb68bbe5aa6dbe9b65f6793750ac4e0906e0",
+          "carriedPath": "references/plotter/references/catalogue/SYS-04.svg",
+          "carriedSha256": "a4930ef2c8b333fa1c0145deed22eb68bbe5aa6dbe9b65f6793750ac4e0906e0"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SYS-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "cff1ac393355176c14b364cefd63c43c001ea70d0dc91e2b7732d7cf2ffeac6a",
+          "carriedPath": "references/plotter/references/catalogue/SYS-05.svg",
+          "carriedSha256": "cff1ac393355176c14b364cefd63c43c001ea70d0dc91e2b7732d7cf2ffeac6a"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/SYS-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "ffa7720a4e7b239ce51ece0c0bfbeffa72b7d4453b5cb3076be8942047ce7143",
+          "carriedPath": "references/plotter/references/catalogue/SYS-06.svg",
+          "carriedSha256": "ffa7720a4e7b239ce51ece0c0bfbeffa72b7d4453b5cb3076be8942047ce7143"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TIM-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "0cd356607a62d96ebedc0260061097434cbcbfe1746f1cdd16495be13c1c1f2d",
+          "carriedPath": "references/plotter/references/catalogue/TIM-01.svg",
+          "carriedSha256": "0cd356607a62d96ebedc0260061097434cbcbfe1746f1cdd16495be13c1c1f2d"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TIM-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "102d566b0d71c432edcd89f33ed3d5540d72025bc6104bcd7e3d3e2f0033a731",
+          "carriedPath": "references/plotter/references/catalogue/TIM-02.svg",
+          "carriedSha256": "102d566b0d71c432edcd89f33ed3d5540d72025bc6104bcd7e3d3e2f0033a731"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TIM-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "12e867d18b3f42371a625471494494b02207b9f837f592c805173a64c0b72892",
+          "carriedPath": "references/plotter/references/catalogue/TIM-03.svg",
+          "carriedSha256": "12e867d18b3f42371a625471494494b02207b9f837f592c805173a64c0b72892"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TIM-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "12d6dd6d7057d209eb7b607ebf6fe0d17b7369f11469dc0149b16597cb84dc2d",
+          "carriedPath": "references/plotter/references/catalogue/TIM-04.svg",
+          "carriedSha256": "12d6dd6d7057d209eb7b607ebf6fe0d17b7369f11469dc0149b16597cb84dc2d"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TIM-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "b91c40c74ba7f0e7299e30b810c180901c41a9efad5e656216cb91ca3576bc16",
+          "carriedPath": "references/plotter/references/catalogue/TIM-05.svg",
+          "carriedSha256": "b91c40c74ba7f0e7299e30b810c180901c41a9efad5e656216cb91ca3576bc16"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TIM-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "783cfe2aba31321d552e131563282e562de2a157b73331df7ef6dfdffca8e021",
+          "carriedPath": "references/plotter/references/catalogue/TIM-06.svg",
+          "carriedSha256": "783cfe2aba31321d552e131563282e562de2a157b73331df7ef6dfdffca8e021"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TIM-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "ee3fd7e02ff02533192ecc096dda8a2d0d926628f094028ef211ed08523738a8",
+          "carriedPath": "references/plotter/references/catalogue/TIM-07.svg",
+          "carriedSha256": "ee3fd7e02ff02533192ecc096dda8a2d0d926628f094028ef211ed08523738a8"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TIM-08.svg",
+          "classification": "verbatim",
+          "sourceSha256": "a9201440b9fe695c12a8c556fd6d39234d3aa2ebbdfacdb88053455ec8540e77",
+          "carriedPath": "references/plotter/references/catalogue/TIM-08.svg",
+          "carriedSha256": "a9201440b9fe695c12a8c556fd6d39234d3aa2ebbdfacdb88053455ec8540e77"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TYP-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4368e0ebbbb68ddc9d3ada6b530c4568950f9319aa4d0c7e228364b417179ad0",
+          "carriedPath": "references/plotter/references/catalogue/TYP-01.svg",
+          "carriedSha256": "4368e0ebbbb68ddc9d3ada6b530c4568950f9319aa4d0c7e228364b417179ad0"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TYP-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "0102708ddddc4a250e6a7d230dfcb4153929f0a10ba1de2f0771092ac04fa20f",
+          "carriedPath": "references/plotter/references/catalogue/TYP-02.svg",
+          "carriedSha256": "0102708ddddc4a250e6a7d230dfcb4153929f0a10ba1de2f0771092ac04fa20f"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TYP-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "d2151aeef921c3a1b863610a3f3c0a861c41c2113521ff8404957a10ed1a29c3",
+          "carriedPath": "references/plotter/references/catalogue/TYP-03.svg",
+          "carriedSha256": "d2151aeef921c3a1b863610a3f3c0a861c41c2113521ff8404957a10ed1a29c3"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TYP-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "cf405b54cd986b07c0f4978283a0dc98e3f113077af0061e4d2973d96108a1e7",
+          "carriedPath": "references/plotter/references/catalogue/TYP-04.svg",
+          "carriedSha256": "cf405b54cd986b07c0f4978283a0dc98e3f113077af0061e4d2973d96108a1e7"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TYP-05.svg",
+          "classification": "verbatim",
+          "sourceSha256": "da81be78bb9a0fc59e3f2e51c824a4fbdbd338f7863e7e29eada67cc8e03cdb2",
+          "carriedPath": "references/plotter/references/catalogue/TYP-05.svg",
+          "carriedSha256": "da81be78bb9a0fc59e3f2e51c824a4fbdbd338f7863e7e29eada67cc8e03cdb2"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TYP-06.svg",
+          "classification": "verbatim",
+          "sourceSha256": "7690d119e790e3679cf9d297dd3a6a900a76d769ff6213dff3cc0494d98bd4b4",
+          "carriedPath": "references/plotter/references/catalogue/TYP-06.svg",
+          "carriedSha256": "7690d119e790e3679cf9d297dd3a6a900a76d769ff6213dff3cc0494d98bd4b4"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TYP-07.svg",
+          "classification": "verbatim",
+          "sourceSha256": "6e1ea4d57d91b6fdaa346c0598e72578dd99b484760a8330c39af3a662e05408",
+          "carriedPath": "references/plotter/references/catalogue/TYP-07.svg",
+          "carriedSha256": "6e1ea4d57d91b6fdaa346c0598e72578dd99b484760a8330c39af3a662e05408"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TYP-08.svg",
+          "classification": "verbatim",
+          "sourceSha256": "f84ce32a8b8ffb798214996c998635d73f1b02510dfbc18e579e271eb8347ed6",
+          "carriedPath": "references/plotter/references/catalogue/TYP-08.svg",
+          "carriedSha256": "f84ce32a8b8ffb798214996c998635d73f1b02510dfbc18e579e271eb8347ed6"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/TYP-09.svg",
+          "classification": "verbatim",
+          "sourceSha256": "341a37c0b45044e2cf65ccb23f8e285833d5fc7f4270748dd9b8656e59877da3",
+          "carriedPath": "references/plotter/references/catalogue/TYP-09.svg",
+          "carriedSha256": "341a37c0b45044e2cf65ccb23f8e285833d5fc7f4270748dd9b8656e59877da3"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/catalogue/index.md",
+          "classification": "verbatim",
+          "sourceSha256": "49a92f3b0dd85322cf3827d3512e371e7b65f080ad7bfbb031779201b07905cb",
+          "carriedPath": "references/plotter/references/catalogue/index.md",
+          "carriedSha256": "49a92f3b0dd85322cf3827d3512e371e7b65f080ad7bfbb031779201b07905cb"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/direction.md",
+          "classification": "verbatim",
+          "sourceSha256": "d34c484ccd1e2a2176a41ab4b8d6d262ef57d1a2641daf9f016e1b6783881e86",
+          "carriedPath": "references/plotter/references/direction.md",
+          "carriedSha256": "d34c484ccd1e2a2176a41ab4b8d6d262ef57d1a2641daf9f016e1b6783881e86"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drafting-standard.md",
+          "classification": "verbatim",
+          "sourceSha256": "0e8e14d4397f8c152ee1f30774c48cdfa80bf72626abacdda319d5d97e338224",
+          "carriedPath": "references/plotter/references/drafting-standard.md",
+          "carriedSha256": "0e8e14d4397f8c152ee1f30774c48cdfa80bf72626abacdda319d5d97e338224"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drawing.md",
+          "classification": "patched",
+          "sourceSha256": "5a5793c5722953d7b515423c17eb2fa34aed40ae591bdf628c8e3b0e698adaa4",
+          "carriedPath": "references/plotter/references/drawing.md",
+          "carriedSha256": "a0ed9c1857bf8e09d9fd18910cb38acd7cb3ac57a7662ddfe6ae0a4605652e86",
+          "patch": "sources/patches/plotter/references/drawing.md.patch",
+          "patchSha256": "61b81ef54d4c7150764b257f025d491c022fbc6e6d21885914f8a275a270670b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drawings/EMP-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "595d5174194ac7cfef182eb86488a8dda7ee53a20b0b0ed0b3197f60b04b0f66",
+          "carriedPath": "references/plotter/references/drawings/EMP-03.svg",
+          "carriedSha256": "595d5174194ac7cfef182eb86488a8dda7ee53a20b0b0ed0b3197f60b04b0f66"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drawings/GEO-01.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4082ec9a1000107cb1580fcd6826cff15cc15c2c3d919a79291d1d7070cce1d4",
+          "carriedPath": "references/plotter/references/drawings/GEO-01.svg",
+          "carriedSha256": "4082ec9a1000107cb1580fcd6826cff15cc15c2c3d919a79291d1d7070cce1d4"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drawings/INT-02.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4b203778a9d05394ca1f436f09962330d712b998f9996fd195e61cdb24cc99f0",
+          "carriedPath": "references/plotter/references/drawings/INT-02.svg",
+          "carriedSha256": "4b203778a9d05394ca1f436f09962330d712b998f9996fd195e61cdb24cc99f0"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drawings/INT-03.svg",
+          "classification": "verbatim",
+          "sourceSha256": "21763dddf898e52c29f616aa897792307336914d3f034ddd3a18aafc8fe9f89c",
+          "carriedPath": "references/plotter/references/drawings/INT-03.svg",
+          "carriedSha256": "21763dddf898e52c29f616aa897792307336914d3f034ddd3a18aafc8fe9f89c"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drawings/INT-09.svg",
+          "classification": "verbatim",
+          "sourceSha256": "47118d15b7f0787dcf8c4a88abe3348ce1f5ce3b8cffe47b38694cd6dc710a02",
+          "carriedPath": "references/plotter/references/drawings/INT-09.svg",
+          "carriedSha256": "47118d15b7f0787dcf8c4a88abe3348ce1f5ce3b8cffe47b38694cd6dc710a02"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drawings/SRV-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "3635d28fa90efa36cbb4c9374274df930eafa65bbd50c938508c243ab24ca294",
+          "carriedPath": "references/plotter/references/drawings/SRV-04.svg",
+          "carriedSha256": "3635d28fa90efa36cbb4c9374274df930eafa65bbd50c938508c243ab24ca294"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drawings/TIM-04.svg",
+          "classification": "verbatim",
+          "sourceSha256": "4f1c3e771ff163a2de9bfcf44800892dc549fa0a1347c4caac78cf6fbb7fd057",
+          "carriedPath": "references/plotter/references/drawings/TIM-04.svg",
+          "carriedSha256": "4f1c3e771ff163a2de9bfcf44800892dc549fa0a1347c4caac78cf6fbb7fd057"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/drawings/manifest.json",
+          "classification": "verbatim",
+          "sourceSha256": "910298cb510a7735ee77a901e05f95ee1e02feb02d7df0fb74de0ac187428b1b",
+          "carriedPath": "references/plotter/references/drawings/manifest.json",
+          "carriedSha256": "910298cb510a7735ee77a901e05f95ee1e02feb02d7df0fb74de0ac187428b1b"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/foundation.md",
+          "classification": "verbatim",
+          "sourceSha256": "13a2fece730d5bb208d84d7ba192c2363cc7a8d8b70af20e4ca45c2890452f5a",
+          "carriedPath": "references/plotter/references/foundation.md",
+          "carriedSha256": "13a2fece730d5bb208d84d7ba192c2363cc7a8d8b70af20e4ca45c2890452f5a"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/arrows.svg",
+          "classification": "verbatim",
+          "sourceSha256": "ae7b26f022e464d1747546da6074c8f037d864c05c30d989c6d792f0217aafa8",
+          "carriedPath": "references/plotter/references/grammar/arrows.svg",
+          "carriedSha256": "ae7b26f022e464d1747546da6074c8f037d864c05c30d989c6d792f0217aafa8"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/callouts.svg",
+          "classification": "verbatim",
+          "sourceSha256": "47161a99fdf00f64531de172c5feb1244b294560f98908a1598897feb1288a21",
+          "carriedPath": "references/plotter/references/grammar/callouts.svg",
+          "carriedSha256": "47161a99fdf00f64531de172c5feb1244b294560f98908a1598897feb1288a21"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/centerlines.svg",
+          "classification": "verbatim",
+          "sourceSha256": "ba4f05d2fb77d985a9b66d41cb68df8e355c81d8263359e2fe42e0439994d3d6",
+          "carriedPath": "references/plotter/references/grammar/centerlines.svg",
+          "carriedSha256": "ba4f05d2fb77d985a9b66d41cb68df8e355c81d8263359e2fe42e0439994d3d6"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/dimensions.svg",
+          "classification": "verbatim",
+          "sourceSha256": "0458f3eed35fc72ba5cb1038b5f3a48d2263a636171d817e704eb606cd30c727",
+          "carriedPath": "references/plotter/references/grammar/dimensions.svg",
+          "carriedSha256": "0458f3eed35fc72ba5cb1038b5f3a48d2263a636171d817e704eb606cd30c727"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/grids.svg",
+          "classification": "verbatim",
+          "sourceSha256": "a786f4ce22146a3a9f07afff34941e99b40be90d2c4bac422e97f544bc0dd5b6",
+          "carriedPath": "references/plotter/references/grammar/grids.svg",
+          "carriedSha256": "a786f4ce22146a3a9f07afff34941e99b40be90d2c4bac422e97f544bc0dd5b6"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/hatching.svg",
+          "classification": "verbatim",
+          "sourceSha256": "b66162e6144df9b2e0e7c1ae608127f169c458120f1837d791da560946fb1645",
+          "carriedPath": "references/plotter/references/grammar/hatching.svg",
+          "carriedSha256": "b66162e6144df9b2e0e7c1ae608127f169c458120f1837d791da560946fb1645"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/highlights.svg",
+          "classification": "verbatim",
+          "sourceSha256": "7e62352d58f64a35893c698caf3dca5eb4aa9804baf6087bfadf018bcfc3c8f5",
+          "carriedPath": "references/plotter/references/grammar/highlights.svg",
+          "carriedSha256": "7e62352d58f64a35893c698caf3dca5eb4aa9804baf6087bfadf018bcfc3c8f5"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/outlines.svg",
+          "classification": "verbatim",
+          "sourceSha256": "b65b7c5c4065dcd16f0a31b67df474fc441a27bf43e2bdc5267165b6ff8bfbff",
+          "carriedPath": "references/plotter/references/grammar/outlines.svg",
+          "carriedSha256": "b65b7c5c4065dcd16f0a31b67df474fc441a27bf43e2bdc5267165b6ff8bfbff"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/projections.svg",
+          "classification": "verbatim",
+          "sourceSha256": "5bb5e70e58d665e6ced460b082a534f37ef20643819179e498ecf0802389a622",
+          "carriedPath": "references/plotter/references/grammar/projections.svg",
+          "carriedSha256": "5bb5e70e58d665e6ced460b082a534f37ef20643819179e498ecf0802389a622"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/grammar/states.svg",
+          "classification": "verbatim",
+          "sourceSha256": "5817679683d6bf1527949c2385a607ec6b383f709271e6694c0facc1fefa2d74",
+          "carriedPath": "references/plotter/references/grammar/states.svg",
+          "carriedSha256": "5817679683d6bf1527949c2385a607ec6b383f709271e6694c0facc1fefa2d74"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/motion-examples.md",
+          "classification": "verbatim",
+          "sourceSha256": "ac6c1808d21da2f5826530b6fde14befb2e6309ba1f08547e40308b4f3ba37bb",
+          "carriedPath": "references/plotter/references/motion-examples.md",
+          "carriedSha256": "ac6c1808d21da2f5826530b6fde14befb2e6309ba1f08547e40308b4f3ba37bb"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/motion.md",
+          "classification": "verbatim",
+          "sourceSha256": "8c0d7207b5b45de95236b2f80dcfd44800ddc6ec220dc2660c1b9dcc873cbaf0",
+          "carriedPath": "references/plotter/references/motion.md",
+          "carriedSha256": "8c0d7207b5b45de95236b2f80dcfd44800ddc6ec220dc2660c1b9dcc873cbaf0"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/standards-background.md",
+          "classification": "verbatim",
+          "sourceSha256": "c29a6406abb35cd0f57ce96a5ab741f71e321ab85f22102f1059e43b43228b7e",
+          "carriedPath": "references/plotter/references/standards-background.md",
+          "carriedSha256": "c29a6406abb35cd0f57ce96a5ab741f71e321ab85f22102f1059e43b43228b7e"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/verification-prompt.md",
+          "classification": "patched",
+          "sourceSha256": "db62ded9010c22392bba49a68b8829f0b42a9f417b85136d91516082382785b4",
+          "carriedPath": "references/plotter/references/verification-prompt.md",
+          "carriedSha256": "3522b0cb833c3149234b6c40b09d04a3deefb5ffa58cb6eb0cb700d2de7974fc",
+          "patch": "sources/patches/plotter/references/verification-prompt.md.patch",
+          "patchSha256": "2dc1e9e6946c6aa98499e1aa7611bfcf8e700d44d862f5f00cfe6ffc2446efb2"
+        },
+        {
+          "upstreamPath": "skills/plotter/references/visual-grammar.md",
+          "classification": "verbatim",
+          "sourceSha256": "e7f7bdb8bf193105c043ceca60249e6792be5118896768984affe4db4950839e",
+          "carriedPath": "references/plotter/references/visual-grammar.md",
+          "carriedSha256": "e7f7bdb8bf193105c043ceca60249e6792be5118896768984affe4db4950839e"
+        },
+        {
+          "upstreamPath": "skills/plotter/scripts/build-standard.py",
+          "classification": "patched",
+          "sourceSha256": "21f87c5ba7986b3da927f1aae247e37a59316be85fc4151998e1210346428dde",
+          "carriedPath": "references/plotter/scripts/build-standard.py",
+          "carriedSha256": "e4d47c5df687777e4366bdb275115ec72746368080504b3f4c8a4b26b9a52b90",
+          "patch": "sources/patches/plotter/scripts/build-standard.py.patch",
+          "patchSha256": "5adb7461a30d88d19fc6b96ff5748b366523c42ed3fb422249e8a05e7dcacfae"
+        },
+        {
+          "upstreamPath": "skills/plotter/scripts/check.py",
+          "classification": "verbatim",
+          "sourceSha256": "178e048713f83d6a606764286ee8839cd65b0f4988d61f08f39ae69a3cef9917",
+          "carriedPath": "references/plotter/scripts/check.py",
+          "carriedSha256": "178e048713f83d6a606764286ee8839cd65b0f4988d61f08f39ae69a3cef9917"
+        },
+        {
+          "upstreamPath": "skills/plotter/scripts/export-svg.py",
+          "classification": "verbatim",
+          "sourceSha256": "3bf1db5e5d1bf5801a9be2a2a45afa8f1bb661bd190877068260976a0417216d",
+          "carriedPath": "references/plotter/scripts/export-svg.py",
+          "carriedSha256": "3bf1db5e5d1bf5801a9be2a2a45afa8f1bb661bd190877068260976a0417216d"
+        },
+        {
+          "upstreamPath": "skills/plotter/scripts/render.py",
+          "classification": "verbatim",
+          "sourceSha256": "fac39056165eeed8abdfb369680cc52a0c0beef166aba650e58f09ec6ecbadab",
+          "carriedPath": "references/plotter/scripts/render.py",
+          "carriedSha256": "fac39056165eeed8abdfb369680cc52a0c0beef166aba650e58f09ec6ecbadab"
+        }
+      ],
+      "notices": [
+        {
+          "carriedPath": "references/plotter/LICENSE",
+          "carriedSha256": "d0c4291f2f24569cfd386cb6e527d1227671631d083391b74625d81c85bac603"
+        }
+      ],
+      "sourceSha256": "4a9dd8c155d3797fc524da0d01c1daa27acdd673e200083b9924ad7aa80197ab",
+      "carriedPath": "references/plotter/plotter.md",
+      "carriedSha256": "4a9dd8c155d3797fc524da0d01c1daa27acdd673e200083b9924ad7aa80197ab",
+      "licensePath": "licenses/plotter.txt",
+      "licenseSha256": "d0c4291f2f24569cfd386cb6e527d1227671631d083391b74625d81c85bac603",
+      "adaptation": "Carry Plotter as an Atlas Figures treatment. The entry, drafting rules, catalogue, foundation, scripts, font and examples remain verbatim; supporting references and the standard builder point to the renamed plotter.md entry. Keep the MIT license, NOTICE.md and the Cal Sans OFL with the package.",
+      "licenseSpdx": "MIT",
+      "adoptedAt": "2026-11-18",
+      "rulings": []
     }
   ],
   "rulings": [],
   "files": {
-    "SKILL.md": "8a35061df7df6dabba2b2ae5e999ef830dec43a4eb0a54ced25f8f92e74fd30c",
-    "agents/openai.yaml": "36e88d59022cea59480f7c3565ee0b20d0d2406b3459d8a41ef3ccecb53ffe7e",
+    "SKILL.md": "0b529bac5d28138ee9a30cfe83e1f45bd2cd037bc099f437931167e56f83481a",
+    "agents/openai.yaml": "4defcf175d3a415cd3f67c1893a5cac0f0be95e6467f071056326343f4c654af",
     "references/hairline-create/hairline-create.md": "8675ceec106ec227aec00cd6a4ec883333e1acc16da5cc96e8e10a3c758ea841",
     "licenses/hairline-create.txt": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
     "references/hairline-create/bench.html": "0870fd54e137be0f7635cd309b48a4703a791cfca5915bf22d46b941ebc33278",
@@ -2355,6 +3644,165 @@
     "references/minicharts/assets/run.js": "a0d50b6b49a3ac0fc44f0db32b08255d1ea29bf628a8a06037ee1624eb852022",
     "references/minicharts/references/kit.md": "780258dba601290c79693bb1a2e503484d51a14d76cfab417b83abdd9d90e36e",
     "references/minicharts/references/types.md": "ca34a1e0044131fa8e89f31a3102ce582767eef76c0bb77b59dc7faf29cfb40a",
-    "references/minicharts/LICENSE": "0c96c4ad865df96c508fa445521104c1104fe48bfa8856d76cbfc15c9f0564de"
+    "references/minicharts/LICENSE": "0c96c4ad865df96c508fa445521104c1104fe48bfa8856d76cbfc15c9f0564de",
+    "references/plotter/plotter.md": "4a9dd8c155d3797fc524da0d01c1daa27acdd673e200083b9924ad7aa80197ab",
+    "licenses/plotter.txt": "d0c4291f2f24569cfd386cb6e527d1227671631d083391b74625d81c85bac603",
+    "references/plotter/NOTICE.md": "fffca2483621bf831ba8dbca4787087563b0f7c4e7e559860f6a35542bfb32ff",
+    "references/plotter/README.md": "cd2f0d76ac3648417e7ce9d24f5c83aae631f77d4c859a34f47c0cadb93daa2e",
+    "references/plotter/assets/examples/assembly-motion.html": "1e44af16473f987eee22385d9912de1abc43e84efe53080ff3ac63f02bcb8d83",
+    "references/plotter/assets/examples/motion-studies.html": "a32457be50751e2d5405d383c88e649d5c704f6cb2207674d217fc16272becd2",
+    "references/plotter/assets/examples/registration.mjs": "8d746c41498854467fbae5df76155f63a89f065ea144a1627baab2da7d249ca2",
+    "references/plotter/assets/examples/registration.svg": "1f3b44b3fdbcc87ce726d4469cdf3f5d859948cadcbb07deb314b28359d8141e",
+    "references/plotter/assets/examples/render-registration.mjs": "94cc8acad070def88ab35deea73beaa1211afca3f15e0112ea53b0a217d2a8a8",
+    "references/plotter/assets/fonts/CalSansVF.woff2": "d4ca0c0ba97097691f045f0cc95b2af91bb65005e1c90e6c19af395a39c0d5e1",
+    "references/plotter/assets/fonts/OFL.txt": "c6bd569e2bb98d55fcdaeb53918c023741772ea882d470844195f858a41c5551",
+    "references/plotter/assets/foundation/index.d.mts": "c1dacda339eac1b9abd4401771c345890eda5bdcf7de01357cdc72b37480a9d9",
+    "references/plotter/assets/foundation/index.mjs": "a37e0db67151ee136a3ef5ef847edd85e446fa3c37d91ae175f98c0e4aa9e22a",
+    "references/plotter/assets/foundation/roles.css": "67481aef5ed1cf3baff5bec13c00dc7b7152b13d15ce5bb9d47ec5f3f6115da0",
+    "references/plotter/assets/foundation/standard.json": "e2e73960f6e9c1b16cdf83275fe1f5fda9d046f8da843d28c95b60142cea291f",
+    "references/plotter/assets/foundation/standard.mjs": "35991c2d97561b8ed43cd22ffe115222bed8d3d058dbfdc387f595ab25031bf7",
+    "references/plotter/references/approved-references.md": "e6bbd03aebc0f9da642cf2cffc96ecfabc825db8e526980d8ebd03a4d288c27f",
+    "references/plotter/references/catalogue/AGT-01.svg": "de47daf50255d560cc2e22a27eef8dbe21e58ae73f826f087ccb5fd9b0b1894b",
+    "references/plotter/references/catalogue/AGT-02.svg": "0583934881d9e65471d2bf95ba81828426e6bc693e3cec56856ebfce793bf992",
+    "references/plotter/references/catalogue/AGT-03.svg": "3c79595cc3b236ee1493aab818e3f57a1fdbc1bab434226128913fc9311bcba2",
+    "references/plotter/references/catalogue/AGT-04.svg": "0eac2120b5ba6818f0c267aabc4e35c1d3cd9e6ad253779127a46710c63ce97b",
+    "references/plotter/references/catalogue/AGT-05.svg": "414e2ff6006e66bf11d6b431a22e588fa494a765a94f60d8c94529d76de13f46",
+    "references/plotter/references/catalogue/AGT-06.svg": "0ff48d478d1461fa52948f19319a485591bafb456b8abe8a5dbe5f4adbf23dfa",
+    "references/plotter/references/catalogue/AGT-07.svg": "a331b4e62e4140188a4f63a81879ba48aa8abdd9b60aaaf5180b53519d4bb1d5",
+    "references/plotter/references/catalogue/AGT-08.svg": "53721f277aeb6d151b429113f3e956253b5d9870c1b2f008320c3b0cb7cf89cd",
+    "references/plotter/references/catalogue/COS-01.svg": "9b61e012c116186f2dccf38eb06275b79c0f057021a406cc18d4bf1bc2071292",
+    "references/plotter/references/catalogue/COS-02.svg": "b8aed640cea313366af98f6636f4a6b1755f3e13f85015af595c41b88e9a2f9d",
+    "references/plotter/references/catalogue/CRF-01.svg": "f9564918ee382cf76a323d098a9ef0faffbec39e04b5046736ef6981564e8c87",
+    "references/plotter/references/catalogue/CRF-02.svg": "c2dd911c529be9de253b92b574ed55151a0716b5235bcbdfb862f193d0d27ea2",
+    "references/plotter/references/catalogue/CRF-03.svg": "3a423e51f6d45f584e95857bb5d662e5aee7d5a1116dc7c31a0d182a91aaf31d",
+    "references/plotter/references/catalogue/CRF-04.svg": "642e24311de6f2cb18cb9d8a94c05662b9c729c1cb9827231930b71cb6ba2129",
+    "references/plotter/references/catalogue/CRF-05.svg": "bf4a606b30affa9e032d9dbd98b677172306696ed1f79fca06cd212b64187e81",
+    "references/plotter/references/catalogue/CRF-06.svg": "136781d55b65ef064c40b33ec417dd5e95f208f842be92d050fef117b63eaa21",
+    "references/plotter/references/catalogue/CRF-07.svg": "860c1ecb5f64d848e4923a3b0fa4e64de5ebc27783e20f4b307736f1811f7496",
+    "references/plotter/references/catalogue/CRF-08.svg": "b2fb3608b487cf03c56e6f90d2e554af66bf05fb8a6c24232cdb59018240af41",
+    "references/plotter/references/catalogue/EMP-01.svg": "01dc5022ecd54c728f456414fe279014ea829df4a65797f5d4e9d2437518d749",
+    "references/plotter/references/catalogue/EMP-02.svg": "9cefbe75bb42d3cd62949ce9ecf8566a5e66e748d782618f65939527606c2899",
+    "references/plotter/references/catalogue/EMP-03.svg": "921112cd0e74fa49f901350c12216f5f1e68749b60ce2330eebf0e9bf96cc587",
+    "references/plotter/references/catalogue/EMP-04.svg": "4a1ed81fc32714e3b652129ed1a533291795d8930309002de464214b1d49f23f",
+    "references/plotter/references/catalogue/EMP-05.svg": "6ecfd65d176b5d5c9620d9e66f8e2f3123488e8ef0a8109fe87819183d8ea233",
+    "references/plotter/references/catalogue/EMP-06.svg": "734f3ec5feff8a1d03f09f116619cef88a779e1c790fec8caf6f0037d614a4e8",
+    "references/plotter/references/catalogue/EMP-07.svg": "706d8c6ce40e0f80870d4b7e4f8ea5fd75f4b25d25300ad46aa2762062eff20c",
+    "references/plotter/references/catalogue/EMP-08.svg": "cf30cbdcb5b0210c9d73d7f07670d6f769ff6f7e57ec8dc420c3c6d4c19c6e81",
+    "references/plotter/references/catalogue/EMP-09.svg": "4ff411cd07d44be1f09a250f37ca8197fb8adf7c7486a0c10d56a841abd3d692",
+    "references/plotter/references/catalogue/EMP-10.svg": "10def00fa01b0ebc840b3710f3d2e5afe35d601d772e214e017635a55a4ba5ff",
+    "references/plotter/references/catalogue/EMP-11.svg": "e57fd220629c5fed3f4bc444f2997f6228495f7831e3b4cdd0036f0ea8f0cefe",
+    "references/plotter/references/catalogue/EMP-12.svg": "c63db201e2844eadfbae6b467cee26689912d881239972a87cb944fcf6d02860",
+    "references/plotter/references/catalogue/EMP-13.svg": "ddea1c5594a3a232fe768debe7fa7e2ee5bf78092c66cd49d44b826570cd4b8b",
+    "references/plotter/references/catalogue/EMP-14.svg": "34cf33ade847825840916bc1792f1e8535f2db27862e0cb5c60d003240cb4b56",
+    "references/plotter/references/catalogue/EMP-15.svg": "7426a5753e0a937e5290d5c2cc6d914f7920dd63e11b66a4e8a27e07ca95a009",
+    "references/plotter/references/catalogue/EMP-16.svg": "a044dd8d81b9a22be03d7ae67e90bb5ab6a763c5a0d92033e080a10b95f6bb13",
+    "references/plotter/references/catalogue/EMP-17.svg": "b09c8529a1b7d845275bee4fe31f22a10d02b3a3c29f87fc69b20c0cad7f12f4",
+    "references/plotter/references/catalogue/GEO-01.svg": "a0069ecc4016a81e48cc7aaed5190b5728efe2f1867f8ff0f4765dad12a32e43",
+    "references/plotter/references/catalogue/GEO-02.svg": "723da395ee9660ea4229f3cc42da7acd647fc4361713af9ff201e9b7379b42eb",
+    "references/plotter/references/catalogue/GEO-03.svg": "4913550251a88ee891c5cb70a71a1e5bbefdc7024ed16bda941c909b73a8e4c2",
+    "references/plotter/references/catalogue/GEO-04.svg": "8f8ed9de4602bca81a4123dd7aed118dc89a6feabd19427d17e9135668edaffe",
+    "references/plotter/references/catalogue/GEO-05.svg": "4f9d5bfabcebcc4177a005ff865f13f5f5a6f49cac771f0149840e49b0c8506b",
+    "references/plotter/references/catalogue/GEO-06.svg": "c702fce1ba70e87ef647dfe16b8c428354c9c4105edf64d78a3f6c77146939df",
+    "references/plotter/references/catalogue/GEO-07.svg": "7919fd77152963bca88f367b35e59d827468f9be721c24ded7189de7d3b824d1",
+    "references/plotter/references/catalogue/GEO-08.svg": "e2e9a6aef9e8c0b54551ea9e8b702b6ad08e1ce9e17b747a6f1ad29893fdba21",
+    "references/plotter/references/catalogue/GEO-09.svg": "54bd2c85137a9240adecb60b5c332ab2b432e1d02b6fe7eb813ada0d322867b3",
+    "references/plotter/references/catalogue/GEO-10.svg": "db1105c32f249f081553c05d11db0a98f2ff062fd7409682b84a0e5d6661ba63",
+    "references/plotter/references/catalogue/GEO-11.svg": "ba5c867e56eeba22e770ca9cc22b4781dd90c7b44ef793bb376d3935b96dd822",
+    "references/plotter/references/catalogue/INT-01.svg": "07be3e0dbea1a2dfd3337876f4300d571dd2aa373128298575e52cab3b39866b",
+    "references/plotter/references/catalogue/INT-02.svg": "230f7f31381b1e0bcc6e410c066cd70e4792fb7908a5c8fbd86c31331a9540f9",
+    "references/plotter/references/catalogue/INT-03.svg": "00d5f91eceace1eabf2f7603a90d9a87bcd72ca7ca075a48004b97fc9f3503b3",
+    "references/plotter/references/catalogue/INT-04.svg": "c8b4a4d6ab926583f4d2ca8cffbfa1af84c0952832f735e3699276ea823711dc",
+    "references/plotter/references/catalogue/INT-05.svg": "22198f830206e3861b68f01f0946333bb5b282414dec17c743209e707c904373",
+    "references/plotter/references/catalogue/INT-06.svg": "1810d2bb2229437a5b912b5ad9087c4fd8bae18256cb99d69eaa50030cf0215f",
+    "references/plotter/references/catalogue/INT-07.svg": "b188b6d8e7750e6704cb8b03185b26dcbbe9215bd5b6561f1117f9fc2d9eacf6",
+    "references/plotter/references/catalogue/INT-08.svg": "ba986d97e98cd481e221c0a21d552450d596b79d1e60303401c42ccd9135e919",
+    "references/plotter/references/catalogue/INT-09.svg": "945671a6ae13f624cef3ce20f495e9ab944326a894bff891702764384bd0252b",
+    "references/plotter/references/catalogue/INT-10.svg": "d6760107aa636d6b5ef8119f4fac6a12f573b7e5fd1e6c6f0c1dd9b9f18ead71",
+    "references/plotter/references/catalogue/INT-11.svg": "70e6c6579987b59701c395ef440b8fcfe4c5f4216a4376cddbafc57f1bc73b2e",
+    "references/plotter/references/catalogue/INT-12.svg": "5c7935ff19d0a990a76f288b076cd71163c58aa31d8db29c42d7c62af62df589",
+    "references/plotter/references/catalogue/INT-13.svg": "08f7b4a02f635e31b4ae1c610871bfe437271d18e547f08db570ecb12c84fcec",
+    "references/plotter/references/catalogue/MEC-01.svg": "9dfbd61861e3e0bbfba1496f8c6b309b809e5ee5393dc91e9088197280579841",
+    "references/plotter/references/catalogue/MEC-02.svg": "e50554272c5bee1fec4a99726b5e22f5961989f6a09559bc6070ed6030c21a25",
+    "references/plotter/references/catalogue/MEC-03.svg": "80853ff174ee6746ef33821a47c8bae8a720089f9f093b4efb1ef1c0c252ab9b",
+    "references/plotter/references/catalogue/MEC-04.svg": "d57c9c7150964531559924a9973ce1c2090768622c44fcc1a26b13949a4f1297",
+    "references/plotter/references/catalogue/MEC-05.svg": "926547bd716e5a7bf31430cc3f64429ef9b07372913c1d59792891133ecd140a",
+    "references/plotter/references/catalogue/MEC-06.svg": "9c2352f06a15bcfe55e74d03f3007b4e21c8209506fee5db7e07a86e5c014bc9",
+    "references/plotter/references/catalogue/MEC-07.svg": "4ecd31689f38a492270bf8aeeff88f2e1eb806c5c21b4c869c7f3d14cae6648d",
+    "references/plotter/references/catalogue/NAT-01.svg": "d61c6dc2a0949d59a8dfc1bed4e87df502790589943463793e21b538444d0aa4",
+    "references/plotter/references/catalogue/NAT-02.svg": "257b96156531913edfb95e6c00c46e32b3bf6ff24b8fb2e286050492c43b2514",
+    "references/plotter/references/catalogue/NAT-03.svg": "e4ae8304e1af753bd3d61a48779721065b549960604619663bff301b84e79596",
+    "references/plotter/references/catalogue/OBJ-01.svg": "105b7e980434718e3a57bd29cd7641d825c6616e24752fe9945dbd6b0fb77abb",
+    "references/plotter/references/catalogue/OBJ-02.svg": "cdc59daf53e982eebb5881edf75566b3cf9850a316566b3a91aff6f7d3fd82b6",
+    "references/plotter/references/catalogue/OBJ-03.svg": "e66a1475d0a4423a7185b5766621fc48f2fe361ea248994fd656391b0742d32f",
+    "references/plotter/references/catalogue/OBJ-04.svg": "5c23378e79cf22d982784f49b93f346c6cc6574f2c90a567fc67971be7b62d4f",
+    "references/plotter/references/catalogue/OBJ-05.svg": "2b6172dd80b0e257fbfd53e48466fe3868c531cba1a55c5a0ae6c6720270e330",
+    "references/plotter/references/catalogue/OBJ-06.svg": "bbb6560be369bb5bde934aa648589fdc78562e84d10646711ea3ba9377a3f3c8",
+    "references/plotter/references/catalogue/OBJ-07.svg": "ebda96c8fab4dfa249631600942a29b4e3327f4294e752eddba874a9d0163e0b",
+    "references/plotter/references/catalogue/OBJ-08.svg": "678bd3fd1241ee889e4e9487fd43e46e80f073297bdbec7f60f83aa1ad55baf1",
+    "references/plotter/references/catalogue/SRV-01.svg": "f9dcb1ceb46cc67f9a7aaa629cf573fd9af5cc6719d0b4d80dba71bb0ef46512",
+    "references/plotter/references/catalogue/SRV-02.svg": "5cc79da6e5e2ce59406f4770ab669d11750d7da62045f1bcbacb0ca82892235f",
+    "references/plotter/references/catalogue/SRV-03.svg": "424a8fe74bb55a1e038cdfc67fbecda5a5612b3a9e6dfd37047274587ddcb0a3",
+    "references/plotter/references/catalogue/SRV-04.svg": "dfe904312b21e4c6cf9ca234243124cd9e82de2e469c12261b07f2024825d295",
+    "references/plotter/references/catalogue/SRV-05.svg": "577cfa0e776d9c47b9cc121960c1f25761f1f4def1baedff5f525629f6a7e334",
+    "references/plotter/references/catalogue/SRV-06.svg": "7cdec97daac6012ec77b367a8a316bd53b972592cf73c5e76b089947ca2ee0b8",
+    "references/plotter/references/catalogue/SRV-07.svg": "4d22f5d981d88a72cceef7bf599734d4fb97e2e3509993ba2c772252066b61f6",
+    "references/plotter/references/catalogue/SRV-08.svg": "9f0b604b787c5e434497e2f8824ec0793738ca1667d658517883241d6ece7e5c",
+    "references/plotter/references/catalogue/SRV-09.svg": "61803617d0c36344936f69248de2a884b6d2869a3aafc38714e9a15a2c588fa4",
+    "references/plotter/references/catalogue/SYS-01.svg": "57cc17e8fc3e5fe4d1d38e1f97912f9018b76196140891759ef85879546c0bb1",
+    "references/plotter/references/catalogue/SYS-02.svg": "fffe47a90688db9e221d931f6c312ad1415db423e4dc0457d34a3305fa0b9a06",
+    "references/plotter/references/catalogue/SYS-03.svg": "f92c62b0e4e76a914554ba30d026dee5ff498d4a88faecc3c44dcd022512ee5b",
+    "references/plotter/references/catalogue/SYS-04.svg": "a4930ef2c8b333fa1c0145deed22eb68bbe5aa6dbe9b65f6793750ac4e0906e0",
+    "references/plotter/references/catalogue/SYS-05.svg": "cff1ac393355176c14b364cefd63c43c001ea70d0dc91e2b7732d7cf2ffeac6a",
+    "references/plotter/references/catalogue/SYS-06.svg": "ffa7720a4e7b239ce51ece0c0bfbeffa72b7d4453b5cb3076be8942047ce7143",
+    "references/plotter/references/catalogue/TIM-01.svg": "0cd356607a62d96ebedc0260061097434cbcbfe1746f1cdd16495be13c1c1f2d",
+    "references/plotter/references/catalogue/TIM-02.svg": "102d566b0d71c432edcd89f33ed3d5540d72025bc6104bcd7e3d3e2f0033a731",
+    "references/plotter/references/catalogue/TIM-03.svg": "12e867d18b3f42371a625471494494b02207b9f837f592c805173a64c0b72892",
+    "references/plotter/references/catalogue/TIM-04.svg": "12d6dd6d7057d209eb7b607ebf6fe0d17b7369f11469dc0149b16597cb84dc2d",
+    "references/plotter/references/catalogue/TIM-05.svg": "b91c40c74ba7f0e7299e30b810c180901c41a9efad5e656216cb91ca3576bc16",
+    "references/plotter/references/catalogue/TIM-06.svg": "783cfe2aba31321d552e131563282e562de2a157b73331df7ef6dfdffca8e021",
+    "references/plotter/references/catalogue/TIM-07.svg": "ee3fd7e02ff02533192ecc096dda8a2d0d926628f094028ef211ed08523738a8",
+    "references/plotter/references/catalogue/TIM-08.svg": "a9201440b9fe695c12a8c556fd6d39234d3aa2ebbdfacdb88053455ec8540e77",
+    "references/plotter/references/catalogue/TYP-01.svg": "4368e0ebbbb68ddc9d3ada6b530c4568950f9319aa4d0c7e228364b417179ad0",
+    "references/plotter/references/catalogue/TYP-02.svg": "0102708ddddc4a250e6a7d230dfcb4153929f0a10ba1de2f0771092ac04fa20f",
+    "references/plotter/references/catalogue/TYP-03.svg": "d2151aeef921c3a1b863610a3f3c0a861c41c2113521ff8404957a10ed1a29c3",
+    "references/plotter/references/catalogue/TYP-04.svg": "cf405b54cd986b07c0f4978283a0dc98e3f113077af0061e4d2973d96108a1e7",
+    "references/plotter/references/catalogue/TYP-05.svg": "da81be78bb9a0fc59e3f2e51c824a4fbdbd338f7863e7e29eada67cc8e03cdb2",
+    "references/plotter/references/catalogue/TYP-06.svg": "7690d119e790e3679cf9d297dd3a6a900a76d769ff6213dff3cc0494d98bd4b4",
+    "references/plotter/references/catalogue/TYP-07.svg": "6e1ea4d57d91b6fdaa346c0598e72578dd99b484760a8330c39af3a662e05408",
+    "references/plotter/references/catalogue/TYP-08.svg": "f84ce32a8b8ffb798214996c998635d73f1b02510dfbc18e579e271eb8347ed6",
+    "references/plotter/references/catalogue/TYP-09.svg": "341a37c0b45044e2cf65ccb23f8e285833d5fc7f4270748dd9b8656e59877da3",
+    "references/plotter/references/catalogue/index.md": "49a92f3b0dd85322cf3827d3512e371e7b65f080ad7bfbb031779201b07905cb",
+    "references/plotter/references/direction.md": "d34c484ccd1e2a2176a41ab4b8d6d262ef57d1a2641daf9f016e1b6783881e86",
+    "references/plotter/references/drafting-standard.md": "0e8e14d4397f8c152ee1f30774c48cdfa80bf72626abacdda319d5d97e338224",
+    "references/plotter/references/drawing.md": "a0ed9c1857bf8e09d9fd18910cb38acd7cb3ac57a7662ddfe6ae0a4605652e86",
+    "references/plotter/references/drawings/EMP-03.svg": "595d5174194ac7cfef182eb86488a8dda7ee53a20b0b0ed0b3197f60b04b0f66",
+    "references/plotter/references/drawings/GEO-01.svg": "4082ec9a1000107cb1580fcd6826cff15cc15c2c3d919a79291d1d7070cce1d4",
+    "references/plotter/references/drawings/INT-02.svg": "4b203778a9d05394ca1f436f09962330d712b998f9996fd195e61cdb24cc99f0",
+    "references/plotter/references/drawings/INT-03.svg": "21763dddf898e52c29f616aa897792307336914d3f034ddd3a18aafc8fe9f89c",
+    "references/plotter/references/drawings/INT-09.svg": "47118d15b7f0787dcf8c4a88abe3348ce1f5ce3b8cffe47b38694cd6dc710a02",
+    "references/plotter/references/drawings/SRV-04.svg": "3635d28fa90efa36cbb4c9374274df930eafa65bbd50c938508c243ab24ca294",
+    "references/plotter/references/drawings/TIM-04.svg": "4f1c3e771ff163a2de9bfcf44800892dc549fa0a1347c4caac78cf6fbb7fd057",
+    "references/plotter/references/drawings/manifest.json": "910298cb510a7735ee77a901e05f95ee1e02feb02d7df0fb74de0ac187428b1b",
+    "references/plotter/references/foundation.md": "13a2fece730d5bb208d84d7ba192c2363cc7a8d8b70af20e4ca45c2890452f5a",
+    "references/plotter/references/grammar/arrows.svg": "ae7b26f022e464d1747546da6074c8f037d864c05c30d989c6d792f0217aafa8",
+    "references/plotter/references/grammar/callouts.svg": "47161a99fdf00f64531de172c5feb1244b294560f98908a1598897feb1288a21",
+    "references/plotter/references/grammar/centerlines.svg": "ba4f05d2fb77d985a9b66d41cb68df8e355c81d8263359e2fe42e0439994d3d6",
+    "references/plotter/references/grammar/dimensions.svg": "0458f3eed35fc72ba5cb1038b5f3a48d2263a636171d817e704eb606cd30c727",
+    "references/plotter/references/grammar/grids.svg": "a786f4ce22146a3a9f07afff34941e99b40be90d2c4bac422e97f544bc0dd5b6",
+    "references/plotter/references/grammar/hatching.svg": "b66162e6144df9b2e0e7c1ae608127f169c458120f1837d791da560946fb1645",
+    "references/plotter/references/grammar/highlights.svg": "7e62352d58f64a35893c698caf3dca5eb4aa9804baf6087bfadf018bcfc3c8f5",
+    "references/plotter/references/grammar/outlines.svg": "b65b7c5c4065dcd16f0a31b67df474fc441a27bf43e2bdc5267165b6ff8bfbff",
+    "references/plotter/references/grammar/projections.svg": "5bb5e70e58d665e6ced460b082a534f37ef20643819179e498ecf0802389a622",
+    "references/plotter/references/grammar/states.svg": "5817679683d6bf1527949c2385a607ec6b383f709271e6694c0facc1fefa2d74",
+    "references/plotter/references/motion-examples.md": "ac6c1808d21da2f5826530b6fde14befb2e6309ba1f08547e40308b4f3ba37bb",
+    "references/plotter/references/motion.md": "8c0d7207b5b45de95236b2f80dcfd44800ddc6ec220dc2660c1b9dcc873cbaf0",
+    "references/plotter/references/standards-background.md": "c29a6406abb35cd0f57ce96a5ab741f71e321ab85f22102f1059e43b43228b7e",
+    "references/plotter/references/verification-prompt.md": "3522b0cb833c3149234b6c40b09d04a3deefb5ffa58cb6eb0cb700d2de7974fc",
+    "references/plotter/references/visual-grammar.md": "e7f7bdb8bf193105c043ceca60249e6792be5118896768984affe4db4950839e",
+    "references/plotter/scripts/build-standard.py": "e4d47c5df687777e4366bdb275115ec72746368080504b3f4c8a4b26b9a52b90",
+    "references/plotter/scripts/check.py": "178e048713f83d6a606764286ee8839cd65b0f4988d61f08f39ae69a3cef9917",
+    "references/plotter/scripts/export-svg.py": "3bf1db5e5d1bf5801a9be2a2a45afa8f1bb661bd190877068260976a0417216d",
+    "references/plotter/scripts/render.py": "fac39056165eeed8abdfb369680cc52a0c0beef166aba650e58f09ec6ecbadab",
+    "references/plotter/LICENSE": "d0c4291f2f24569cfd386cb6e527d1227671631d083391b74625d81c85bac603"
   }
 }

@@ -73,7 +73,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "6d9abaab6bbd8afbbe214bbcbb6272d6f26be9a5474b9cfccef823f31d51e3b7",
+    "SKILL.md": "d7c67169256ca3bd84455319cc4a1338158861a5f8a2873af604f88bcf5e2437",
     "agents/openai.yaml": "d001ea644c007ffadb65ecb249c180008ed044e883516111377e735a33a11e0c",
     "references/all-tickets.md": "d1f3be6eec7d353c3c8ee328e16d426eb9c28b910f644d821e705a8dfd0a08ab",
     "licenses/implement-spec.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"

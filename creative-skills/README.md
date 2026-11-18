@@ -1,19 +1,19 @@
 # Creative skills
 
-Optional creative compositions and independent skills, with original authorship and MIT licenses preserved. **The artists and engineers credited here created the visual methods, engines and examples. Atlas packages their work and helps you choose a treatment.** Atlas Figures bundles seven distinct treatments; Playable remains available as an independent package.
+Optional creative compositions and independent skills, with original authorship and MIT licenses preserved. **The artists and engineers credited here created the visual methods, engines and examples. Atlas packages their work and helps you choose a treatment.** Atlas Figures bundles eight distinct treatments; Playable remains available as an independent package.
 
 **[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** created [ISO-GLOW](https://isoglow.dev/), [Colorfigures](https://april-zhu.com/colorfigures), [Minicharts](https://april-zhu.com/minicharts) and [Playable](https://april-zhu.com/playable), including their figure engines, interactions and examples. Explore her original sites to see the work in action. ISO-GLOW’s lineage includes **[iso-figure](https://github.com/MrBongoC/ai-iso-skill)** by **Tolga Cohce**. Both authors’ notices remain with the distributed files.
 
 | Skill | What it creates | Author’s site |
 | --- | --- | --- |
-| [Atlas Figures](atlas-figures/SKILL.md) | A chooser for Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW, Colorfigures and Minicharts | [Sources and credits](#atlas-figures) |
+| [Atlas Figures](atlas-figures/SKILL.md) | A chooser for Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW, Colorfigures, Minicharts and Plotter | [Sources and credits](#atlas-figures) |
 | [Playable](playable/SKILL.md) | Rigged 3D models or sketch-built robots with animation, camera-relative movement, lights and mobile controls | [Playable](https://april-zhu.com/playable) |
 
 Invoke `/playable` explicitly. It is a separate character-playground workflow, rather than a Figures treatment. Give it a rigged model or an original robot sketch. Converting or inspecting model files uses Blender; the bundled sketch-built robot path needs no supplied model. Preserve its footer credit and the credits for any models you supply. [April’s site](https://april-zhu.com/playable) has demos and the original distribution.
 
 ## Atlas Figures
 
-Invoke `atlas-figures` with a treatment to start directly, or with your subject to see all seven treatments and a recommendation. When the treatment is undecided, you choose before the agent loads its method or builds anything. A choice already made in the conversation carries forward. Its figure engines, examples and method references are bundled. Teardown uses installed Impeccable for design-domain guidance; the other treatments do not require it. Separate installations of the original figure skills are unnecessary.
+Invoke `atlas-figures` with a treatment to start directly, or with your subject to see all eight treatments and a recommendation. When the treatment is undecided, you choose before the agent loads its method or builds anything. A choice already made in the conversation carries forward. Its figure engines, examples and method references are bundled. Teardown uses installed Impeccable for design-domain guidance; the other treatments do not require it. Separate installations of the original figure skills are unnecessary.
 
 | Treatment | Upstream author and source | Packaging |
 | --- | --- | --- |
@@ -23,6 +23,7 @@ Invoke `atlas-figures` with a treatment to start directly, or with your subject 
 | Teardown | [Jakub Krehel](https://github.com/jakubkrehel/skills/tree/main/skills/teardown) | Method resolves sibling design guidance through installed Impeccable; drawing assets unchanged |
 | ISO-GLOW / Colorfigures | [April Zhu](https://x.com/Aprilzz423), with [Tolga Cohce’s iso-figure](https://github.com/MrBongoC/ai-iso-skill) lineage | Description-format compatibility patches; Colorfigures README points to its renamed method. Engines and examples verbatim. |
 | Minicharts | [April Zhu](https://april-zhu.com/minicharts), with exploded-view conventions adapted from [Cathryn Lavery](https://github.com/cathrynlavery/diagram-design) | Method, engine, 54 examples, builder, checker and runtime references verbatim; README filename pointer patched |
+| Plotter | [Pasquale Vitiello](https://github.com/pasqualevitiello/plotter), extracted from [coss](https://coss.com/ui) | Method, catalogue, foundation, scripts, font and examples verbatim; drawing reference, verification prompt and standard builder point to the renamed method file |
 
 All sources retain their MIT licenses. The chooser is Atlas-authored. [Its source receipt](atlas-figures/SOURCE-MANIFEST.json) identifies exact revisions, download fingerprints, source classifications, carried files and patches. Teardown uses Impeccable’s Typography, Colors, Accessibility, Layout, Writing and UI Polish guidance rather than carrying its own copy. It reads the relevant domain guidance within Teardown’s scope; it does not launch Impeccable’s broader workflow. Each treatment retains its own visual grammar.
 
@@ -33,6 +34,8 @@ The Git-based sources use Atlas’s [reviewed upstream-update pipeline](../docs/
 ISO-GLOW, Colorfigures, Minicharts and Playable were created by **April Zhu**. ISO-GLOW builds on **[iso-figure](https://github.com/MrBongoC/ai-iso-skill)** by **Tolga Cohce (MrBongoC)**. Colorfigures builds on ISO-GLOW and, through it, iso-figure. Playable builds on ISO-GLOW’s 3D template and includes its own engine and controller; it needs no separate ISO-GLOW installation. Preserve this authorship chain when redistributing them.
 
 Minicharts includes April’s drawing kit and chart examples. Its exploded-view conventions are adapted from Cathryn Lavery’s MIT-licensed diagram-design; the chart-type list follows April’s Neon Diagrams. Preserve its [LICENSE](../sources/upstream/minicharts/LICENSE), [NOTICE.md](../sources/upstream/minicharts/support/NOTICE.md) and generated page footer credit. Its supplied ZIP is fingerprinted in the composition record, and the source watcher marks it `manual-download`. No separate Minicharts installation is needed when using Figures.
+
+Plotter retains its MIT license with the coss.com, Origin UI and Pasquale Vitiello copyrights, its [NOTICE.md](../sources/upstream/plotter/support/NOTICE.md), and the SIL Open Font License for its bundled Cal Sans font by Mark Davis. Its checks need Python 3; rendering uses Chrome, `rsvg-convert` or a similar installed renderer.
 
 The original [ISO-GLOW license](../sources/upstream/iso-glow/LICENSE), [Colorfigures license](../sources/upstream/colorfigures/LICENSE) and [Playable license](playable/LICENSE) contain the applicable MIT terms and copyright notices. Their files are not relicensed as Atlas-authored work.
 
