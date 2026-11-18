@@ -43,21 +43,21 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
+      "sourceSha256": "a805e26bae282f952752892d1ca4d66d5a1834d3c32a5486cdd1ed4da7c4ca38",
       "carriedPath": "references/arena/arena.md",
       "carriedSha256": "11b266fb3581b3e71f1e634c48daa39d8d1f8170dbe918cdcef50bb1b9534f09",
       "licensePath": "licenses/pstack-arena.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames. Permit callers to execute only explicitly selected phases with their own brief and evidence contract.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -66,7 +66,7 @@
         "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-arena.patch",
-      "patchSha256": "618516256e3e0f17539bc51ca79fa5610a4a2b011405a5de339b10269bdefc06"
+      "patchSha256": "b42fbec25f8f6c22ff93d639e91c5387b5e490093bf42d8e94387a710ca75c58"
     },
     {
       "id": "pstack-swarm",

@@ -214,27 +214,27 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/benchmark-checklist/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+      "sourceSha256": "5efd79495e3eebf3b53814861330fe812458212958f8f009492e866c329161f6",
       "carriedPath": "references/performance/benchmark-checklist.md",
       "carriedSha256": "296530ba06d6dce78ba7140fd18d4e9cfab603d55d9d03d10c8485384271d394",
       "licensePath": "licenses/pstack-benchmark-checklist.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Adapt host measurement tools and bind instrumentation to agreed verification assets. Keep benchmark evidence proportional and separate from optimization, PR and external perf playbooks; preserve the full measurement checklist.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "verify-method-authority",
         "verify-performance-evidence"
       ],
       "patch": "sources/patches/pstack-benchmark-checklist.patch",
-      "patchSha256": "725c3e010a6399ad14092e2e346ad2954ffba554c15eac1043ec9d5c1cdf290b"
+      "patchSha256": "72d4686a25af4fa10b9d2c137c85311922060c917a56b78ec294752bb57670b8"
     },
     {
       "id": "break-ui",

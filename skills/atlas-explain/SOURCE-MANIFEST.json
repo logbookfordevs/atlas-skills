@@ -211,28 +211,28 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/teach/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
+      "sourceSha256": "2c17f3c0a79536ca2fa3c20983def027ffd8abb4063d9bb3c97778b77557600d",
       "carriedPath": "references/teach/teach.md",
       "carriedSha256": "b7cf3f55f03d9e7823a3288110ed2c93b2c137795745692c095d681f2a143c46",
       "licensePath": "licenses/pstack-teach.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Load How, Why and Unslop directly from bundled references, within the selected explanation. Bound Why to the selected teaching question and preserve confidence language, citations and evidence gaps through prose cleanup. Adapt spatial teaching when image generation is unavailable.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-mode-choice",
         "explain-why-scope",
         "explain-evidence-editing"
       ],
       "patch": "sources/patches/pstack-teach.patch",
-      "patchSha256": "e295163c202d95c4f31ca091d648c1f48de963d3c52c76da48596ca3aadc6db4"
+      "patchSha256": "3594675b885982df9346dcfe8da46bc4e02fac146837d54505dad6e3780b33d6"
     },
     {
       "id": "pstack-unslop",

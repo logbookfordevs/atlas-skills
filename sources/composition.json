@@ -1485,13 +1485,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/benchmark-checklist/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-benchmark-checklist/source.md",
-      "sourceSha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+      "sourceSha256": "5efd79495e3eebf3b53814861330fe812458212958f8f009492e866c329161f6",
       "license": "sources/upstream/pstack-benchmark-checklist/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-verify/references/performance/benchmark-checklist.md",
@@ -1503,7 +1503,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "verify-method-authority",
         "verify-performance-evidence"
@@ -1515,13 +1515,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/blast-radius/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-blast-radius/source.md",
-      "sourceSha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
+      "sourceSha256": "4248d03e22365207d2e5f90c9542720f80a88a6b42fd542ef88dde3cf9f9223f",
       "license": "sources/upstream/pstack-blast-radius/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-review/references/impact/blast-radius.md",
@@ -1533,7 +1533,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "review-impact-proof"
       ]
@@ -1580,7 +1580,14 @@
         "explain-host-capabilities",
         "implement-candidate-ownership"
       ],
-      "patch": "sources/patches/pstack-how.patch"
+      "patch": "sources/patches/pstack-how.patch",
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "Upstream collapsed How into one subagent pass and deleted the explorer and explainer prompt templates; our adaptation keeps that split and the full templates."
+        }
+      ]
     },
     {
       "id": "pstack-why",
@@ -1688,7 +1695,14 @@
         "explain-host-capabilities",
         "implement-candidate-ownership"
       ],
-      "patch": "sources/patches/pstack-why.patch"
+      "patch": "sources/patches/pstack-why.patch",
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "Upstream reduced Why to one paragraph and deleted the epistemics and all source playbooks, which our adaptation and the explain-why-scope ruling keep."
+        }
+      ]
     },
     {
       "id": "pstack-teach",
@@ -1696,13 +1710,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/teach/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-teach/source.md",
-      "sourceSha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
+      "sourceSha256": "2c17f3c0a79536ca2fa3c20983def027ffd8abb4063d9bb3c97778b77557600d",
       "license": "sources/upstream/pstack-teach/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/atlas-explain/references/teach/teach.md",
@@ -1713,7 +1727,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "explain-mode-choice",
         "explain-why-scope",
@@ -1751,7 +1765,14 @@
         "explain-evidence-editing",
         "human-writing-editorial-contract"
       ],
-      "patch": "sources/patches/pstack-unslop.patch"
+      "patch": "sources/patches/pstack-unslop.patch",
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "pstack 0.15.43 compresses the skill into short directives, turning contextual guidance into absolute rules; its one new rule is already covered."
+        }
+      ]
     },
     {
       "id": "pstack-architect",
@@ -1807,7 +1828,14 @@
         "implement-candidate-ownership",
         "implement-principle-scope"
       ],
-      "patch": "sources/patches/pstack-architect.patch"
+      "patch": "sources/patches/pstack-architect.patch",
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "Upstream reduced Architect to two paragraphs and deleted the red flags, rationale and runner references that the implement-architect-phases ruling relies on."
+        }
+      ]
     },
     {
       "id": "pstack-arena",
@@ -1815,13 +1843,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-arena/source.md",
-      "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
+      "sourceSha256": "a805e26bae282f952752892d1ca4d66d5a1834d3c32a5486cdd1ed4da7c4ca38",
       "license": "sources/upstream/pstack-arena/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/team-up/references/arena/arena.md",
@@ -1832,7 +1860,7 @@
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -1869,7 +1897,14 @@
       "rulings": [
         "implement-principle-scope"
       ],
-      "patch": "sources/patches/pstack-principle-boundary-discipline.patch"
+      "patch": "sources/patches/pstack-principle-boundary-discipline.patch",
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping \"mechanism inside, policy at the edge\"."
+        }
+      ]
     },
     {
       "id": "pstack-principle-encode-lessons-in-structure",
@@ -1952,7 +1987,14 @@
       "rulings": [
         "implement-principle-scope"
       ],
-      "patch": "sources/patches/pstack-principle-fix-root-causes.patch"
+      "patch": "sources/patches/pstack-principle-fix-root-causes.patch",
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping the rationale, the persisted-state-after-restart rule and the paragraph-comment rule."
+        }
+      ]
     },
     {
       "id": "pstack-principle-foundational-thinking",
@@ -1980,6 +2022,13 @@
       "adoptedAt": "2026-10-15",
       "rulings": [
         "implement-architect-phases"
+      ],
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping option value, the three-similar-statements rule and coherent increments."
+        }
       ]
     },
     {
@@ -2060,7 +2109,14 @@
       "supportingFiles": [],
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-26",
-      "rulings": []
+      "rulings": [],
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping the rationale and part of the staleness guidance."
+        }
+      ]
     },
     {
       "id": "pstack-principle-minimize-reader-load",
@@ -2087,7 +2143,14 @@
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-10-15",
       "rulings": [],
-      "patch": "sources/patches/pstack-principle-minimize-reader-load.patch"
+      "patch": "sources/patches/pstack-principle-minimize-reader-load.patch",
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping \"adjacent layers must change the abstraction\" and interface-compression guidance."
+        }
+      ]
     },
     {
       "id": "pstack-principle-outcome-oriented-execution",
@@ -2145,7 +2208,14 @@
         "implement-principle-scope",
         "team-up-arena-policy"
       ],
-      "patch": "sources/patches/pstack-principle-prove-it-works.patch"
+      "patch": "sources/patches/pstack-principle-prove-it-works.patch",
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping process-liveness and artifact guidance for minor new examples."
+        }
+      ]
     },
     {
       "id": "pstack-principle-redesign-from-first-principles",
@@ -2202,6 +2272,13 @@
       "rulings": [
         "implement-candidate-ownership",
         "team-up-arena-policy"
+      ],
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "pstack 0.15.43 compresses the skill into short directives with the same rules, dropping the numbered pattern and rationale without adding behavior."
+        }
       ]
     },
     {
@@ -2258,6 +2335,13 @@
       "rulings": [
         "team-up-method-selection",
         "team-up-swarm-evidence"
+      ],
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "Only changes provider default models, which our patch replaces with Team Up selection."
+        }
       ]
     },
     {
@@ -2287,6 +2371,13 @@
       "adoptedAt": "2026-10-15",
       "rulings": [
         "human-writing-technical-contract"
+      ],
+      "declinedUpdates": [
+        {
+          "revision": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
+          "reviewedAt": "2026-11-18",
+          "reason": "pstack 0.15.43 compresses the skill into short directives, dropping the worked example and Diataxis detail our adaptation keeps."
+        }
       ]
     },
     {
@@ -2295,13 +2386,13 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/show-me-your-work/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/pstack-show-me-your-work/source.md",
-      "sourceSha256": "63a79b3d849af1d3e0b76cf7c1dcba0a0d1ff2823edad60675d25623804d3058",
+      "sourceSha256": "c681a767b7b59d064ee721b38afa6148cbdbc06f6392c0b7e23bd72840fb3098",
       "license": "sources/upstream/pstack-show-me-your-work/LICENSE",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "method": "skills/tracking-implementation/references/audit-trail/audit-trail.md",
@@ -2326,7 +2417,7 @@
         }
       ],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "tracking-audit-trail-ownership",
         "tracking-audit-trail-coverage"
@@ -4316,25 +4407,25 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/t3dotgg/tstack",
-        "commit": "1085050f3baed1ac724caa4a8166145fb2ac88af",
+        "commit": "11e37a74d0a6868c121cd0910ab2b3bd9873b92a",
         "path": "skills/council/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "snapshot": "sources/upstream/tstack-council/source.md",
-      "sourceSha256": "598fb2c7cdd48ddd9643cb22999e1b624c357aa6579aa0af0e7268ae16a8a164",
+      "sourceSha256": "91cab56e85ca2ce2920961b50931573890e0513adbc5a60b33969b1e2501251c",
       "license": "sources/upstream/tstack-council/LICENSE",
       "licenseSha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851",
       "method": "utility-skills/challenge/references/council.md",
       "carriedPath": "references/council.md",
       "patch": "sources/patches/tstack-council.patch",
-      "adaptation": "Retain broad independent feedback and synthesis of disagreements. Replace fixed three-provider roster with scope-based Arena selection; replace scores, automatic repairs, PR publication and unanimous-satisfaction loop with advisory evidence states and bounded reconciliation.",
+      "adaptation": "Retain broad independent feedback and synthesis of disagreements. Replace fixed three-provider roster with scope-based Arena selection; replace scores, automatic repairs, PR publication and unanimous-satisfaction loop with advisory evidence states and bounded reconciliation. Adopt incremental result checking while other reviewers run, without the upstream fix decisions or late-result scores.",
       "consumers": [
         "challenge"
       ],
       "supportingFiles": [],
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-09",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "challenge-composition"
       ]

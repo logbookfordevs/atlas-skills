@@ -90,7 +90,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/show-me-your-work/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -112,20 +112,20 @@
         }
       ],
       "notices": [],
-      "sourceSha256": "63a79b3d849af1d3e0b76cf7c1dcba0a0d1ff2823edad60675d25623804d3058",
+      "sourceSha256": "c681a767b7b59d064ee721b38afa6148cbdbc06f6392c0b7e23bd72840fb3098",
       "carriedPath": "references/audit-trail/audit-trail.md",
       "carriedSha256": "52f63cb4ee69d770de00df8a7a0dcf99c0648cbd26ba9ab7632f7fc1d34fc5a0",
       "licensePath": "licenses/pstack-show-me-your-work.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Select Audit Trail explicitly within Tracking, keeping one canonical state home and a linked append-only TSV. Preserve the full format, run ownership and helper/template. Use bundled Unslop and the evidence principle. Resolve transcript discovery and cross-family review against actual host capabilities with explicit gaps; Attention appears at checkpoint handoffs instead of every progress reply. Tracking retains commit, code-review and acceptance policy. Update bundled reference links for ordinary Markdown filenames.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "tracking-audit-trail-ownership",
         "tracking-audit-trail-coverage"
       ],
       "patch": "sources/patches/pstack-show-me-your-work.patch",
-      "patchSha256": "49d7e38cc903291e2b5ffd3e1a733c5626f44911be1a4774ae3d354708a2c4b0"
+      "patchSha256": "7b6ac5b58d70d3ba2e89f19016e154efc137a7cfa01706990413ce599e0b2102"
     },
     {
       "id": "pstack-unslop",

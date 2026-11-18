@@ -640,26 +640,26 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "1f0f9c3bac03c4297f6fc8f7644fa412eda57085",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/blast-radius/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
+      "sourceSha256": "4248d03e22365207d2e5f90c9542720f80a88a6b42fd542ef88dde3cf9f9223f",
       "carriedPath": "references/impact/blast-radius.md",
       "carriedSha256": "0633aee39637eebd36b2baa4dc6fd9aa3e82b4335d467d6d5605ce591d498d19",
       "licensePath": "licenses/pstack-blast-radius.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Keep risk tracing and executable safety proof within read-only Review using owned scratch probes. Replace external How/Why/Arena/Unslop calls with scoped history/source evidence and concise cited output; remove the retired Interrogate handoff. No external skill installation is required.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-15",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "review-impact-proof"
       ],
       "patch": "sources/patches/pstack-blast-radius.patch",
-      "patchSha256": "6516eca2b147bdb89b1faade758503f313972e788880b9079c22113e9dcc259a"
+      "patchSha256": "dac31980a9bd5c10f77061a67bc35a0b272981d52c9ebbbf6341068ab380bbb1"
     },
     {
       "id": "review-animations",
