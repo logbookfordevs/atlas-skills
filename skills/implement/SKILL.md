@@ -16,4 +16,4 @@ When done:
 2. Create or reuse the task's branch, commit, and push.
 3. Open or update the PR with verification evidence.
 4. Wait for CI; fix task-caused failures, verify, and push.
-5. Share the PR link and review outcome, ready for me to merge, or explain remaining blockers.
+5. Share review outcome, ready for me to merge, or explain remaining blockers.
