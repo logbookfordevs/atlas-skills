@@ -12,7 +12,7 @@ export interface Skill {
   summary: string;
   intro: string;
   use: string;
-  modes: { title: string; description: string; example: string }[];
+  modes: { title: string; description: string; example: string; image?: string }[];
   note: string;
   origin?: string;
   optional?: boolean;

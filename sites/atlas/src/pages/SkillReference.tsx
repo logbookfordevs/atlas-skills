@@ -3,7 +3,7 @@ import { AtlasLink } from '@/components/AtlasLink';
 import { CopyCommand } from '@/components/CopyCommand';
 import { Arrow } from '@/components/Icons';
 import { SkillOrigins } from '@/components/SkillOrigins';
-import { repository, skills, skillPath, sourceLabel, thirdPartyPath, thirdPartySkills } from '@/data';
+import { repository, skills, skillPath, sourceLabel, thirdPartyPath, thirdPartySkills, type Skill } from '@/data';
 import { NotFound } from '@/pages/NotFound';
 
 export function SkillReference() {
@@ -24,13 +24,7 @@ export function SkillReference() {
     <section>
       <h2>How it works</h2>
       <p className="small-copy">With this skill selected, describe your task in your own words. Adapt these examples to your project.</p>
-      <dl className="method-list">{skill.modes.map((mode) => <div key={mode.title}>
-        <dt>{mode.title}</dt>
-        <dd>
-          <p className="method-description">{mode.description}</p>
-          <blockquote className="method-example"><span className="example-label">Try this</span><p>“{mode.example}”</p></blockquote>
-        </dd>
-      </div>)}</dl>
+      <dl className="method-list">{skill.modes.map((mode) => <MethodItem key={mode.title} mode={mode} />)}</dl>
     </section>
     <section><h2>Install</h2><CopyCommand command={`npx skills add ${repository} --skill ${skill.id}`} />
       <p className="small-copy">Install this package by name. Then use <AtlasLink to={skillPath('atlas-setup')}>Atlas Setup</AtlasLink> to check any independent dependencies.</p>
@@ -51,4 +45,17 @@ export function SkillReference() {
     </section>
     <AtlasLink className="back-link" to="/#skills">Back to all skills</AtlasLink>
   </article>;
+}
+
+function MethodItem({ mode }: { mode: Skill['modes'][number] }) {
+  const hasSample = Boolean(mode.image);
+
+  return <div>
+    <dt>{mode.title}</dt>
+    <dd>
+      {hasSample && <img className="method-sample" src={mode.image} alt={`${mode.title} sample`} loading="lazy" decoding="async" />}
+      <p className="method-description">{mode.description}</p>
+      <blockquote className="method-example"><span className="example-label">Try this</span><p>“{mode.example}”</p></blockquote>
+    </dd>
+  </div>;
 }

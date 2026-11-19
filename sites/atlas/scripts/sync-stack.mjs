@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 const check = process.argv.includes('--check');
 const canonical = new URL('../../../stacks/atlas.json', import.meta.url);
@@ -36,5 +36,21 @@ if (existsSync(dependencies)) {
   const bytes = JSON.stringify(thirdParty, null, 2) + '\n';
   if (check) assert.equal(readFileSync(thirdPartySnapshot, 'utf8'), bytes, 'Stale third-party snapshot: third-party.json');
   else writeFileSync(thirdPartySnapshot, bytes);
+}
+const samples = new URL('../../../creative-skills/atlas-figures/assets/samples/', import.meta.url);
+const publicSamples = new URL('../public/samples/atlas-figures/', import.meta.url);
+if (existsSync(samples)) {
+  const jpegs = directory => readdirSync(directory).filter(name => name.endsWith('.jpg')).sort();
+  const names = jpegs(samples);
+  if (check) assert.deepEqual(jpegs(publicSamples), names, 'Stale Atlas Figures samples: public/samples/atlas-figures');
+  else mkdirSync(publicSamples, { recursive: true });
+  for (const name of names) {
+    const source = readFileSync(new URL(name, samples));
+    if (check) assert.deepEqual(readFileSync(new URL(name, publicSamples)), source, `Stale Atlas Figures sample: ${name}`);
+    else writeFileSync(new URL(name, publicSamples), source);
+  }
+}
+for (const skill of content) for (const mode of skill.modes) {
+  if (mode.image) assert.ok(existsSync(new URL(`../public${mode.image}`, import.meta.url)), `Missing mode image: ${mode.image}`);
 }
 console.log('Website catalog, stack and third-party snapshots are aligned.');
