@@ -622,6 +622,13 @@
         "author": "April Zhu (exploded-view conventions adapted from Cathryn Lavery)",
         "url": "https://april-zhu.com/minicharts",
         "classification": "patched"
+      },
+      {
+        "id": "plotter",
+        "title": "Plotter",
+        "author": "Pasquale Vitiello",
+        "url": "https://github.com/pasqualevitiello/plotter/blob/01df092aed163462ca5902c7b21a9c9f7c60e68f/skills/plotter/SKILL.md",
+        "classification": "patched"
       }
     ],
     "collections": []

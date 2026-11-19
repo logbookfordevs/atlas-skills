@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index 6b751d2..40d5d37 100644
+--- a/source.md
++++ b/source.md
+@@ -13,7 +13,7 @@ Inputs
+ - Nearest approved references and which relationship each supplies:
+ - Claimed units, scale, equations, behavior, and external sources:
+ 
+-Resolve the installed Plotter skill directory, then read its SKILL.md and
++Resolve the installed Plotter skill directory, then read its plotter.md and
+ references/drafting-standard.md and references/approved-references.md. Read
+ references/standards-background.md before judging a claim about an external
+ standard. Current direction is in references/direction.md.

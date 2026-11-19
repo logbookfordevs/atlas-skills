@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add Pasquale Vitiello’s Plotter as Atlas Figures’ eighth treatment: flat blueprint illustrations as editable SVG, with its catalogue, foundation, checks and motion workflow. Track it through the reviewed Git pipeline, keep its MIT license, notice and Cal Sans font license, and patch only the references to the renamed method file.
+- Show Atlas Figures treatments before you choose: the menu displays a still sample of each treatment, captured from its author’s bundled examples, and a gallery page collects them when asked. Teardown, which ships no example, gets an Atlas-drawn game-console teardown as its sample and live viewer.
 - Make Atlas skills rely on each other instead of carrying copies: each method has one owning package, and consumers name it and declare a dependency. Copies remain only where the owner is manual-only. State the rule in the README and maintenance guide.
 - Add Emil Kowalski’s Choreograph to Atlas Motion as its Choreograph mode, owning the relationships between animations that move together while Animate owns each single animation.
 - Retire Atlas Craft. Atlas Review owns the six better-* interface domains as review criteria; interface refinement and construction use Impeccable, which joins the stack and supplies Atlas Figures' Teardown design guidance. Jakub Krehel's State Machine and Emil Kowalski's Mobile Native install independently. Redirect the old website reference to Atlas Review.

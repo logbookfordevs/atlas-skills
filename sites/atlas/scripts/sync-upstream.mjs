@@ -17,12 +17,15 @@ const authors = {
   'https://github.com/backnotprop/product-engineering': 'Product Engineering',
   'https://github.com/backnotprop/pstack': 'Lauren Tan / Pstack mirror',
   'https://github.com/t3dotgg/tstack': 'Theo Browne',
+  'https://github.com/pasqualevitiello/plotter': 'Pasquale Vitiello',
 };
 const titles = {
   "diagnosing-bugs": "Diagnosing Bugs",
+  "choreograph": "Choreograph",
+  "design-artifact": "Design Artifact",
   'hairline-create': 'Hairline Create', 'hairline-adopt': 'Hairline Adopt',
   anatomy: 'Anatomy', 'engraved-figures': 'Engraved Figures', teardown: 'Teardown',
-  'iso-glow': 'ISO-GLOW', colorfigures: 'Colorfigures', minicharts: 'Minicharts',
+  'iso-glow': 'ISO-GLOW', colorfigures: 'Colorfigures', minicharts: 'Minicharts', plotter: 'Plotter',
   "explain-interface": "Explain Interface",
   "state-machine": "State Machine",
   "mobile-native": "Mobile Native",

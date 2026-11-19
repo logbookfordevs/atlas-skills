@@ -1,12 +1,14 @@
 ---
 name: atlas-figures
-description: "Build explanatory figures, interactive objects or illustrated charts in a chosen treatment, or explore seven options."
+description: "Build explanatory figures, interactive objects or illustrated charts in a chosen treatment, or explore eight options."
 disable-model-invocation: true
 ---
 
 # Atlas Figures
 
 When the request or conversation already selects a treatment, read its method and proceed directly. When no treatment is selected, present the full menu below with a short description of each option. Recommend suitable treatments from the user's subject, medium and intended use, explaining the fit, then wait for their choice before loading a method or building a figure. Selection belongs to the user.
+
+Show each option's sample from `assets/samples/` beside its description, as an inline image by absolute path when the host displays images. Where images do not display, point to `assets/gallery.html`. When the user asks to see, compare or demo the treatments, open that gallery.
 
 | Treatment | Character | Read after selection |
 | --- | --- | --- |
@@ -17,5 +19,6 @@ When the request or conversation already selects a treatment, read its method an
 | ISO-GLOW | Glowing isometric line art, interactive 3D objects, or solid-lit Lumen illustrations. | [ISO-GLOW](references/iso-glow/iso-glow.md) |
 | Colorfigures | Colourful, hand-inked objects with working mechanisms, rotation and see-through views. | [Colorfigures](references/colorfigures/colorfigures.md) |
 | Minicharts | Hand-drawn charts where subject objects carry the data, with values drawn to scale and touchable parts. | [Minicharts](references/minicharts/minicharts.md) |
+| Plotter | Flat monochrome blueprint drawings where one construction relationship explains a product idea, as editable SVG with optional motion. | [Plotter](references/plotter/plotter.md) |
 
 Follow the selected method and its conditional references. Its folder is the method's base directory for assets, scripts and examples; resolve `<skill folder>` there. Keep its visual grammar and engine together. Selecting several treatments means separate variants, unless the user requests a blend. A recommendation alone does not select a treatment.

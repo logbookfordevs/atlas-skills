@@ -1,0 +1,22 @@
+diff --git a/source.md b/source.md
+index cff9ecf..f9c08b4 100644
+--- a/source.md
++++ b/source.md
+@@ -90,7 +90,7 @@ names = {
+ }
+ widths = {tokens[role["width"]] for role in roles.values()}
+ if len(widths) != 1:
+-    raise ValueError("SKILL.md states one stroke width; the standard now has several.")
++    raise ValueError("plotter.md states one stroke width; the standard now has several.")
+ by_opacity = {}
+ for key, name in names.items():
+     by_opacity.setdefault(tokens[roles[key]["opacity"]], []).append(name)
+@@ -111,7 +111,7 @@ numbers = [
+     f"- Dimension: **{number(geometry['dimension']['slashExtent'])}**-unit slashes; at least **{number(geometry['dimension']['labelClearance'])}** units clear around every label’s glyphs.",
+     f"- Hatch: **{number(geometry['hatch']['edgePitch'])}**-unit pitch along an edge, at −45°.",
+ ]
+-entry = ROOT / "SKILL.md"
++entry = ROOT / "plotter.md"
+ begin, end = "<!-- BEGIN GENERATED: numbers -->", "<!-- END GENERATED: numbers -->"
+ entry_text, count = re.subn(
+     re.escape(begin) + r"[\s\S]*?" + re.escape(end),

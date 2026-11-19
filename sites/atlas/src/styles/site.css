@@ -177,6 +177,7 @@ main { min-width: 0; max-width: 720px; }
 .method-list dt { font-size: 14px; margin-bottom: 7px; }
 .method-list dd { margin: 0; font-size: 15px; }
 .method-description { margin: 0; }
+.method-sample { display: block; width: 100%; max-width: 520px; height: auto; margin: 4px 0 14px; background: var(--surface); border: 1px solid var(--border); }
 .method-example { margin: 12px 0 0; padding: 12px 16px; border-left: 2px solid var(--border); background: var(--surface); overflow-wrap: anywhere; }
 .method-example p { margin: 5px 0 0; }
 .example-label { font: 400 11px/1.5 var(--sans); color: var(--muted); }
