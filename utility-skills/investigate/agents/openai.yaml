@@ -1,6 +1,0 @@
-interface:
-  display_name: "Investigate"
-  short_description: "A short first analysis of a ticket, verified against current code."
-  default_prompt: "Use $investigate on this ticket. What does it ask, what does the code do today, and what would a change touch?"
-policy:
-  allow_implicit_invocation: false

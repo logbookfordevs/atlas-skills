@@ -19,7 +19,7 @@
     "engineering-principles",
     "html-ui",
     "implement",
-    "investigate",
+    "scout",
     "showdown",
     "snap-out-of-it",
     "team-up",
@@ -47,7 +47,7 @@
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-debug",
       "consumers": [
         {
-          "skill": "investigate",
+          "skill": "scout",
           "required": true,
           "condition": "For bug tickets: its Explaining bugs method."
         }
@@ -60,7 +60,7 @@
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-explain",
       "consumers": [
         {
-          "skill": "investigate",
+          "skill": "scout",
           "required": true,
           "condition": "For non-bug tickets: its How method."
         },
@@ -150,7 +150,7 @@
           "condition": "For automatic checkpoint review; Atlas Review owns method selection and execution, reusing adequate evidence for the same checkpoint and question."
         },
         {
-          "skill": "investigate",
+          "skill": "scout",
           "required": false,
           "condition": "When other code or repositories may read what the ticket changes: its Impact method."
         },
@@ -240,7 +240,7 @@
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill challenge",
       "consumers": [
         {
-          "skill": "investigate",
+          "skill": "scout",
           "required": false,
           "condition": "When diagnoses conflict and the code cannot settle them, or acting on an unverified cause would be costly."
         },

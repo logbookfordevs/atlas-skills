@@ -1,5 +1,5 @@
 ---
-name: investigate
+name: scout
 description: "Give a short first analysis of a ticket or issue: what it asks, what the code does today and what a change would touch."
 disable-model-invocation: true
 ---

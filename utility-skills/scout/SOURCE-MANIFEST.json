@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "workflow": "investigate",
+  "workflow": "scout",
   "generated": true,
   "managedFiles": [],
   "authoredInputs": [
-    "utility-skills/investigate/SKILL.md",
-    "utility-skills/investigate/agents/openai.yaml"
+    "utility-skills/scout/SKILL.md",
+    "utility-skills/scout/agents/openai.yaml"
   ],
   "authoredReferences": [],
   "dependencies": [
@@ -37,7 +37,7 @@
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "103d44299169dab907f89a81649f0dec62376cff09fe227b1909d013582a56c6",
-    "agents/openai.yaml": "405dbda8e2ed592df6442a9559c098478c83d6f5250d3410b9cffe5897265dca"
+    "SKILL.md": "079774898560e21cc9fee89f0c16a94af624524f848622ab488ca3ee263f7fce",
+    "agents/openai.yaml": "a9857c23cb86c6945fd70b5360f4b0183a2faf48fde7b94faf0cd7f0d30d35d4"
   }
 }
