@@ -18,7 +18,7 @@ You cannot even be sure an effect is CSS. A gradient may be a flat image, a `can
 
 ## Colors, which are the reliable part
 
-Sample the actual pixels rather than describing what you see. Describe the captured image; these observations do not establish authored CSS values or accessibility conformance. Antialiasing, compositing and image processing can affect the samples:
+Sample the actual pixels with a script on the image file rather than describing what you see. With no file to read, colors are estimates and tiered inferred. Describe the captured image; these observations do not establish authored CSS values or accessibility conformance. Antialiasing, compositing and image processing can affect the samples:
 
 - Convert each sample to OKLCH, so lightness is comparable across hues.
 - Sort by lightness to see whether the samples form a ramp, and report the spacing you find.

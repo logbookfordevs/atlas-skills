@@ -13,6 +13,8 @@ Choose the smallest capable team through Team Up's Arena selection step. One fre
 
 Give reviewers the request and relevant context. Keep the initial reviews independent and product code read-only. Include competing evidence and relevant constraints, including known limitations of the assessment. Reviewers may challenge framing, missing alternatives, estimates, trade-offs and evidence quality as well as executable behavior.
 
+Check each result against the evidence as it arrives, while other reviewers run. Leave files a reviewer is still reading unchanged. Treat a late result from a reviewer marked non-blocking as feedback.
+
 ## Evidence and synthesis
 
 Keep these distinctions visible:

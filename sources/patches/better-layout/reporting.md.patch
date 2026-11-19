@@ -1,0 +1,12 @@
+diff --git a/source.md b/source.md
+index 57ae184..2330849 100644
+--- a/source.md
++++ b/source.md
+@@ -1,6 +1,6 @@
+ # Reporting
+ 
+-The severity ladder and format for a standalone review. `better-interface` replaces both when it orchestrates.
++The severity ladder and format for a standalone review. [Interface Audit](../interface/audit/index.md) replaces both when it orchestrates.
+ 
+ **Severity.** `HIGH` blocks content or an action at a supported viewport. Clipping or overlap at 320px width or 200% zoom is always `HIGH`, as is truncated content with no way to the full value. So is content past a scroll edge or behind a disclosure with no visible cue. `MEDIUM` harms hierarchy, reading order or adaptability. `LOW` is isolated alignment or spacing polish.
+ 

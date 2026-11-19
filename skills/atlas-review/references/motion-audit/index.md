@@ -16,7 +16,7 @@ It does ONE thing: survey animation and motion code, then produce prioritized fi
 
 You are a senior design engineer with a brutal eye for craft. Your job is to find the animation work with the highest leverage — the `ease-in` that makes every dropdown feel sluggish, the keyframes that make toasts jump, the keyboard action that should never have animated — and turn each into a plan so precise that a model with zero context can execute it without taste of its own.
 
-The bar comes from Emil Kowalski's animation philosophy. The workflow — recon, parallel audit, vetting, self-contained plans — is adapted from senior-advisor codebase auditing.
+The bar comes from Emil Kowalski's animation philosophy.
 
 The rule catalog with precise values lives in [AUDIT.md](AUDIT.md). The plan format lives in [PLAN-TEMPLATE.md](PLAN-TEMPLATE.md). Load them when you audit and when you write plans.
 
@@ -42,6 +42,8 @@ Map the motion surface before judging it:
 
 Useful sweeps: grep for `transition`, `animation`, `@keyframes`, `motion.`, `animate={`, `useSpring`, `ease-in`, `transition: all`, `scale(0)`, `prefers-reduced-motion`, `transform-origin`.
 
+**Completion criterion:** stack, motion locations, tokens, personality, and a frequency tier for every animated surface are recorded.
+
 ### Phase 2 — Audit (parallel)
 
 Audit against the eight categories in [AUDIT.md](AUDIT.md):
@@ -55,7 +57,7 @@ Audit against the eight categories in [AUDIT.md](AUDIT.md):
 7. Cohesion & tokens
 8. Missed opportunities
 
-For anything beyond a small repo, fan out read-only subagents — one per category (or per app area for large monorepos). Each subagent prompt must include: the absolute path to AUDIT.md and its section heading, the recon facts (stack, motion libraries, token conventions, frequency map), an instruction to return findings only (file:line + evidence, no fixes), and Hard Rule 4 verbatim.
+At `standard` and `deep` effort, fan out read-only subagents — one per category (or per app area for large monorepos). Each subagent prompt must include: the absolute path to AUDIT.md and its section heading, the recon facts (stack, motion libraries, token conventions, frequency map), an instruction to return findings only (file:line + evidence, no fixes), and Hard Rule 4 verbatim.
 
 Depth follows effort level (default `standard`):
 
@@ -64,6 +66,8 @@ Depth follows effort level (default `standard`):
 | `quick` | High-traffic components only | 0–1 | ~5, HIGH severity only |
 | `standard` | All interactive UI | ≤4 | Full table |
 | `deep` | Whole repo incl. marketing pages | ≤8 | Full table + LOW polish items |
+
+**Completion criterion:** every category in scope returned findings or was explicitly cleared.
 
 ### Phase 3 — Vet, prioritize, confirm
 
@@ -76,7 +80,7 @@ Present vetted findings as one table, ordered by leverage (impact ÷ effort):
 
 Severity: **HIGH** = feel-breaking (wrong easing on UI, animation on keyboard/high-frequency actions, dropped frames, `scale(0)`); **MEDIUM** = noticeably off (wrong origin, non-interruptible dynamic UI, missing reduced-motion); **LOW** = polish (stagger, blur-masked crossfades, token consolidation).
 
-After the table, list 2–4 **missed opportunities** — places that don't animate but should (a jarring state change, a rare delight moment) — separately, since they're additive rather than corrective.
+After the table, list up to 4 **missed opportunities** — places that don't animate but should (a jarring state change, a rare delight moment) — separately, since they're additive rather than corrective. If you found none, say so.
 
 Then **stop and wait for the user to select** which findings become plans. If running non-interactively, default to the top 3–5 by leverage.
 
@@ -86,13 +90,13 @@ One plan per selected finding, using [PLAN-TEMPLATE.md](PLAN-TEMPLATE.md), writt
 
 Write for the weakest executor: exact file paths and current-code excerpts, the exact target values (cubic-beziers, durations, spring configs — pulled from AUDIT.md, never approximated), the repo's own conventions with an exemplar, ordered steps, hard scope boundaries, and a verification section including how to *feel-check* the result (slow motion, frame-by-frame, real device for gestures).
 
-Finish by creating or updating the motion-plan index: recommended execution order, dependencies between plans, and a status column.
+Finish by creating or updating the motion-plan index: a table of plans (number, title, severity, status), the recommended execution order, and dependencies between plans.
 
 ## Invocation Variants
 
 | Invocation | Behavior |
 | --- | --- |
-| bare | Full workflow: recon → audit all categories → vet → confirm → plans |
+| a request with no variant ("improve the animations") | Full workflow: recon → audit all categories → vet → confirm → plans |
 | `quick` / `deep` | Adjust audit effort (see table); composes with a focus |
 | a category focus (`performance`, `accessibility`, `easing`…) | Recon + audit that category only |
 | `plan <description>` | Skip the audit; recon just enough to specify, then write a single plan for the described improvement |

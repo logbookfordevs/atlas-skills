@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index 70bb73c..8294317 100644
+--- a/source.md
++++ b/source.md
+@@ -63,7 +63,7 @@ Flag these on sight, hard:
+ - Missing `prefers-reduced-motion` handling on movement
+ - Ungated `:hover` motion
+ - Symmetric enter/exit timing on a press-and-release or hold interaction
+-- Everything-at-once entrance where a 30–80ms stagger belongs (non-uniform, one entrance per container; see `../choreograph/SKILL.md`)
++- Everything-at-once entrance where a 30–80ms stagger belongs (non-uniform, one entrance per container; see Atlas Motion's Choreograph method)
+ 
+ ## Remedial Preference Hierarchy
+ 

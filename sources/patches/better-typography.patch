@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 843e22d..3831273 100644
+index 95ecb61..6a0fa22 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,9 +5,12 @@ description: Sets and reviews how text renders, from the type scale and spacing
@@ -9,7 +9,7 @@ index 843e22d..3831273 100644
 +## Atlas integration
 +Follow the caller's authorization and review scope. Load the linked domain methods when their rules are needed. For animation or gesture decisions, follow Atlas Motion's Motion ownership ruling.
 +
- This skill sets and reviews how text renders, from the type scale and spacing to font loading, wrapping and punctuation. It writes every fix in the project's styling system, and the [cheat sheet](css-cheat-sheet.md) maps each declaration to its Tailwind utility.
+ This skill sets and reviews how text renders, from the type scale and spacing to font loading, wrapping and punctuation. It writes every fix in the project's styling system, and the [cheat sheet](css-cheat-sheet.md) gives the Tailwind form of each declaration with no obvious utility.
  
 -The words belong to `better-writing`, semantic heading structure to `better-accessibility` and spatial RTL layout to `better-layout`. Measure contrast with `better-colors`; whether it passes is `better-accessibility`'s.
 +The words belong to [Copy](../copy/index.md), semantic heading structure to [Accessibility](../accessibility/index.md) and spatial RTL layout to [Layout](../layout/index.md). Measure contrast with [Color](../color/index.md); whether it passes is [Accessibility](../accessibility/index.md)'s.
@@ -33,13 +33,4 @@ index 843e22d..3831273 100644
 +Color is the only part of a real underline that animates reliably. Any other underline animation needs a separate element, and its motion is [UI Polish](../ui/index.md)'s.
  
  ## Inputs at 16px on mobile
- 
-@@ -151,7 +154,7 @@ Keep text selectable by default. `::selection` can carry brand into the reading
- 
- ## Reporting
- 
--**Severity.** `HIGH` makes text unreadable, truncates content with no way back to it or clips text at 320px width or 200% zoom. The last two are `better-interface` escalation triggers, so they stay `HIGH` however minor the surface. `MEDIUM` breaks the type system or the visual heading hierarchy. `LOW` is isolated polish.
-+**Severity.** `HIGH` makes text unreadable, truncates content with no way back to it or clips text at 320px width or 200% zoom. The last two are the whole-interface review escalation triggers, so they stay `HIGH` however minor the surface. `MEDIUM` breaks the type system or the visual heading hierarchy. `LOW` is isolated polish.
- 
- **Verification.** Without a browser, check declared size and weight per heading level, descending within each semantic section. Check declared line-height, units and measure. Check truncation rules against realistic string lengths. With one, compare computed values, then resize the viewport with real content to catch wrapping, lone last-line words and truncation. Report every check you could not run as `Not verified`.
  

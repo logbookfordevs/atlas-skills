@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index d2a6a82..63a8b6d 100644
+index 483f67b..f03da57 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,11 +5,14 @@ description: Sets grouping, alignment, reading order, responsive structure and r
@@ -22,8 +22,8 @@ index d2a6a82..63a8b6d 100644
  
  ## One primary action per view
  
--Give each view one primary action. Put secondary actions behind a menu once there are more than 3. Prefer a short view that links deeper over one long view that shows everything at the top level. `better-colors` owns how color marks the primary action.
-+Give each view one primary action. Put secondary actions behind a menu once there are more than 3. Prefer a short view that links deeper over one long view that shows everything at the top level. [Color](../color/index.md) owns how color marks the primary action.
+-Give each view one primary action. Once a view has more than 3 secondary actions, put them behind a menu. Prefer a short view that links deeper over one long view that shows everything at the top level. `better-colors` owns how color marks the primary action.
++Give each view one primary action. Once a view has more than 3 secondary actions, put them behind a menu. Prefer a short view that links deeper over one long view that shows everything at the top level. [Color](../color/index.md) owns how color marks the primary action.
  
  ## Hint at hidden content
  
@@ -34,12 +34,3 @@ index d2a6a82..63a8b6d 100644
  
  ## Borderless controls need more clearance
  
-@@ -71,7 +74,7 @@ Never park a critical action where resizing, zoom or scrolling clips it. Keep it
- | --- | --- |
- | `grid-template-columns: … 1fr` or a flex child holding long text or a wide table, overflowing its track | `minmax(0, 1fr)` on the track, `min-width: 0` on the flex child |
- | `width: 100vw` | `width: 100%`; `100vw` includes the scrollbar and scrolls horizontally on desktop |
--| `height: 100vh` on a full-height mobile pane | `100dvh`, so the browser toolbar and keyboard never cover the bottom |
-+| `height: 100vh` on a full-height mobile pane | `100dvh` for browser-toolbar changes; verify software-keyboard clearance separately |
- | `height:` with a fixed length on a box holding text | `min-height`, or `max-height` with `overflow-y: auto` |
- | `@media (max-width: …)` inside a reusable component | `@container` on the component's parent |
- | `container-type: inline-size` on a flex item, inline-block or absolute element with no width | Give it a definite width; size containment collapses a shrink-to-fit box to zero |
