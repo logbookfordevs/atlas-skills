@@ -29,6 +29,8 @@ Verbatim sources must match their snapshots; patched sources must replay exactly
 
 The detector is deterministic; behavior review remains a maintainer or agent task. Clean patch replay and passing package checks do not prove that changed instructions fit Atlas's workflow. Adoption remains deliberate.
 
+Give upstream authors the benefit of the doubt. Treat shorter text, removed examples and deleted reference files as deliberate improvements by default; lean instructions often serve frontier models better. Start from the new upstream and re-apply only Atlas differences with a current reason: integration (local names, links, host and model selection) or a ruling the new text would violate. When a ruling only protected detail upstream has since dropped, relax the ruling. Keep our text or decline only when you can name the concrete agent failure the upstream text would cause, and record that failure as the reason.
+
 For a reviewed candidate that should not be adopted, record its exact `revision`, `reviewedAt` and concrete `reason` in the source’s `declinedUpdates`. Keep the carried pin intact. The watcher reports that revision as `declined` with the reason and creates no issue for it; a later revision is reviewed normally. Resolve the original issue through the PR recording the decision.
 
 ## Current scope

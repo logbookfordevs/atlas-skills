@@ -1,0 +1,15 @@
+diff --git a/source.md b/source.md
+index 46d221b..f69b30f 100644
+--- a/source.md
++++ b/source.md
+@@ -1,8 +1,8 @@
+ # Reporting
+ 
+-The severity ladder and format for a standalone review. `better-interface` replaces both when it orchestrates.
++The severity ladder and format for a standalone review. [Interface Audit](../interface/audit/index.md) replaces both when it orchestrates.
+ 
+-**Severity.** `HIGH` prevents a task, hides content from assistive technology or creates a systemic failure. `MEDIUM` makes an interaction meaningfully harder. `LOW` is isolated polish. This domain's share of `better-interface`'s escalation triggers is `HIGH` on sight. That is a missing accessible name, a missing focus indicator and a pointer path with no keyboard path. It is also motion ignoring reduced motion, loss at 320px or 200% and meaning carried by color alone.
++**Severity.** `HIGH` prevents a task, hides content from assistive technology or creates a systemic failure. `MEDIUM` makes an interaction meaningfully harder. `LOW` is isolated polish. This domain's share of the whole-interface review's escalation triggers is `HIGH` on sight. That is a missing accessible name, a missing focus indicator and a pointer path with no keyboard path. It is also motion ignoring reduced motion, loss at 320px or 200% and meaning carried by color alone.
+ 
+ **Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
+ 

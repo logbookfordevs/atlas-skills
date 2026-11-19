@@ -1,0 +1,13 @@
+diff --git a/source.md b/source.md
+index 20bc376..8d8bf1d 100644
+--- a/source.md
++++ b/source.md
+@@ -169,7 +169,7 @@ Keep it short — this is one of the few animations that costs layout on every f
+ 
+ ## Stagger a group entrance
+ 
+-For a list or grid the user sees occasionally — not for a list they scroll past all day. For group entrances, follow `../choreograph/SKILL.md` (one entrance per container, non-uniform delays).
++For a list or grid the user sees occasionally — not for a list they scroll past all day. For group entrances, follow [Choreograph](../choreograph/choreograph.md) (one entrance per container, non-uniform delays).
+ 
+ ```css
+ .item {

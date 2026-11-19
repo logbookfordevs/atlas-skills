@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index 091a28d..7e3d598 100644
+index 52be42f..c383baa 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,15 +5,11 @@ description: Try to break a piece of UI by feeding it worst-case data — long n
@@ -41,7 +41,7 @@ index 091a28d..7e3d598 100644
  
  Fixed at the bottom-center of the viewport, out of the component's way. Small, neutral, obviously chrome. It is not part of the design under test, so keep it plain: a gray track, a white pill on the active segment, system font. Switching is instant, with no animation on the content.
  
-@@ -110,7 +106,7 @@ Each of these appears in the screenshot. The cause in the right column is almost
+@@ -112,7 +108,7 @@ Each of these appears in the screenshot. The cause in the right column is almost
  | Long translated button label overflows | Fixed-width button | Width from content with `min-width`, never a fixed `width` |
  | Diacritics or tall scripts (Vietnamese, Thai) clipped top or bottom | Tight `line-height` with `overflow: hidden` | Looser `line-height` or no clipping on text boxes |
  | Broken-image icon in the avatar | No `onError` fallback | Fall back to initials; `object-fit: cover` for any aspect ratio |
@@ -50,7 +50,7 @@ index 091a28d..7e3d598 100644
  | Scrolling 1,000 rows stutters | Every row rendered | Virtualize, or paginate, and say which |
  | Content renders raw `<b>`, `&amp;`, or `**text**` | Wrong escaping layer | Escape once, at render; never `dangerouslySetInnerHTML` user data |
  
-@@ -130,11 +126,9 @@ Every long string forces this choice. Make it per field, not globally:
+@@ -132,11 +128,9 @@ Every long string forces this choice. Make it per field, not globally:
  
  Present the findings in the format below, leave the toggle running, and stop. The user flips the toggle, looks, and decides.
  
@@ -64,7 +64,7 @@ index 091a28d..7e3d598 100644
  
  ## Required Output Format
  
-@@ -159,15 +153,15 @@ Breaks with more than one right answer: truncate vs wrap for a field, what an em
+@@ -161,15 +155,15 @@ Breaks with more than one right answer: truncate vs wrap for a field, what an em
  
  List the worst cases the component already handles. This shows the test was real and tells the user what not to touch.
  

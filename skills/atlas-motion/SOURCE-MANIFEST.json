@@ -29,7 +29,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/animate/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -37,53 +37,57 @@
       "supportingFiles": [
         {
           "upstreamPath": "skills/animate/RECIPES.md",
-          "classification": "verbatim",
-          "sourceSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+          "classification": "patched",
+          "sourceSha256": "129cddcba35dedacd307ef2de7f2c71e6d23efd9c1756dde44168241207581f9",
           "carriedPath": "references/animate/RECIPES.md",
-          "carriedSha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2"
+          "carriedSha256": "5f93a9401124d876dfed43f5216dc9946ef9f02cb3668cd04b4e754e1af34e37",
+          "patch": "sources/patches/animate/RECIPES.md.patch",
+          "patchSha256": "f17830abee41f1426f3bfff3780b1247c855a1ce834acc30f40f7fd2d633cb59"
         }
       ],
       "notices": [],
-      "sourceSha256": "39138996033e0dbe53e73217514116eaeca774bae84a0687c80d445a4e0cc3a6",
+      "sourceSha256": "4ce49ea635ec175b45552bae070ea07b2d6aa5367047994250c1c095b71c8585",
       "carriedPath": "references/animate/animate.md",
-      "carriedSha256": "7ad0a8ebb3864c33013fc4bb83cbb33408c151c743bead70ef71d8cf10570b73",
+      "carriedSha256": "2660391bb605e17c1e4d3fd290c306b8d908863e049d7efc8b5032cd58aa5b94",
       "licensePath": "licenses/animate.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. Supporting files remain verbatim.",
+      "adaptation": "Replace component-selection tooling with the user-selected library-discovery instruction. Remove the canned initial response and name Atlas review/discovery handoffs directly; Native remains outside the composition. RECIPES.md only relinks its choreograph pointer to the carried Choreograph method.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "motion-choreograph-owner",
         "motion-local-routing",
         "review-motion-owner"
       ],
       "patch": "sources/patches/animate.patch",
-      "patchSha256": "fcd519cae6f96cafdd36d2b9aecbe8e43c08de2f351f80bf44619dd7b44d92cd"
+      "patchSha256": "f9365cd1853dc7aeb14d24135cfb8bc8112ed9f70a6b238ece8675f62db02853"
     },
     {
       "id": "apple-design",
       "owner": "Engineering Principles",
-      "classification": "verbatim",
+      "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/apple-design/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+      "sourceSha256": "7fbacf928637e136da6d475358d0639667a3637ba772f03f8e815bb4c0b86946",
       "carriedPath": "references/fluid/apple-design.md",
-      "carriedSha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+      "carriedSha256": "f6f84720086ac8109cf0ebed992ccfe5e09f68857a0d22e628c61513c443edc8",
       "licensePath": "licenses/apple-design.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "adaptation": "None. Upstream entry and supporting runtime files are preserved byte-for-byte. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
+      "adaptation": "Relink the sibling animation-performance pointer to the carried Performance method. Motion selects Animate for construction and Apple Design for physical interaction guidance.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-05",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "review-motion-owner"
-      ]
+      ],
+      "patch": "sources/patches/apple-design.patch",
+      "patchSha256": "a5c4c14af05a1006d406d42294faeeb8fd2a255f131b99655f2a08963eab6950"
     },
     {
       "id": "find-animation-opportunities",
@@ -91,27 +95,27 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/find-animation-opportunities/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "d52a377819b84a71930f0c822cfe2849f40301605a2d5c7eccbfa3b257700df2",
+      "sourceSha256": "331479e0d867f90d637ef3ef1bdbbd38498d144ab493442afdfbc138abc751b4",
       "carriedPath": "references/opportunities/index.md",
-      "carriedSha256": "aebe5a1d1949b11d05be67d94d82a1d888a4a9d22342974fa66f543c772b0b18",
+      "carriedSha256": "5f18718dc1aaea33939069d25ca47c77eeef41e024db047422b63296aa48bcd7",
       "licensePath": "licenses/find-animation-opportunities.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-      "adaptation": "Remove the canned initial response and name Atlas Review audit/planning handoffs directly. Preserve upstream discovery rules; Native remains outside the composition.",
+      "adaptation": "Remove the canned initial response and name Atlas Review audit/planning handoffs directly. Preserve upstream discovery rules; Native remains outside the composition. Relink the choreograph pointer to the carried Choreograph method.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-09",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "motion-choreograph-owner",
         "motion-local-routing"
       ],
       "patch": "sources/patches/find-animation-opportunities.patch",
-      "patchSha256": "da2ccb6e3e0d6da5216cbb7ab0075ddde555e806dadd972d2e5bf68813716b51"
+      "patchSha256": "fb604e0bac4f07f49e6a4864cf3ba855608b3be985d6954b43ebf46ce7aee7fe"
     },
     {
       "id": "animation-performance",
@@ -119,26 +123,26 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "f1090bec277140d02ed202440185ad9d02ac1490",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/animation-performance/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "6c60f45ab416ff3f7d7765a5427beead77fab0d82487fe610d2a298397558d0a",
+      "sourceSha256": "6481e7a611b54c0d1d229ac3ac516c05648e63aa79de88c0a1bdc5ae2666ab80",
       "carriedPath": "references/performance/animation-performance.md",
-      "carriedSha256": "e66129c02e597a95bcb9f6ed2fffc23742523058d9a45de45a4a3014074154d9",
+      "carriedSha256": "39d45f096eda028f1dfe55289784ad811ae96fb24703615a1fb5246b1bb40595",
       "licensePath": "licenses/animation-performance.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "adaptation": "Remove canned readiness text, route Animate locally and motion review to Atlas Review. Preserve layout semantics in property swaps and browser/driver evidence limits while adopting version-specific Motion 14.2 acceleration and exceptions; repairs remain request-only.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "motion-local-routing"
       ],
       "patch": "sources/patches/animation-performance.patch",
-      "patchSha256": "f70d3260310d1ffe48c1a73046c33fc7dd25a0ee18dfb3b8f813c004b9158281"
+      "patchSha256": "27837340d937c97739f4784ffa84a59fe83b661d0c200040de13dcf5e7523ef2"
     },
     {
       "id": "choreograph",
@@ -146,7 +150,7 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/emilkowalski/skills",
-        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349",
+        "commit": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
         "path": "skills/choreograph/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
@@ -155,28 +159,28 @@
         {
           "upstreamPath": "skills/choreograph/RECIPES.md",
           "classification": "patched",
-          "sourceSha256": "b61f03b5c47398cf71ce9db4157cc919617228981b1d74a72d6a5fa27e4aaad2",
+          "sourceSha256": "c256ff760f42d905b19f97becd2c0caaf40a95b41b49770c973281374c9600cf",
           "carriedPath": "references/choreograph/RECIPES.md",
-          "carriedSha256": "5d099cb10cf40f21834c6539df103ac946273f30897c11b58a4bf28ee96e799f",
+          "carriedSha256": "2678265fabcf8e4e8c8dbdf90a10c0c319a274e71ad52de5198cfe8a2a68e7ae",
           "patch": "sources/patches/choreograph/RECIPES.md.patch",
-          "patchSha256": "9f1f817c627552a0276bd022b66108310c2d84664d4cda8dde889f849175e84f"
+          "patchSha256": "60e137e02bf25eb15333c536a8142d63480121f8b536627376782c300826f2e7"
         }
       ],
       "notices": [],
-      "sourceSha256": "815c7d889230bafc72c03bb0769087aeede310130e8795c7949b3e3a1684e464",
+      "sourceSha256": "0a6802bb2fd5a3993842d48332b8ab56ae5bab369ffa8700f85f6fcff56b8478",
       "carriedPath": "references/choreograph/choreograph.md",
-      "carriedSha256": "9f2183a530905a46ae4a322a6b5fbf18deb64111ee178030c8e549e4d3bd7da6",
+      "carriedSha256": "6c914b132a82e432d2352aa1803def32d282d0e5b5d468da28c2044855832d0e",
       "licensePath": "licenses/choreograph.txt",
       "licenseSha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "adaptation": "Remove the canned initial response, add Atlas Motion's ownership pointer, and route the single-animation and should-it-animate handoffs to Atlas Motion's Animate and Opportunities methods. RECIPES.md only relinks its SKILL.md pointer to the carried choreograph.md. Upstream choreography rules are preserved.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-12",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "motion-choreograph-owner",
         "motion-local-routing"
       ],
       "patch": "sources/patches/choreograph.patch",
-      "patchSha256": "eea3c2a58d76a19bed9d2c096bb318908abcddfb4d9d3eca4f18948c55522b72"
+      "patchSha256": "e6150f3a1b1274f1bb98284b86e60e8b9e6da667d4b511bada4bf729cf1fc72e"
     }
   ],
   "rulings": [
@@ -209,18 +213,18 @@
   "files": {
     "SKILL.md": "418596f410864ea0a52c2f14d5fde65ce1e1529d486269a734d6f14e41f5d927",
     "agents/openai.yaml": "c5d9b29bc499b99476ced9136a8c01ebed733024d3af8c14361ab140e93bfe10",
-    "references/animate/animate.md": "7ad0a8ebb3864c33013fc4bb83cbb33408c151c743bead70ef71d8cf10570b73",
+    "references/animate/animate.md": "2660391bb605e17c1e4d3fd290c306b8d908863e049d7efc8b5032cd58aa5b94",
     "licenses/animate.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/animate/RECIPES.md": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
-    "references/fluid/apple-design.md": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+    "references/animate/RECIPES.md": "5f93a9401124d876dfed43f5216dc9946ef9f02cb3668cd04b4e754e1af34e37",
+    "references/fluid/apple-design.md": "f6f84720086ac8109cf0ebed992ccfe5e09f68857a0d22e628c61513c443edc8",
     "licenses/apple-design.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/opportunities/index.md": "aebe5a1d1949b11d05be67d94d82a1d888a4a9d22342974fa66f543c772b0b18",
+    "references/opportunities/index.md": "5f18718dc1aaea33939069d25ca47c77eeef41e024db047422b63296aa48bcd7",
     "licenses/find-animation-opportunities.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/performance/animation-performance.md": "e66129c02e597a95bcb9f6ed2fffc23742523058d9a45de45a4a3014074154d9",
+    "references/performance/animation-performance.md": "39d45f096eda028f1dfe55289784ad811ae96fb24703615a1fb5246b1bb40595",
     "licenses/animation-performance.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/choreograph/choreograph.md": "9f2183a530905a46ae4a322a6b5fbf18deb64111ee178030c8e549e4d3bd7da6",
+    "references/choreograph/choreograph.md": "6c914b132a82e432d2352aa1803def32d282d0e5b5d468da28c2044855832d0e",
     "licenses/choreograph.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
-    "references/choreograph/RECIPES.md": "5d099cb10cf40f21834c6539df103ac946273f30897c11b58a4bf28ee96e799f",
+    "references/choreograph/RECIPES.md": "2678265fabcf8e4e8c8dbdf90a10c0c319a274e71ad52de5198cfe8a2a68e7ae",
     "references/motion-ownership.md": "6ac76ab63eb8d927988aba18b08da1ea9e046d83b8bd9d3668b7b4dba24fcd28",
     "references/ownership.md": "166cf8437712cb30e2cc2306a029dd47c824089bee86677a8d12bc944307d91a"
   }

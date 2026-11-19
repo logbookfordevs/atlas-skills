@@ -43,21 +43,21 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "6c75f4e67546c2ddbf9634734c1e3ebbea34861a",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/arena/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "2d852994eaa2f0abe7a9de959b21f0d5a818cc8a000acc65350d7b8fae914992",
+      "sourceSha256": "a805e26bae282f952752892d1ca4d66d5a1834d3c32a5486cdd1ed4da7c4ca38",
       "carriedPath": "references/arena/arena.md",
       "carriedSha256": "11b266fb3581b3e71f1e634c48daa39d8d1f8170dbe918cdcef50bb1b9534f09",
       "licensePath": "licenses/pstack-arena.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
       "adaptation": "Shared Arena method for Team Up candidate comparison and Architect. Use the shared role/model/effort selection reference instead of provider settings and fixed defaults; use cross-family judges when available and disclose skipped or uncheckable judging. Preserve bounded scheduling, output isolation, sequential fallback and caller minimums. Carry the complete contextual principle closure. Update bundled reference links for ordinary Markdown filenames. Permit callers to execute only explicitly selected phases with their own brief and evidence contract.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-11-03",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "implement-architect-phases",
         "implement-candidate-ownership",
@@ -66,7 +66,7 @@
         "team-up-arena-policy"
       ],
       "patch": "sources/patches/pstack-arena.patch",
-      "patchSha256": "618516256e3e0f17539bc51ca79fa5610a4a2b011405a5de339b10269bdefc06"
+      "patchSha256": "b42fbec25f8f6c22ff93d639e91c5387b5e490093bf42d8e94387a710ca75c58"
     },
     {
       "id": "pstack-swarm",
@@ -74,27 +74,27 @@
       "classification": "patched",
       "upstream": {
         "repository": "https://github.com/backnotprop/pstack",
-        "commit": "f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37",
+        "commit": "0d2dc00df47d7686c94324cfe9c3444710d9f16d",
         "path": "skills/swarm/SKILL.md",
         "licensePath": "LICENSE",
         "trackingRef": "main"
       },
       "supportingFiles": [],
       "notices": [],
-      "sourceSha256": "c94b57907ef23936623da152ae15da2b1e6f2af50917f5368cb41a8e1041933b",
+      "sourceSha256": "75f9aba69b5fc9fa506bc58e3aa37cff3929c697082fff322a06daef52d7bf0e",
       "carriedPath": "references/swarm/swarm.md",
-      "carriedSha256": "91e8602356fd5c53fb13a83422edb59955e85214fd07be994686ea316540a97c",
+      "carriedSha256": "f827969bf51be553d0f4cec0af7e8afb51b8ec81780b45c08b6b237fc24ca6b7",
       "licensePath": "licenses/pstack-swarm.txt",
       "licenseSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "adaptation": "Replace fixed cloud/Cursor/model defaults with shared Team Up selection and host-bounded execution. Preserve partition/race/hybrid shapes, declared winner policy, exact revision/measurement evidence, retry-on-missing-evidence and explicit coverage gaps. Bind worker writes to task scope and account for worker completion and cleanup.",
+      "adaptation": "Select worker models through Team Up's selection policy instead of the pstack settings file; replace Cursor cloud dispatch with each host's subagent tool and per-worker worktrees. Name a patch for uncommitted work under test, and stop remaining workers once a race is decided.",
       "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-26",
+      "adoptedAt": "2026-11-18",
       "rulings": [
         "team-up-method-selection",
         "team-up-swarm-evidence"
       ],
       "patch": "sources/patches/pstack-swarm.patch",
-      "patchSha256": "cd964bf314bc317e5d065d72d3460ac79b9d2d08eac31d86643df46118f3625a"
+      "patchSha256": "a3679c7090e12cd2406985b428e67e1eebff5c2878e2bdc3e8f70bbe641b0458"
     }
   ],
   "rulings": [
@@ -117,7 +117,7 @@
       "sources": [
         "pstack-swarm"
       ],
-      "decision": "Preserve declared race/coverage semantics and exact revision/measurement evidence. Bounded waves or sequential fallback do not claim unavailable concurrency. Retry evidence omissions once, keep dropouts and unproved slices as gaps, verify winning artifacts and account for every worker and its cleanup."
+      "decision": "Keep the declared race rule and exact SHA/method evidence; retry a missing record once; gaps are not passes; stop the remaining workers after a race is decided."
     },
     {
       "id": "team-up-arena-policy",
@@ -131,7 +131,7 @@
         "pstack-principle-redesign-from-first-principles",
         "pstack-principle-prove-it-works"
       ],
-      "decision": "Team Up owns the maintained Arena method; Architect runs it through Team Up, and its four principles resolve through Engineering Principles, while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported. No external audit workflow is activated."
+      "decision": "Team Up owns the maintained Arena method; Architect runs it through Team Up, and its four principles resolve through Engineering Principles, while preserving caller-specific minimums and proof criteria. Selection uses Team Up policy only; actual candidate/judge models and independence gaps are reported."
     }
   ],
   "files": {
@@ -141,7 +141,7 @@
     "references/model-preferences.md": "fd0c9f1b037f51af17e96ddd384b6538bf6fa70ac8e0eff14196ddb2abbb80d9",
     "references/arena/arena.md": "11b266fb3581b3e71f1e634c48daa39d8d1f8170dbe918cdcef50bb1b9534f09",
     "licenses/pstack-arena.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-    "references/swarm/swarm.md": "91e8602356fd5c53fb13a83422edb59955e85214fd07be994686ea316540a97c",
+    "references/swarm/swarm.md": "f827969bf51be553d0f4cec0af7e8afb51b8ec81780b45c08b6b237fc24ca6b7",
     "licenses/pstack-swarm.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
   }
 }

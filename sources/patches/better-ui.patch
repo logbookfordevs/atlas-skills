@@ -1,5 +1,5 @@
 diff --git a/source.md b/source.md
-index b8abea3..1b63294 100644
+index 3cf64b7..2e211b3 100644
 --- a/source.md
 +++ b/source.md
 @@ -5,6 +5,11 @@ description: Polishes surfaces, icons and motion with exact values for border ra
@@ -16,7 +16,7 @@ index b8abea3..1b63294 100644
  ## Exact values, optional polish
 @@ -13,7 +18,7 @@ The values below are exact, not ranges to approximate. `cubic-bezier(0.2, 0, 0,
  
- Keep the project's component library, tokens and density, and match its motion language wherever no rule here gives a value. A deliberate and consistent project convention, such as a style with no shadows, is a preference and not a finding. The same detail done two ways within the project is a finding.
+ Keep the project's component library, tokens and density, and match its motion language wherever no rule here gives a value. A deliberate and consistent project convention, such as a style with no shadows, is a preference and not a finding. That covers a value too, so a project that presses to `0.95` on every button keeps it. The same detail done two ways within the project is a finding.
  
 -Text wrapping, font rendering, tabular numbers and text spacing belong to `better-typography`. Hit areas, keyboard support, ARIA and the reduced-motion requirement belong to `better-accessibility`. Grouping, section spacing, breakpoints and spatial RTL belong to `better-layout`, except directional icon mirroring. Color tokens and contrast measurement belong to `better-colors`.
 +Text wrapping, font rendering, tabular numbers and text spacing belong to [Type](../type/index.md). Hit areas, keyboard support, ARIA and the reduced-motion requirement belong to [Accessibility](../accessibility/index.md). Grouping, section spacing, breakpoints and spatial RTL belong to [Layout](../layout/index.md), except directional icon mirroring. Color tokens and contrast measurement belong to [Color](../color/index.md).
@@ -52,7 +52,7 @@ index b8abea3..1b63294 100644
 -
 -## Gate motion behind the reduced-motion preference
 -
--`better-accessibility` owns the requirement, and no recipe here ships without it. Run movement, scale and blur only under `prefers-reduced-motion: no-preference`. Under reduced motion, replace them with an opacity cross-fade rather than removing the element instantly. Recipes for CSS, Tailwind and Motion are in [animations.md](animations.md#reduced-motion-fallback).
+-`better-accessibility` owns the requirement. Recipes in the reference files show the full-motion form, so add this gate and the query in **Hover effects only on hover-capable pointers** when you use one. Run movement, blur and entrance or exit scale only under `prefers-reduced-motion: no-preference`. The press scale stays, because it is brief feedback and not travel. Under reduced motion, replace them with an opacity cross-fade rather than removing the element instantly. Recipes for CSS, Tailwind and Motion are in [animations.md](animations.md#reduced-motion-fallback).
 -
 -## Stagger infrequent entrances by 100ms
 -
@@ -93,7 +93,7 @@ index b8abea3..1b63294 100644
  
  ## Contain scroll inside overlays
  
-@@ -104,22 +63,13 @@ Icons use `currentColor` and take hover, selected and disabled states from CSS c
+@@ -104,17 +63,8 @@ Icons use `currentColor` and take hover, selected and disabled states from CSS c
  | Padded parent and child with the same `rounded-*` or `border-radius` | Add the padding to the outer radius |
  | `box-shadow: 0 0 0 1px` ring with no `border` beside it | `border: 1px solid transparent` |
  | `outline-slate-*`, `outline-zinc-*` or a hex outline color on `img` | `outline-black/10` and `dark:outline-white/10` |
@@ -103,7 +103,7 @@ index b8abea3..1b63294 100644
  | `:active` scale with no `:disabled` exclusion | `enabled:active:` or `:not(:disabled):active` |
 -| `bounce:` set to anything but `0` | `bounce: 0` |
 -| `opacity: 0` in a base rule that only an `animation` reveals | Hidden state in the `from` keyframe, `animation-fill-mode: both` |
--| `translate`, `scale`, `filter` or `motion.*` animation with no `prefers-reduced-motion`, `motion-safe:` or `MotionConfig` guard | Gate it and cross-fade opacity under reduced motion |
+-| `translate`, `filter`, `motion.*` or a `scale` other than the press with no `prefers-reduced-motion`, `motion-safe:` or `MotionConfig` guard | Gate it and cross-fade opacity under reduced motion |
 -| Color transitions plus a theme toggle with no `disableTransitionOnChange` or override | The theme-switch suppression recipe |
 -| `will-change: all`, or `will-change` on an element that never animates | Name the animated property or delete it |
  | `fill="#..."` or `stroke="#..."` inside an icon SVG | `currentColor` |
@@ -111,9 +111,3 @@ index b8abea3..1b63294 100644
  | `overflow: auto` or `overflow-y-auto` on a dialog, drawer or menu with no `overscroll-behavior` | `overscroll-behavior: contain` |
  
  ## Reporting
- 
--**Severity.** `HIGH` breaks an interaction, as a keyframe toggle that cannot reverse or a hover state stuck on touch does. Two of `better-interface`'s escalation triggers land here and are `HIGH` on sight. One is motion that ignores `prefers-reduced-motion`, and the other is a state change carried by motion alone. `MEDIUM` is a visible inconsistency in surfaces, icons or motion. `LOW` is isolated polish.
-+**Severity.** `HIGH` breaks an interaction, as a keyframe toggle that cannot reverse or a hover state stuck on touch does. Two of the whole-interface review's escalation triggers land here and are `HIGH` on sight. One is motion that ignores `prefers-reduced-motion`, and the other is a state change carried by motion alone. `MEDIUM` is a visible inconsistency in surfaces, icons or motion. `LOW` is isolated polish.
- 
- **Verification.** Without a browser, read every state the component defines from the code, such as hover, pressed, selected, loading and empty, with its durations and easings. With one, walk each state and replay motion at 10% speed in the browser's Animations panel. Report every check you could not run as `Not verified`.
- 
