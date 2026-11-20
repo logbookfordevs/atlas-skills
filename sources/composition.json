@@ -5555,9 +5555,9 @@
       ]
     },
     {
-      "id": "investigate",
-      "entry": "utility-skills/investigate/SKILL.md",
-      "agent": "utility-skills/investigate/agents/openai.yaml",
+      "id": "scout",
+      "entry": "utility-skills/scout/SKILL.md",
+      "agent": "utility-skills/scout/agents/openai.yaml",
       "methods": [],
       "authoredReferences": [],
       "dependencies": [
@@ -5586,7 +5586,7 @@
           "condition": "When diagnoses conflict and the code cannot settle them, or acting on an unverified cause would be costly."
         }
       ],
-      "directory": "utility-skills/investigate"
+      "directory": "utility-skills/scout"
     },
     {
       "id": "snap-out-of-it",

@@ -170,7 +170,7 @@ describe('Atlas navigation', () => {
 it.each([
   { id: 'atlas-figures', name: 'Atlas Figures', directory: 'creative-skills' },
   { id: 'writing-for-humans', name: 'Writing for Humans', directory: 'utility-skills' },
-  { id: 'investigate', name: 'Investigate', directory: 'utility-skills' },
+  { id: 'scout', name: 'Scout', directory: 'utility-skills' },
   { id: 'snap-out-of-it', name: 'Snap Out of It', directory: 'utility-skills' },
   { id: 'challenge', name: 'Challenge', directory: 'utility-skills' },
   { id: 'showdown', name: 'Showdown', directory: 'utility-skills' },
