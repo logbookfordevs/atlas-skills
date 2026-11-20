@@ -3395,7 +3395,7 @@
   ],
   "rulings": [],
   "files": {
-    "SKILL.md": "41d3311ab762e5c4093f370843e9719b8586d5d664505e761f5944c53fa980f2",
+    "SKILL.md": "42f700b98549fefb3471a67aa8d4e2d03944d6cc34397ab5f2bc68e72891af6c",
     "agents/openai.yaml": "4defcf175d3a415cd3f67c1893a5cac0f0be95e6467f071056326343f4c654af",
     "references/hairline-create/hairline-create.md": "8675ceec106ec227aec00cd6a4ec883333e1acc16da5cc96e8e10a3c758ea841",
     "licenses/hairline-create.txt": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
