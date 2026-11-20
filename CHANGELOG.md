@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Restore April Zhu’s original description for Playable; its only adaptation is manual-only invocation.
 - Add April Zhu’s Pocket City as an optional, manually invoked standalone creative skill from her download: real places drawn as interactive isometric dioramas from OpenStreetMap data. Keep the workflow, scripts and assets verbatim with the MIT license and source fingerprints, record the manual-invocation patch, and let Atlas Figures recommend it for real-place subjects instead of listing it as a treatment.
 - Add Pasquale Vitiello’s Plotter as Atlas Figures’ eighth treatment: flat blueprint illustrations as editable SVG, with its catalogue, foundation, checks and motion workflow. Track it through the reviewed Git pipeline, keep its MIT license, notice and Cal Sans font license, and patch only the references to the renamed method file.
 - Show Atlas Figures treatments before you choose: the menu displays a still sample of each treatment, captured from its author’s bundled examples, and a gallery page collects them when asked. Teardown, which ships no example, gets an Atlas-drawn game-console teardown as its sample and live viewer.

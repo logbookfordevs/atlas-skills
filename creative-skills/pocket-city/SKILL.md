@@ -1,6 +1,6 @@
 ---
 name: pocket-city
-description: "Build an interactive, hand-drawn isometric diorama of a real place from OpenStreetMap data, with researched buildings, seasons and street life, as one HTML page."
+description: Build a "Pocket City" of any place in the world - an interactive, hand-drawn isometric diorama of a square plot (150-250 m) with real buildings, streets, trees, shopfronts, traffic and people, as one self-contained HTML page. Use it when someone wants a pocket city, a city diorama, an isometric map or miniature of a street, a neighbourhood or a landmark's surroundings, or a playable street scene of a real place. The skill fetches OpenStreetMap data, places the square so no famous building is cut, researches the buildings' anatomy and street-level design, the climate (seasons or wet/dry weather) and the local culture (festivals and special occasions), then builds the page in the Pocket City style.
 disable-model-invocation: true
 ---
 

@@ -43,12 +43,12 @@
         "scripts/inspect_rig.py": "81cb44873e5141b413b069fbe2a55c03a08aeacd63635e3717c874b4b5820d5b",
         "scripts/to_glb.py": "d6930164d4af05edd764c7fcc44ba911e3ba91910655fa10d2119547052dfb12"
       },
-      "adaptation": "Make invocation manual-only and replace the discovery description with a concise human-facing summary. Add Atlas-owned host metadata with implicit invocation disabled. The workflow, assets, examples and original license remain unchanged.",
+      "adaptation": "Make invocation manual-only, keeping the author's description. Add Atlas-owned host metadata with implicit invocation disabled. The workflow, assets, examples and original license remain unchanged.",
       "patches": [
         {
           "file": "SKILL.md",
           "patch": "patches/playable.patch",
-          "packagedSha256": "99894c81b911e1791511763cf7030cb5732183a7b5d1ec8de0b5adae95d21de2"
+          "packagedSha256": "4cb8cfb0a963bd5904a98afd56e6c6e0d757259134047e4715769174c5e1fc27"
         }
       ],
       "authoredFilesSha256": {
@@ -125,12 +125,12 @@
         "scripts/render.mjs": "d6a4f8e8a0bba386bf68aa49cedf17b9a5983d4765e48e4fcc02a16176172dad",
         "scripts/walks.py": "701be3a6c2fc1bbb0df8d0e63b732c0ec5519e1a563a0c26516ab79307f40887"
       },
-      "adaptation": "Make invocation manual-only and replace the discovery description with a concise human-facing summary. Add Atlas-owned host metadata with implicit invocation disabled. Atlas Figures recommends it for real-place dioramas instead of listing it as a treatment. The workflow, scripts, assets, examples and original license remain unchanged.",
+      "adaptation": "Make invocation manual-only, keeping the author's description. Add Atlas-owned host metadata with implicit invocation disabled. Atlas Figures recommends it for real-place dioramas instead of listing it as a treatment. The workflow, scripts, assets, examples and original license remain unchanged.",
       "patches": [
         {
           "file": "SKILL.md",
           "patch": "patches/pocket-city.patch",
-          "packagedSha256": "869857abed849480312b838d7e8a15663c5f7d1f782eb2925b88b22222da076f"
+          "packagedSha256": "509cc8d9fa74dcc4b5bc7e6bcc00ab637ee3434852697ffec91ed234fb8300a4"
         }
       ],
       "authoredFilesSha256": {
