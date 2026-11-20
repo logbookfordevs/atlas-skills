@@ -70,7 +70,7 @@ The figure engines, visual styles, examples and creative methods come from the a
 
 | Author | Creative work carried in Atlas |
 | --- | --- |
-| **[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** | **[ISO-GLOW](https://isoglow.dev/)** — glowing isometric illustrations and interactive 3D; **[Colorfigures](https://april-zhu.com/colorfigures)** — hand-inked objects with working mechanisms and see-through views; **[Minicharts](https://april-zhu.com/minicharts)** — illustrated data charts drawn to scale; **[Playable](https://april-zhu.com/playable)** — rigged models and original robots you can drive in the browser |
+| **[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** | **[ISO-GLOW](https://isoglow.dev/)** — glowing isometric illustrations and interactive 3D; **[Colorfigures](https://april-zhu.com/colorfigures)** — hand-inked objects with working mechanisms and see-through views; **[Minicharts](https://april-zhu.com/minicharts)** — illustrated data charts drawn to scale; **[Playable](https://april-zhu.com/playable)** — rigged models and original robots you can drive in the browser; **[Pocket City](https://april-zhu.com/pocketcity)** — real places as interactive isometric dioramas |
 | **[Lucas Marques](https://github.com/lucasmarkes/hairline)** | **Hairline** — responsive isometric line figures |
 | **[Ryan](https://github.com/wheresryan22/anatomy)** | **Anatomy** — detailed interactive mechanisms and technical illustrations |
 | **[Brooklyn Nicholson](https://github.com/OutThisLife/brooklyn-skills)** | **Engraved Figures** — scientific plates and monochrome technical drawings |

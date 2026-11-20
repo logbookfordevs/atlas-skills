@@ -1,0 +1,527 @@
+{
+ "name": "Kyoto",
+ "title": "Gion Shirakawa, Kyoto",
+ "region": "Gion",
+ "place": "Shirakawa canal × Tatsumi Bridge",
+ "timezone": "Asia/Tokyo",
+ "level": 2.9,
+ "flag": "<svg aria-hidden='true' viewBox='0 0 30 20'><rect width='30' height='20' fill='#fbf7ee'/><circle cx='15' cy='10' r='5.6' fill='#c9584c'/></svg>",
+ "styles": {
+  "default": {
+   "facade": "timber",
+   "wall": [
+    "#efe6d2",
+    "#e7dcc6",
+    "#ddd2bd"
+   ],
+   "roof": "gabled",
+   "ridge": "street",
+   "pitch": 24,
+   "roofColour": [
+    "#7c7f88",
+    "#74767e",
+    "#83858c"
+   ],
+   "roofTex": "kawara",
+   "eaves": 0.6,
+   "levels": 2,
+   "floor": 2.9,
+   "eave1": true,
+   "eave1Depth": 0.8,
+   "shop": "poi",
+   "awning": false,
+   "maxSpan": 14,
+   "flatRoof": "#cfc9be",
+   "wood": "#5f4637",
+   "slat": "#86684f",
+   "noren": [
+    "#2f4a6b",
+    "#7a3b3b",
+    "#c9b07a",
+    "#3f5a4a"
+   ],
+   "shopHeight": 2.9,
+   "fascia": [
+    "#5b4637",
+    "#3e4a52",
+    "#6b3d36"
+   ],
+   "rectFill": 0.66
+  },
+  "rules": [
+   {
+    "if": {
+     "maxArea": 14
+    },
+    "set": {
+     "levels": 1,
+     "eave1": false,
+     "shop": "none"
+    }
+   },
+   {
+    "if": {
+     "type": "hotel"
+    },
+    "set": {
+     "facade": "apartment",
+     "roof": "flat",
+     "wall": [
+      "#e2dccf"
+     ],
+     "eave1": false,
+     "balcony": "some",
+     "shop": "none"
+    }
+   },
+   {
+    "if": {
+     "minLevels": 4
+    },
+    "set": {
+     "facade": "office",
+     "roof": "flat",
+     "wall": [
+      "#ddd6ca",
+      "#e7e1d6",
+      "#cfc8bd",
+      "#d8cdb9"
+     ],
+     "eave1": false,
+     "shop": "street",
+     "awning": "some",
+     "awnings": [
+      "#6f6a62",
+      "#8a5a48",
+      "#56645a"
+     ],
+     "shopHeight": 3.6,
+     "floor": 3.4
+    }
+   },
+   {
+    "if": {
+     "unknownHeight": true,
+     "minArea": 380
+    },
+    "set": {
+     "facade": "plain",
+     "roof": "flat",
+     "levels": 3,
+     "eave1": false,
+     "wall": [
+      "#e1dace"
+     ]
+    }
+   }
+  ]
+ },
+ "buildings": {},
+ "palette": {
+  "ground": "#e9e0cc",
+  "road": "#b3acb0",
+  "pavement": "#e3d9c6",
+  "walk": "#dcd3c1",
+  "grass": "#b6c995",
+  "slab": "#d6c6a8",
+  "marking": "#f4efe4",
+  "kerb": "#d8cfbd",
+  "paving": "#c9bfae",
+  "water": "#8fb9bd"
+ },
+ "paving": {
+  "size": 1.2
+ },
+ "lamp": {
+  "colour": "#4d4a48",
+  "height": 4.6,
+  "head": "#f4ead2"
+ },
+ "shops": {
+  "signs": [
+   "京菓子",
+   "甘味処",
+   "お茶",
+   "和装小物",
+   "茶房"
+  ],
+  "font": "'Hiragino Mincho ProN','Yu Mincho',serif",
+  "fascias": [
+   "#5b4637",
+   "#3e4a52",
+   "#6b3d36",
+   "#4f5a4c"
+  ]
+ },
+ "trees": {
+  "default": {
+   "style": 3,
+   "colours": [
+    "#93ae80",
+    "#a7bb86"
+   ],
+   "height": 7,
+   "autumn": "#d97b4a",
+   "blossom": "#f3c9d0"
+  },
+  "rules": [
+   {
+    "match": "Bank tree",
+    "vary": 0.3,
+    "mix": [
+     {
+      "style": 4,
+      "colours": [
+       "#a9c47a",
+       "#b8cf88"
+      ],
+      "height": 8,
+      "spring": "#c9e08a",
+      "autumn": "#d9c46a",
+      "share": 1,
+      "blossom": false
+     },
+     {
+      "style": 3,
+      "colours": [
+       "#9db684",
+       "#adc08a"
+      ],
+      "height": 7,
+      "blossom": "#f4c7cf",
+      "autumn": "#d4774f",
+      "share": 1
+     }
+    ]
+   },
+   {
+    "match": "Conifer",
+    "style": 5,
+    "evergreen": true,
+    "colours": [
+     "#6f8f68"
+    ],
+    "height": 7
+   }
+  ]
+ },
+ "people": {
+  "clothes": [
+   "#3f4a5c",
+   "#e9e1d0",
+   "#7a8b9a",
+   "#a8564a",
+   "#4f5a4c",
+   "#d9b97a",
+   "#6d5c7a"
+  ],
+  "umbrellas": [
+   "#e9e3d6",
+   "#3f4a5c",
+   "#b5534a",
+   "#d9b97a"
+  ]
+ },
+ "vehicles": {
+  "kinds": [
+   "small",
+   "small",
+   "hatch",
+   "mpv",
+   "sedan"
+  ],
+  "colours": [
+   "#f2f2ee",
+   "#e9e6dc",
+   "#2f3138",
+   "#9aa3ad",
+   "#b8a68a"
+  ],
+  "plate": "#f4f2e6",
+  "taxi": {
+   "share": 0.3,
+   "colours": [
+    "#2b2c33",
+    "#e8e4d8",
+    "#5f7f66"
+   ],
+   "kind": "sedan",
+   "sign": "#f6e7a6"
+  }
+ },
+ "seasons": [
+  {
+   "id": "spring",
+   "label": "Spring",
+   "leaves": "blossom",
+   "wx": "fluff",
+   "crowd": 1.3,
+   "note": {
+    "text": "About 43 cherry trees line the Shirakawa, usually at their best from late March to early April.",
+    "source": "Jorudan hanami guide",
+    "url": "https://sp.jorudan.co.jp/hanami/spot_720.html"
+   }
+  },
+  {
+   "id": "summer",
+   "label": "Summer",
+   "leaves": "summer",
+   "crowd": 0.9,
+   "note": {
+    "text": "Kyoto stays hot and humid through the summer, often well into September.",
+    "source": "Kyoto City Tourism Association",
+    "url": "https://kyoto.travel/en/seasonal-info"
+   }
+  },
+  {
+   "id": "autumn",
+   "label": "Autumn",
+   "leaves": "autumn",
+   "crowd": 1.2,
+   "note": {
+    "text": "From September to November, Kyoto’s maple leaves deepen in colour.",
+    "source": "Kyoto City Tourism Association",
+    "url": "https://kyoto.travel/en/seasonal-info"
+   }
+  },
+  {
+   "id": "winter",
+   "label": "Winter",
+   "leaves": "bare",
+   "coats": true,
+   "crowd": 0.8,
+   "note": {
+    "text": "Kyoto is cold in winter but does not receive much snow.",
+    "source": "Kyoto City Tourism Association",
+    "url": "https://kyoto.travel/en/seasonal-info"
+   }
+  },
+  {
+   "id": "snow",
+   "label": "Snow",
+   "sub": "winter",
+   "leaves": "bare",
+   "snow": true,
+   "wx": "snow",
+   "coats": true,
+   "crowd": 0.6,
+   "note": {
+    "text": "Tatsumi-bashi dressed in snow is a favourite winter photograph.",
+    "source": "Minna no Camera",
+    "url": "https://www.minnacamera.com/spots/1904"
+   }
+  }
+ ],
+ "occasions": [
+  {
+   "id": "yoizakura",
+   "label": "Yoizakura light-up",
+   "leaves": "blossom",
+   "night": 0.9,
+   "litShare": 0.6,
+   "crowd": 1.7,
+   "decor": {
+    "litTrees": "Bank tree|^$"
+   },
+   "note": {
+    "text": "From 18:00 to 22:00 in late March the cherries along Shirakawa-minami-dori are lit, with more than 300 andon lanterns.",
+    "source": "Kyoto City Tourism · Kyoto Hanatouro",
+    "url": "https://ja.kyoto.travel/event/single.php?event_id=4544"
+   },
+   "petals": true
+  },
+  {
+   "id": "kanikakuni",
+   "label": "Kanikakuni-sai",
+   "leaves": "autumn",
+   "crowd": 1.4,
+   "icon": "autumn",
+   "note": {
+    "text": "On 8 November geiko and maiko offer white chrysanthemums at the Kanikakuni poem stone.",
+    "source": "Kyoto City Tourism",
+    "url": "https://ja.kyoto.travel/event/single.php?event_id=15274"
+   }
+  }
+ ],
+ "months": [
+  "winter",
+  "winter",
+  "spring",
+  "spring",
+  "summer",
+  "summer",
+  "summer",
+  "summer",
+  "autumn",
+  "autumn",
+  "autumn",
+  "winter"
+ ],
+ "isoLabel": "Gion overview",
+ "views": [
+  {
+   "id": "shirakawa",
+   "label": "Shirakawa canal",
+   "camera": {
+    "yaw": -30,
+    "pitch": 30,
+    "zoom": 3,
+    "x": -20,
+    "y": -20,
+    "z": 2
+   }
+  },
+  {
+   "id": "tatsumi",
+   "label": "Tatsumi-bashi",
+   "camera": {
+    "yaw": 150,
+    "pitch": 36,
+    "zoom": 6.5,
+    "x": 4,
+    "y": -9,
+    "z": 1.5
+   }
+  },
+  {
+   "id": "lane",
+   "label": "Shirakawa-minami-dori",
+   "camera": {
+    "yaw": 15,
+    "pitch": 26,
+    "zoom": 4.5,
+    "x": -45,
+    "y": -28,
+    "z": 2
+   }
+  }
+ ],
+ "legend": [
+  {
+   "name": "Tatsumi Daimyojin",
+   "source": "Shrine · photos",
+   "count": "",
+   "icon": "landmark",
+   "camera": {
+    "yaw": -40,
+    "pitch": 38,
+    "zoom": 9,
+    "x": -1.8,
+    "y": -2.1,
+    "z": 1
+   }
+  },
+  {
+   "name": "Shirakawa canal",
+   "source": "OpenStreetMap",
+   "count": "",
+   "icon": "water",
+   "camera": {
+    "yaw": -30,
+    "pitch": 30,
+    "zoom": 3,
+    "x": -20,
+    "y": -20,
+    "z": 2
+   }
+  },
+  {
+   "name": "Willows and cherries",
+   "source": "Illustrative positions",
+   "count": "",
+   "icon": "trees",
+   "camera": {
+    "yaw": 15,
+    "pitch": 26,
+    "zoom": 4.5,
+    "x": -45,
+    "y": -28,
+    "z": 2
+   }
+  },
+  {
+   "name": "Machiya teahouses",
+   "source": "OpenStreetMap",
+   "count": "364",
+   "icon": "buildings",
+   "camera": {
+    "yaw": -35,
+    "pitch": 30,
+    "zoom": 2.2,
+    "x": 0,
+    "y": 20,
+    "z": 4
+   }
+  }
+ ],
+ "notes": [
+  {
+   "title": "Gion Shirakawa",
+   "text": "Two-storey ochaya-style machiya from the late Edo to early Meiji period line the canal in the Gion Shinbashi preservation district, with Kyoto lattices facing the water.",
+   "links": [
+    {
+     "label": "Kyoto City bridge leaflet (PDF)",
+     "url": "https://www.city.kyoto.lg.jp/kensetu/cmsfiles/contents/0000149/149842/hashishirube03.pdf"
+    },
+    {
+     "label": "Kyoto City Tourism",
+     "url": "https://ja.kyoto.travel/event/single.php?event_id=4544"
+    }
+   ]
+  },
+  {
+   "title": "Willows and cherries",
+   "text": "About 43 cherry trees, of several kinds, and weeping willows line the Shirakawa. Their species come from these sources; the position of each tree here is illustrative.",
+   "links": [
+    {
+     "label": "Jorudan",
+     "url": "https://sp.jorudan.co.jp/hanami/spot_720.html"
+    },
+    {
+     "label": "Kyoto City (PDF)",
+     "url": "https://www.city.kyoto.lg.jp/kensetu/cmsfiles/contents/0000149/149842/hashishirube03.pdf"
+    }
+   ]
+  },
+  {
+   "title": "Tatsumi-bashi",
+   "text": "A steel girder bridge 7.5 m long and 3.1 m wide, finished in 1957, paved with stone and fenced with a wooden railing; the first bridge here was wooden, in 1829.",
+   "links": [
+    {
+     "label": "Kyoto City (PDF)",
+     "url": "https://www.city.kyoto.lg.jp/kensetu/cmsfiles/contents/0000149/149842/hashishirube03.pdf"
+    }
+   ]
+  },
+  {
+   "title": "Tatsumi Daimyojin",
+   "text": "A very small shrine on the triangular plot where two lanes fork: a torii, a small hokora, vermilion tamagaki carrying performers' names, and foxes on both sides. Its proportions here are read from photographs.",
+   "links": [
+    {
+     "label": "4travel",
+     "url": "https://4travel.jp/dm_shisetsu/11291565"
+    }
+   ]
+  },
+  {
+   "title": "Kanikakuni stone",
+   "text": "A natural Kurama stone about 30 m west of the bridge, carved with Yoshii Isamu's poem about the water flowing beneath his pillow. Its exact spot here is interpreted.",
+   "links": [
+    {
+     "label": "Kyoto City (PDF)",
+     "url": "https://www.city.kyoto.lg.jp/kensetu/cmsfiles/contents/0000149/149842/hashishirube03.pdf"
+    }
+   ]
+  },
+  {
+   "title": "What is illustrative",
+   "text": "Measured from OpenStreetMap: footprints, streets, the canal. Drawn by eye: heights (none are mapped here), each canal tree, the andon, people and traffic.",
+   "links": [
+    {
+     "label": "OpenStreetMap",
+     "url": "https://www.openstreetmap.org/#map=18/35.0057/135.7744"
+    }
+   ]
+  }
+ ]
+}
