@@ -1,6 +1,6 @@
 ---
 name: html-ui
-description: "Use when creating or restyling a visual HTML deliverable (page, report, plan, landing page, demo, deck or small tool) and deciding its palette, type, layout or register so it doesn't look generically AI-made; or when the user wants an HTML wireframe or interactive product model to explore, explain or compare an interface."
+description: "Use when creating or restyling a visual HTML deliverable such as a page, report, deck or small tool; or when the user wants an HTML wireframe or interactive product model of an interface."
 disable-model-invocation: false
 ---
 
