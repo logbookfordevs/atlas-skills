@@ -1,6 +1,6 @@
 ---
 name: atlas-explain
-description: "Use when the user asks to explain code, a concept or a decision, wants to learn through conversation, requests a visual or interactive HTML explanation, wants a live interface, visual effect or screenshot explained, or asks to catch up on this chat’s work and pending decisions."
+description: "Use when the user asks to explain code, a concept or a decision, wants to learn through conversation, requests a visual or interactive HTML explanation, wants a live interface, visual effect or screenshot explained, or asks for a catch-up or recap of this chat’s work and pending decisions."
 disable-model-invocation: false
 metadata:
   short-description: Explain code and interfaces, teach, or catch up on work.

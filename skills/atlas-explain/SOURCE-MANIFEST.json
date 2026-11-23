@@ -299,7 +299,7 @@
     }
   ],
   "files": {
-    "SKILL.md": "2d166e18abf8c4b48362f3ba00e0b807759b3abc25add1b1bee5921152132196",
+    "SKILL.md": "c7f5902940ff5e7e303d29373b03b2d2ea324a0855c490a2234a1d952442a7f6",
     "agents/openai.yaml": "1913a5c562840fa920f320cd31043b5ccc415d19302a63a6cc583689f25eaf27",
     "references/how/how.md": "b911c4eac292e458e6685e445562c3aed98155b2be80b43d6d1ed1aa2b13c154",
     "licenses/pstack-how.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
