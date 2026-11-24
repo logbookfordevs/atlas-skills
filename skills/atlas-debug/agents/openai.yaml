@@ -1,6 +1,0 @@
-interface:
-  display_name: "Atlas Debug"
-  short_description: "Diagnose bugs and explain expected versus actual behavior."
-  default_prompt: "Use $atlas-debug to investigate the reported bug."
-policy:
-  allow_implicit_invocation: true

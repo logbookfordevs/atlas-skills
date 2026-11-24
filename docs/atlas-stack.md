@@ -54,11 +54,11 @@ The manifest publishes Leonardo’s Core as an installable collection. Your impo
 
 The carried-source manifest in `sources/composition.json` is separate: it preserves pinned snapshots and adaptations inside Atlas’s own packages. Its scheduled update issues do not update external installations or this stack’s source selection.
 
-Statechart installs independently from Pstack as `statechart` for checking TLA+ models and presenting state transitions and counterexamples. Formal Create depends on it when a TLA+ check is selected; Debug does not bundle or select it.
+Statechart installs independently from Pstack as `statechart` for checking TLA+ models and presenting state transitions and counterexamples. Formal Create depends on it when a TLA+ check is selected.
 
 Engineering Principles (`engineering-principles`, formerly `atlas-implement`) carries Architect, TDD and Source-Driven Development as directly loaded methods. Implement (`implement`) imports Leonardo’s authored delivery workflow and selects Task or All Tickets from the requested execution shape. All Tickets adapts Matt Pocock’s Implement Spec for local or remote ticket graphs, isolated workers and one integration branch; the coordinator owns the shared review, PR and CI workflow. The Core selects both packages and no longer selects standalone `implement-spec` from Matt’s source. Updating the Core does not remove private or standalone installations from a user's machine.
 
-Atlas Debug carries Matt Pocock’s Diagnosing Bugs and its reproduction helper verbatim. The Logbook Atlas Core selects `atlas-debug` in place of standalone `diagnosing-bugs`. Doubt-Driven Development remains an independent selection.
+Diagnosing Bugs installs directly from Matt Pocock as `diagnosing-bugs`. Doubt-Driven Development remains an independent selection.
 
 Atlas Grill replaces Grilling, Grill Me and Grill with Docs. It defaults to Grilling and selects With Docs only on an explicit user request. Atlas Wayfinder replaces Wayfinder and remains manually invoked. Atlas Grill carries Grilling and Domain Modeling; Wayfinder loads them through Atlas Grill's With Docs mode. Wayfinder uses the configured tracker adapter or its bundled local fallback; Research and Prototype remain independent dependencies for their ticket types.
 

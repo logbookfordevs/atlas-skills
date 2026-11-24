@@ -9,8 +9,9 @@
       "name": "Matt Pocock",
       "source": "https://github.com/mattpocock/skills",
       "skills": [
-        "domain-modeling",
         "codebase-design",
+        "diagnosing-bugs",
+        "domain-modeling",
         "handoff",
         "pr",
         "prototype",
@@ -26,7 +27,6 @@
       "source": "https://github.com/logbookfordevs/atlas-skills",
       "skills": [
         "animated-driven-frontend",
-        "atlas-debug",
         "atlas-explain",
         "atlas-grill",
         "atlas-mode",

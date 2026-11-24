@@ -16,7 +16,6 @@ Use this guide with Atlas Mode’s selection rule to distinguish methods by thei
 
 | Skill | Methods and selection |
 | --- | --- |
-| `atlas-debug` | Diagnose bugs and performance regressions through a tight reproduction loop. On request, explain expected versus actual behavior with Pele diagrams. Retain real-code reproduction and fix verification. |
 | `engineering-principles` | **Architect:** resolve interfaces, ownership, types and module shape before implementation when the design warrants exploration. **TDD:** prove behavior test-first through a meaningful seam. **Source-Driven:** establish version-sensitive framework, library or API facts. Combine the methods that address the task's actual needs. |
 | `implement` | **Task:** deliver one agreed task through implementation, review and CI to a PR ready for the user to merge. **All Tickets:** coordinate the selected dependency-linked tickets on one integration branch, with fresh isolated workers and the same shared delivery workflow. Select for requested end-to-end delivery; narrower implementation-method work uses Engineering Principles directly. |
 | `html-ui` | **Artifact:** give a standalone HTML deliverable (page, report, plan, deck or small tool) a deliberate visual direction. **Wireframe:** answer hierarchy, layout and flow questions at low fidelity. **Model:** make an agreed interface concrete as a polished interactive artifact. |

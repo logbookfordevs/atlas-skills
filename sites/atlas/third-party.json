@@ -26,6 +26,19 @@
     ]
   },
   {
+    "id": "diagnosing-bugs",
+    "name": "Diagnosing Bugs",
+    "source": "https://github.com/mattpocock/skills",
+    "command": "npx skills add https://github.com/mattpocock/skills --skill diagnosing-bugs",
+    "consumers": [
+      {
+        "skill": "scout",
+        "required": true,
+        "condition": "For bug tickets without a confirmed cause: its diagnosis loop."
+      }
+    ]
+  },
+  {
     "id": "impeccable",
     "name": "Impeccable",
     "source": "https://github.com/pbakaus/impeccable",

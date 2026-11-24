@@ -2,7 +2,6 @@
   "version": 1,
   "packages": [
     "animated-driven-frontend",
-    "atlas-debug",
     "atlas-explain",
     "atlas-figures",
     "atlas-grill",
@@ -37,19 +36,6 @@
           "skill": "atlas-mode",
           "required": false,
           "condition": "When synchronized interaction or rendering engineering needs the relevant technical references."
-        }
-      ]
-    },
-    {
-      "id": "atlas-debug",
-      "source": "https://github.com/logbookfordevs/atlas-skills",
-      "skill": "atlas-debug",
-      "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-debug",
-      "consumers": [
-        {
-          "skill": "scout",
-          "required": true,
-          "condition": "For bug tickets: its Explaining bugs method."
         }
       ]
     },
@@ -274,6 +260,19 @@
           "skill": "engineering-principles",
           "required": false,
           "condition": "When the TDD Test Seam needs deeper module or interface vocabulary."
+        }
+      ]
+    },
+    {
+      "id": "diagnosing-bugs",
+      "source": "https://github.com/mattpocock/skills",
+      "skill": "diagnosing-bugs",
+      "command": "npx skills add https://github.com/mattpocock/skills --skill diagnosing-bugs",
+      "consumers": [
+        {
+          "skill": "scout",
+          "required": true,
+          "condition": "For bug tickets without a confirmed cause: its diagnosis loop."
         }
       ]
     },
