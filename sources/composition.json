@@ -4138,45 +4138,6 @@
       "patch": "sources/patches/pstack-maintain-formal-verification-skill.patch"
     },
     {
-      "id": "diagnosing-bugs",
-      "owner": "atlas-debug",
-      "classification": "verbatim",
-      "upstream": {
-        "repository": "https://github.com/mattpocock/skills",
-        "commit": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
-        "path": "skills/engineering/diagnosing-bugs/SKILL.md",
-        "licensePath": "LICENSE",
-        "trackingRef": "main"
-      },
-      "snapshot": "sources/upstream/diagnosing-bugs/source.md",
-      "sourceSha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
-      "license": "sources/upstream/diagnosing-bugs/LICENSE",
-      "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "method": "sources/upstream/diagnosing-bugs/source.md",
-      "carriedPath": "references/diagnosis/diagnosing-bugs.md",
-      "adaptation": "Carry the diagnosis loop and human-in-the-loop reproduction helper unchanged. Atlas Debug conditionally adds the shared Statechart method without modifying the diagnosis procedure.",
-      "consumers": [
-        "atlas-debug"
-      ],
-      "supportingFiles": [
-        {
-          "upstreamPath": "skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
-          "relativePath": "scripts/hitl-loop.template.sh",
-          "snapshot": "sources/upstream/diagnosing-bugs/support/scripts/hitl-loop.template.sh",
-          "sourceSha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
-        },
-        {
-          "upstreamPath": "skills/engineering/diagnosing-bugs/agents/openai.yaml",
-          "relativePath": "agents/openai.yaml",
-          "snapshot": "sources/upstream/diagnosing-bugs/support/agents/openai.yaml",
-          "sourceSha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b"
-        }
-      ],
-      "licenseSpdx": "MIT",
-      "adoptedAt": "2026-10-30",
-      "rulings": []
-    },
-    {
       "id": "implement-spec",
       "owner": "implement",
       "classification": "patched",
@@ -5562,10 +5523,10 @@
       "authoredReferences": [],
       "dependencies": [
         {
-          "id": "atlas-debug",
+          "id": "diagnosing-bugs",
           "relationship": "behavioral",
           "required": true,
-          "condition": "For bug tickets: its Explaining bugs method."
+          "condition": "For bug tickets without a confirmed cause: its diagnosis loop."
         },
         {
           "id": "atlas-explain",
@@ -6010,15 +5971,6 @@
           "condition": "When Formal Create selects a TLA+ model, use independently installed Statechart to read model-checking results. If unavailable, report the gap and offer targeted installation before dependent work."
         }
       ]
-    },
-    {
-      "id": "atlas-debug",
-      "entry": "skills/atlas-debug/SKILL.md",
-      "agent": "skills/atlas-debug/agents/openai.yaml",
-      "methods": [
-        "diagnosing-bugs"
-      ],
-      "dependencies": []
     },
     {
       "id": "challenge",

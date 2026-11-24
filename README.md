@@ -23,7 +23,6 @@ Install the packages below, or import the Logbook Atlas Core to include the reco
 | [Atlas Explain](skills/atlas-explain/SKILL.md) | Selects and combines How, Why, conversational Teach, Interface and Catch Up; creates visual HTML explanations when requested |
 | [Atlas To Spec](skills/atlas-to-spec/SKILL.md) | Separate maintained adaptation of Matt Pocock's To Spec |
 | [Atlas To Tickets](skills/atlas-to-tickets/SKILL.md) | Separate maintained adaptation with local ticket templates |
-| [Atlas Debug](skills/atlas-debug/SKILL.md) | Diagnose bugs with Matt’s reproduction loop; explain expected versus actual behavior with Pele diagrams on request |
 | [Engineering Principles](skills/engineering-principles/SKILL.md) | Architect, TDD and Source-Driven implementation methods, selected independently or together |
 | [Implement](skills/implement/SKILL.md) | Deliver agreed work or coordinate dependency-linked tickets through review and CI to a PR ready for the user to merge |
 | [Atlas Review](skills/atlas-review/SKILL.md) | Standards & Spec, Impact, Interface, Motion and Motion Audit review |

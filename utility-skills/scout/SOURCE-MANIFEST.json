@@ -10,10 +10,10 @@
   "authoredReferences": [],
   "dependencies": [
     {
-      "id": "atlas-debug",
+      "id": "diagnosing-bugs",
       "relationship": "behavioral",
       "required": true,
-      "condition": "For bug tickets: its Explaining bugs method."
+      "condition": "For bug tickets without a confirmed cause: its diagnosis loop."
     },
     {
       "id": "atlas-explain",
@@ -37,7 +37,7 @@
   "sources": [],
   "rulings": [],
   "files": {
-    "SKILL.md": "0a3beeeca195479f8187a95116b71686e854b38ed90ab746f21f944214f9bd54",
+    "SKILL.md": "cb464414ffa290d5ca3c3dd4e4dc0052c6bcb799ee150d8ac1aae497b4f7e9b1",
     "agents/openai.yaml": "a9857c23cb86c6945fd70b5360f4b0183a2faf48fde7b94faf0cd7f0d30d35d4"
   }
 }
