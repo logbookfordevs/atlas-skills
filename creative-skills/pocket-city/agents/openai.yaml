@@ -1,6 +1,0 @@
-interface:
-  display_name: "Pocket City"
-  short_description: "Draw a real place as an interactive isometric diorama."
-  default_prompt: "Use $pocket-city to build a Pocket City of this place."
-policy:
-  allow_implicit_invocation: false
