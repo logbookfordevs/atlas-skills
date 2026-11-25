@@ -22,5 +22,3 @@ Show each option's sample from `assets/samples/` beside its description, as an i
 | Plotter | Flat monochrome blueprint drawings where one construction relationship explains a product idea, as editable SVG with optional motion. | [Plotter](references/plotter/plotter.md) |
 
 Follow the selected method and its conditional references. Its folder is the method's base directory for assets, scripts and examples; resolve `<skill folder>` there. Keep its visual grammar and engine together. Selecting several treatments means separate variants, unless the user requests a blend. A recommendation alone does not select a treatment.
-
-For a real place's isometric diorama, recommend Pocket City (`/pocket-city`).

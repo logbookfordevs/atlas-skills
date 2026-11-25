@@ -2,17 +2,14 @@
 
 Optional creative compositions and independent skills, with original authorship and MIT licenses preserved. **The artists and engineers credited here created the visual methods, engines and examples. Atlas packages their work and helps you choose a treatment.** Atlas Figures bundles eight distinct treatments; Playable remains available as an independent package.
 
-**[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** created [ISO-GLOW](https://isoglow.dev/), [Colorfigures](https://april-zhu.com/colorfigures), [Minicharts](https://april-zhu.com/minicharts), [Playable](https://april-zhu.com/playable) and [Pocket City](https://april-zhu.com/pocketcity), including their figure engines, interactions and examples. Explore her original sites to see the work in action. ISO-GLOW’s lineage includes **[iso-figure](https://github.com/MrBongoC/ai-iso-skill)** by **Tolga Cohce**. Both authors’ notices remain with the distributed files.
+**[April Zhu (@Aprilzz423)](https://x.com/Aprilzz423)** created [ISO-GLOW](https://isoglow.dev/), [Colorfigures](https://april-zhu.com/colorfigures), [Minicharts](https://april-zhu.com/minicharts), and [Playable](https://april-zhu.com/playable), including their figure engines, interactions and examples. Explore her original sites to see the work in action. ISO-GLOW’s lineage includes **[iso-figure](https://github.com/MrBongoC/ai-iso-skill)** by **Tolga Cohce**. Both authors’ notices remain with the distributed files.
 
 | Skill | What it creates | Author’s site |
 | --- | --- | --- |
 | [Atlas Figures](atlas-figures/SKILL.md) | A chooser for Hairline, Anatomy, Engraved Figures, Teardown, ISO-GLOW, Colorfigures, Minicharts and Plotter | [Sources and credits](#atlas-figures) |
 | [Playable](playable/SKILL.md) | Rigged 3D models or sketch-built robots with animation, camera-relative movement, lights and mobile controls | [Playable](https://april-zhu.com/playable) |
-| [Pocket City](pocket-city/SKILL.md) | Real places as hand-drawn isometric dioramas built from OpenStreetMap, with researched landmarks, seasons, occasions and street life | [Pocket City](https://april-zhu.com/pocketcity) |
 
 Invoke `/playable` explicitly. It is a separate character-playground workflow, rather than a Figures treatment. Give it a rigged model or an original robot sketch. Converting or inspecting model files uses Blender; the bundled sketch-built robot path needs no supplied model. Preserve its footer credit and the credits for any models you supply. [April’s site](https://april-zhu.com/playable) has demos and the original distribution.
-
-Invoke `/pocket-city` explicitly with a place and, optionally, a square size between 150 and 250 m. It is a separate place-diorama workflow, rather than a Figures treatment; Atlas Figures recommends it when the subject is a real place. It needs Python 3.9+ with `shapely`, Node 18+, Chrome or Chromium for check renders, and network access to OpenStreetMap and the web for research. Map data stays under the OpenStreetMap ODbL; preserve the page's credits.
 
 ## Atlas Figures
 
@@ -34,22 +31,21 @@ The Git-based sources use Atlas’s [reviewed upstream-update pipeline](../docs/
 
 ## Credits and licenses
 
-ISO-GLOW, Colorfigures, Minicharts, Playable and Pocket City were created by **April Zhu**. ISO-GLOW builds on **[iso-figure](https://github.com/MrBongoC/ai-iso-skill)** by **Tolga Cohce (MrBongoC)**. Colorfigures builds on ISO-GLOW and, through it, iso-figure. Playable builds on ISO-GLOW’s 3D template and includes its own engine and controller; it needs no separate ISO-GLOW installation. Pocket City's drawing kit is based on Colorfigures and ISO-GLOW and ships inside its package. Preserve this authorship chain when redistributing them.
+ISO-GLOW, Colorfigures, Minicharts and Playable were created by **April Zhu**. ISO-GLOW builds on **[iso-figure](https://github.com/MrBongoC/ai-iso-skill)** by **Tolga Cohce (MrBongoC)**. Colorfigures builds on ISO-GLOW and, through it, iso-figure. Playable builds on ISO-GLOW’s 3D template and includes its own engine and controller; it needs no separate ISO-GLOW installation. Preserve this authorship chain when redistributing them.
 
 Minicharts includes April’s drawing kit and chart examples. Its exploded-view conventions are adapted from Cathryn Lavery’s MIT-licensed diagram-design; the chart-type list follows April’s Neon Diagrams. Preserve its [LICENSE](../sources/upstream/minicharts/LICENSE), [NOTICE.md](../sources/upstream/minicharts/support/NOTICE.md) and generated page footer credit. Its supplied ZIP is fingerprinted in the composition record, and the source watcher marks it `manual-download`. No separate Minicharts installation is needed when using Figures.
 
 Plotter retains its MIT license with the coss.com, Origin UI and Pasquale Vitiello copyrights, its [NOTICE.md](../sources/upstream/plotter/support/NOTICE.md), and the SIL Open Font License for its bundled Cal Sans font by Mark Davis. Its checks need Python 3; rendering uses Chrome, `rsvg-convert` or a similar installed renderer.
 
-The original [ISO-GLOW license](../sources/upstream/iso-glow/LICENSE), [Colorfigures license](../sources/upstream/colorfigures/LICENSE) [Playable license](playable/LICENSE) and [Pocket City license](pocket-city/LICENSE) contain the applicable MIT terms and copyright notices. Their files are not relicensed as Atlas-authored work.
+The original [ISO-GLOW license](../sources/upstream/iso-glow/LICENSE), [Colorfigures license](../sources/upstream/colorfigures/LICENSE) and [Playable license](playable/LICENSE) contain the applicable MIT terms and copyright notices. Their files are not relicensed as Atlas-authored work.
 
 ## Install and maintain
 
-Install Atlas Figures, Playable or Pocket City directly from Atlas with Skills CLI; no ZIP download is needed:
+Install Atlas Figures or Playable directly from Atlas with Skills CLI; no ZIP download is needed:
 
 ```sh
 npx skills add https://github.com/logbookfordevs/atlas-skills --skill atlas-figures
 npx skills add https://github.com/logbookfordevs/atlas-skills/tree/main/creative-skills/playable
-npx skills add https://github.com/logbookfordevs/atlas-skills/tree/main/creative-skills/pocket-city
 ```
 
 Choose the destination agent when prompted. Add `-g` for a global installation. For Teardown’s design guidance, also install Impeccable if it is missing:
@@ -60,4 +56,4 @@ npx skills add https://github.com/pbakaus/impeccable --skill impeccable
 
 These packages live separately from Atlas’s composed workflows in `skills/` and are optional: they are excluded from `stacks/atlas.json`. April’s sources retain download provenance because she distributes them as downloads rather than Git repositories.
 
-[provenance.json](provenance.json) records Playable’s and Pocket City’s download fingerprints and original file hashes. Pocket City was imported from the supplied `pocket-city.zip` on 2026-11-20 with the same manual-only adaptation, recorded in `patches/pocket-city.patch`. It was imported from the supplied `playable.zip` on 2026-11-02. Its manual-only invocation is recorded in `patches/playable.patch`, with the author's description kept, with Atlas-owned host metadata disabling implicit invocation; its workflow and assets remain verbatim. Its MIT license includes required credit to [Playable](https://april-zhu.com/playable); credit on published scenes is requested by the author. Updates are manual: obtain a new author-provided distribution, review its changes and license, then refresh the fingerprints together. Keep attribution outside the instruction files; retain only the recorded adaptations unless a further change is intentional.
+[provenance.json](provenance.json) records Playable’s download fingerprints and original file hashes. It was imported from the supplied `playable.zip` on 2026-11-02. Its manual-only invocation is recorded in `patches/playable.patch`, with the author's description kept, with Atlas-owned host metadata disabling implicit invocation; its workflow and assets remain verbatim. Its MIT license includes required credit to [Playable](https://april-zhu.com/playable); credit on published scenes is requested by the author. Updates are manual: obtain a new author-provided distribution, review its changes and license, then refresh the fingerprints together. Keep attribution outside the instruction files; retain only the recorded adaptations unless a further change is intentional.
