@@ -25,7 +25,7 @@
       "input": "skills/team-up/references/model-preferences.md",
       "target": "references/model-preferences.md",
       "classification": "atlas-authored",
-      "carriedSha256": "fd0c9f1b037f51af17e96ddd384b6538bf6fa70ac8e0eff14196ddb2abbb80d9"
+      "carriedSha256": "fef4f678c9f74b2ce4f5a719ba6f27ac5478db3eae830a2427254fdc16600c78"
     }
   ],
   "dependencies": [
@@ -138,7 +138,7 @@
     "SKILL.md": "edf8ef3fae7721c2cd10b37b15d0b77b0cbdd628871ec27593ef748672e1a955",
     "agents/openai.yaml": "cc2307960ff67687217ee0f6252390a54ce17a4f2b00df3ddb1805c22374e2ae",
     "references/selection.md": "7912765ff9680104470cf0b7e4a7e15cab28fdd3182f14887dbbf52b56b05abc",
-    "references/model-preferences.md": "fd0c9f1b037f51af17e96ddd384b6538bf6fa70ac8e0eff14196ddb2abbb80d9",
+    "references/model-preferences.md": "fef4f678c9f74b2ce4f5a719ba6f27ac5478db3eae830a2427254fdc16600c78",
     "references/arena/arena.md": "11b266fb3581b3e71f1e634c48daa39d8d1f8170dbe918cdcef50bb1b9534f09",
     "licenses/pstack-arena.txt": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
     "references/swarm/swarm.md": "f827969bf51be553d0f4cec0af7e8afb51b8ec81780b45c08b6b237fc24ca6b7",

@@ -61,7 +61,7 @@ Each smell reads *what it is* → *how to fix*; match it against the diff:
 
 Issue both sub-agent calls together, in the foreground, and aggregate the reports they return.
 
-Choose both reviewers with Team Up's selection policy, including its preference for a reviewer from another model family than the lead. Size each axis separately: Standards is a rule-and-smell pass, while Spec traces behavior, reconciles requirements and judges correctness, so Spec gets the stronger reviewer. Read-only access or a high effort setting alone does not make a reviewer suitable.
+Choose both reviewers with Team Up's selection policy, including its preference for a reviewer from another model family than the lead. Size each axis separately: Standards is a rule-and-smell pass, while Spec traces behavior, reconciles requirements and judges correctness, so Spec gets the stronger reviewer, starting at the floor Team Up's model preferences set for behavior-tracing review. Read-only access or a high effort setting alone does not make a reviewer suitable.
 
 **Standards sub-agent prompt** should include:
 
