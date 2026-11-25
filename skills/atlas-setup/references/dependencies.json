@@ -402,6 +402,11 @@
       "command": "npx skills add https://github.com/logbookfordevs/atlas-skills --skill team-up",
       "consumers": [
         {
+          "skill": "atlas-review",
+          "required": true,
+          "condition": "When choosing Standards and Spec reviewers."
+        },
+        {
           "skill": "snap-out-of-it",
           "required": true,
           "condition": "For choosing the cross-family reviewer through Team Up's selection policy."

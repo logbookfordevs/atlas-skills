@@ -84,6 +84,12 @@
       "relationship": "behavioral",
       "required": true,
       "condition": "For motion judgments: Motion ownership, Animate and Fluid supply criteria; Review stays read-only."
+    },
+    {
+      "id": "team-up",
+      "relationship": "behavioral",
+      "required": true,
+      "condition": "When choosing Standards and Spec reviewers."
     }
   ],
   "sources": [
@@ -594,15 +600,15 @@
       "notices": [],
       "sourceSha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
       "carriedPath": "references/code/code-review.md",
-      "carriedSha256": "55d72075840b789df2837fb35aac33d3963e86e70252aa6f4334eca6a40ef5a3",
+      "carriedSha256": "e6b2cfde7ddb2fbc63202d95217f7a49063e05436b26eb09da634c36afcc1a25",
       "licensePath": "licenses/code-review.txt",
       "licenseSha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-      "adaptation": "Leonardo’s review adaptations are preserved; the reference name matches upstream code-review. A replayable patch records differences against this pinned maintenance baseline; the historical fork-origin revision is unknown. This is not a claim about the original fork base. Tracking claim verification recognizes the current consolidated record groups and equivalent legacy fields. Upstream standards discovery and concurrent reviewer dispatch are retained; tracker resolution follows Atlas intent and tracking sources. Standards review explicitly checks added or changed comments against the repository comment policy.",
+      "adaptation": "Atlas review adaptations on the pinned upstream baseline; the historical fork-origin revision is unknown. Scope covers branch, PR, commit and working-tree changes. Spec sources follow Atlas intent and tracking records, and Spec verifies tracking claims. Standards discovery adds AGENTS.md and CLAUDE.md and checks comments against the repository comment policy. Reviewer selection defers to Team Up, with the stronger reviewer on Spec. Other upstream wording, the smell baseline, foreground dispatch and aggregation stay verbatim.",
       "licenseSpdx": "MIT",
       "adoptedAt": "2026-11-03",
       "rulings": [],
       "patch": "sources/patches/code-review.patch",
-      "patchSha256": "bd2d5ea5359f86af417bcec0d950580d0de75a1ff2fae2dd9385efdab907eeb9"
+      "patchSha256": "5ef8e7684588659ab0b415b4d7298e8415dd23fd8f3f00c4554aa841676f989e"
     },
     {
       "id": "improve-animations",
@@ -864,7 +870,7 @@
     "references/interface/audit/index.md": "a0003e3666dc9e48f88521d3edf82386f30c5524e4b06e559b48827d77cc783b",
     "licenses/better-interface.txt": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
     "references/interface/audit/review-format.md": "1fb2a666f6a433ee2607b4795e871bb9c91a385892737f2553f5230f5f6d12c3",
-    "references/code/code-review.md": "55d72075840b789df2837fb35aac33d3963e86e70252aa6f4334eca6a40ef5a3",
+    "references/code/code-review.md": "e6b2cfde7ddb2fbc63202d95217f7a49063e05436b26eb09da634c36afcc1a25",
     "licenses/code-review.txt": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
     "references/motion-audit/index.md": "066e1297b1e3b3daad93acb0231343a7c7cf59b5e6ad0d885defad019e7173a5",
     "licenses/improve-animations.txt": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
